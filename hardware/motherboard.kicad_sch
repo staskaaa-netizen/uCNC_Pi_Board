@@ -1,0 +1,373 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "ee4a4fdb-a0b4-4919-85e2-f06ee751232c")
+	(paper "A2")
+	(title_block
+		(title "LeanCam NCC RP2350B Motherboard")
+	)
+	(lib_symbols)
+	(text_box "LeanCam NCC RP2350B motherboard\nThis root sheet instantiates the functional hierarchy. Global net labels are the inter-sheet contract; see documentation/gpio-map.md and io-bit-map.md."
+		(exclude_from_sim no)
+		(at 18 270 0.0000)
+		(size 160 30)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.6 1.6)
+			)
+			(justify left top)
+		)
+		(uuid "4d33190b-c1de-4c72-a21f-80b5fdf36ac6")
+	)
+	(sheet
+		(at 20 20)
+		(size 120 80)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a6c18ac0-c630-4e8c-8719-768c445de275")
+		(property "Sheetname" "Power and supervision"
+			(at 20 19.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 20 100.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20 115)
+		(size 180 100)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e0578cd3-5488-4cbc-87e6-3e0a4559af2e")
+		(property "Sheetname" "MCU, shift chains and safety"
+			(at 20 114.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_io.kicad_sch"
+			(at 20 215.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215 20)
+		(size 160 120)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "16b3ab55-ec7e-4437-b3c8-3b6af440dff4")
+		(property "Sheetname" "16 PLC inputs and expansion"
+			(at 215 19.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "field_inputs.kicad_sch"
+			(at 215 140.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 390 20)
+		(size 160 120)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "86afc06e-1491-461d-a49c-3d0a76cdc9d2")
+		(property "Sheetname" "24 PLC outputs"
+			(at 390 19.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "field_outputs.kicad_sch"
+			(at 390 140.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215 155)
+		(size 120 85)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "182af0e7-1b9f-44b9-8351-78017618e906")
+		(property "Sheetname" "Encoders"
+			(at 215 154.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "encoders.kicad_sch"
+			(at 215 240.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 350 155)
+		(size 200 85)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3a740073-8e4d-4cdd-b444-7d5dd9652144")
+		(property "Sheetname" "Display"
+			(at 350 154.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "display.kicad_sch"
+			(at 350 240.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20 230)
+		(size 160 100)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a825e34a-fd23-40f0-a411-cf8e07374c83")
+		(property "Sheetname" "Storage, Wi-Fi and UI"
+			(at 20 229.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "storage_wifi_ui.kicad_sch"
+			(at 20 330.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 200 255)
+		(size 140 90)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e5977192-77fc-4de0-9bd8-02fe1a61476f")
+		(property "Sheetname" "Analog I/O"
+			(at 200 254.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "analog_io.kicad_sch"
+			(at 200 345.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project None
+				(path "/ee4a4fdb-a0b4-4919-85e2-f06ee751232c"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

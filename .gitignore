@@ -1,0 +1,32 @@
+# Local KiCad and automation caches
+.kicad-cache/
+.freerouting/
+tmp/
+hardware/tmp/
+hardware/.history/
+hardware/.history_trim/
+hardware/autoplace-test/
+hardware/motherboard-backups/
+hardware/checkpoints/
+
+# Generated optimization and validation history
+hardware/checkpoint-*.json
+hardware/*-drc.json
+hardware/*-erc.json
+hardware/*-metrics.json
+hardware/*-audit.json
+hardware/tmp-*.json
+hardware/channel-optimization*.json
+hardware/placement-*.json
+hardware/current-manual-*.json
+hardware/drc*.json
+hardware/erc*.json
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.lck
+
+# Local OS clutter
+Thumbs.db
+.DS_Store
