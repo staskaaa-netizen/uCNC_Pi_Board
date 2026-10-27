@@ -44,9 +44,7 @@ def main() -> None:
     for reference in sorted(selected):
         for pad in footprints[reference].Pads():
             key = (reference, pad.GetNumber())
-            if key not in expected:
-                continue
-            new_name = expected[key]
+            new_name = expected.get(key, "")
             old_name = pad.GetNetname()
             if old_name != new_name:
                 changes.append((reference, pad.GetNumber(), old_name, new_name))
@@ -59,6 +57,9 @@ def main() -> None:
 
     for reference, pin, _, new_name in changes:
         pad = footprints[reference].FindPadByNumber(pin)
+        if not new_name:
+            pad.SetNet(None)
+            continue
         net = board.FindNet(new_name)
         if net is None:
             net = pcbnew.NETINFO_ITEM(board, new_name)

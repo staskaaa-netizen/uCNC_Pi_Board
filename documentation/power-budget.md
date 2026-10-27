@@ -4,8 +4,13 @@
 
 - PLC inputs support external 24 V wetting or an internal isolated 12 V
   short-pair mode.
-- Main input protection: 2 A fuse, one 24 V bidirectional TVS and a
-  reverse-polarity P-channel MOSFET.
+- Main input protection: 2 A fuse, one 24 V bidirectional TVS and an
+  Infineon IRF7240PBF reverse-polarity P-channel MOSFET. Q1 is rated for
+  `-40 V`, `-10.5 A` at 25 C and `-8.6 A` at 70 C, with 15 mOhm maximum
+  on-resistance at `VGS=-10 V`. The SO-8 package keeps the input path
+  comfortably within its current and voltage ratings while the 2 A fuse
+  remains the assembly limit.
+  Datasheet: <https://www.infineon.com/dgdl/irf7240pbf.pdf?fileId=5546d462533600a4015355e30d5a1b56>
 - 5 V rail: TI LMR36510ADDAR, 1 A synchronous buck at 400 kHz. The reference
   network uses 22 uH, 2 x 22 uF output capacitance, 34 k + 46.4 k / 20 k
   feedback divider, 1 uF VCC bypass and a 100 nF bootstrap capacitor. No catch
@@ -16,7 +21,7 @@
   so the MCU's onboard regulator is not duplicated or externally loaded.
 - The module's onboard reset button, POR/BOR and watchdog are used. There is no
   motherboard reset button or external MCU supervisor.
-- The optional ESP-01S has a dedicated AMS1117-3.3 regulator from 5 V; its
+- The optional ESP-01/ESP-01S has a dedicated AMS1117-3.3 regulator from 5 V; its
   transmit peaks do not load the WeAct regulator.
 - A local L78L12 SOT-89 regulator, U37, derives `+12V_AO` from `VIN_PROT` for
   the TLV2374 quad analog-output amplifier. It is not used by logic or field I/O.
@@ -33,9 +38,8 @@
 | WeAct RP2350B module | 90 mA | 150 mA | +5V |
 | 74HC logic and LEDs | 60 mA | 130 mA | +3V3 / +5V |
 | Full-size SD card | 30 mA | 120 mA | +3V3_SD |
-| ESP-01S | 80 mA | 500 mA | +3V3_WIFI, dedicated U34 |
+| ESP-01/ESP-01S | 80 mA | 500 mA | +3V3_WIFI, dedicated U34 |
 | Encoders | 30 mA | 150 mA | +5V_ENC |
-| HDMI +5 V | 20 mA | 100 mA | +5V_HDMI |
 | Four 0-10 V outputs | 3 mA | 12 mA | +12V_AO, U37 from VIN_PROT |
 | Isolated field wetting | 110 mA | 167 mA | +5V_ISO_IN via U40 |
 
@@ -44,14 +48,15 @@ motherboard load. The two 3.3 V LDOs are powered from its 5 V output:
 
 - U2 AMS1117-3.3 feeds logic, SD and the unswitched LCD panel logic rail. Keep continuous
   current below 500 mA and use copper area for thermal margin.
-- U34 AMS1117-3.3 feeds only the optional ESP-01S. Its 500 mA transmit peak is
+- U34 AMS1117-3.3 feeds only the optional ESP-01/ESP-01S. Its 500 mA transmit peak is
   locally reservoir-supported by 10 uF plus 100 nF.
 
 The 1 A buck limit must include both LDO input currents plus the direct 5 V
-encoder and HDMI loads. Do not operate the ESP at peak transmit and all other
+encoder load. Do not operate the ESP at peak transmit and all other
 loads simultaneously. The 2 A input fuse remains the hard assembly limit.
-Backlight power is not supplied by this board; J22 pin 6 carries only the
-3.3 V logic-level `BL_PWM` signal to an external backlight driver.
+Backlight power is not supplied by this board. MOD1 GPIO1 is reserved for a
+future backlight PWM, but the verified J22 pinout has no backlight contact and
+no board net or separate backlight-driver interface is currently assigned.
 
 A linear 5 V regulator is not acceptable from the specified 12-24 V input. At
 24 V and only 200 mA it would dissipate approximately 3.8 W.

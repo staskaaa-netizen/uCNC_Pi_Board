@@ -1,4 +1,4 @@
-"""Place display resistor networks and the AUX open-drain MOSFET."""
+"""Place LCD LVDS resistor networks and the AUX open-drain MOSFET."""
 
 from __future__ import annotations
 
@@ -16,12 +16,6 @@ BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 PLACEMENTS = {
     "RN27": (135.5, 40.0, 90.0),
     "RN26": (143.0, 40.0, 90.0),
-    "RN28": (173.5, 19.0, 0.0),
-    "RN29": (173.5, 25.0, 0.0),
-    "C71": (194.0, 35.0, 270.0),
-    "C72": (191.0, 39.0, 270.0),
-    "R59": (176.0, 31.0, 270.0),
-    "R60": (181.0, 35.0, 270.0),
     "Q5": (144.0, 14.0, 0.0),
     "R112": (149.0, 14.0, 90.0),
     "R113": (139.0, 14.0, 90.0),

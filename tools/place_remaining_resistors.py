@@ -1,4 +1,4 @@
-"""Place the remaining shift, keyboard, Wi-Fi and HDMI resistor groups."""
+"""Place the remaining shift, keyboard and Wi-Fi resistor groups."""
 
 from __future__ import annotations
 
@@ -27,14 +27,11 @@ PLACEMENTS = {
     "RN21": (39.080, 39.500, 90.0, False),
     "RN22": (28.920, 55.500, 90.0, False),
     "RN24": (39.080, 55.500, 90.0, False),
-    # ESP-01S pulls, vertically aligned left of J20.
-    "R58": (177.000, 45.500, 0.0, False),
-    "R57": (177.000, 48.000, 0.0, False),
-    "R56": (177.000, 50.500, 0.0, False),
-    "R55": (177.000, 53.000, 0.0, False),
-    # HDMI alternate 0R links remain DNP but are placed for routing completeness.
-    "RN28": (176.500, 19.000, 0.0, False),
-    "RN29": (183.000, 19.000, 0.0, False),
+    # ESP-01/ESP-01S pulls, vertically aligned left of J20.
+    "R58": (161.925, 39.370, 0.0, False),
+    "R57": (161.925, 42.545, 0.0, False),
+    "R55": (161.925, 48.260, 0.0, False),
+    "R56": (161.925, 50.800, 0.0, False),
 }
 
 

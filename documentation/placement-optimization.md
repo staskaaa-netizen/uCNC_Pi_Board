@@ -23,7 +23,7 @@ The local passes converged as follows:
 Airwire metric weights:
 
 - Safety nets: 3.0
-- HDMI/HSTX/LVDS: 2.5
+- HSTX/LVDS: 2.5
 - Shift-clock, shift-data and encoder nets: 1.5
 - General signals: 1.0
 - Power distribution: 0.35

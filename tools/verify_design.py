@@ -6,6 +6,8 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from configure_netclasses import CLASSES, PATTERNS, PROJECT, RULES
+
 
 ROOT = Path(__file__).resolve().parents[1]
 NETLIST = ROOT / "hardware" / "motherboard.net.xml"
@@ -23,6 +25,49 @@ def main() -> None:
     references = [component.get("ref") for component in components]
     failures: list[str] = []
 
+    project = json.loads(PROJECT.read_text(encoding="utf-8"))
+    project_classes = {
+        item["name"]: item
+        for item in project["net_settings"]["classes"]
+    }
+    for expected in CLASSES:
+        actual = project_classes.get(expected["name"])
+        if actual is None:
+            failures.append(f"Missing netclass {expected['name']}")
+            continue
+        for field in (
+            "track_width",
+            "clearance",
+            "via_diameter",
+            "via_drill",
+            "diff_pair_width",
+            "diff_pair_gap",
+        ):
+            if abs(float(actual[field]) - float(expected[field])) > 1e-9:
+                failures.append(
+                    f"Netclass {expected['name']} field {field} does not match"
+                )
+    project_patterns = {
+        (item["netclass"], item["pattern"])
+        for item in project["net_settings"]["netclass_patterns"]
+    }
+    for expected_pattern in PATTERNS:
+        if expected_pattern not in project_patterns:
+            failures.append(
+                "Missing netclass pattern "
+                f"{expected_pattern[1]} -> {expected_pattern[0]}"
+            )
+    if not RULES.exists():
+        failures.append("Missing board-specific DRC rule file")
+    else:
+        rule_text = RULES.read_text(encoding="utf-8")
+        if "memberOfFootprint('J22')" not in rule_text:
+            failures.append("Missing J22-specific LVDS footprint rule")
+        if "(min 0.12mm)" not in rule_text:
+            failures.append("J22 LVDS footprint rule is not 0.12 mm")
+        if "A.NetName == 'LVDS_*'" not in rule_text:
+            failures.append("LVDS rules are not independent of rewritten netclasses")
+
     if len(references) != len(set(references)):
         failures.append("Duplicate reference designators")
     for bit in range(16):
@@ -38,12 +83,19 @@ def main() -> None:
         endpoints = nets.get(net, set())
         if len(endpoints) < 2:
             failures.append(f"Output register bit {bit} is not in a 595-to-buffer chain")
-    for bit in range(16):
+    for bit in range(15):
         if f"MOTION{bit}" not in nets:
             failures.append(f"Missing motion output {bit}")
-    for bit in range(8):
+    for bit in range(16):
         if f"DO{bit}" not in nets:
-            failures.append(f"Missing ULN output {bit}")
+            failures.append(f"Missing low-side output {bit}")
+        led_ref = f"D{45 + bit}" if bit < 8 else f"D{49 + bit}"
+        resistor_ref = f"R{34 + bit}" if bit < 8 else f"R{110 + bit}"
+        if (led_ref, "1") not in nets.get(f"DO{bit}", set()):
+            failures.append(f"{led_ref} is not the DO{bit} indicator")
+        if (resistor_ref, "2") not in nets.get(f"DO_LED{bit}_A", set()):
+            failures.append(f"{resistor_ref} is not the DO{bit} LED resistor")
+    for bit in range(8):
         if f"KOUT{bit}" not in nets:
             failures.append(f"Missing keyboard output {bit}")
         if f"KIN{bit}" not in nets:
@@ -90,16 +142,22 @@ def main() -> None:
                     f"Misaligned 541 output for logical bit {output_bits}"
                 )
 
-    # Bits 16-23 drive the ULN arrays directly from the 3.3 V 595.
+    # Bits 16-29 drive all fourteen ULN channels directly from the 3.3 V 595.
     uln_contracts = {
-        16: ("U12", "1", "U26", "4", "13"),
-        17: ("U12", "2", "U26", "3", "14"),
-        18: ("U12", "3", "U26", "2", "15"),
-        19: ("U12", "4", "U26", "1", "16"),
-        20: ("U12", "5", "U27", "4", "13"),
-        21: ("U12", "6", "U27", "3", "14"),
-        22: ("U12", "7", "U27", "2", "15"),
-        23: ("U12", "15", "U27", "1", "16"),
+        16: ("U12", "1", "U26", "7", "10"),
+        17: ("U12", "2", "U26", "6", "11"),
+        18: ("U12", "3", "U26", "5", "12"),
+        19: ("U12", "4", "U26", "4", "13"),
+        20: ("U12", "5", "U26", "3", "14"),
+        21: ("U12", "6", "U26", "2", "15"),
+        22: ("U12", "7", "U26", "1", "16"),
+        23: ("U12", "15", "U27", "7", "10"),
+        24: ("U13", "15", "U27", "6", "11"),
+        25: ("U13", "1", "U27", "5", "12"),
+        26: ("U13", "2", "U27", "4", "13"),
+        27: ("U13", "3", "U27", "3", "14"),
+        28: ("U13", "4", "U27", "2", "15"),
+        29: ("U13", "5", "U27", "1", "16"),
     }
     for output_bits, (
         register_ref,
@@ -113,21 +171,46 @@ def main() -> None:
             failures.append(f"Direct 3.3 V ULN connection missing for bit {output_bits}")
         if (uln_ref, output_pin) not in nets.get(f"DO{output_bits - 16}", set()):
             failures.append(f"ULN output channel mismatch for bit {output_bits}")
+    mosfet_outputs = {
+        30: ("U13", "6", "R114", "R115", "Q6", "DO14_GATE", "DO14"),
+        31: ("U13", "7", "R116", "R117", "Q7", "DO15_GATE", "DO15"),
+    }
+    for bit, (
+        register_ref,
+        source_pin,
+        series_ref,
+        pulldown_ref,
+        transistor_ref,
+        gate_net,
+        output_net,
+    ) in mosfet_outputs.items():
+        expected = {
+            (register_ref, source_pin),
+            (series_ref, "1"),
+        }
+        if not expected.issubset(nets.get(f"OUT{bit}", set())):
+            failures.append(f"MOSFET output source missing for bit {bit}")
+        for endpoint in (
+            (series_ref, "2"),
+            (pulldown_ref, "1"),
+            (transistor_ref, "1"),
+        ):
+            if endpoint not in nets.get(gate_net, set()):
+                failures.append(f"MOSFET gate contract incomplete for bit {bit}")
+        if (pulldown_ref, "2") not in nets.get("GND", set()):
+            failures.append(f"{pulldown_ref} is not a gate pull-down")
+        if (transistor_ref, "2") not in nets.get("GND", set()):
+            failures.append(f"{transistor_ref} source is not grounded")
+        if (transistor_ref, "3") not in nets.get(output_net, set()):
+            failures.append(f"{transistor_ref} drain is not {output_net}")
 
     tpd_refs = {
         component.get("ref")
         for component in components
         if (component.findtext("value") or "").strip() == "TPD4E05U06DQA"
     }
-    if len(tpd_refs) != 3:
-        failures.append(f"Expected three HDMI ESD arrays, found {len(tpd_refs)}")
-    for net, endpoints in nets.items():
-        if (
-            any(ref in tpd_refs for ref, _ in endpoints)
-            and net != "GND"
-            and not net.startswith("HDMI_")
-        ):
-            failures.append(f"Non-HDMI ESD connection remains on {net}")
+    if tpd_refs:
+        failures.append(f"Removed HDMI ESD arrays remain: {sorted(tpd_refs)}")
 
     field_tvs = [
         component.get("ref")
@@ -173,26 +256,38 @@ def main() -> None:
         failures.append("Retired keyboard pull-down arrays RN14/RN15 remain")
     if "J21" in references:
         failures.append("Retired external Wi-Fi UART header J21 remains")
+    retired_capacitors = {"C8", "C14", "C16", "C17", "C77"} & set(references)
+    if retired_capacitors:
+        failures.append(
+            "Retired redundant +5V capacitors remain: "
+            + ", ".join(sorted(retired_capacitors))
+        )
     for reference in ("RN16", "RN17", "RN18", "RN19", "RN20", "RN21"):
         if reference not in references:
             failures.append(f"Missing 100 ohm series array {reference}")
-    motion_array_maps = {
-        "RN16": {1: (2, 3), 2: (3, 2), 3: (0, 1), 4: (1, 0)},
-        "RN17": {1: (6, 7), 2: (7, 6), 3: (4, 5), 4: (5, 4)},
-        "RN18": {1: (11, 11), 2: (10, 10), 3: (8, 9), 4: (9, 8)},
-        "RN19": {1: (15, 15), 2: (14, 14), 3: (13, 13), 4: (12, 12)},
+    motion_array_pins = {
+        "RN16": {
+            1: "BUFY2", 8: "MOTION2", 2: "BUFY3", 7: "MOTION1",
+            3: "BUFY0", 6: "AUX_GATE", 4: "BUFY1", 5: "MOTION0",
+        },
+        "RN17": {
+            1: "BUFY6", 8: "MOTION6", 2: "BUFY7", 7: "MOTION5",
+            3: "BUFY4", 6: "MOTION4", 4: "BUFY5", 5: "MOTION3",
+        },
+        "RN18": {
+            1: "BUFY11", 8: "MOTION10", 2: "BUFY10", 7: "MOTION9",
+            3: "BUFY8", 6: "MOTION8", 4: "BUFY9", 5: "MOTION7",
+        },
+        "RN19": {
+            1: "BUFY15", 8: "MOTION14", 2: "BUFY14", 7: "MOTION13",
+            3: "BUFY13", 6: "MOTION12", 4: "BUFY12", 5: "MOTION11",
+        },
     }
-    for reference, channel_bits in motion_array_maps.items():
-        for channel, (source_bit, output_bit) in channel_bits.items():
-            source_pin = str(channel)
-            connector_pin = str(9 - channel)
-            if (reference, source_pin) not in nets.get(f"BUFY{source_bit}", set()):
+    for reference, pin_nets in motion_array_pins.items():
+        for pin, expected_net in pin_nets.items():
+            if (reference, str(pin)) not in nets.get(expected_net, set()):
                 failures.append(
-                    f"{reference} source channel {channel} is not BUFY{source_bit}"
-                )
-            if (reference, connector_pin) not in nets.get(f"MOTION{output_bit}", set()):
-                failures.append(
-                    f"{reference} output channel {channel} is not MOTION{output_bit}"
+                    f"{reference} pin {pin} is not {expected_net}"
                 )
     if any(net.startswith("SR_KD") for net in nets):
         failures.append("Keyboard still passes through a separate buffered net")
@@ -209,6 +304,35 @@ def main() -> None:
             failures.append(f"{direct_net} is not on MOD1 pin {module_pin}")
         if any(component_values.get(ref) == "74HC165D" for ref in refs):
             failures.append(f"{direct_net} is incorrectly routed through the input chain")
+    shift_module_pins = {
+        "SR_OUT_SER": "43",  # GPIO20, DATA
+        "SR_SCK": "59",      # GPIO21, CLK
+        "SR_LATCH": "44",    # GPIO22, LATCH
+        "SR_PL_N": "45",     # GPIO24, 74HC165 load
+        "SR_IN_Q7": "60",    # GPIO23, 74HC165 return
+    }
+    for shift_net, module_pin in shift_module_pins.items():
+        if ("MOD1", module_pin) not in nets.get(shift_net, set()):
+            failures.append(
+                f"{shift_net} is not on MOD1 pin {module_pin} in the shift-chain map"
+            )
+    shift_endpoints = {
+        "SR_OUT_SER": {("U10", "14")},
+        "SR_SCK": {
+            ("U6", "2"), ("U7", "2"), ("U8", "2"), ("U9", "2"),
+            ("U10", "11"), ("U11", "11"), ("U12", "11"), ("U13", "11"),
+        },
+        "SR_LATCH": {
+            ("U10", "12"), ("U11", "12"), ("U12", "12"), ("U13", "12"),
+        },
+        "SR_PL_N": {
+            ("U6", "1"), ("U7", "1"), ("U8", "1"), ("U9", "1"),
+        },
+        "SR_IN_Q7": {("U9", "9")},
+    }
+    for shift_net, required_endpoints in shift_endpoints.items():
+        if not required_endpoints.issubset(nets.get(shift_net, set())):
+            failures.append(f"{shift_net} does not reach every required shift-chain pin")
     connector_values = set(component_values.values())
     for required in (
         "Dedicated E-stop loop",
@@ -230,10 +354,8 @@ def main() -> None:
     for pin, expected_net in hstx_pin_map.items():
         if ("MOD1", pin) not in nets.get(expected_net, set()):
             failures.append(f"MOD1 pin {pin} is not mapped to {expected_net}")
-    if ("MOD1", "49") not in nets.get("BL_PWM", set()):
-        failures.append("BL_PWM is not driven directly by MOD1 GPIO1")
-    if ("J22", "6") not in nets.get("BL_PWM", set()):
-        failures.append("BL_PWM is not exposed on LCD connector J22 pin 6")
+    if "BL_PWM" in nets:
+        failures.append("BL_PWM must remain unassigned until a backlight interface is specified")
     for legacy in ("BL_EN", "BL_EN_REQ", "BL_VIN", "BL_RAW", "BL_GATE", "BL_GATE_NPN"):
         if legacy in nets:
             failures.append(f"Legacy backlight net {legacy} remains")
@@ -357,22 +479,60 @@ def main() -> None:
                     f"{reference} pin {pin} is not on expected net {expected_net}"
                 )
     motion_connectors = {
-        "J10": {1: "MOTION3", 2: "MOTION1", 3: "MOTION0", 4: "GND"},
-        "J11": {1: "MOTION4", 2: "MOTION2", 3: "MOTION5", 4: "GND"},
-        "J28": {1: "MOTION9", 2: "MOTION7", 3: "MOTION6", 4: "GND"},
-        "J29": {1: "MOTION10", 2: "MOTION8", 3: "MOTION11", 4: "GND"},
-        "J30": {1: "MOTION15", 2: "MOTION13", 3: "MOTION12", 4: "GND"},
+        "J7": {
+            1: "FIELD_IN9", 2: "FIELD_COM0",
+            3: "FIELD_IN10", 4: "FIELD_COM0",
+            5: "FIELD_IN11", 6: "FIELD_COM0",
+            7: "FIELD_IN12", 8: "FIELD_COM0",
+        },
+        "J8": {
+            1: "FIELD_IN1", 2: "FIELD_COM1",
+            3: "FIELD_IN2", 4: "FIELD_COM1",
+            5: "FIELD_IN3", 6: "FIELD_COM1",
+            7: "FIELD_IN4", 8: "FIELD_COM1",
+        },
+        "J12": {
+            1: "DO0", 2: "DO1", 3: "DO2", 4: "DO3",
+            5: "DO4", 6: "DO5", 7: "DO6", 8: "DO7",
+        },
+        "J32": {
+            1: "DO8", 2: "DO9", 3: "DO10", 4: "DO11",
+            5: "DO12", 6: "DO13", 7: "DO14", 8: "DO15",
+        },
+        "J24": {
+            1: "AI0", 2: "GND", 3: "AI1", 4: "GND", 5: "AI2",
+        },
+        "J10": {1: "MOTION0", 2: "MOTION1", 3: "MOTION2", 4: "GND"},
+        "J11": {1: "MOTION3", 2: "MOTION4", 3: "MOTION5", 4: "GND"},
+        "J28": {1: "MOTION6", 2: "MOTION7", 3: "MOTION8", 4: "GND"},
+        "J29": {1: "MOTION9", 2: "MOTION10", 3: "MOTION11", 4: "GND"},
+        "J30": {1: "MOTION12", 2: "MOTION13", 3: "MOTION14", 4: "GND"},
         "J31": {1: "AUX_OUT", 2: "GND"},
+        "J33": {1: "DO_COM", 2: "GND"},
+        "J34": {
+            1: "FIELD_IN13", 2: "FIELD_COM0",
+            3: "FIELD_IN14", 4: "FIELD_COM0",
+            5: "FIELD_IN15", 6: "FIELD_COM0",
+            7: "FIELD_IN16", 8: "FIELD_COM0",
+        },
+        "J35": {
+            1: "FIELD_IN5", 2: "FIELD_COM1",
+            3: "FIELD_IN6", 4: "FIELD_COM1",
+            5: "FIELD_IN7", 6: "FIELD_COM1",
+            7: "FIELD_IN8", 8: "FIELD_COM1",
+        },
     }
     for reference, pins in motion_connectors.items():
         for pin, expected_net in pins.items():
+            if expected_net is None:
+                continue
             if (reference, str(pin)) not in nets.get(expected_net, set()):
                 failures.append(
                     f"{reference} pin {pin} is not on expected net {expected_net}"
                 )
     aux_mosfet = {
-        ("R112", "1", "MOTION14"),
-        ("R112", "2", "AUX_GATE"),
+        ("RN16", "3", "BUFY0"),
+        ("RN16", "6", "AUX_GATE"),
         ("R113", "1", "AUX_GATE"),
         ("R113", "2", "GND"),
         ("Q5", "1", "AUX_GATE"),
@@ -384,21 +544,30 @@ def main() -> None:
             failures.append(
                 f"{reference} pin {pin} is not on expected AUX net {expected_net}"
             )
+    if ("U24", "8") not in nets.get("OUT0", set()):
+        failures.append("U24 spare buffer input pin 8 is not OUT0")
+    if ("U24", "12") not in nets.get("BUFY0", set()):
+        failures.append("U24 spare buffer output pin 12 is not BUFY0")
     # The physical connector order is chosen for the shortest, crossing-free
     # PCB fanout. Firmware maps these positions to logical PLC channels.
-    for block, reference in ((0, "J7"), (1, "J8")):
-        for local in range(8):
-            number = (9 + local) if block == 0 else (1 + local)
-            signal_pin = str(2 * local + 1)
-            common_pin = str(2 * local + 2)
-            if (reference, signal_pin) not in nets.get(f"FIELD_IN{number}", set()):
-                failures.append(
-                    f"{reference} pin {signal_pin} is not FIELD_IN{number}"
-                )
-            if (reference, common_pin) not in nets.get(f"FIELD_COM{block}", set()):
-                failures.append(
-                    f"{reference} pin {common_pin} is not FIELD_COM{block}"
-                )
+    for block, references_for_bank in ((0, ("J7", "J34")), (1, ("J8", "J35"))):
+        for half, reference in enumerate(references_for_bank):
+            for local in range(4):
+                number = (9 if block == 0 else 1) + half * 4 + local
+                signal_pin = str(2 * local + 1)
+                common_pin = str(2 * local + 2)
+                if (reference, signal_pin) not in nets.get(
+                    f"FIELD_IN{number}", set()
+                ):
+                    failures.append(
+                        f"{reference} pin {signal_pin} is not FIELD_IN{number}"
+                    )
+                if (reference, common_pin) not in nets.get(
+                    f"FIELD_COM{block}", set()
+                ):
+                    failures.append(
+                        f"{reference} pin {common_pin} is not FIELD_COM{block}"
+                    )
 
     plc_register_pin_numbers = {
         "U9": (5, 6, 7, 8, 4, 3, 2, 1),
@@ -412,14 +581,44 @@ def main() -> None:
                     f"{reference} data pin {data_pin} is not PLC_IN{number}_N"
                 )
     keyboard_network_pins = {
+        ("RN8", "1", "GND"), ("RN8", "8", "BUFY2"),
+        ("RN8", "2", "GND"), ("RN8", "7", "BUFY3"),
+        ("RN8", "3", "GND"), ("RN8", "6", "BUFY0"),
+        ("RN8", "4", "GND"), ("RN8", "5", "BUFY1"),
+        ("RN9", "1", "BUFY5"), ("RN9", "8", "GND"),
+        ("RN9", "2", "BUFY4"), ("RN9", "7", "GND"),
+        ("RN9", "3", "BUFY7"), ("RN9", "6", "GND"),
+        ("RN9", "4", "BUFY6"), ("RN9", "5", "GND"),
+        ("RN10", "1", "BUFY9"), ("RN10", "8", "GND"),
+        ("RN10", "2", "BUFY8"), ("RN10", "7", "GND"),
+        ("RN10", "3", "BUFY10"), ("RN10", "6", "GND"),
+        ("RN10", "4", "BUFY11"), ("RN10", "5", "GND"),
+        ("RN11", "1", "GND"), ("RN11", "8", "BUFY15"),
+        ("RN11", "2", "GND"), ("RN11", "7", "BUFY14"),
+        ("RN11", "3", "GND"), ("RN11", "6", "BUFY13"),
+        ("RN11", "4", "GND"), ("RN11", "5", "BUFY12"),
+        ("RN12", "1", "OUT19"), ("RN12", "8", "GND"),
+        ("RN12", "2", "OUT18"), ("RN12", "7", "GND"),
+        ("RN12", "3", "OUT17"), ("RN12", "6", "GND"),
+        ("RN12", "4", "OUT16"), ("RN12", "5", "GND"),
+        ("RN13", "2", "OUT22"), ("RN13", "7", "GND"),
+        ("RN13", "3", "OUT21"), ("RN13", "6", "GND"),
+        ("RN13", "4", "OUT20"), ("RN13", "5", "GND"),
         ("RN20", "1", "KOUT0"), ("RN20", "8", "OUT24"),
-        ("RN20", "2", "OUT25"), ("RN20", "7", "KOUT1"),
+        ("RN20", "2", "KOUT1"), ("RN20", "7", "OUT25"),
         ("RN20", "3", "KOUT2"), ("RN20", "6", "OUT26"),
-        ("RN20", "4", "OUT27"), ("RN20", "5", "KOUT3"),
+        ("RN20", "4", "KOUT3"), ("RN20", "5", "OUT27"),
         ("RN21", "1", "KOUT4"), ("RN21", "8", "OUT28"),
         ("RN21", "2", "KOUT5"), ("RN21", "7", "OUT29"),
         ("RN21", "3", "KOUT6"), ("RN21", "6", "OUT30"),
         ("RN21", "4", "KOUT7"), ("RN21", "5", "OUT31"),
+        ("RN30", "1", "OUT26"), ("RN30", "8", "GND"),
+        ("RN30", "2", "OUT24"), ("RN30", "7", "GND"),
+        ("RN30", "3", "OUT25"), ("RN30", "6", "GND"),
+        ("RN30", "4", "OUT23"), ("RN30", "5", "GND"),
+        ("RN31", "1", "OUT29"), ("RN31", "8", "GND"),
+        ("RN31", "2", "OUT28"), ("RN31", "7", "GND"),
+        ("RN31", "3", "OUT27"), ("RN31", "6", "GND"),
         ("RN22", "1", "KIN0_FILT"), ("RN22", "8", "KIN0"),
         ("RN22", "2", "KIN1_FILT"), ("RN22", "7", "KIN1"),
         ("RN22", "3", "KIN2_FILT"), ("RN22", "6", "KIN2"),
@@ -434,10 +633,21 @@ def main() -> None:
             failures.append(
                 f"{reference} pin {pin} is not on expected keyboard net {expected_net}"
             )
+    connected_pads = {
+        endpoint for endpoints in nets.values() for endpoint in endpoints
+    }
+    spare_array_pins = {
+        "RN13": ("1", "8"),
+        "RN31": ("4", "5"),
+    }
+    for reference, pins in spare_array_pins.items():
+        for pin in pins:
+            if (reference, pin) in connected_pads:
+                failures.append(f"{reference} spare pin {pin} is connected")
     decoupling_required = {
         "U1", "U2", "U37", "U38",
         "U6", "U7", "U8", "U9", "U10", "U11", "U12", "U13",
-        "U24", "U25", "U28", "U34",
+        "U24", "U25", "U28", "U34", "U41",
     }
     decouplers = [
         reference
@@ -463,7 +673,7 @@ def main() -> None:
         component.get("ref"): component for component in components
     }
     dnp_required = {
-        "RN28", "RN29",
+        "RN26", "RN27",
     }
     for reference in sorted(dnp_required):
         component = components_by_ref.get(reference)
@@ -479,43 +689,72 @@ def main() -> None:
             failures.append(f"Legacy component {reference} is not marked DNP")
 
     lvds_required = {
-        ("RN26", "1", "HSTX_D1_P"),
-        ("RN26", "8", "LVDS_D1_P"),
-        ("RN26", "2", "HSTX_D1_N"),
-        ("RN26", "7", "LVDS_D1_N"),
-        ("RN26", "3", "HSTX_D0_P"),
-        ("RN26", "6", "LVDS_D0_P"),
-        ("RN26", "4", "HSTX_D0_N"),
-        ("RN26", "5", "LVDS_D0_N"),
-        ("RN27", "1", "HSTX_CLK_P"),
-        ("RN27", "8", "LVDS_CLK_P"),
-        ("RN27", "2", "HSTX_CLK_N"),
-        ("RN27", "7", "LVDS_CLK_N"),
-        ("RN27", "3", "HSTX_D2_P"),
-        ("RN27", "6", "LVDS_D2_P"),
-        ("RN27", "4", "HSTX_D2_N"),
-        ("RN27", "5", "LVDS_D2_N"),
+        ("RN26", "1", "HSTX_D1_N"),
+        ("RN26", "8", "LVDS_D1_N"),
+        ("RN26", "2", "HSTX_D1_P"),
+        ("RN26", "7", "LVDS_D1_P"),
+        ("RN26", "3", "HSTX_D0_N"),
+        ("RN26", "6", "LVDS_D0_N"),
+        ("RN26", "4", "HSTX_D0_P"),
+        ("RN26", "5", "LVDS_D0_P"),
+        ("RN27", "1", "HSTX_CLK_N"),
+        ("RN27", "8", "LVDS_CLK_N"),
+        ("RN27", "2", "HSTX_CLK_P"),
+        ("RN27", "7", "LVDS_CLK_P"),
+        ("RN27", "3", "HSTX_D2_N"),
+        ("RN27", "6", "LVDS_D2_N"),
+        ("RN27", "4", "HSTX_D2_P"),
+        ("RN27", "5", "LVDS_D2_P"),
     }
     for reference, pin, expected_net in lvds_required:
         if (reference, pin) not in nets.get(expected_net, set()):
             failures.append(
                 f"{reference} pin {pin} is not on expected LVDS net {expected_net}"
             )
-    hdmi_required = {
-        ("RN28", "1", "HSTX_D2_P"), ("RN28", "8", "HDMI_D2_P"),
-        ("RN28", "2", "HSTX_D2_N"), ("RN28", "7", "HDMI_D2_N"),
-        ("RN28", "3", "HSTX_D1_P"), ("RN28", "6", "HDMI_D1_P"),
-        ("RN28", "4", "HSTX_D1_N"), ("RN28", "5", "HDMI_D1_N"),
-        ("RN29", "1", "HSTX_D0_P"), ("RN29", "8", "HDMI_D0_P"),
-        ("RN29", "2", "HSTX_D0_N"), ("RN29", "7", "HDMI_D0_N"),
-        ("RN29", "3", "HSTX_CLK_P"), ("RN29", "6", "HDMI_CLK_P"),
-        ("RN29", "4", "HSTX_CLK_N"), ("RN29", "5", "HDMI_CLK_N"),
+    if any(name.startswith("HDMI_") or name == "+5V_HDMI" for name in nets):
+        failures.append("Removed HDMI nets remain in the schematic")
+    lcd_connector_pins = {
+        "1": "+3V3",
+        "2": "+3V3",
+        "3": "+3V3",
+        "4": "GND",
+        "5": "GND",
+        "6": "GND",
+        "7": "LVDS_D0_N",
+        "8": "LVDS_D0_P",
+        "9": "LVDS_D1_N",
+        "10": "LVDS_D1_P",
+        "11": "LVDS_D2_N",
+        "12": "LVDS_D2_P",
+        "13": "GND",
+        "14": "GND",
+        "15": "LVDS_CLK_N",
+        "16": "LVDS_CLK_P",
     }
-    for reference, pin, expected_net in hdmi_required:
-        if (reference, pin) not in nets.get(expected_net, set()):
-            failures.append(
-                f"{reference} pin {pin} is not on expected HDMI net {expected_net}"
-            )
+    for pin, expected_net in lcd_connector_pins.items():
+        if ("J22", pin) not in nets.get(expected_net, set()):
+            failures.append(f"J22 pin {pin} is not on {expected_net}")
+    for pin in ("17", "18", "19", "20"):
+        if any(("J22", pin) in endpoints for endpoints in nets.values()):
+            failures.append(f"J22 pin {pin} must remain unconnected")
+    if "U41" not in references:
+        failures.append("Missing active LVDS driver U41")
+    lvds_driver_pins = {
+        "1": "+3V3", "2": "HSTX_D0_P", "3": "HSTX_D1_P",
+        "4": "+3V3", "5": "GND", "6": "HSTX_D2_P",
+        "7": "HSTX_CLK_P", "8": "GND",
+        "9": "LVDS_D0_N", "10": "LVDS_D0_P",
+        "11": "LVDS_D1_P", "12": "LVDS_D1_N",
+        "13": "LVDS_D2_N", "14": "LVDS_D2_P",
+        "15": "LVDS_CLK_P", "16": "LVDS_CLK_N",
+    }
+    for pin, expected_net in lvds_driver_pins.items():
+        if ("U41", pin) not in nets.get(expected_net, set()):
+            failures.append(f"U41 pin {pin} is not on {expected_net}")
+    if ("C106", "1") not in nets.get("+3V3", set()):
+        failures.append("C106 is not connected to U41 +3V3")
+    if ("C106", "2") not in nets.get("GND", set()):
+        failures.append("C106 is not connected to GND")
 
     removed = {
         "C9", "C12", "C18", "C19", "C20", "C21", "C78", "C81", "C82", "C83",
@@ -523,7 +762,7 @@ def main() -> None:
         "Q2", "Q3", "Q4", "R2", "R3", "R6", "R7", "R8", "R14", "R15",
         "R42", "R43", "SW1", "U3", "U4", "U14", "U15", "U16", "U17", "U22", "U23",
         "RN1", "RN2", "RN3", "RN4", "RN5", "RN23", "RN25",
-        "RN30", "RN31", "RN32", "RN33",
+        "RN32", "RN33",
         *(f"C{index}" for index in range(30, 53)),
         *(f"C{index}" for index in range(59, 67)),
     }
@@ -684,6 +923,24 @@ def main() -> None:
             failures.append(f"WeAct 3V3 output pin {pin} must remain local to the module")
     if ("MOD1", "31") not in nets.get("+5V", set()):
         failures.append("WeAct 5 V input is not connected to the main 5 V rail")
+    for pin in ("1", "2", "3"):
+        if ("Q1", pin) not in nets.get("VIN_PROT", set()):
+            failures.append(f"Q1 SO-8 source pin {pin} is not on VIN_PROT")
+    if ("Q1", "4") not in nets.get("Q1_GATE", set()):
+        failures.append("Q1 SO-8 gate pin 4 is not on Q1_GATE")
+    for pin in ("5", "6", "7", "8"):
+        if ("Q1", pin) not in nets.get("VIN_FUSED", set()):
+            failures.append(f"Q1 SO-8 drain pin {pin} is not on VIN_FUSED")
+    if component_values.get("Q1") != "IRF7240PBF":
+        failures.append("Q1 is not the intended 40 V SO-8 input MOSFET")
+    q1 = next(
+        (component for component in components if component.get("ref") == "Q1"),
+        None,
+    )
+    if q1 is None or "SOIC-8_3.9x4.9mm_P1.27mm" not in (
+        q1.findtext("footprint") or ""
+    ):
+        failures.append("Q1 is not in the intended SO-8 footprint")
     for expected in (("U1", "4"), ("MOD1", "21"), ("R73", "1")):
         if expected not in nets.get("PWR_GOOD_N", set()):
             failures.append(f"Power-good network is missing {expected}")

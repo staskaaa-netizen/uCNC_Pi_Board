@@ -19,7 +19,7 @@ CSV_OUTPUT = ROOT / "hardware" / "component-placement-manifest.csv"
 JSON_OUTPUT = ROOT / "hardware" / "component-placement-manifest.json"
 
 POWER_SUPPLIES = {
-    "+3V3", "+3V3_A", "+3V3_SD", "+3V3_WIFI", "+5V", "+5V_HDMI",
+    "+3V3", "+3V3_A", "+3V3_SD", "+3V3_WIFI", "+5V",
     "+5V_ENC", "+12V_AO", "VIN_PROT", "VCC5",
 }
 DECOUPLING_IC = {
@@ -32,7 +32,7 @@ DECOUPLING_IC = {
     "C88": "U34 input", "C89": "U34 input",
     "C69": "U34 output", "C70": "U34 output",
     "C3": "U1 input", "C4": "U1 input", "C5": "U1 input",
-    "C6": "U1 output", "C7": "U1 output", "C8": "U1 output", "C11": "U1 output",
+    "C6": "U1 output", "C7": "U1 output", "C11": "U1 output",
     "C86": "U1 BOOT", "C91": "U1 VCC",
 }
 CAP_ROLE_OVERRIDES = {
@@ -43,14 +43,10 @@ CAP_ROLE_OVERRIDES = {
     "C5": ("bulk input capacitor", "U1 input"),
     "C6": ("bulk output capacitor", "U1 output"),
     "C7": ("decoupling capacitor", "U1 output"),
-    "C8": ("bulk output capacitor", "U1 output"),
     "C10": ("bulk input capacitor", "U2 input"),
     "C11": ("bulk output capacitor", "U1 output"),
     "C13": ("decoupling capacitor", "U2 output"),
-    "C14": ("bulk rail capacitor", "+3V3_A filter"),
     "C15": ("decoupling capacitor", "+3V3_A filter"),
-    "C16": ("bulk rail capacitor", "+5V rail"),
-    "C17": ("decoupling capacitor", "+5V rail"),
     "C21": ("reset capacitor", "retired"),
     "C55": ("output clamp capacitor", "U26 DO_COM"),
     "C56": ("output clamp capacitor", "U27 DO_COM"),
@@ -58,10 +54,7 @@ CAP_ROLE_OVERRIDES = {
     "C68": ("decoupling capacitor", "SD +3V3_SD"),
     "C69": ("bulk output capacitor", "U34 output"),
     "C70": ("decoupling capacitor", "U34 output"),
-    "C71": ("bulk rail capacitor", "HDMI +5V"),
-    "C72": ("decoupling capacitor", "HDMI +5V"),
     "C76": ("decoupling capacitor", "U2 input"),
-    "C77": ("decoupling capacitor", "+5V rail"),
     "C86": ("bootstrap capacitor", "U1 BOOT to SW"),
     "C88": ("bulk input capacitor", "U34 input"),
     "C89": ("decoupling capacitor", "U34 input"),
@@ -123,8 +116,6 @@ def role_for(reference: str, value: str, footprint: str, nets: set[str]) -> tupl
         return "mounting hole", "mechanical mounting", "anchor; keep fixed"
     if reference.startswith("J"):
         return "connector", "external or board-level connection", "anchor; keep at approved board edge"
-    if reference in {"RN28", "RN29"}:
-        return "optional link array", "alternate HDMI population", "park; fit only for HDMI option"
     if reference.startswith("RN"):
         return "resistor network", "isolated multi-channel passive network", "place local to its channel bank"
     if reference.startswith("C"):
@@ -205,7 +196,7 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "motion output connector"
         if reference == "J12":
             return "ULN output connector"
-        if reference in {"J22", "J23"}:
+        if reference == "J22":
             return "display connector"
         if reference == "J1":
             return "main power connector"
@@ -226,19 +217,19 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
         channels = [item for item in channels_from_nets(nets) if item.startswith("encoder")]
         return channels[0] if channels else "encoder interface"
     if sheet == "Display":
-        return "HDMI/LVDS display"
+        return "LCD LVDS display"
     if sheet == "Storage, Wi-Fi and UI":
         if any(net.startswith("SD_") for net in nets):
             return "SD interface"
         if any(net.startswith("WIFI_") or net == "+3V3_WIFI" for net in nets):
-            return "ESP-01S interface"
+            return "ESP-01/ESP-01S interface"
         if any(net.startswith(("KIN", "KOUT")) for net in nets):
             return "keyboard matrix"
         return "storage/UI support"
     if sheet == "Power and supervision":
-        if reference in {"U1", "L1", "C3", "C4", "C5", "C6", "C7", "C8", "C11", "C86", "C91", "R70", "R71", "R72"}:
+        if reference in {"U1", "L1", "C3", "C4", "C5", "C6", "C7", "C11", "C86", "C91", "R70", "R71", "R72"}:
             return "24V to 5V buck"
-        if reference in {"U2", "C10", "C13", "C76", "C90", "C16", "C17", "C77"}:
+        if reference in {"U2", "C10", "C13", "C76", "C90"}:
             return "peripheral 3.3V regulator"
         if reference in {"U34", "C69", "C70", "C88", "C89"}:
             return "ESP 3.3V regulator"

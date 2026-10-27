@@ -7,10 +7,12 @@
   are front-side; J9/J16/J17 and most input/output conditioning are back-side.
 - External field wiring uses Phoenix `MCV 1,5` vertical 3.5 mm connectors.
 - One LMR36510 24 V-to-5 V buck feeds the WeAct module and two local 3.3 V
-  LDOs: one for peripheral logic/SD/LCD and one dedicated to the ESP-01S.
+  LDOs: one for peripheral logic/SD/LCD and one dedicated to the ESP-01/ESP-01S.
 - U37, an L78L12 SOT-89 regulator, creates a separate `+12V_AO` rail for the
   four-channel TLV2374 0-10 V output amplifier.
-- Minimum track/clearance: 0.25/0.20 mm; 0.30 mm drill with 0.60 mm via pad.
+- General minimum track/clearance: 0.25/0.20 mm; 0.30 mm drill with 0.60 mm
+  via pad. The eight LVDS connector signals use 0.12 mm tracks and 0.12 mm
+  spacing to fan out between the 2.00 mm J22 pins.
 - General 100 nF IC decoupling uses 0805 to keep loop area small. High-voltage
   input ceramics, bulk components and most other passives remain 1206.
 - Four M3 mounting positions.
@@ -22,31 +24,31 @@
 
 ## Default build
 
-The default build is the passive LCD LVDS configuration and no Wi-Fi module:
+The default build is the active LCD LVDS configuration and no Wi-Fi module:
 
 - Fit the WeAct RP2350B socket, all input/output logic, power supply and standard
   decoupling.
-- Fit RN26/RN27 (two four-element 330 ohm LVDS arrays).
-- Leave RN28/RN29 (HDMI selector arrays) unfitted.
-- Do not insert ESP-01S unless Wi-Fi is required.
-- The module and ESP-01S are supplied separately.
+- Fit U41 (DS90LV047A) and C106. Leave the passive RN26/RN27 arrays unfitted.
+- Do not insert the ESP-01/ESP-01S module unless Wi-Fi is required.
+- The module and RP2350B board are supplied separately.
 
 ## Alternate populations
 
 | Option | Fit | Do not fit |
 |---|---|---|
-| Passive LCD LVDS | RN26/RN27, J22 | RN28/RN29 |
-| HDMI | RN28/RN29, J23 | RN26/RN27 |
-| Wi-Fi | ESP-01S in J18 | None |
-| External LCD/backlight driver | J22 pin 6 PWM to external driver | None |
+| Active LCD LVDS | U41, C106, J22 | RN26/RN27 |
+| Passive LCD LVDS | RN26/RN27, J22 | U41 |
+| Wi-Fi | ESP-01 or ESP-01S in J20 | None |
+| External LCD/backlight driver | Separate interface not yet assigned | None |
 
 
-Fit only one display path. The active-LVDS driver is not fitted. No solder
-jumper is required for backlight selection.
+Fit only one LVDS driver path. No HDMI connector or HDMI signal path is fitted.
+No solder jumper is required for backlight selection.
 
-J22 pin 6 carries `BL_PWM` directly. The local J2 backlight connector, JP1
-supply selector and Q2/Q3 high-current switch are not fitted. Backlight power
-switching and current limiting are the external display driver's responsibility.
+The verified J22 pinout has no backlight contact. MOD1 GPIO1 is reserved for a
+future backlight PWM, but no board net or connector is assigned until a
+separate backlight-driver interface is specified. The local J2 backlight
+connector, JP1 supply selector and Q2/Q3 high-current switch are not fitted.
 LCD panel logic is powered directly from `+3V3`.
 
 The WeAct module's own reset button, power-on reset, brownout detector and
@@ -60,11 +62,12 @@ The repeated low-power and digital-output resistors use isolated four-element
 arrays:
 
 - RN6/RN7: 10 k expansion-input pull-downs.
-- RN8-RN13: 10 k pull-downs for motion and ULN output-register states.
+- RN8-RN13 and RN30/RN31: 10 k pull-downs for output-register states.
 - RN16-RN21: 100 ohm motion and keyboard output series resistors.
+- R114-R117: 100 ohm gate resistors and 100 k pull-downs for the two extra
+  low-side BSS138 outputs.
 - RN22 and RN24: 1 k keyboard input series protection only.
 - RN26/RN27: 4 x 330 ohm passive LVDS series resistors.
-- RN28/RN29: 4 x 0 ohm HDMI selector links, DNP by default.
 - R92-R99: individual 0805 10 k resistors for the two PWM filter stages.
 - R100-R103: individual 0805 22 k feedback resistors.
 - R104-R107: individual 0805 10 k gain-setting resistors to GND.
@@ -91,27 +94,40 @@ common return. The external status LED is omitted because GPIO46 now supplies
 the fourth PWM channel; the WeAct board's onboard LED remains available.
 
 The local output-enable safety gates, inverter and pull-up are removed. The
-74HC595 and AHCT541 output-enable pins are tied active. Output power isolation
-and hard blocking must be provided by the external machine interface.
+74HC595 `~OE` and AHCT541 output-enable pins are tied active, and all four
+74HC595 `~SRCLR` pins are tied to `+3V3`. Output power isolation and hard
+blocking must be provided by the external machine interface.
+
+Both ULN2003A packages use all seven channels, providing DO0-DO13. DO14 and
+DO15 use BSS138 MOSFETs with the same gate network as the auxiliary output.
+J12 exposes DO0-DO7 with DO_COM and GND; the adjacent same-family 8-pin J32
+exposes DO8-DO15 and shares `DO_COM`/`GND` through J12.
+
+The first 595 output bit drives the AUX channel through Q5. The fifteen
+motion channels therefore use shift bits 1-15 through the two
+SN74AHCT541DW buffers. DO8-DO15 have the same resistor/LED indication chain
+as DO0-DO7, fitted in a second row below J32.
+
+RN12/RN13 define OUT16-OUT22 when the 595 chain is tri-stated. RN30 covers
+OUT23-OUT26 and RN31 covers OUT27-OUT29; the remaining element in each array
+is spare.
 
 ## ESD protection
 
-`TPD4E05U06DQA` is fitted only where its sub-picofarad capacitance and exposed
-connector justify the fine-pitch USON-10 package. Three arrays remain:
-
-- U30/U31 protect the four HDMI TMDS pairs.
-- U32 protects HDMI DDC, HPD and CEC.
-
+The HDMI connector, HDMI-only ESD arrays and HDMI supply components are removed.
 Encoder, keyboard and SD-card signals are internal or enclosed connections and
-do not fit these arrays. The encoder interface requires 5 V push-pull A/B/Z
+do not use TPD4E arrays. The encoder interface requires 5 V push-pull A/B/Z
 outputs; open-collector encoders need pull-ups added externally.
 
 ## Hand assembly
 
-Solder the fine-pitch HDMI, USON-10 ESD, SOIC and 1206 packages in that order of
-difficulty. Display selection uses populated resistor arrays rather than solder
+Solder the fine-pitch SOIC and 1206 packages in that order of difficulty.
+Display selection uses the active or passive LVDS population rather than solder
 jumpers. JP2-JP4 use standard 2.54 mm headers and removable shunts; fit one
 shunt per field bank in the required position. Fit the WeAct module last.
+Before fitting it, remove **R16 (0R)** from the WeAct module to disconnect
+GPIO23 from the onboard USER-key and WeAct C27 capacitor network used by the
+74HC165 return. Motherboard C27 at U11 is unrelated and remains fitted.
 Inspect the isolated input side before energising field wiring. The input
 `FIELD_COMx` returns are
 deliberately separate from logic ground.

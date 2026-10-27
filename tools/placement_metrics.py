@@ -21,7 +21,7 @@ PCB = HARDWARE / "motherboard.kicad_pcb"
 def net_weight(name: str) -> float:
     if name in {"GND", "PGND", "AGND"}:
         return 0.0
-    if name.startswith("HDMI_") or name.startswith("HSTX_") or name.startswith("LVDS_"):
+    if name.startswith("HSTX_") or name.startswith("LVDS_"):
         return 2.5
     if name.startswith(("ESTOP", "HOLD", "START")):
         return 3.0

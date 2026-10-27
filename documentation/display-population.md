@@ -1,28 +1,61 @@
 # Display population options
 
-Only one output configuration is populated at a time. The verified PicoLVDS
-HSTX order is used: `GPIO12-13 = D0`, `GPIO14-15 = D1`,
+The board provides one LCD output configuration. The verified PicoLVDS HSTX
+order is used: `GPIO12-13 = D0`, `GPIO14-15 = D1`,
 `GPIO16-17 = D2`, `GPIO18-19 = clock`. In each pair, the lower-numbered
 GPIO is P and the higher-numbered GPIO is N.
 
-## Default: passive LCD LVDS
+The HDMI receptacle and all HDMI-only circuitry are removed. There is no HDMI
+video, CEC, DDC, HPD, +5 V HDMI fuse or HDMI ESD/termination path on the board.
+J22 is the only display connector.
 
-- Fit RN26 and RN27: two four-element 330 ohm resistor arrays.
-- Leave RN28 and RN29 unfitted.
+## Default: active LCD LVDS
+
+- Fit U41, a DS90LV047A quad CMOS-to-LVDS driver in SOIC-16.
+- Leave RN26 and RN27 unfitted.
 - J22 is the 2.00 mm, 2x10 LCD connector.
-- The chain is `HSTX_D2_N/P`, `HSTX_CLK_N/P`, `HSTX_D1_N/P`,
-  `HSTX_D0_N/P` to J22 pins 14/15, 17/18, 11/12, 8/9.
+- Odd pins are the left column and even pins are the right column. Rows 1-8
+  are used; rows 9-10 and pins 17-20 are no-connect.
 - J22 is placed on the front at `(145.50, 34.00)`, rotation 270 degrees.
 - RN27 and RN26 are placed below it at `(135.50, 40.00)` and
   `(143.00, 40.00)`, both rotation 90 degrees.
 
-The isolated network pairs are physically ordered to fan into J22 without
-reversing the logical lanes:
+| Row | Left pin | Right pin |
+|---:|---|---|
+| 1 | 1 = +3V3 | 2 = +3V3 |
+| 2 | 3 = +3V3 | 4 = GND |
+| 3 | 5 = GND | 6 = GND |
+| 4 | 7 = D0- | 8 = D0+ |
+| 5 | 9 = D1- | 10 = D1+ |
+| 6 | 11 = D2- | 12 = D2+ |
+| 7 | 13 = GND | 14 = GND |
+| 8 | 15 = CLK- | 16 = CLK+ |
+| 9 | 17 = NC | 18 = NC |
+| 10 | 19 = NC | 20 = NC |
+
+U41 accepts four single-ended 3.3 V HSTX signals and drives the four LVDS pairs:
+
+| Driver input | Driver output | J22 pair |
+|---|---|---|
+| `HSTX_D0_P` | `LVDS_D0_P/N` | pins 8/7 |
+| `HSTX_D1_P` | `LVDS_D1_P/N` | pins 10/9 |
+| `HSTX_D2_P` | `LVDS_D2_P/N` | pins 12/11 |
+| `HSTX_CLK_P` | `LVDS_CLK_P/N` | pins 16/15 |
+
+`EN` is tied to `+3V3`, `EN*` to GND, and C106 provides local 100 nF
+decoupling at the driver. LVDS connector tracks use a dedicated
+0.12 mm track/gap/clearance netclass; the HSTX source nets remain 0.20 mm.
+
+## Alternate: passive LCD LVDS
+
+RN26 and RN27 are retained as an unfitted passive alternative. Their isolated
+network pairs are physically ordered to fan into J22 without reversing the
+logical lanes:
 
 | Network | Pair 1 pins 1/8 | Pair 2 pins 2/7 | Pair 3 pins 3/6 | Pair 4 pins 4/5 |
 |---|---|---|---|---|
-| RN26 | HSTX_D1_P -> LVDS_D1_P | HSTX_D1_N -> LVDS_D1_N | HSTX_D0_P -> LVDS_D0_P | HSTX_D0_N -> LVDS_D0_N |
-| RN27 | HSTX_CLK_P -> LVDS_CLK_P | HSTX_CLK_N -> LVDS_CLK_N | HSTX_D2_P -> LVDS_D2_P | HSTX_D2_N -> LVDS_D2_N |
+| RN26 | HSTX_D1_N -> LVDS_D1_N | HSTX_D1_P -> LVDS_D1_P | HSTX_D0_N -> LVDS_D0_N | HSTX_D0_P -> LVDS_D0_P |
+| RN27 | HSTX_CLK_N -> LVDS_CLK_N | HSTX_CLK_P -> LVDS_CLK_P | HSTX_D2_N -> LVDS_D2_N | HSTX_D2_P -> LVDS_D2_P |
 
 This is an equivalent package-pin permutation; the RP2350 pin functions and J22
 net names are unchanged.
@@ -31,41 +64,12 @@ This follows the established PicoLVDS lane order. The requested nominal value is
 330 ohm; the reference prototype used 270 ohm. Verify the target panel and cable
 with the selected value before release.
 
-## Planned alternative: active LCD LVDS driver
-
-Add a DS90LV047A later as an alternate population to RN26/RN27; it is not fitted
-in the current passive configuration.
-
-- The DS90LV047A is a quad CMOS-to-LVDS driver and needs only four
-  single-ended RP2350 HSTX inputs: D0, D1, D2 and clock.
-- Its four differential outputs drive the same LVDS lane order at J22.
-- Tie the enable pins to their active states so the driver is permanently
-  enabled: `EN` to `+3V3` and complementary `~EN` to GND, according to the
-  selected package and datasheet pinout.
-- Fit a local 100 nF supply bypass at the driver.
-- RN26/RN27 and the active driver are mutually exclusive populations.
-- Leave RN28/RN29 and the HDMI path unfitted for this LCD option.
-
-The RP2350 does not provide differential HSTX outputs to this part. Four
-single-ended CMOS inputs are the intended interface.
-
-## HDMI option
-
-- Leave RN26 and RN27 unfitted.
-- Fit RN28 and RN29: two four-element 0 ohm resistor arrays.
-- J23 is a full-size HDMI Type A connector.
-- RN28 and RN29 are placed at `(173.50, 19.00)` and `(173.50, 25.00)`.
-- C71, C72, R59 and R60 are grouped near the HDMI connector and its +5 V rail.
-- U30/U31 provide TPD4E05U06 ESD protection on all four TMDS pairs;
-  U32 protects DDC, HPD and CEC.
-- DDC SCL/SDA have 4.7 k pull-ups to the
-  HDMI +5 V rail and are not connected to the RP2350 because the established
-  output uses fixed timing and does not require an MCU-side EDID exchange.
+RN26/RN27 and U41 are mutually exclusive populations. Do not fit both.
 
 ## Backlight
 
-J22 pin 6 carries the 3.3 V `BL_PWM` signal directly to the LCD/backlight
-assembly. The motherboard no longer switches or selects a backlight voltage
-rail. J2, JP1 and the Q2/Q3 MOSFET stage are removed. The external display
-module or a separate backlight driver must own high-current switching,
-current limiting and any required enable logic.
+The verified J22 pinout contains no backlight contact. MOD1 GPIO1 is reserved
+for a future 3.3 V backlight PWM, but no board net or connector is assigned.
+The motherboard does not switch or select a backlight voltage rail. J2, JP1
+and the Q2/Q3 MOSFET stage remain removed. A separate external backlight-driver
+interface is not yet assigned.

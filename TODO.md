@@ -41,10 +41,10 @@
 - The stock uCNC RP2350/Pico 2 board map does not match this board; a
   LeanCam-specific board map is required.
 - The normal uCNC `shift_register` driver supports both 74HC165 and 74HC595 on
-  arbitrary GPIOs, so the current non-sequential chain is compatible.
-- The optional uCNC 595 PIO path requires exactly four 595s and consecutive
-  DATA/CLK/LATCH pins. Current GPIO24/GPIO20/GPIO35 are incompatible with that
-  option unless the PIO implementation or pin map changes.
+  arbitrary GPIOs and remains the complete bit-banged runtime path.
+- The optional uCNC 595 PIO path uses GPIO20/21/22 in the required
+  DATA/CLK/LATCH order. It drives only the four 595 outputs; add separate or
+  custom PIO input scanning before selecting that path for the complete board.
 - Stock uCNC encoders use GPIO interrupts rather than PIO. All nine A/B/Z pins
   GP26-GP34 are compatible as PULSE/DIR/INDEX. A custom PIO quadrature decoder
   remains optional firmware work.
@@ -70,9 +70,21 @@
 - Feed it only the four single-ended HSTX signals: D0, D1, D2 and clock.
 - Tie `EN` active-high and complementary `~EN` active-low so the driver is
   permanently enabled; add local +3V3 decoupling.
-- Make the driver and RN26/RN27 mutually exclusive, while preserving the
-  verified HSTX-to-J22 lane order.
+- Make the driver and RN26/RN27 mutually exclusive, using the verified display
+  connector pinout in `documentation/display-population.md`.
 - Do not fit this option in the current passive-LCD build.
+
+## Connector standardization
+
+- Limit board-side pluggable field terminals to Phoenix `MCV 1,5` 3.5 mm
+  connectors in 2-, 4-, 5- and 8-position variants.
+- Split each 16-position PLC bank into two 8-position connectors.
+- Split J12 into one 8-position output connector plus one 2-position
+  `DO_COM`/GND connector.
+- Keep J24 on the 5-position standard as `AI0/GND/AI1/GND/AI2`; three
+  analog inputs need only two shared ground terminals.
+- Do not convert 8-position groups to two 2x4 connectors; this adds a fourth
+  physical format without reducing useful pin count.
 
 ## Incremental routing
 

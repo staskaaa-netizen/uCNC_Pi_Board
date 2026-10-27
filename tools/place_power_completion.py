@@ -24,19 +24,14 @@ BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 POSITIONS = {
     # U1 +5 V output bank, immediately left of C6/C11.
     "C7": (181.000, 101.200, 90.0),
-    "C8": (181.000, 104.500, 0.0),
-    "C17": (181.000, 107.500, 0.0),
-    "C16": (176.000, 105.500, 90.0),
-    "C77": (176.000, 100.500, 90.0),
     # Dedicated ESP-01S regulator rail.
-    "C88": (202.800, 37.000, 0.0),
-    "C89": (197.800, 37.000, 0.0),
-    "C70": (190.200, 41.200, 90.0),
-    "C69": (195.000, 49.000, 0.0),
+    "C88": (189.230, 44.450, 270.0),
+    "C89": (185.420, 37.465, 180.0),
+    "C70": (170.815, 37.465, 0.0),
+    "C69": (176.530, 37.465, 0.0),
     # ADC/reference prefilter beside MOD1 pin 48.
-    "FB1": (161.500, 49.370, 0.0),
-    "C15": (168.000, 49.370, 0.0),
-    "C14": (168.000, 54.200, 0.0),
+    "FB1": (133.350, 66.040, 0.0),
+    "C15": (139.700, 66.040, 0.0),
     # Power-good pull-up, roughly between U1 PG and MOD1 GPIO43.
     "R73": (183.000, 87.500, 0.0),
     # Visible power indicators between the RP2350 and the two regulators.

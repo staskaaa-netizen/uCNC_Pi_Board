@@ -811,3 +811,736 @@ mode selectors to removable hardware:
 - U40 is snapped to the 0.5 mm grid at `(39.00, 130.50)`.
 - No SMT footprints remain on B.Cu, leaving the bottom copper primarily
   available for the ground plane.
+
+Checkpoint 65 makes the shift-register output controls PIO-ready without moving
+components:
+
+- The 74HC595 controls are now `GPIO20 = DATA`, `GPIO21 = CLK` and
+  `GPIO22 = LATCH`, satisfying the stock uCNC RP2350 PIO requirement for three
+  consecutive pins in that exact order.
+- The 74HC165 load and return move to `GPIO24` and `GPIO35` respectively.
+- All 305 footprint positions and rotations are unchanged. Only five MOD1 pad
+  nets and the affected ground-zone fill were updated.
+- The logical 32-bit input/output maps and all 165/595 chain connections are
+  unchanged. The standard bit-banged `shift_register` remains the complete
+  runtime path; the stock 595 PIO path is output-only until input scanning gets
+  separate/custom PIO support.
+- Whole-board estimated airwire length changes from 9870.937 mm to 9874.034 mm
+  (+3.097 mm) and weighted airwire from 9736.864 mm to 9741.509 mm
+  (+4.645 mm). Estimated crossings fall from 897 to 896 and weighted crossings
+  from 1186.4 to 1181.9. The tiny length cost buys the required PIO pin order.
+- Verification reports no net-contract failures. PCB DRC has no errors and one
+  unrelated silkscreen warning between D53 and the F2 reference. The board
+  remains completely unrouted with 499 expected connections.
+
+- Board: `hardware/checkpoints/checkpoint-65-shift-pio-ready.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-65-shift-pio-ready/`
+- Metrics: `hardware/checkpoints/checkpoint-65-shift-pio-ready/metrics.json`
+
+Checkpoint 66 snaps every unlocked footprint to KiCad 10's active PCB grid:
+
+- The active grid was read from the PCB Editor settings as index 15,
+  `0.5 mm x 0.5 mm`, with grid origin `(0, 0)`.
+- Seven unlocked footprints moved by at most `0.197 mm`: H2, H4, J18, J4,
+  JP2, JP3 and JP4. The other 298 footprints were already aligned.
+- All 305 footprint rotations and relative pad offsets are unchanged. No locked
+  footprints moved, and no locked footprints were present.
+- Tracks and vias remain at zero, all seven board-level drawings are unchanged,
+  and the ground-zone outline is unchanged. DRC refilled the existing zone.
+- PCB DRC reports zero errors, the existing unrelated D53/F2 silkscreen warning,
+  and 499 expected unrouted connections.
+
+- Board: `hardware/checkpoints/checkpoint-66-active-grid-snap.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-66-active-grid-snap/`
+- Snap report: `hardware/checkpoints/checkpoint-66-active-grid-snap/snap-report.json`
+- Constraint check: `hardware/checkpoints/checkpoint-66-active-grid-snap/constraint-check.json`
+- DRC: `hardware/checkpoints/checkpoint-66-active-grid-snap/drc.json`
+
+Checkpoint 67 normalizes connectors by their native pitch and aligns the metric
+connector rows by courtyard:
+
+- The 3.5 mm Phoenix connectors use a 0.25 mm grid, which aligns both their
+  individual pads and their mechanical centers.
+- The 2.54 mm headers and selector jumpers use a 0.635 mm grid.
+- Remaining connector families keep a 0.5 mm anchor grid.
+- All bottom-edge 3.5 mm connector courtyards now end at `Y = 148.545 mm`.
+- All top-row 3.5 mm connector courtyards now begin at `Y = 3.205 mm`.
+- Twenty-four connector footprints moved by at most 0.75 mm. Rotations,
+  relative pad positions, board drawings, track/via counts and zone outlines
+  remain unchanged.
+- Weighted airwire changes from 9420.005 mm to 9430.654 mm (+10.649 mm);
+  estimated crossings remain unchanged at 806.
+- PCB DRC reports zero errors, the existing D53/F2 silkscreen warning and 499
+  expected unrouted connections.
+
+- Board: `hardware/checkpoints/checkpoint-67-connector-grid-tidy.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-67-connector-grid-tidy/`
+- Connector report: `hardware/checkpoints/checkpoint-67-connector-grid-tidy/connector-report.json`
+- Constraint check: `hardware/checkpoints/checkpoint-67-connector-grid-tidy/constraint-check.json`
+- DRC: `hardware/checkpoints/checkpoint-67-connector-grid-tidy/drc.json`
+
+Checkpoint 68 locally untangles RN12, RN13, RN20 and RN21 while treating the
+existing routed copper as fixed:
+
+- RN12 moves to `(58.5, 38.5)` at `-90 degrees`.
+- RN13 moves to `(47.0, 35.5)` at `-90 degrees`.
+- RN20 moves to `(32.0, 43.5)` at `0 degrees`.
+- RN21 moves to `(40.0, 43.0)` at `90 degrees`.
+- The local output/keyboard-array estimate falls from 48 crossings and
+  379.440 mm to 22 crossings and 342.688 mm.
+- Whole-board weighted airwire falls from 9316.985 mm to 9280.233 mm,
+  crossings from 792 to 766, and weighted crossings from 1095.4 to 1069.4.
+- Pad net assignments are unchanged. All 112 existing tracks/vias, board
+  drawings and zone outlines remain unchanged.
+- PCB DRC reports zero errors, the existing D53/F2 silkscreen warning and 499
+  expected unrouted connections.
+
+- Before: `hardware/motherboard-backups/motherboard-before-rn-untangle-2026-10-26_130827.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-68-rn-untangle.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-68-rn-untangle/`
+- Placement search: `hardware/checkpoints/checkpoint-68-rn-untangle/placement-search.json`
+- Constraint check: `hardware/checkpoints/checkpoint-68-rn-untangle/constraint-check.json`
+- DRC: `hardware/checkpoints/checkpoint-68-rn-untangle/drc.json`
+
+Checkpoint 69 supersedes checkpoint 68 after the user requested pin-only changes:
+
+- All footprint positions, rotations and layers are restored/preserved exactly;
+  no RN or other footprint moved for this checkpoint.
+- RN12 reverses its four physical elements: pins 1-4 carry OUT19, OUT18,
+  OUT17 and OUT16; pins 5-8 remain GND.
+- RN13 similarly carries OUT23, OUT22, OUT21 and OUT20 on pins 1-4.
+- RN20 maps pins 1-8 to KOUT1, KOUT2, KOUT3, KOUT0, OUT24, OUT27, OUT26,
+  OUT25.
+- RN21 changes only element 3 terminal orientation: pin 3 is OUT30 and pin 6
+  is KOUT6.
+- Eighteen RN pad-net assignments changed in total. The logical OUT16-OUT31
+  and KOUT0-KOUT7 assignments remain unchanged.
+- The fixed-position estimate falls from 34 crossings and 233.510 mm to
+  16 crossings and 222.433 mm.
+- Whole-board weighted airwire falls from 9316.985 mm to 9305.935 mm,
+  crossings from 792 to 775, and weighted crossings from 1095.4 to 1078.9.
+- All 112 existing tracks/vias, board drawings and zone outlines are unchanged.
+  PCB DRC reports zero errors, the existing D53/F2 silkscreen warning and 499
+  expected unrouted connections. ERC has no errors and retains its 33 existing
+  library-symbol warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-rn-pin-swaps-2026-10-26_133810.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-69-rn-pin-only.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-69-rn-pin-only/`
+- Pin search: `hardware/checkpoints/checkpoint-69-rn-pin-only/pin-search.json`
+- Constraint check: `hardware/checkpoints/checkpoint-69-rn-pin-only/constraint-check.json`
+- DRC: `hardware/checkpoints/checkpoint-69-rn-pin-only/drc.json`
+
+Checkpoint 70 applies the next pin-only permutation while keeping every
+footprint fixed:
+
+- RN8-RN11 use element/terminal permutations that reduce the local estimate
+  from 13 crossings and 123.895 mm to zero crossings and 110.310 mm.
+- RN21 remains in the requested state with pin 3 = OUT30 and pin 6 = KOUT6.
+- RN20 applies the requested element cycle. Pins 1-8 are now KOUT0-KOUT3 on
+  the input side and OUT24-OUT27 on the output side.
+- No footprint position, rotation, layer or pad geometry changed. Existing
+  tracks/vias, board drawings and zone outlines are unchanged.
+- Whole-board weighted airwire falls from 9316.763 mm to 9303.785 mm,
+  crossings from 783 to 769, and weighted crossings from 1086.4 to 1072.4.
+- The explicit RN20 remap conflicts with its six existing routed nets. DRC
+  therefore reports 13 routing errors around RN20 plus the existing D53/F2
+  silkscreen warning. These are pending reroutes, not placement errors.
+- ERC has no errors and retains the existing 33 library-symbol warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-rn8-20-pin-swaps-2026-10-26_135837.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-70-rn-pin-remap-pending-reroute.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-70-rn-pin-remap-pending-reroute/`
+- RN8-RN11 search: `hardware/checkpoints/checkpoint-70-rn-pin-remap-pending-reroute/output-pulldown-search.json`
+- Constraint check: `hardware/checkpoints/checkpoint-70-rn-pin-remap-pending-reroute/constraint-check.json`
+- DRC: `hardware/checkpoints/checkpoint-70-rn-pin-remap-pending-reroute/drc.json`
+
+Checkpoint 71 expands the general low-side outputs from 8 to 16:
+
+- U26 uses all seven channels for OUT16-OUT22 -> DO0-DO6.
+- U27 uses all seven channels for OUT23-OUT29 -> DO7-DO13.
+- OUT24-OUT29 remain connected to their keyboard nets while also driving the
+  second ULN package.
+- Q6 and Q7 are BSS138 low-side switches for OUT30-OUT31 -> DO14-DO15, using
+  the same 100 ohm gate resistor and 100 k pull-down pattern as Q5.
+- J32 is an 8-pin Phoenix 3.5 mm connector immediately to the right of J12.
+  It exposes DO8-DO15; `DO_COM` and `GND` remain shared through J12.
+- No existing footprint changed position or rotation. Seven new footprints
+  were added: J32, Q6, Q7, R114, R115, R116 and R117.
+- Schematic and PCB contract verification passes with 317 components and 337
+  nets.
+- DRC currently reports 22 errors from old routed segments crossing the new
+  RN20/U26/U27 pad assignments. The new J32 and MOSFET gate components add no
+  placement or copper-clearance errors. ERC has no errors and retains 33
+  library-symbol warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-expanded-uln-outputs-2026-10-26_142407.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-71-16-open-collector-outputs.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-71-16-open-collector-outputs/`
+- DRC: `hardware/checkpoints/checkpoint-71-16-open-collector-outputs/drc.json`
+
+Checkpoint 72 unifies the field connectors and completes the output remap:
+
+- All Phoenix field connectors now use only 2-, 4-, 5- or 8-position bodies.
+- J7/J8 are split across J7/J34 and J8/J35 respectively.
+- J12 is now an 8-position DO0-DO7 connector; J33 carries DO_COM/GND.
+- J24 initially used an 8-position analog-input connector in this checkpoint;
+  checkpoint 73 replaces it with the final 5-position pinout.
+- Output bit0 is AUX through Q5; bits1-15 drive MOTION0-MOTION14.
+- DO8-DO15 now have LED indicators D57-D64 with series resistors R118-R125.
+- The schematic and PCB contract check passes with 336 components and 344 nets.
+- DRC has no placement, courtyard, hole or board-edge errors. Its 45 errors are
+  all invalidated copper segments from the RN20/U26/U27/output-bit changes.
+
+- Before: `hardware/motherboard-backups/motherboard-before-connector-unification-2026-10-26_150317.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-72-unified-connectors.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-72-unified-connectors/`
+- DRC: `hardware/checkpoints/checkpoint-72-unified-connectors/drc.json`
+
+Checkpoint 73 finalizes J24 as the 5-position analog-input connector:
+
+- J24 pins are `AI0 / GND / AI1 / GND / AI2`.
+- The connector anchor remains `(118.75, 145.0)` with zero rotation.
+- This keeps the field-terminal inventory at 2, 4, 5 and 8 positions while
+  avoiding two unnecessary positions on the analog input.
+- The replacement introduces no placement or new-net DRC error. Current DRC
+  remains at the 45 routing errors from previously invalidated copper, plus 19
+  warnings.
+
+- Board: `hardware/checkpoints/checkpoint-73-j24-five-pin.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-73-j24-five-pin/`
+- DRC: `hardware/checkpoints/checkpoint-73-j24-five-pin/drc.json`
+
+Checkpoint 74 normalizes the complete general-output fanout:
+
+- U26 channels 1-7 connect OUT16-OUT22 to DO0-DO6 in order.
+- U27 channels 1-7 connect OUT23-OUT29 to DO7-DO13 in order.
+- Q6/Q7 continue to provide DO14/DO15 from OUT30/OUT31.
+- DO8-DO15 indicators D57-D64 and resistors R118-R125 are placed directly
+  below J32 in the same orientation and spacing as the DO0-DO7 row.
+- Whole-board weighted airwire falls from 10786.636 mm to 10125.606 mm;
+  estimated crossings fall from 1209 to 942.
+- Schematic/netlist contract verification passes with 336 components and 344
+  nets.
+- No placement, courtyard, hole or board-edge errors remain. DRC reports 77
+  errors from invalidated routed copper plus 26 silkscreen/track warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-output-order-tidy-2026-10-26_154246.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-74-output-order.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-74-output-order/`
+- DRC: `hardware/checkpoints/checkpoint-74-output-order/drc.json`
+
+Checkpoint 75 mirrors both ULN packages to remove the general-output fanout
+crossings:
+
+- U26 channels 1-7 connect OUT22-OUT16 to DO6-DO0. Each physical channel keeps
+  its logical `OUTn -> DOn` pair.
+- U27 channels 1-7 connect OUT29-OUT23 to DO13-DO7.
+- DO8-DO15 LED/resistor pairs are aligned with J32 pins and retain the same
+  spacing and orientation as DO0-DO7.
+- Whole-board weighted airwire falls from 10125.606 mm to 10086.459 mm;
+  estimated crossings fall from 942 to 845.
+- The schematic/netlist contract passes with 336 components and 344 nets.
+- No footprint placement, courtyard, hole or board-edge errors remain. DRC
+  reports 77 invalidated-copper errors and 26 silkscreen/track warnings; ERC
+  has no errors and retains 33 library-symbol warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-output-order-tidy-2026-10-26_154246.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-75-uln-mirrored.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-75-uln-mirrored/`
+- DRC: `hardware/checkpoints/checkpoint-75-uln-mirrored/drc.json`
+
+Checkpoint 76 swaps RN21 pins 3 and 6:
+
+- RN21 pin 3 is now KOUT6 and pin 6 is now OUT30.
+- The footprint position and rotation are unchanged; all other RN21 terminals
+  retain their connections.
+- Schematic, netlist and PCB verification pass with no contract failures.
+- PCB DRC drops from 77 to 23 routing errors, with 23 silkscreen/track
+  warnings. ERC has no errors and retains 33 library-symbol warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-rn21-pin3-6-swap-2026-10-26_155800.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-76-rn21-pin-swap.kicad_pcb`
+- DRC: `hardware/checkpoints/checkpoint-76-rn21-pin-swap/drc.json`
+
+Checkpoint 77 completes the U27 input pull-down network:
+
+- RN30 provides 10 k pull-downs for OUT24-OUT27.
+- RN31 provides 10 k pull-downs for OUT28 and OUT29; its other two elements
+  are spare.
+- Together with RN13's OUT23 pull-down, every U27 input now has a defined
+  level while the 74HC595 outputs are tri-stated.
+- RN30/RN31 are on F.Cu between the LED rows and their respective U27 inputs.
+- Netlist validation passes with 338 components and 344 nets.
+- DRC remains at 23 invalidated-copper errors and 24 silkscreen/track
+  warnings, with no placement, courtyard, hole or edge errors. ERC has no
+  errors and 35 existing library-symbol warnings.
+
+- Before: `hardware/motherboard-backups/motherboard-before-u27-pulldowns-2026-10-26_160655.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-77-u27-pulldowns.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-77-u27-pulldowns/`
+- DRC: `hardware/checkpoints/checkpoint-77-u27-pulldowns/drc.json`
+
+Checkpoint 78 separates U26/U27 pull-down ownership and normalizes motion
+connector ordering:
+
+- RN13 now covers only OUT20-OUT22; its fourth element is spare.
+- RN30 covers OUT23-OUT26 and RN31 covers OUT27-OUT29, so U27 no longer uses
+  a common pull-down with U26.
+- J10-J30 use consistent `EN/STEP/DIR/GND` pin order.
+- `J10=AX0`, `J11=AX1`, `J28=AX2`, `J29=AX3`, `J30=AX4`, with
+  `MOTION0..MOTION14` assigned in consecutive groups.
+- The alternate strict left-to-right axis ordering produced 89 local
+  crossings; the selected connector assignment produces 19.
+- Netlist validation passes with 338 components and 344 nets.
+- DRC reports 29 invalidated-copper errors and 24 silkscreen/track warnings,
+  with no placement/courtyard/hole/edge errors.
+
+- Before: `hardware/motherboard-backups/motherboard-before-u27-rn-and-motion-order-2026-10-26_161555.kicad_pcb`
+- Board: `hardware/checkpoints/checkpoint-78-u27-rn-motion-order.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-78-u27-rn-motion-order/`
+- DRC: `hardware/checkpoints/checkpoint-78-u27-rn-motion-order/drc.json`
+
+Checkpoint 79 re-runs pin-map optimization against the current, deliberately
+off-board motion-connector anchors:
+
+- RN30 element order is now OUT24/OUT26/OUT25/OUT23 and RN31 is
+  OUT29/OUT28/OUT27/spare. All footprints retain their positions and rotations.
+- The isolated resistor element and terminal swaps reduce the local RN30/RN31
+  estimate from 10 crossings and 38.903 mm to 3 crossings and 38.143 mm.
+- The motion-connector allocation remains `J10=AX0` through `J30=AX4`. With
+  `EN/STEP/DIR` fixed to pins 1/2/3, this is already the best axis order.
+- Equivalent terminal flips on RN16-RN19 reduce the combined
+  buffer-to-resistor-to-connector ratline estimate from 42 crossings and
+  1051.891 mm to 34 crossings and 1075.066 mm. Crossings are prioritized over
+  length, and all `BUFYn -> MOTIONn` logical pairs remain unchanged.
+- Across the whole board, estimated crossings fall from 857 to 835 and
+  weighted crossings from 1161.9 to 1139.9. Weighted airwire rises slightly
+  from 10469.779 mm to 10484.058 mm because the crossing-first objective accepts
+  short detours; peak congestion also falls from 0.100708 to 0.099921.
+- Stale spare-pad assignments on RN13 and RN19 are cleared, eliminating the
+  unintended OUT20 and MOTION12 duplicates.
+
+- Board: `hardware/checkpoints/checkpoint-79-rn-motion-swaps.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-79-rn-motion-swaps/`
+- Optimization report: `hardware/checkpoints/checkpoint-79-rn-motion-swaps/optimization.json`
+- DRC: `hardware/checkpoints/checkpoint-79-rn-motion-swaps/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-79-rn-motion-swaps/erc.json`
+
+Checkpoint 80 replaces the checkpoint-79 motion mapping with the requested
+linear physical ordering:
+
+- U24/U25 output pad order is matched monotonically to the upper pad rows of
+  RN16-RN19.
+- RN16-RN19 lower pad order feeds the physical connector pin order without
+  reversing pairs inside the chain. RN16 element 3 is the single spare.
+- The 15 active physical chains, from left to right, are BUFY15, 14, 13, 12,
+  11, 10, 8, 9, 6, 7, 4, 5, 2, 3, 1.
+- A geometric linear-order check reports 15 active chains, zero crossings and
+  1020.326 mm of total buffer-to-RN-to-connector path length.
+- Whole-board crossings fall from 835 at checkpoint 79 to 797; weighted
+  crossings fall from 1139.9 to 1101.9 and weighted airwire from 10484.058 mm
+  to 10430.515 mm.
+- PCB DRC drops to 11 invalidated-copper errors and 24 silkscreen warnings,
+  with no placement, courtyard, hole or board-edge errors. ERC has no errors.
+- This remaps firmware-facing OUT/MOTION bits and supersedes the checkpoint-79
+  `BUFY n -> MOTION n` assumption.
+
+- Board: `hardware/checkpoints/checkpoint-80-linear-motion-chain.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-80-linear-motion-chain/`
+- Linear-order report: `hardware/checkpoints/checkpoint-80-linear-motion-chain/motion-linear-order.json`
+- DRC: `hardware/checkpoints/checkpoint-80-linear-motion-chain/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-80-linear-motion-chain/erc.json`
+
+Checkpoint 81 uses the remaining U24 channel as the AUX MOSFET driver:
+
+- `OUT0` enters U24 pin 8.
+- U24 pin 12 (`BUFY0`) replaces the direct `OUT0` connection at R112 pin 1.
+- R112, R113 and the BSS138 Q5 gate/drain circuit remain unchanged.
+- U24's sixteen outputs are now fully used: BUFY0 for AUX and BUFY1-BUFY15 for
+  the fifteen monotonic motion channels.
+- Current user connector positions remain unchanged and preserve the
+  crossing-free motion ordering.
+
+- Board: `hardware/checkpoints/checkpoint-81-aux-buffer-driver.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-81-aux-buffer-driver/`
+- DRC: `hardware/checkpoints/checkpoint-81-aux-buffer-driver/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-81-aux-buffer-driver/erc.json`
+
+Checkpoint 82 removes R112 and uses the already-present RN16 spare element:
+
+- U24 pin 12 (`BUFY0`) now connects directly to RN16 pin 3.
+- RN16 pin 6 drives `AUX_GATE`; the 100 k pulldown R113 remains.
+- R112 is removed from the schematic, PCB and PCB placement generator.
+- All four RN16 elements are now used, so there is no spare motion resistor.
+- The linear motion chain remains at 15 active paths and zero crossings.
+- PCB DRC drops to 8 stale-copper errors and 32 warnings, with no placement,
+  courtyard, hole or board-edge errors. ERC has no errors.
+
+- Board: `hardware/checkpoints/checkpoint-82-rn16-aux-driver.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-82-rn16-aux-driver/`
+- Motion report: `hardware/checkpoints/checkpoint-82-rn16-aux-driver/motion-linear-order.json`
+- DRC: `hardware/checkpoints/checkpoint-82-rn16-aux-driver/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-82-rn16-aux-driver/erc.json`
+
+Checkpoint 83 installs routing classes and decoupling-ground returns:
+
+- Project netclasses initially cover `Default`, `Power`, `FieldPower`,
+  `Ground`, `DigitalDiffPair` and `Analog`.
+- Power is 0.8 mm, field power and ground are 0.5 mm, analog is 0.25 mm and
+  differential pairs are defined at 0.2 mm width / 0.2 mm gap.
+- Thirty-one 100 nF decoupling capacitors receive a 0.6/0.3 mm GND via on the
+  side away from the supply pad, joined by a 0.5 mm F.Cu stub.
+- The added vias reduce unresolved DRC connections from 470 to 439.
+- Existing 0.2 mm power and wide-clearance routing now produces expected
+  netclass clearance findings that must be corrected during routing cleanup.
+
+- Board: `hardware/checkpoints/checkpoint-83-netclasses-ground-vias.kicad_pcb`
+- Project rules: `hardware/checkpoints/checkpoint-83-netclasses-ground-vias/motherboard.kicad_pro`
+- Front/back: `hardware/checkpoints/checkpoint-83-netclasses-ground-vias/`
+- Via report: `hardware/checkpoints/checkpoint-83-netclasses-ground-vias/decoupling-ground-vias.json`
+- DRC: `hardware/checkpoints/checkpoint-83-netclasses-ground-vias/drc.json`
+
+Checkpoint 84 applies the netclass widths to the tracks already routed:
+
+- `AnalogPower` and `EncoderPower` are added as low-current 0.3 mm subclasses
+  so the tight U38 and J13 regions are not forced onto the 0.8 mm main-power
+  width.
+- 284 segments across 39 nets were resized without changing endpoints or
+  layers.
+- Main power nets are now 0.8 mm, field power and ground are 0.5 mm, analog is
+  0.25 mm, and the low-current analog and encoder supplies use 0.3 mm.
+- The tight `+12V_AO` and `+5V_ENC` areas remain on 0.3 mm subclasses rather
+  than being forced to 0.8 mm, avoiding new shorts around U38 and J13.
+- DRC retains only the four pre-existing RN13 shorting pairs and their four
+  solder-mask bridges. The remaining findings are expected netclass-clearance
+  cleanup from routes drawn at the old 0.2 mm defaults.
+
+- Board: `hardware/checkpoints/checkpoint-84-netclass-track-widths.kicad_pcb`
+- Project rules: `hardware/checkpoints/checkpoint-84-netclass-track-widths/motherboard.kicad_pro`
+- Front/back: `hardware/checkpoints/checkpoint-84-netclass-track-widths/`
+- Width report: `hardware/checkpoints/checkpoint-84-netclass-track-widths/netclass-track-widths.json`
+- DRC: `hardware/checkpoints/checkpoint-84-netclass-track-widths/drc.json`
+
+Checkpoint 85 replaces the undersized SOT-23 input MOSFET:
+
+- Q1 is now an Infineon IRF7240PBF, `-40 V` / `-10.5 A` P-channel MOSFET in
+  the standard SO-8 pinout.
+- Source pins 1-3 connect to `VIN_PROT`, gate pin 4 to `Q1_GATE`, and drain
+  pins 5-8 to `VIN_FUSED`.
+- The existing 100 k gate pulldown and 12 V gate-source zener remain suitable;
+  the IRF7240 gate rating is +/-20 V.
+
+- Board: `hardware/checkpoints/checkpoint-85-q1-irf7240-so8.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-85-q1-irf7240-so8/`
+- Datasheet: `hardware/checkpoints/checkpoint-85-q1-irf7240-so8/IRF7240PBF.pdf`
+- DRC: `hardware/checkpoints/checkpoint-85-q1-irf7240-so8/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-85-q1-irf7240-so8/erc.json`
+
+Checkpoint 86 reverses the active RN13 elements to match the copper that was
+already routed to its pads:
+
+- RN13 element 2 pins 2/7 are `OUT22/GND`.
+- RN13 element 3 pins 3/6 are `OUT21/GND`.
+- RN13 element 4 pins 4/5 are `OUT20/GND`.
+- RN13 element 1 pins 1/8 is now the spare element.
+- The RN13 footprint position and rotation are unchanged.
+- DRC falls from 217 to 209 items: the four RN13 shorting errors and four
+  solder-mask bridges are eliminated. Unresolved connections fall from 439 to
+  436.
+
+- Board: `hardware/checkpoints/checkpoint-86-rn13-straight-order.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-86-rn13-straight-order/`
+- Pin-order analysis: `hardware/checkpoints/checkpoint-86-rn13-straight-order/rn13-optimization.json`
+- DRC: `hardware/checkpoints/checkpoint-86-rn13-straight-order/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-86-rn13-straight-order/erc.json`
+
+Checkpoint 87 swaps only the two active terminals of RN30:
+
+- RN30 pin 1 is now `OUT26`; pin 2 is now `OUT24`.
+- Pins 3/6 remain `OUT25/GND`; pins 4/5 remain `OUT23/GND`.
+- The footprint position, rotation, GND terminals and all other components are
+  unchanged.
+- No existing copper was moved. Because the two local stubs still terminate at
+  the previous OUT24/OUT26 pad positions, DRC now reports three local
+  shorting items and three mask bridges that require local rerouting.
+
+- Board: `hardware/checkpoints/checkpoint-87-rn30-pin-swap.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-87-rn30-pin-swap/`
+- DRC: `hardware/checkpoints/checkpoint-87-rn30-pin-swap/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-87-rn30-pin-swap/erc.json`
+
+Checkpoint 88 removes redundant 5 V reservoir/bypass parts:
+
+- C8 (10 uF) is redundant with the two fitted 22 uF output capacitors C6/C11.
+- C16 (10 uF) is removed from the general 5 V rail.
+- C17 and C77 (100 nF) are removed because each supply-bearing IC already has
+  a local bypass capacitor.
+- The U2 regulator group remains C10/C76 on the input and C90/C13 on the
+  output.
+
+Checkpoint 88 also adds the active LVDS option:
+
+- U41 is a DS90LV047A quad CMOS-to-LVDS driver in SOIC-16.
+- `HSTX_D0_P`, `HSTX_D1_P`, `HSTX_D2_P` and `HSTX_CLK_P` drive its four
+  single-ended inputs.
+- `EN` is tied to `+3V3`; `EN*` is tied to GND.
+- Its outputs drive the existing J22 LVDS lanes, with C106 providing local
+  100 nF decoupling.
+- RN26/RN27 remain available as the passive alternate but are marked DNP.
+
+- Board: `hardware/checkpoints/checkpoint-88-active-lvds-and-cap-cleanup.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-88-active-lvds-and-cap-cleanup/`
+- LVDS datasheet: `hardware/checkpoints/checkpoint-88-active-lvds-and-cap-cleanup/DS90LV047A.pdf`
+- DRC: `hardware/checkpoints/checkpoint-88-active-lvds-and-cap-cleanup/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-88-active-lvds-and-cap-cleanup/erc.json`
+
+Checkpoint 89 fixes the WeAct 3D model alignment:
+
+- The STEP file uses the module PCB corner as its origin rather than the
+  footprint center.
+- The footprint and placed MOD1 instance now use offset
+  `(-20.7, +20.6, 0) mm`.
+- The 41.4 x 41.1 mm module body is centered inside the four socket rows and
+  its mounting reference plane is on the board top.
+- No electrical footprints, pads, tracks or vias were moved.
+
+- Board: `hardware/checkpoints/checkpoint-89-weact-3d-alignment.kicad_pcb`
+- Front/back: `hardware/checkpoints/checkpoint-89-weact-3d-alignment/`
+- 3D top: `hardware/checkpoints/checkpoint-89-weact-3d-alignment/board-3d-top.png`
+- 3D isometric: `hardware/checkpoints/checkpoint-89-weact-3d-alignment/board-3d-isometric.png`
+
+Checkpoint 90 removes the HDMI connector and its dedicated circuitry:
+
+- J22 remains the sole LCD LVDS connector; U41/C106 remain the active LVDS
+  driver population and RN26/RN27 remain the unfitted passive alternative.
+- J23, U30-U32, RN28/RN29, R59/R60, F3 and C71/C72 are removed. This covers the
+  HDMI Type-A receptacle, three ESD arrays, +5 V fuse and local capacitors,
+  DDC pull-ups and HDMI 0R link arrays.
+- No HDMI net, HDMI power flag or HDMI footprint remains in the schematic,
+  netlist or PCB.
+- The generator retains the retired reference slots so unrelated parts do not
+  renumber. It no longer emits HDMI symbols, footprints or nets.
+- The hand-placed PCB, two-layer stackup, 200 x 150 mm outline and corrected
+  WeAct 3D offset are preserved. Freerouting was not started.
+- The regenerated netlist contract passes with 323 components and 331 nets.
+  The PCB has 319 footprints, zero HDMI components and zero HDMI nets.
+- DRC reports 188 pre-existing clearance/assembly findings and 350 unresolved
+  connections, none referencing HDMI. ERC has no functional errors; its 34
+  warnings are existing library-symbol mismatches.
+
+- Board: `hardware/checkpoints/checkpoint-90-hdmi-removed.kicad_pcb`
+- Front/back ratsnest: `hardware/checkpoints/checkpoint-90-hdmi-removed/`
+- 3D top: `hardware/checkpoints/checkpoint-90-hdmi-removed/board-3d-top.png`
+- 3D isometric: `hardware/checkpoints/checkpoint-90-hdmi-removed/board-3d-isometric.png`
+- DRC: `hardware/checkpoints/checkpoint-90-hdmi-removed/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-90-hdmi-removed/erc.json`
+
+Checkpoint 91 applies the supplied LCD connector pinout:
+
+- J22 uses odd pins as the left column and even pins as the right column.
+- Rows 1-8 are used. Rows 9-10 and pins 17-20 remain unconnected.
+- +3V3 is on pins 1-3; GND is on pins 4-6 and 13-14.
+- D0-/D0+, D1-/D1+, D2-/D2+ and CLK-/CLK+ occupy pins 7/8, 9/10, 11/12
+  and 15/16 respectively.
+- The supplied pinout has no backlight contact. MOD1 GPIO1 is documented as
+  reserved for a future backlight PWM, but currently has no board net or
+  external connector assigned.
+- The footprint position and all copper remain unchanged. The B.Cu ground zone
+  was refilled after the pad-net update.
+- The netlist contract passes with 323 components, 330 nets and no single-node
+  nets. DRC remains at 188 findings and unconnected items fall from 350 to 349.
+  ERC remains at 34 existing library-symbol warnings with no functional errors.
+
+- Board: `hardware/checkpoints/checkpoint-91-verified-lvds-pinout.kicad_pcb`
+- Front/back ratsnest: `hardware/checkpoints/checkpoint-91-verified-lvds-pinout/`
+- DRC: `hardware/checkpoints/checkpoint-91-verified-lvds-pinout/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-91-verified-lvds-pinout/erc.json`
+
+Checkpoint 92 adds the narrow LVDS connector routing class:
+
+- `LVDS_D0_N/P`, `LVDS_D1_N/P`, `LVDS_D2_N/P` and `LVDS_CLK_N/P` use the
+  dedicated `LVDSConnector` netclass.
+- Track and differential-pair width are 0.15 mm, differential gap is 0.20 mm
+  and clearance is 0.20 mm.
+- `HSTX_*` source nets remain in `DigitalDiffPair` at 0.20 mm.
+- The board-wide minimum track width is reduced from 0.20 mm to 0.15 mm so the
+  connector class is legal. No existing track segments required resizing.
+- DRC remains at 188 findings and 349 unconnected items; ERC remains at 34
+  existing library-symbol warnings.
+
+- Board: `hardware/checkpoints/checkpoint-92-lvds-connector-width.kicad_pcb`
+- Project: `hardware/checkpoints/checkpoint-92-lvds-connector-width/motherboard.kicad_pro`
+- Width report: `hardware/checkpoints/checkpoint-92-lvds-connector-width/netclass-widths.json`
+- DRC: `hardware/checkpoints/checkpoint-92-lvds-connector-width/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-92-lvds-connector-width/erc.json`
+
+Checkpoint 93 finishes the 0.12 mm J22 fanout geometry:
+
+- `LVDSConnector` now uses 0.12 mm track width, 0.12 mm differential gap and
+  0.12 mm clearance.
+- The board-wide minimum track width is 0.12 mm.
+- Six existing user-routed LVDS nets containing 16 segments were narrowed from
+  0.20 mm to 0.12 mm without moving endpoints.
+- With 1.35 mm pads on 2.00 mm pitch, the fanout budget is
+  `0.12 + 0.12 + 0.12 + 2 x 0.12 = 0.60 mm` inside the available 0.65 mm.
+- The B.Cu ground zone was refilled after the latest user position changes.
+- DRC reports no J22 or `LVDS_*` clearance violations. Overall DRC is 189
+  findings with 343 unresolved connections; ERC remains at 34 existing
+  library-symbol warnings with no functional errors.
+
+- Board: `hardware/checkpoints/checkpoint-93-lvds-012-fanout.kicad_pcb`
+- Project: `hardware/checkpoints/checkpoint-93-lvds-012-fanout/motherboard.kicad_pro`
+- Width report: `hardware/checkpoints/checkpoint-93-lvds-012-fanout/netclass-widths.json`
+- DRC: `hardware/checkpoints/checkpoint-93-lvds-012-fanout/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-93-lvds-012-fanout/erc.json`
+
+Checkpoint 94 adds the J22-only clearance override:
+
+- Global `Ground` and `Power` clearances remain 0.30 mm.
+- A board-specific DRC rule applies 0.12 mm clearance when an `LVDSConnector`
+  track is beside a J22 pad, overriding the larger GND or power netclass value
+  only inside that connector fanout.
+- The rule is stored in `hardware/motherboard.kicad_dru`; unrelated board areas
+  continue to use their normal netclass clearances.
+- A temporary test segment placed 0.12 mm from J22 GND pad 5 passed the
+  clearance check. Its only finding was the expected dangling-end warning from
+  the artificial test geometry, and the temporary board was removed.
+- The live DRC remains at 189 findings and 343 unconnected items, with no
+  J22 or `LVDS_*` clearance violations.
+
+- Board: `hardware/checkpoints/checkpoint-94-j22-clearance-rule.kicad_pcb`
+- Project: `hardware/checkpoints/checkpoint-94-j22-clearance-rule/motherboard.kicad_pro`
+- Custom rules: `hardware/checkpoints/checkpoint-94-j22-clearance-rule/motherboard.kicad_dru`
+- DRC: `hardware/checkpoints/checkpoint-94-j22-clearance-rule/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-94-j22-clearance-rule/erc.json`
+
+Checkpoint 95 makes the LVDS rules resilient to KiCad project rewrites:
+
+- The open KiCad editor rewrote `motherboard.kicad_pro`, removing the
+  `LVDSConnector` class and restoring the 0.20 mm board minimum. This caused
+  16 false `track_width` errors on the existing 0.12 mm LVDS segments.
+- `motherboard.kicad_dru` now matches `LVDS_*` by net name directly. It
+  constrains track width to 0.12 mm and sets 0.12 mm as the preferential
+  differential gap without requiring a project netclass to exist.
+- The J22 footprint clearance override also matches `LVDS_*` by net name, so
+  GND and power pads still receive 0.12 mm clearance only in that connector
+  fanout regardless of project netclass rewrites.
+- With the project class intentionally absent, DRC returned to 193 findings
+  before the differential-gap maximum was removed, then 189 once that overly
+  strict check was corrected. With the project class restored, the final DRC
+  is 188 findings.
+  No LVDS width or J22 clearance errors remain. The `LVDSConnector` class and
+  0.12 mm project minimum were then restored.
+- The running KiCad process must discard/reload the project or be restarted
+  before interactive routing will display the new 0.12 mm defaults.
+
+- Board: `hardware/checkpoints/checkpoint-95-lvds-rule-resilience.kicad_pcb`
+- Project: `hardware/checkpoints/checkpoint-95-lvds-rule-resilience/motherboard.kicad_pro`
+- Custom rules: `hardware/checkpoints/checkpoint-95-lvds-rule-resilience/motherboard.kicad_dru`
+- DRC: `hardware/checkpoints/checkpoint-95-lvds-rule-resilience/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-95-lvds-rule-resilience/erc.json`
+
+Checkpoint 96 swaps the passive-LVDS resistor-network terminals:
+
+- RN26 element 1 pins 1/8 and element 2 pins 2/7 exchange their D1
+  connections.
+- RN26 element 3 pins 3/6 and element 4 pins 4/5 exchange their D0
+  connections.
+- RN27 applies the same two element swaps to CLK and D2.
+- Both network positions, rotations and sides are unchanged. Their footprints
+  were not regenerated or moved.
+- Existing copper was intentionally left untouched. As a result, routes that
+  still terminate on the old RN pads now report eight shorting items, eight
+  solder-mask bridges and eight additional dangling endpoints. These local
+  LVDS branches require rerouting to the newly assigned pads.
+- DRC currently reports 213 findings and 348 unresolved connections. ERC
+  remains at 34 existing library-symbol warnings with no functional errors.
+
+- Board: `hardware/checkpoints/checkpoint-96-rn26-rn27-pin-swaps.kicad_pcb`
+- Mapping: `hardware/checkpoints/checkpoint-96-rn26-rn27-pin-swaps/rn-pin-swap.json`
+- DRC: `hardware/checkpoints/checkpoint-96-rn26-rn27-pin-swaps/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-96-rn26-rn27-pin-swaps/erc.json`
+
+Checkpoint 97 moves the shift-register return to the free MOD1 corner pad:
+
+- `SR_IN_Q7` moves from GPIO35/MOD1.25 to GPIO23/MOD1.60.
+- GPIO35 is released as an unconnected spare.
+- U9 pin 9 escapes on F.Cu to a via at `(100.800, 60.500)`, crosses on B.Cu
+  to `(100.410, 68.800)`, and returns to MOD1 pin 60 on F.Cu.
+- The new route uses 0.20 mm tracks and two 0.80/0.40 mm vias.
+- The B.Cu ground zone was refilled. DRC reports no `SR_IN_Q7` track, via or
+  clearance errors and is now at 192 findings with 329 unresolved connections.
+- GPIO23 is connected to the WeAct module's onboard USER key through R16 (0R).
+  Remove R16 before fitting the module; this isolates the SW3 key network and
+  WeAct C27 capacitor position from U9 Q7. Motherboard C27 at U11 is unrelated.
+
+- Board: `hardware/checkpoints/checkpoint-97-gp23-shift-return.kicad_pcb`
+- Pin map: `hardware/checkpoints/checkpoint-97-gp23-shift-return/gp23-shift-return.json`
+- DRC: `hardware/checkpoints/checkpoint-97-gp23-shift-return/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-97-gp23-shift-return/erc.json`
+
+Checkpoint 98 removes the debugger-reset dependency from the output registers:
+
+- J4 changes from a five-pin header to a four-pin SWD header:
+  `1=+3V3`, `2=SWDIO`, `3=SWCLK`, `4=GND`.
+- WeAct MOD1 `RUN` is no longer connected externally. The module's onboard
+  reset button remains the MCU reset.
+- U10-U13 pin 10 (`~SRCLR`) are assigned to `+3V3`, following the conventional
+  74HC595 all-enabled configuration.
+- The obsolete `RESET_N` net and six existing reset track stubs are removed.
+  J4 is replaced in place with a 1x04 header.
+- The four new `~SRCLR` connections remain part of the normal +3V3 power-routing
+  work; they are not a separate reset net.
+- DRC improves to 184 findings and 326 unresolved connections. ERC remains at
+  34 existing library-symbol warnings with no functional errors.
+
+- Board: `hardware/checkpoints/checkpoint-98-four-pin-swd.kicad_pcb`
+- Reset map: `hardware/checkpoints/checkpoint-98-four-pin-swd/reset-map.json`
+- DRC: `hardware/checkpoints/checkpoint-98-four-pin-swd/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-98-four-pin-swd/erc.json`
+
+Checkpoint 99 tidies the SD/Wi-Fi clusters and simplifies the ADC reference:
+
+- C16 was already removed. C14, the redundant 10 uF bulk capacitor on
+  `+3V3_A`, is now also removed. FB1 and C15 (100 nF) remain as the reference
+  filter and move to B.Cu near MOD1 pin 48.
+- R55-R58 are on one exact vertical grid line at x=161.925 mm. C70, C69 and
+  C89 share the y=37.465 mm line; C69 moves closer to J20 to improve ESP supply
+  transient support.
+- FB2, C68 and C67 form a vertical line at x=166.370 mm beside J19, with
+  5.715 mm pitch.
+- No connectors or routed copper moved.
+- The original ESP-01 and ESP-01S both use the same eight-pad interface. The
+  motherboard's R55-R58 provide the external 10 k pull-ups that the non-S
+  ESP-01 requires on GPIO2, GPIO0, CH_PD/EN and RST. U34 and its 10 uF/100 nF
+  output bank provide the dedicated 3.3 V supply.
+- DRC is 182 findings with 319 unresolved connections; ERC remains at 34
+  existing library-symbol warnings with no functional errors.
+
+- Board: `hardware/checkpoints/checkpoint-99-sd-wifi-tidy.kicad_pcb`
+- Placement: `hardware/checkpoints/checkpoint-99-sd-wifi-tidy/placement.json`
+- DRC: `hardware/checkpoints/checkpoint-99-sd-wifi-tidy/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-99-sd-wifi-tidy/erc.json`
+
+Checkpoint 100 applies a safe coarse-grid pass:
+
+- FB1 and C15 return to F.Cu near MOD1 and now use only the 100 nF reference
+  bypass.
+- U41 and C106 return to F.Cu as an aligned LCD-driver pair. The only
+  remaining back-side footprints are the intentional JP2-JP4 field-mode
+  jumpers on B.Cu.
+- Thirty-seven unrouted footprints were snapped to the 0.635 mm imperial grid.
+  The pass intentionally excludes components with attached routing where a
+  snap would introduce clearance damage.
+- A blind full-board 1.27 mm snap was rejected after testing because it added
+  331 DRC findings. With the routed footprints protected and U41/C106 aligned,
+  the final DRC is 187 findings.
+- The WiFi and SD passive clusters are on exact 0.635 mm grid lines without
+  moving their connectors. Their final DRC has 323 unresolved connections.
+
+- Board: `hardware/checkpoints/checkpoint-100-coarse-grid-front.kicad_pcb`
+- Grid report: `hardware/checkpoints/checkpoint-100-coarse-grid-front/coarse-grid.json`
+- Front/back ratsnest: `hardware/checkpoints/checkpoint-100-coarse-grid-front/`
+- DRC: `hardware/checkpoints/checkpoint-100-coarse-grid-front/drc.json`
+- ERC: `hardware/checkpoints/checkpoint-100-coarse-grid-front/erc.json`

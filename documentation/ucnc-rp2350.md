@@ -43,32 +43,48 @@ That does not match this motherboard's GPIO26/27/28 assignment.
 ## 74HC165/74HC595 chain
 
 The normal uCNC `shift_register` driver toggles individual GPIOs and supports
-both 74HC165 inputs and 74HC595 outputs. It can therefore use this board's
-existing pins:
+both 74HC165 inputs and 74HC595 outputs. The board now uses this pin map:
 
 | Function | GPIO | MOD1 pin |
 |---|---:|---:|
-| `SHIFT_REGISTER_SDO` | GPIO24 | 45 |
-| `SHIFT_REGISTER_SDI` | GPIO22 | 44 |
-| `SHIFT_REGISTER_CLK` | GPIO20 | 43 |
-| `IC74HC595_LATCH` | GPIO35 | 25 |
-| `IC74HC165_LOAD` | GPIO21 | 59 |
+| `SHIFT_REGISTER_SDO` / PIO DATA | GPIO20 | 43 |
+| `SHIFT_REGISTER_CLK` / PIO CLK | GPIO21 | 59 |
+| `IC74HC595_LATCH` / PIO LATCH | GPIO22 | 44 |
+| `IC74HC165_LOAD` | GPIO24 | 45 |
+| `SHIFT_REGISTER_SDI` | GPIO23 | 60 |
 
-The current mapping is **not compatible with uCNC's optional
-`IC74HC595_CUSTOM_SHIFT_IO` PIO path**. That path:
+Before fitting the WeAct module, remove **R16 (0R)** on the module. It joins
+GPIO23 to the onboard USER-key network, whose WeAct C27 capacitor position
+would otherwise load the 74HC165 serial-return signal. Motherboard C27 at U11
+is unrelated.
+
+The output-control pins are **compatible with uCNC's optional
+`IC74HC595_CUSTOM_SHIFT_IO` PIO path**, which requires the exact order
+`DATA = base`, `CLK = base+1` and `LATCH = base+2`. Use:
+
+```c
+#define IC74HC595_CUSTOM_SHIFT_IO
+#define IC74HC595_PIO_DATA 20
+#define IC74HC595_PIO_CLK 21
+#define IC74HC595_PIO_LATCH 22
+#define IC74HC595_COUNT 4
+```
+
+That PIO path:
 
 - handles only the four 74HC595 outputs;
 - requires exactly four 595 devices;
-- programs DATA, CLK and LATCH as three consecutive pins;
 - would require a separate PIO implementation for the 74HC165 inputs.
 
-DATA=GPIO24, CLK=GPIO20 and LATCH=GPIO35 are not consecutive. Use the standard
-bit-banged `shift_register` driver unless the hardware map or uCNC PIO code is
-changed.
+The checked-in uCNC RP2350 PIO implementation disables the standard combined
+165/595 shift callback. Therefore the default complete implementation remains
+the bit-banged `shift_register` driver. The stock `IC74HC595_CUSTOM_SHIFT_IO`
+path can be used only as an output-only driver or after input scanning is moved
+to separate code or custom PIO.
 
-The five shift-register pins fit within one RP2350 PIO GPIO window, so a custom
-dual 74HC165/74HC595 PIO program is feasible. It is not the implementation
-provided by uCNC.
+GPIO20/21/22 form one RP2350 PIO GPIO window. The additional 74HC165 load and
+return pins at GPIO24/35 are outside that output-only PIO window, so a custom
+dual 74HC165/74HC595 PIO program remains a separate implementation task.
 
 The current `uCNC-master` target has `IC74HC595_COUNT 0` and
 `IC74HC165_COUNT 0`, so it does not currently use either shift-register path.

@@ -13,6 +13,8 @@ from pathlib import Path
 
 import pcbnew
 
+from configure_netclasses import configure_netclasses
+
 
 ROOT = Path(__file__).resolve().parents[1]
 HARDWARE = ROOT / "hardware"
@@ -26,11 +28,6 @@ KICAD_FP = Path(
 BOARD_WIDTH_MM = 200.0
 BOARD_HEIGHT_MM = 150.0
 
-LEGACY_DNP = {
-    "RN28", "RN29",
-}
-
-
 @dataclass
 class Component:
     reference: str
@@ -42,25 +39,25 @@ class Component:
 
 
 MAJOR: dict[str, tuple[float, float, float]] = {
-    "J1": (180.0, 142.0, 0),
+    "J1": (177.368, 144.942, 0),
     "J3": (152, 6, 90),
     "J4": (80.5, 25.84, 0),
     "J5": (7, 29.5, 90),
     "J6": (7, 40.5, 90),
-    "J7": (8.0, 23.0, 270),
-    "J8": (8.0, 83.0, 270),
+    "J7": (8.0, 12.0, 270),
+    "J8": (8.0, 74.5, 270),
     "J9": (126.46, 112, 0),
     "J10": (68.0, 5.5, 180),
     "J11": (85.5, 5.5, 180),
-    "J12": (51.0, 5.5, 180),
+    "J12": (86.132, 6.558, 180),
     "J13": (35.5, 144.75, 180),
     "J14": (58.5, 144.75, 180),
     "J15": (82, 144.75, 180),
     "J16": (133, 80, 0),
     "J17": (30.0, 31.0, 270),
     "J18": (154.0, 48.0, 270),
-    "J19": (196.68, 58.95, 90),
-    "J20": (110.54, 6.5, 0),
+    "J19": (181.610, 68.580, 90),
+    "J20": (172.085, 40.640, 0),
     "J21": (83, 7, 0),
     "J22": (145.5, 34.0, 270),
     "J9": (64.0, 61.0, 0),
@@ -69,14 +66,22 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "J29": (120.5, 5.5, 180),
     "J30": (137.5, 5.5, 180),
     "J31": (147.5, 5.5, 180),
+    "J32": (43.0, 6.5, 180),
+    "J33": (173.5, 145.0, 180),
+    "J34": (8.0, 43.25, 270),
+    "J35": (8.0, 105.75, 270),
+    "J33": (20.25, 6.75, 180),
+    "J34": (8.0, 53.5, 270),
+    "J35": (8.0, 116.5, 270),
     "RN26": (143.0, 40.0, 90),
     "RN27": (135.5, 40.0, 90),
-    "J23": (186.5, 23.5, 0),
-    "J24": (137.0, 142.0, 0),
-    "J25": (144.5, 142.0, 0),
+    "U41": (161.290, 27.940, 90),
+    "C106": (170.180, 27.940, 0),
+    "J24": (118.75, 145.0, 0),
+    "J25": (149.75, 145.0, 0),
     "MOD1": (105, 40, 180),
     "SW1": (62.5, 61, 0),
-    "SW2": (64, 71, 0),
+    "SW2": (151.130, 35.560, 0),
     "Q1": (48, 43, 0),
     "U1": (54, 30.86, 0),
     "U2": (198.12, 94.0, 0),
@@ -113,19 +118,36 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "RN21": (39.080, 39.500, 90),
     "RN22": (24.000, 54.000, 90),
     "RN24": (36.500, 53.500, 90),
-    "R58": (177.000, 45.500, 0),
-    "R57": (177.000, 48.000, 0),
-    "R56": (177.000, 50.500, 0),
-    "R55": (177.000, 53.000, 0),
-    "RN28": (173.500, 19.000, 0),
-    "RN29": (173.500, 25.000, 0),
-    "C71": (194.000, 35.000, 270),
-    "C72": (191.000, 39.000, 270),
-    "R59": (176.000, 31.000, 270),
-    "R60": (181.000, 35.000, 270),
-    "R112": (146.500, 15.000, 0),
+    "R58": (161.925, 39.370, 0),
+    "R57": (161.925, 42.545, 0),
+    "R55": (161.925, 48.260, 0),
+    "R56": (161.925, 50.800, 0),
     "R113": (142.500, 15.000, 90),
     "Q5": (145.000, 12.000, 0),
+    "Q6": (50.0, 36.5, 0),
+    "Q7": (55.5, 36.5, 0),
+    "R114": (48.5, 39.5, 0),
+    "R115": (50.0, 42.0, 0),
+    "R116": (54.0, 39.5, 0),
+    "R117": (55.5, 42.0, 0),
+    "D57": (41.536, 14.143, 90),
+    "D58": (37.536, 14.143, 90),
+    "D59": (34.536, 14.143, 90),
+    "D60": (30.536, 14.143, 90),
+    "D61": (27.536, 14.143, 90),
+    "D62": (23.536, 14.143, 90),
+    "D63": (20.536, 14.143, 90),
+    "D64": (16.536, 14.143, 90),
+    "R118": (41.536, 19.142, 90),
+    "R119": (37.536, 19.142, 90),
+    "R120": (34.536, 19.142, 90),
+    "R121": (30.536, 19.142, 90),
+    "R122": (27.536, 19.142, 90),
+    "R123": (23.536, 19.142, 90),
+    "R124": (20.536, 19.142, 90),
+    "R125": (16.536, 19.142, 90),
+    "RN30": (50.5, 24.0, 0),
+    "RN31": (31.0, 25.0, 0),
     "U40": (39.000, 130.500, 270),
     "F4": (44.500, 130.500, 270),
     "C103": (37.000, 134.000, 180),
@@ -134,13 +156,8 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "JP2": (15.000, 69.500, 0),
     "JP3": (15.000, 90.000, 0),
     "JP4": (15.000, 110.000, 0),
-    "U30": (171.88, 17, 0),
-    "U31": (164.38, 15, 0),
-    "U32": (180.38, 17, 0),
     "F1": (41, 23, 0),
     "F2": (152, 108, 0),
-    "F3": (120, 106, 0),
-    "FB1": (121, 8, 0),
     "FB3": (51, 56, 0),
     "L1": (60.5, 30.86, 0),
     "L2": (64, 10, 0),
@@ -148,7 +165,6 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "C5": (45, 38, 0),
     "C6": (63.5, 36.5, 0),
     "C7": (57.8, 36.5, 0),
-    "C8": (63.5, 40.5, 0),
     "C86": (54, 35, 0),
     "C76": (191.135, 94.0, 90),
     "C13": (191.135, 89.555, 90),
@@ -156,13 +172,10 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "C90": (195.580, 87.015, 0),
     "C7": (181.000, 101.200, 90),
     "C8": (181.000, 104.500, 0),
-    "C17": (181.000, 107.500, 0),
-    "C16": (176.000, 105.500, 90),
-    "C77": (176.000, 100.500, 90),
-    "C88": (202.800, 37.000, 0),
-    "C89": (197.800, 37.000, 0),
-    "C70": (190.200, 41.200, 90),
-    "C69": (195.000, 49.000, 0),
+    "C88": (189.230, 44.450, 270),
+    "C89": (185.420, 37.465, 180),
+    "C70": (170.815, 37.465, 0),
+    "C69": (176.530, 37.465, 0),
     "C22": (60.000, 57.480, 0),
     "C23": (78.000, 57.480, 0),
     "C24": (94.500, 56.980, 0),
@@ -171,9 +184,8 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "C27": (94.500, 42.980, 0),
     "C28": (77.500, 42.980, 0),
     "C29": (59.500, 42.980, 0),
-    "FB1": (161.500, 49.370, 0),
-    "C15": (168.000, 49.370, 0),
-    "C14": (168.000, 54.200, 0),
+    "FB1": (133.350, 66.040, 0),
+    "C15": (139.700, 66.040, 0),
     "R73": (183.000, 87.500, 0),
     "R4": (162.000, 85.000, 0),
     "D4": (168.000, 85.000, 180),
@@ -190,9 +202,10 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "R46": (172.600, 73.000, 0),
     "R48": (172.600, 76.750, 0),
     "R47": (172.600, 79.500, 0),
-    "FB2": (166.800, 67.620, 0),
-    "C68": (166.800, 70.800, 90),
-    "C67": (166.800, 75.700, 90),
+    "FB2": (166.370, 61.595, 90),
+    "C68": (166.370, 67.310, 90),
+    "C67": (166.370, 73.025, 90),
+    "U34": (182.880, 44.450, 180),
     "D3": (420, 50, 0),
 }
 
@@ -344,7 +357,7 @@ def choose_spot(footprint, preferred, occupied, step: float = 2.54):
 def net_weight(name: str) -> float:
     if name in {"GND", "PGND", "AGND"}:
         return 0.0
-    if name.startswith(("HDMI_", "HSTX_", "LVDS_")):
+    if name.startswith(("HSTX_", "LVDS_")):
         return 2.5
     if name.startswith(("ESTOP", "HOLD", "START")):
         return 3.0
@@ -396,7 +409,10 @@ def component_is_back(component: Component) -> bool:
     if component.reference in {"J9", "J16", "J17"}:
         return True
     if component.reference in {
-        "U28", "U40", "R10", "R11", "R12", "R13", "R112", "R113", "Q5",
+        "U28", "U40", "R10", "R11", "R12", "R13", "R113", "Q5",
+        "Q6", "Q7", "R114", "R115", "R116", "R117",
+        "D57", "D58", "D59", "D60", "D61", "D62", "D63", "D64",
+        "R118", "R119", "R120", "R121", "R122", "R123", "R124", "R125",
         "F4", "C103", "C105",
         "RN6", "RN7", "RN20", "RN21", "RN22", "RN24",
         "R55", "R56", "R57", "R58", "R110", "R111",
@@ -602,7 +618,7 @@ def refine_placement(
 def add_mounting_holes(board):
     boxes = {}
     occupied = []
-    positions = [(5, 5), (205, 5), (5, 145), (205, 145)]
+    positions = [(5, 5), (191.5, 5), (5, 145), (191.5, 145)]
     for index, (x, y) in enumerate(positions, 1):
         fp = pcbnew.FootprintLoad(
             str(KICAD_FP / "MountingHole.pretty"), "MountingHole_3.2mm_M3"
@@ -697,7 +713,6 @@ def build_board() -> None:
         "+3V3_A",
         "+3V3_SD",
         "+3V3_WIFI",
-        "+5V_HDMI",
         "+5V_ENC",
         "+5V_MCU",
         "VIN_RAW",
@@ -752,14 +767,7 @@ def build_board() -> None:
         fp.SetValue(component.value)
         fp.SetDNP(component.dnp)
         board.Add(fp)
-        if placement_mode == "staged" and component.reference in LEGACY_DNP:
-            put_on_side(fp, component_is_back(component))
-            x = 470 + (parked_index // 20) * 20
-            y = 10 + (parked_index % 20) * 10
-            fp.SetPosition(pcbnew.VECTOR2I_MM(x, y))
-            positions[component.reference] = (x, y, fp.GetOrientationDegrees())
-            parked_index += 1
-        elif component.reference in seeded:
+        if component.reference in seeded:
             seed = seeded[component.reference]
             put_on_side(fp, seed["back"])
             fp.SetPosition(pcbnew.VECTOR2I_MM(seed["x"], seed["y"]))
@@ -944,6 +952,58 @@ def build_board() -> None:
                 via.SetNet(net_map["GND"])
                 board.Add(via)
 
+    # Give every 100 nF decoupling capacitor a short, direct B.Cu ground return.
+    # The via sits beyond the GND pad on the side away from the supply pin.
+    for component in components:
+        if not component.reference.startswith("C") or component.value != "100nF":
+            continue
+        footprint = footprints[component.reference]
+        pads = list(footprint.Pads())
+        gnd_pads = [pad for pad in pads if pad.GetNetname() == "GND"]
+        if len(pads) != 2 or len(gnd_pads) != 1:
+            continue
+        gnd_pad = gnd_pads[0]
+        signal_pad = next(pad for pad in pads if pad is not gnd_pad)
+        if not gnd_pad.IsOnLayer(pcbnew.F_Cu):
+            continue
+        gnd_point = gnd_pad.GetPosition()
+        signal_point = signal_pad.GetPosition()
+        dx = gnd_point.x - signal_point.x
+        dy = gnd_point.y - signal_point.y
+        distance = math.hypot(dx, dy)
+        if not distance:
+            continue
+        offset = pcbnew.FromMM(1.15)
+        via_point = pcbnew.VECTOR2I(
+            gnd_point.x + round(dx / distance * offset),
+            gnd_point.y + round(dy / distance * offset),
+        )
+        if any(
+            isinstance(existing, pcbnew.PCB_VIA)
+            and existing.GetNetname() == "GND"
+            and math.hypot(
+                existing.GetPosition().x - via_point.x,
+                existing.GetPosition().y - via_point.y,
+            ) <= pcbnew.FromMM(2.0)
+            for existing in board.GetTracks()
+        ):
+            continue
+        via = pcbnew.PCB_VIA(board)
+        via.SetPosition(via_point)
+        via.SetDrill(pcbnew.FromMM(0.3))
+        via.SetWidth(pcbnew.FromMM(0.6))
+        via.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu)
+        via.SetNet(net_map["GND"])
+        board.Add(via)
+
+        stub = pcbnew.PCB_TRACK(board)
+        stub.SetStart(gnd_point)
+        stub.SetEnd(via_point)
+        stub.SetWidth(pcbnew.FromMM(0.5))
+        stub.SetLayer(pcbnew.F_Cu)
+        stub.SetNet(net_map["GND"])
+        board.Add(stub)
+
     # Keep silkscreen readable on the dense board by moving small passive and
     # active references to the fabrication layer.
     for component in components:
@@ -955,12 +1015,12 @@ def build_board() -> None:
     # Make power and motor nets wider than logic nets.
     power_nets = {
         "GND", "VIN_RAW", "VIN_FUSED", "VIN_PROT",
-        "+5V", "+12V_AO", "+5V_MCU", "+5V_HDMI", "+5V_ENC", "+3V3", "+3V3_A",
+        "+5V", "+12V_AO", "+5V_MCU", "+5V_ENC", "+3V3", "+3V3_A",
         "+3V3_SD", "+3V3_WIFI", "BL_RAW", "BL_VIN", "DO_COM",
     }
     netclasses = board.GetNetClasses()
     power_class = pcbnew.NETCLASS("Power")
-    power_class.SetClearance(pcbnew.FromMM(0.25))
+    power_class.SetClearance(pcbnew.FromMM(0.3))
     power_class.SetTrackWidth(pcbnew.FromMM(0.8))
     power_class.SetViaDiameter(pcbnew.FromMM(0.8))
     power_class.SetViaDrill(pcbnew.FromMM(0.4))
@@ -974,6 +1034,7 @@ def build_board() -> None:
     board.BuildConnectivity()
 
     pcbnew.SaveBoard(str(PCB_PATH), board)
+    configure_netclasses()
     print(f"placed {len(components)} components, assigned {assigned} pads")
     if missing_pads:
         print(f"unassigned pads: {len(missing_pads)}")

@@ -13,16 +13,18 @@
 The WeAct `5V` pin is supplied from the motherboard 5 V rail and feeds the
 module's onboard 3.3 V regulator. The module `3V3` output pins remain local to
 the module; the separately regulated peripheral `+3V3` rail is not tied to them.
-VBUS, regulator-enable, onboard KEY/GPIO23 and onboard LED/GPIO25 are not
-connected to motherboard peripherals. The module's reset button, POR/BOR and
-watchdog are used; no duplicate reset button or external supervisor is fitted.
+VBUS, regulator-enable and onboard LED/GPIO25 are not connected to motherboard
+peripherals. GPIO23 is repurposed as the 74HC165 return, so the module's onboard
+USER key must not be used. The module's reset button, POR/BOR and watchdog are
+used; MOD1 `RUN` is not connected, and no duplicate reset button or external
+supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 
 ## Allocation
 
 | GPIO | MOD1 pin | Signal | Direction | Peripheral / function | Voltage | Firmware note |
 |---:|---:|---|---|---|---|---|
 | 0 | 33 | — | Reserved | Module PSRAM chip select | 3.3 V | Left free for the module's solderable PSRAM |
-| 1 | 49 | BL_PWM | Output | PWM brightness | 3.3 V | Backlight PWM, independent of digital output chain |
+| 1 | 49 | â€” | Reserved | Future backlight PWM | 3.3 V | J22 has no backlight contact; no board net or external interface is assigned |
 | 2 | 34 | SD_CD_MCU | Input | SD-card detect | 3.3 V | Active low; moved from GPIO47 as requested |
 | 3 | 50 | — | Reserved | Not connected | — | On-board backlight switch removed |
 | 4 | 35 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Alternate SPI0 mapping |
@@ -31,21 +33,21 @@ watchdog are used; no duplicate reset button or external supervisor is fitted.
 | 7 | 52 | SD_MOSI_MCU | Output | SPI0 MOSI | 3.3 V | Alternate SPI0 mapping |
 | 8 | 37 | I2C_SDA | Bidirectional | I2C0 SDA | 3.3 V | External pull-up required when used |
 | 9 | 53 | I2C_SCL | Bidirectional | I2C0 SCL | 3.3 V | External pull-up required when used |
-| 10 | 38 | WIFI_TX | Output | UART1 TX | 3.3 V | Direct to ESP-01S RX |
-| 11 | 54 | WIFI_RX | Input | UART1 RX | 3.3 V | Direct from ESP-01S TX |
-| 12 | 39 | HSTX_D0_P | Output | HSTX lane 0 positive | 3.3 V differential | HDMI D0+/LCD IN0+ |
-| 13 | 55 | HSTX_D0_N | Output | HSTX lane 0 negative | 3.3 V differential | HDMI D0-/LCD IN0- |
-| 14 | 40 | HSTX_D1_P | Output | HSTX lane 1 positive | 3.3 V differential | HDMI D1+/LCD IN1+ |
-| 15 | 56 | HSTX_D1_N | Output | HSTX lane 1 negative | 3.3 V differential | HDMI D1-/LCD IN1- |
-| 16 | 41 | HSTX_D2_P | Output | HSTX lane 2 positive | 3.3 V differential | HDMI D2+/LCD IN2+ |
-| 17 | 57 | HSTX_D2_N | Output | HSTX lane 2 negative | 3.3 V differential | HDMI D2-/LCD IN2- |
-| 18 | 42 | HSTX_CLK_P | Output | HSTX clock positive | 3.3 V differential | HDMI CLK+/LCD CK+ |
-| 19 | 58 | HSTX_CLK_N | Output | HSTX clock negative | 3.3 V differential | HDMI CLK-/LCD CK- |
-| 20 | 43 | SR_SCK | Output | Shared shift clock | 3.3 V | 74HC165 CP and 74HC595 SRCLK |
-| 21 | 59 | SR_PL_N | Output | 74HC165 parallel load | 3.3 V | Active low pulse before read |
-| 22 | 44 | SR_IN_Q7 | Input | 74HC165 serial return | 3.3 V | Byte 0 is PLC1-8 |
-| 23 | 60 | — | Reserved | Onboard KEY | 3.3 V | Not connected on motherboard |
-| 24 | 45 | SR_OUT_SER | Output | 74HC595 serial input | 3.3 V | 32-bit MSB-first transfer |
+| 10 | 38 | WIFI_TX | Output | UART1 TX | 3.3 V | Direct to ESP-01/ESP-01S RX |
+| 11 | 54 | WIFI_RX | Input | UART1 RX | 3.3 V | Direct from ESP-01/ESP-01S TX |
+| 12 | 39 | HSTX_D0_P | Output | HSTX lane 0 positive | 3.3 V differential | LCD LVDS D0+ driver input |
+| 13 | 55 | HSTX_D0_N | Output | HSTX lane 0 negative | 3.3 V differential | Alternate passive LVDS D0- |
+| 14 | 40 | HSTX_D1_P | Output | HSTX lane 1 positive | 3.3 V differential | LCD LVDS D1+ driver input |
+| 15 | 56 | HSTX_D1_N | Output | HSTX lane 1 negative | 3.3 V differential | Alternate passive LVDS D1- |
+| 16 | 41 | HSTX_D2_P | Output | HSTX lane 2 positive | 3.3 V differential | LCD LVDS D2+ driver input |
+| 17 | 57 | HSTX_D2_N | Output | HSTX lane 2 negative | 3.3 V differential | Alternate passive LVDS D2- |
+| 18 | 42 | HSTX_CLK_P | Output | HSTX clock positive | 3.3 V differential | LCD LVDS clock+ driver input |
+| 19 | 58 | HSTX_CLK_N | Output | HSTX clock negative | 3.3 V differential | Alternate passive LVDS clock- |
+| 20 | 43 | SR_OUT_SER | Output | 74HC595 serial input | 3.3 V | PIO DATA; GPIO20/21/22 are consecutive |
+| 21 | 59 | SR_SCK | Output | Shared shift clock | 3.3 V | PIO CLK; 74HC165 CP and 74HC595 SRCLK |
+| 22 | 44 | SR_LATCH | Output | 74HC595 storage-register clock | 3.3 V | PIO LATCH; rising edge updates all 32 outputs |
+| 23 | 60 | SR_IN_Q7 | Input | 74HC165 serial return | 3.3 V | Remove WeAct R16 (0R) to isolate the onboard key network |
+| 24 | 45 | SR_PL_N | Output | 74HC165 parallel load | 3.3 V | Active-low pulse before read |
 | 25 | 30 | — | Reserved | Onboard LED | 3.3 V | Not connected on motherboard |
 | 26 | 15 | ENC0_A_3V3 | Input | Encoder 0 A | 3.3 V | Conditioned from 5 V TTL |
 | 27 | 29 | ENC0_B_3V3 | Input | Encoder 0 B | 3.3 V | Conditioned from 5 V TTL |
@@ -56,7 +58,7 @@ watchdog are used; no duplicate reset button or external supervisor is fitted.
 | 32 | 12 | ENC2_A_3V3 | Input | Encoder 2 A | 3.3 V | Conditioned from 5 V TTL |
 | 33 | 26 | ENC2_B_3V3 | Input | Encoder 2 B | 3.3 V | Conditioned from 5 V TTL |
 | 34 | 11 | ENC2_Z_3V3 | Input | Encoder 2 Z | 3.3 V | Conditioned from 5 V TTL |
-| 35 | 25 | SR_LATCH | Output | 74HC595 RCLK | 3.3 V | Rising edge updates all 32 outputs |
+| 35 | 25 | — | Reserved | Not connected | — | Released after moving the shift return to GPIO23 |
 | 36 | 10 | — | Reserved | Not connected | — | Local output-enable gate removed |
 | 37 | 24 | ESTOP_N | Input | Dedicated isolated E-stop | 3.3 V | Active-low open-collector input; external hardware blocks outputs |
 | 38 | 9 | HOLD_N | Input | Dedicated HOLD button | 3.3 V | uCNC FHOLD input; active-low open-collector |
@@ -87,7 +89,11 @@ watchdog are used; no duplicate reset button or external supervisor is fitted.
 
 - GPIO0 is reserved for the module's optional PSRAM chip select and is not used
   by the motherboard.
-- GPIO23 and GPIO25 remain attached to the module's onboard key and LED.
+- GPIO23 carries `SR_IN_Q7`. Before fitting the WeAct module, remove its R16
+  (0R) series resistor, which isolates the SW3 USER-key network and the WeAct
+  C27 capacitor position from this pin. This is separate from motherboard C27
+  (U11 decoupling). Do not press or use the key as a machine control.
+- GPIO25 remains attached to the module's onboard LED.
 - GPIO12-19 must be assigned to HSTX before driving video.
 - The first eight encoder A/B/Z signals feed one non-inverting
   `SN74AHCT541DW` channel powered at 3.3 V. The single `ENC2_Z` input uses R110

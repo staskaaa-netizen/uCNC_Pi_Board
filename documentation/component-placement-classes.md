@@ -44,11 +44,11 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 | PLC pull-up | Place the individual 4.7 k resistor beside its optocoupler collector on the U9 branch |
 | Shift-register decoupling | C22-C29 sit immediately right of their respective U6-U13 VCC pins; ground via on the outer pad |
 | Motion output array | Group source, pull-down, 100 ohm array and its connector; keep buffers between U10-U13 and J10-J11 |
-| ULN output | Group source byte, ULN channels, clamp rail, eight R/LED chains and J12 |
+| ULN output | Group both ULN banks, clamp rail, existing indicator chains, J12 and J32 |
 | Encoder channel | Keep U28 between J13-J15 and the MCU with C57 at its supply; keep R110/R111 at J15 for the ENC2_Z divider |
 | Keyboard matrix | J16, RN20/RN21 and RN22/RN24 stay on F.Cu away from the bottom edge; KOUT arrays sit above J16 and KIN arrays below |
 | Expansion inputs | J9 and J27 flank U7 on F.Cu; each carries GND, +3V3 and four inputs |
-| Display option | J22 with RN26/RN27 below it for passive LVDS; RN28/RN29 are mutually exclusive DNP HDMI links |
+| Display option | J22 driven by U41/C106 active LVDS; RN26/RN27 are the mutually exclusive passive-LVDS alternative |
 | Fixed mechanical part | Do not move without explicit approval |
 
 ## Analog input block
@@ -84,11 +84,14 @@ equivalent op-amp channels. Swapping physical channels 0 and 1 would save only
 
 The final main-power placement pass keeps the high-current loops local:
 
-- C7, C8, C16, C17 and C77 form the general +5 V output/decoupling bank beside
-  C6/C11 at U1.
-- C88/C89 and C69/C70 are grouped around U34 for the ESP-01S input and output
+- C6/C11 form the 5 V output bulk capacitance and C7 provides local
+  high-frequency bypass at U1. Redundant C8, C16, C17 and C77 are removed.
+- C88/C89 and C69/C70 are grouped around U34 for the ESP-01/ESP-01S input and output
   rails.
-- FB1, C15 and C14 form the `+3V3_A` reference filter at MOD1 pin 48.
+- U41, the active DS90LV047A LVDS driver, and its C106 bypass are grouped
+  between the HSTX source and J22.
+- FB1 and C15 form the `+3V3_A` reference filter at MOD1 pin 48. The redundant
+  10 uF C14 bulk capacitor is removed.
 - R73 is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO43.
 - D4/R4 indicate +5 V and D5/R5 indicate +3.3 V. Both pairs are placed in the
   open area between MOD1 and the regulators.

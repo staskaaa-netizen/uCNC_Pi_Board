@@ -51,7 +51,6 @@ FP = {
     "TO263_5": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
     "USON10": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
     "SD": "Connector_Card:SD_TE_2041021",
-    "HDMI": "Connector_Video:HDMI_A_Molex_208658-1001_Horizontal",
     "PH2": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
     "SWITCH": "Button_Switch_THT:SW_PUSH_6mm",
     "WEACT": "LeanCam:WeAct_RP2350B_Socket",
@@ -109,7 +108,6 @@ MPN = {
     "TO263_5": ("Texas Instruments", "LM2596S-5.0/NOPB"),
     "USON10": ("Texas Instruments", "TPD4E05U06DQA"),
     "SD": ("TE Connectivity", "2041021-4"),
-    "HDMI": ("Molex", "208658-1001"),
     "PH2": ("Nichicon", "UWT1H101MNL1GS"),
     "SWITCH": ("C&K", "PTS645"),
     "HDR2X4": ("Wurth Elektronik", "61300821121"),
@@ -418,7 +416,15 @@ class SheetBuilder:
             reference=reference,
         )
 
-    def led(self, net_k: str, net_a: str, position: tuple[float, float], value: str = "indicator"):
+    def led(
+        self,
+        net_k: str,
+        net_a: str,
+        position: tuple[float, float],
+        value: str = "indicator",
+        *,
+        reference: str | None = None,
+    ):
         manufacturer, mpn = MPN["LED1206"]
         return self.two_pin(
             "D",
@@ -430,6 +436,7 @@ class SheetBuilder:
             position,
             mpn=mpn,
             manufacturer=manufacturer,
+            reference=reference,
         )
 
     def header(
@@ -556,7 +563,8 @@ def add_power(builder: SheetBuilder) -> None:
     b.note(
         "Power tree: fused/reverse-protected 12-24 V input; one LMR36510 5 V/1 A "
         "synchronous buck; WeAct onboard 3.3 V regulation supplies the logic rail; "
-        "ESP-01S has a separate 3.3 V LDO. Isolated field commons remain separate.",
+        "ESP-01 and ESP-01S share a separate 3.3 V LDO. Isolated field commons "
+        "remain separate.",
         15,
         15,
         175,
@@ -570,14 +578,23 @@ def add_power(builder: SheetBuilder) -> None:
     b.capacitor("VIN_FUSED", "GND", "100nF 100V", (100, 55), footprint_key="C1206_100V")
 
     q_input = b.add(
-        lib_id="Transistor_FET:Q_PMOS_GSD",
-        value="DMP1045U-7",
-        footprint_key="SOT23",
-        nets={"1": "Q1_GATE", "2": "VIN_PROT", "3": "VIN_FUSED"},
+        lib_id="LeanCam:PMOS_SO8",
+        value="IRF7240PBF",
+        footprint_key="SOIC8",
+        nets={
+            "1": "VIN_PROT",
+            "2": "VIN_PROT",
+            "3": "VIN_PROT",
+            "4": "Q1_GATE",
+            "5": "VIN_FUSED",
+            "6": "VIN_FUSED",
+            "7": "VIN_FUSED",
+            "8": "VIN_FUSED",
+        },
         position=(115, 65),
         prefix="Q",
-        mpn="DMP1045U-7",
-        manufacturer="Diodes Incorporated",
+        mpn="IRF7240PBF",
+        manufacturer="Infineon Technologies",
     )
     del q_input
     b.resistor("Q1_GATE", "GND", "100k", (115, 85))
@@ -622,7 +639,7 @@ def add_power(builder: SheetBuilder) -> None:
     b.capacitor("VIN_PROT", "GND", "22uF 50V", (30, 120), footprint_key="C1210")
     b.capacitor("+5V", "GND", "22uF 10V", (115, 100), footprint_key="C1210")
     b.capacitor("+5V", "GND", "100nF", (127, 100))
-    b.capacitor("+5V", "GND", "10uF", (138, 100))
+    b.next_ref("C")  # retired C8: C6/C11 already provide 2x22uF output bulk
 
     # Peripheral 3.3 V LDO. The WeAct regulator supplies only the module; this
     # separate linear rail prevents the MCU regulator from carrying board loads.
@@ -658,14 +675,14 @@ def add_power(builder: SheetBuilder) -> None:
         mpn="BLM18KG601SN1D",
         manufacturer="Murata",
     )
-    b.capacitor("+3V3_A", "GND", "10uF", (175, 145))
+    b.next_ref("C")  # retired C14: C15 provides the required reference bypass
     b.capacitor("+3V3_A", "GND", "100nF", (187, 145))
 
     # WeAct USB/5 V backfeed handling is provided by the module. Retire the
     # former ideal-diode branch without renumbering the remaining parts.
     b.next_ref("U")  # retired U3
-    b.capacitor("+5V", "GND", "10uF", (175, 95))
-    b.capacitor("+5V", "GND", "100nF", (187, 95))
+    b.next_ref("C")  # retired C16: redundant +5V bulk
+    b.next_ref("C")  # retired C17: redundant +5V bypass
     b.next_ref("R")  # retired status pull-up R2
 
     # The WeAct module owns reset and supervision.
@@ -682,7 +699,6 @@ def add_power(builder: SheetBuilder) -> None:
         "+5V",
         "+3V3_A",
         "VIN_PROT",
-        "+5V_HDMI",
         "+5V_ENC",
         "+3V3_SD",
         "+5V_ISO_IN",
@@ -717,7 +733,9 @@ def add_mcu(builder: SheetBuilder) -> None:
         "Shift order (verified from the hardware chain): 74HC165 Q7 -> next DS, with "
         "the PLC input banks assigned to their nearest 74HC165 data pins; "
         "74HC595 SER enters the OUT0-7 register and QH' continues "
-        "to the keyboard byte. Both 32-bit chains share one hardware clock. Latch is simultaneous.",
+        "to the keyboard byte. Both 32-bit chains share one hardware clock. "
+        "The 595 data/clock/latch controls use consecutive GPIO20/21/22 for "
+        "uCNC RP2350 PIO compatibility. Latch is simultaneous.",
         15,
         15,
         190,
@@ -725,23 +743,23 @@ def add_mcu(builder: SheetBuilder) -> None:
     )
 
     gpio_nets = {
-        "1": "GND", "2": "GND", "3": None, "4": "RESET_N", "5": "AOUT3_PWM",
+        "1": "GND", "2": "GND", "3": None, "4": None, "5": "AOUT3_PWM",
         "6": "AOUT1_PWM", "7": "AI2_ADC", "8": "AI0_ADC", "9": "HOLD_N",
         "10": None, "11": "ENC2_Z_3V3", "12": "ENC2_A_3V3",
         "13": "ENC1_B_3V3", "14": "ENC0_Z_3V3", "15": "ENC0_A_3V3",
         "16": "GND", "17": None, "18": None, "19": "AOUT0_PWM",
         "20": "AOUT2_PWM", "21": "PWR_GOOD_N", "22": "AI1_ADC", "23": "START_N",
-        "24": "ESTOP_N", "25": "SR_LATCH", "26": "ENC2_B_3V3",
+        "24": "ESTOP_N", "25": None, "26": "ENC2_B_3V3",
         "27": "ENC1_Z_3V3", "28": "ENC1_A_3V3", "29": "ENC0_B_3V3",
         "30": None, "31": "+5V", "32": "GND", "33": None,
         "34": "SD_CD_MCU", "35": "SD_MISO_MCU", "36": "SD_SCK_MCU",
         "37": "I2C_SDA", "38": "WIFI_TX", "39": "HSTX_D0_P",
         "40": "HSTX_D1_P", "41": "HSTX_D2_P", "42": "HSTX_CLK_P",
-        "43": "SR_SCK", "44": "SR_IN_Q7", "45": "SR_OUT_SER", "46": None,
-        "47": "GND", "48": "+3V3_A", "49": "BL_PWM", "50": None,
+        "43": "SR_OUT_SER", "44": "SR_LATCH", "45": "SR_PL_N", "46": None,
+        "47": "GND", "48": "+3V3_A", "49": None, "50": None,
         "51": "SD_CS_MCU", "52": "SD_MOSI_MCU", "53": "I2C_SCL", "54": "WIFI_RX",
         "55": "HSTX_D0_N", "56": "HSTX_D1_N", "57": "HSTX_D2_N",
-        "58": "HSTX_CLK_N", "59": "SR_PL_N", "60": None, "61": "GND",
+        "58": "HSTX_CLK_N", "59": "SR_SCK", "60": "SR_IN_Q7", "61": "GND",
         "62": "SWCLK", "63": "SWDIO", "64": None,
     }
     b.add(
@@ -762,7 +780,13 @@ def add_mcu(builder: SheetBuilder) -> None:
     b.next_ref("SW")  # retired reset button SW1
     b.next_ref("C")   # retired reset capacitor C21
 
-    b.header(1, 5, {"1": "+3V3", "2": "SWDIO", "3": "SWCLK", "4": "GND", "5": "RESET_N"}, (65, 155), "SWD")
+    b.header(
+        1,
+        4,
+        {"1": "+3V3", "2": "SWDIO", "3": "SWCLK", "4": "GND"},
+        (65, 155),
+        "SWD",
+    )
     # Use the WeAct board's onboard status LED so GPIO46 is available for the
     # fourth 0-10 V output. Reserve the old references to keep numbering stable.
     b.next_ref("D")  # removed external status LED D8
@@ -843,7 +867,7 @@ def add_mcu(builder: SheetBuilder) -> None:
         nets.update({
             "8": "GND",
             "9": q_next if offset < 3 else None,
-            "10": "RESET_N",
+            "10": "+3V3",
             "11": "SR_SCK",
             "12": "SR_LATCH",
             "13": "GND",
@@ -917,22 +941,20 @@ def add_field_inputs(builder: SheetBuilder) -> None:
     )
 
     for block in range(2):
-        nets = {}
-        # The PCB is compacted by joining each connector row to the nearest
-        # field-chain row. J7 therefore feeds logical channels 9-16 and J8
-        # feeds logical channels 1-8. Firmware compensates with a fixed table.
+        # Each original 16-position bank is split into two 8-position
+        # connectors. J7 therefore feeds channels 9-16 and J8 feeds 1-8;
+        # firmware compensates for that physical bank order.
         logical_numbers = tuple(range(9, 17)) if block == 0 else tuple(range(1, 9))
-        for local in range(8):
+        nets = {}
+        for local in range(4):
             number = logical_numbers[local]
-            signal_pin = str(2 * local + 1)
-            common_pin = str(2 * local + 2)
-            nets[signal_pin] = f"FIELD_IN{number}"
-            nets[common_pin] = f"FIELD_COM{block}"
+            nets[str(2 * local + 1)] = f"FIELD_IN{number}"
+            nets[str(2 * local + 2)] = f"FIELD_COM{block}"
         b.terminal(
-            16,
+            8,
             nets,
             (25, 125 + block * 48),
-            f"PLC positions {block * 8 + 1}-{block * 8 + 8}; software-mapped isolated inputs",
+            f"PLC positions {block * 8 + 1}-{block * 8 + 4}; software-mapped isolated inputs",
             reference=f"J{7 + block}",
         )
 
@@ -1094,10 +1116,11 @@ def add_isolated_field_supply(builder: SheetBuilder) -> None:
 def add_field_outputs(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "32-bit output chain: bits 0-15 are buffered to 5 V motion outputs; bits 16-23 "
-        "drive ULN2003A inputs directly from the 3.3 V 74HC595 outputs; bits 24-31 drive "
-        "the keyboard directly from the 3.3 V 74HC595 outputs. Series resistors protect "
-        "motion and keyboard connectors; keyboard outputs do not use pull-down arrays.",
+        "32-bit output chain: bit0 drives the isolated AUX output; bits1-15 are "
+        "buffered to the fifteen motion outputs; bits16-29 drive all fourteen "
+        "ULN2003A low-side channels; bits30-31 use BSS138 low-side MOSFETs. "
+        "Bits24-31 also drive the keyboard through series resistors. J12 exposes "
+        "DO0-DO7 and J32 exposes DO8-DO15.",
         15,
         15,
         180,
@@ -1147,50 +1170,52 @@ def add_field_outputs(builder: SheetBuilder) -> None:
         b.capacitor("+5V", "GND", "100nF", (x, 100))
 
     # Four-channel arrays keep the repeated field I/O passives compact.
-    output_sources = [
-        *(f"BUFY{bit}" for bit in range(16)),
-        *(f"OUT{bit}" for bit in range(16, 24)),
-    ]
-    for pack_index in range(6):
-        bits = range(pack_index * 4, pack_index * 4 + 4)
+    output_pulldown_pairs = (
+        (("GND", "BUFY2"), ("GND", "BUFY3"),
+         ("GND", "BUFY0"), ("GND", "BUFY1")),
+        (("BUFY5", "GND"), ("BUFY4", "GND"),
+         ("BUFY7", "GND"), ("BUFY6", "GND")),
+        (("BUFY9", "GND"), ("BUFY8", "GND"),
+         ("BUFY10", "GND"), ("BUFY11", "GND")),
+        (("GND", "BUFY15"), ("GND", "BUFY14"),
+         ("GND", "BUFY13"), ("GND", "BUFY12")),
+        (("OUT19", "GND"), ("OUT18", "GND"),
+         ("OUT17", "GND"), ("OUT16", "GND")),
+        ((None, None), ("OUT22", "GND"),
+         ("OUT21", "GND"), ("OUT20", "GND")),
+    )
+    for pack_index, pairs in enumerate(output_pulldown_pairs):
         b.resistor_pack4(
             "10k",
             "R_Array_4x0603",
-            [(output_sources[bit], "GND") for bit in bits],
+            list(pairs),
             (35 + (pack_index % 4) * 55, 280 + (pack_index // 4) * 50),
         )
     # Keyboard outputs are intentionally not pulled down while the 595 chain is
     # disabled. Keep the retired references reserved so later arrays stay stable.
     b.next_ref("RN")  # retired RN14
     b.next_ref("RN")  # retired RN15
-    motion_array_source_bits = (
-        (2, 3, 0, 1),
-        (6, 7, 4, 5),
-        (11, 10, 8, 9),
-        (15, 14, 13, 12),
+    motion_output_pairs = (
+        (("BUFY2", "MOTION2"), ("BUFY3", "MOTION1"),
+         ("BUFY0", "AUX_GATE"), ("BUFY1", "MOTION0")),
+        (("BUFY6", "MOTION6"), ("BUFY7", "MOTION5"),
+         ("BUFY4", "MOTION4"), ("BUFY5", "MOTION3")),
+        (("BUFY11", "MOTION10"), ("BUFY10", "MOTION9"),
+         ("BUFY8", "MOTION8"), ("BUFY9", "MOTION7")),
+        (("BUFY15", "MOTION14"), ("BUFY14", "MOTION13"),
+         ("BUFY13", "MOTION12"), ("BUFY12", "MOTION11")),
     )
-    motion_array_output_bits = (
-        (3, 2, 1, 0),
-        (7, 6, 5, 4),
-        (11, 10, 9, 8),
-        (15, 14, 13, 12),
-    )
-    for pack_index, (source_bits, output_bits) in enumerate(
-        zip(motion_array_source_bits, motion_array_output_bits)
-    ):
+    for pack_index, pairs in enumerate(motion_output_pairs):
         b.resistor_pack4(
             "100R",
             "R_Array_4x1206",
-            [
-                (f"BUFY{source_bit}", f"MOTION{output_bit}")
-                for source_bit, output_bit in zip(source_bits, output_bits)
-            ],
+            list(pairs),
             (35 + pack_index * 55, 225),
         )
     keyboard_output_pairs = (
         (
-            ("KOUT0", "OUT24"), ("OUT25", "KOUT1"),
-            ("KOUT2", "OUT26"), ("OUT27", "KOUT3"),
+            ("KOUT0", "OUT24"), ("KOUT1", "OUT25"),
+            ("KOUT2", "OUT26"), ("KOUT3", "OUT27"),
         ),
         (
             ("KOUT4", "OUT28"), ("KOUT5", "OUT29"),
@@ -1205,20 +1230,17 @@ def add_field_outputs(builder: SheetBuilder) -> None:
             (255 + pack_index * 55, 225),
         )
 
-    # Two ULN packages, four channels each. U26 channels count down from bit
-    # 19 and U27 channels count down from bit 23 to suit the placed ICs.
-    uln_channel_bits = ((3, 2, 1, 0), (7, 6, 5, 4))
+    # Both ULN packages use all seven channels. The order follows the fixed
+    # left-to-right package pads while preserving logical OUTn -> DOn mapping.
+    uln_channel_bits = ((6, 5, 4, 3, 2, 1, 0), (13, 12, 11, 10, 9, 8, 7))
     for package, channel_bits in enumerate(uln_channel_bits):
         nets = {"8": "GND", "9": "DO_COM"}
         input_numbers = [1, 2, 3, 4, 5, 6, 7]
         output_numbers = [16, 15, 14, 13, 12, 11, 10]
-        for channel in range(4):
+        for channel in range(7):
             bit = channel_bits[channel]
             nets[str(input_numbers[channel])] = f"OUT{bit + 16}"
             nets[str(output_numbers[channel])] = f"DO{bit}"
-        for channel in range(4, 7):
-            nets[str(input_numbers[channel])] = None
-            nets[str(output_numbers[channel])] = None
         b.add(
             lib_id="Transistor_Array:ULN2003A",
             value="ULN2003ADR",
@@ -1240,30 +1262,27 @@ def add_field_outputs(builder: SheetBuilder) -> None:
 
     b.terminal(
         4,
-        {"1": "MOTION3", "2": "MOTION1", "3": "MOTION0", "4": "GND"},
+        {"1": "MOTION0", "2": "MOTION1", "3": "MOTION2", "4": "GND"},
         (300, 140),
         "AX0: EN, STEP, DIR, GND",
         reference="J10",
     )
     b.terminal(
         4,
-        {"1": "MOTION4", "2": "MOTION2", "3": "MOTION5", "4": "GND"},
+        {"1": "MOTION3", "2": "MOTION4", "3": "MOTION5", "4": "GND"},
         (330, 140),
         "AX1: EN, STEP, DIR, GND",
         reference="J11",
     )
     b.terminal(
-        10,
+        8,
         {
             "1": "DO0", "2": "DO1", "3": "DO2", "4": "DO3",
             "5": "DO4", "6": "DO5", "7": "DO6", "8": "DO7",
-            "9": "DO_COM", "10": "GND",
         },
         (300, 210),
-        "General outputs 0-7; pin9 field +V, pin10 GND",
+        "General outputs 0-7",
     )
-
-
 def add_input_pullups(builder: SheetBuilder) -> None:
     """Add one individual pull-up for every isolated input output."""
     b = builder
@@ -1465,7 +1484,7 @@ def add_encoder_z_divider(builder: SheetBuilder) -> None:
 def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "Full-size SD card, ESP-01S socket and combined 8x8 scan interface. "
+        "Full-size SD card, ESP-01/ESP-01S socket and combined 8x8 scan interface. "
         "Keyboard KIN0-7 feed the 74HC165 through one series resistor per line without "
         "pull-ups, capacitors or an active buffer; KOUT0-7 come directly from bits "
         "24-31 of the 74HC595 chain.",
@@ -1530,11 +1549,11 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
     b.capacitor("+3V3_SD", "GND", "100nF", (102, 170))
     b.resistor("SD_CD_MCU", "SD_CD", "0R", (300, 165))
 
-    # ESP-01S socket and programming/test header.
+    # ESP-01/ESP-01S socket and programming/test header.
     b.header(2, 4, {
         "1": "GND", "2": "+3V3_WIFI", "3": "WIFI_GPIO2", "4": "WIFI_GPIO0",
         "5": "WIFI_RX", "6": "WIFI_TX", "7": "WIFI_EN", "8": "WIFI_RST",
-    }, (40, 205), "ESP-01S socket")
+    }, (40, 205), "ESP-01/ESP-01S socket")
     b.next_ref("J")  # retired J21 external UART header
     for net, pos in [("+3V3", (20, 230)), ("+3V3", (32, 230)), ("+3V3", (44, 230))]:
         b.resistor(net, ["WIFI_EN", "WIFI_RST", "WIFI_GPIO0"][[20, 32, 44].index(pos[0])], "10k", pos)
@@ -1558,8 +1577,9 @@ def add_display(builder: SheetBuilder) -> None:
     b.note(
         "HSTX pair order from the verified PicoLVDS/reference firmware: "
         "D0=GP12(P)/13(N), D1=GP14(P)/15(N), D2=GP16(P)/17(N), "
-        "CLK=GP18(P)/19(N). HDMI follows standard TMDS ordering. "
-        "Only one output population is fitted.",
+        "CLK=GP18(P)/19(N). J22 uses the verified display pinout: odd pins "
+        "on the left and even pins on the right. Only the first eight rows "
+        "are used; pins 17-20 are no-connect.",
         15,
         15,
         190,
@@ -1567,20 +1587,22 @@ def add_display(builder: SheetBuilder) -> None:
     )
 
     b.header(2, 10, {
-        "1": "GND", "2": "+3V3", "3": "+3V3", "4": "+3V3", "5": None,
-            "6": "BL_PWM", "7": None, "8": "LVDS_D0_N", "9": "LVDS_D0_P",
-        "10": "GND", "11": "LVDS_D1_N", "12": "LVDS_D1_P", "13": "GND",
-        "14": "LVDS_D2_N", "15": "LVDS_D2_P", "16": "GND", "17": "LVDS_CLK_N",
-        "18": "LVDS_CLK_P", "19": "GND", "20": None,
+        "1": "+3V3", "2": "+3V3", "3": "+3V3", "4": "GND",
+        "5": "GND", "6": "GND", "7": "LVDS_D0_N", "8": "LVDS_D0_P",
+        "9": "LVDS_D1_N", "10": "LVDS_D1_P",
+        "11": "LVDS_D2_N", "12": "LVDS_D2_P",
+        "13": "GND", "14": "GND",
+        "15": "LVDS_CLK_N", "16": "LVDS_CLK_P",
+        "17": None, "18": None, "19": None, "20": None,
     }, (50, 85), "LCD LVDS 2x10, 2.00 mm")
 
     # Passive LVDS. The isolated array pairs are ordered to follow J22 from
     # left to right when the networks are rotated 90 degrees on the PCB.
     passive = [
-        ("HSTX_D1_P", "LVDS_D1_P"), ("HSTX_D1_N", "LVDS_D1_N"),
-        ("HSTX_D0_P", "LVDS_D0_P"), ("HSTX_D0_N", "LVDS_D0_N"),
-        ("HSTX_CLK_P", "LVDS_CLK_P"), ("HSTX_CLK_N", "LVDS_CLK_N"),
-        ("HSTX_D2_P", "LVDS_D2_P"), ("HSTX_D2_N", "LVDS_D2_N"),
+        ("HSTX_D1_N", "LVDS_D1_N"), ("HSTX_D1_P", "LVDS_D1_P"),
+        ("HSTX_D0_N", "LVDS_D0_N"), ("HSTX_D0_P", "LVDS_D0_P"),
+        ("HSTX_CLK_N", "LVDS_CLK_N"), ("HSTX_CLK_P", "LVDS_CLK_P"),
+        ("HSTX_D2_N", "LVDS_D2_N"), ("HSTX_D2_P", "LVDS_D2_P"),
     ]
     for pack in range(2):
         b.resistor_pack4(
@@ -1588,93 +1610,57 @@ def add_display(builder: SheetBuilder) -> None:
             "R_Array_4x1206",
             passive[pack * 4:(pack + 1) * 4],
             (90 + pack * 65, 85),
-        )
-
-    # HDMI Type A.
-    b.add(
-        lib_id="Connector:HDMI_A",
-        value="HDMI Type A",
-        footprint_key="HDMI",
-        nets={
-            "1": "HDMI_D2_P", "2": "GND", "3": "HDMI_D2_N",
-            "4": "HDMI_D1_P", "5": "GND", "6": "HDMI_D1_N",
-            "7": "HDMI_D0_P", "8": "GND", "9": "HDMI_D0_N",
-            "10": "HDMI_CLK_P", "11": "GND", "12": "HDMI_CLK_N",
-            "13": "HDMI_CEC", "14": None, "15": "HDMI_SCL", "16": "HDMI_SDA",
-            "17": "GND", "18": "+5V_HDMI", "19": "HDMI_HPD", "SH": "GND",
-        },
-        position=(250, 90),
-        prefix="J",
-        mpn="208658-1001",
-        manufacturer="Molex",
-    )
-    hdmi_links = [
-        ("HSTX_D2_P", "HDMI_D2_P"), ("HSTX_D2_N", "HDMI_D2_N"),
-        ("HSTX_D1_P", "HDMI_D1_P"), ("HSTX_D1_N", "HDMI_D1_N"),
-        ("HSTX_D0_P", "HDMI_D0_P"), ("HSTX_D0_N", "HDMI_D0_N"),
-        ("HSTX_CLK_P", "HDMI_CLK_P"), ("HSTX_CLK_N", "HDMI_CLK_N"),
-    ]
-    for pack in range(2):
-        b.resistor_pack4(
-            "0R",
-            "R_Array_4x1206",
-            hdmi_links[pack * 4:(pack + 1) * 4],
-            (205 + pack * 65, 115),
             dnp=True,
         )
 
-    # ESD arrays: all ten package pins are used as flow-through paths.
-    for index, pair_a, pair_b in [
-        (0, ("HDMI_D0_P", "HDMI_D0_N"), ("HDMI_CLK_P", "HDMI_CLK_N")),
-        (1, ("HDMI_D1_P", "HDMI_D1_N"), ("HDMI_D2_P", "HDMI_D2_N")),
-    ]:
-        nets = {
-            "1": pair_a[0], "2": pair_a[1], "3": "GND", "4": pair_b[0], "5": pair_b[1],
-            "6": pair_b[1], "7": pair_b[0], "8": "GND", "9": pair_a[1], "10": pair_a[0],
-        }
-        b.add(
-            lib_id="Power_Protection:TPD4E05U06DQA",
-            value="TPD4E05U06DQA",
-            footprint_key="USON10",
-            nets=nets,
-            position=(245 + index * 22, 125),
-            prefix="U",
-            mpn="TPD4E05U06DQA",
-            manufacturer="Texas Instruments",
-        )
     b.add(
-        lib_id="Power_Protection:TPD4E05U06DQA",
-        value="TPD4E05U06DQA",
-        footprint_key="USON10",
+        lib_id="LeanCam:DS90LV047A",
+        value="DS90LV047A",
+        footprint_key="SOIC16",
         nets={
-            "1": "HDMI_SCL", "10": "HDMI_SCL",
-            "2": "HDMI_SDA", "9": "HDMI_SDA",
-            "3": "GND", "8": "GND",
-            "4": "HDMI_HPD", "7": "HDMI_HPD",
-            "5": "HDMI_CEC", "6": "HDMI_CEC",
+            "1": "+3V3",
+            "2": "HSTX_D0_P",
+            "3": "HSTX_D1_P",
+            "4": "+3V3",
+            "5": "GND",
+            "6": "HSTX_D2_P",
+            "7": "HSTX_CLK_P",
+            "8": "GND",
+            "9": "LVDS_D0_N",
+            "10": "LVDS_D0_P",
+            "11": "LVDS_D1_P",
+            "12": "LVDS_D1_N",
+            "13": "LVDS_D2_N",
+            "14": "LVDS_D2_P",
+            "15": "LVDS_CLK_P",
+            "16": "LVDS_CLK_N",
         },
-        position=(365, 125),
+        position=(125, 45),
         prefix="U",
-        mpn="TPD4E05U06DQA",
+        reference="U41",
+        mpn="DS90LV047ATMTC/NOPB",
         manufacturer="Texas Instruments",
     )
-
-    b.resistor("+5V_HDMI", "HDMI_SCL", "4.7k", (205, 160))
-    b.resistor("+5V_HDMI", "HDMI_SDA", "4.7k", (218, 160))
-    b.two_pin("F", "Device:Fuse", "500mA", "R1206", "+5V", "+5V_HDMI", (190, 175), mpn="0ZCG0050FF2E", manufacturer="Bel Fuse")
-    b.capacitor("+5V_HDMI", "GND", "10uF", (230, 175))
-    b.capacitor("+5V_HDMI", "GND", "100nF", (242, 175))
-
-    b.note(
-        "DDC is terminated at the HDMI side with 4.7 k pull-ups to the connector +5 V. "
-        "No MCU HPD/DDC GPIO is reserved because the selected fixed-timing video path "
-        "does not require EDID. Fit either the two 4x330R LVDS arrays or the two "
-        "4x0R HDMI arrays; no solder jumpers are used.",
-        190,
-        195,
-        140,
-        28,
+    b.capacitor(
+        "+3V3",
+        "GND",
+        "100nF",
+        (145, 45),
+        reference="C106",
     )
+
+    # Preserve reference numbering after removal of the HDMI branch.
+    b.next_ref("J")   # retired J23 HDMI connector
+    b.next_ref("RN")  # retired RN28 HDMI link array
+    b.next_ref("RN")  # retired RN29 HDMI link array
+    b.next_ref("U")   # retired U42 HDMI ESD array
+    b.next_ref("U")   # retired U43 HDMI ESD array
+    b.next_ref("U")   # retired U44 HDMI ESD/DDC array
+    b.next_ref("R")   # retired R59 HDMI DDC pull-up
+    b.next_ref("R")   # retired R60 HDMI DDC pull-up
+    b.next_ref("F")   # retired F3 HDMI fuse
+    b.next_ref("C")   # retired C107 HDMI bulk capacitor
+    b.next_ref("C")   # retired C108 HDMI bypass capacitor
 
 
 def add_analog(builder: SheetBuilder) -> None:
@@ -1692,18 +1678,27 @@ def add_analog(builder: SheetBuilder) -> None:
         45,
     )
 
-    analog_in_nets = {}
-    for bit in range(3):
-        analog_in_nets[str(bit * 2 + 1)] = f"AI{bit}"
-        analog_in_nets[str(bit * 2 + 2)] = "GND"
-    b.terminal(6, analog_in_nets, (38, 75), "AI0/GND/AI1/GND/AI2/GND")
+    analog_in_nets = {
+        "1": "AI0",
+        "2": "GND",
+        "3": "AI1",
+        "4": "GND",
+        "5": "AI2",
+    }
+    b.terminal(5, analog_in_nets, (38, 75), "AI0/GND/AI1/GND/AI2")
 
     for bit in range(3):
         x = 100 + bit * 50
         b.resistor(f"AI{bit}", f"AI{bit}_ADC", "100k", (x, 70))
         b.next_ref("R")  # retired second upper resistor
         b.resistor(f"AI{bit}_ADC", "GND", "33k", (x, 100))
-        b.capacitor(f"AI{bit}_ADC", "GND", "100nF", (x, 130))
+        b.capacitor(
+            f"AI{bit}_ADC",
+            "GND",
+            "100nF",
+            (x, 130),
+            reference=f"C{73 + bit}",
+        )
 
     b.terminal(
         5,
@@ -1835,9 +1830,9 @@ def add_analog(builder: SheetBuilder) -> None:
 def add_backlight(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "Backlight power switching is external. BL_PWM is routed directly to "
-        "J22 pin 6 as a 3.3 V logic PWM signal. No local backlight supply, "
-        "MOSFET, enable pin or supply-selection jumper is fitted.",
+        "Backlight power switching is external. MOD1 GPIO1 is reserved for a "
+        "future backlight PWM, but the verified J22 pinout has no backlight "
+        "contact and no board net or separate interface is assigned yet.",
         15,
         240,
         180,
@@ -1890,7 +1885,6 @@ def main() -> None:
     # that did not already have a dedicated decoupling capacitor.
     local_decoupling = (
         ("power", "+5V", (285, 240), "C76"),       # U2 input
-        ("power", "+5V", (297, 240), "C77"),       # U3 input
     )
     for sheet_name, rail, position, reference in local_decoupling:
         sheets[sheet_name].capacitor(
@@ -1984,9 +1978,9 @@ def main() -> None:
         reference="J27",
     )
     motion_connectors = (
-        ("J28", "AX2: EN, STEP, DIR, GND", {"1": "MOTION9", "2": "MOTION7", "3": "MOTION6", "4": "GND"}, (360, 175)),
-        ("J29", "AX3: EN, STEP, DIR, GND", {"1": "MOTION10", "2": "MOTION8", "3": "MOTION11", "4": "GND"}, (390, 175)),
-        ("J30", "AX4: EN, STEP, DIR, GND", {"1": "MOTION15", "2": "MOTION13", "3": "MOTION12", "4": "GND"}, (330, 210)),
+        ("J28", "AX2: EN, STEP, DIR, GND", {"1": "MOTION6", "2": "MOTION7", "3": "MOTION8", "4": "GND"}, (360, 175)),
+        ("J29", "AX3: EN, STEP, DIR, GND", {"1": "MOTION9", "2": "MOTION10", "3": "MOTION11", "4": "GND"}, (390, 175)),
+        ("J30", "AX4: EN, STEP, DIR, GND", {"1": "MOTION12", "2": "MOTION13", "3": "MOTION14", "4": "GND"}, (330, 210)),
     )
     for reference, value, nets, position in motion_connectors:
         sheets["outputs"].terminal(
@@ -2000,16 +1994,8 @@ def main() -> None:
         2,
         {"1": "AUX_OUT", "2": "GND"},
         (360, 210),
-        "Motion AUX open-drain output and GND",
+        "AUX open-drain output and GND",
         reference="J31",
-    )
-    sheets["outputs"].resistor(
-        "MOTION14",
-        "AUX_GATE",
-        "100R",
-        (330, 240),
-        footprint_key="R0805",
-        reference="R112",
     )
     sheets["outputs"].resistor(
         "AUX_GATE",
@@ -2030,11 +2016,120 @@ def main() -> None:
         mpn="BSS138",
         manufacturer="onsemi",
     )
+    for index, bit in enumerate((14, 15)):
+        gate_net = f"DO{bit}_GATE"
+        sheets["outputs"].resistor(
+            f"OUT{bit + 16}",
+            gate_net,
+            "100R",
+            (330, 255 + index * 15),
+            footprint_key="R0805",
+            reference=f"R{114 + index * 2}",
+        )
+        sheets["outputs"].resistor(
+            gate_net,
+            "GND",
+            "100k",
+            (345, 255 + index * 15),
+            footprint_key="R0805",
+            reference=f"R{115 + index * 2}",
+        )
+        sheets["outputs"].add(
+            lib_id="Transistor_FET:Q_NMOS_GSD",
+            value="BSS138",
+            footprint_key="SOT23",
+            nets={"1": gate_net, "2": "GND", "3": f"DO{bit}"},
+            position=(360, 255 + index * 15),
+            prefix="Q",
+            reference=f"Q{6 + index}",
+            mpn="BSS138",
+            manufacturer="onsemi",
+        )
 
     # Add explicitly numbered field-supply parts only after all automatically
     # numbered references have been allocated, so existing board references do
     # not move.
     add_isolated_field_supply(sheets["inputs"])
+    sheets["outputs"].terminal(
+        8,
+        {
+            "1": "DO8", "2": "DO9", "3": "DO10", "4": "DO11",
+            "5": "DO12", "6": "DO13", "7": "DO14", "8": "DO15",
+        },
+        (375, 210),
+        "General outputs 8-15; DO_COM and GND are shared through J12",
+        reference="J32",
+    )
+    sheets["outputs"].terminal(
+        2,
+        {"1": "DO_COM", "2": "GND"},
+        (390, 210),
+        "General outputs field +V and GND",
+        reference="J33",
+    )
+    sheets["inputs"].terminal(
+        8,
+        {"1": "FIELD_IN13", "2": "FIELD_COM0",
+         "3": "FIELD_IN14", "4": "FIELD_COM0",
+         "5": "FIELD_IN15", "6": "FIELD_COM0",
+         "7": "FIELD_IN16", "8": "FIELD_COM0"},
+        (420, 125),
+        "PLC positions 5-8 of J7 bank; software-mapped isolated inputs",
+        reference="J34",
+    )
+    sheets["inputs"].terminal(
+        8,
+        {"1": "FIELD_IN5", "2": "FIELD_COM1",
+         "3": "FIELD_IN6", "4": "FIELD_COM1",
+         "5": "FIELD_IN7", "6": "FIELD_COM1",
+         "7": "FIELD_IN8", "8": "FIELD_COM1"},
+        (420, 173),
+        "PLC positions 5-8 of J8 bank; software-mapped isolated inputs",
+        reference="J35",
+    )
+    for bit in range(8, 16):
+        led_reference = f"D{57 + bit - 8}"
+        resistor_reference = f"R{118 + bit - 8}"
+        x = 250 + ((bit - 8) % 4) * 18
+        y = 205 + ((bit - 8) // 4) * 28
+        sheets["outputs"].led(
+            f"DO{bit}",
+            f"DO_LED{bit}_A",
+            (x, y),
+            f"DO{bit}",
+            reference=led_reference,
+        )
+        sheets["outputs"].resistor(
+            "DO_COM",
+            f"DO_LED{bit}_A",
+            "2.2k",
+            (x + 8, y),
+            reference=resistor_reference,
+        )
+    sheets["outputs"].resistor_pack4(
+        "10k",
+        "R_Array_4x0603",
+        [
+            ("OUT26", "GND"),
+            ("OUT24", "GND"),
+            ("OUT25", "GND"),
+            ("OUT23", "GND"),
+        ],
+        (420, 235),
+        reference="RN30",
+    )
+    sheets["outputs"].resistor_pack4(
+        "10k",
+        "R_Array_4x0603",
+        [
+            ("OUT29", "GND"),
+            ("OUT28", "GND"),
+            ("OUT27", "GND"),
+            (None, None),
+        ],
+        (440, 235),
+        reference="RN31",
+    )
 
     for sheet in sheets.values():
         sheet.save()

@@ -21,7 +21,7 @@ before enabling external power.
 The physical chain runs from the far keyboard register toward the MCU:
 
 `74HC165 U6 Q7 -> U7 DS`, `U7 Q7 -> U8 DS`, `U8 Q7 -> U9 DS`,
-`U9 Q7 -> MOD1 GPIO22 (SR_IN_Q7)`.
+`U9 Q7 -> MOD1 GPIO23 (SR_IN_Q7)`.
 
 | Logical bits | Register | Device | Parallel inputs | Field meaning |
 |---:|---|---|---|---|
@@ -50,18 +50,18 @@ below:
 | 2 | J7.3 | FIELD_IN10 | 14 |
 | 3 | J7.5 | FIELD_IN11 | 13 |
 | 4 | J7.7 | FIELD_IN12 | 12 |
-| 5 | J7.9 | FIELD_IN13 | 8 |
-| 6 | J7.11 | FIELD_IN14 | 9 |
-| 7 | J7.13 | FIELD_IN15 | 10 |
-| 8 | J7.15 | FIELD_IN16 | 11 |
+| 5 | J34.1 | FIELD_IN13 | 8 |
+| 6 | J34.3 | FIELD_IN14 | 9 |
+| 7 | J34.5 | FIELD_IN15 | 10 |
+| 8 | J34.7 | FIELD_IN16 | 11 |
 | 9 | J8.1 | FIELD_IN1 | 7 |
 | 10 | J8.3 | FIELD_IN2 | 6 |
 | 11 | J8.5 | FIELD_IN3 | 5 |
 | 12 | J8.7 | FIELD_IN4 | 4 |
-| 13 | J8.9 | FIELD_IN5 | 0 |
-| 14 | J8.11 | FIELD_IN6 | 1 |
-| 15 | J8.13 | FIELD_IN7 | 2 |
-| 16 | J8.15 | FIELD_IN8 | 3 |
+| 13 | J35.1 | FIELD_IN5 | 0 |
+| 14 | J35.3 | FIELD_IN6 | 1 |
+| 15 | J35.5 | FIELD_IN7 | 2 |
+| 16 | J35.7 | FIELD_IN8 | 3 |
 
 The connector even pins remain the isolated `FIELD_COM0`/`FIELD_COM1`
 returns. `(input_word >> 16) & 0xff` remains J9/J27 expansion inputs 0-7,
@@ -78,7 +78,7 @@ GPIO39 directly. Each is active-low. uCNC maps these to `ESTOP`, `FHOLD` and
 
 The physical chain runs from the register nearest the MCU outward:
 
-`MOD1 GPIO24 (SR_OUT_SER) -> U10 SER`, `U10 QH' -> U11 SER`,
+`MOD1 GPIO20 (SR_OUT_SER) -> U10 SER`, `U10 QH' -> U11 SER`,
 `U11 QH' -> U12 SER`, `U12 QH' -> U13 SER`.
 
 The software writes a 32-bit word using normal SPI mode 0, MSB-first:
@@ -101,35 +101,40 @@ logical output assignment is:
 
 | Bit | Signal | Destination |
 |---:|---|---|
-| 0 | AX0_STEP | J10.2 |
-| 1 | AX0_DIR | J10.3 |
-| 2 | AX0_EN | J10.1 |
-| 3 | AX1_STEP | J11.2 |
-| 4 | AX1_DIR | J11.3 |
-| 5 | AX1_EN | J11.1 |
-| 6 | AX2_STEP | J28.2 |
-| 7 | AX2_DIR | J28.3 |
-| 8 | AX2_EN | J28.1 |
-| 9 | AX3_STEP | J29.2 |
-| 10 | AX3_DIR | J29.3 |
-| 11 | AX3_EN | J29.1 |
-| 12 | AX4_STEP | J30.2 |
-| 13 | AX4_DIR | J30.3 |
-| 14 | AX4_EN | J30.1 |
-| 15 | MOTION14/AUX | J31.1 |
-| 16-23 | DO0-DO7 | J10.1-J10.8 through two ULN2003A arrays |
-| 24-31 | KOUT0-KOUT7 | J14 even pins 2-16 |
+| 0 | AUX | J31.1 |
+| 1 | MOTION0 / AX0_EN | J10.1 |
+| 2 | MOTION2 / AX0_DIR | J10.3 |
+| 3 | MOTION1 / AX0_STEP | J10.2 |
+| 4 | MOTION4 / AX1_STEP | J11.2 |
+| 5 | MOTION3 / AX1_EN | J11.1 |
+| 6 | MOTION6 / AX2_EN | J28.1 |
+| 7 | MOTION5 / AX1_DIR | J11.3 |
+| 8 | MOTION8 / AX2_DIR | J28.3 |
+| 9 | MOTION7 / AX2_STEP | J28.2 |
+| 10 | MOTION9 / AX3_EN | J29.1 |
+| 11 | MOTION10 / AX3_STEP | J29.2 |
+| 12 | MOTION11 / AX3_DIR | J29.3 |
+| 13 | MOTION12 / AX4_EN | J30.1 |
+| 14 | MOTION13 / AX4_STEP | J30.2 |
+| 15 | MOTION14 / AX4_DIR | J30.3 |
+| 16-29 | DO0-DO13 | J12 pins1-8 and J32 pins1-6 through both ULN2003A arrays |
+| 30-31 | DO14-DO15 | J32 pins7-8 through BSS138 low-side MOSFETs |
+| 24-31 | KOUT0-KOUT7 | J16 even pins 2-16; OUT24-OUT31 fan out to the ULNs/MOSFETs where used |
 
-The first 16 motion bits are driven through two `SN74AHCT541DW` buffers and
-100 ohm series resistors. Bits 16-23 drive the ULN2003A inputs directly from the
-3.3 V 74HC595 outputs, with 10 k pulldowns defining the off state while the 595
-is disabled. Bits 24-31 drive the keyboard through 100 ohm series resistors
-without pulldown arrays, because keyboard reads are not required while the 595
-outputs are tri-stated.
+Bit 0 enters U24 pin 8 and its U24 pin 12 (`BUFY0`) output drives RN16 element
+3. RN16 pin 6 then drives the AUX low-side MOSFET gate; the 100 k pulldown at
+R113 remains. Bits 1-15 use the remaining U24/U25 channels and 100 ohm series
+resistors as MOTION0-MOTION14.
+Bits 16-29 drive all fourteen ULN2003A inputs
+directly from the 3.3 V 74HC595 outputs, with 10 k pulldowns wherever required
+by the output bank. Bits 30-31 use BSS138 low-side MOSFETs with the same
+100 ohm gate resistor and 100 k gate pulldown as the auxiliary output.
+OUT24-29 additionally drive the keyboard through 100 ohm series resistors;
+OUT30-31 do likewise while also driving the two MOSFET gates.
 
 The first two 595/541 pairs use optimized, non-sequential physical pin maps.
-Each logical OUTn still connects to BUFYn and then to the same MOTIONn function;
-only equivalent package channels changed. The mapping is:
+Each logical OUTn still connects to U24/U25 input n and produces BUFYn; the
+resistor arrays then offset BUFY1-15 to MOTION0-14. The package mapping is:
 
 | Logical bit | U10 or U11 Q pin into U24 or U25 | U24 or U25 output pin |
 |---:|---|---|
@@ -156,43 +161,79 @@ OUT15/OUT14/OUT13/OUT12/OUT11/OUT10/OUT8/OUT9 for U25. This removes the
 remaining 17 analyzed ratline crossings in the two register/buffer pairs for
 the current placement.
 
-The four 100 ohm motion arrays use optimized channel permutations. RN16 and
-RN17 intentionally swap output pairs `1↔2` and `3↔4`; RN18 and RN19 retain
-identity output pairing:
+The four 100 ohm motion arrays form one monotonic physical sequence from the
+buffer outputs on the upper RN row to the connector field from the lower RN
+row. RN16 element 3 is the AUX gate-drive element, so all sixteen RN16-RN19
+elements are active.
 
-| Array | Channel 1 pins 1/8 | Channel 2 pins 2/7 | Channel 3 pins 3/6 | Channel 4 pins 4/5 |
+| Array | Element 1 pins 1/8 | Element 2 pins 2/7 | Element 3 pins 3/6 | Element 4 pins 4/5 |
 |---|---|---|---|---|
-| RN16 | BUFY2/MOTION3 | BUFY3/MOTION2 | BUFY0/MOTION1 | BUFY1/MOTION0 |
-| RN17 | BUFY6/MOTION7 | BUFY7/MOTION6 | BUFY4/MOTION5 | BUFY5/MOTION4 |
-| RN18 | BUFY11/MOTION11 | BUFY10/MOTION10 | BUFY8/MOTION9 | BUFY9/MOTION8 |
-| RN19 | BUFY15/MOTION15 | BUFY14/MOTION14 | BUFY13/MOTION13 | BUFY12/MOTION12 |
+| RN16 | BUFY2/MOTION2 | BUFY3/MOTION1 | BUFY0/AUX_GATE | BUFY1/MOTION0 |
+| RN17 | BUFY6/MOTION6 | BUFY7/MOTION5 | BUFY4/MOTION4 | BUFY5/MOTION3 |
+| RN18 | BUFY11/MOTION10 | BUFY10/MOTION9 | BUFY8/MOTION8 | BUFY9/MOTION7 |
+| RN19 | BUFY15/MOTION14 | BUFY14/MOTION13 | BUFY13/MOTION12 | BUFY12/MOTION11 |
 
-Accordingly, the RN16/RN17 output mapping must be reflected in firmware:
-`OUT0→MOTION1`, `OUT1→MOTION0`, `OUT2→MOTION3`, `OUT3→MOTION2`,
-`OUT4→MOTION5`, `OUT5→MOTION4`, `OUT6→MOTION7`, and `OUT7→MOTION6`.
-RN18/RN19 remain identity through bit 15.
+The first/second net listed for each element connects to the buffer-side and
+connector-side pins respectively. Sorting the physical connector pins from
+left to right gives BUFY15, 14, 13, 12, 11, 10, 8, 9, 6, 7, 4, 5, 2, 3, 1;
+the corresponding series elements maintain monotonic pad order.
+
+The updated output mapping in firmware is:
+`OUT0 -> U24 -> RN16 -> AUX` and the explicit bit-to-motion permutation in the
+table above. All fifteen motion channels plus AUX use all sixteen 541 outputs.
 
 The ULN output byte is also wired to the current IC positions:
 
-| Logical bit | U12 Q pin | ULN input | ULN output | Field output |
+| Logical bit | 595 Q pin | ULN input | ULN output | Field output |
 |---:|---:|---|---|---|
-| 16 | 1 | U26.4 | U26.13 | DO0 |
-| 17 | 2 | U26.3 | U26.14 | DO1 |
-| 18 | 3 | U26.2 | U26.15 | DO2 |
-| 19 | 4 | U26.1 | U26.16 | DO3 |
-| 20 | 5 | U27.4 | U27.13 | DO4 |
-| 21 | 6 | U27.3 | U27.14 | DO5 |
-| 22 | 7 | U27.2 | U27.15 | DO6 |
-| 23 | 15 | U27.1 | U27.16 | DO7 |
+| 16 | 1 | U26.7 | U26.10 | DO0 |
+| 17 | 2 | U26.6 | U26.11 | DO1 |
+| 18 | 3 | U26.5 | U26.12 | DO2 |
+| 19 | 4 | U26.4 | U26.13 | DO3 |
+| 20 | 5 | U26.3 | U26.14 | DO4 |
+| 21 | 6 | U26.2 | U26.15 | DO5 |
+| 22 | 7 | U26.1 | U26.16 | DO6 |
+| 23 | 15 | U27.7 | U27.10 | DO7 |
+| 24 | U13.15 | U27.6 | U27.11 | DO8 |
+| 25 | U13.1 | U27.5 | U27.12 | DO9 |
+| 26 | U13.2 | U27.4 | U27.13 | DO10 |
+| 27 | U13.3 | U27.3 | U27.14 | DO11 |
+| 28 | U13.4 | U27.2 | U27.15 | DO12 |
+| 29 | U13.5 | U27.1 | U27.16 | DO13 |
+| 30 | U13.6 | BSS138 Q6 gate | Q6 drain | DO14 |
+| 31 | U13.7 | BSS138 Q7 gate | Q7 drain | DO15 |
 
-## Keyboard resistor-network pin map
+J12 exposes DO0-DO7. J32 exposes DO8-DO15. J33 provides their shared
+`DO_COM` and GND terminals.
+
+## Pull-down and keyboard resistor-network pin map
+
+RN8-RN11 use equivalent element and terminal permutations selected from the
+fixed footprint geometries:
+
+| Network | Element 1 pins 1/8 | Element 2 pins 2/7 | Element 3 pins 3/6 | Element 4 pins 4/5 |
+|---|---|---|---|---|
+| RN8 | GND/BUFY2 | GND/BUFY3 | GND/BUFY0 | GND/BUFY1 |
+| RN9 | BUFY5/GND | BUFY4/GND | BUFY7/GND | BUFY6/GND |
+| RN10 | BUFY9/GND | BUFY8/GND | BUFY10/GND | BUFY11/GND |
+| RN11 | GND/BUFY15 | GND/BUFY14 | GND/BUFY13 | GND/BUFY12 |
+
+RN12, RN13, RN30 and RN31 use equivalent element/terminal swaps to meet the
+U12/U13-to-U26/U27 fanout while preserving every `OUTn` logical assignment:
+
+| Network | Element 1 pins 1/8 | Element 2 pins 2/7 | Element 3 pins 3/6 | Element 4 pins 4/5 |
+|---|---|---|---|---|
+| RN12 | OUT19/GND | OUT18/GND | OUT17/GND | OUT16/GND |
+| RN13 | spare | OUT22/GND | OUT21/GND | OUT20/GND |
+| RN30 | OUT26/GND | OUT24/GND | OUT25/GND | OUT23/GND |
+| RN31 | OUT29/GND | OUT28/GND | OUT27/GND | spare |
 
 RN20/RN21 and RN22/RN24 use equivalent isolated-element and terminal swaps to
 minimize the local ratline crossings. All four networks remain on F.Cu.
 
 | Network | Element 1 pins 1/8 | Element 2 pins 2/7 | Element 3 pins 3/6 | Element 4 pins 4/5 |
 |---|---|---|---|---|
-| RN20 | KOUT0/OUT24 | OUT25/KOUT1 | KOUT2/OUT26 | OUT27/KOUT3 |
+| RN20 | KOUT0/OUT24 | KOUT1/OUT25 | KOUT2/OUT26 | KOUT3/OUT27 |
 | RN21 | KOUT4/OUT28 | KOUT5/OUT29 | KOUT6/OUT30 | KOUT7/OUT31 |
 | RN22 | KIN0_FILT/KIN0 | KIN1_FILT/KIN1 | KIN2_FILT/KIN2 | KIN3_FILT/KIN3 |
 | RN24 | KIN4_FILT/KIN4 | KIN5_FILT/KIN5 | KIN6_FILT/KIN6 | KIN7_FILT/KIN7 |
@@ -206,10 +247,11 @@ reversed so the outputs fan directly into J22:
 
 | Network | Element 1 pins 1/8 | Element 2 pins 2/7 | Element 3 pins 3/6 | Element 4 pins 4/5 |
 |---|---|---|---|---|
-| RN26 | HSTX_D1_P -> LVDS_D1_P | HSTX_D1_N -> LVDS_D1_N | HSTX_D0_P -> LVDS_D0_P | HSTX_D0_N -> LVDS_D0_N |
-| RN27 | HSTX_CLK_P -> LVDS_CLK_P | HSTX_CLK_N -> LVDS_CLK_N | HSTX_D2_P -> LVDS_D2_P | HSTX_D2_N -> LVDS_D2_N |
+| RN26 | HSTX_D1_N -> LVDS_D1_N | HSTX_D1_P -> LVDS_D1_P | HSTX_D0_N -> LVDS_D0_N | HSTX_D0_P -> LVDS_D0_P |
+| RN27 | HSTX_CLK_N -> LVDS_CLK_N | HSTX_CLK_P -> LVDS_CLK_P | HSTX_D2_N -> LVDS_D2_N | HSTX_D2_P -> LVDS_D2_P |
 
-The RP2350 lane definitions and J22 pin mapping remain unchanged.
+The RP2350 lane definitions are unchanged. J22 now follows the verified panel
+pinout, with D0 on pins 7/8, D1 on 9/10, D2 on 11/12 and clock on 15/16.
 
 ## Legacy firmware status
 

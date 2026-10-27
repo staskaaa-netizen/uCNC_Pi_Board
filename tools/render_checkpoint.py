@@ -13,7 +13,7 @@ import wx
 
 
 ANCHORS = {
-    *{f"J{index}" for index in range(1, 27)},
+    *{f"J{index}" for index in range(1, 33)},
     "MOD1",
     "SW1",
     "SW2",
@@ -27,7 +27,7 @@ ANCHORS = {
 def net_color(name: str):
     if name.startswith(("ESTOP", "HOLD", "START")):
         return wx.Colour(210, 30, 30)
-    if name.startswith(("HDMI_", "HSTX_", "LVDS_")):
+    if name.startswith(("HSTX_", "LVDS_")):
         return wx.Colour(160, 30, 180)
     if name.startswith(("SR_", "ENC")):
         return wx.Colour(0, 125, 120)

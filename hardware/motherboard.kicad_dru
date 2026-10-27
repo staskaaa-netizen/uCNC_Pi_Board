@@ -1,0 +1,12 @@
+(version 1)
+
+(rule "LVDS connector geometry"
+    (constraint track_width (min 0.12mm) (max 0.12mm) (opt 0.12mm))
+    (constraint diff_pair_gap (min 0.12mm) (opt 0.12mm))
+    (condition "A.NetName == 'LVDS_*'")
+)
+
+(rule "J22 LVDS connector clearance"
+    (constraint clearance (min 0.12mm))
+    (condition "(A.NetName == 'LVDS_*' && B.memberOfFootprint('J22')) || (B.NetName == 'LVDS_*' && A.memberOfFootprint('J22'))")
+)

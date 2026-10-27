@@ -1,4 +1,4 @@
-"""Optimize the LCD/HDMI display interface as a local placement block.
+"""Optimize the LCD LVDS interface as a local placement block.
 
 The board is treated as authoritative.  Candidate placements are evaluated on
 the current pad nets, with a fixed set of surrounding footprints treated as
@@ -25,30 +25,18 @@ DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 MOVING = (
     "RN27",
     "RN26",
-    "RN28",
-    "RN29",
-    "C71",
-    "C72",
-    "R59",
-    "R60",
 )
 
 REGIONS = {
     "RN27": (122.0, 42.0, 154.0, 50.0),
     "RN26": (122.0, 42.0, 154.0, 50.0),
-    "RN28": (164.0, 10.0, 193.0, 35.0),
-    "RN29": (164.0, 10.0, 193.0, 35.0),
-    "C71": (176.0, 29.0, 196.0, 45.0),
-    "C72": (176.0, 29.0, 196.0, 45.0),
-    "R59": (176.0, 29.0, 196.0, 45.0),
-    "R60": (176.0, 29.0, 196.0, 45.0),
 }
 
 # The display block is the only area under active local optimization.  These
 # nets are deliberately isolated from unrelated board domains so global user
 # edits cannot pull these parts away from their connector.
-DISPLAY_PREFIXES = ("HSTX_", "LVDS_", "HDMI_")
-DISPLAY_POWER = {"+5V_HDMI"}
+DISPLAY_PREFIXES = ("HSTX_", "LVDS_")
+DISPLAY_POWER: set[str] = set()
 GRID_MM = 1.0
 
 
@@ -113,7 +101,7 @@ def display_segments(board) -> tuple[float, float]:
     segments = []
     weighted_length = 0.0
     for net, points in pads_by_net.items():
-        weight = 0.35 if net == "+5V_HDMI" else 2.5
+        weight = 2.5
         for a, b, length in mst_edges(points):
             weighted_length += weight * length
             segments.append((net, a, b, weight))
@@ -148,7 +136,7 @@ def candidate_local_score(board, footprint) -> float:
         if not is_display_net(net) or not external[net]:
             continue
         x, y = point_mm(pad.GetPosition())
-        weight = 0.35 if net == "+5V_HDMI" else 2.5
+        weight = 2.5
         score += weight * min(math.hypot(x - ex, y - ey) for ex, ey in external[net])
     return score
 
