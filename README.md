@@ -1,4 +1,4 @@
-# LeanCam NCC RP2350B Motherboard
+# uCNC RP2350B Motherboard
 
 Native KiCad 10 design for a socketed WeAct Studio RP2350B Core Board. The
 architecture preserves LeanCam's 32-bit input and output shift-register chains,
