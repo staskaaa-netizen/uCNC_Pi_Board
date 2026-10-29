@@ -35,12 +35,12 @@ J22 is the only display connector.
 
 U41 accepts four single-ended 3.3 V HSTX signals and drives the four LVDS pairs:
 
-| Driver input | Driver output | J22 pair |
-|---|---|---|
-| `HSTX_D0_P` | `LVDS_D0_P/N` | pins 8/7 |
-| `HSTX_D1_P` | `LVDS_D1_P/N` | pins 10/9 |
-| `HSTX_D2_P` | `LVDS_D2_P/N` | pins 12/11 |
-| `HSTX_CLK_P` | `LVDS_CLK_P/N` | pins 16/15 |
+| Driver input | Driver output pins | LVDS net pair | J22 pair |
+|---|---|---|---|
+| `HSTX_CLK_P`, pin 2 (`DIN1`) | 15 (`DOUT1+`), 16 (`DOUT1-`) | `LVDS_CLK_P/N` | pins 16/15 |
+| `HSTX_D2_P`, pin 3 (`DIN2`) | 14 (`DOUT2+`), 13 (`DOUT2-`) | `LVDS_D2_P/N` | pins 12/11 |
+| `HSTX_D1_P`, pin 6 (`DIN3`) | 11 (`DOUT3+`), 12 (`DOUT3-`) | `LVDS_D1_P/N` | pins 10/9 |
+| `HSTX_D0_P`, pin 7 (`DIN4`) | 10 (`DOUT4+`), 9 (`DOUT4-`) | `LVDS_D0_P/N` | pins 8/7 |
 
 `EN` is tied to `+3V3`, `EN*` to GND, and C106 provides local 100 nF
 decoupling at the driver. LVDS connector tracks use a dedicated
@@ -54,8 +54,11 @@ logical lanes:
 
 | Network | Pair 1 pins 1/8 | Pair 2 pins 2/7 | Pair 3 pins 3/6 | Pair 4 pins 4/5 |
 |---|---|---|---|---|
-| RN26 | HSTX_D1_N -> LVDS_D1_N | HSTX_D1_P -> LVDS_D1_P | HSTX_D0_N -> LVDS_D0_N | HSTX_D0_P -> LVDS_D0_P |
-| RN27 | HSTX_CLK_N -> LVDS_CLK_N | HSTX_CLK_P -> LVDS_CLK_P | HSTX_D2_N -> LVDS_D2_N | HSTX_D2_P -> LVDS_D2_P |
+| RN26 | HSTX_D1_N -> LVDS_D1_N | HSTX_D1_P -> LVDS_D1_P | HSTX_D0_P -> LVDS_D0_P | HSTX_D0_N -> LVDS_D0_N |
+| RN27 | HSTX_CLK_N -> LVDS_CLK_N | HSTX_CLK_P -> LVDS_CLK_P | HSTX_D2_P -> LVDS_D2_P | HSTX_D2_N -> LVDS_D2_N |
+
+The physical output polarity order of both the driver outputs and the two
+resistor networks is `N, P, P, N, N, P, P, N`.
 
 This is an equivalent package-pin permutation; the RP2350 pin functions and J22
 net names are unchanged.
@@ -63,6 +66,9 @@ net names are unchanged.
 This follows the established PicoLVDS lane order. The requested nominal value is
 330 ohm; the reference prototype used 270 ohm. Verify the target panel and cable
 with the selected value before release.
+
+The B.Silkscreen includes a compact J22 legend for supply, ground, D0-D2,
+clock, and no-connect pin groups.
 
 RN26/RN27 and U41 are mutually exclusive populations. Do not fit both.
 

@@ -1021,7 +1021,7 @@
 				(pin input line
 					(at -10.16 6.35 0)
 					(length 2.54)
-					(name "DIN0"
+				(name "DIN1"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1039,7 +1039,7 @@
 				(pin input line
 					(at -10.16 3.81 0)
 					(length 2.54)
-					(name "DIN1"
+				(name "DIN2"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1093,7 +1093,7 @@
 				(pin input line
 					(at -10.16 -3.81 0)
 					(length 2.54)
-					(name "DIN2"
+				(name "DIN3"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1111,7 +1111,7 @@
 				(pin input line
 					(at -10.16 -6.35 0)
 					(length 2.54)
-					(name "DIN3"
+				(name "DIN4"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1147,7 +1147,7 @@
 				(pin output line
 					(at 10.16 8.89 180)
 					(length 2.54)
-					(name "DOUT0-"
+				(name "DOUT4-"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1165,7 +1165,7 @@
 				(pin output line
 					(at 10.16 6.35 180)
 					(length 2.54)
-					(name "DOUT0+"
+				(name "DOUT4+"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1183,7 +1183,7 @@
 				(pin output line
 					(at 10.16 3.81 180)
 					(length 2.54)
-					(name "DOUT1+"
+				(name "DOUT3+"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1201,7 +1201,7 @@
 				(pin output line
 					(at 10.16 1.27 180)
 					(length 2.54)
-					(name "DOUT1-"
+				(name "DOUT3-"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1255,7 +1255,7 @@
 				(pin output line
 					(at 10.16 -6.35 180)
 					(length 2.54)
-					(name "DOUT3+"
+				(name "DOUT1+"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1273,7 +1273,7 @@
 				(pin output line
 					(at 10.16 -8.89 180)
 					(length 2.54)
-					(name "DOUT3-"
+				(name "DOUT1-"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2198,7 +2198,7 @@
 		)
 		(uuid "2840ac65-d211-430b-95c0-620adcdd6af6")
 	)
-	(global_label "HSTX_D0_N"
+	(global_label "HSTX_D0_P"
 		(shape passive)
 		(at 74.93 86.36 0.0000)
 		(fields_autoplaced yes)
@@ -2210,7 +2210,7 @@
 		)
 		(uuid "5d0747c4-ad3c-44e4-86da-19bb6863cc65")
 	)
-	(global_label "LVDS_D0_N"
+	(global_label "LVDS_D0_P"
 		(shape passive)
 		(at 105.41 86.36 0.0000)
 		(fields_autoplaced yes)
@@ -2222,7 +2222,7 @@
 		)
 		(uuid "6c19123d-aa04-49ba-8d9e-db9e2e1b5fbc")
 	)
-	(global_label "HSTX_D0_P"
+	(global_label "HSTX_D0_N"
 		(shape passive)
 		(at 74.93 88.9 0.0000)
 		(fields_autoplaced yes)
@@ -2234,7 +2234,7 @@
 		)
 		(uuid "fe3aa950-984e-44a5-bde3-d4392a678864")
 	)
-	(global_label "LVDS_D0_P"
+	(global_label "LVDS_D0_N"
 		(shape passive)
 		(at 105.41 88.9 0.0000)
 		(fields_autoplaced yes)
@@ -2294,7 +2294,7 @@
 		)
 		(uuid "c1de104c-6a77-46fe-98ff-2226e1f28b08")
 	)
-	(global_label "HSTX_D2_N"
+	(global_label "HSTX_D2_P"
 		(shape passive)
 		(at 139.7 86.36 0.0000)
 		(fields_autoplaced yes)
@@ -2306,7 +2306,7 @@
 		)
 		(uuid "c828053a-c44b-4924-b2ca-76f12637f7ad")
 	)
-	(global_label "LVDS_D2_N"
+	(global_label "LVDS_D2_P"
 		(shape passive)
 		(at 170.18 86.36 0.0000)
 		(fields_autoplaced yes)
@@ -2318,7 +2318,7 @@
 		)
 		(uuid "c8c5f1ff-a60a-4c5e-963f-75cd36209426")
 	)
-	(global_label "HSTX_D2_P"
+	(global_label "HSTX_D2_N"
 		(shape passive)
 		(at 139.7 88.9 0.0000)
 		(fields_autoplaced yes)
@@ -2330,7 +2330,7 @@
 		)
 		(uuid "9429116c-8aef-456f-8917-688bdb63a915")
 	)
-	(global_label "LVDS_D2_P"
+	(global_label "LVDS_D2_N"
 		(shape passive)
 		(at 170.18 88.9 0.0000)
 		(fields_autoplaced yes)
@@ -2354,7 +2354,7 @@
 		)
 		(uuid "16fd9860-bcbc-4998-85b6-8da2de6c5d5a")
 	)
-	(global_label "HSTX_D0_P"
+	(global_label "HSTX_CLK_P"
 		(shape passive)
 		(at 114.3 38.1 0.0000)
 		(fields_autoplaced yes)
@@ -2366,7 +2366,7 @@
 		)
 		(uuid "4908101b-7e8a-4e17-be25-816fa578b066")
 	)
-	(global_label "HSTX_D1_P"
+	(global_label "HSTX_D2_P"
 		(shape passive)
 		(at 114.3 40.64 0.0000)
 		(fields_autoplaced yes)
@@ -2402,7 +2402,7 @@
 		)
 		(uuid "dd955bba-c2c8-4781-9a03-d4c452ee59d5")
 	)
-	(global_label "HSTX_D2_P"
+	(global_label "HSTX_D1_P"
 		(shape passive)
 		(at 114.3 48.26 0.0000)
 		(fields_autoplaced yes)
@@ -2414,7 +2414,7 @@
 		)
 		(uuid "d38eee1e-83f4-464b-a70f-e2d8b16143ce")
 	)
-	(global_label "HSTX_CLK_P"
+	(global_label "HSTX_D0_P"
 		(shape passive)
 		(at 114.3 50.8 0.0000)
 		(fields_autoplaced yes)

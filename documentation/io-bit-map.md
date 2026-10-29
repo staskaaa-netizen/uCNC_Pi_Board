@@ -247,8 +247,8 @@ reversed so the outputs fan directly into J22:
 
 | Network | Element 1 pins 1/8 | Element 2 pins 2/7 | Element 3 pins 3/6 | Element 4 pins 4/5 |
 |---|---|---|---|---|
-| RN26 | HSTX_D1_N -> LVDS_D1_N | HSTX_D1_P -> LVDS_D1_P | HSTX_D0_N -> LVDS_D0_N | HSTX_D0_P -> LVDS_D0_P |
-| RN27 | HSTX_CLK_N -> LVDS_CLK_N | HSTX_CLK_P -> LVDS_CLK_P | HSTX_D2_N -> LVDS_D2_N | HSTX_D2_P -> LVDS_D2_P |
+| RN26 | HSTX_D1_N -> LVDS_D1_N | HSTX_D1_P -> LVDS_D1_P | HSTX_D0_P -> LVDS_D0_P | HSTX_D0_N -> LVDS_D0_N |
+| RN27 | HSTX_CLK_N -> LVDS_CLK_N | HSTX_CLK_P -> LVDS_CLK_P | HSTX_D2_P -> LVDS_D2_P | HSTX_D2_N -> LVDS_D2_N |
 
 The RP2350 lane definitions are unchanged. J22 now follows the verified panel
 pinout, with D0 on pins 7/8, D1 on 9/10, D2 on 11/12 and clock on 15/16.

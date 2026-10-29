@@ -18,8 +18,8 @@ regenerated netlist. Placement status comes from checkpoint 55.
 | U13 | 74HC595D output shift register | +3V3 | C29, 100 nF |
 | U24 | SN74AHCT541DW motion buffer | +5V | C53, 100 nF |
 | U25 | SN74AHCT541DW motion buffer | +5V | C54, 100 nF |
-| U28 | SN74AHCT541DW encoder buffer | +3V3 | C57, 100 nF |
-| U41 | DS90LV047A LVDS driver | +3V3 | C106, 100 nF |
+| U28 | SN74AHCT541DW encoder buffer | +3V3 | C106, 100 nF |
+| U41 | DS90LV047A LVDS driver | +3V3 | C57, 100 nF |
 | MOD1 | WeAct RP2350B module | +5V input | On-module decoupling; no separate motherboard bypass assigned |
 
 U26 and U27 are ULN2003A open-collector arrays and have no logic supply pin.
@@ -46,6 +46,23 @@ U38 TLV2374 uses C102 (100 nF) from `+12V_AO` to GND directly at the package.
 C92/C94/C96/C98 are the 1 uF first-stage PWM filter capacitors, while
 C93/C95/C97/C99 are the 100 nF second-stage filter capacitors. They are signal
 filter parts, not power-rail decoupling.
+
+The latest placement audit confirms that every powered logic or analog IC has
+at least one capacitor between its supply and ground. After the recent moves,
+C106 is the local 100 nF bypass at U28 and C57 is the local 100 nF bypass at
+U41.
+
+One placement item remains worth reviewing:
+
+- U34's `+3V3_WIFI` output capacitors C69/C70 are approximately 13.0 mm and
+  17.6 mm from its supply pin. Move the 100 nF bypass closer to U34 or place an
+  additional 100 nF beside the regulator.
+
+The TBA2-0512 datasheet does not require an external output capacitor. During
+normal `CONTACT` operation D56 is forward-biased, so C105 on `+12V_FIELD`
+serves as the converter's bulk output reservoir. The manufacturer's optional
+22 uF input-capacitor recommendation applies to long input lines or hot-plug
+events; C103 provides the local input bypass on this fused board supply.
 
 For U1, C3-C5 form the input loop, C6/C7/C8/C11 form the output filter, C86 is
 the bootstrap capacitor and C91 is the internal VCC bypass. The 0.3 mm thermal
@@ -86,8 +103,9 @@ The 5 V and 3.3 V indicators are D4/R4 and D5/R5, respectively. Both indicator
 pairs are on F.Cu in the open area between MOD1 and the two regulators.
 
 The former U29 encoder buffer and its C58 bypass are no longer fitted. U28
-handles the first eight encoder signals; the single remaining `ENC2_Z` channel
-uses R110 (5.1 k series) and R111 (10 k to GND), both 0805.
+handles the first eight encoder signals with the nearby C106 bypass; the single
+remaining `ENC2_Z` channel uses R110 (5.1 k series) and R111 (10 k to GND),
+both 0805.
 
 The eight shift-register bypass capacitors are now local to their ICs:
 C22-C25 sit beside the U6-U9 VCC pins and C26-C29 beside U10-U13. Each 0805

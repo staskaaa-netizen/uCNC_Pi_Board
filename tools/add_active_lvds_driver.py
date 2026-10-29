@@ -20,12 +20,12 @@ CAP_DIR = Path(
 )
 DRIVER_NETS = {
     "1": "+3V3",
-    "2": "HSTX_D0_P",
-    "3": "HSTX_D1_P",
+    "2": "HSTX_CLK_P",
+    "3": "HSTX_D2_P",
     "4": "+3V3",
     "5": "GND",
-    "6": "HSTX_D2_P",
-    "7": "HSTX_CLK_P",
+    "6": "HSTX_D1_P",
+    "7": "HSTX_D0_P",
     "8": "GND",
     "9": "LVDS_D0_N",
     "10": "LVDS_D0_P",

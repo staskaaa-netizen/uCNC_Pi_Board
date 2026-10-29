@@ -1513,7 +1513,13 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
             b.next_ref("C")  # removed keyboard filter C59-C66
 
     # I2C header with optional pull-up resistors.
-    b.header(1, 4, {"1": "I2C_SDA", "2": "I2C_SCL", "3": "+3V3", "4": "GND"}, (35, 150), "I2C0")
+    b.terminal(
+        4,
+        {"1": "I2C_SDA", "2": "I2C_SCL", "3": "+3V3", "4": "GND"},
+        (35, 150),
+        "I2C0",
+        reference="J18",
+    )
     b.next_ref("R")  # retired I2C SDA pull-up R42
     b.next_ref("R")  # retired I2C SCL pull-up R43
 
@@ -1600,9 +1606,9 @@ def add_display(builder: SheetBuilder) -> None:
     # left to right when the networks are rotated 90 degrees on the PCB.
     passive = [
         ("HSTX_D1_N", "LVDS_D1_N"), ("HSTX_D1_P", "LVDS_D1_P"),
-        ("HSTX_D0_N", "LVDS_D0_N"), ("HSTX_D0_P", "LVDS_D0_P"),
+        ("HSTX_D0_P", "LVDS_D0_P"), ("HSTX_D0_N", "LVDS_D0_N"),
         ("HSTX_CLK_N", "LVDS_CLK_N"), ("HSTX_CLK_P", "LVDS_CLK_P"),
-        ("HSTX_D2_N", "LVDS_D2_N"), ("HSTX_D2_P", "LVDS_D2_P"),
+        ("HSTX_D2_P", "LVDS_D2_P"), ("HSTX_D2_N", "LVDS_D2_N"),
     ]
     for pack in range(2):
         b.resistor_pack4(
@@ -1619,12 +1625,12 @@ def add_display(builder: SheetBuilder) -> None:
         footprint_key="SOIC16",
         nets={
             "1": "+3V3",
-            "2": "HSTX_D0_P",
-            "3": "HSTX_D1_P",
+            "2": "HSTX_CLK_P",
+            "3": "HSTX_D2_P",
             "4": "+3V3",
             "5": "GND",
-            "6": "HSTX_D2_P",
-            "7": "HSTX_CLK_P",
+            "6": "HSTX_D1_P",
+            "7": "HSTX_D0_P",
             "8": "GND",
             "9": "LVDS_D0_N",
             "10": "LVDS_D0_P",

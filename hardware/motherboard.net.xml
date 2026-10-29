@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\acc\rp2350\LeanCam-NCC-RP2350B\hardware\motherboard.kicad_sch</source>
-    <date>2026-10-27T11:43:58</date>
+    <date>2026-10-29T20:44:06</date>
     <tool>Eeschema 10.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -7958,17 +7958,17 @@
     </comp>
     <comp ref="J18">
       <value>I2C0</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical</footprint>
       <fields>
-        <field name="MPN">I2C0</field>
-        <field name="Manufacturer">generic</field>
-        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="MPN">Phoenix Contact MCV 1,5/4-G-3.5</field>
+        <field name="Manufacturer">Phoenix Contact</field>
+        <field name="Footprint">Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="MPN" value="I2C0"/>
-      <property name="Manufacturer" value="generic"/>
+      <property name="MPN" value="Phoenix Contact MCV 1,5/4-G-3.5"/>
+      <property name="Manufacturer" value="Phoenix Contact"/>
       <property name="Sheetname" value="Storage, Wi-Fi and UI"/>
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -10252,21 +10252,21 @@
       </fields>
       <pins>
         <pin num="1" name="EN" type="input"/>
-        <pin num="2" name="DIN0" type="input"/>
-        <pin num="3" name="DIN1" type="input"/>
+        <pin num="2" name="DIN1" type="input"/>
+        <pin num="3" name="DIN2" type="input"/>
         <pin num="4" name="VCC" type="power_in"/>
         <pin num="5" name="GND" type="power_in"/>
-        <pin num="6" name="DIN2" type="input"/>
-        <pin num="7" name="DIN3" type="input"/>
+        <pin num="6" name="DIN3" type="input"/>
+        <pin num="7" name="DIN4" type="input"/>
         <pin num="8" name="EN*" type="input"/>
-        <pin num="9" name="DOUT0-" type="output"/>
-        <pin num="10" name="DOUT0+" type="output"/>
-        <pin num="11" name="DOUT1+" type="output"/>
-        <pin num="12" name="DOUT1-" type="output"/>
+        <pin num="9" name="DOUT4-" type="output"/>
+        <pin num="10" name="DOUT4+" type="output"/>
+        <pin num="11" name="DOUT3+" type="output"/>
+        <pin num="12" name="DOUT3-" type="output"/>
         <pin num="13" name="DOUT2-" type="output"/>
         <pin num="14" name="DOUT2+" type="output"/>
-        <pin num="15" name="DOUT3+" type="output"/>
-        <pin num="16" name="DOUT3-" type="output"/>
+        <pin num="15" name="DOUT1+" type="output"/>
+        <pin num="16" name="DOUT1-" type="output"/>
       </pins>
     </libpart>
     <libpart lib="LeanCam" part="EL3H7">
@@ -11875,16 +11875,16 @@
     <net code="181" name="HSTX_CLK_P" class="Default">
       <node ref="MOD1" pin="42" pinfunction="GP18_42" pintype="bidirectional"/>
       <node ref="RN27" pin="2" pinfunction="R2A_2" pintype="passive"/>
-      <node ref="U41" pin="7" pinfunction="DIN3_7" pintype="input"/>
+      <node ref="U41" pin="2" pinfunction="DIN1_2" pintype="input"/>
     </net>
     <net code="182" name="HSTX_D0_N" class="Default">
       <node ref="MOD1" pin="55" pinfunction="GP13_55" pintype="bidirectional"/>
-      <node ref="RN26" pin="3" pinfunction="R3A_3" pintype="passive"/>
+      <node ref="RN26" pin="4" pinfunction="R4A_4" pintype="passive"/>
     </net>
     <net code="183" name="HSTX_D0_P" class="Default">
       <node ref="MOD1" pin="39" pinfunction="GP12_39" pintype="bidirectional"/>
-      <node ref="RN26" pin="4" pinfunction="R4A_4" pintype="passive"/>
-      <node ref="U41" pin="2" pinfunction="DIN0_2" pintype="input"/>
+      <node ref="RN26" pin="3" pinfunction="R3A_3" pintype="passive"/>
+      <node ref="U41" pin="7" pinfunction="DIN4_7" pintype="input"/>
     </net>
     <net code="184" name="HSTX_D1_N" class="Default">
       <node ref="MOD1" pin="56" pinfunction="GP15_56" pintype="bidirectional"/>
@@ -11893,16 +11893,16 @@
     <net code="185" name="HSTX_D1_P" class="Default">
       <node ref="MOD1" pin="40" pinfunction="GP14_40" pintype="bidirectional"/>
       <node ref="RN26" pin="2" pinfunction="R2A_2" pintype="passive"/>
-      <node ref="U41" pin="3" pinfunction="DIN1_3" pintype="input"/>
+      <node ref="U41" pin="6" pinfunction="DIN3_6" pintype="input"/>
     </net>
     <net code="186" name="HSTX_D2_N" class="Default">
       <node ref="MOD1" pin="57" pinfunction="GP17_57" pintype="bidirectional"/>
-      <node ref="RN27" pin="3" pinfunction="R3A_3" pintype="passive"/>
+      <node ref="RN27" pin="4" pinfunction="R4A_4" pintype="passive"/>
     </net>
     <net code="187" name="HSTX_D2_P" class="Default">
       <node ref="MOD1" pin="41" pinfunction="GP16_41" pintype="bidirectional"/>
-      <node ref="RN27" pin="4" pinfunction="R4A_4" pintype="passive"/>
-      <node ref="U41" pin="6" pinfunction="DIN2_6" pintype="input"/>
+      <node ref="RN27" pin="3" pinfunction="R3A_3" pintype="passive"/>
+      <node ref="U41" pin="3" pinfunction="DIN2_3" pintype="input"/>
     </net>
     <net code="188" name="I2C_SCL" class="Default">
       <node ref="J18" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
@@ -12056,41 +12056,41 @@
     <net code="215" name="LVDS_CLK_N" class="Default">
       <node ref="J22" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
       <node ref="RN27" pin="8" pinfunction="R1B_8" pintype="passive"/>
-      <node ref="U41" pin="16" pinfunction="DOUT3-_16" pintype="output"/>
+      <node ref="U41" pin="16" pinfunction="DOUT1-_16" pintype="output"/>
     </net>
     <net code="216" name="LVDS_CLK_P" class="Default">
       <node ref="J22" pin="16" pinfunction="Pin_16_16" pintype="passive"/>
       <node ref="RN27" pin="7" pinfunction="R2B_7" pintype="passive"/>
-      <node ref="U41" pin="15" pinfunction="DOUT3+_15" pintype="output"/>
+      <node ref="U41" pin="15" pinfunction="DOUT1+_15" pintype="output"/>
     </net>
     <net code="217" name="LVDS_D0_N" class="Default">
       <node ref="J22" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
-      <node ref="RN26" pin="6" pinfunction="R3B_6" pintype="passive"/>
-      <node ref="U41" pin="9" pinfunction="DOUT0-_9" pintype="output"/>
+      <node ref="RN26" pin="5" pinfunction="R4B_5" pintype="passive"/>
+      <node ref="U41" pin="9" pinfunction="DOUT4-_9" pintype="output"/>
     </net>
     <net code="218" name="LVDS_D0_P" class="Default">
       <node ref="J22" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
-      <node ref="RN26" pin="5" pinfunction="R4B_5" pintype="passive"/>
-      <node ref="U41" pin="10" pinfunction="DOUT0+_10" pintype="output"/>
+      <node ref="RN26" pin="6" pinfunction="R3B_6" pintype="passive"/>
+      <node ref="U41" pin="10" pinfunction="DOUT4+_10" pintype="output"/>
     </net>
     <net code="219" name="LVDS_D1_N" class="Default">
       <node ref="J22" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
       <node ref="RN26" pin="8" pinfunction="R1B_8" pintype="passive"/>
-      <node ref="U41" pin="12" pinfunction="DOUT1-_12" pintype="output"/>
+      <node ref="U41" pin="12" pinfunction="DOUT3-_12" pintype="output"/>
     </net>
     <net code="220" name="LVDS_D1_P" class="Default">
       <node ref="J22" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
       <node ref="RN26" pin="7" pinfunction="R2B_7" pintype="passive"/>
-      <node ref="U41" pin="11" pinfunction="DOUT1+_11" pintype="output"/>
+      <node ref="U41" pin="11" pinfunction="DOUT3+_11" pintype="output"/>
     </net>
     <net code="221" name="LVDS_D2_N" class="Default">
       <node ref="J22" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
-      <node ref="RN27" pin="6" pinfunction="R3B_6" pintype="passive"/>
+      <node ref="RN27" pin="5" pinfunction="R4B_5" pintype="passive"/>
       <node ref="U41" pin="13" pinfunction="DOUT2-_13" pintype="output"/>
     </net>
     <net code="222" name="LVDS_D2_P" class="Default">
       <node ref="J22" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
-      <node ref="RN27" pin="5" pinfunction="R4B_5" pintype="passive"/>
+      <node ref="RN27" pin="6" pinfunction="R3B_6" pintype="passive"/>
       <node ref="U41" pin="14" pinfunction="DOUT2+_14" pintype="output"/>
     </net>
     <net code="223" name="MOTION0" class="Default">

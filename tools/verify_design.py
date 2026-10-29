@@ -693,18 +693,18 @@ def main() -> None:
         ("RN26", "8", "LVDS_D1_N"),
         ("RN26", "2", "HSTX_D1_P"),
         ("RN26", "7", "LVDS_D1_P"),
-        ("RN26", "3", "HSTX_D0_N"),
-        ("RN26", "6", "LVDS_D0_N"),
-        ("RN26", "4", "HSTX_D0_P"),
-        ("RN26", "5", "LVDS_D0_P"),
+        ("RN26", "3", "HSTX_D0_P"),
+        ("RN26", "6", "LVDS_D0_P"),
+        ("RN26", "4", "HSTX_D0_N"),
+        ("RN26", "5", "LVDS_D0_N"),
         ("RN27", "1", "HSTX_CLK_N"),
         ("RN27", "8", "LVDS_CLK_N"),
         ("RN27", "2", "HSTX_CLK_P"),
         ("RN27", "7", "LVDS_CLK_P"),
-        ("RN27", "3", "HSTX_D2_N"),
-        ("RN27", "6", "LVDS_D2_N"),
-        ("RN27", "4", "HSTX_D2_P"),
-        ("RN27", "5", "LVDS_D2_P"),
+        ("RN27", "3", "HSTX_D2_P"),
+        ("RN27", "6", "LVDS_D2_P"),
+        ("RN27", "4", "HSTX_D2_N"),
+        ("RN27", "5", "LVDS_D2_N"),
     }
     for reference, pin, expected_net in lvds_required:
         if (reference, pin) not in nets.get(expected_net, set()):
@@ -740,9 +740,9 @@ def main() -> None:
     if "U41" not in references:
         failures.append("Missing active LVDS driver U41")
     lvds_driver_pins = {
-        "1": "+3V3", "2": "HSTX_D0_P", "3": "HSTX_D1_P",
-        "4": "+3V3", "5": "GND", "6": "HSTX_D2_P",
-        "7": "HSTX_CLK_P", "8": "GND",
+        "1": "+3V3", "2": "HSTX_CLK_P", "3": "HSTX_D2_P",
+        "4": "+3V3", "5": "GND", "6": "HSTX_D1_P",
+        "7": "HSTX_D0_P", "8": "GND",
         "9": "LVDS_D0_N", "10": "LVDS_D0_P",
         "11": "LVDS_D1_P", "12": "LVDS_D1_N",
         "13": "LVDS_D2_N", "14": "LVDS_D2_P",

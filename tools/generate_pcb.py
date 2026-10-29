@@ -1031,6 +1031,7 @@ def build_board() -> None:
     board.SynchronizeNetsAndNetClasses(False)
 
     add_zones(board, net_map)
+    add_lvds_connector_silkscreen(board)
     board.BuildConnectivity()
 
     pcbnew.SaveBoard(str(PCB_PATH), board)
@@ -1039,6 +1040,50 @@ def build_board() -> None:
     if missing_pads:
         print(f"unassigned pads: {len(missing_pads)}")
         print(", ".join(missing_pads[:30]))
+
+
+def add_lvds_connector_silkscreen(board) -> None:
+    """Add the J22 pin-group legend on the component-side silkscreen."""
+    connector = next(
+        (
+            footprint
+            for footprint in board.GetFootprints()
+            if footprint.GetReference() == "J22"
+        ),
+        None,
+    )
+    if connector is None:
+        return
+    position = connector.GetPosition()
+    origin_x = pcbnew.ToMM(position.x) - 28.0
+    origin_y = pcbnew.ToMM(position.y) - 16.0
+    labels = (
+        ("J22 LCD LVDS 2x10", 0.0, 0.0, 1.2),
+        ("1-3: 3V3", 0.0, 1.7, 0.9),
+        ("4-6,13-14: GND", 0.0, 3.0, 0.9),
+        ("7/8: D0- / D0+", 0.0, 4.3, 0.9),
+        ("9/10: D1- / D1+", 0.0, 5.6, 0.9),
+        ("11/12: D2- / D2+", 0.0, 6.9, 0.9),
+        ("15/16: CLK- / CLK+", 0.0, 8.2, 0.9),
+        ("17-20: NC", 0.0, 9.5, 0.9),
+    )
+    existing = {
+        item.GetText()
+        for item in board.GetDrawings()
+        if isinstance(item, pcbnew.PCB_TEXT) and item.GetLayer() == pcbnew.B_SilkS
+    }
+    for text, dx, dy, size in labels:
+        if text in existing:
+            continue
+        item = pcbnew.PCB_TEXT(board)
+        item.SetText(text)
+        item.SetLayer(pcbnew.B_SilkS)
+        item.SetTextSize(pcbnew.VECTOR2I_MM(size, size))
+        item.SetTextThickness(pcbnew.FromMM(0.16))
+        item.SetTextPos(pcbnew.VECTOR2I_MM(origin_x + dx, origin_y + dy))
+        item.SetMirrored(True)
+        item.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
+        board.Add(item)
 
 
 def export_bom() -> None:

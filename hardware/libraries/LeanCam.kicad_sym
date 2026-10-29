@@ -4605,7 +4605,7 @@
 			(pin input line
 				(at -10.16 6.35 0)
 				(length 2.54)
-				(name "DIN0"
+				(name "DIN1"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4623,7 +4623,7 @@
 			(pin input line
 				(at -10.16 3.81 0)
 				(length 2.54)
-				(name "DIN1"
+				(name "DIN2"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4677,7 +4677,7 @@
 			(pin input line
 				(at -10.16 -3.81 0)
 				(length 2.54)
-				(name "DIN2"
+				(name "DIN3"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4695,7 +4695,7 @@
 			(pin input line
 				(at -10.16 -6.35 0)
 				(length 2.54)
-				(name "DIN3"
+				(name "DIN4"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4731,7 +4731,7 @@
 			(pin output line
 				(at 10.16 8.89 180)
 				(length 2.54)
-				(name "DOUT0-"
+				(name "DOUT4-"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4749,7 +4749,7 @@
 			(pin output line
 				(at 10.16 6.35 180)
 				(length 2.54)
-				(name "DOUT0+"
+				(name "DOUT4+"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4767,7 +4767,7 @@
 			(pin output line
 				(at 10.16 3.81 180)
 				(length 2.54)
-				(name "DOUT1+"
+				(name "DOUT3+"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4785,7 +4785,7 @@
 			(pin output line
 				(at 10.16 1.27 180)
 				(length 2.54)
-				(name "DOUT1-"
+				(name "DOUT3-"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4839,7 +4839,7 @@
 			(pin output line
 				(at 10.16 -6.35 180)
 				(length 2.54)
-				(name "DOUT3+"
+				(name "DOUT1+"
 					(effects
 						(font
 							(size 1.016 1.016)
@@ -4857,7 +4857,7 @@
 			(pin output line
 				(at 10.16 -8.89 180)
 				(length 2.54)
-				(name "DOUT3-"
+				(name "DOUT1-"
 					(effects
 						(font
 							(size 1.016 1.016)

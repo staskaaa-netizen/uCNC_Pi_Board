@@ -24,7 +24,7 @@ height to the Phoenix footprint.
 | J15 | 5-pin 3.5 mm encoder 2 | 1=+5 V, 2=A, 3=B, 4=Z, 5=GND |
 | J16 | 2x8 2.54 mm | Odd pins=KIN0-KIN7, even pins=KOUT0-KOUT7 |
 | J17 | 1x3 2.54 mm | 1=+5 V, 2=GND, 3=GND |
-| J18 | 1x4 2.54 mm I2C | 1=SDA, 2=SCL, 3=+3.3 V, 4=GND |
+| J18 | 4-pin 3.5 mm I2C | 1=SDA, 2=SCL, 3=+3.3 V, 4=GND |
 | J19 | Full-size SD | SPI mode, push-pull 3.3 V card interface, card detect |
 | J20 | 2x4 2.54 mm socket | ESP-01/ESP-01S: 1=GND, 2=3V3, 3=GPIO2, 4=GPIO0, 5=RX, 6=TX, 7=EN/CH_PD, 8=RST |
 | J22 | 2x10 2.00 mm LCD | 1-3=3.3 V, 4-6=GND, 7/8=D0-/+, 9/10=D1-/+, 11/12=D2-/+, 13/14=GND, 15/16=CLK-/+, 17-20=NC |
