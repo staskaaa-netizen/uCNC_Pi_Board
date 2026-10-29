@@ -13,12 +13,14 @@ J22 is the only display connector.
 
 - Fit U41, a DS90LV047A quad CMOS-to-LVDS driver in SOIC-16.
 - Leave RN26 and RN27 unfitted.
-- J22 is the 2.00 mm, 2x10 LCD connector.
+- J22 is the 2.00 mm, 2x10 LCD connector and is mounted on B.Cu.
 - Odd pins are the left column and even pins are the right column. Rows 1-8
   are used; rows 9-10 and pins 17-20 are no-connect.
-- J22 is placed on the front at `(145.50, 34.00)`, rotation 270 degrees.
-- RN27 and RN26 are placed below it at `(135.50, 40.00)` and
-  `(143.00, 40.00)`, both rotation 90 degrees.
+- J22 is placed on the back at `(148.85, 29.05)`, rotation 90 degrees.
+- RN27 and RN26 are placed below it at `(135.80, 34.40)` and
+  `(141.50, 34.40)`, both rotation 90 degrees. U41 is placed over the resistor
+  networks at `(138.65, 36.30)`, rotation 90 degrees. The driver and resistor
+  networks are alternate populations.
 
 | Row | Left pin | Right pin |
 |---:|---|---|
@@ -42,7 +44,7 @@ U41 accepts four single-ended 3.3 V HSTX signals and drives the four LVDS pairs:
 | `HSTX_D1_P`, pin 6 (`DIN3`) | 11 (`DOUT3+`), 12 (`DOUT3-`) | `LVDS_D1_P/N` | pins 10/9 |
 | `HSTX_D0_P`, pin 7 (`DIN4`) | 10 (`DOUT4+`), 9 (`DOUT4-`) | `LVDS_D0_P/N` | pins 8/7 |
 
-`EN` is tied to `+3V3`, `EN*` to GND, and C106 provides local 100 nF
+`EN` is tied to `+3V3`, `EN*` to GND, and C57 provides local 100 nF
 decoupling at the driver. LVDS connector tracks use a dedicated
 0.12 mm track/gap/clearance netclass; the HSTX source nets remain 0.20 mm.
 

@@ -11,13 +11,12 @@
 - Dedicated E-stop/HOLD connectors J5/J6, START connector J26 and PLC inputs J7/J8 are on the input
   side. Field outputs J10-J12 are on the opposite long edge.
 - Input optocouplers straddle the marked field/logic boundary.
-- Connectors, module, power and display circuitry stay on the front. Most
-  input/output conditioning, shift logic, keyboard filtering and analog-input
-  networks are placed on the back.
+- The main assembly is on the front. J22, C57 and input-mode selectors JP2-JP4
+  are mounted on the back.
 - Full-size SD J19 is on the right edge with the insertion mouth outward.
 - ESP-01/ESP-01S J20 is directly above and left of the RP2350 module; its antenna must
   face away from the PCB with at least 15 mm of copper clearance.
-- LCD J22 follows the top board edge.
+- LCD J22 follows the top board edge from the bottom side.
 - Encoder connectors J13-J15 are aligned along the bottom edge with additional
   spacing for mating connector bodies.
 - The switch-mode supply is grouped away from encoders and analog circuitry.

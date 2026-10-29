@@ -19,6 +19,7 @@ Open `hardware/motherboard.kicad_pro` in KiCad 10.0 or newer.
 
 ## Key documents
 
+- [Board specification](documentation/board-specification.md)
 - [GPIO map](documentation/gpio-map.md)
 - [RP2350 pin allocation](documentation/rp2350-pinout.md)
 - [32-bit chain map](documentation/io-bit-map.md)
@@ -38,6 +39,13 @@ Open `hardware/motherboard.kicad_pro` in KiCad 10.0 or newer.
 - [Interactive placement workflow](documentation/interactive-workflow.md)
 - [DTU autoplacer evaluation](documentation/autoplacer-evaluation.md)
 
+## PCB PDFs
+
+- [Combined board review](manufacturing/board-review.pdf)
+- [Board specification PDF](manufacturing/board-specification.pdf)
+- [Front artwork and assembly layer](manufacturing/board-front.pdf)
+- [Mirrored rear artwork](manufacturing/board-back.pdf)
+
 ## Reproducible generation
 
 The checked-in KiCad files are authoritative. The `tools/` scripts regenerate
@@ -55,9 +63,10 @@ them using KiCad 10 and the project-local vendor footprint:
 
 ## Release status
 
-The current board is a partially routed 200 x 150 mm, two-layer prototype. PCB
-DRC currently reports 209 items: 171 errors from routing/netclass cleanup and
-38 warnings, with no shorts. There are 410 unconnected items remaining. ERC has
-no errors and retains the existing library-symbol mismatch warnings.
-Freerouting has not been started. The design contains documented prototype
-assumptions; it is not a safety-certified controller.
+The current board is a connected 200 x 150 mm, two-layer prototype. KiCad 10
+DRC reports no shorts and no unconnected items. Remaining checks are 108
+clearance findings, 34 silkscreen warnings and two intentional
+alternate-population courtyard overlaps between U41 and RN26/RN27. ERC has no
+electrical-rule errors and retains 34 library-symbol cache mismatch warnings.
+The design contains documented prototype assumptions and is not a
+safety-certified controller.
