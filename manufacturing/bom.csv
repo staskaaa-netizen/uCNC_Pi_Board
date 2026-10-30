@@ -1,40 +1,38 @@
 Quantity,Value,Footprint,Manufacturer,MPN,References
 1,0-10 V outputs 0-3; pin 1 = common GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",J25
 1,0R,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 0R,R54
-2,100R,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 100R,R114 R116
-3,100k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 100k,R113 R115 R117
-5,100k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 100k,R1 R73 R61 R64 R67
-30,100nF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 100nF,C7 C13 C15 C76 C86 C22 C23 C24 C25 C26 C27 C28 C29 C53 C54 C55 C56 C57 C106 C68 C70 C89 C73 C74 C75 C93 C95 C97 C99 C102
-2,100nF 100V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 100nF 100V,C2 C4
+4,100R,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 100R,R129 R131 R114 R116
+4,100k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 100k,R130 R113 R115 R117
+5,100k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 100k,R73 R126 R61 R64 R67
+32,100nF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 100nF,C7 C13 C15 C76 C86 C112 C113 C22 C23 C24 C25 C26 C27 C28 C29 C53 C54 C55 C56 C57 C106 C68 C70 C89 C73 C74 C75 C93 C95 C97 C99 C102
+3,100nF 100V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 100nF 100V,C2 C4 C108
 13,10k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 10k,R111 R92 R93 R94 R95 R96 R97 R98 R99 R104 R105 R106 R107
-15,10k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 10k,R9 R10 R11 R12 R13 R44 R45 R46 R47 R48 R49 R55 R56 R57 R58
+11,10k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 10k,R9 R10 R11 R12 R13 R44 R45 R46 R47 R48 R49
 1,10uF,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 10uF,C105
-5,10uF,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF,C10 C103 C67 C69 C88
-1,10uF 25V,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF 25V,C101
-2,10uF 50V,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF 50V,C1 C3
+1,10uF,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF,C67
 19,1N4148WS,Diode_SMD:D_SOD-323,Diodes Incorporated,1N4148WS,D10 D12 D14 D16 D18 D20 D22 D24 D26 D28 D30 D32 D34 D36 D38 D40 D42 D44 D55
 2,1k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 1k,R4 R5
-1,1uF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 1uF,C91
+2,1uF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 1uF,C91 C114
 4,1uF,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 1uF,C92 C94 C96 C98
-1,1uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 1uF 50V,C100
 1,2 A,Resistor_SMD:R_1206_3216Metric,Bel Fuse,0ZCG0200FF2E,F1
 35,2.2k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 2.2k,R16 R17 R18 R19 R20 R21 R22 R23 R24 R25 R26 R27 R28 R29 R30 R31 R32 R33 R108 R34 R35 R36 R37 R38 R39 R40 R41 R118 R119 R120 R121 R122 R123 R124 R125
 1,20k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 20k,R72
 4,22R,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 22R,R50 R51 R52 R53
 4,22k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 22k,R100 R101 R102 R103
-1,22uF,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF,C90
-2,22uF 10V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 10V,C6 C11
-1,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,C5
+11,22uF 25V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 25V,C6 C10 C11 C90 C109 C110 C111 C103 C69 C88 C101
+4,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,C3 C5 C107 C100
 1,22uH 1.5A,Inductor_SMD:L_Bourns_SRN6045TA,Bourns,SRN6045TA-220M,L1
 1,24 V DC input,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",J1
 3,33k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 33k,R63 R66 R69
 1,34k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 34k,R70
 1,3V3_PWR,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,D5
-19,4.7k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 4K7L,R74 R75 R76 R77 R78 R79 R80 R81 R82 R83 R84 R85 R86 R87 R88 R89 R90 R91 R109
+3,4.7k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 4K7L,R74 R75 R109
 1,46.4k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 46.4k,R71
+1,47uH 1.5A,Inductor_SMD:L_Bourns_SRN6045TA,Bourns,SRN6045TA-470M,L2
 6,4x100R,Resistor_SMD:R_Array_Convex_4x1206,Yageo,YC324-FR-07100RL,RN16 RN17 RN18 RN19 RN20 RN21
-10,4x10k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-0710KL,RN6 RN7 RN8 RN9 RN10 RN11 RN12 RN13 RN30 RN31
+11,4x10k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-0710KL,RN6 RN7 RN8 RN9 RN10 RN11 RN12 RN13 RN30 RN31 RN36
 2,4x1k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-071KL,RN22 RN24
+4,4x4.7k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-074K7L,RN32 RN33 RN34 RN35
 1,5.1k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 5.1k,R110
 1,500mA,Resistor_SMD:R_1206_3216Metric,Bel Fuse,0ZCG0050FF2E,F2
 1,5V_PWR,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,D4
@@ -42,6 +40,7 @@ Quantity,Value,Footprint,Manufacturer,MPN,References
 4,74HC165D,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,Nexperia,"74HC165D,653",U6 U7 U8 U9
 4,74HC595D,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,Nexperia,"74HC595D,118",U10 U11 U12 U13
 1,750mA,Resistor_SMD:R_1206_3216Metric,Bel Fuse,0ZCG0075FF2E,F4
+1,9.09k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 9.09k,R127
 1,AI0/GND/AI1/GND/AI2,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",J24
 2,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2,Advanced Monolithic Systems,AMS1117-3.3,U2 U34
 1,AUX open-drain output and GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",J31
@@ -50,7 +49,8 @@ Quantity,Value,Footprint,Manufacturer,MPN,References
 1,"AX2: EN, STEP, DIR, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/4-G-3.5",J28
 1,"AX3: EN, STEP, DIR, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/4-G-3.5",J29
 1,"AX4: EN, STEP, DIR, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/4-G-3.5",J30
-3,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138,Q5 Q6 Q7
+4,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138,Q8 Q5 Q6 Q7
+1,"Backlight: +12V, GND, PWM, switched low-side","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/4-G-3.5",J2
 1,DO0,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,D45
 1,DO1,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,D46
 1,DO10,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,D59
@@ -83,17 +83,15 @@ Quantity,Value,Footprint,Manufacturer,MPN,References
 1,General outputs 0-7,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",J12
 1,General outputs 8-15; DO_COM and GND are shared through J12,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",J32
 1,General outputs field +V and GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",J33
-1,I2C0,Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical,Phoenix Contact,Phoenix Contact MCV 1,5/4-G-3.5,J18
-1,IRF7240PBF,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,Infineon Technologies,IRF7240PBF,Q1
+1,I2C0,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/4-G-3.5",J18
 1,J7 24V/CONTACT,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,generic,J7 24V/CONTACT,JP2
 1,J8 24V/CONTACT,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,generic,J8 24V/CONTACT,JP3
 1,Keyboard KIN0-7 / KOUT0-7,Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical,generic,Keyboard KIN0-7 / KOUT0-7,J16
 1,Keyboard power/reference,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,generic,Keyboard power/reference,J17
 1,L78L12ACUTR,Package_TO_SOT_SMD:SOT-89-3_Handsoldering,Texas Instruments,L78L12ACUTR,U37
 1,"LCD LVDS 2x10, 2.00 mm",Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,"LCD LVDS 2x10, 2.00 mm",J22
-1,LMR36510ADDAR,Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm,Texas Instruments,LMR36510ADDAR,U1
+2,LMR36510ADDAR,Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm,Texas Instruments,LMR36510ADDAR,U1 U3
 4,LTV-847S,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,Lite-On,LTV-847S,U18 U19 U20 U21
-1,MMSZ5242B,Diode_SMD:D_SOD-323,onsemi,MMSZ5242BT1G,D2
 1,PLC positions 1-4; software-mapped isolated inputs,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",J7
 1,PLC positions 5-8 of J7 bank; software-mapped isolated inputs,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",J34
 1,PLC positions 5-8 of J8 bank; software-mapped isolated inputs,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",J35
@@ -102,6 +100,7 @@ Quantity,Value,Footprint,Manufacturer,MPN,References
 1,SMAJ5.0A,Diode_SMD:D_SMA,Bourns,SMAJ5.0A,D53
 1,SMBJ24CA,Diode_SMD:D_SMB,Bourns,SMBJ24CA,D1
 3,SN74AHCT541DW,Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm,Texas Instruments,SN74AHCT541DW,U24 U25 U28
+2,SS16,Diode_SMD:D_SMA,Diodes Incorporated,SS16,D2 D3
 1,SS54,Diode_SMD:D_SMA,Diodes Incorporated,SS54,D56
 1,SWD,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,generic,SWD,J4
 1,TBA2-0512,Converter_DCDC:Converter_DCDC_TRACO_TBA2-xxxx_Single_THT,Traco Power,TBA2-0512,U40

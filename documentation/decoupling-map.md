@@ -26,21 +26,27 @@ U26 and U27 are ULN2003A open-collector arrays and have no logic supply pin.
 C55 and C56 (100 nF) are fitted between their `DO_COM` clamp rail and GND.
 They are field-output rail clamps, not IC VCC bypass capacitors.
 
-U18-U21 are LTV-847S four-channel phototransistor optocouplers; U35/U36 are
-individual EL3H7 DIP-4 safety optocouplers. They have no VCC pin. Each used
-output collector has one individual 4.7 k pull-up to `+3V3`. The former input
-filter capacitors and pull-up arrays are removed; firmware provides debounce
-timing.
+U18-U21 are LTV-847S four-channel PLC optocouplers; U35/U36/U39 are individual
+EL3H7 DIP-4 safety optocouplers. They have no VCC pin. RN32-RN35 provide one
+4x4.7 k isolated pull-up network per PLC bank; the E-stop, HOLD and START
+collectors retain discrete 4.7 k pull-ups to `+3V3`. No input-node capacitors
+are fitted; firmware provides debounce timing.
 
 ## Voltage regulators
 
 | Regulator | Rail and role | Input capacitors | Output/VCC capacitors | Other |
 |---|---|---|---|---|
-| U1 LMR36510ADDAR | VIN_PROT to +5V, 1 A buck | C3 10 uF/50 V, C4 100 nF/100 V, C5 22 uF/50 V | C6 22 uF/10 V, C7 100 nF, C11 22 uF/10 V | C86 100 nF BOOT-to-SW; C91 1 uF VCC-to-GND |
-| U2 AMS1117-3.3 | +5V to peripheral +3V3 | C10 10 uF, C76 100 nF | C13 100 nF, C90 22 uF | Supplies logic, SD, J22 LCD logic and analog prefilter |
-| U34 AMS1117-3.3 | +5V to ESP +3V3_WIFI | C88 10 uF at `(189.23, 44.45)`, C89 100 nF at `(185.42, 37.465)` | C69 10 uF at `(176.53, 37.465)`, C70 100 nF at `(170.815, 37.465)` | Dedicated ESP-01/ESP-01S rail |
-| U40 TBA2-0512 | +5V to isolated +12V_FIELD | C103 10 uF at `(30.50, 54.00)` on F.Cu | C105 10 uF/100 V at `(20.50, 54.00)` on F.Cu, after D56 | Dry-contact wetting supply |
-| U37 L78L12 | VIN_PROT to +12V_AO | C100 1 uF/50 V | C101 10 uF/25 V | Supplies U38 only |
+| U1 LMR36510ADDAR | VIN_PROT to +5V, 1 A buck | C3 22 uF/50 V 1210, C4 100 nF/100 V 1206, C5 22 uF/50 V 1210 | C6 22 uF/25 V 1210, C7 100 nF 0805, C11 22 uF/25 V 1210 | C86 100 nF BOOT-to-SW; C91 1 uF VCC-to-GND |
+| U3 LMR36510ADDAR | VIN_BL_PROT to +12V_BL, 1 A backlight buck | C107 22 uF/50 V 1210, C108 100 nF/100 V 1206 | C109-C111 3 x 22 uF/25 V 1210, C112 100 nF 0805 | C113 100 nF BOOT-to-SW; C114 1 uF VCC-to-GND |
+| U2 AMS1117-3.3 | +5V to peripheral +3V3 | C10 22 uF/25 V 1210, C76 100 nF 0805 | C13 100 nF 0805, C90 22 uF/25 V 1210 | Supplies logic, SD, J22 LCD logic and analog prefilter |
+| U34 AMS1117-3.3 | +5V to ESP +3V3_WIFI | C88 22 uF/25 V 1210, C89 100 nF 0805 | C69 22 uF/25 V 1210, C70 100 nF 0805 | Dedicated ESP-01/ESP-01S rail |
+| U40 TBA2-0512 | +5V to isolated +12V_FIELD | C103 22 uF/25 V 1210 | C105 10 uF/100 V 1206, after D56 | Dry-contact wetting supply |
+| U37 L78L12 | VIN_PROT to +12V_AO | C100 22 uF/50 V 1210 | C101 22 uF/25 V 1210 | Supplies U38 only |
+
+RN36 provides the four 10 k pull-ups for `EN`, `RST`, `GPIO0` and `GPIO2` at
+the ESP socket. Its supply side is referenced to `+3V3_WIFI`, not the
+motherboard `+3V3` rail. This keeps those pins in the ESP supply domain and
+avoids backfeeding an unpowered ESP rail.
 
 U38 TLV2374 uses C102 (100 nF) from `+12V_AO` to GND directly at the package.
 C92/C94/C96/C98 are the 1 uF first-stage PWM filter capacitors, while
@@ -64,9 +70,11 @@ serves as the converter's bulk output reservoir. The manufacturer's optional
 22 uF input-capacitor recommendation applies to long input lines or hot-plug
 events; C103 provides the local input bypass on this fused board supply.
 
-For U1, C3-C5 form the input loop, C6/C7/C8/C11 form the output filter, C86 is
+For U1, C3-C5 form the input loop, C6/C7/C11 form the output filter, C86 is
 the bootstrap capacitor and C91 is the internal VCC bypass. The 0.3 mm thermal
-vias under the PowerPAD tie the exposed pad to the B.Cu GND plane.
+vias under the PowerPAD tie the exposed pad to the B.Cu GND plane. U3 uses the
+TI 12 V reference capacitor set and is user-placed on the board with its
+passives.
 
 ## Module and connector-local rail capacitors
 
@@ -134,7 +142,6 @@ The PCB uses these project netclasses:
 | LVDSConnector | 0.12 mm | 0.12 mm | 0.60/0.30 mm | J22 LVDS pair fanout |
 | Analog | 0.25 mm | 0.25 mm | 0.60/0.30 mm | AI and AOUT nets |
 
-The board remains incomplete: optional or unplaced modules are parked outside
-the outline and 499 connections remain intentionally unrouted. Local
-capacitor-to-IC placement must still be reviewed whenever one of those modules
-enters the board.
+The board remains incomplete: all footprints are inside the outline and two
+connections remain intentionally unrouted. Local capacitor-to-IC placement must
+still be reviewed whenever the footprint placement changes.

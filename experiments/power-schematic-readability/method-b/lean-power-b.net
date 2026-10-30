@@ -1,0 +1,3863 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\method-b\\lean-power-b.kicad_sch")
+		(date "2026-10-29T17:29:48")
+		(tool "Eeschema 10.0.1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "LeanCam NCC RP2350B - Power and Supervision (Python re-layout)")
+				(company "LeanCam / uCNC experiment")
+				(rev)
+				(date "2026-10-29")
+				(source "lean-power-b.kicad_sch")
+				(comment
+					(number "1")
+					(value "Method B: existing symbols, explicit orthogonal wiring")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "10uF 50V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 10uF 50V")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 10uF 50V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9fc03fea-76fa-5bf3-87b8-ad3b804dbfca")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "100nF 100V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "GRM31 series 1206 C0G/X7R 100nF 100V")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM31 series 1206 C0G/X7R 100nF 100V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "82ca0788-1493-5d4c-955e-95b5b85f1f24")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "10uF 50V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 10uF 50V")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 10uF 50V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d41e04b0-517e-5dd9-ad00-fd91f719cd18")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "100nF 100V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "GRM31 series 1206 C0G/X7R 100nF 100V")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM31 series 1206 C0G/X7R 100nF 100V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c07949e8-d26f-5f00-a15f-bb85b136ba3f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "MPN") "CL32 series 1210 X7R 22uF 50V")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL32 series 1210 X7R 22uF 50V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "723dbe0d-f244-5f8e-9686-90c988bf2480")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "22uF 10V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "MPN") "CL32 series 1210 X7R 22uF 10V")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL32 series 1210 X7R 22uF 10V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5eb1eda1-20a8-56a4-9f5d-9587c434ef9c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a6bfc11b-43e3-57ce-97f8-cf03202ca3fb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C10")
+			(value "10uF")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 10uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 10uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6c4587fe-08b9-5a2c-816f-de6320fef528")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11")
+			(value "22uF 10V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "MPN") "CL32 series 1210 X7R 22uF 10V")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL32 series 1210 X7R 22uF 10V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "17a0b9ce-a4de-5a8c-9239-b123f7352245")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C13")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f354aca5-4628-5a5e-a110-c1bdcd2a397b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C15")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "172dff4b-8ff4-556e-b28f-f888711823b7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C76")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b5ae7e2d-46a8-5625-9fc5-714d8c86a55e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C86")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d0ce15d4-0bd5-57f8-9079-bef11bb5fcd3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C90")
+			(value "22uF")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "MPN") "CL32 series 1210 X7R 22uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL32 series 1210 X7R 22uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c0dd77e0-d65d-580b-b2b2-80561b2498f0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C91")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 1uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 1uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "605f0b8b-2a48-5b00-986a-21d01cb77e9d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "SMBJ24CA")
+			(footprint "Diode_SMD:D_SMB")
+			(fields
+				(field
+					(name "MPN") "SMBJ24CA")
+				(field
+					(name "Manufacturer") "Bourns")
+				(field
+					(name "Footprint") "Diode_SMD:D_SMB")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "D_TVS")
+				(description "Bidirectional transient-voltage-suppression diode")
+			)
+			(property
+				(name "MPN")
+				(value "SMBJ24CA")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Bourns")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "diode TVS thyrector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "TO-???* *_Diode_* *SingleDiode* D_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d5db6c49-8492-549a-b279-613a9504145a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D2")
+			(value "MMSZ5242B")
+			(footprint "Diode_SMD:D_SOD-323")
+			(fields
+				(field
+					(name "MPN") "MMSZ5242BT1G")
+				(field
+					(name "Manufacturer") "onsemi")
+				(field
+					(name "Footprint") "Diode_SMD:D_SOD-323")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "D_Zener")
+				(description "Zener diode")
+			)
+			(property
+				(name "MPN")
+				(value "MMSZ5242BT1G")
+			)
+			(property
+				(name "Manufacturer")
+				(value "onsemi")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "TO-???* *_Diode_* *SingleDiode* D_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "47761169-a40b-5963-8f3b-27aa8f5a4a93")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D4")
+			(value "5V_PWR")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "455677b0-59be-58c8-aa33-7ba9f0edf7b4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D5")
+			(value "3V3_PWR")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "416acdb6-9088-5a54-9be7-50559125a7cb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "F1")
+			(value "2 A")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "0ZCG0200FF2E")
+				(field
+					(name "Manufacturer") "Bel Fuse")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "Fuse")
+				(description "Fuse")
+			)
+			(property
+				(name "MPN")
+				(value "0ZCG0200FF2E")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Bel Fuse")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "fuse")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*Fuse*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7bc605ee-d5c0-5763-a92b-616ff55f1b57")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FB1")
+			(value "600R@100MHz")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "BLM18KG601SN1D")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "FerriteBead")
+				(description "Ferrite bead")
+			)
+			(property
+				(name "MPN")
+				(value "BLM18KG601SN1D")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "L ferrite bead inductor filter")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Inductor_* L_* *Ferrite*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1709d13b-7672-512b-abbe-d923b7c96397")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG1")
+			(value "GND")
+			(fields
+				(field
+					(name "MPN") "GND")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "GND")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fef246c6-d9e2-50a7-a3c5-97b612ec2ac4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG2")
+			(value "+5V")
+			(fields
+				(field
+					(name "MPN") "+5V")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "+5V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3afd21d5-b719-5917-a072-dd154d88ce1a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG3")
+			(value "+3V3_A")
+			(fields
+				(field
+					(name "MPN") "+3V3_A")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "+3V3_A")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "56496872-2456-528f-af08-d85a0e078dec")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG4")
+			(value "VIN_PROT")
+			(fields
+				(field
+					(name "MPN") "VIN_PROT")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "VIN_PROT")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a56ce232-17a2-5ffc-b32b-b889d6fb6876")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG5")
+			(value "+5V_ENC")
+			(fields
+				(field
+					(name "MPN") "+5V_ENC")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "+5V_ENC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ced7c2b0-cdf8-5594-9dc6-60a38d2df257")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG6")
+			(value "+3V3_SD")
+			(fields
+				(field
+					(name "MPN") "+3V3_SD")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "+3V3_SD")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6c56d59a-e60f-5807-88d0-1f3494b7de32")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG7")
+			(value "+5V_ISO_IN")
+			(fields
+				(field
+					(name "MPN") "+5V_ISO_IN")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "+5V_ISO_IN")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1f276b1f-1fb6-5208-abae-92d9b5bd28c8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG8")
+			(value "+12V_FIELD")
+			(fields
+				(field
+					(name "MPN") "+12V_FIELD")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "power")
+				(part "PWR_FLAG")
+				(description "Special symbol for telling ERC where power comes from")
+			)
+			(property
+				(name "MPN")
+				(value "+12V_FIELD")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "flag power")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "14321cb3-bb77-5e51-8dd7-599e4287a300")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "24 V DC input")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/2-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x02")
+				(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/2-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "452f6d02-00d5-5d9c-b8b4-5bf7a6dd6e1d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "L1")
+			(value "22uH 1.5A")
+			(footprint "Inductor_SMD:L_Bourns_SRN6045TA")
+			(fields
+				(field
+					(name "MPN") "SRN6045TA-220M")
+				(field
+					(name "Manufacturer") "Bourns")
+				(field
+					(name "Footprint") "Inductor_SMD:L_Bourns_SRN6045TA")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "L")
+				(description "Inductor")
+			)
+			(property
+				(name "MPN")
+				(value "SRN6045TA-220M")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Bourns")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "inductor choke coil reactor magnetic")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Choke_* *Coil* Inductor_* L_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ac634eb5-0fbd-5487-97f8-13d6ce611570")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q1")
+			(value "IRF7240PBF")
+			(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "IRF7240PBF")
+				(field
+					(name "Manufacturer") "Infineon Technologies")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "PMOS_SO8")
+				(description "P-channel MOSFET in the standard 1-3 source, 4 gate, 5-8 drain SO-8 pinout")
+			)
+			(property
+				(name "MPN")
+				(value "IRF7240PBF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Infineon Technologies")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b89c7153-4efe-5599-878d-15438f46cbc4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8d21e922-b823-5e53-a047-0e3c8195213a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "1k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 1k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 1k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "125db67f-30db-5d35-ac65-d0e30d8f35bf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "1k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 1k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 1k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7cee2b85-d05c-5513-8862-6abf57d5b4a4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R70")
+			(value "34k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 34k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 34k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "686e29a4-ef41-5bb1-a231-4b82f0ea2b12")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R71")
+			(value "46.4k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 46.4k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 46.4k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7326d549-e943-5c4a-b060-55276d3ccd86")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R72")
+			(value "20k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 20k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 20k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ca9a21e5-437f-526f-aad2-a000736639e9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R73")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "766f577a-fdcd-59a6-8f87-d49aed6f790e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "LMR36510ADDAR")
+			(footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm")
+			(fields
+				(field
+					(name "MPN") "LMR36510ADDAR")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Regulator_Switching")
+				(part "LMR36510ADDA")
+				(description "Simple Switcher Synchronous Buck Regulator, Vin=4.2-65V, Iout=1A, F=400kHz, Adjustable output voltage, HSOP-8")
+			)
+			(property
+				(name "MPN")
+				(value "LMR36510ADDAR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "synchronous buck step-down")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Texas*HTSOP*1EP*3.9x4.9mm*P1.27mm*EP2.95x4.9mm*Mask2.4x3.1mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "30f387fe-3b7d-54b9-8386-962d333bd756")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "AMS1117-3.3")
+			(footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+			(fields
+				(field
+					(name "MPN") "AMS1117-3.3")
+				(field
+					(name "Manufacturer") "Advanced Monolithic Systems")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Regulator_Linear")
+				(part "AMS1117-3.3")
+				(description "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223")
+			)
+			(property
+				(name "MPN")
+				(value "AMS1117-3.3")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Advanced Monolithic Systems")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-b/lean-power-b.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "linear regulator ldo fixed positive")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT?223*TabPin2*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c50bf4a3-cd1f-500b-8ce3-e8797fd6d92e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x02")
+			(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x02")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "D_TVS")
+			(description "Bidirectional transient-voltage-suppression diode")
+			(footprints
+				(fp "TO-???*")
+				(fp "*_Diode_*")
+				(fp "*SingleDiode*")
+				(fp "D_*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "D_TVS")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Bidirectional transient-voltage-suppression diode")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "D_Zener")
+			(description "Zener diode")
+			(footprints
+				(fp "TO-???*")
+				(fp "*_Diode_*")
+				(fp "*SingleDiode*")
+				(fp "D_*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "D_Zener")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Zener diode")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "FerriteBead")
+			(description "Ferrite bead")
+			(footprints
+				(fp "Inductor_*")
+				(fp "L_*")
+				(fp "*Ferrite*")
+			)
+			(fields
+				(field
+					(name "Reference") "FB")
+				(field
+					(name "Value") "FerriteBead")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Ferrite bead")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "Fuse")
+			(description "Fuse")
+			(footprints
+				(fp "*Fuse*")
+			)
+			(fields
+				(field
+					(name "Reference") "F")
+				(field
+					(name "Value") "Fuse")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Fuse")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "L")
+			(description "Inductor")
+			(footprints
+				(fp "Choke_*")
+				(fp "*Coil*")
+				(fp "Inductor_*")
+				(fp "L_*")
+			)
+			(fields
+				(field
+					(name "Reference") "L")
+				(field
+					(name "Value") "L")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Inductor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "LED")
+			(description "Light emitting diode")
+			(footprints
+				(fp "LED*")
+				(fp "LED_SMD:*")
+				(fp "LED_THT:*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "LED")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode")
+				(field
+					(name "Sim.Pins") "1=K 2=A")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "PMOS_SO8")
+			(description "P-channel MOSFET in the standard 1-3 source, 4 gate, 5-8 drain SO-8 pinout")
+			(docs "~")
+			(footprints
+				(fp "SOIC*3.9x4.9mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "PMOS_SO8")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "P-channel MOSFET in the standard 1-3 source, 4 gate, 5-8 drain SO-8 pinout")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "S1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "S2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "S3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "G")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "D1")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "D2")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "D3")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "D4")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Regulator_Linear")
+			(part "AMS1117-3.3")
+			(description "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223")
+			(docs "http://www.advanced-monolithic.com/pdf/ds1117.pdf")
+			(footprints
+				(fp "SOT?223*TabPin2*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "AMS1117-3.3")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+				(field
+					(name "Datasheet") "http://www.advanced-monolithic.com/pdf/ds1117.pdf")
+				(field
+					(name "Description") "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "VO")
+					(type "power_out")
+				)
+				(pin
+					(num "3")
+					(name "VI")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Regulator_Switching")
+			(part "LMR36510ADDA")
+			(description "Simple Switcher Synchronous Buck Regulator, Vin=4.2-65V, Iout=1A, F=400kHz, Adjustable output voltage, HSOP-8")
+			(docs "http://www.ti.com/lit/ds/symlink/lmr36510.pdf")
+			(footprints
+				(fp "Texas*HTSOP*1EP*3.9x4.9mm*P1.27mm*EP2.95x4.9mm*Mask2.4x3.1mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "LMR36510ADDA")
+				(field
+					(name "Footprint") "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias")
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/lmr36510.pdf")
+				(field
+					(name "Description") "Simple Switcher Synchronous Buck Regulator, Vin=4.2-65V, Iout=1A, F=400kHz, Adjustable output voltage, HSOP-8")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "PGND")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "VIN")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "EN")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "PG")
+					(type "open_collector")
+				)
+				(pin
+					(num "5")
+					(name "FB")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "VCC")
+					(type "power_out")
+				)
+				(pin
+					(num "7")
+					(name "BOOT")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "SW")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "PAD")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "power")
+			(part "PWR_FLAG")
+			(description "Special symbol for telling ERC where power comes from")
+			(fields
+				(field
+					(name "Reference") "#FLG")
+				(field
+					(name "Value") "PWR_FLAG")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Special symbol for telling ERC where power comes from")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "power_out")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Connector_Generic")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Regulator_Linear")
+			(uri "${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym")
+		)
+		(library
+			(logical "Regulator_Switching")
+			(uri "${KICAD10_SYMBOL_DIR}/Regulator_Switching.kicad_sym")
+		)
+		(library
+			(logical "power")
+			(uri "${KICAD10_SYMBOL_DIR}/power.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/+3V3")
+			(class "Default")
+			(node
+				(ref "C13")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C90")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R73")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "VO_2")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "2")
+			(name "/+3V3_A")
+			(class "Default")
+			(node
+				(ref "C15")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG3")
+				(pin "1")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "3")
+			(name "/+3V3_SD")
+			(class "Default")
+			(node
+				(ref "FLG6")
+				(pin "1")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "4")
+			(name "/+5V")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C76")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG2")
+				(pin "1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "L1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R70")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "VI_3")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "5")
+			(name "/+5V_ENC")
+			(class "Default")
+			(node
+				(ref "FLG5")
+				(pin "1")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "6")
+			(name "/+5V_ISO_IN")
+			(class "Default")
+			(node
+				(ref "FLG7")
+				(pin "1")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "7")
+			(name "/+12V_FIELD")
+			(class "Default")
+			(node
+				(ref "FLG8")
+				(pin "1")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "8")
+			(name "/BUCK5_BST")
+			(class "Default")
+			(node
+				(ref "C86")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "BOOT_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "9")
+			(name "/BUCK5_SW")
+			(class "Default")
+			(node
+				(ref "C86")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "L1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "SW_8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "10")
+			(name "/FB5")
+			(class "Default")
+			(node
+				(ref "R71")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R72")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "FB_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "11")
+			(name "/FB5_TOP")
+			(class "Default")
+			(node
+				(ref "R70")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R71")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C15")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C76")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C90")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C91")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "A2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D4")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D5")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG1")
+				(pin "1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "J1")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R72")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "PGND_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "PAD_9")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "13")
+			(name "/PWR3_LEDA")
+			(class "Default")
+			(node
+				(ref "D5")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/PWR5_LEDA")
+			(class "Default")
+			(node
+				(ref "D4")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "/PWR_GOOD_N")
+			(class "Default")
+			(node
+				(ref "R73")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "PG_4")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "16")
+			(name "/Q1_GATE")
+			(class "Default")
+			(node
+				(ref "D2")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "4")
+				(pinfunction "G_4")
+				(pintype "input")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "/VCC5")
+			(class "Default")
+			(node
+				(ref "C91")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "VCC_6")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "18")
+			(name "/VIN_FUSED")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "A1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D2")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "F1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "5")
+				(pinfunction "D1_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "6")
+				(pinfunction "D2_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "7")
+				(pinfunction "D3_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "8")
+				(pinfunction "D4_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "/VIN_PROT")
+			(class "Default")
+			(node
+				(ref "C3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG4")
+				(pin "1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "Q1")
+				(pin "1")
+				(pinfunction "S1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "2")
+				(pinfunction "S2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "3")
+				(pinfunction "S3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "VIN_2")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "EN_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "20")
+			(name "/VIN_RAW")
+			(class "Default")
+			(node
+				(ref "F1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+		)
+	)
+)

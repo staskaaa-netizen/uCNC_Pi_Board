@@ -1,0 +1,2904 @@
+{
+  "title": "LeanCam NCC RP2350B - mcu_io",
+  "parts": [
+    {
+      "ref": "C22",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C23",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C24",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C25",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C26",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C27",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C28",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C29",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J4",
+      "value": "SWD",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x04",
+      "description": "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "MOD1",
+      "value": "WeAct RP2350B Core Board (socketed)",
+      "footprint": "LeanCam:WeAct_RP2350B_Socket",
+      "lib": "LeanCam",
+      "part": "WeAct_RP2350B",
+      "description": "WeAct Studio RP2350B Core Board on 2x15 perimeter socket rows plus four internal programming pads",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "3V3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "RUN",
+          "type": "bidirectional"
+        },
+        {
+          "number": "5",
+          "name": "GP46",
+          "type": "bidirectional"
+        },
+        {
+          "number": "6",
+          "name": "GP44",
+          "type": "bidirectional"
+        },
+        {
+          "number": "7",
+          "name": "GP42",
+          "type": "bidirectional"
+        },
+        {
+          "number": "8",
+          "name": "GP40",
+          "type": "bidirectional"
+        },
+        {
+          "number": "9",
+          "name": "GP38",
+          "type": "bidirectional"
+        },
+        {
+          "number": "10",
+          "name": "GP36",
+          "type": "bidirectional"
+        },
+        {
+          "number": "11",
+          "name": "GP34",
+          "type": "bidirectional"
+        },
+        {
+          "number": "12",
+          "name": "GP32",
+          "type": "bidirectional"
+        },
+        {
+          "number": "13",
+          "name": "GP30",
+          "type": "bidirectional"
+        },
+        {
+          "number": "14",
+          "name": "GP28",
+          "type": "bidirectional"
+        },
+        {
+          "number": "15",
+          "name": "GP26",
+          "type": "bidirectional"
+        },
+        {
+          "number": "16",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "17",
+          "name": "EN",
+          "type": "bidirectional"
+        },
+        {
+          "number": "18",
+          "name": "3V3",
+          "type": "passive"
+        },
+        {
+          "number": "19",
+          "name": "GP47",
+          "type": "bidirectional"
+        },
+        {
+          "number": "20",
+          "name": "GP45",
+          "type": "bidirectional"
+        },
+        {
+          "number": "21",
+          "name": "GP43",
+          "type": "bidirectional"
+        },
+        {
+          "number": "22",
+          "name": "GP41",
+          "type": "bidirectional"
+        },
+        {
+          "number": "23",
+          "name": "GP39",
+          "type": "bidirectional"
+        },
+        {
+          "number": "24",
+          "name": "GP37",
+          "type": "bidirectional"
+        },
+        {
+          "number": "25",
+          "name": "GP35",
+          "type": "bidirectional"
+        },
+        {
+          "number": "26",
+          "name": "GP33",
+          "type": "bidirectional"
+        },
+        {
+          "number": "27",
+          "name": "GP31",
+          "type": "bidirectional"
+        },
+        {
+          "number": "28",
+          "name": "GP29",
+          "type": "bidirectional"
+        },
+        {
+          "number": "29",
+          "name": "GP27",
+          "type": "bidirectional"
+        },
+        {
+          "number": "30",
+          "name": "GP25",
+          "type": "bidirectional"
+        },
+        {
+          "number": "31",
+          "name": "5V",
+          "type": "passive"
+        },
+        {
+          "number": "32",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "33",
+          "name": "GP0",
+          "type": "bidirectional"
+        },
+        {
+          "number": "34",
+          "name": "GP2",
+          "type": "bidirectional"
+        },
+        {
+          "number": "35",
+          "name": "GP4",
+          "type": "bidirectional"
+        },
+        {
+          "number": "36",
+          "name": "GP6",
+          "type": "bidirectional"
+        },
+        {
+          "number": "37",
+          "name": "GP8",
+          "type": "bidirectional"
+        },
+        {
+          "number": "38",
+          "name": "GP10",
+          "type": "bidirectional"
+        },
+        {
+          "number": "39",
+          "name": "GP12",
+          "type": "bidirectional"
+        },
+        {
+          "number": "40",
+          "name": "GP14",
+          "type": "bidirectional"
+        },
+        {
+          "number": "41",
+          "name": "GP16",
+          "type": "bidirectional"
+        },
+        {
+          "number": "42",
+          "name": "GP18",
+          "type": "bidirectional"
+        },
+        {
+          "number": "43",
+          "name": "GP20",
+          "type": "bidirectional"
+        },
+        {
+          "number": "44",
+          "name": "GP22",
+          "type": "bidirectional"
+        },
+        {
+          "number": "45",
+          "name": "GP24",
+          "type": "bidirectional"
+        },
+        {
+          "number": "46",
+          "name": "VBUS",
+          "type": "passive"
+        },
+        {
+          "number": "47",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "48",
+          "name": "REF",
+          "type": "passive"
+        },
+        {
+          "number": "49",
+          "name": "GP1",
+          "type": "bidirectional"
+        },
+        {
+          "number": "50",
+          "name": "GP3",
+          "type": "bidirectional"
+        },
+        {
+          "number": "51",
+          "name": "GP5",
+          "type": "bidirectional"
+        },
+        {
+          "number": "52",
+          "name": "GP7",
+          "type": "bidirectional"
+        },
+        {
+          "number": "53",
+          "name": "GP9",
+          "type": "bidirectional"
+        },
+        {
+          "number": "54",
+          "name": "GP11",
+          "type": "bidirectional"
+        },
+        {
+          "number": "55",
+          "name": "GP13",
+          "type": "bidirectional"
+        },
+        {
+          "number": "56",
+          "name": "GP15",
+          "type": "bidirectional"
+        },
+        {
+          "number": "57",
+          "name": "GP17",
+          "type": "bidirectional"
+        },
+        {
+          "number": "58",
+          "name": "GP19",
+          "type": "bidirectional"
+        },
+        {
+          "number": "59",
+          "name": "GP21",
+          "type": "bidirectional"
+        },
+        {
+          "number": "60",
+          "name": "GP23",
+          "type": "bidirectional"
+        },
+        {
+          "number": "61",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "62",
+          "name": "SWCLK",
+          "type": "bidirectional"
+        },
+        {
+          "number": "63",
+          "name": "SWDIO",
+          "type": "bidirectional"
+        },
+        {
+          "number": "64",
+          "name": "3V3_DEBUG",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R10",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R11",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R12",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R13",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U10",
+      "value": "74HC595D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC595",
+      "description": "8-bit serial in/out Shift Register 3-State Outputs",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "QB",
+          "type": "tri_state"
+        },
+        {
+          "number": "2",
+          "name": "QC",
+          "type": "tri_state"
+        },
+        {
+          "number": "3",
+          "name": "QD",
+          "type": "tri_state"
+        },
+        {
+          "number": "4",
+          "name": "QE",
+          "type": "tri_state"
+        },
+        {
+          "number": "5",
+          "name": "QF",
+          "type": "tri_state"
+        },
+        {
+          "number": "6",
+          "name": "QG",
+          "type": "tri_state"
+        },
+        {
+          "number": "7",
+          "name": "QH",
+          "type": "tri_state"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "QH'",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "~{SRCLR}",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "SRCLK",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "RCLK",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "~{OE}",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "SER",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "QA",
+          "type": "tri_state"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U11",
+      "value": "74HC595D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC595",
+      "description": "8-bit serial in/out Shift Register 3-State Outputs",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "QB",
+          "type": "tri_state"
+        },
+        {
+          "number": "2",
+          "name": "QC",
+          "type": "tri_state"
+        },
+        {
+          "number": "3",
+          "name": "QD",
+          "type": "tri_state"
+        },
+        {
+          "number": "4",
+          "name": "QE",
+          "type": "tri_state"
+        },
+        {
+          "number": "5",
+          "name": "QF",
+          "type": "tri_state"
+        },
+        {
+          "number": "6",
+          "name": "QG",
+          "type": "tri_state"
+        },
+        {
+          "number": "7",
+          "name": "QH",
+          "type": "tri_state"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "QH'",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "~{SRCLR}",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "SRCLK",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "RCLK",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "~{OE}",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "SER",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "QA",
+          "type": "tri_state"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U12",
+      "value": "74HC595D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC595",
+      "description": "8-bit serial in/out Shift Register 3-State Outputs",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "QB",
+          "type": "tri_state"
+        },
+        {
+          "number": "2",
+          "name": "QC",
+          "type": "tri_state"
+        },
+        {
+          "number": "3",
+          "name": "QD",
+          "type": "tri_state"
+        },
+        {
+          "number": "4",
+          "name": "QE",
+          "type": "tri_state"
+        },
+        {
+          "number": "5",
+          "name": "QF",
+          "type": "tri_state"
+        },
+        {
+          "number": "6",
+          "name": "QG",
+          "type": "tri_state"
+        },
+        {
+          "number": "7",
+          "name": "QH",
+          "type": "tri_state"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "QH'",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "~{SRCLR}",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "SRCLK",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "RCLK",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "~{OE}",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "SER",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "QA",
+          "type": "tri_state"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U13",
+      "value": "74HC595D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC595",
+      "description": "8-bit serial in/out Shift Register 3-State Outputs",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "QB",
+          "type": "tri_state"
+        },
+        {
+          "number": "2",
+          "name": "QC",
+          "type": "tri_state"
+        },
+        {
+          "number": "3",
+          "name": "QD",
+          "type": "tri_state"
+        },
+        {
+          "number": "4",
+          "name": "QE",
+          "type": "tri_state"
+        },
+        {
+          "number": "5",
+          "name": "QF",
+          "type": "tri_state"
+        },
+        {
+          "number": "6",
+          "name": "QG",
+          "type": "tri_state"
+        },
+        {
+          "number": "7",
+          "name": "QH",
+          "type": "tri_state"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "QH'",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "~{SRCLR}",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "SRCLK",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "RCLK",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "~{OE}",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "SER",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "QA",
+          "type": "tri_state"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U6",
+      "value": "74HC165D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC165",
+      "description": "Shift Register, 8-bit, Parallel Load",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{PL}",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "CP",
+          "type": "input"
+        },
+        {
+          "number": "3",
+          "name": "D4",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "D5",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "D6",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "D7",
+          "type": "input"
+        },
+        {
+          "number": "7",
+          "name": "~{Q7}",
+          "type": "output"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "Q7",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "DS",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "D0",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "D1",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "D2",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "D3",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "~{CE}",
+          "type": "input"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U7",
+      "value": "74HC165D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC165",
+      "description": "Shift Register, 8-bit, Parallel Load",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{PL}",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "CP",
+          "type": "input"
+        },
+        {
+          "number": "3",
+          "name": "D4",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "D5",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "D6",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "D7",
+          "type": "input"
+        },
+        {
+          "number": "7",
+          "name": "~{Q7}",
+          "type": "output"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "Q7",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "DS",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "D0",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "D1",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "D2",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "D3",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "~{CE}",
+          "type": "input"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U8",
+      "value": "74HC165D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC165",
+      "description": "Shift Register, 8-bit, Parallel Load",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{PL}",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "CP",
+          "type": "input"
+        },
+        {
+          "number": "3",
+          "name": "D4",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "D5",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "D6",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "D7",
+          "type": "input"
+        },
+        {
+          "number": "7",
+          "name": "~{Q7}",
+          "type": "output"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "Q7",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "DS",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "D0",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "D1",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "D2",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "D3",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "~{CE}",
+          "type": "input"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U9",
+      "value": "74HC165D",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "74xx",
+      "part": "74HC165",
+      "description": "Shift Register, 8-bit, Parallel Load",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~{PL}",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "CP",
+          "type": "input"
+        },
+        {
+          "number": "3",
+          "name": "D4",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "D5",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "D6",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "D7",
+          "type": "input"
+        },
+        {
+          "number": "7",
+          "name": "~{Q7}",
+          "type": "output"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "9",
+          "name": "Q7",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "DS",
+          "type": "input"
+        },
+        {
+          "number": "11",
+          "name": "D0",
+          "type": "input"
+        },
+        {
+          "number": "12",
+          "name": "D1",
+          "type": "input"
+        },
+        {
+          "number": "13",
+          "name": "D2",
+          "type": "input"
+        },
+        {
+          "number": "14",
+          "name": "D3",
+          "type": "input"
+        },
+        {
+          "number": "15",
+          "name": "~{CE}",
+          "type": "input"
+        },
+        {
+          "number": "16",
+          "name": "VCC",
+          "type": "power_in"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "+3V3",
+      "is_power": true,
+      "connections": [
+        [
+          "C22",
+          "1"
+        ],
+        [
+          "C23",
+          "1"
+        ],
+        [
+          "C24",
+          "1"
+        ],
+        [
+          "C25",
+          "1"
+        ],
+        [
+          "C26",
+          "1"
+        ],
+        [
+          "C27",
+          "1"
+        ],
+        [
+          "C28",
+          "1"
+        ],
+        [
+          "C29",
+          "1"
+        ],
+        [
+          "J4",
+          "1"
+        ],
+        [
+          "R11",
+          "2"
+        ],
+        [
+          "U10",
+          "10"
+        ],
+        [
+          "U10",
+          "16"
+        ],
+        [
+          "U11",
+          "10"
+        ],
+        [
+          "U11",
+          "16"
+        ],
+        [
+          "U12",
+          "10"
+        ],
+        [
+          "U12",
+          "16"
+        ],
+        [
+          "U13",
+          "10"
+        ],
+        [
+          "U13",
+          "16"
+        ],
+        [
+          "U6",
+          "16"
+        ],
+        [
+          "U7",
+          "16"
+        ],
+        [
+          "U8",
+          "16"
+        ],
+        [
+          "U9",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "+3V3_A",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "48"
+        ]
+      ]
+    },
+    {
+      "name": "+5V",
+      "is_power": true,
+      "connections": [
+        [
+          "MOD1",
+          "31"
+        ]
+      ]
+    },
+    {
+      "name": "AI0_ADC",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "AI1_ADC",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "22"
+        ]
+      ]
+    },
+    {
+      "name": "AI2_ADC",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "AOUT0_PWM",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "19"
+        ]
+      ]
+    },
+    {
+      "name": "AOUT1_PWM",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "AOUT2_PWM",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "20"
+        ]
+      ]
+    },
+    {
+      "name": "AOUT3_PWM",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_A_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_B_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "29"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_Z_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_A_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "28"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_B_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_Z_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "27"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_A_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_B_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "26"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_Z_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "24"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN0",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN1",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN2",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN3",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN4",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN5",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN6",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN7",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "GND",
+      "is_power": true,
+      "connections": [
+        [
+          "C22",
+          "2"
+        ],
+        [
+          "C23",
+          "2"
+        ],
+        [
+          "C24",
+          "2"
+        ],
+        [
+          "C25",
+          "2"
+        ],
+        [
+          "C26",
+          "2"
+        ],
+        [
+          "C27",
+          "2"
+        ],
+        [
+          "C28",
+          "2"
+        ],
+        [
+          "C29",
+          "2"
+        ],
+        [
+          "J4",
+          "4"
+        ],
+        [
+          "MOD1",
+          "1"
+        ],
+        [
+          "MOD1",
+          "16"
+        ],
+        [
+          "MOD1",
+          "2"
+        ],
+        [
+          "MOD1",
+          "32"
+        ],
+        [
+          "MOD1",
+          "47"
+        ],
+        [
+          "MOD1",
+          "61"
+        ],
+        [
+          "R10",
+          "2"
+        ],
+        [
+          "R12",
+          "2"
+        ],
+        [
+          "R13",
+          "2"
+        ],
+        [
+          "R9",
+          "2"
+        ],
+        [
+          "U10",
+          "13"
+        ],
+        [
+          "U10",
+          "8"
+        ],
+        [
+          "U11",
+          "13"
+        ],
+        [
+          "U11",
+          "8"
+        ],
+        [
+          "U12",
+          "13"
+        ],
+        [
+          "U12",
+          "8"
+        ],
+        [
+          "U13",
+          "13"
+        ],
+        [
+          "U13",
+          "8"
+        ],
+        [
+          "U6",
+          "15"
+        ],
+        [
+          "U6",
+          "8"
+        ],
+        [
+          "U7",
+          "15"
+        ],
+        [
+          "U7",
+          "8"
+        ],
+        [
+          "U8",
+          "15"
+        ],
+        [
+          "U8",
+          "8"
+        ],
+        [
+          "U9",
+          "15"
+        ],
+        [
+          "U9",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "HOLD_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_CLK_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "58"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_CLK_P",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "42"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D0_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "55"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D0_P",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "39"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D1_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "56"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D1_P",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "40"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D2_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "57"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D2_P",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "41"
+        ]
+      ]
+    },
+    {
+      "name": "I2C_SCL",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "53"
+        ]
+      ]
+    },
+    {
+      "name": "I2C_SDA",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "37"
+        ]
+      ]
+    },
+    {
+      "name": "KIN0_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "KIN1_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "KIN2_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "KIN3_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "KIN4_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "KIN5_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "KIN6_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "KIN7_FILT",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "OUT0",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OUT1",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "OUT2",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OUT3",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "OUT4",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OUT5",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "OUT6",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "OUT7",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "OUT8",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "OUT9",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OUT10",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "OUT11",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OUT12",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "OUT13",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OUT14",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "OUT15",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "OUT16",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OUT17",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "OUT18",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OUT19",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "OUT20",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OUT21",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "OUT22",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "OUT23",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "OUT24",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "OUT25",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OUT26",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "OUT27",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OUT28",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "OUT29",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OUT30",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "OUT31",
+      "is_power": false,
+      "connections": [
+        [
+          "U13",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN1_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN2_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN3_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN4_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN5_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN6_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN7_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN8_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN9_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN10_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN11_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN12_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN13_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN14_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN15_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN16_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "PWR_GOOD_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "21"
+        ]
+      ]
+    },
+    {
+      "name": "SD_CD_MCU",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "34"
+        ]
+      ]
+    },
+    {
+      "name": "SD_CS_MCU",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "51"
+        ]
+      ]
+    },
+    {
+      "name": "SD_MISO_MCU",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "35"
+        ]
+      ]
+    },
+    {
+      "name": "SD_MOSI_MCU",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "52"
+        ]
+      ]
+    },
+    {
+      "name": "SD_SCK_MCU",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "36"
+        ]
+      ]
+    },
+    {
+      "name": "SR_IN_CHAIN1",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "9"
+        ],
+        [
+          "U7",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "SR_IN_CHAIN2",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "9"
+        ],
+        [
+          "U8",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "SR_IN_CHAIN3",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "9"
+        ],
+        [
+          "U9",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "SR_IN_DS0",
+      "is_power": false,
+      "connections": [
+        [
+          "R9",
+          "1"
+        ],
+        [
+          "U6",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "SR_IN_Q7",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "60"
+        ],
+        [
+          "U9",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "SR_LATCH",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "44"
+        ],
+        [
+          "R13",
+          "1"
+        ],
+        [
+          "U10",
+          "12"
+        ],
+        [
+          "U11",
+          "12"
+        ],
+        [
+          "U12",
+          "12"
+        ],
+        [
+          "U13",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "SR_OUT_CHAIN1",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "9"
+        ],
+        [
+          "U11",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "SR_OUT_CHAIN2",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "9"
+        ],
+        [
+          "U12",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "SR_OUT_CHAIN3",
+      "is_power": false,
+      "connections": [
+        [
+          "U12",
+          "9"
+        ],
+        [
+          "U13",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "SR_OUT_SER",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "43"
+        ],
+        [
+          "R12",
+          "1"
+        ],
+        [
+          "U10",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "SR_PL_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "45"
+        ],
+        [
+          "R11",
+          "1"
+        ],
+        [
+          "U6",
+          "1"
+        ],
+        [
+          "U7",
+          "1"
+        ],
+        [
+          "U8",
+          "1"
+        ],
+        [
+          "U9",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "SR_SCK",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "59"
+        ],
+        [
+          "R10",
+          "1"
+        ],
+        [
+          "U10",
+          "11"
+        ],
+        [
+          "U11",
+          "11"
+        ],
+        [
+          "U12",
+          "11"
+        ],
+        [
+          "U13",
+          "11"
+        ],
+        [
+          "U6",
+          "2"
+        ],
+        [
+          "U7",
+          "2"
+        ],
+        [
+          "U8",
+          "2"
+        ],
+        [
+          "U9",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "START_N",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "23"
+        ]
+      ]
+    },
+    {
+      "name": "SWCLK",
+      "is_power": false,
+      "connections": [
+        [
+          "J4",
+          "3"
+        ],
+        [
+          "MOD1",
+          "62"
+        ]
+      ]
+    },
+    {
+      "name": "SWDIO",
+      "is_power": false,
+      "connections": [
+        [
+          "J4",
+          "2"
+        ],
+        [
+          "MOD1",
+          "63"
+        ]
+      ]
+    },
+    {
+      "name": "WIFI_RX",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "54"
+        ]
+      ]
+    },
+    {
+      "name": "WIFI_TX",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "38"
+        ]
+      ]
+    }
+  ]
+}

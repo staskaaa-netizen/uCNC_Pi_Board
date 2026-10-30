@@ -24,7 +24,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | GPIO | MOD1 pin | Signal | Direction | Peripheral / function | Voltage | Firmware note |
 |---:|---:|---|---|---|---|---|
 | 0 | 33 | — | Reserved | Module PSRAM chip select | 3.3 V | Left free for the module's solderable PSRAM |
-| 1 | 49 | â€” | Reserved | Future backlight PWM | 3.3 V | J22 has no backlight contact; no board net or external interface is assigned |
+| 1 | 49 | — | Reserved | Not connected | — | Released from the backlight PWM allocation |
 | 2 | 34 | SD_CD_MCU | Input | SD-card detect | 3.3 V | Active low; moved from GPIO47 as requested |
 | 3 | 50 | — | Reserved | Not connected | — | On-board backlight switch removed |
 | 4 | 35 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Alternate SPI0 mapping |
@@ -58,7 +58,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 32 | 12 | ENC2_A_3V3 | Input | Encoder 2 A | 3.3 V | Conditioned from 5 V TTL |
 | 33 | 26 | ENC2_B_3V3 | Input | Encoder 2 B | 3.3 V | Conditioned from 5 V TTL |
 | 34 | 11 | ENC2_Z_3V3 | Input | Encoder 2 Z | 3.3 V | Conditioned from 5 V TTL |
-| 35 | 25 | — | Reserved | Not connected | — | Released after moving the shift return to GPIO23 |
+| 35 | 25 | BL_PWM_MCU | Output | Backlight/CCFL PWM and Q8 gate | 3.3 V | R131 series-protects J2 pin 3 and the R129/Q8 branch |
 | 36 | 10 | — | Reserved | Not connected | — | Local output-enable gate removed |
 | 37 | 24 | ESTOP_N | Input | Dedicated isolated E-stop | 3.3 V | Active-low open-collector input; external hardware blocks outputs |
 | 38 | 9 | HOLD_N | Input | Dedicated HOLD button | 3.3 V | uCNC FHOLD input; active-low open-collector |
@@ -99,7 +99,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
   `SN74AHCT541DW` channel powered at 3.3 V. The single `ENC2_Z` input uses R110
   (5.1 k series) and R111 (10 k to GND), producing about 3.31 V from a 5 V
   push-pull output.
-- The LED/CCFL PWM output is GPIO1, not a bit in the 74HC595 chain.
+- The LED/CCFL PWM output is GPIO35/MOD1 pin 25, not a bit in the 74HC595 chain.
 - GPIO47 and GPIO44-GPIO46 are dedicated to the four 0-10 V outputs. Drive them at
   a common PWM frequency and calibrate the maximum duty because the output
   stage has 3.2x gain.

@@ -1,0 +1,173 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-29T17:49:32",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.1",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/f65ea280-0a84-549d-9ea3-363b53b3e837",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U41 Pin 1 [EN, Input, Line]",
+                            "pos": {
+                                "x": 1.2446,
+                                "y": 0.5207
+                            },
+                            "uuid": "b900f166-5844-56f6-bca0-e496c4418f20"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U41 Pin 5 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 0.7493
+                            },
+                            "uuid": "04449334-e6b8-5b56-983f-ba30f58b2675"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U41 [DS90LV047A]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 0.6096
+                            },
+                            "uuid": "15e6d402-ca21-5792-b60b-6fe78d0ada33"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'HSTX_D1_N'",
+                            "pos": {
+                                "x": 1.6256,
+                                "y": 0.4953
+                            },
+                            "uuid": "c9edf0a3-b4ac-50cc-a918-0d4c5703ee58"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'HSTX_D0_N'",
+                            "pos": {
+                                "x": 1.6256,
+                                "y": 0.5461
+                            },
+                            "uuid": "01f7518d-4f6b-513d-af88-8205c56baa95"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN26 [ResistorPack04]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.5334
+                            },
+                            "uuid": "6c1fac25-724d-5d7d-9408-2c6d0c6b90a2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'HSTX_CLK_N'",
+                            "pos": {
+                                "x": 2.0955,
+                                "y": 0.4953
+                            },
+                            "uuid": "00fd5e35-0f87-5627-8329-6b3313113bb8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'HSTX_D2_N'",
+                            "pos": {
+                                "x": 2.0955,
+                                "y": 0.5461
+                            },
+                            "uuid": "464d3b79-eb1b-596b-b659-6508e04e5064"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN27 [ResistorPack04]",
+                            "pos": {
+                                "x": 2.2479,
+                                "y": 0.5334
+                            },
+                            "uuid": "b3bd87a6-ea8e-56d8-bd0b-880496a695a4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "display-python.kicad_sch"
+}

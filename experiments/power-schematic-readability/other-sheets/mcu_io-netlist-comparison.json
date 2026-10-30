@@ -1,0 +1,534 @@
+{
+  "source_netlist": "experiments\\power-schematic-readability\\inputs\\source-mcu_io.json",
+  "generated_netlist": "experiments\\power-schematic-readability\\other-sheets\\mcu_io-python.net",
+  "source_component_count": 23,
+  "generated_component_count": 23,
+  "source_net_count": 119,
+  "generated_net_count": 136,
+  "root_local_label_prefix_normalized": true,
+  "missing_components": [],
+  "extra_components": [],
+  "value_changes": [],
+  "footprint_changes": [],
+  "missing_net_names": [],
+  "extra_net_names": [],
+  "changed_named_connections": [],
+  "source_nodes_missing_from_generated": [],
+  "generated_nodes_not_in_source": [
+    "MOD1.10",
+    "MOD1.17",
+    "MOD1.18",
+    "MOD1.25",
+    "MOD1.3",
+    "MOD1.30",
+    "MOD1.33",
+    "MOD1.4",
+    "MOD1.46",
+    "MOD1.49",
+    "MOD1.50",
+    "MOD1.64",
+    "U13.9",
+    "U6.7",
+    "U7.7",
+    "U8.7",
+    "U9.7"
+  ],
+  "generated_connection_groups": {
+    "/+3V3": [
+      "C22.1",
+      "C23.1",
+      "C24.1",
+      "C25.1",
+      "C26.1",
+      "C27.1",
+      "C28.1",
+      "C29.1",
+      "J4.1",
+      "R11.2",
+      "U10.10",
+      "U10.16",
+      "U11.10",
+      "U11.16",
+      "U12.10",
+      "U12.16",
+      "U13.10",
+      "U13.16",
+      "U6.16",
+      "U7.16",
+      "U8.16",
+      "U9.16"
+    ],
+    "/+3V3_A": [
+      "MOD1.48"
+    ],
+    "/+5V": [
+      "MOD1.31"
+    ],
+    "/AI0_ADC": [
+      "MOD1.8"
+    ],
+    "/AI1_ADC": [
+      "MOD1.22"
+    ],
+    "/AI2_ADC": [
+      "MOD1.7"
+    ],
+    "/AOUT0_PWM": [
+      "MOD1.19"
+    ],
+    "/AOUT1_PWM": [
+      "MOD1.6"
+    ],
+    "/AOUT2_PWM": [
+      "MOD1.20"
+    ],
+    "/AOUT3_PWM": [
+      "MOD1.5"
+    ],
+    "/ENC0_A_3V3": [
+      "MOD1.15"
+    ],
+    "/ENC0_B_3V3": [
+      "MOD1.29"
+    ],
+    "/ENC0_Z_3V3": [
+      "MOD1.14"
+    ],
+    "/ENC1_A_3V3": [
+      "MOD1.28"
+    ],
+    "/ENC1_B_3V3": [
+      "MOD1.13"
+    ],
+    "/ENC1_Z_3V3": [
+      "MOD1.27"
+    ],
+    "/ENC2_A_3V3": [
+      "MOD1.12"
+    ],
+    "/ENC2_B_3V3": [
+      "MOD1.26"
+    ],
+    "/ENC2_Z_3V3": [
+      "MOD1.11"
+    ],
+    "/ESTOP_N": [
+      "MOD1.24"
+    ],
+    "/EXP_IN0": [
+      "U7.11"
+    ],
+    "/EXP_IN1": [
+      "U7.12"
+    ],
+    "/EXP_IN2": [
+      "U7.13"
+    ],
+    "/EXP_IN3": [
+      "U7.14"
+    ],
+    "/EXP_IN4": [
+      "U7.3"
+    ],
+    "/EXP_IN5": [
+      "U7.4"
+    ],
+    "/EXP_IN6": [
+      "U7.5"
+    ],
+    "/EXP_IN7": [
+      "U7.6"
+    ],
+    "/GND": [
+      "C22.2",
+      "C23.2",
+      "C24.2",
+      "C25.2",
+      "C26.2",
+      "C27.2",
+      "C28.2",
+      "C29.2",
+      "J4.4",
+      "MOD1.1",
+      "MOD1.16",
+      "MOD1.2",
+      "MOD1.32",
+      "MOD1.47",
+      "MOD1.61",
+      "R10.2",
+      "R12.2",
+      "R13.2",
+      "R9.2",
+      "U10.13",
+      "U10.8",
+      "U11.13",
+      "U11.8",
+      "U12.13",
+      "U12.8",
+      "U13.13",
+      "U13.8",
+      "U6.15",
+      "U6.8",
+      "U7.15",
+      "U7.8",
+      "U8.15",
+      "U8.8",
+      "U9.15",
+      "U9.8"
+    ],
+    "/HOLD_N": [
+      "MOD1.9"
+    ],
+    "/HSTX_CLK_N": [
+      "MOD1.58"
+    ],
+    "/HSTX_CLK_P": [
+      "MOD1.42"
+    ],
+    "/HSTX_D0_N": [
+      "MOD1.55"
+    ],
+    "/HSTX_D0_P": [
+      "MOD1.39"
+    ],
+    "/HSTX_D1_N": [
+      "MOD1.56"
+    ],
+    "/HSTX_D1_P": [
+      "MOD1.40"
+    ],
+    "/HSTX_D2_N": [
+      "MOD1.57"
+    ],
+    "/HSTX_D2_P": [
+      "MOD1.41"
+    ],
+    "/I2C_SCL": [
+      "MOD1.53"
+    ],
+    "/I2C_SDA": [
+      "MOD1.37"
+    ],
+    "/KIN0_FILT": [
+      "U6.11"
+    ],
+    "/KIN1_FILT": [
+      "U6.12"
+    ],
+    "/KIN2_FILT": [
+      "U6.13"
+    ],
+    "/KIN3_FILT": [
+      "U6.14"
+    ],
+    "/KIN4_FILT": [
+      "U6.3"
+    ],
+    "/KIN5_FILT": [
+      "U6.4"
+    ],
+    "/KIN6_FILT": [
+      "U6.5"
+    ],
+    "/KIN7_FILT": [
+      "U6.6"
+    ],
+    "/OUT0": [
+      "U10.1"
+    ],
+    "/OUT1": [
+      "U10.15"
+    ],
+    "/OUT10": [
+      "U11.15"
+    ],
+    "/OUT11": [
+      "U11.3"
+    ],
+    "/OUT12": [
+      "U11.4"
+    ],
+    "/OUT13": [
+      "U11.5"
+    ],
+    "/OUT14": [
+      "U11.6"
+    ],
+    "/OUT15": [
+      "U11.7"
+    ],
+    "/OUT16": [
+      "U12.1"
+    ],
+    "/OUT17": [
+      "U12.2"
+    ],
+    "/OUT18": [
+      "U12.3"
+    ],
+    "/OUT19": [
+      "U12.4"
+    ],
+    "/OUT2": [
+      "U10.3"
+    ],
+    "/OUT20": [
+      "U12.5"
+    ],
+    "/OUT21": [
+      "U12.6"
+    ],
+    "/OUT22": [
+      "U12.7"
+    ],
+    "/OUT23": [
+      "U12.15"
+    ],
+    "/OUT24": [
+      "U13.15"
+    ],
+    "/OUT25": [
+      "U13.1"
+    ],
+    "/OUT26": [
+      "U13.2"
+    ],
+    "/OUT27": [
+      "U13.3"
+    ],
+    "/OUT28": [
+      "U13.4"
+    ],
+    "/OUT29": [
+      "U13.5"
+    ],
+    "/OUT3": [
+      "U10.2"
+    ],
+    "/OUT30": [
+      "U13.6"
+    ],
+    "/OUT31": [
+      "U13.7"
+    ],
+    "/OUT4": [
+      "U10.5"
+    ],
+    "/OUT5": [
+      "U10.4"
+    ],
+    "/OUT6": [
+      "U10.7"
+    ],
+    "/OUT7": [
+      "U10.6"
+    ],
+    "/OUT8": [
+      "U11.2"
+    ],
+    "/OUT9": [
+      "U11.1"
+    ],
+    "/PLC_IN10_N": [
+      "U8.5"
+    ],
+    "/PLC_IN11_N": [
+      "U8.4"
+    ],
+    "/PLC_IN12_N": [
+      "U8.3"
+    ],
+    "/PLC_IN13_N": [
+      "U8.11"
+    ],
+    "/PLC_IN14_N": [
+      "U8.12"
+    ],
+    "/PLC_IN15_N": [
+      "U8.13"
+    ],
+    "/PLC_IN16_N": [
+      "U8.14"
+    ],
+    "/PLC_IN1_N": [
+      "U9.6"
+    ],
+    "/PLC_IN2_N": [
+      "U9.5"
+    ],
+    "/PLC_IN3_N": [
+      "U9.4"
+    ],
+    "/PLC_IN4_N": [
+      "U9.3"
+    ],
+    "/PLC_IN5_N": [
+      "U9.11"
+    ],
+    "/PLC_IN6_N": [
+      "U9.12"
+    ],
+    "/PLC_IN7_N": [
+      "U9.13"
+    ],
+    "/PLC_IN8_N": [
+      "U9.14"
+    ],
+    "/PLC_IN9_N": [
+      "U8.6"
+    ],
+    "/PWR_GOOD_N": [
+      "MOD1.21"
+    ],
+    "/SD_CD_MCU": [
+      "MOD1.34"
+    ],
+    "/SD_CS_MCU": [
+      "MOD1.51"
+    ],
+    "/SD_MISO_MCU": [
+      "MOD1.35"
+    ],
+    "/SD_MOSI_MCU": [
+      "MOD1.52"
+    ],
+    "/SD_SCK_MCU": [
+      "MOD1.36"
+    ],
+    "/SR_IN_CHAIN1": [
+      "U6.9",
+      "U7.10"
+    ],
+    "/SR_IN_CHAIN2": [
+      "U7.9",
+      "U8.10"
+    ],
+    "/SR_IN_CHAIN3": [
+      "U8.9",
+      "U9.10"
+    ],
+    "/SR_IN_DS0": [
+      "R9.1",
+      "U6.10"
+    ],
+    "/SR_IN_Q7": [
+      "MOD1.60",
+      "U9.9"
+    ],
+    "/SR_LATCH": [
+      "MOD1.44",
+      "R13.1",
+      "U10.12",
+      "U11.12",
+      "U12.12",
+      "U13.12"
+    ],
+    "/SR_OUT_CHAIN1": [
+      "U10.9",
+      "U11.14"
+    ],
+    "/SR_OUT_CHAIN2": [
+      "U11.9",
+      "U12.14"
+    ],
+    "/SR_OUT_CHAIN3": [
+      "U12.9",
+      "U13.14"
+    ],
+    "/SR_OUT_SER": [
+      "MOD1.43",
+      "R12.1",
+      "U10.14"
+    ],
+    "/SR_PL_N": [
+      "MOD1.45",
+      "R11.1",
+      "U6.1",
+      "U7.1",
+      "U8.1",
+      "U9.1"
+    ],
+    "/SR_SCK": [
+      "MOD1.59",
+      "R10.1",
+      "U10.11",
+      "U11.11",
+      "U12.11",
+      "U13.11",
+      "U6.2",
+      "U7.2",
+      "U8.2",
+      "U9.2"
+    ],
+    "/START_N": [
+      "MOD1.23"
+    ],
+    "/SWCLK": [
+      "J4.3",
+      "MOD1.62"
+    ],
+    "/SWDIO": [
+      "J4.2",
+      "MOD1.63"
+    ],
+    "/WIFI_RX": [
+      "MOD1.54"
+    ],
+    "/WIFI_TX": [
+      "MOD1.38"
+    ],
+    "unconnected-(MOD1-3V3-Pad18)": [
+      "MOD1.18"
+    ],
+    "unconnected-(MOD1-3V3-Pad3)": [
+      "MOD1.3"
+    ],
+    "unconnected-(MOD1-3V3_DEBUG-Pad64)": [
+      "MOD1.64"
+    ],
+    "unconnected-(MOD1-EN-Pad17)": [
+      "MOD1.17"
+    ],
+    "unconnected-(MOD1-GP0-Pad33)": [
+      "MOD1.33"
+    ],
+    "unconnected-(MOD1-GP1-Pad49)": [
+      "MOD1.49"
+    ],
+    "unconnected-(MOD1-GP25-Pad30)": [
+      "MOD1.30"
+    ],
+    "unconnected-(MOD1-GP3-Pad50)": [
+      "MOD1.50"
+    ],
+    "unconnected-(MOD1-GP35-Pad25)": [
+      "MOD1.25"
+    ],
+    "unconnected-(MOD1-GP36-Pad10)": [
+      "MOD1.10"
+    ],
+    "unconnected-(MOD1-RUN-Pad4)": [
+      "MOD1.4"
+    ],
+    "unconnected-(MOD1-VBUS-Pad46)": [
+      "MOD1.46"
+    ],
+    "unconnected-(U13-QH'-Pad9)": [
+      "U13.9"
+    ],
+    "unconnected-(U6-~{Q7}-Pad7)": [
+      "U6.7"
+    ],
+    "unconnected-(U7-~{Q7}-Pad7)": [
+      "U7.7"
+    ],
+    "unconnected-(U8-~{Q7}-Pad7)": [
+      "U8.7"
+    ],
+    "unconnected-(U9-~{Q7}-Pad7)": [
+      "U9.7"
+    ]
+  },
+  "netlist_partition_identical": true,
+  "named_netlists_identical": true
+}

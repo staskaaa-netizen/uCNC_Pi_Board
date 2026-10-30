@@ -1,0 +1,133 @@
+[
+  {
+    "sheet": "analog_io",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\analog_io-python.kicad_sch",
+    "paper": "A1",
+    "components": 40,
+    "nets": 29,
+    "blocks": [
+      "ANALOG INPUTS AI0-AI2",
+      "ANALOG OUTPUTS AO0-AO3",
+      "ANALOG 12 V SUPPLY"
+    ],
+    "routed_nets": 16,
+    "label_only_nets": 13,
+    "wire_segments": 62,
+    "junctions": 2,
+    "labels": 71,
+    "no_connects": 0,
+    "content_bottom_mm": 447.18
+  },
+  {
+    "sheet": "display",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\display-python.kicad_sch",
+    "paper": "A3",
+    "components": 5,
+    "nets": 18,
+    "blocks": [
+      "LVDS TRANSMITTER AND CONNECTOR"
+    ],
+    "routed_nets": 7,
+    "label_only_nets": 11,
+    "wire_segments": 32,
+    "junctions": 4,
+    "labels": 38,
+    "no_connects": 4,
+    "content_bottom_mm": 101.02
+  },
+  {
+    "sheet": "encoders",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\encoders-python.kicad_sch",
+    "paper": "A3",
+    "components": 9,
+    "nets": 22,
+    "blocks": [
+      "ENCODER INPUTS 0-2"
+    ],
+    "routed_nets": 8,
+    "label_only_nets": 14,
+    "wire_segments": 22,
+    "junctions": 0,
+    "labels": 37,
+    "no_connects": 0,
+    "content_bottom_mm": 141.8
+  },
+  {
+    "sheet": "field_inputs",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_inputs-python.kicad_sch",
+    "paper": "A0",
+    "components": 102,
+    "nets": 94,
+    "blocks": [
+      "ISOLATED 5 V-TO-12 V SUPPLY",
+      "EXPANSION INPUTS 0-7",
+      "SAFETY INPUTS",
+      "ISOLATED PLC INPUTS 1-8",
+      "ISOLATED PLC INPUTS 9-16"
+    ],
+    "routed_nets": 47,
+    "label_only_nets": 47,
+    "wire_segments": 140,
+    "junctions": 5,
+    "labels": 247,
+    "no_connects": 0,
+    "content_bottom_mm": 660.2
+  },
+  {
+    "sheet": "field_outputs",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_outputs-python.kicad_sch",
+    "paper": "A1",
+    "components": 71,
+    "nets": 110,
+    "blocks": [
+      "5 V OUTPUT BUFFERS",
+      "GENERAL AND MOTION OUTPUTS",
+      "AUXILIARY AND HIGH-CURRENT OUTPUTS"
+    ],
+    "routed_nets": 31,
+    "label_only_nets": 79,
+    "wire_segments": 99,
+    "junctions": 11,
+    "labels": 269,
+    "no_connects": 4,
+    "content_bottom_mm": 442.22
+  },
+  {
+    "sheet": "mcu_io",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\mcu_io-python.kicad_sch",
+    "paper": "A2",
+    "components": 23,
+    "nets": 119,
+    "blocks": [
+      "WeAct RP2350B AND DECOUPLING",
+      "74HC165 / 74HC595 CHAINS"
+    ],
+    "routed_nets": 9,
+    "label_only_nets": 110,
+    "wire_segments": 20,
+    "junctions": 0,
+    "labels": 196,
+    "no_connects": 17,
+    "content_bottom_mm": 331.24
+  },
+  {
+    "sheet": "storage_wifi_ui",
+    "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\storage_wifi_ui-python.kicad_sch",
+    "paper": "A2",
+    "components": 31,
+    "nets": 49,
+    "blocks": [
+      "KEYBOARD MATRIX INTERFACE",
+      "MICRO SD INTERFACE",
+      "ESP-01 / ESP-01S SOCKET",
+      "I2C SERVICE PORT"
+    ],
+    "routed_nets": 10,
+    "label_only_nets": 39,
+    "wire_segments": 34,
+    "junctions": 2,
+    "labels": 92,
+    "no_connects": 1,
+    "content_bottom_mm": 378.12
+  }
+]

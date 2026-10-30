@@ -1,0 +1,128 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-29T17:49:25",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.1",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/21227d6a-39f1-59d6-bb50-780cbd4a6efb",
+            "violations": [
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U38 [TLV2374]",
+                            "pos": {
+                                "x": 3.4544,
+                                "y": 1.9685
+                            },
+                            "uuid": "e2443029-7a20-5931-8be2-0bafb172ff89"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'AOUT0_PWM'",
+                            "pos": {
+                                "x": 4.4958,
+                                "y": 1.8796
+                            },
+                            "uuid": "0cb4c80b-5a26-5f05-a406-326a96d9c4f1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'AOUT1_PWM'",
+                            "pos": {
+                                "x": 4.3434,
+                                "y": 2.3622
+                            },
+                            "uuid": "6188d064-036d-517f-a030-8e69e3644138"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'AOUT2_PWM'",
+                            "pos": {
+                                "x": 4.3434,
+                                "y": 2.7559
+                            },
+                            "uuid": "57a052b2-4ff0-5063-983e-53de6356adb1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'AOUT3_PWM'",
+                            "pos": {
+                                "x": 4.3434,
+                                "y": 3.1496
+                            },
+                            "uuid": "f80851b6-f5b2-5488-936c-821ee8af00b8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U37 [L78L12]",
+                            "pos": {
+                                "x": 3.7719,
+                                "y": 4.1656
+                            },
+                            "uuid": "01365239-eb57-5a65-9605-bb4226b6b8cf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "analog_io-python.kicad_sch"
+}

@@ -3,11 +3,15 @@
 ## Fabrication
 
 - Two-layer PCB, nominal 1.6 mm FR-4.
-- Components are fitted on both sides. Field connectors and the module socket
-  are front-side; J9/J16/J17 and most input/output conditioning are back-side.
+- The main assembly is front-side. J22, C57 and the JP2-JP4 field-mode
+  selectors are on the back. The backlight-buck parts are user-placed on the
+  board.
 - External field wiring uses Phoenix `MCV 1,5` vertical 3.5 mm connectors.
-- One LMR36510 24 V-to-5 V buck feeds the WeAct module and two local 3.3 V
-  LDOs: one for peripheral logic/SD/LCD and one dedicated to the ESP-01/ESP-01S.
+- Two SS16 input diodes split the fused 24 V feed into separate logic and
+  backlight branches. The first LMR36510 makes the 1 A +5 V rail; the second
+  LMR36510 makes a separate 1 A +12 V backlight/CCFL rail.
+- The 5 V rail feeds the WeAct module and two local 3.3 V LDOs: one for
+  peripheral logic/SD/LCD and one dedicated to the ESP-01/ESP-01S.
 - U37, an L78L12 SOT-89 regulator, creates a separate `+12V_AO` rail for the
   four-channel TLV2374 0-10 V output amplifier.
 - General minimum track/clearance: 0.25/0.20 mm; 0.30 mm drill with 0.60 mm
@@ -15,6 +19,14 @@
   spacing to fan out between the 2.00 mm J22 pins.
 - General 100 nF IC decoupling uses 0805 to keep loop area small. High-voltage
   input ceramics, bulk components and most other passives remain 1206.
+- Regulator bulk capacitors are standardized to 22 uF/25 V in 1210 on the
+  regulated 5 V/12 V rails, and 22 uF/50 V in 1210 on 24 V-side inputs.
+  High-frequency bypasses are 100 nF in 0805, except 100 nF/100 V 1206 parts
+  on 24 V-side nodes. C105 remains 10 uF/100 V for field-side backfeed
+  exposure.
+- `BL_PWM_MCU`, `BL_PWM`, and `BL_SW_GATE` use a dedicated 0.2 mm control
+  netclass. The
+  `+12V_BL` and switched `BL_LED_N` power path use the 0.8 mm Power class.
 - Four M3 mounting positions.
 - All logic is powered at 3.3 V except the two `SN74AHCT541DW` motion buffers
   and their 5 V rail. One encoder `SN74AHCT541DW` buffer runs at 3.3 V and
@@ -28,7 +40,7 @@ The default build is the active LCD LVDS configuration and no Wi-Fi module:
 
 - Fit the WeAct RP2350B socket, all input/output logic, power supply and standard
   decoupling.
-- Fit U41 (DS90LV047A) and C106. Leave the passive RN26/RN27 arrays unfitted.
+- Fit U41 (DS90LV047A) and its C57 bypass. Leave the passive RN26/RN27 arrays unfitted.
 - Do not insert the ESP-01/ESP-01S module unless Wi-Fi is required.
 - The module and RP2350B board are supplied separately.
 
@@ -36,20 +48,20 @@ The default build is the active LCD LVDS configuration and no Wi-Fi module:
 
 | Option | Fit | Do not fit |
 |---|---|---|
-| Active LCD LVDS | U41, C106, J22 | RN26/RN27 |
+| Active LCD LVDS | U41, C57, J22 | RN26/RN27 |
 | Passive LCD LVDS | RN26/RN27, J22 | U41 |
 | Wi-Fi | ESP-01 or ESP-01S in J20 | None |
-| External LCD/backlight driver | Separate interface not yet assigned | None |
+| Backlight/CCFL | U3 and its buck passives, J2 | None |
 
 
 Fit only one LVDS driver path. No HDMI connector or HDMI signal path is fitted.
 No solder jumper is required for backlight selection.
 
-The verified J22 pinout has no backlight contact. MOD1 GPIO1 is reserved for a
-future backlight PWM, but no board net or connector is assigned until a
-separate backlight-driver interface is specified. The local J2 backlight
-connector, JP1 supply selector and Q2/Q3 high-current switch are not fitted.
-LCD panel logic is powered directly from `+3V3`.
+The verified J22 pinout contains the LCD LVDS signals and logic supply only.
+J2 is the separate backlight/CCFL connector: `+12V_BL`, GND, `BL_PWM`, and an
+optional Q8-switched low-side return. GPIO35/MOD1 pin 25 drives both the direct
+PWM pin and the Q8 gate path. Backlight current switching remains external.
+LCD-panel logic is powered from J22.
 
 The WeAct module's own reset button, power-on reset, brownout detector and
 watchdog are used. The external reset branch and TPS3839 supervisor have been
@@ -78,10 +90,11 @@ individual for tolerance. The 0-10 V signal resistors are individual 0805
 parts, as requested, rather than resistor networks.
 
 The 16 PLC inputs use four LTV-847S SOIC-16W quad optocouplers. The dedicated
-E-stop, HOLD and START channels use individual EL3H7 DIP-4 optocouplers. Each
-used channel has one 2.2 k field resistor, indicator LED, reverse diode and one
-individual 4.7 k pull-up. The optocoupler collectors drive the RP2350 directly;
-no receiver gates are fitted.
+E-stop, HOLD and START channels use individual EL3H7 DIP-4 optocouplers. The
+PLC channels use four isolated 4x4.7 k pull-up networks, one per four-channel
+group; the safety channels retain discrete 4.7 k pull-ups. Each input has one
+2.2 k field resistor, indicator LED and reverse diode. The optocoupler
+collectors drive the RP2350 directly; no receiver gates are fitted.
 
 For dry contacts, U40 (Traco `TBA2-0512`) generates a protected isolated 12 V
 field rail. One three-pad selector per bank chooses external 24 V or internal
@@ -145,8 +158,8 @@ component pads when debugging.
   a KF2EDG-specific plug.
 - The passive LVDS 330 ohm value follows this specification. The existing PicoLVDS
   prototype uses 270 ohm; validate the target LCD/cable before production.
-- The PLC input loops do not include an onboard isolated wetting supply. Provide
-  an external isolated 12-24 V field supply connected through the switched
-  inputs and their corresponding `FIELD_COM` return.
+- PLC input banks can use an external 24 V wetting source or the onboard
+  isolated 12 V contact supply selected by JP2-JP4. Preserve the isolated
+  `FIELD_COM` return and never connect it to logic GND.
 - The board is not a safety-rated e-stop controller. Motor energy removal must
   remain an independent hard-wired safety function.

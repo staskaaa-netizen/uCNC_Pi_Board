@@ -20,4 +20,6 @@
 - Encoder connectors J13-J15 are aligned along the bottom edge with additional
   spacing for mating connector bodies.
 - The switch-mode supply is grouped away from encoders and analog circuitry.
+- C2 and the optional Q8 gate network are user-placed inside the 200 x 150 mm
+  outline; final manual routing is in progress.
 - No component is intentionally placed under the WeAct module footprint.

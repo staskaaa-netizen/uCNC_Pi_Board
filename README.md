@@ -3,9 +3,10 @@
 Native KiCad 10 design for a socketed WeAct Studio RP2350B Core Board. The
 architecture preserves LeanCam's 32-bit input and output shift-register chains,
 with 16 isolated PLC inputs, dedicated direct E-stop, HOLD and START inputs, an
-eight-input expansion header, 16 motion outputs, eight open-collector field
-outputs, eight keyboard outputs, three encoders, full-size SD, optional ESP-01/ESP-01S,
-LCD LVDS output, three 0-10 V analog inputs and four 0-10 V analog outputs.
+eight-input expansion inputs, 15 motion outputs plus AUX, 16 general low-side
+field outputs, eight keyboard outputs, three encoders, full-size SD, optional ESP-01/ESP-01S,
+LCD LVDS output with a dedicated 12 V backlight supply, three 0-10 V analog
+inputs and four 0-10 V analog outputs.
 
 ## Open the project
 
@@ -63,10 +64,9 @@ them using KiCad 10 and the project-local vendor footprint:
 
 ## Release status
 
-The current board is a connected 200 x 150 mm, two-layer prototype. KiCad 10
-DRC reports no shorts and no unconnected items. Remaining checks are 108
-clearance findings, 34 silkscreen warnings and two intentional
-alternate-population courtyard overlaps between U41 and RN26/RN27. ERC has no
-electrical-rule errors and retains 34 library-symbol cache mismatch warnings.
-The design contains documented prototype assumptions and is not a
-safety-certified controller.
+The current board is a 200 x 150 mm, two-layer prototype. All footprints are
+inside the outline; final manual routing is in progress. The schematic verifies
+with 324 components and 338 nets, and ERC has no electrical-rule errors. PCB DRC
+reports no shorts, with two expected unconnected items and the documented
+prototype clearance/silkscreen findings. The design contains documented
+prototype assumptions and is not a safety-certified controller.

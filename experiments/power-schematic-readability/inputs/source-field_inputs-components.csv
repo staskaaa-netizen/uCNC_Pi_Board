@@ -1,0 +1,103 @@
+Reference,Value,LibId,PinCount
+C103,10uF,Device:C,2
+C105,10uF,Device:C,2
+D10,1N4148WS,Device:D,2
+D11,indicator,Device:LED,2
+D12,1N4148WS,Device:D,2
+D13,indicator,Device:LED,2
+D14,1N4148WS,Device:D,2
+D15,indicator,Device:LED,2
+D16,1N4148WS,Device:D,2
+D17,indicator,Device:LED,2
+D18,1N4148WS,Device:D,2
+D19,indicator,Device:LED,2
+D20,1N4148WS,Device:D,2
+D21,indicator,Device:LED,2
+D22,1N4148WS,Device:D,2
+D23,indicator,Device:LED,2
+D24,1N4148WS,Device:D,2
+D25,indicator,Device:LED,2
+D26,1N4148WS,Device:D,2
+D27,indicator,Device:LED,2
+D28,1N4148WS,Device:D,2
+D29,indicator,Device:LED,2
+D30,1N4148WS,Device:D,2
+D31,indicator,Device:LED,2
+D32,1N4148WS,Device:D,2
+D33,indicator,Device:LED,2
+D34,1N4148WS,Device:D,2
+D35,indicator,Device:LED,2
+D36,1N4148WS,Device:D,2
+D37,indicator,Device:LED,2
+D38,1N4148WS,Device:D,2
+D39,indicator,Device:LED,2
+D40,1N4148WS,Device:D,2
+D41,indicator,Device:LED,2
+D42,1N4148WS,Device:D,2
+D43,indicator,Device:LED,2
+D44,1N4148WS,Device:D,2
+D54,indicator,Device:LED,2
+D55,1N4148WS,Device:D,2
+D56,SS54,Device:D,2
+D9,indicator,Device:LED,2
+F4,750mA,Device:Fuse,2
+J26,Dedicated START button input,Connector_Generic:Conn_01x02,2
+J27,"Expansion inputs 4-7; 1=GND, 2=3.3 V",Connector_Generic:Conn_01x06,6
+J34,PLC positions 5-8 of J7 bank; software-mapped isolated inputs,Connector_Generic:Conn_01x08,8
+J35,PLC positions 5-8 of J8 bank; software-mapped isolated inputs,Connector_Generic:Conn_01x08,8
+J5,Dedicated E-stop loop,Connector_Generic:Conn_01x02,2
+J6,Dedicated HOLD button input,Connector_Generic:Conn_01x02,2
+J7,PLC positions 1-4; software-mapped isolated inputs,Connector_Generic:Conn_01x08,8
+J8,PLC positions 9-12; software-mapped isolated inputs,Connector_Generic:Conn_01x08,8
+J9,"Expansion inputs 0-3; 1=GND, 2=3.3 V",Connector_Generic:Conn_01x06,6
+JP2,J7 24V/CONTACT,Connector_Generic:Conn_01x03,3
+JP3,J8 24V/CONTACT,Connector_Generic:Conn_01x03,3
+JP4,SAFETY 24V/CONTACT,Connector_Generic:Conn_01x03,3
+R108,2.2k,Device:R,2
+R109,4.7k,Device:R,2
+R16,2.2k,Device:R,2
+R17,2.2k,Device:R,2
+R18,2.2k,Device:R,2
+R19,2.2k,Device:R,2
+R20,2.2k,Device:R,2
+R21,2.2k,Device:R,2
+R22,2.2k,Device:R,2
+R23,2.2k,Device:R,2
+R24,2.2k,Device:R,2
+R25,2.2k,Device:R,2
+R26,2.2k,Device:R,2
+R27,2.2k,Device:R,2
+R28,2.2k,Device:R,2
+R29,2.2k,Device:R,2
+R30,2.2k,Device:R,2
+R31,2.2k,Device:R,2
+R32,2.2k,Device:R,2
+R33,2.2k,Device:R,2
+R74,4.7k,Device:R,2
+R75,4.7k,Device:R,2
+R76,4.7k,Device:R,2
+R77,4.7k,Device:R,2
+R78,4.7k,Device:R,2
+R79,4.7k,Device:R,2
+R80,4.7k,Device:R,2
+R81,4.7k,Device:R,2
+R82,4.7k,Device:R,2
+R83,4.7k,Device:R,2
+R84,4.7k,Device:R,2
+R85,4.7k,Device:R,2
+R86,4.7k,Device:R,2
+R87,4.7k,Device:R,2
+R88,4.7k,Device:R,2
+R89,4.7k,Device:R,2
+R90,4.7k,Device:R,2
+R91,4.7k,Device:R,2
+RN6,4x10k,LeanCam:ResistorPack04,8
+RN7,4x10k,LeanCam:ResistorPack04,8
+U18,LTV-847S,LeanCam:QuadOpto,16
+U19,LTV-847S,LeanCam:QuadOpto,16
+U20,LTV-847S,LeanCam:QuadOpto,16
+U21,LTV-847S,LeanCam:QuadOpto,16
+U35,EL3H7,LeanCam:EL3H7,4
+U36,EL3H7,LeanCam:EL3H7,4
+U39,EL3H7,LeanCam:EL3H7,4
+U40,TBA2-0512,Converter_DCDC:TBA2-0512,4

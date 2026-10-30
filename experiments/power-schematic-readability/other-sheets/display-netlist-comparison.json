@@ -1,0 +1,125 @@
+{
+  "source_netlist": "experiments\\power-schematic-readability\\inputs\\source-display.json",
+  "generated_netlist": "experiments\\power-schematic-readability\\other-sheets\\display-python.net",
+  "source_component_count": 5,
+  "generated_component_count": 5,
+  "source_net_count": 18,
+  "generated_net_count": 22,
+  "root_local_label_prefix_normalized": true,
+  "missing_components": [],
+  "extra_components": [],
+  "value_changes": [],
+  "footprint_changes": [],
+  "missing_net_names": [],
+  "extra_net_names": [],
+  "changed_named_connections": [],
+  "source_nodes_missing_from_generated": [],
+  "generated_nodes_not_in_source": [
+    "J22.17",
+    "J22.18",
+    "J22.19",
+    "J22.20"
+  ],
+  "generated_connection_groups": {
+    "/+3V3": [
+      "C106.1",
+      "J22.1",
+      "J22.2",
+      "J22.3",
+      "U41.1",
+      "U41.4"
+    ],
+    "/GND": [
+      "C106.2",
+      "J22.13",
+      "J22.14",
+      "J22.4",
+      "J22.5",
+      "J22.6",
+      "U41.5",
+      "U41.8"
+    ],
+    "/HSTX_CLK_N": [
+      "RN27.1"
+    ],
+    "/HSTX_CLK_P": [
+      "RN27.2",
+      "U41.7"
+    ],
+    "/HSTX_D0_N": [
+      "RN26.3"
+    ],
+    "/HSTX_D0_P": [
+      "RN26.4",
+      "U41.2"
+    ],
+    "/HSTX_D1_N": [
+      "RN26.1"
+    ],
+    "/HSTX_D1_P": [
+      "RN26.2",
+      "U41.3"
+    ],
+    "/HSTX_D2_N": [
+      "RN27.3"
+    ],
+    "/HSTX_D2_P": [
+      "RN27.4",
+      "U41.6"
+    ],
+    "/LVDS_CLK_N": [
+      "J22.15",
+      "RN27.8",
+      "U41.16"
+    ],
+    "/LVDS_CLK_P": [
+      "J22.16",
+      "RN27.7",
+      "U41.15"
+    ],
+    "/LVDS_D0_N": [
+      "J22.7",
+      "RN26.6",
+      "U41.9"
+    ],
+    "/LVDS_D0_P": [
+      "J22.8",
+      "RN26.5",
+      "U41.10"
+    ],
+    "/LVDS_D1_N": [
+      "J22.9",
+      "RN26.8",
+      "U41.12"
+    ],
+    "/LVDS_D1_P": [
+      "J22.10",
+      "RN26.7",
+      "U41.11"
+    ],
+    "/LVDS_D2_N": [
+      "J22.11",
+      "RN27.6",
+      "U41.13"
+    ],
+    "/LVDS_D2_P": [
+      "J22.12",
+      "RN27.5",
+      "U41.14"
+    ],
+    "unconnected-(J22-Pin_17-Pad17)": [
+      "J22.17"
+    ],
+    "unconnected-(J22-Pin_18-Pad18)": [
+      "J22.18"
+    ],
+    "unconnected-(J22-Pin_19-Pad19)": [
+      "J22.19"
+    ],
+    "unconnected-(J22-Pin_20-Pad20)": [
+      "J22.20"
+    ]
+  },
+  "netlist_partition_identical": true,
+  "named_netlists_identical": true
+}

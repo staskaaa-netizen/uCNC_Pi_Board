@@ -1,0 +1,242 @@
+[
+  {
+    "sheet": "analog_io",
+    "title": "Analog I/O",
+    "paper": "A1",
+    "components": 40,
+    "nets": 29,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [],
+    "wires": 62,
+    "junctions": 2,
+    "labels": 71,
+    "no_connects": 0,
+    "source_erc_violations": 6,
+    "generated_erc_violations": 6,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "warning:isolated_pin_label": 4,
+      "warning:lib_symbol_issues": 2
+    },
+    "generated_erc_types": {
+      "warning:isolated_pin_label": 4,
+      "warning:lib_symbol_issues": 2
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\analog_io-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\analog_io-python.pdf"
+  },
+  {
+    "sheet": "display",
+    "title": "LVDS display",
+    "paper": "A3",
+    "components": 5,
+    "nets": 18,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [
+      "J22.17",
+      "J22.18",
+      "J22.19",
+      "J22.20"
+    ],
+    "wires": 32,
+    "junctions": 4,
+    "labels": 38,
+    "no_connects": 4,
+    "source_erc_violations": 9,
+    "generated_erc_violations": 9,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "error:power_pin_not_driven": 2,
+      "warning:isolated_pin_label": 4,
+      "warning:lib_symbol_issues": 3
+    },
+    "generated_erc_types": {
+      "error:power_pin_not_driven": 2,
+      "warning:isolated_pin_label": 4,
+      "warning:lib_symbol_issues": 3
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\display-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\display-python.pdf"
+  },
+  {
+    "sheet": "encoders",
+    "title": "Encoders",
+    "paper": "A3",
+    "components": 9,
+    "nets": 22,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [],
+    "wires": 22,
+    "junctions": 0,
+    "labels": 37,
+    "no_connects": 0,
+    "source_erc_violations": 10,
+    "generated_erc_violations": 10,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "warning:isolated_pin_label": 9,
+      "warning:lib_symbol_issues": 1
+    },
+    "generated_erc_types": {
+      "warning:isolated_pin_label": 9,
+      "warning:lib_symbol_issues": 1
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\encoders-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\encoders-python.pdf"
+  },
+  {
+    "sheet": "field_inputs",
+    "title": "Isolated field inputs",
+    "paper": "A0",
+    "components": 102,
+    "nets": 94,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [],
+    "wires": 140,
+    "junctions": 5,
+    "labels": 247,
+    "no_connects": 0,
+    "source_erc_violations": 12,
+    "generated_erc_violations": 12,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "error:power_pin_not_driven": 2,
+      "warning:isolated_pin_label": 1,
+      "warning:lib_symbol_issues": 9
+    },
+    "generated_erc_types": {
+      "error:power_pin_not_driven": 2,
+      "warning:isolated_pin_label": 1,
+      "warning:lib_symbol_issues": 9
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_inputs-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_inputs-python.pdf"
+  },
+  {
+    "sheet": "field_outputs",
+    "title": "PLC and motion outputs",
+    "paper": "A1",
+    "components": 71,
+    "nets": 110,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [
+      "RN13.1",
+      "RN13.8",
+      "RN31.4",
+      "RN31.5"
+    ],
+    "wires": 99,
+    "junctions": 11,
+    "labels": 269,
+    "no_connects": 4,
+    "source_erc_violations": 41,
+    "generated_erc_violations": 41,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "error:power_pin_not_driven": 1,
+      "warning:isolated_pin_label": 24,
+      "warning:lib_symbol_issues": 16
+    },
+    "generated_erc_types": {
+      "error:power_pin_not_driven": 1,
+      "warning:isolated_pin_label": 24,
+      "warning:lib_symbol_issues": 16
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_outputs-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_outputs-python.pdf"
+  },
+  {
+    "sheet": "mcu_io",
+    "title": "RP2350B and shift chains",
+    "paper": "A2",
+    "components": 23,
+    "nets": 119,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [
+      "MOD1.10",
+      "MOD1.17",
+      "MOD1.18",
+      "MOD1.25",
+      "MOD1.3",
+      "MOD1.30",
+      "MOD1.33",
+      "MOD1.4",
+      "MOD1.46",
+      "MOD1.49",
+      "MOD1.50",
+      "MOD1.64",
+      "U13.9",
+      "U6.7",
+      "U7.7",
+      "U8.7",
+      "U9.7"
+    ],
+    "wires": 20,
+    "junctions": 0,
+    "labels": 196,
+    "no_connects": 17,
+    "source_erc_violations": 139,
+    "generated_erc_violations": 139,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "error:pin_not_driven": 32,
+      "error:power_pin_not_driven": 2,
+      "warning:footprint_link_issues": 1,
+      "warning:isolated_pin_label": 103,
+      "warning:lib_symbol_issues": 1
+    },
+    "generated_erc_types": {
+      "error:pin_not_driven": 32,
+      "error:power_pin_not_driven": 2,
+      "warning:footprint_link_issues": 1,
+      "warning:isolated_pin_label": 103,
+      "warning:lib_symbol_issues": 1
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\mcu_io-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\mcu_io-python.pdf"
+  },
+  {
+    "sheet": "storage_wifi_ui",
+    "title": "Storage, Wi-Fi and UI",
+    "paper": "A2",
+    "components": 31,
+    "nets": 49,
+    "components_preserved": true,
+    "named_netlist_identical": true,
+    "missing_nodes": [],
+    "extra_nodes": [
+      "J19.11"
+    ],
+    "wires": 34,
+    "junctions": 2,
+    "labels": 92,
+    "no_connects": 1,
+    "source_erc_violations": 30,
+    "generated_erc_violations": 30,
+    "erc_type_counts_identical": true,
+    "source_erc_types": {
+      "error:power_pin_not_driven": 3,
+      "warning:isolated_pin_label": 25,
+      "warning:lib_symbol_issues": 2
+    },
+    "generated_erc_types": {
+      "error:power_pin_not_driven": 3,
+      "warning:isolated_pin_label": 25,
+      "warning:lib_symbol_issues": 2
+    },
+    "kicad": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\storage_wifi_ui-python.kicad_sch",
+    "pdf": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\storage_wifi_ui-python.pdf"
+  }
+]

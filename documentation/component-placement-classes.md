@@ -17,7 +17,8 @@ The current complete placement uses a 0.5 mm grid for all in-board ICs,
 passives, connectors and the controller module. Mounting holes remain fixed.
 
 1. Mechanical anchors: J1-J26, MOD1, H1-H4.
-2. Switching-power loops: U1, L1, input/output capacitors and feedback network.
+2. Switching-power loops: U1/L1 for +5 V and U3/L2 for `+12V_BL`, including
+   their input/output capacitors and feedback networks.
 3. Local IC decoupling: 100 nF from supply to GND at the associated IC pins.
 4. Safety channels: optocoupler, LED, reverse diode, resistors and filter.
 5. Analog channels: divider and ADC filter grouped beside J24.
@@ -30,8 +31,8 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 
 | Category | Placement rule |
 |---|---|
-| Buck input/output capacitors | Keep regulator current loops compact |
-| Bootstrap capacitor | Place directly between BOOT and SW |
+| Buck input/output capacitors | Keep both the U1 5 V and U3 backlight-buck current loops compact |
+| Bootstrap capacitor | Place directly between each regulator's BOOT and SW pins |
 | IC decoupling capacitor | Within 3 mm of the VCC and GND pins |
 | ADC filter capacitor | Group beside J24 with the associated analog channel |
 | Analog-output filter | Keep R92-R99 and C92-C99 grouped between U38 and J25 |
@@ -40,15 +41,16 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 | Isolated input channel | Keep field-side resistor/LED/reverse-diode group together at its connector and preserve isolation |
 | Isolated wetting supply | U40, D56, F4, C103 and C105 are in the F.Cu power area near the encoder interface; no secondary net may touch GND |
 | Input-mode selectors | JP2-JP4 are one 3-pin, 2.54 mm header per field bank on B.Cu |
-| Safety input optocoupler | Place the individual EL3H7 close to its J5/J6 field chain and pull-up |
-| PLC pull-up | Place the individual 4.7 k resistor beside its optocoupler collector on the U9 branch |
+| Safety input optocoupler | Place the individual EL3H7 close to its J5/J6 field chain and discrete pull-up |
+| PLC pull-up | Place one 4x4.7 k network per four LTV-847S collector outputs on the logic side |
 | Shift-register decoupling | C22-C29 sit immediately right of their respective U6-U13 VCC pins; ground via on the outer pad |
 | Motion output array | Group source, pull-down, 100 ohm array and its connector; keep buffers between U10-U13 and J10-J11 |
 | ULN output | Group both ULN banks, clamp rail, existing indicator chains, J12 and J32 |
-| Encoder channel | Keep U28 between J13-J15 and the MCU with C57 at its supply; keep R110/R111 at J15 for the ENC2_Z divider |
+| Encoder channel | Keep U28 between J13-J15 and the MCU with C106 at its supply; keep R110/R111 at J15 for the ENC2_Z divider |
 | Keyboard matrix | J16, RN20/RN21 and RN22/RN24 stay on F.Cu away from the bottom edge; KOUT arrays sit above J16 and KIN arrays below |
 | Expansion inputs | J9 and J27 flank U7 on F.Cu; each carries GND, +3V3 and four inputs |
-| Display option | J22 driven by U41/C106 active LVDS; RN26/RN27 are the mutually exclusive passive-LVDS alternative |
+| Backlight power | Keep U3, L2, D3, C107-C114, R126/R127 and the Q8/R131 gate network grouped on the manually selected side; keep J2 at an accessible edge |
+| Display option | J22 driven by U41/C57 active LVDS; RN26/RN27 are the mutually exclusive passive-LVDS alternative |
 | Fixed mechanical part | Do not move without explicit approval |
 
 ## Analog input block
@@ -88,13 +90,17 @@ The final main-power placement pass keeps the high-current loops local:
   high-frequency bypass at U1. Redundant C8, C16, C17 and C77 are removed.
 - C88/C89 and C69/C70 are grouped around U34 for the ESP-01/ESP-01S input and output
   rails.
-- U41, the active DS90LV047A LVDS driver, and its C106 bypass are grouped
+- U41, the active DS90LV047A LVDS driver, and its C57 bypass are grouped
   between the HSTX source and J22.
 - FB1 and C15 form the `+3V3_A` reference filter at MOD1 pin 48. The redundant
   10 uF C14 bulk capacitor is removed.
 - R73 is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO43.
 - D4/R4 indicate +5 V and D5/R5 indicate +3.3 V. Both pairs are placed in the
   open area between MOD1 and the regulators.
+
+Place D2/D3 immediately after the shared input fuse/TVS, then group U3, L2,
+C107-C114 and R126-R127 as one short-loop buck block. Place R131 and
+Q8/R129/R130 near J2. Keep J2 at an accessible board edge.
 
 ## Isolated input block
 
@@ -111,9 +117,9 @@ The 16 PLC chains follow the nearest J7/J8 rows: J7 positions 1-8 feed logical
 channels 9-16 and J8 positions 1-8 feed logical channels 1-8. The two dedicated
 safety chains are grouped beside J5 and J6. The four optocoupler output banks
 are also wired to their nearest 74HC165 data pins. Both permutations are fixed
-in `documentation/io-bit-map.md` for firmware. Each optocoupler output has an
-individual 4.7 k pull-up. No input-node capacitors are fitted; input debouncing
-belongs in firmware.
+in `documentation/io-bit-map.md` for firmware. RN32-RN35 provide 4x4.7 k
+PLC pull-ups; the three safety outputs retain individual 4.7 k resistors. No
+input-node capacitors are fitted; input debouncing belongs in firmware.
 
 
 ## SD card interface

@@ -11,14 +11,15 @@ Generated board documents:
 | Item | Specification |
 |---|---|
 | Product | LeanCam NCC / uCNC RP2350B Motherboard |
-| Status | Routed prototype, pre-release |
+| Status | Routed pre-release prototype; final cleanup in progress |
 | Controller | Socketed WeAct Studio RP2350B Core Board |
 | PCB outline | 200 mm x 150 mm |
 | PCB construction | Two copper layers, 1.6 mm finished thickness |
 | Mounting | Four M3 clearance holes |
-| Assembly | Functional parts on the front; J22, C57, JP2, JP3 and JP4 on the back |
+| Assembly | Main assembly on the front; J22, C57 and JP2-JP4 on the back |
 | Input supply | 24 V DC nominal machine supply, documented operating range 12-24 V |
 | Main 5 V rail | LMR36510 synchronous buck, 1 A |
+| Backlight rail | Second LMR36510 buck, 12 V, 1 A |
 | Logic supply | AMS1117-3.3, +3V3 |
 | Wi-Fi supply | Separate AMS1117-3.3, +3V3_WIFI |
 | Analog supply | L78L12, +12V_AO |
@@ -33,8 +34,8 @@ safety circuit.
 
 | Function | Capacity | Implementation |
 |---|---:|---|
-| Isolated PLC inputs | 16 | Four LTV-847S quad optocouplers, one per channel |
-| Dedicated safety/control inputs | 3 | E-stop, HOLD and START through individual EL3H7 optocouplers |
+| Isolated PLC inputs | 16 | Four LTV-847S quad optocouplers with four 4x4.7 k pull-up networks |
+| Dedicated safety/control inputs | 3 | E-stop, HOLD and START through individual EL3H7 DIP-4 optocouplers |
 | 3.3 V expansion inputs | 8 | Two four-channel headers, J9 and J27 |
 | Keyboard inputs | 8 | KIN0-KIN7 through the input shift chain |
 | General field outputs | 16 | DO0-DO15 through ULN2003A outputs and two BSS138 low-side stages |
@@ -67,14 +68,16 @@ The isolated field return is `FIELD_COM0` or `FIELD_COM1`; it is not connected
 to motherboard GND. D56 prevents external field voltage from backfeeding U40.
 
 Each PLC channel includes a 2.2 k series resistor, indicator LED,
-reverse-protection diode, optocoupler channel and individual 4.7 k logic-side
-pull-up. Firmware must debounce the sampled contacts.
+reverse-protection diode and one LTV-847S optocoupler channel plus one element
+from a 4x4.7 k logic-side pull-up network. The E-stop, HOLD and START pull-ups
+remain discrete. Firmware must debounce the sampled contacts.
 
 ## Connectors
 
 | Ref | Function |
 |---|---|
 | J1 | 24 V DC power input |
+| J2 | Backlight/CCFL: +12 V, GND, PWM, switched low-side return |
 | J4 | SWD programming/debug |
 | J5 | Dedicated E-stop loop |
 | J6, J26 | HOLD and START buttons |
@@ -98,8 +101,11 @@ Detailed connector pinouts are in `documentation/connectors.md`.
 
 ## Power and protection
 
-- Main input path: F1 2 A fuse, D1 24 V TVS and Q1 reverse-polarity MOSFET.
+- Main input path: F1 2 A fuse, D1 24 V TVS and two 1 A SS16 series diodes.
+- D2 provides reverse-polarity protection for the logic-side input; D3 does the
+  same for the backlight buck.
 - U1 converts the protected machine input to the 1 A +5 V rail.
+- U3 converts its separately diode-fed input to `+12V_BL` at up to 1 A.
 - The WeAct module receives +5 V and uses its own regulated 3.3 V rail.
 - U2 independently supplies board logic, SD and LCD logic at +3V3.
 - U34 independently supplies the optional ESP module at +3V3_WIFI.
@@ -118,18 +124,21 @@ supply and the ULN2003A/MOSFET ratings.
 - RN26 and RN27 are a mutually exclusive passive LVDS alternative. Do not fit
   U41 and both resistor networks together.
 - There is no HDMI connector or HDMI-specific support circuitry.
-- The LCD connector has no backlight contact; backlight power is external.
+- The LCD connector has no backlight contact. J2 carries `+12V_BL`, a 3.3 V
+  `BL_PWM` signal from GPIO35, ground and an optional Q8 low-side return. R131
+  series-protects only the connector PWM path; R129 branches from the same
+  GPIO-side node to Q8.
+- High-current backlight switching and the CCFL inverter remain external.
 - The full-size SD card uses 3.3 V SPI and includes card-detect.
 
 ## PCB and manufacturing data
 
 | Metric | Value |
 |---|---:|
-| Placed PCB footprints | 318 |
-| BOM component quantity | 312 |
-| Front / back footprint density | 39.23 / 4.92 percent |
-| Through-hole / SMD pads | 265 / 984 |
-| Through vias | 207 |
+| PCB footprints | 333 |
+| BOM component quantity | 327 |
+| Through-hole / SMD pads | 269 / 1018 |
+| Through vias | 214 |
 | Minimum track width | 0.12 mm |
 | Minimum drill | 0.30 mm |
 
@@ -140,12 +149,13 @@ does not replace the KiCad schematic, PCB, DRC or ERC reports.
 
 The version documented here was checked with KiCad 10.0.1:
 
-- DRC: zero unconnected items and no shorts.
+- DRC: no shorts; 4 signal connections remain open after the latest manual
+  placement pass.
 - ERC: zero electrical-rule errors.
-- Remaining release work: 108 standard clearance findings, 34 silkscreen
-  warnings and two intentional alternate-population courtyard overlaps between
-  U41 and RN26/RN27.
-- ERC retains 34 library-symbol cache mismatch warnings.
+- Remaining release work: finish manual placement and routing, then clear the
+  109 standard clearance findings and the remaining silkscreen, dangling
+  copper, thermal and courtyard findings.
+- ERC retains 33 library-symbol cache mismatch warnings.
 
 These remaining findings must be reviewed before fabrication. The board is not
 declared production-ready or safety-certified.

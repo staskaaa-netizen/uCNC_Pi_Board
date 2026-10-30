@@ -10,6 +10,7 @@ height to the Phoenix footprint.
 | Ref | Type | Pinout / function |
 |---|---|---|
 | J1 | 2-pin 3.5 mm | 1=VIN 12-24 V, 2=GND |
+| J2 | 4-pin 3.5 mm | 1=`+12V_BL`, 2=GND, 3=`BL_PWM`, 4=switched `BL_LED_N` |
 | J4 | 1x4 2.54 mm SWD | 1=3.3 V, 2=SWDIO, 3=SWCLK, 4=GND |
 | J5 | 2-pin 3.5 mm | 1=dedicated E-stop loop, 2=isolated safety common |
 | J6 | 2-pin 3.5 mm | 1=HOLD button loop, 2=isolated control common |
@@ -89,11 +90,11 @@ output is not connected to motherboard GND. See
 J7/J8 are arranged by shortest PCB fanout, not logical numbering. Firmware
 must use the position-to-bit permutation in `documentation/io-bit-map.md`.
 
-Each group of four PLC inputs uses one LTV-847S SOIC-16W optocoupler. The
-dedicated E-stop, HOLD and START channels use separate EL3H7 DIP-4 optocouplers.
-Every used output has one individual 4.7 k pull-up to `+3V3`. No input-node
-capacitors or pull-up arrays are fitted. Firmware must debounce the sampled
-contacts.
+Each group of four PLC inputs uses one LTV-847S SOIC-16W optocoupler. Four
+isolated 4x4.7 k networks provide the PLC pull-ups, while the dedicated E-stop,
+HOLD and START channels use individual EL3H7 DIP-4 optocouplers and retain
+discrete 4.7 k pull-ups to `+3V3`. No input-node capacitors are fitted.
+Firmware must debounce the sampled contacts.
 
 J5 is a dedicated E-stop connector and drives GPIO37 directly. J6 is the HOLD
 input on GPIO38; J26 is the START input on GPIO39. They are not input-chain
@@ -102,9 +103,13 @@ J9 and J27 expose the spare 74HC165 byte as two direct 3.3 V logic groups with
 10 k pulldowns. Each carries GND, +3.3 V and four inputs; do not connect field
 voltage to either connector.
 
-The verified J22 pinout has no backlight contact. MOD1 GPIO1 is reserved for a
-future backlight PWM, but no board net or separate external interface is
-assigned. The local backlight power switch, J2 and JP1 remain removed.
+The verified J22 pinout has no backlight contact. MOD1 GPIO35 drives `BL_PWM`
+on the separate J2 backlight connector at 3.3 V logic level. J2 pin 1 supplies
+the U3-derived `+12V_BL` rail to the backlight/CCFL assembly. Backlight current
+switching and any CCFL inverter remain external. GPIO35/MOD1 pin 25 drives
+`BL_PWM_MCU`; R131 provides 100 ohm series protection to J2 pin 3, while R129
+branches from the same MCU-side node to the Q8 gate. Q8 provides the optional
+switched LED return on pin 4.
 
 J9 and J27 flank U7 on the front side. J16 remains on the front side above the
 mid-board area, with KOUT arrays above it and KIN arrays below it.

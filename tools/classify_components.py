@@ -20,13 +20,14 @@ JSON_OUTPUT = ROOT / "hardware" / "component-placement-manifest.json"
 
 POWER_SUPPLIES = {
     "+3V3", "+3V3_A", "+3V3_SD", "+3V3_WIFI", "+5V",
-    "+5V_ENC", "+12V_AO", "VIN_PROT", "VCC5",
+    "+5V_ENC", "+12V_AO", "+12V_BL", "VIN_PROT", "VIN_BL_PROT", "VCC5",
 }
 DECOUPLING_IC = {
     "C22": "U6", "C23": "U7", "C24": "U8", "C25": "U9",
     "C26": "U10", "C27": "U11", "C28": "U12", "C29": "U13",
     "C53": "U24", "C54": "U25", "C55": "U26", "C56": "U27",
-    "C57": "U28",
+    "C57": "U41",
+    "C106": "U28",
     "C10": "U2 input", "C76": "U2 input",
     "C13": "U2 output", "C90": "U2 output",
     "C88": "U34 input", "C89": "U34 input",
@@ -34,9 +35,11 @@ DECOUPLING_IC = {
     "C3": "U1 input", "C4": "U1 input", "C5": "U1 input",
     "C6": "U1 output", "C7": "U1 output", "C11": "U1 output",
     "C86": "U1 BOOT", "C91": "U1 VCC",
+    "C107": "U3 input", "C108": "U3 input",
+    "C109": "U3 output", "C110": "U3 output", "C111": "U3 output",
+    "C112": "U3 output", "C113": "U3 BOOT", "C114": "U3 VCC",
 }
 CAP_ROLE_OVERRIDES = {
-    "C1": ("bulk input capacitor", "VIN_FUSED input filter"),
     "C2": ("input bypass capacitor", "VIN_FUSED input filter"),
     "C3": ("bulk input capacitor", "U1 input"),
     "C4": ("decoupling capacitor", "U1 input"),
@@ -63,6 +66,14 @@ CAP_ROLE_OVERRIDES = {
     "C100": ("decoupling capacitor", "U37 input"),
     "C101": ("bulk output capacitor", "U37 output"),
     "C102": ("decoupling capacitor", "U38 +12V_AO"),
+    "C107": ("bulk input capacitor", "U3 input"),
+    "C108": ("decoupling capacitor", "U3 input"),
+    "C109": ("bulk output capacitor", "U3 output"),
+    "C110": ("bulk output capacitor", "U3 output"),
+    "C111": ("bulk output capacitor", "U3 output"),
+    "C112": ("decoupling capacitor", "U3 output"),
+    "C113": ("bootstrap capacitor", "U3 BOOT to SW"),
+    "C114": ("IC VCC bypass capacitor", "U3 VCC"),
 }
 ANALOG_ROLE_OVERRIDES = {
     "R61": ("divider upper resistor", "AI0 to AI0_ADC"),
@@ -200,6 +211,8 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "display connector"
         if reference == "J1":
             return "main power connector"
+        if reference == "J2":
+            return "backlight/CCFL connector"
         if reference in {"J19", "J20"}:
             return "storage/wireless connector"
     if sheet == "Analog I/O":
@@ -227,6 +240,12 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "keyboard matrix"
         return "storage/UI support"
     if sheet == "Power and supervision":
+        if reference in {
+            "U3", "L2", "D3", "J2",
+            "C107", "C108", "C109", "C110", "C111", "C112", "C113",
+            "C114", "R126", "R127",
+        }:
+            return "12V backlight buck"
         if reference in {"U1", "L1", "C3", "C4", "C5", "C6", "C7", "C11", "C86", "C91", "R70", "R71", "R72"}:
             return "24V to 5V buck"
         if reference in {"U2", "C10", "C13", "C76", "C90"}:

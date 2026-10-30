@@ -1,0 +1,643 @@
+{
+  "title": "LeanCam NCC RP2350B - encoders",
+  "parts": [
+    {
+      "ref": "C57",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D53",
+      "value": "SMAJ5.0A",
+      "footprint": "Diode_SMD:D_SMA",
+      "lib": "Device",
+      "part": "D_TVS",
+      "description": "Bidirectional transient-voltage-suppression diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "F2",
+      "value": "500mA",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "Fuse",
+      "description": "Fuse",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J13",
+      "value": "Encoder 0: +5,A,B,Z,GND",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x05",
+      "description": "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J14",
+      "value": "Encoder 1: +5,A,B,Z,GND",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x05",
+      "description": "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J15",
+      "value": "Encoder 2: +5,A,B,Z,GND",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x05",
+      "description": "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R110",
+      "value": "5.1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R111",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U28",
+      "value": "SN74AHCT541DW",
+      "footprint": "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "OctalBufferAHCT",
+      "description": "Octal non-inverting 3-state 5 V-tolerant AHCT buffer, SN74AHCT541DW pinout",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "OE1_N",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A0",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Y0",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "A1",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Y1",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "A2",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Y2",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "A3",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "Y3",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "GND",
+          "type": "passive"
+        },
+        {
+          "number": "11",
+          "name": "A4",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "Y4",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "A5",
+          "type": "passive"
+        },
+        {
+          "number": "14",
+          "name": "Y5",
+          "type": "passive"
+        },
+        {
+          "number": "15",
+          "name": "A6",
+          "type": "passive"
+        },
+        {
+          "number": "16",
+          "name": "Y6",
+          "type": "passive"
+        },
+        {
+          "number": "17",
+          "name": "A7",
+          "type": "passive"
+        },
+        {
+          "number": "18",
+          "name": "Y7",
+          "type": "passive"
+        },
+        {
+          "number": "19",
+          "name": "OE2_N",
+          "type": "passive"
+        },
+        {
+          "number": "20",
+          "name": "VCC",
+          "type": "passive"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "+3V3",
+      "is_power": true,
+      "connections": [
+        [
+          "C57",
+          "1"
+        ],
+        [
+          "U28",
+          "20"
+        ]
+      ]
+    },
+    {
+      "name": "+5V",
+      "is_power": true,
+      "connections": [
+        [
+          "F2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+5V_ENC",
+      "is_power": false,
+      "connections": [
+        [
+          "D53",
+          "1"
+        ],
+        [
+          "F2",
+          "2"
+        ],
+        [
+          "J13",
+          "1"
+        ],
+        [
+          "J14",
+          "1"
+        ],
+        [
+          "J15",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_A_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "18"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_A_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J13",
+          "2"
+        ],
+        [
+          "U28",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_B_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "17"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_B_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J13",
+          "3"
+        ],
+        [
+          "U28",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_Z_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "ENC0_Z_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J13",
+          "4"
+        ],
+        [
+          "U28",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_A_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_A_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J14",
+          "2"
+        ],
+        [
+          "U28",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_B_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_B_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J14",
+          "3"
+        ],
+        [
+          "U28",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_Z_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "ENC1_Z_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J14",
+          "4"
+        ],
+        [
+          "U28",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_A_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_A_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J15",
+          "2"
+        ],
+        [
+          "U28",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_B_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_B_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J15",
+          "3"
+        ],
+        [
+          "U28",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_Z_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "R110",
+          "2"
+        ],
+        [
+          "R111",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ENC2_Z_5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J15",
+          "4"
+        ],
+        [
+          "R110",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "GND",
+      "is_power": true,
+      "connections": [
+        [
+          "C57",
+          "2"
+        ],
+        [
+          "D53",
+          "2"
+        ],
+        [
+          "J13",
+          "5"
+        ],
+        [
+          "J14",
+          "5"
+        ],
+        [
+          "J15",
+          "5"
+        ],
+        [
+          "R111",
+          "2"
+        ],
+        [
+          "U28",
+          "1"
+        ],
+        [
+          "U28",
+          "10"
+        ],
+        [
+          "U28",
+          "19"
+        ]
+      ]
+    }
+  ]
+}

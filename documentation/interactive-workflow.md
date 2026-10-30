@@ -1544,3 +1544,37 @@ Checkpoint 100 applies a safe coarse-grid pass:
 - Front/back ratsnest: `hardware/checkpoints/checkpoint-100-coarse-grid-front/`
 - DRC: `hardware/checkpoints/checkpoint-100-coarse-grid-front/drc.json`
 - ERC: `hardware/checkpoints/checkpoint-100-coarse-grid-front/erc.json`
+
+Checkpoint 101 replaces Q1 with diode-fed power branches and adds the
+backlight converter:
+
+- The common input retains F1 and D1. Two 1 A, 60 V SS16 series diodes split
+  the protected feed into `VIN_PROT` for logic/analog housekeeping and
+  `VIN_BL_PROT` for the backlight converter.
+- Q1, R1 and the Q1 gate zener are removed.
+- U3 is a second LMR36510ADDAR buck configured for 12 V / 1 A. The passive
+  set is standardized with the other regulators: 47 uH, 100 k / 9.09 k
+  feedback, 3 x 22 uF/25 V output, 22 uF/50 V input, 1 uF VCC bypass and
+  100 nF bootstrap. C1 is removed because both diode-fed branches retain bulk
+  input capacitance.
+- The existing U37 L78L12 `+12V_AO` rail remains unchanged for the four
+  0-10 V outputs.
+- J2 exposes backlight power, PWM, ground and an optional low-side LED return.
+  The direct PWM and Q8 gate share GPIO35/MOD1 pin 25. The redundant two-pin J3
+  output and unused BL power-good network are omitted. GPIO1, GPIO3 and GPIO36
+  remain uncommitted spare outputs.
+- A 100 ohm R131 is inserted between the MCU PWM output and J2 pin 3. R129
+  branches from the same MCU-side node to Q8. A dedicated 0.2 mm
+  BacklightControl netclass covers `BL_PWM_MCU`, `BL_PWM` and `BL_SW_GATE`;
+  only `+12V_BL` and `BL_LED_N` remain on the 0.8 mm Power class.
+- RN36 pulls ESP `EN`, `RST`, `GPIO0` and `GPIO2` to `+3V3_WIFI`, keeping
+  those interface pins in the dedicated ESP supply domain.
+- RN32-RN35 provide four PLC 4x4.7 k pull-up networks and RN36 provides the
+  ESP 4x10 k pull-up network. The three safety pull-ups remain discrete.
+- The PC817C experiment was reverted because the separate optocouplers did not
+  fit. The four LTV-847S and three EL3H7 footprints are restored, and no
+  existing copper was changed.
+- All footprints are now inside the 200 x 150 mm PCB outline; final manual
+  routing remains in progress.
+- ERC has no electrical errors. PCB DRC reports no shorts and two expected
+  unconnected items.

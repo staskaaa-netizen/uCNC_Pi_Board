@@ -1,0 +1,42 @@
+Reference,Value,LibId,PinCount
+C1,10uF 50V,Device:C,2
+C10,10uF,Device:C,2
+C11,22uF 10V,Device:C,2
+C13,100nF,Device:C,2
+C15,100nF,Device:C,2
+C2,100nF 100V,Device:C,2
+C3,10uF 50V,Device:C,2
+C4,100nF 100V,Device:C,2
+C5,22uF 50V,Device:C,2
+C6,22uF 10V,Device:C,2
+C7,100nF,Device:C,2
+C76,100nF,Device:C,2
+C86,100nF,Device:C,2
+C90,22uF,Device:C,2
+C91,1uF,Device:C,2
+D1,SMBJ24CA,Device:D_TVS,2
+D2,MMSZ5242B,Device:D_Zener,2
+D4,5V_PWR,Device:LED,2
+D5,3V3_PWR,Device:LED,2
+F1,2 A,Device:Fuse,2
+FB1,600R@100MHz,Device:FerriteBead,2
+FLG1,GND,power:PWR_FLAG,1
+FLG2,+5V,power:PWR_FLAG,1
+FLG3,+3V3_A,power:PWR_FLAG,1
+FLG4,VIN_PROT,power:PWR_FLAG,1
+FLG5,+5V_ENC,power:PWR_FLAG,1
+FLG6,+3V3_SD,power:PWR_FLAG,1
+FLG7,+5V_ISO_IN,power:PWR_FLAG,1
+FLG8,+12V_FIELD,power:PWR_FLAG,1
+J1,24 V DC input,Connector_Generic:Conn_01x02,2
+L1,22uH 1.5A,Device:L,2
+Q1,IRF7240PBF,LeanCam:PMOS_SO8,8
+R1,100k,Device:R,2
+R4,1k,Device:R,2
+R5,1k,Device:R,2
+R70,34k,Device:R,2
+R71,46.4k,Device:R,2
+R72,20k,Device:R,2
+R73,100k,Device:R,2
+U1,LMR36510ADDAR,Regulator_Switching:LMR36510ADDA,9
+U2,AMS1117-3.3,Regulator_Linear:AMS1117-3.3,3

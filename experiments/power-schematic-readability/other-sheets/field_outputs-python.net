@@ -1,0 +1,8201 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_outputs-python.kicad_sch")
+		(date "2026-10-29T17:48:41")
+		(tool "Eeschema 10.0.1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "PLC outputs, motion outputs and auxiliary drivers")
+				(company "LeanCam / uCNC Python hierarchy experiment")
+				(rev)
+				(date "2026-10-29")
+				(source "field_outputs-python.kicad_sch")
+				(comment
+					(number "1")
+					(value "Existing symbols grouped by function; local nets routed where practical")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C53")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b705a8e7-2133-5937-a1c1-79b52eea726d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C54")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "403277f2-f27b-51f0-aaa6-a3fcb3328572")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C55")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ebbcae62-e717-5923-b97a-d9225116e667")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C56")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e161bc79-549c-5439-8414-b68846e6c184")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D45")
+			(value "DO0")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "023741c3-d88a-5d17-a7b0-9175744b29e7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D46")
+			(value "DO1")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "62f5f34f-60c8-557c-ab22-5c91a69eb837")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D47")
+			(value "DO2")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ad82aaec-1097-5089-a35f-099557641f6e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D48")
+			(value "DO3")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c9f578af-b41f-5890-80df-22e43893fbe0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D49")
+			(value "DO4")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "538d98b1-89c0-5da4-a529-eb18762e34ac")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D50")
+			(value "DO5")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7547f113-d29a-5ee8-ae87-803ff4071ae5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D51")
+			(value "DO6")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3111eb1e-ade8-5341-a2b5-b395a37474db")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D52")
+			(value "DO7")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8b0f43b7-ecee-5dc3-8f6c-7d5c8dc29ba1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D57")
+			(value "DO8")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5dcce971-e3e1-52b4-9b88-a84dcf385fb2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D58")
+			(value "DO9")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "82b2742d-ecba-5a64-9343-44f44d50daa3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D59")
+			(value "DO10")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "006c99c5-6f4f-5ad5-8cac-89eeca4c517c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D60")
+			(value "DO11")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3705794d-a95f-59d1-8a33-ee9e634d3cec")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D61")
+			(value "DO12")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "58403469-5757-5da8-925f-fa80cd2f6534")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D62")
+			(value "DO13")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ba89e268-e30f-5373-8335-7c5b23c66bb0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D63")
+			(value "DO14")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3054f081-f645-5a8a-9fed-714f473b72e6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D64")
+			(value "DO15")
+			(footprint "LED_SMD:LED_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "LTST-C150 series")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "Footprint") "LED_SMD:LED_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C150 series")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8b4fc0fb-177c-5c75-ab2b-2318dfcc9451")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J10")
+			(value "AX0: EN, STEP, DIR, GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/4-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x04")
+				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/4-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bfd5008a-54e2-5f67-9f5e-8547cbbcb66f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J11")
+			(value "AX1: EN, STEP, DIR, GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/4-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x04")
+				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/4-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ad4fb0b0-8661-50e9-8449-de0f8c657094")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J12")
+			(value "General outputs 0-7")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/8-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x08")
+				(description "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/8-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "99303f11-38e4-5f72-b0a5-2e8916224187")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J28")
+			(value "AX2: EN, STEP, DIR, GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/4-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x04")
+				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/4-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "74db22d4-0063-514b-801d-208be4b5b274")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J29")
+			(value "AX3: EN, STEP, DIR, GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/4-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x04")
+				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/4-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b02294f9-2068-5224-9dc7-f0c218104404")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J30")
+			(value "AX4: EN, STEP, DIR, GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/4-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x04")
+				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/4-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "99123727-ba52-5447-916c-01000c9d5b4a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J31")
+			(value "AUX open-drain output and GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/2-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x02")
+				(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/2-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "43485e5c-6b61-50fb-8b3b-5ee72a01fb4f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J32")
+			(value "General outputs 8-15; DO_COM and GND are shared through J12")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/8-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x08")
+				(description "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/8-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3138280e-e63b-5034-a2c0-86201fc08e46")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J33")
+			(value "General outputs field +V and GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/2-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x02")
+				(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/2-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9047538c-341e-581d-be9b-014b22ac2424")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q5")
+			(value "BSS138")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "MPN") "BSS138")
+				(field
+					(name "Manufacturer") "onsemi")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Transistor_FET")
+				(part "Q_NMOS_GSD")
+				(description "N-MOSFET transistor, gate/source/drain")
+			)
+			(property
+				(name "MPN")
+				(value "BSS138")
+			)
+			(property
+				(name "Manufacturer")
+				(value "onsemi")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "transistor NMOS N-MOS N-MOSFET")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "373f1857-f4d7-592f-b8d2-6bf36bbecf9a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q6")
+			(value "BSS138")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "MPN") "BSS138")
+				(field
+					(name "Manufacturer") "onsemi")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Transistor_FET")
+				(part "Q_NMOS_GSD")
+				(description "N-MOSFET transistor, gate/source/drain")
+			)
+			(property
+				(name "MPN")
+				(value "BSS138")
+			)
+			(property
+				(name "Manufacturer")
+				(value "onsemi")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "transistor NMOS N-MOS N-MOSFET")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "67426df3-f011-54ab-a30f-c405d26f11c1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q7")
+			(value "BSS138")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "MPN") "BSS138")
+				(field
+					(name "Manufacturer") "onsemi")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Transistor_FET")
+				(part "Q_NMOS_GSD")
+				(description "N-MOSFET transistor, gate/source/drain")
+			)
+			(property
+				(name "MPN")
+				(value "BSS138")
+			)
+			(property
+				(name "Manufacturer")
+				(value "onsemi")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "transistor NMOS N-MOS N-MOSFET")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bddd2a35-cea0-57be-a4e0-14dd0495ffda")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R34")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8ea882d4-07cc-561c-869c-6d35df70eede")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R35")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e3ca6f69-1c21-5ab3-81b6-01a9ef6bf039")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R36")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "76ed53a9-7439-5ac3-b0ab-4f0a9140adb7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R37")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ca1e41b7-96c6-50e8-ad8d-3cb206cddabf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R38")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8c9fbcd2-200e-5fc2-a6dc-4c0a8cd44287")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R39")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8d80143b-8cba-5d32-bb53-1908bfc3d692")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R40")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8d99d31e-6e4f-53e9-bde2-92f32414e71a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R41")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4a44015c-6ed3-57c5-ae32-e16f9deb7d2e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R113")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9bd055f1-8ea9-53b1-b303-d6a76a24edba")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R114")
+			(value "100R")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 100R")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 100R")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "16b4bfa1-d417-5760-b7a3-03584794ff92")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R115")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "591191aa-7516-510b-b55f-b6d8496077eb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R116")
+			(value "100R")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 100R")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 100R")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "45ab45a2-234b-515b-8238-c5fd89bf24da")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R117")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c9d7e641-b4a6-5501-a7b5-83436c122d41")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R118")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "289a8210-494e-5eed-b682-c3b8e0a8916f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R119")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d62de66d-634b-5361-aecc-32a1030123eb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R120")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1d7e0b68-dce4-50af-beb4-0bfe721cc8ef")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R121")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2ab9da63-e7c2-5bda-9b99-b9bc953fb078")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R122")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dd370c29-6a36-5b1b-937b-f0965e505f93")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R123")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "54deb878-4994-53c1-82c0-b212e59f5702")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R124")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dc454fef-2d89-5ec0-acf2-c4ed6fb3a980")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R125")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 2.2k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 2.2k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b7c3a1f5-0cb7-5dce-a083-8e192a60c519")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN8")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c2e505d9-67ae-55b8-8cac-a3654c463a23")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN9")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "955669fc-9106-57a6-9c34-48590309a184")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN10")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "57b87a9d-ae09-59ec-96e5-5db8e3d9eb88")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN11")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "08058389-ba39-523f-b561-42ec48f251f9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN12")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1b118495-1968-5f65-b957-1842ddf6a84f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN13")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d61a5051-b2c5-5deb-8b86-d50b6d8401fb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN16")
+			(value "4x100R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07100RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07100RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "32bcd087-fe1b-574d-a4e2-99aec4537179")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN17")
+			(value "4x100R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07100RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07100RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2bccdc0c-f0ae-5c99-8029-082b5e96fa51")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN18")
+			(value "4x100R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07100RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07100RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "eeec6af3-3e2c-521c-a5c0-be9c9efde43f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN19")
+			(value "4x100R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07100RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07100RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "189cedc5-08da-5d95-9abf-a33a2d8ca500")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN20")
+			(value "4x100R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07100RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07100RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "91e7cb88-f3bc-51e6-bc93-1381473020b3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN21")
+			(value "4x100R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07100RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07100RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6fb032dd-22d5-5f66-84a2-c16cf21e4791")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN30")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f5c8dfa1-c8df-5111-b009-7e2a802528f6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN31")
+			(value "4x10k")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
+			(fields
+				(field
+					(name "MPN") "YC164-FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC164-FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f4b429d9-d5fd-512b-bd8e-dca0307289bf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U24")
+			(value "SN74AHCT541DW")
+			(footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "SN74AHCT541DW")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "OctalBuffer5V")
+				(description "Octal non-inverting 3-state buffer, SN74AHCT541DW pinout")
+			)
+			(property
+				(name "MPN")
+				(value "SN74AHCT541DW")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC-20W*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "37650613-ed99-58c4-8c7a-db61c4c065f4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U25")
+			(value "SN74AHCT541DW")
+			(footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "SN74AHCT541DW")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "OctalBuffer5V")
+				(description "Octal non-inverting 3-state buffer, SN74AHCT541DW pinout")
+			)
+			(property
+				(name "MPN")
+				(value "SN74AHCT541DW")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC-20W*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e5b9f614-bbfd-5e68-b8dd-1cea5ed39803")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U26")
+			(value "ULN2003ADR")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "ULN2003ADR")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Transistor_Array")
+				(part "ULN2003A")
+				(description "High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16")
+			)
+			(property
+				(name "MPN")
+				(value "ULN2003ADR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "darlington transistor array")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* SSOP*4.4x5.2mm*P0.65mm* TSSOP*4.4x5mm*P0.65mm* SOIC*W*5.3x10.2mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1ddbae18-e476-50dd-8b07-cb4a43d83b0c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U27")
+			(value "ULN2003ADR")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "ULN2003ADR")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Transistor_Array")
+				(part "ULN2003A")
+				(description "High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16")
+			)
+			(property
+				(name "MPN")
+				(value "ULN2003ADR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/field_outputs-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "darlington transistor array")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* SSOP*4.4x5.2mm*P0.65mm* TSSOP*4.4x5mm*P0.65mm* SOIC*W*5.3x10.2mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b39df8a7-b44d-5da7-8f54-4576ccb385f4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x02")
+			(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x02")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x04")
+			(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x04")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x08")
+			(description "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x08")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "Pin_6")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "Pin_7")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "Pin_8")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "LED")
+			(description "Light emitting diode")
+			(footprints
+				(fp "LED*")
+				(fp "LED_SMD:*")
+				(fp "LED_THT:*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "LED")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode")
+				(field
+					(name "Sim.Pins") "1=K 2=A")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "OctalBuffer5V")
+			(description "Octal non-inverting 3-state buffer, SN74AHCT541DW pinout")
+			(docs "~")
+			(footprints
+				(fp "SOIC-20W*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "OctalBuffer5V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "Octal non-inverting 3-state buffer, SN74AHCT541DW pinout")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "OE1_N")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A0")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Y0")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "A1")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Y1")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "A2")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "Y2")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "A3")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "Y3")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "A4")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "Y4")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "A5")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "Y5")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "A6")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "Y6")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "A7")
+					(type "passive")
+				)
+				(pin
+					(num "18")
+					(name "Y7")
+					(type "passive")
+				)
+				(pin
+					(num "19")
+					(name "OE2_N")
+					(type "passive")
+				)
+				(pin
+					(num "20")
+					(name "VCC")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "ResistorPack04")
+			(description "Four isolated resistors in one SMD array")
+			(docs "~")
+			(footprints
+				(fp "R_Array_*4x*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ResistorPack04")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "Four isolated resistors in one SMD array")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "R1A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "R2A")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "R3A")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "R4A")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "R4B")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "R3B")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "R2B")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "R1B")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Transistor_Array")
+			(part "ULN2003A")
+			(description "High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16")
+			(docs "http://www.ti.com/lit/ds/symlink/uln2003a.pdf")
+			(footprints
+				(fp "DIP*W7.62mm*")
+				(fp "SOIC*3.9x9.9mm*P1.27mm*")
+				(fp "SSOP*4.4x5.2mm*P0.65mm*")
+				(fp "TSSOP*4.4x5mm*P0.65mm*")
+				(fp "SOIC*W*5.3x10.2mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ULN2003A")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/uln2003a.pdf")
+				(field
+					(name "Description") "High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "I1")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "I2")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "I3")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "I4")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "I5")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "I6")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "I7")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "COM")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "O7")
+					(type "open_collector")
+				)
+				(pin
+					(num "11")
+					(name "O6")
+					(type "open_collector")
+				)
+				(pin
+					(num "12")
+					(name "O5")
+					(type "open_collector")
+				)
+				(pin
+					(num "13")
+					(name "O4")
+					(type "open_collector")
+				)
+				(pin
+					(num "14")
+					(name "O3")
+					(type "open_collector")
+				)
+				(pin
+					(num "15")
+					(name "O2")
+					(type "open_collector")
+				)
+				(pin
+					(num "16")
+					(name "O1")
+					(type "open_collector")
+				)
+			)
+		)
+		(libpart
+			(lib "Transistor_FET")
+			(part "Q_NMOS_GSD")
+			(description "N-MOSFET transistor, gate/source/drain")
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "Q_NMOS_GSD")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "N-MOSFET transistor, gate/source/drain")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "G")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "S")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "D")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Connector_Generic")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Transistor_Array")
+			(uri "${KICAD10_SYMBOL_DIR}/Transistor_Array.kicad_sym")
+		)
+		(library
+			(logical "Transistor_FET")
+			(uri "${KICAD10_SYMBOL_DIR}/Transistor_FET.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/+5V")
+			(class "Default")
+			(node
+				(ref "C53")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C54")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "2")
+			(name "/AUX_GATE")
+			(class "Default")
+			(node
+				(ref "Q5")
+				(pin "1")
+				(pinfunction "G_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R113")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN16")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/AUX_OUT")
+			(class "Default")
+			(node
+				(ref "J31")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q5")
+				(pin "3")
+				(pinfunction "D_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/BUFY0")
+			(class "Default")
+			(node
+				(ref "RN16")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "12")
+				(pinfunction "Y4_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/BUFY1")
+			(class "Default")
+			(node
+				(ref "RN16")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "11")
+				(pinfunction "A4_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/BUFY2")
+			(class "Default")
+			(node
+				(ref "RN16")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "14")
+				(pinfunction "Y5_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "/BUFY3")
+			(class "Default")
+			(node
+				(ref "RN16")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "13")
+				(pinfunction "A5_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/BUFY4")
+			(class "Default")
+			(node
+				(ref "RN17")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "16")
+				(pinfunction "Y6_16")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/BUFY5")
+			(class "Default")
+			(node
+				(ref "RN17")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "15")
+				(pinfunction "A6_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "/BUFY6")
+			(class "Default")
+			(node
+				(ref "RN17")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "18")
+				(pinfunction "Y7_18")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "/BUFY7")
+			(class "Default")
+			(node
+				(ref "RN17")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "17")
+				(pinfunction "A7_17")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "/BUFY8")
+			(class "Default")
+			(node
+				(ref "RN10")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "12")
+				(pinfunction "Y4_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "/BUFY9")
+			(class "Default")
+			(node
+				(ref "RN10")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "11")
+				(pinfunction "A4_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/BUFY10")
+			(class "Default")
+			(node
+				(ref "RN10")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "13")
+				(pinfunction "A5_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "/BUFY11")
+			(class "Default")
+			(node
+				(ref "RN10")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "14")
+				(pinfunction "Y5_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "/BUFY12")
+			(class "Default")
+			(node
+				(ref "RN11")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "15")
+				(pinfunction "A6_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "/BUFY13")
+			(class "Default")
+			(node
+				(ref "RN11")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "16")
+				(pinfunction "Y6_16")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "/BUFY14")
+			(class "Default")
+			(node
+				(ref "RN11")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "17")
+				(pinfunction "A7_17")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "/BUFY15")
+			(class "Default")
+			(node
+				(ref "RN11")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "18")
+				(pinfunction "Y7_18")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "/DO0")
+			(class "Default")
+			(node
+				(ref "D45")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "10")
+				(pinfunction "O7_10")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "21")
+			(name "/DO1")
+			(class "Default")
+			(node
+				(ref "D46")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "11")
+				(pinfunction "O6_11")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "22")
+			(name "/DO2")
+			(class "Default")
+			(node
+				(ref "D47")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "12")
+				(pinfunction "O5_12")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "23")
+			(name "/DO3")
+			(class "Default")
+			(node
+				(ref "D48")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "13")
+				(pinfunction "O4_13")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "24")
+			(name "/DO4")
+			(class "Default")
+			(node
+				(ref "D49")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "14")
+				(pinfunction "O3_14")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "25")
+			(name "/DO5")
+			(class "Default")
+			(node
+				(ref "D50")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "6")
+				(pinfunction "Pin_6_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "15")
+				(pinfunction "O2_15")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "26")
+			(name "/DO6")
+			(class "Default")
+			(node
+				(ref "D51")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "7")
+				(pinfunction "Pin_7_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "16")
+				(pinfunction "O1_16")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "27")
+			(name "/DO7")
+			(class "Default")
+			(node
+				(ref "D52")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J12")
+				(pin "8")
+				(pinfunction "Pin_8_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "10")
+				(pinfunction "O7_10")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "28")
+			(name "/DO8")
+			(class "Default")
+			(node
+				(ref "D57")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "11")
+				(pinfunction "O6_11")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "29")
+			(name "/DO9")
+			(class "Default")
+			(node
+				(ref "D58")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "12")
+				(pinfunction "O5_12")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "30")
+			(name "/DO10")
+			(class "Default")
+			(node
+				(ref "D59")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "13")
+				(pinfunction "O4_13")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "31")
+			(name "/DO11")
+			(class "Default")
+			(node
+				(ref "D60")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "14")
+				(pinfunction "O3_14")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "32")
+			(name "/DO12")
+			(class "Default")
+			(node
+				(ref "D61")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "15")
+				(pinfunction "O2_15")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "33")
+			(name "/DO13")
+			(class "Default")
+			(node
+				(ref "D62")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "6")
+				(pinfunction "Pin_6_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "16")
+				(pinfunction "O1_16")
+				(pintype "open_collector")
+			)
+		)
+		(net
+			(code "34")
+			(name "/DO14")
+			(class "Default")
+			(node
+				(ref "D63")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "7")
+				(pinfunction "Pin_7_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q6")
+				(pin "3")
+				(pinfunction "D_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "35")
+			(name "/DO14_GATE")
+			(class "Default")
+			(node
+				(ref "Q6")
+				(pin "1")
+				(pinfunction "G_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R114")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R115")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "36")
+			(name "/DO15")
+			(class "Default")
+			(node
+				(ref "D64")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J32")
+				(pin "8")
+				(pinfunction "Pin_8_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q7")
+				(pin "3")
+				(pinfunction "D_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "37")
+			(name "/DO15_GATE")
+			(class "Default")
+			(node
+				(ref "Q7")
+				(pin "1")
+				(pinfunction "G_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R116")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R117")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "38")
+			(name "/DO_COM")
+			(class "Default")
+			(node
+				(ref "C55")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C56")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J33")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R118")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R119")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R120")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R121")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R122")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R123")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R124")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R125")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R34")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R35")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R36")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R37")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R38")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R39")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R40")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R41")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "9")
+				(pinfunction "COM_9")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "9")
+				(pinfunction "COM_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "39")
+			(name "/DO_LED0_A")
+			(class "Default")
+			(node
+				(ref "D45")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R34")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "40")
+			(name "/DO_LED1_A")
+			(class "Default")
+			(node
+				(ref "D46")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R35")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "41")
+			(name "/DO_LED2_A")
+			(class "Default")
+			(node
+				(ref "D47")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R36")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "42")
+			(name "/DO_LED3_A")
+			(class "Default")
+			(node
+				(ref "D48")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R37")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "43")
+			(name "/DO_LED4_A")
+			(class "Default")
+			(node
+				(ref "D49")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R38")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "44")
+			(name "/DO_LED5_A")
+			(class "Default")
+			(node
+				(ref "D50")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R39")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "45")
+			(name "/DO_LED6_A")
+			(class "Default")
+			(node
+				(ref "D51")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R40")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "46")
+			(name "/DO_LED7_A")
+			(class "Default")
+			(node
+				(ref "D52")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R41")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "47")
+			(name "/DO_LED8_A")
+			(class "Default")
+			(node
+				(ref "D57")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R118")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "48")
+			(name "/DO_LED9_A")
+			(class "Default")
+			(node
+				(ref "D58")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R119")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "49")
+			(name "/DO_LED10_A")
+			(class "Default")
+			(node
+				(ref "D59")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R120")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "50")
+			(name "/DO_LED11_A")
+			(class "Default")
+			(node
+				(ref "D60")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R121")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "51")
+			(name "/DO_LED12_A")
+			(class "Default")
+			(node
+				(ref "D61")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R122")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "52")
+			(name "/DO_LED13_A")
+			(class "Default")
+			(node
+				(ref "D62")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R123")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "53")
+			(name "/DO_LED14_A")
+			(class "Default")
+			(node
+				(ref "D63")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R124")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "54")
+			(name "/DO_LED15_A")
+			(class "Default")
+			(node
+				(ref "D64")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R125")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "55")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C53")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C54")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C55")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C56")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J10")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J11")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J28")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J29")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J30")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J31")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J33")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q5")
+				(pin "2")
+				(pinfunction "S_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q6")
+				(pin "2")
+				(pinfunction "S_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q7")
+				(pin "2")
+				(pinfunction "S_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R113")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R115")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R117")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN10")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN10")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN10")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN10")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN11")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN11")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN11")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN11")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN12")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN12")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN12")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN12")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN13")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN13")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN13")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN31")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN31")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN31")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN8")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN9")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "1")
+				(pinfunction "OE1_N_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U24")
+				(pin "19")
+				(pinfunction "OE2_N_19")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "1")
+				(pinfunction "OE1_N_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U25")
+				(pin "19")
+				(pinfunction "OE2_N_19")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U27")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "56")
+			(name "/KOUT0")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "57")
+			(name "/KOUT1")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "58")
+			(name "/KOUT2")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "59")
+			(name "/KOUT3")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "60")
+			(name "/KOUT4")
+			(class "Default")
+			(node
+				(ref "RN21")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "61")
+			(name "/KOUT5")
+			(class "Default")
+			(node
+				(ref "RN21")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "62")
+			(name "/KOUT6")
+			(class "Default")
+			(node
+				(ref "RN21")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "63")
+			(name "/KOUT7")
+			(class "Default")
+			(node
+				(ref "RN21")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "64")
+			(name "/MOTION0")
+			(class "Default")
+			(node
+				(ref "J10")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN16")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "65")
+			(name "/MOTION1")
+			(class "Default")
+			(node
+				(ref "J10")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN16")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "66")
+			(name "/MOTION2")
+			(class "Default")
+			(node
+				(ref "J10")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN16")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "67")
+			(name "/MOTION3")
+			(class "Default")
+			(node
+				(ref "J11")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN17")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "68")
+			(name "/MOTION4")
+			(class "Default")
+			(node
+				(ref "J11")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN17")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "69")
+			(name "/MOTION5")
+			(class "Default")
+			(node
+				(ref "J11")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN17")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "70")
+			(name "/MOTION6")
+			(class "Default")
+			(node
+				(ref "J28")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN17")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "71")
+			(name "/MOTION7")
+			(class "Default")
+			(node
+				(ref "J28")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "72")
+			(name "/MOTION8")
+			(class "Default")
+			(node
+				(ref "J28")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "73")
+			(name "/MOTION9")
+			(class "Default")
+			(node
+				(ref "J29")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "74")
+			(name "/MOTION10")
+			(class "Default")
+			(node
+				(ref "J29")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN18")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "75")
+			(name "/MOTION11")
+			(class "Default")
+			(node
+				(ref "J29")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "76")
+			(name "/MOTION12")
+			(class "Default")
+			(node
+				(ref "J30")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "77")
+			(name "/MOTION13")
+			(class "Default")
+			(node
+				(ref "J30")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "78")
+			(name "/MOTION14")
+			(class "Default")
+			(node
+				(ref "J30")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN19")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "79")
+			(name "/OUT0")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "8")
+				(pinfunction "A3_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "80")
+			(name "/OUT1")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "9")
+				(pinfunction "Y3_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "81")
+			(name "/OUT2")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "6")
+				(pinfunction "A2_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "82")
+			(name "/OUT3")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "7")
+				(pinfunction "Y2_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "83")
+			(name "/OUT4")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "4")
+				(pinfunction "A1_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "84")
+			(name "/OUT5")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "5")
+				(pinfunction "Y1_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "85")
+			(name "/OUT6")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "2")
+				(pinfunction "A0_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "86")
+			(name "/OUT7")
+			(class "Default")
+			(node
+				(ref "U24")
+				(pin "3")
+				(pinfunction "Y0_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "87")
+			(name "/OUT8")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "8")
+				(pinfunction "A3_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "88")
+			(name "/OUT9")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "9")
+				(pinfunction "Y3_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "89")
+			(name "/OUT10")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "7")
+				(pinfunction "Y2_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "90")
+			(name "/OUT11")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "6")
+				(pinfunction "A2_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "91")
+			(name "/OUT12")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "5")
+				(pinfunction "Y1_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "92")
+			(name "/OUT13")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "4")
+				(pinfunction "A1_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "93")
+			(name "/OUT14")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "3")
+				(pinfunction "Y0_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "94")
+			(name "/OUT15")
+			(class "Default")
+			(node
+				(ref "U25")
+				(pin "2")
+				(pinfunction "A0_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "95")
+			(name "/OUT16")
+			(class "Default")
+			(node
+				(ref "RN12")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "7")
+				(pinfunction "I7_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "96")
+			(name "/OUT17")
+			(class "Default")
+			(node
+				(ref "RN12")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "6")
+				(pinfunction "I6_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "97")
+			(name "/OUT18")
+			(class "Default")
+			(node
+				(ref "RN12")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "5")
+				(pinfunction "I5_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "98")
+			(name "/OUT19")
+			(class "Default")
+			(node
+				(ref "RN12")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "4")
+				(pinfunction "I4_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "99")
+			(name "/OUT20")
+			(class "Default")
+			(node
+				(ref "RN13")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "3")
+				(pinfunction "I3_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "100")
+			(name "/OUT21")
+			(class "Default")
+			(node
+				(ref "RN13")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "2")
+				(pinfunction "I2_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "101")
+			(name "/OUT22")
+			(class "Default")
+			(node
+				(ref "RN13")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U26")
+				(pin "1")
+				(pinfunction "I1_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "102")
+			(name "/OUT23")
+			(class "Default")
+			(node
+				(ref "RN30")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "7")
+				(pinfunction "I7_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "103")
+			(name "/OUT24")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "6")
+				(pinfunction "I6_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "104")
+			(name "/OUT25")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "5")
+				(pinfunction "I5_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "105")
+			(name "/OUT26")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN30")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "4")
+				(pinfunction "I4_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "106")
+			(name "/OUT27")
+			(class "Default")
+			(node
+				(ref "RN20")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN31")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "3")
+				(pinfunction "I3_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "107")
+			(name "/OUT28")
+			(class "Default")
+			(node
+				(ref "RN21")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN31")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "2")
+				(pinfunction "I2_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "108")
+			(name "/OUT29")
+			(class "Default")
+			(node
+				(ref "RN21")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN31")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U27")
+				(pin "1")
+				(pinfunction "I1_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "109")
+			(name "/OUT30")
+			(class "Default")
+			(node
+				(ref "R114")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN21")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "110")
+			(name "/OUT31")
+			(class "Default")
+			(node
+				(ref "R116")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN21")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "111")
+			(name "unconnected-(RN13-R1A-Pad1)")
+			(class "Default")
+			(node
+				(ref "RN13")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "112")
+			(name "unconnected-(RN13-R1B-Pad8)")
+			(class "Default")
+			(node
+				(ref "RN13")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "113")
+			(name "unconnected-(RN31-R4A-Pad4)")
+			(class "Default")
+			(node
+				(ref "RN31")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "114")
+			(name "unconnected-(RN31-R4B-Pad5)")
+			(class "Default")
+			(node
+				(ref "RN31")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive+no_connect")
+			)
+		)
+	)
+)

@@ -1,0 +1,3680 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\analog_io-python.kicad_sch")
+		(date "2026-10-29T17:48:36")
+		(tool "Eeschema 10.0.1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "Analog inputs and filtered 0-10 V outputs")
+				(company "LeanCam / uCNC Python hierarchy experiment")
+				(rev)
+				(date "2026-10-29")
+				(source "analog_io-python.kicad_sch")
+				(comment
+					(number "1")
+					(value "Existing symbols grouped by function; local nets routed where practical")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C73")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "467d9340-c68c-52c1-834d-8cf861f0f0ca")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C74")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4486e74c-0406-5e99-aa38-cb14f6dcca06")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C75")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7abfc405-6560-5f23-a5a4-794db3c7ba63")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C92")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 1uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 1uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "116f5bc3-8ef5-5111-bc6e-c9e96520fdcf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C93")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7ce8b4b4-8830-5be2-8def-0fe2537e598c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C94")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 1uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 1uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c1a9c2fd-f603-56ea-845f-6ec2dc939cf6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C95")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fe11ad34-98a5-5ba4-a6a5-66c054682e73")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C96")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 1uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 1uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c2c9ae20-1602-5b16-96e6-d5d88340e44b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C97")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "305d8872-989c-540f-a7a5-9bba63b5418f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C98")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 1uF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 1uF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7842ec56-f864-567a-89d8-a408d3358a06")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C99")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9852fdb5-6a85-508d-8851-3910af99e690")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C100")
+			(value "1uF 50V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "GRM31 series 1206 C0G/X7R 1uF 50V")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM31 series 1206 C0G/X7R 1uF 50V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8ac959bf-da06-5b7e-ade2-8713ab4c4e8b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C101")
+			(value "10uF 25V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "CL31 series 1206 X7R 10uF 25V")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL31 series 1206 X7R 10uF 25V")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fae796ae-fa82-5908-9051-4409f7965bb5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C102")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4d5a68b0-aad1-5a91-ad24-23275842d4a9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J24")
+			(value "AI0/GND/AI1/GND/AI2")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/5-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x05")
+				(description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/5-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f4f72c18-5377-582c-b13e-0c0a349eba81")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J25")
+			(value "0-10 V outputs 0-3; pin 1 = common GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "Phoenix Contact MCV 1,5/5-G-3.5")
+				(field
+					(name "Manufacturer") "Phoenix Contact")
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x05")
+				(description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "Phoenix Contact MCV 1,5/5-G-3.5")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Phoenix Contact")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c9989c77-199f-515b-b21d-cc9f44de06bb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R61")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7f91f345-8224-5a70-97fe-63f296ebeac8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R63")
+			(value "33k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 33k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 33k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "27a2254a-0082-580e-bfbb-539af1b8dbd1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R64")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cda4a7a5-dd80-5d34-aa69-259d5175a5a6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R66")
+			(value "33k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 33k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 33k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ee3f71b0-07d5-5341-a45a-7950e5a7007f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R67")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 100k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 100k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9418f3f0-5bc3-589f-92ff-46dd50f3c378")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R69")
+			(value "33k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 33k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 33k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6bff25e5-9e9a-550b-803b-12ee7e9ec69c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R92")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b5105b82-d4d4-596b-8787-359b0ba6e581")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R93")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "655e2147-2b87-5534-9165-6abb19099bb3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R94")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "67907cdd-c29b-5c71-afe1-5df9103f5046")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R95")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f69eae67-c71d-5e6e-bf98-49969ece8d54")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R96")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ae06b4db-06d5-5349-a748-1079bdc8c146")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R97")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "69d2014d-6f5f-5f77-8b79-2d62f8387b62")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R98")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "850f3168-2953-5ef2-99f8-7efd69da2715")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R99")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5b0191e8-c1e6-5fce-bb61-274116e68408")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R100")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 22k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 22k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "41313b11-374d-55b4-8c64-f9e1e14b40a7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R101")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 22k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 22k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ecfa0cd7-9ff6-5cd6-bf8a-4bf49f86544e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R102")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 22k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 22k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "67400308-6cd1-5ba2-a016-4fe73453359b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R103")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 22k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 22k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0fda15f7-5589-5cea-b170-8e42168f0e81")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R104")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8c5c51a7-2417-5c5d-abba-6daf78913f99")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R105")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8911a384-a7df-5fa1-a83f-5d215746f2d4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R106")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "40617b24-3b3f-550e-b69c-d26f1c97a979")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R107")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "RC0805 series 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805 series 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "aa7ff16e-54fb-57f4-a220-dc75309c6da7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U37")
+			(value "L78L12ACUTR")
+			(footprint "Package_TO_SOT_SMD:SOT-89-3_Handsoldering")
+			(fields
+				(field
+					(name "MPN") "L78L12ACUTR")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-89-3_Handsoldering")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "L78L12")
+				(description "100 mA fixed 12 V positive linear regulator, SOT-89 pinout")
+			)
+			(property
+				(name "MPN")
+				(value "L78L12ACUTR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT-89*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "01365239-eb57-5a65-9605-bb4226b6b8cf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U38")
+			(value "TLV2374IDR")
+			(footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "TLV2374IDR")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "TLV2374")
+				(description "TLV2374 quad rail-to-rail input/output operational amplifier, 2.7 V to 16 V supply, SOIC-14 pinout")
+			)
+			(property
+				(name "MPN")
+				(value "TLV2374IDR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/analog_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC-14*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e2443029-7a20-5931-8be2-0bafb172ff89")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x05")
+			(description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x05")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "L78L12")
+			(description "100 mA fixed 12 V positive linear regulator, SOT-89 pinout")
+			(docs "~")
+			(footprints
+				(fp "SOT-89*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "L78L12")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "100 mA fixed 12 V positive linear regulator, SOT-89 pinout")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "OUT")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "IN")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "TLV2374")
+			(description "TLV2374 quad rail-to-rail input/output operational amplifier, 2.7 V to 16 V supply, SOIC-14 pinout")
+			(docs "~")
+			(footprints
+				(fp "SOIC-14*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TLV2374")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "TLV2374 quad rail-to-rail input/output operational amplifier, 2.7 V to 16 V supply, SOIC-14 pinout")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1OUT")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "1IN_N")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "1IN_P")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "VPLUS")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "2IN_P")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "2IN_N")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "2OUT")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "3OUT")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "3IN_N")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "3IN_P")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "VMINUS")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "4IN_P")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "4IN_N")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "4OUT")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Connector_Generic")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/+12V_AO")
+			(class "Default")
+			(node
+				(ref "C101")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C102")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U37")
+				(pin "1")
+				(pinfunction "OUT_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "4")
+				(pinfunction "VPLUS_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "2")
+			(name "/AI0")
+			(class "Default")
+			(node
+				(ref "J24")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R61")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/AI0_ADC")
+			(class "Default")
+			(node
+				(ref "C73")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R61")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R63")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/AI1")
+			(class "Default")
+			(node
+				(ref "J24")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R64")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/AI1_ADC")
+			(class "Default")
+			(node
+				(ref "C74")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R64")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R66")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/AI2")
+			(class "Default")
+			(node
+				(ref "J24")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "R67")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "/AI2_ADC")
+			(class "Default")
+			(node
+				(ref "C75")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R67")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R69")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/AOUT0")
+			(class "Default")
+			(node
+				(ref "J25")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R100")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "1")
+				(pinfunction "1OUT_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/AOUT0_F1")
+			(class "Default")
+			(node
+				(ref "C92")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R92")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R96")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "/AOUT0_F2")
+			(class "Default")
+			(node
+				(ref "C93")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R96")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "3")
+				(pinfunction "1IN_P_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "/AOUT0_FB")
+			(class "Default")
+			(node
+				(ref "R100")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R104")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "2")
+				(pinfunction "1IN_N_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "/AOUT0_PWM")
+			(class "Default")
+			(node
+				(ref "R92")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "/AOUT1")
+			(class "Default")
+			(node
+				(ref "J25")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R101")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "7")
+				(pinfunction "2OUT_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/AOUT1_F1")
+			(class "Default")
+			(node
+				(ref "C94")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R93")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R97")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "/AOUT1_F2")
+			(class "Default")
+			(node
+				(ref "C95")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R97")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "5")
+				(pinfunction "2IN_P_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "/AOUT1_FB")
+			(class "Default")
+			(node
+				(ref "R101")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R105")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "6")
+				(pinfunction "2IN_N_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "/AOUT1_PWM")
+			(class "Default")
+			(node
+				(ref "R93")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "/AOUT2")
+			(class "Default")
+			(node
+				(ref "J25")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R102")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "8")
+				(pinfunction "3OUT_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "/AOUT2_F1")
+			(class "Default")
+			(node
+				(ref "C96")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R94")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R98")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "/AOUT2_F2")
+			(class "Default")
+			(node
+				(ref "C97")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R98")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "10")
+				(pinfunction "3IN_P_10")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "/AOUT2_FB")
+			(class "Default")
+			(node
+				(ref "R102")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R106")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "9")
+				(pinfunction "3IN_N_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "/AOUT2_PWM")
+			(class "Default")
+			(node
+				(ref "R94")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
+			(name "/AOUT3")
+			(class "Default")
+			(node
+				(ref "J25")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "R103")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "14")
+				(pinfunction "4OUT_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "24")
+			(name "/AOUT3_F1")
+			(class "Default")
+			(node
+				(ref "C98")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R95")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R99")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "25")
+			(name "/AOUT3_F2")
+			(class "Default")
+			(node
+				(ref "C99")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R99")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "12")
+				(pinfunction "4IN_P_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "26")
+			(name "/AOUT3_FB")
+			(class "Default")
+			(node
+				(ref "R103")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R107")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "13")
+				(pinfunction "4IN_N_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "27")
+			(name "/AOUT3_PWM")
+			(class "Default")
+			(node
+				(ref "R95")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "28")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C100")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C101")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C102")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C73")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C74")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C75")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C92")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C93")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C94")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C95")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C96")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C97")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C98")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C99")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J24")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J24")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J25")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R104")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R105")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R106")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R107")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R63")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R66")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R69")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U37")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U38")
+				(pin "11")
+				(pinfunction "VMINUS_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "29")
+			(name "/VIN_PROT")
+			(class "Default")
+			(node
+				(ref "C100")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U37")
+				(pin "3")
+				(pinfunction "IN_3")
+				(pintype "passive")
+			)
+		)
+	)
+)

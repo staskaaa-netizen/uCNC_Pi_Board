@@ -1,0 +1,179 @@
+{
+  "source_netlist": "experiments\\power-schematic-readability\\inputs\\source-analog_io.json",
+  "generated_netlist": "experiments\\power-schematic-readability\\other-sheets\\analog_io-python.net",
+  "source_component_count": 40,
+  "generated_component_count": 40,
+  "source_net_count": 29,
+  "generated_net_count": 29,
+  "root_local_label_prefix_normalized": true,
+  "missing_components": [],
+  "extra_components": [],
+  "value_changes": [],
+  "footprint_changes": [],
+  "missing_net_names": [],
+  "extra_net_names": [],
+  "changed_named_connections": [],
+  "source_nodes_missing_from_generated": [],
+  "generated_nodes_not_in_source": [],
+  "generated_connection_groups": {
+    "/+12V_AO": [
+      "C101.1",
+      "C102.1",
+      "U37.1",
+      "U38.4"
+    ],
+    "/AI0": [
+      "J24.1",
+      "R61.1"
+    ],
+    "/AI0_ADC": [
+      "C73.1",
+      "R61.2",
+      "R63.1"
+    ],
+    "/AI1": [
+      "J24.3",
+      "R64.1"
+    ],
+    "/AI1_ADC": [
+      "C74.1",
+      "R64.2",
+      "R66.1"
+    ],
+    "/AI2": [
+      "J24.5",
+      "R67.1"
+    ],
+    "/AI2_ADC": [
+      "C75.1",
+      "R67.2",
+      "R69.1"
+    ],
+    "/AOUT0": [
+      "J25.2",
+      "R100.2",
+      "U38.1"
+    ],
+    "/AOUT0_F1": [
+      "C92.1",
+      "R92.2",
+      "R96.1"
+    ],
+    "/AOUT0_F2": [
+      "C93.1",
+      "R96.2",
+      "U38.3"
+    ],
+    "/AOUT0_FB": [
+      "R100.1",
+      "R104.1",
+      "U38.2"
+    ],
+    "/AOUT0_PWM": [
+      "R92.1"
+    ],
+    "/AOUT1": [
+      "J25.3",
+      "R101.2",
+      "U38.7"
+    ],
+    "/AOUT1_F1": [
+      "C94.1",
+      "R93.2",
+      "R97.1"
+    ],
+    "/AOUT1_F2": [
+      "C95.1",
+      "R97.2",
+      "U38.5"
+    ],
+    "/AOUT1_FB": [
+      "R101.1",
+      "R105.1",
+      "U38.6"
+    ],
+    "/AOUT1_PWM": [
+      "R93.1"
+    ],
+    "/AOUT2": [
+      "J25.4",
+      "R102.2",
+      "U38.8"
+    ],
+    "/AOUT2_F1": [
+      "C96.1",
+      "R94.2",
+      "R98.1"
+    ],
+    "/AOUT2_F2": [
+      "C97.1",
+      "R98.2",
+      "U38.10"
+    ],
+    "/AOUT2_FB": [
+      "R102.1",
+      "R106.1",
+      "U38.9"
+    ],
+    "/AOUT2_PWM": [
+      "R94.1"
+    ],
+    "/AOUT3": [
+      "J25.5",
+      "R103.2",
+      "U38.14"
+    ],
+    "/AOUT3_F1": [
+      "C98.1",
+      "R95.2",
+      "R99.1"
+    ],
+    "/AOUT3_F2": [
+      "C99.1",
+      "R99.2",
+      "U38.12"
+    ],
+    "/AOUT3_FB": [
+      "R103.1",
+      "R107.1",
+      "U38.13"
+    ],
+    "/AOUT3_PWM": [
+      "R95.1"
+    ],
+    "/GND": [
+      "C100.2",
+      "C101.2",
+      "C102.2",
+      "C73.2",
+      "C74.2",
+      "C75.2",
+      "C92.2",
+      "C93.2",
+      "C94.2",
+      "C95.2",
+      "C96.2",
+      "C97.2",
+      "C98.2",
+      "C99.2",
+      "J24.2",
+      "J24.4",
+      "J25.1",
+      "R104.2",
+      "R105.2",
+      "R106.2",
+      "R107.2",
+      "R63.2",
+      "R66.2",
+      "R69.2",
+      "U37.2",
+      "U38.11"
+    ],
+    "/VIN_PROT": [
+      "C100.1",
+      "U37.3"
+    ]
+  },
+  "netlist_partition_identical": true,
+  "named_netlists_identical": true
+}

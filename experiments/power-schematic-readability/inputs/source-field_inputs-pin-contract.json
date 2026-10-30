@@ -1,0 +1,521 @@
+{
+  "C103": {
+    "1": "+5V_ISO_IN",
+    "2": "GND"
+  },
+  "C105": {
+    "1": "+12V_FIELD",
+    "2": "ISO_GND"
+  },
+  "D10": {
+    "1": "ESTOP_LED_A",
+    "2": "ISO_GND"
+  },
+  "D11": {
+    "2": "HOLD_LED_A",
+    "1": "HOLD_OPTO_A"
+  },
+  "D12": {
+    "1": "HOLD_LED_A",
+    "2": "ISO_GND"
+  },
+  "D13": {
+    "2": "FLD_LED1_A",
+    "1": "FLD_OPTO1_A"
+  },
+  "D14": {
+    "1": "FLD_LED1_A",
+    "2": "ISO_GND"
+  },
+  "D15": {
+    "2": "FLD_LED2_A",
+    "1": "FLD_OPTO2_A"
+  },
+  "D16": {
+    "1": "FLD_LED2_A",
+    "2": "ISO_GND"
+  },
+  "D17": {
+    "2": "FLD_LED3_A",
+    "1": "FLD_OPTO3_A"
+  },
+  "D18": {
+    "1": "FLD_LED3_A",
+    "2": "ISO_GND"
+  },
+  "D19": {
+    "2": "FLD_LED4_A",
+    "1": "FLD_OPTO4_A"
+  },
+  "D20": {
+    "1": "FLD_LED4_A",
+    "2": "ISO_GND"
+  },
+  "D21": {
+    "2": "FLD_LED5_A",
+    "1": "FLD_OPTO5_A"
+  },
+  "D22": {
+    "1": "FLD_LED5_A",
+    "2": "ISO_GND"
+  },
+  "D23": {
+    "2": "FLD_LED6_A",
+    "1": "FLD_OPTO6_A"
+  },
+  "D24": {
+    "1": "FLD_LED6_A",
+    "2": "ISO_GND"
+  },
+  "D25": {
+    "2": "FLD_LED7_A",
+    "1": "FLD_OPTO7_A"
+  },
+  "D26": {
+    "1": "FLD_LED7_A",
+    "2": "ISO_GND"
+  },
+  "D27": {
+    "2": "FLD_LED8_A",
+    "1": "FLD_OPTO8_A"
+  },
+  "D28": {
+    "1": "FLD_LED8_A",
+    "2": "ISO_GND"
+  },
+  "D29": {
+    "2": "FLD_LED9_A",
+    "1": "FLD_OPTO9_A"
+  },
+  "D30": {
+    "1": "FLD_LED9_A",
+    "2": "ISO_GND"
+  },
+  "D31": {
+    "2": "FLD_LED10_A",
+    "1": "FLD_OPTO10_A"
+  },
+  "D32": {
+    "1": "FLD_LED10_A",
+    "2": "ISO_GND"
+  },
+  "D33": {
+    "2": "FLD_LED11_A",
+    "1": "FLD_OPTO11_A"
+  },
+  "D34": {
+    "1": "FLD_LED11_A",
+    "2": "ISO_GND"
+  },
+  "D35": {
+    "2": "FLD_LED12_A",
+    "1": "FLD_OPTO12_A"
+  },
+  "D36": {
+    "1": "FLD_LED12_A",
+    "2": "ISO_GND"
+  },
+  "D37": {
+    "2": "FLD_LED13_A",
+    "1": "FLD_OPTO13_A"
+  },
+  "D38": {
+    "1": "FLD_LED13_A",
+    "2": "ISO_GND"
+  },
+  "D39": {
+    "2": "FLD_LED14_A",
+    "1": "FLD_OPTO14_A"
+  },
+  "D40": {
+    "1": "FLD_LED14_A",
+    "2": "ISO_GND"
+  },
+  "D41": {
+    "2": "FLD_LED15_A",
+    "1": "FLD_OPTO15_A"
+  },
+  "D42": {
+    "1": "FLD_LED15_A",
+    "2": "ISO_GND"
+  },
+  "D43": {
+    "2": "FLD_LED16_A",
+    "1": "FLD_OPTO16_A"
+  },
+  "D44": {
+    "1": "FLD_LED16_A",
+    "2": "ISO_GND"
+  },
+  "D54": {
+    "2": "START_LED_A",
+    "1": "START_OPTO_A"
+  },
+  "D55": {
+    "2": "ISO_GND",
+    "1": "START_LED_A"
+  },
+  "D56": {
+    "1": "+12V_FIELD",
+    "2": "+12V_RAW"
+  },
+  "D9": {
+    "2": "ESTOP_LED_A",
+    "1": "ESTOP_OPTO_A"
+  },
+  "F4": {
+    "1": "+5V",
+    "2": "+5V_ISO_IN"
+  },
+  "J26": {
+    "2": "FIELD_SAFETY_COM",
+    "1": "START_FIELD"
+  },
+  "J27": {
+    "2": "+3V3",
+    "3": "EXP_IN4",
+    "4": "EXP_IN5",
+    "5": "EXP_IN6",
+    "6": "EXP_IN7",
+    "1": "GND"
+  },
+  "J34": {
+    "2": "FIELD_COM0",
+    "4": "FIELD_COM0",
+    "6": "FIELD_COM0",
+    "8": "FIELD_COM0",
+    "1": "FIELD_IN13",
+    "3": "FIELD_IN14",
+    "5": "FIELD_IN15",
+    "7": "FIELD_IN16"
+  },
+  "J35": {
+    "2": "FIELD_COM1",
+    "4": "FIELD_COM1",
+    "6": "FIELD_COM1",
+    "8": "FIELD_COM1",
+    "1": "FIELD_IN5",
+    "3": "FIELD_IN6",
+    "5": "FIELD_IN7",
+    "7": "FIELD_IN8"
+  },
+  "J5": {
+    "1": "ESTOP_FIELD",
+    "2": "FIELD_SAFETY_COM"
+  },
+  "J6": {
+    "2": "FIELD_SAFETY_COM",
+    "1": "HOLD_FIELD"
+  },
+  "J7": {
+    "2": "FIELD_COM0",
+    "4": "FIELD_COM0",
+    "6": "FIELD_COM0",
+    "8": "FIELD_COM0",
+    "1": "FIELD_IN9",
+    "3": "FIELD_IN10",
+    "5": "FIELD_IN11",
+    "7": "FIELD_IN12"
+  },
+  "J8": {
+    "2": "FIELD_COM1",
+    "4": "FIELD_COM1",
+    "6": "FIELD_COM1",
+    "8": "FIELD_COM1",
+    "1": "FIELD_IN1",
+    "3": "FIELD_IN2",
+    "5": "FIELD_IN3",
+    "7": "FIELD_IN4"
+  },
+  "J9": {
+    "2": "+3V3",
+    "3": "EXP_IN0",
+    "4": "EXP_IN1",
+    "5": "EXP_IN2",
+    "6": "EXP_IN3",
+    "1": "GND"
+  },
+  "JP2": {
+    "3": "+12V_FIELD",
+    "2": "FIELD_COM0",
+    "1": "ISO_GND"
+  },
+  "JP3": {
+    "3": "+12V_FIELD",
+    "2": "FIELD_COM1",
+    "1": "ISO_GND"
+  },
+  "JP4": {
+    "3": "+12V_FIELD",
+    "2": "FIELD_SAFETY_COM",
+    "1": "ISO_GND"
+  },
+  "R108": {
+    "1": "START_FIELD",
+    "2": "START_LED_A"
+  },
+  "R109": {
+    "2": "+3V3",
+    "1": "START_N"
+  },
+  "R16": {
+    "1": "ESTOP_FIELD",
+    "2": "ESTOP_LED_A"
+  },
+  "R17": {
+    "1": "HOLD_FIELD",
+    "2": "HOLD_LED_A"
+  },
+  "R18": {
+    "1": "FIELD_IN1",
+    "2": "FLD_LED1_A"
+  },
+  "R19": {
+    "1": "FIELD_IN2",
+    "2": "FLD_LED2_A"
+  },
+  "R20": {
+    "1": "FIELD_IN3",
+    "2": "FLD_LED3_A"
+  },
+  "R21": {
+    "1": "FIELD_IN4",
+    "2": "FLD_LED4_A"
+  },
+  "R22": {
+    "1": "FIELD_IN5",
+    "2": "FLD_LED5_A"
+  },
+  "R23": {
+    "1": "FIELD_IN6",
+    "2": "FLD_LED6_A"
+  },
+  "R24": {
+    "1": "FIELD_IN7",
+    "2": "FLD_LED7_A"
+  },
+  "R25": {
+    "1": "FIELD_IN8",
+    "2": "FLD_LED8_A"
+  },
+  "R26": {
+    "1": "FIELD_IN9",
+    "2": "FLD_LED9_A"
+  },
+  "R27": {
+    "1": "FIELD_IN10",
+    "2": "FLD_LED10_A"
+  },
+  "R28": {
+    "1": "FIELD_IN11",
+    "2": "FLD_LED11_A"
+  },
+  "R29": {
+    "1": "FIELD_IN12",
+    "2": "FLD_LED12_A"
+  },
+  "R30": {
+    "1": "FIELD_IN13",
+    "2": "FLD_LED13_A"
+  },
+  "R31": {
+    "1": "FIELD_IN14",
+    "2": "FLD_LED14_A"
+  },
+  "R32": {
+    "1": "FIELD_IN15",
+    "2": "FLD_LED15_A"
+  },
+  "R33": {
+    "1": "FIELD_IN16",
+    "2": "FLD_LED16_A"
+  },
+  "R74": {
+    "2": "+3V3",
+    "1": "ESTOP_N"
+  },
+  "R75": {
+    "2": "+3V3",
+    "1": "HOLD_N"
+  },
+  "R76": {
+    "2": "+3V3",
+    "1": "PLC_IN1_N"
+  },
+  "R77": {
+    "2": "+3V3",
+    "1": "PLC_IN2_N"
+  },
+  "R78": {
+    "2": "+3V3",
+    "1": "PLC_IN3_N"
+  },
+  "R79": {
+    "2": "+3V3",
+    "1": "PLC_IN4_N"
+  },
+  "R80": {
+    "2": "+3V3",
+    "1": "PLC_IN5_N"
+  },
+  "R81": {
+    "2": "+3V3",
+    "1": "PLC_IN6_N"
+  },
+  "R82": {
+    "2": "+3V3",
+    "1": "PLC_IN7_N"
+  },
+  "R83": {
+    "2": "+3V3",
+    "1": "PLC_IN8_N"
+  },
+  "R84": {
+    "2": "+3V3",
+    "1": "PLC_IN9_N"
+  },
+  "R85": {
+    "2": "+3V3",
+    "1": "PLC_IN10_N"
+  },
+  "R86": {
+    "2": "+3V3",
+    "1": "PLC_IN11_N"
+  },
+  "R87": {
+    "2": "+3V3",
+    "1": "PLC_IN12_N"
+  },
+  "R88": {
+    "2": "+3V3",
+    "1": "PLC_IN13_N"
+  },
+  "R89": {
+    "2": "+3V3",
+    "1": "PLC_IN14_N"
+  },
+  "R90": {
+    "2": "+3V3",
+    "1": "PLC_IN15_N"
+  },
+  "R91": {
+    "2": "+3V3",
+    "1": "PLC_IN16_N"
+  },
+  "RN6": {
+    "1": "EXP_IN0",
+    "2": "EXP_IN1",
+    "3": "EXP_IN2",
+    "4": "EXP_IN3",
+    "5": "GND",
+    "6": "GND",
+    "7": "GND",
+    "8": "GND"
+  },
+  "RN7": {
+    "1": "EXP_IN4",
+    "2": "EXP_IN5",
+    "3": "EXP_IN6",
+    "4": "EXP_IN7",
+    "5": "GND",
+    "6": "GND",
+    "7": "GND",
+    "8": "GND"
+  },
+  "U18": {
+    "1": "FLD_OPTO1_A",
+    "3": "FLD_OPTO2_A",
+    "5": "FLD_OPTO3_A",
+    "7": "FLD_OPTO4_A",
+    "11": "GND",
+    "13": "GND",
+    "15": "GND",
+    "9": "GND",
+    "2": "ISO_GND",
+    "4": "ISO_GND",
+    "6": "ISO_GND",
+    "8": "ISO_GND",
+    "16": "PLC_IN1_N",
+    "14": "PLC_IN2_N",
+    "12": "PLC_IN3_N",
+    "10": "PLC_IN4_N"
+  },
+  "U19": {
+    "1": "FLD_OPTO5_A",
+    "3": "FLD_OPTO6_A",
+    "5": "FLD_OPTO7_A",
+    "7": "FLD_OPTO8_A",
+    "11": "GND",
+    "13": "GND",
+    "15": "GND",
+    "9": "GND",
+    "2": "ISO_GND",
+    "4": "ISO_GND",
+    "6": "ISO_GND",
+    "8": "ISO_GND",
+    "16": "PLC_IN5_N",
+    "14": "PLC_IN6_N",
+    "12": "PLC_IN7_N",
+    "10": "PLC_IN8_N"
+  },
+  "U20": {
+    "1": "FLD_OPTO9_A",
+    "3": "FLD_OPTO10_A",
+    "5": "FLD_OPTO11_A",
+    "7": "FLD_OPTO12_A",
+    "11": "GND",
+    "13": "GND",
+    "15": "GND",
+    "9": "GND",
+    "2": "ISO_GND",
+    "4": "ISO_GND",
+    "6": "ISO_GND",
+    "8": "ISO_GND",
+    "16": "PLC_IN9_N",
+    "14": "PLC_IN10_N",
+    "12": "PLC_IN11_N",
+    "10": "PLC_IN12_N"
+  },
+  "U21": {
+    "1": "FLD_OPTO13_A",
+    "3": "FLD_OPTO14_A",
+    "5": "FLD_OPTO15_A",
+    "7": "FLD_OPTO16_A",
+    "11": "GND",
+    "13": "GND",
+    "15": "GND",
+    "9": "GND",
+    "2": "ISO_GND",
+    "4": "ISO_GND",
+    "6": "ISO_GND",
+    "8": "ISO_GND",
+    "16": "PLC_IN13_N",
+    "14": "PLC_IN14_N",
+    "12": "PLC_IN15_N",
+    "10": "PLC_IN16_N"
+  },
+  "U35": {
+    "4": "ESTOP_N",
+    "1": "ESTOP_OPTO_A",
+    "3": "GND",
+    "2": "ISO_GND"
+  },
+  "U36": {
+    "3": "GND",
+    "4": "HOLD_N",
+    "1": "HOLD_OPTO_A",
+    "2": "ISO_GND"
+  },
+  "U39": {
+    "3": "GND",
+    "2": "ISO_GND",
+    "4": "START_N",
+    "1": "START_OPTO_A"
+  },
+  "U40": {
+    "1": "+5V_ISO_IN",
+    "6": "+12V_RAW",
+    "2": "GND",
+    "4": "ISO_GND"
+  }
+}

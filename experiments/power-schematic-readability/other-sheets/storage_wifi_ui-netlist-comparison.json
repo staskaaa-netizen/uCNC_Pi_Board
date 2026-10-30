@@ -1,0 +1,232 @@
+{
+  "source_netlist": "experiments\\power-schematic-readability\\inputs\\source-storage_wifi_ui.json",
+  "generated_netlist": "experiments\\power-schematic-readability\\other-sheets\\storage_wifi_ui-python.net",
+  "source_component_count": 31,
+  "generated_component_count": 31,
+  "source_net_count": 49,
+  "generated_net_count": 50,
+  "root_local_label_prefix_normalized": true,
+  "missing_components": [],
+  "extra_components": [],
+  "value_changes": [],
+  "footprint_changes": [],
+  "missing_net_names": [],
+  "extra_net_names": [],
+  "changed_named_connections": [],
+  "source_nodes_missing_from_generated": [],
+  "generated_nodes_not_in_source": [
+    "J19.11"
+  ],
+  "generated_connection_groups": {
+    "/+3V3": [
+      "FB2.1",
+      "J18.3",
+      "R55.1",
+      "R56.1",
+      "R57.1",
+      "R58.1"
+    ],
+    "/+3V3_SD": [
+      "C67.1",
+      "C68.1",
+      "FB2.2",
+      "J19.4",
+      "R44.1",
+      "R45.1",
+      "R46.1",
+      "R47.1",
+      "R48.1",
+      "R49.1"
+    ],
+    "/+3V3_WIFI": [
+      "C69.1",
+      "C70.1",
+      "J20.2",
+      "U34.2"
+    ],
+    "/+5V": [
+      "C88.1",
+      "C89.1",
+      "J17.1",
+      "U34.3"
+    ],
+    "/GND": [
+      "C67.2",
+      "C68.2",
+      "C69.2",
+      "C70.2",
+      "C88.2",
+      "C89.2",
+      "J17.2",
+      "J17.3",
+      "J18.4",
+      "J19.3",
+      "J19.6",
+      "J19.SH",
+      "J20.1",
+      "SW2.2",
+      "U34.1"
+    ],
+    "/I2C_SCL": [
+      "J18.2"
+    ],
+    "/I2C_SDA": [
+      "J18.1"
+    ],
+    "/KIN0": [
+      "J16.1",
+      "RN22.8"
+    ],
+    "/KIN0_FILT": [
+      "RN22.1"
+    ],
+    "/KIN1": [
+      "J16.3",
+      "RN22.7"
+    ],
+    "/KIN1_FILT": [
+      "RN22.2"
+    ],
+    "/KIN2": [
+      "J16.5",
+      "RN22.6"
+    ],
+    "/KIN2_FILT": [
+      "RN22.3"
+    ],
+    "/KIN3": [
+      "J16.7",
+      "RN22.5"
+    ],
+    "/KIN3_FILT": [
+      "RN22.4"
+    ],
+    "/KIN4": [
+      "J16.9",
+      "RN24.8"
+    ],
+    "/KIN4_FILT": [
+      "RN24.1"
+    ],
+    "/KIN5": [
+      "J16.11",
+      "RN24.7"
+    ],
+    "/KIN5_FILT": [
+      "RN24.2"
+    ],
+    "/KIN6": [
+      "J16.13",
+      "RN24.6"
+    ],
+    "/KIN6_FILT": [
+      "RN24.3"
+    ],
+    "/KIN7": [
+      "J16.15",
+      "RN24.5"
+    ],
+    "/KIN7_FILT": [
+      "RN24.4"
+    ],
+    "/KOUT0": [
+      "J16.2"
+    ],
+    "/KOUT1": [
+      "J16.4"
+    ],
+    "/KOUT2": [
+      "J16.6"
+    ],
+    "/KOUT3": [
+      "J16.8"
+    ],
+    "/KOUT4": [
+      "J16.10"
+    ],
+    "/KOUT5": [
+      "J16.12"
+    ],
+    "/KOUT6": [
+      "J16.14"
+    ],
+    "/KOUT7": [
+      "J16.16"
+    ],
+    "/SD_CD": [
+      "J19.10",
+      "R47.2",
+      "R54.2"
+    ],
+    "/SD_CD_MCU": [
+      "R54.1"
+    ],
+    "/SD_CS_MCU": [
+      "R53.1"
+    ],
+    "/SD_CS_N": [
+      "J19.1",
+      "R44.2",
+      "R53.2"
+    ],
+    "/SD_DAT1": [
+      "J19.8",
+      "R48.2"
+    ],
+    "/SD_DAT2": [
+      "J19.9",
+      "R49.2"
+    ],
+    "/SD_MISO": [
+      "J19.7",
+      "R46.2",
+      "R52.1"
+    ],
+    "/SD_MISO_MCU": [
+      "R52.2"
+    ],
+    "/SD_MOSI": [
+      "J19.2",
+      "R45.2",
+      "R51.2"
+    ],
+    "/SD_MOSI_MCU": [
+      "R51.1"
+    ],
+    "/SD_SCK": [
+      "J19.5",
+      "R50.2"
+    ],
+    "/SD_SCK_MCU": [
+      "R50.1"
+    ],
+    "/WIFI_EN": [
+      "J20.7",
+      "R55.2"
+    ],
+    "/WIFI_GPIO0": [
+      "J20.4",
+      "R57.2",
+      "SW2.1"
+    ],
+    "/WIFI_GPIO2": [
+      "J20.3",
+      "R58.2"
+    ],
+    "/WIFI_RST": [
+      "J20.8",
+      "R56.2"
+    ],
+    "/WIFI_RX": [
+      "J20.5"
+    ],
+    "/WIFI_TX": [
+      "J20.6"
+    ],
+    "unconnected-(J19-WRITE_PROTECT-Pad11)": [
+      "J19.11"
+    ]
+  },
+  "netlist_partition_identical": true,
+  "named_netlists_identical": true
+}

@@ -1,0 +1,1370 @@
+{
+  "title": "LeanCam NCC RP2350B - Power and Supervision",
+  "parts": [
+    {
+      "ref": "C1",
+      "value": "10uF 50V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C10",
+      "value": "10uF",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C11",
+      "value": "22uF 10V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C13",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C15",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "100nF 100V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "10uF 50V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "100nF 100V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "22uF 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "22uF 10V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C7",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C76",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C86",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C90",
+      "value": "22uF",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C91",
+      "value": "1uF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "value": "SMBJ24CA",
+      "footprint": "Diode_SMD:D_SMB",
+      "lib": "Device",
+      "part": "D_TVS",
+      "description": "Bidirectional transient-voltage-suppression diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D2",
+      "value": "MMSZ5242B",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D_Zener",
+      "description": "Zener diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D4",
+      "value": "5V_PWR",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D5",
+      "value": "3V3_PWR",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "F1",
+      "value": "2 A",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "Fuse",
+      "description": "Fuse",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "FB1",
+      "value": "600R@100MHz",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "FerriteBead",
+      "description": "Ferrite bead",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "FLG1",
+      "value": "GND",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG2",
+      "value": "+5V",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG3",
+      "value": "+3V3_A",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG4",
+      "value": "VIN_PROT",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG5",
+      "value": "+5V_ENC",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG6",
+      "value": "+3V3_SD",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG7",
+      "value": "+5V_ISO_IN",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "FLG8",
+      "value": "+12V_FIELD",
+      "footprint": "",
+      "lib": "power",
+      "part": "PWR_FLAG",
+      "description": "Special symbol for telling ERC where power comes from",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "J1",
+      "value": "24 V DC input",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x02",
+      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "L1",
+      "value": "22uH 1.5A",
+      "footprint": "Inductor_SMD:L_Bourns_SRN6045TA",
+      "lib": "Device",
+      "part": "L",
+      "description": "Inductor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "value": "IRF7240PBF",
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "PMOS_SO8",
+      "description": "P-channel MOSFET in the standard 1-3 source, 4 gate, 5-8 drain SO-8 pinout",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "S1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "S2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "S3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "G",
+          "type": "input"
+        },
+        {
+          "number": "5",
+          "name": "D1",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "D2",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "D3",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "D4",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R70",
+      "value": "34k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R71",
+      "value": "46.4k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R72",
+      "value": "20k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R73",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "LMR36510ADDAR",
+      "footprint": "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm",
+      "lib": "Regulator_Switching",
+      "part": "LMR36510ADDA",
+      "description": "Simple Switcher Synchronous Buck Regulator, Vin=4.2-65V, Iout=1A, F=400kHz, Adjustable output voltage, HSOP-8",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "PGND",
+          "type": "power_in"
+        },
+        {
+          "number": "2",
+          "name": "VIN",
+          "type": "power_in"
+        },
+        {
+          "number": "3",
+          "name": "EN",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "PG",
+          "type": "open_collector"
+        },
+        {
+          "number": "5",
+          "name": "FB",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "VCC",
+          "type": "power_out"
+        },
+        {
+          "number": "7",
+          "name": "BOOT",
+          "type": "input"
+        },
+        {
+          "number": "8",
+          "name": "SW",
+          "type": "output"
+        },
+        {
+          "number": "9",
+          "name": "PAD",
+          "type": "power_in"
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "value": "AMS1117-3.3",
+      "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "lib": "Regulator_Linear",
+      "part": "AMS1117-3.3",
+      "description": "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "2",
+          "name": "VO",
+          "type": "power_out"
+        },
+        {
+          "number": "3",
+          "name": "VI",
+          "type": "power_in"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "+3V3",
+      "is_power": true,
+      "connections": [
+        [
+          "C13",
+          "1"
+        ],
+        [
+          "C90",
+          "1"
+        ],
+        [
+          "FB1",
+          "1"
+        ],
+        [
+          "R5",
+          "1"
+        ],
+        [
+          "R73",
+          "2"
+        ],
+        [
+          "U2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "+3V3_A",
+      "is_power": false,
+      "connections": [
+        [
+          "C15",
+          "1"
+        ],
+        [
+          "FB1",
+          "2"
+        ],
+        [
+          "FLG3",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+3V3_SD",
+      "is_power": false,
+      "connections": [
+        [
+          "FLG6",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+5V",
+      "is_power": true,
+      "connections": [
+        [
+          "C10",
+          "1"
+        ],
+        [
+          "C11",
+          "1"
+        ],
+        [
+          "C6",
+          "1"
+        ],
+        [
+          "C7",
+          "1"
+        ],
+        [
+          "C76",
+          "1"
+        ],
+        [
+          "FLG2",
+          "1"
+        ],
+        [
+          "L1",
+          "2"
+        ],
+        [
+          "R4",
+          "1"
+        ],
+        [
+          "R70",
+          "1"
+        ],
+        [
+          "U2",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "+5V_ENC",
+      "is_power": false,
+      "connections": [
+        [
+          "FLG5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+5V_ISO_IN",
+      "is_power": false,
+      "connections": [
+        [
+          "FLG7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+12V_FIELD",
+      "is_power": false,
+      "connections": [
+        [
+          "FLG8",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "BUCK5_BST",
+      "is_power": false,
+      "connections": [
+        [
+          "C86",
+          "1"
+        ],
+        [
+          "U1",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "BUCK5_SW",
+      "is_power": false,
+      "connections": [
+        [
+          "C86",
+          "2"
+        ],
+        [
+          "L1",
+          "1"
+        ],
+        [
+          "U1",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "FB5",
+      "is_power": false,
+      "connections": [
+        [
+          "R71",
+          "2"
+        ],
+        [
+          "R72",
+          "1"
+        ],
+        [
+          "U1",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "FB5_TOP",
+      "is_power": false,
+      "connections": [
+        [
+          "R70",
+          "2"
+        ],
+        [
+          "R71",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "GND",
+      "is_power": true,
+      "connections": [
+        [
+          "C1",
+          "2"
+        ],
+        [
+          "C10",
+          "2"
+        ],
+        [
+          "C11",
+          "2"
+        ],
+        [
+          "C13",
+          "2"
+        ],
+        [
+          "C15",
+          "2"
+        ],
+        [
+          "C2",
+          "2"
+        ],
+        [
+          "C3",
+          "2"
+        ],
+        [
+          "C4",
+          "2"
+        ],
+        [
+          "C5",
+          "2"
+        ],
+        [
+          "C6",
+          "2"
+        ],
+        [
+          "C7",
+          "2"
+        ],
+        [
+          "C76",
+          "2"
+        ],
+        [
+          "C90",
+          "2"
+        ],
+        [
+          "C91",
+          "2"
+        ],
+        [
+          "D1",
+          "2"
+        ],
+        [
+          "D4",
+          "1"
+        ],
+        [
+          "D5",
+          "1"
+        ],
+        [
+          "FLG1",
+          "1"
+        ],
+        [
+          "J1",
+          "2"
+        ],
+        [
+          "R1",
+          "2"
+        ],
+        [
+          "R72",
+          "2"
+        ],
+        [
+          "U1",
+          "1"
+        ],
+        [
+          "U1",
+          "9"
+        ],
+        [
+          "U2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "PWR3_LEDA",
+      "is_power": false,
+      "connections": [
+        [
+          "D5",
+          "2"
+        ],
+        [
+          "R5",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "PWR5_LEDA",
+      "is_power": false,
+      "connections": [
+        [
+          "D4",
+          "2"
+        ],
+        [
+          "R4",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "PWR_GOOD_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R73",
+          "1"
+        ],
+        [
+          "U1",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "Q1_GATE",
+      "is_power": false,
+      "connections": [
+        [
+          "D2",
+          "2"
+        ],
+        [
+          "Q1",
+          "4"
+        ],
+        [
+          "R1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "VCC5",
+      "is_power": true,
+      "connections": [
+        [
+          "C91",
+          "1"
+        ],
+        [
+          "U1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "VIN_FUSED",
+      "is_power": true,
+      "connections": [
+        [
+          "C1",
+          "1"
+        ],
+        [
+          "C2",
+          "1"
+        ],
+        [
+          "D1",
+          "1"
+        ],
+        [
+          "D2",
+          "1"
+        ],
+        [
+          "F1",
+          "2"
+        ],
+        [
+          "Q1",
+          "5"
+        ],
+        [
+          "Q1",
+          "6"
+        ],
+        [
+          "Q1",
+          "7"
+        ],
+        [
+          "Q1",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "VIN_PROT",
+      "is_power": true,
+      "connections": [
+        [
+          "C3",
+          "1"
+        ],
+        [
+          "C4",
+          "1"
+        ],
+        [
+          "C5",
+          "1"
+        ],
+        [
+          "FLG4",
+          "1"
+        ],
+        [
+          "Q1",
+          "1"
+        ],
+        [
+          "Q1",
+          "2"
+        ],
+        [
+          "Q1",
+          "3"
+        ],
+        [
+          "U1",
+          "2"
+        ],
+        [
+          "U1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "VIN_RAW",
+      "is_power": true,
+      "connections": [
+        [
+          "F1",
+          "1"
+        ],
+        [
+          "J1",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

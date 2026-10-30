@@ -241,8 +241,9 @@ def main() -> None:
     ]
     if set(mode_headers) != {"JP2", "JP3", "JP4"}:
         failures.append(f"Unexpected input mode headers: {mode_headers}")
-    if any(name.startswith(("BL_", "BLV")) for name in nets if name != "BL_PWM"):
-        failures.append("Removed backlight power-switching nets remain")
+    for legacy in ("BL_EN", "BL_EN_REQ", "BL_VIN", "BL_RAW", "BL_GATE", "BL_GATE_NPN"):
+        if legacy in nets:
+            failures.append(f"Legacy backlight switching net {legacy} remains")
     if any(name.startswith("LCD_") for name in nets):
         failures.append("Removed LCD power-switching nets remain")
     keyboard_buffers = [
@@ -354,11 +355,12 @@ def main() -> None:
     for pin, expected_net in hstx_pin_map.items():
         if ("MOD1", pin) not in nets.get(expected_net, set()):
             failures.append(f"MOD1 pin {pin} is not mapped to {expected_net}")
-    if "BL_PWM" in nets:
-        failures.append("BL_PWM must remain unassigned until a backlight interface is specified")
-    for legacy in ("BL_EN", "BL_EN_REQ", "BL_VIN", "BL_RAW", "BL_GATE", "BL_GATE_NPN"):
-        if legacy in nets:
-            failures.append(f"Legacy backlight net {legacy} remains")
+    if ("MOD1", "25") not in nets.get("BL_PWM_MCU", set()):
+        failures.append("GPIO35/MOD1 pin 25 is not connected to BL_PWM_MCU")
+    if {("R131", "1"), ("MOD1", "25")} - nets.get("BL_PWM_MCU", set()):
+        failures.append("R131 is not in series with the PWM source")
+    if ("R131", "2") not in nets.get("BL_PWM", set()):
+        failures.append("R131 is not connected to the protected BL_PWM node")
     for channel in range(3):
         if f"AI{channel}" not in nets:
             failures.append(f"Missing analog input net AI{channel}")
@@ -508,6 +510,7 @@ def main() -> None:
         "J29": {1: "MOTION9", 2: "MOTION10", 3: "MOTION11", 4: "GND"},
         "J30": {1: "MOTION12", 2: "MOTION13", 3: "MOTION14", 4: "GND"},
         "J31": {1: "AUX_OUT", 2: "GND"},
+        "J2": {1: "+12V_BL", 2: "GND", 3: "BL_PWM", 4: "BL_LED_N"},
         "J33": {1: "DO_COM", 2: "GND"},
         "J34": {
             1: "FIELD_IN13", 2: "FIELD_COM0",
@@ -544,6 +547,23 @@ def main() -> None:
             failures.append(
                 f"{reference} pin {pin} is not on expected AUX net {expected_net}"
             )
+    backlight_mosfet = {
+        ("R129", "1", "BL_PWM_MCU"),
+        ("R129", "2", "BL_SW_GATE"),
+        ("R130", "1", "BL_SW_GATE"),
+        ("R130", "2", "GND"),
+        ("Q8", "1", "BL_SW_GATE"),
+        ("Q8", "2", "GND"),
+        ("Q8", "3", "BL_LED_N"),
+        ("J2", "4", "BL_LED_N"),
+    }
+    for reference, pin, expected_net in backlight_mosfet:
+        if (reference, pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"{reference} pin {pin} is not on expected backlight net {expected_net}"
+            )
+    if component_values.get("Q8") != "BSS138":
+        failures.append("Q8 is not the optional backlight low-side MOSFET")
     if ("U24", "8") not in nets.get("OUT0", set()):
         failures.append("U24 spare buffer input pin 8 is not OUT0")
     if ("U24", "12") not in nets.get("BUFY0", set()):
@@ -645,7 +665,7 @@ def main() -> None:
             if (reference, pin) in connected_pads:
                 failures.append(f"{reference} spare pin {pin} is connected")
     decoupling_required = {
-        "U1", "U2", "U37", "U38",
+        "U1", "U2", "U3", "U37", "U38",
         "U6", "U7", "U8", "U9", "U10", "U11", "U12", "U13",
         "U24", "U25", "U28", "U34", "U41",
     }
@@ -752,17 +772,20 @@ def main() -> None:
         if ("U41", pin) not in nets.get(expected_net, set()):
             failures.append(f"U41 pin {pin} is not on {expected_net}")
     if ("C106", "1") not in nets.get("+3V3", set()):
-        failures.append("C106 is not connected to U41 +3V3")
+        failures.append("C106 is not connected to U28 +3V3")
     if ("C106", "2") not in nets.get("GND", set()):
         failures.append("C106 is not connected to GND")
 
     removed = {
         "C9", "C12", "C18", "C19", "C20", "C21", "C78", "C81", "C82", "C83",
-        "C84", "C85", "D3", "D6", "D7", "D8", "FB3", "J2", "JP1", "L2",
-        "Q2", "Q3", "Q4", "R2", "R3", "R6", "R7", "R8", "R14", "R15",
-        "R42", "R43", "SW1", "U3", "U4", "U14", "U15", "U16", "U17", "U22", "U23",
+        "C1", "C84", "C85", "D6", "D7", "D8", "FB3", "JP1",
+        "Q1", "Q2", "Q3", "Q4", "R2", "R3", "R6", "R7", "R8",
+        "R14", "R15",
+        "R42", "R43", "SW1", "U4", "U14", "U15", "U16", "U17", "U22", "U23",
         "RN1", "RN2", "RN3", "RN4", "RN5", "RN23", "RN25",
-        "RN32", "RN33",
+        *(f"R{index}" for index in range(55, 59)),
+        *(f"R{index}" for index in range(76, 92)),
+        *(f"U{index}" for index in range(42, 54)),
         *(f"C{index}" for index in range(30, 53)),
         *(f"C{index}" for index in range(59, 67)),
     }
@@ -798,9 +821,7 @@ def main() -> None:
     if safety_optos != {"U35", "U36", "U39"}:
         failures.append(f"Unexpected individual safety optocouplers: {sorted(safety_optos)}")
 
-    expected_pullups = {"R74", "R75", "R109"} | {
-        f"R{index}" for index in range(76, 92)
-    }
+    expected_pullups = {"R74", "R75", "R109"}
     actual_pullups = {
         reference
         for reference in expected_pullups
@@ -824,7 +845,6 @@ def main() -> None:
                     "1N4148WS",
                     {f"FLD_LED{number}_A", "ISO_GND"},
                 ),
-                "RV": (f"R{76 + bit}", "4.7k", {f"PLC_IN{number}_N", "+3V3"}),
             }
         )
     isolated_input_contracts.extend(
@@ -865,6 +885,25 @@ def main() -> None:
                 failures.append(
                     f"{channel} {role} {reference} is missing nets "
                     f"{sorted(expected_nets - actual_nets)}"
+                )
+
+    for group in range(4):
+        reference = f"RN{32 + group}"
+        if component_values.get(reference) != "4x4.7k":
+            failures.append(f"{reference} is not the PLC 4x4.7k pull-up network")
+        for channel in range(4):
+            number = group * 4 + channel + 1
+            signal_pin = str(channel + 1)
+            supply_pin = str(8 - channel)
+            if (reference, signal_pin) not in nets.get(
+                f"PLC_IN{number}_N", set()
+            ):
+                failures.append(
+                    f"{reference} pin {signal_pin} is not PLC_IN{number}_N"
+                )
+            if (reference, supply_pin) not in nets.get("+3V3", set()):
+                failures.append(
+                    f"{reference} pin {supply_pin} is not +3V3"
                 )
 
     if component_values.get("U1") != "LMR36510ADDAR":
@@ -910,7 +949,7 @@ def main() -> None:
         failures.append("HOLD optocoupler return is not on ISO_GND")
     if ("U39", "2") not in nets.get("ISO_GND", set()):
         failures.append("START optocoupler return is not on ISO_GND")
-    for reference, bank in (("U18", 0), ("U19", 0), ("U20", 1), ("U21", 1)):
+    for reference in expected_quad_opto:
         for pin in ("2", "4", "6", "8"):
             if (reference, pin) not in nets.get("ISO_GND", set()):
                 failures.append(
@@ -923,24 +962,17 @@ def main() -> None:
             failures.append(f"WeAct 3V3 output pin {pin} must remain local to the module")
     if ("MOD1", "31") not in nets.get("+5V", set()):
         failures.append("WeAct 5 V input is not connected to the main 5 V rail")
-    for pin in ("1", "2", "3"):
-        if ("Q1", pin) not in nets.get("VIN_PROT", set()):
-            failures.append(f"Q1 SO-8 source pin {pin} is not on VIN_PROT")
-    if ("Q1", "4") not in nets.get("Q1_GATE", set()):
-        failures.append("Q1 SO-8 gate pin 4 is not on Q1_GATE")
-    for pin in ("5", "6", "7", "8"):
-        if ("Q1", pin) not in nets.get("VIN_FUSED", set()):
-            failures.append(f"Q1 SO-8 drain pin {pin} is not on VIN_FUSED")
-    if component_values.get("Q1") != "IRF7240PBF":
-        failures.append("Q1 is not the intended 40 V SO-8 input MOSFET")
-    q1 = next(
-        (component for component in components if component.get("ref") == "Q1"),
-        None,
-    )
-    if q1 is None or "SOIC-8_3.9x4.9mm_P1.27mm" not in (
-        q1.findtext("footprint") or ""
-    ):
-        failures.append("Q1 is not in the intended SO-8 footprint")
+    for reference in ("D2", "D3"):
+        if component_values.get(reference) != "SS16":
+            failures.append(f"{reference} is not the intended 1 A input diode")
+        if (reference, "1") not in nets.get(
+            "VIN_PROT" if reference == "D2" else "VIN_BL_PROT", set()
+        ):
+            failures.append(f"{reference} cathode is not on its protected input rail")
+        if (reference, "2") not in nets.get("VIN_FUSED", set()):
+            failures.append(f"{reference} anode is not on VIN_FUSED")
+    if "Q1" in references or "Q1_GATE" in nets:
+        failures.append("Retired Q1 input MOSFET or gate net remains")
     for expected in (("U1", "4"), ("MOD1", "21"), ("R73", "1")):
         if expected not in nets.get("PWR_GOOD_N", set()):
             failures.append(f"Power-good network is missing {expected}")
@@ -954,10 +986,39 @@ def main() -> None:
         failures.append("LMR36510 feedback lower resistor is not 20k")
     if component_values.get("U2") != "AMS1117-3.3":
         failures.append("Peripheral 3.3 V rail is not supplied by its dedicated LDO")
+    if component_values.get("U3") != "LMR36510ADDAR":
+        failures.append("U3 is not the dedicated LMR36510 backlight buck")
+    if not {("U3", "2"), ("U3", "3")}.issubset(nets.get("VIN_BL_PROT", set())):
+        failures.append("Backlight buck input/enable pins are not on VIN_BL_PROT")
+    if component_values.get("L2") != "47uH 1.5A":
+        failures.append("Backlight buck inductor is not the TI 12 V reference value")
+    if component_values.get("R126") != "100k":
+        failures.append("Backlight buck upper feedback resistor is not 100k")
+    if component_values.get("R127") != "9.09k":
+        failures.append("Backlight buck lower feedback resistor is not 9.09k")
+    if ("U3", "4") in {
+        endpoint for endpoints in nets.values() for endpoint in endpoints
+    }:
+        failures.append("U3 power-good pin should remain unconnected")
+    if "J3" in references:
+        failures.append("Redundant two-pin +12 V output J3 remains")
+    if component_values.get("U37") != "L78L12ACUTR":
+        failures.append("The existing 0-10 V 12 V analog regulator was removed")
     if component_values.get("U34") != "AMS1117-3.3":
         failures.append("ESP8266 does not have its dedicated 3.3 V regulator")
     if ("U34", "2") not in nets.get("+3V3_WIFI", set()):
         failures.append("ESP8266 regulator is not connected to +3V3_WIFI")
+    if component_values.get("RN36") != "4x10k":
+        failures.append("RN36 is not the ESP 4x10k pull-up network")
+    wifi_pullups = {
+        "1": "+3V3_WIFI", "8": "WIFI_EN",
+        "2": "+3V3_WIFI", "7": "WIFI_RST",
+        "3": "+3V3_WIFI", "6": "WIFI_GPIO0",
+        "4": "+3V3_WIFI", "5": "WIFI_GPIO2",
+    }
+    for pin, expected_net in wifi_pullups.items():
+        if ("RN36", pin) not in nets.get(expected_net, set()):
+            failures.append(f"RN36 pin {pin} is not on {expected_net}")
 
     empty_footprints = [
         component.get("ref")

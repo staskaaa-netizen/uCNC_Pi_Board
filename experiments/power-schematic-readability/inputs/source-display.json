@@ -1,0 +1,640 @@
+{
+  "title": "LeanCam NCC RP2350B - display",
+  "parts": [
+    {
+      "ref": "C106",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J22",
+      "value": "LCD LVDS 2x10, 2.00 mm",
+      "footprint": "Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_02x10_Odd_Even",
+      "description": "Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "Pin_8",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "Pin_9",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "Pin_10",
+          "type": "passive"
+        },
+        {
+          "number": "11",
+          "name": "Pin_11",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "Pin_12",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "Pin_13",
+          "type": "passive"
+        },
+        {
+          "number": "14",
+          "name": "Pin_14",
+          "type": "passive"
+        },
+        {
+          "number": "15",
+          "name": "Pin_15",
+          "type": "passive"
+        },
+        {
+          "number": "16",
+          "name": "Pin_16",
+          "type": "passive"
+        },
+        {
+          "number": "17",
+          "name": "Pin_17",
+          "type": "passive"
+        },
+        {
+          "number": "18",
+          "name": "Pin_18",
+          "type": "passive"
+        },
+        {
+          "number": "19",
+          "name": "Pin_19",
+          "type": "passive"
+        },
+        {
+          "number": "20",
+          "name": "Pin_20",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "RN26",
+      "value": "4x330R",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x1206",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "R1A",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "RN27",
+      "value": "4x330R",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x1206",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "R1A",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U41",
+      "value": "DS90LV047A",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "DS90LV047A",
+      "description": "Quad 3.3 V CMOS-to-LVDS flow-through driver, SOIC-16",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "EN",
+          "type": "input"
+        },
+        {
+          "number": "2",
+          "name": "DIN0",
+          "type": "input"
+        },
+        {
+          "number": "3",
+          "name": "DIN1",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "VCC",
+          "type": "power_in"
+        },
+        {
+          "number": "5",
+          "name": "GND",
+          "type": "power_in"
+        },
+        {
+          "number": "6",
+          "name": "DIN2",
+          "type": "input"
+        },
+        {
+          "number": "7",
+          "name": "DIN3",
+          "type": "input"
+        },
+        {
+          "number": "8",
+          "name": "EN*",
+          "type": "input"
+        },
+        {
+          "number": "9",
+          "name": "DOUT0-",
+          "type": "output"
+        },
+        {
+          "number": "10",
+          "name": "DOUT0+",
+          "type": "output"
+        },
+        {
+          "number": "11",
+          "name": "DOUT1+",
+          "type": "output"
+        },
+        {
+          "number": "12",
+          "name": "DOUT1-",
+          "type": "output"
+        },
+        {
+          "number": "13",
+          "name": "DOUT2-",
+          "type": "output"
+        },
+        {
+          "number": "14",
+          "name": "DOUT2+",
+          "type": "output"
+        },
+        {
+          "number": "15",
+          "name": "DOUT3+",
+          "type": "output"
+        },
+        {
+          "number": "16",
+          "name": "DOUT3-",
+          "type": "output"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "+3V3",
+      "is_power": true,
+      "connections": [
+        [
+          "C106",
+          "1"
+        ],
+        [
+          "J22",
+          "1"
+        ],
+        [
+          "J22",
+          "2"
+        ],
+        [
+          "J22",
+          "3"
+        ],
+        [
+          "U41",
+          "1"
+        ],
+        [
+          "U41",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "GND",
+      "is_power": true,
+      "connections": [
+        [
+          "C106",
+          "2"
+        ],
+        [
+          "J22",
+          "13"
+        ],
+        [
+          "J22",
+          "14"
+        ],
+        [
+          "J22",
+          "4"
+        ],
+        [
+          "J22",
+          "5"
+        ],
+        [
+          "J22",
+          "6"
+        ],
+        [
+          "U41",
+          "5"
+        ],
+        [
+          "U41",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_CLK_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN27",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_CLK_P",
+      "is_power": false,
+      "connections": [
+        [
+          "RN27",
+          "2"
+        ],
+        [
+          "U41",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D0_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN26",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D0_P",
+      "is_power": false,
+      "connections": [
+        [
+          "RN26",
+          "4"
+        ],
+        [
+          "U41",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D1_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN26",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D1_P",
+      "is_power": false,
+      "connections": [
+        [
+          "RN26",
+          "2"
+        ],
+        [
+          "U41",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D2_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN27",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "HSTX_D2_P",
+      "is_power": false,
+      "connections": [
+        [
+          "RN27",
+          "4"
+        ],
+        [
+          "U41",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_CLK_N",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "15"
+        ],
+        [
+          "RN27",
+          "8"
+        ],
+        [
+          "U41",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_CLK_P",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "16"
+        ],
+        [
+          "RN27",
+          "7"
+        ],
+        [
+          "U41",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_D0_N",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "7"
+        ],
+        [
+          "RN26",
+          "6"
+        ],
+        [
+          "U41",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_D0_P",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "8"
+        ],
+        [
+          "RN26",
+          "5"
+        ],
+        [
+          "U41",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_D1_N",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "9"
+        ],
+        [
+          "RN26",
+          "8"
+        ],
+        [
+          "U41",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_D1_P",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "10"
+        ],
+        [
+          "RN26",
+          "7"
+        ],
+        [
+          "U41",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_D2_N",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "11"
+        ],
+        [
+          "RN27",
+          "6"
+        ],
+        [
+          "U41",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "LVDS_D2_P",
+      "is_power": false,
+      "connections": [
+        [
+          "J22",
+          "12"
+        ],
+        [
+          "RN27",
+          "5"
+        ],
+        [
+          "U41",
+          "14"
+        ]
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ official 64-pad footprint labels, and the generated `MOD1` pin numbers.
 | 22 | 44 | SR_LATCH | Output | 595 storage clock / PIO LATCH |
 | 24 | 45 | SR_PL_N | Output | 165 parallel load |
 | 23 | 60 | SR_IN_Q7 | Input | Shift-chain return; remove WeAct R16 (0R) and do not use USER key |
-| 35 | 25 | — | Reserved | Released from the shift-chain return |
+| 35 | 25 | `BL_PWM_MCU` | Output | Series-protected J2 PWM and Q8 gate drive |
 | 36 | 10 | — | Reserved | Local output-enable gate removed |
 | 37 | 24 | ESTOP_N | Input | Dedicated E-stop, active low |
 | 38 | 9 | HOLD_N | Input | Dedicated HOLD, active low |
@@ -53,7 +53,7 @@ official 64-pad footprint labels, and the generated `MOD1` pin numbers.
 | GPIO | MOD1 pin | Signal | Notes |
 |---:|---:|---|---|
 | 0 | 33 | — | Reserved for the module's optional PSRAM CS |
-| 1 | 49 | â€” | Reserved for a future external backlight PWM; not on J22 |
+| 1 | 49 | — | Released spare output |
 | 2 | 34 | SD_CD_MCU | SD-card detect |
 | 3 | 50 | — | Reserved; on-board backlight switch removed |
 | 4 | 35 | SD_MISO_MCU | SPI0 MISO |
@@ -74,7 +74,10 @@ official 64-pad footprint labels, and the generated `MOD1` pin numbers.
 
 | GPIO | MOD1 pin | Status |
 |---:|---:|---|
-| 35 | 25 | Spare |
+| 1 | 49 | Spare output on the former backlight control pin |
+| 3 | 50 | Spare output; same module edge as GPIO1 |
+| 35 | 25 | Backlight PWM, series-protected by R131 |
+| 36 | 10 | Spare general-purpose output on the opposite module edge |
 | 25 | 30 | Module LED |
 
 ## Module power and debug pads

@@ -1,0 +1,1282 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\display-python.kicad_sch")
+		(date "2026-10-29T17:48:37")
+		(tool "Eeschema 10.0.1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "LVDS display interface")
+				(company "LeanCam / uCNC Python hierarchy experiment")
+				(rev)
+				(date "2026-10-29")
+				(source "display-python.kicad_sch")
+				(comment
+					(number "1")
+					(value "Existing symbols grouped by function; local nets routed where practical")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C106")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/display-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a4ea18b0-48bb-533a-a86c-5a573fc858ef")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J22")
+			(value "LCD LVDS 2x10, 2.00 mm")
+			(footprint "Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "LCD LVDS 2x10, 2.00 mm")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint") "Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_02x10_Odd_Even")
+				(description "Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "LCD LVDS 2x10, 2.00 mm")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/display-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_2x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "69ce5810-c0b0-5936-91d8-a62107211f10")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "20")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN26")
+			(value "4x330R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07330RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07330RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/display-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6c1fac25-724d-5d7d-9408-2c6d0c6b90a2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RN27")
+			(value "4x330R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x1206")
+			(fields
+				(field
+					(name "MPN") "YC324-FR-07330RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
+			)
+			(property
+				(name "MPN")
+				(value "YC324-FR-07330RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/display-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b3bd87a6-ea8e-56d8-bd0b-880496a695a4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U41")
+			(value "DS90LV047A")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "DS90LV047ATMTC/NOPB")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "DS90LV047A")
+				(description "Quad 3.3 V CMOS-to-LVDS flow-through driver, SOIC-16")
+			)
+			(property
+				(name "MPN")
+				(value "DS90LV047ATMTC/NOPB")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/display-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "15e6d402-ca21-5792-b60b-6fe78d0ada33")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_02x10_Odd_Even")
+			(description "Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_2x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_02x10_Odd_Even")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "Pin_6")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "Pin_7")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "Pin_8")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "Pin_9")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "Pin_10")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "Pin_11")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "Pin_12")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "Pin_13")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "Pin_14")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "Pin_15")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "Pin_16")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "Pin_17")
+					(type "passive")
+				)
+				(pin
+					(num "18")
+					(name "Pin_18")
+					(type "passive")
+				)
+				(pin
+					(num "19")
+					(name "Pin_19")
+					(type "passive")
+				)
+				(pin
+					(num "20")
+					(name "Pin_20")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "DS90LV047A")
+			(description "Quad 3.3 V CMOS-to-LVDS flow-through driver, SOIC-16")
+			(docs "https://www.ti.com/lit/ds/symlink/ds90lv047a.pdf")
+			(footprints
+				(fp "SOIC*16*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "DS90LV047A")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/ds90lv047a.pdf")
+				(field
+					(name "Description") "Quad 3.3 V CMOS-to-LVDS flow-through driver, SOIC-16")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "EN")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "DIN0")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "DIN1")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "5")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "DIN2")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "DIN3")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "EN*")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "DOUT0-")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "DOUT0+")
+					(type "output")
+				)
+				(pin
+					(num "11")
+					(name "DOUT1+")
+					(type "output")
+				)
+				(pin
+					(num "12")
+					(name "DOUT1-")
+					(type "output")
+				)
+				(pin
+					(num "13")
+					(name "DOUT2-")
+					(type "output")
+				)
+				(pin
+					(num "14")
+					(name "DOUT2+")
+					(type "output")
+				)
+				(pin
+					(num "15")
+					(name "DOUT3+")
+					(type "output")
+				)
+				(pin
+					(num "16")
+					(name "DOUT3-")
+					(type "output")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "ResistorPack04")
+			(description "Four isolated resistors in one SMD array")
+			(docs "~")
+			(footprints
+				(fp "R_Array_*4x*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ResistorPack04")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "Four isolated resistors in one SMD array")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "R1A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "R2A")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "R3A")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "R4A")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "R4B")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "R3B")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "R2B")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "R1B")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Connector_Generic")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/+3V3")
+			(class "Default")
+			(node
+				(ref "C106")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "1")
+				(pinfunction "EN_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U41")
+				(pin "4")
+				(pinfunction "VCC_4")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C106")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "13")
+				(pinfunction "Pin_13_13")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "14")
+				(pinfunction "Pin_14_14")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "J22")
+				(pin "6")
+				(pinfunction "Pin_6_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U41")
+				(pin "8")
+				(pinfunction "EN*_8")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "3")
+			(name "/HSTX_CLK_N")
+			(class "Default")
+			(node
+				(ref "RN27")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/HSTX_CLK_P")
+			(class "Default")
+			(node
+				(ref "RN27")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "7")
+				(pinfunction "DIN3_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "5")
+			(name "/HSTX_D0_N")
+			(class "Default")
+			(node
+				(ref "RN26")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/HSTX_D0_P")
+			(class "Default")
+			(node
+				(ref "RN26")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "2")
+				(pinfunction "DIN0_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "7")
+			(name "/HSTX_D1_N")
+			(class "Default")
+			(node
+				(ref "RN26")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/HSTX_D1_P")
+			(class "Default")
+			(node
+				(ref "RN26")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "3")
+				(pinfunction "DIN1_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "9")
+			(name "/HSTX_D2_N")
+			(class "Default")
+			(node
+				(ref "RN27")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "/HSTX_D2_P")
+			(class "Default")
+			(node
+				(ref "RN27")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "6")
+				(pinfunction "DIN2_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "11")
+			(name "/LVDS_CLK_N")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "15")
+				(pinfunction "Pin_15_15")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN27")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "16")
+				(pinfunction "DOUT3-_16")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "12")
+			(name "/LVDS_CLK_P")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "16")
+				(pinfunction "Pin_16_16")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN27")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "15")
+				(pinfunction "DOUT3+_15")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "13")
+			(name "/LVDS_D0_N")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "7")
+				(pinfunction "Pin_7_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN26")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "9")
+				(pinfunction "DOUT0-_9")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "14")
+			(name "/LVDS_D0_P")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "8")
+				(pinfunction "Pin_8_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN26")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "10")
+				(pinfunction "DOUT0+_10")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "15")
+			(name "/LVDS_D1_N")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "9")
+				(pinfunction "Pin_9_9")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN26")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "12")
+				(pinfunction "DOUT1-_12")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "16")
+			(name "/LVDS_D1_P")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "10")
+				(pinfunction "Pin_10_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN26")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "11")
+				(pinfunction "DOUT1+_11")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "17")
+			(name "/LVDS_D2_N")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "11")
+				(pinfunction "Pin_11_11")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN27")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "13")
+				(pinfunction "DOUT2-_13")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "18")
+			(name "/LVDS_D2_P")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "12")
+				(pinfunction "Pin_12_12")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN27")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U41")
+				(pin "14")
+				(pinfunction "DOUT2+_14")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "19")
+			(name "unconnected-(J22-Pin_17-Pad17)")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "17")
+				(pinfunction "Pin_17_17")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "20")
+			(name "unconnected-(J22-Pin_18-Pad18)")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "18")
+				(pinfunction "Pin_18_18")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "21")
+			(name "unconnected-(J22-Pin_19-Pad19)")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "19")
+				(pinfunction "Pin_19_19")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "22")
+			(name "unconnected-(J22-Pin_20-Pad20)")
+			(class "Default")
+			(node
+				(ref "J22")
+				(pin "20")
+				(pinfunction "Pin_20_20")
+				(pintype "passive+no_connect")
+			)
+		)
+	)
+)

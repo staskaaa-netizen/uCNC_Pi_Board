@@ -561,10 +561,10 @@ def make_root() -> None:
 def add_power(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "Power tree: fused/reverse-protected 12-24 V input; one LMR36510 5 V/1 A "
-        "synchronous buck; WeAct onboard 3.3 V regulation supplies the logic rail; "
-        "ESP-01 and ESP-01S share a separate 3.3 V LDO. Isolated field commons "
-        "remain separate.",
+        "Power tree: fused 12-24 V input with a TVS and two independent 1 A "
+        "series-diode feeds. One feed powers the 5 V logic buck and analog housekeeping; "
+        "the other powers a dedicated 12 V backlight buck. WeAct onboard 3.3 V "
+        "regulation supplies only the module, and the ESP has its own 3.3 V LDO.",
         15,
         15,
         175,
@@ -574,42 +574,30 @@ def add_power(builder: SheetBuilder) -> None:
     b.terminal(2, {"1": "VIN_RAW", "2": "GND"}, (30, 60), "24 V DC input")
     b.two_pin("F", "Device:Fuse", "2 A", "R1206", "VIN_RAW", "VIN_FUSED", (55, 55), mpn="0ZCG0200FF2E", manufacturer="Bel Fuse")
     b.two_pin("D", "Device:D_TVS", "SMBJ24CA", "D_SMB", "VIN_FUSED", "GND", (72, 55), mpn="SMBJ24CA", manufacturer="Bourns")
-    b.capacitor("VIN_FUSED", "GND", "10uF 50V", (88, 55))
+    b.next_ref("C")  # retired common bulk capacitor C1
     b.capacitor("VIN_FUSED", "GND", "100nF 100V", (100, 55), footprint_key="C1206_100V")
 
-    q_input = b.add(
-        lib_id="LeanCam:PMOS_SO8",
-        value="IRF7240PBF",
-        footprint_key="SOIC8",
-        nets={
-            "1": "VIN_PROT",
-            "2": "VIN_PROT",
-            "3": "VIN_PROT",
-            "4": "Q1_GATE",
-            "5": "VIN_FUSED",
-            "6": "VIN_FUSED",
-            "7": "VIN_FUSED",
-            "8": "VIN_FUSED",
-        },
-        position=(115, 65),
-        prefix="Q",
-        mpn="IRF7240PBF",
-        manufacturer="Infineon Technologies",
-    )
-    del q_input
-    b.resistor("Q1_GATE", "GND", "100k", (115, 85))
-    b.two_pin(
-        "D",
-        "Device:D_Zener",
-        "MMSZ5242B",
-        "D_SOD323",
+    # Two independent 1 A series feeds provide reverse-polarity protection and
+    # keep the logic converter and backlight converter on separate branches.
+    b.diode(
+        "VIN_PROT",
         "VIN_FUSED",
-        "Q1_GATE",
-        (130, 75),
-        mpn="MMSZ5242BT1G",
-        manufacturer="onsemi",
+        (115, 65),
+        value="SS16",
+        footprint_key="D_SMA",
+        reference="D2",
     )
-    b.capacitor("VIN_PROT", "GND", "10uF 50V", (145, 65))
+    b.diode(
+        "VIN_BL_PROT",
+        "VIN_FUSED",
+        (115, 80),
+        value="SS16",
+        footprint_key="D_SMA",
+        reference="D3",
+    )
+    b.next_ref("Q")  # retired Q1 reverse-polarity MOSFET
+    b.next_ref("R")  # retired R1 gate pull-down
+    b.capacitor("VIN_PROT", "GND", "22uF 50V", (145, 65), footprint_key="C1210")
     b.capacitor("VIN_PROT", "GND", "100nF 100V", (157, 65), footprint_key="C1206_100V")
 
     # TI LMR36510 reference values for 5 V/1 A at 400 kHz:
@@ -635,9 +623,8 @@ def add_power(builder: SheetBuilder) -> None:
         manufacturer="Texas Instruments",
     )
     b.two_pin("L", "Device:L", "22uH 1.5A", "L_SRN6045", "BUCK5_SW", "+5V", (75, 100), mpn="SRN6045TA-220M", manufacturer="Bourns")
-    b.next_ref("D")  # retired synchronous-buck diode D3
     b.capacitor("VIN_PROT", "GND", "22uF 50V", (30, 120), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 10V", (115, 100), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 25V", (115, 100), footprint_key="C1210")
     b.capacitor("+5V", "GND", "100nF", (127, 100))
     b.next_ref("C")  # retired C8: C6/C11 already provide 2x22uF output bulk
 
@@ -654,13 +641,14 @@ def add_power(builder: SheetBuilder) -> None:
         },
         position=(65, 145),
         prefix="U",
+        reference="U2",
         mpn="AMS1117-3.3",
         manufacturer="Advanced Monolithic Systems",
     )
-    b.next_ref("L")  # retired 3.3 V buck inductor L2
+    b.next_ref("L")  # reserve L2 for the dedicated backlight buck
     b.next_ref("C")  # retired 3.3 V buck bootstrap C9
-    b.capacitor("+5V", "GND", "10uF", (52, 155))
-    b.capacitor("+5V", "GND", "22uF 10V", (118, 145), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 25V", (52, 155), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 25V", (118, 145), footprint_key="C1210")
     b.next_ref("C")  # retired optional output capacitor C12
     b.capacitor("+3V3", "GND", "100nF", (142, 145))
     # Isolated 3.3 V analog rail.
@@ -703,6 +691,8 @@ def add_power(builder: SheetBuilder) -> None:
         "+3V3_SD",
         "+5V_ISO_IN",
         "+12V_FIELD",
+        "VIN_BL_PROT",
+        "+12V_BL",
     )
     for index, net in enumerate(power_flags):
         b.add(
@@ -749,7 +739,7 @@ def add_mcu(builder: SheetBuilder) -> None:
         "13": "ENC1_B_3V3", "14": "ENC0_Z_3V3", "15": "ENC0_A_3V3",
         "16": "GND", "17": None, "18": None, "19": "AOUT0_PWM",
         "20": "AOUT2_PWM", "21": "PWR_GOOD_N", "22": "AI1_ADC", "23": "START_N",
-        "24": "ESTOP_N", "25": None, "26": "ENC2_B_3V3",
+        "24": "ESTOP_N", "25": "BL_PWM_MCU", "26": "ENC2_B_3V3",
         "27": "ENC1_Z_3V3", "28": "ENC1_A_3V3", "29": "ENC0_B_3V3",
         "30": None, "31": "+5V", "32": "GND", "33": None,
         "34": "SD_CD_MCU", "35": "SD_MISO_MCU", "36": "SD_SCK_MCU",
@@ -916,8 +906,9 @@ def add_field_inputs(builder: SheetBuilder) -> None:
         "optochannels are separate connectors, not shift-register bits. PLC and control channels "
         "keep the 2.2 k series limit, indicator LED and reverse diode. U17's two "
         "used control channels use individual EL3H7 DIP-4 optocouplers "
-        "U35/U36; PLC inputs use four LTV-847S SOIC-16W packages. Each output has "
-        "an individual 4.7 k pull-up and no input-node capacitor. Expansion bits "
+        "U35/U36; PLC inputs use four LTV-847S SOIC-16W packages. Four 4x4.7 k "
+        "isolated networks provide the PLC pull-ups and no input-node capacitor "
+        "is fitted. Expansion bits "
         "16-23 are split across two 1x6 headers.",
         15,
         15,
@@ -976,25 +967,22 @@ def add_field_inputs(builder: SheetBuilder) -> None:
     for group in range(4):
         x0 = 240 + (group % 2) * 100
         y0 = 65 + (group // 2) * 100
-        opto_pins = {}
         for channel in range(4):
             bit = group * 4 + channel
             number = bit + 1
-            anode_pin = str(1 + channel * 2)
-            cathode_pin = str(2 + channel * 2)
-            collector_pin = str(16 - channel * 2)
-            emitter_pin = str(15 - channel * 2)
-            opto_pins[anode_pin] = f"FLD_OPTO{number}_A"
-            opto_pins[cathode_pin] = "ISO_GND"
-            opto_pins[collector_pin] = f"PLC_IN{number}_N"
-            opto_pins[emitter_pin] = "GND"
 
             x = x0 + channel * 17
             b.resistor(f"FIELD_IN{number}", f"FLD_LED{number}_A", "2.2k", (x, y0))
             b.led(f"FLD_OPTO{number}_A", f"FLD_LED{number}_A", (x, y0 + 15))
             b.diode(f"FLD_LED{number}_A", "ISO_GND", (x + 7, y0))
             b.next_ref("C")  # removed input filter capacitor
-        b.next_ref("RN")  # removed input pull-up pack RN2-RN5
+        opto_pins = {}
+        for channel in range(4):
+            number = group * 4 + channel + 1
+            opto_pins[str(1 + channel * 2)] = f"FLD_OPTO{number}_A"
+            opto_pins[str(2 + channel * 2)] = "ISO_GND"
+            opto_pins[str(16 - channel * 2)] = f"PLC_IN{number}_N"
+            opto_pins[str(15 - channel * 2)] = "GND"
         b.add(
             lib_id="LeanCam:QuadOpto",
             value="LTV-847S",
@@ -1005,6 +993,7 @@ def add_field_inputs(builder: SheetBuilder) -> None:
             mpn="LTV-847S",
             manufacturer="Lite-On",
         )
+        b.next_ref("RN")  # preserve the retired PLC pull-up pack refs
         b.next_ref("C")   # removed pull-up rail bypass C37-C52
 
     expansion_nets = {"1": "GND", "2": "+3V3"}
@@ -1058,9 +1047,9 @@ def add_isolated_field_supply(builder: SheetBuilder) -> None:
     b.capacitor(
         "+5V_ISO_IN",
         "GND",
-        "10uF",
+        "22uF 25V",
         (485, 65),
-        footprint_key="C1206",
+        footprint_key="C1210",
         reference="C103",
     )
     b.add(
@@ -1283,16 +1272,18 @@ def add_field_outputs(builder: SheetBuilder) -> None:
         (300, 210),
         "General outputs 0-7",
     )
-def add_input_pullups(builder: SheetBuilder) -> None:
-    """Add one individual pull-up for every isolated input output."""
+def add_input_pullups(
+    builder: SheetBuilder,
+    storage_builder: SheetBuilder,
+) -> None:
+    """Add discrete safety pull-ups and grouped PLC pull-up networks."""
     b = builder
     b.note(
-        "The retired U17 safety quad is replaced by individual EL3H7 DIP-4 "
-        "optocouplers U35 (E-stop), U36 (HOLD) and U39 (START). Their open-collector "
-        "outputs drive the RP2350 directly. PLC input groups 1-4, 5-8, 9-12 and "
-        "13-16 retain four-channel LTV-847S packages. Every field input uses the "
-        "same 2.2 k / indicator LED / reverse-diode chain and an individual 4.7 k "
-        "pull-up. Firmware provides debouncing.",
+        "The dedicated E-stop, HOLD and START channels use individual EL3H7 "
+        "DIP-4 optocouplers U35/U36/U39 and keep discrete 4.7 k pull-ups. PLC "
+        "inputs use four LTV-847S packages with one isolated 4x4.7 k network per "
+        "four-channel group. Every field input uses the same 2.2 k / indicator "
+        "LED / reverse-diode chain. Firmware provides debouncing.",
         15,
         205,
         250,
@@ -1364,13 +1355,6 @@ def add_input_pullups(builder: SheetBuilder) -> None:
         ("R75", "HOLD_N"),
         ("R109", "START_N"),
     ]
-    channels.extend(
-        (
-            f"R{76 + bit}",
-            f"PLC_IN{bit + 1}_N",
-        )
-        for bit in range(16)
-    )
 
     for index, (resistor_reference, output_net) in enumerate(channels):
         x = 55 + (index % 6) * 48
@@ -1387,6 +1371,29 @@ def add_input_pullups(builder: SheetBuilder) -> None:
             manufacturer="Yageo",
             reference=resistor_reference,
         )
+
+    for group in range(4):
+        numbers = tuple(range(group * 4 + 1, group * 4 + 5))
+        b.resistor_pack4(
+            "4.7k",
+            "R_Array_4x0603",
+            [(f"PLC_IN{number}_N", "+3V3") for number in numbers],
+            (55 + group * 60, 340),
+            reference=f"RN{32 + group}",
+        )
+
+    storage_builder.resistor_pack4(
+        "10k",
+        "R_Array_4x0603",
+        [
+            ("+3V3_WIFI", "WIFI_EN"),
+            ("+3V3_WIFI", "WIFI_RST"),
+            ("+3V3_WIFI", "WIFI_GPIO0"),
+            ("+3V3_WIFI", "WIFI_GPIO2"),
+        ],
+        (20, 220),
+        reference="RN36",
+    )
 
 
 def add_encoders(builder: SheetBuilder) -> None:
@@ -1561,8 +1568,8 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
         "5": "WIFI_RX", "6": "WIFI_TX", "7": "WIFI_EN", "8": "WIFI_RST",
     }, (40, 205), "ESP-01/ESP-01S socket")
     b.next_ref("J")  # retired J21 external UART header
-    for net, pos in [("+3V3", (20, 230)), ("+3V3", (32, 230)), ("+3V3", (44, 230))]:
-        b.resistor(net, ["WIFI_EN", "WIFI_RST", "WIFI_GPIO0"][[20, 32, 44].index(pos[0])], "10k", pos)
+    for _ in range(4):
+        b.next_ref("R")  # preserve the retired discrete ESP pull-up references
     b.add(
         lib_id="Switch:SW_Push",
         value="ESP_PROG",
@@ -1573,10 +1580,15 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
         mpn="PTS645SM43SMTR92LFS",
         manufacturer="C&K",
     )
-    b.capacitor("+3V3_WIFI", "GND", "10uF", (105, 220))
+    b.capacitor(
+        "+3V3_WIFI",
+        "GND",
+        "22uF 25V",
+        (105, 220),
+        footprint_key="C1210",
+    )
     b.capacitor("+3V3_WIFI", "GND", "100nF", (117, 220))
     b.next_ref("FB")  # retired local-LDO link FB3
-    b.resistor("+3V3", "WIFI_GPIO2", "10k", (130, 220))
 
 def add_display(builder: SheetBuilder) -> None:
     b = builder
@@ -1812,16 +1824,17 @@ def add_analog(builder: SheetBuilder) -> None:
     b.capacitor(
         "VIN_PROT",
         "GND",
-        "1uF 50V",
+        "22uF 50V",
         (315, 295),
-        footprint_key="C1206_100V",
+        footprint_key="C1210",
         reference="C100",
     )
     b.capacitor(
         "+12V_AO",
         "GND",
-        "10uF 25V",
+        "22uF 25V",
         (385, 295),
+        footprint_key="C1210",
         reference="C101",
     )
     b.capacitor(
@@ -1833,20 +1846,172 @@ def add_analog(builder: SheetBuilder) -> None:
     )
 
 
+def add_backlight_power(builder: SheetBuilder) -> None:
+    b = builder
+    b.note(
+        "U3 is a second LMR36510 buck set to 12 V for the LCD backlight/CCFL "
+        "inverter supply. It uses 47 uH, 100 k / 9.09 k feedback, 3x22 uF/25 V "
+        "output and 22 uF/50 V + 100 nF/100 V local input. The existing U37 "
+        "+12V_AO supply remains separate.",
+        250,
+        250,
+        210,
+        42,
+    )
+    b.add(
+        lib_id="Regulator_Switching:LMR36510ADDA",
+        value="LMR36510ADDAR",
+        footprint_key="SOIC8_POWERPAD",
+        nets={
+            "1": "GND",
+            "2": "VIN_BL_PROT",
+            "3": "VIN_BL_PROT",
+            "4": None,
+            "5": "FB12",
+            "6": "VCC12",
+            "7": "BUCK12_BST",
+            "8": "BUCK12_SW",
+            "9": "GND",
+        },
+        position=(250, 310),
+        prefix="U",
+        reference="U3",
+        mpn="LMR36510ADDAR",
+        manufacturer="Texas Instruments",
+    )
+    b.two_pin(
+        "L",
+        "Device:L",
+        "47uH 1.5A",
+        "L_SRN6045",
+        "BUCK12_SW",
+        "+12V_BL",
+        (280, 310),
+        mpn="SRN6045TA-470M",
+        manufacturer="Bourns",
+        reference="L2",
+    )
+    b.capacitor(
+        "VIN_BL_PROT",
+        "GND",
+        "22uF 50V",
+        (232, 305),
+        footprint_key="C1210",
+        reference="C107",
+    )
+    b.capacitor(
+        "VIN_BL_PROT",
+        "GND",
+        "100nF 100V",
+        (232, 318),
+        footprint_key="C1206_100V",
+        reference="C108",
+    )
+    for index, x in enumerate((300, 315, 330)):
+        b.capacitor(
+            "+12V_BL",
+            "GND",
+            "22uF 25V",
+            (x, 310),
+            footprint_key="C1210",
+            reference=f"C{109 + index}",
+        )
+    b.capacitor(
+        "+12V_BL",
+        "GND",
+        "100nF",
+        (345, 310),
+        footprint_key="C0805",
+        reference="C112",
+    )
+    b.capacitor(
+        "BUCK12_BST",
+        "BUCK12_SW",
+        "100nF",
+        (257, 325),
+        footprint_key="C0805",
+        reference="C113",
+    )
+    b.capacitor(
+        "VCC12",
+        "GND",
+        "1uF",
+        (272, 325),
+        footprint_key="C0805",
+        reference="C114",
+    )
+    b.resistor(
+        "+12V_BL",
+        "FB12",
+        "100k",
+        (286, 325),
+        reference="R126",
+    )
+    b.resistor(
+        "FB12",
+        "GND",
+        "9.09k",
+        (299, 325),
+        reference="R127",
+    )
+    b.resistor(
+        "BL_PWM_MCU",
+        "BL_PWM",
+        "100R",
+        (302, 338),
+        footprint_key="R0805",
+        reference="R131",
+    )
+    b.resistor(
+        "BL_PWM_MCU",
+        "BL_SW_GATE",
+        "100R",
+        (315, 325),
+        footprint_key="R0805",
+        reference="R129",
+    )
+    b.resistor(
+        "BL_SW_GATE",
+        "GND",
+        "100k",
+        (328, 325),
+        footprint_key="R0805",
+        reference="R130",
+    )
+    b.add(
+        lib_id="Transistor_FET:Q_NMOS_GSD",
+        value="BSS138",
+        footprint_key="SOT23",
+        nets={"1": "BL_SW_GATE", "2": "GND", "3": "BL_LED_N"},
+        position=(342, 325),
+        prefix="Q",
+        reference="Q8",
+        mpn="BSS138",
+        manufacturer="onsemi",
+    )
+
+
 def add_backlight(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "Backlight power switching is external. MOD1 GPIO1 is reserved for a "
-        "future backlight PWM, but the verified J22 pinout has no backlight "
-        "contact and no board net or separate interface is assigned yet.",
+        "J2 carries the dedicated +12 V backlight/CCFL supply, a 3.3 V PWM "
+        "control signal from GPIO1, and ground. GPIO1 also drives the optional "
+        "Q8 low-side return through a 100 ohm gate resistor. High-current "
+        "switching remains on the external inverter or backlight driver.",
         15,
         240,
         180,
         30,
     )
+    b.terminal(
+        4,
+        {"1": "+12V_BL", "2": "GND", "3": "BL_PWM", "4": "BL_LED_N"},
+        (40, 260),
+        "Backlight: +12V, GND, PWM, switched low-side",
+        reference="J2",
+    )
     # Preserve the reference sequence of the removed backlight circuit so the
     # remaining staged PCB references stay stable.
-    b.next_ref("J")  # retired J2
     b.next_ref("Q")  # retired Q2 high-side switch
     b.next_ref("R")  # retired R6 gate pull-up
     b.next_ref("D")  # retired D6 gate clamp
@@ -1886,7 +2051,7 @@ def main() -> None:
     # all automatically numbered MCU/peripheral gates have been created.
     sheets["power"].next_ref("U")
 
-    # Explicit end-of-design references keep C1-C75 stable for the existing
+    # Explicit end-of-design references keep the existing capacitor references stable
     # staged PCB. One local 100 nF part is assigned to every supply-bearing IC
     # that did not already have a dedicated decoupling capacitor.
     local_decoupling = (
@@ -1931,8 +2096,9 @@ def main() -> None:
     sheets["storage"].capacitor(
         "+5V",
         "GND",
-        "10uF",
+        "22uF 25V",
         (342, 260),
+        footprint_key="C1210",
         reference="C88",
     )
     sheets["storage"].capacitor(
@@ -1945,7 +2111,7 @@ def main() -> None:
     sheets["power"].capacitor(
         "+3V3",
         "GND",
-        "22uF",
+        "22uF 25V",
         (417, 240),
         footprint_key="C1210",
         reference="C90",
@@ -1969,7 +2135,7 @@ def main() -> None:
             reference=reference,
         )
 
-    add_input_pullups(sheets["inputs"])
+    add_input_pullups(sheets["inputs"], sheets["storage"])
     add_encoder_z_divider(sheets["encoders"])
 
     expansion_4_7 = {"1": "GND", "2": "+3V3"}
@@ -2136,6 +2302,8 @@ def main() -> None:
         (440, 235),
         reference="RN31",
     )
+
+    add_backlight_power(sheets["power"])
 
     for sheet in sheets.values():
         sheet.save()

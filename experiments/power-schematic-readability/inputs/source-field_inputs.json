@@ -1,0 +1,4528 @@
+{
+  "title": "LeanCam NCC RP2350B - field_inputs",
+  "parts": [
+    {
+      "ref": "C103",
+      "value": "10uF",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C105",
+      "value": "10uF",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "lib": "Device",
+      "part": "C",
+      "description": "Unpolarized capacitor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D10",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D11",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D12",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D13",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D14",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D15",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D16",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D17",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D18",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D19",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D20",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D21",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D22",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D23",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D24",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D25",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D26",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D27",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D28",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D29",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D30",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D31",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D32",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D33",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D34",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D35",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D36",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D37",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D38",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D39",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D40",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D41",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D42",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D43",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D44",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D54",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D55",
+      "value": "1N4148WS",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D56",
+      "value": "SS54",
+      "footprint": "Diode_SMD:D_SMA",
+      "lib": "Device",
+      "part": "D",
+      "description": "Diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D9",
+      "value": "indicator",
+      "footprint": "LED_SMD:LED_1206_3216Metric",
+      "lib": "Device",
+      "part": "LED",
+      "description": "Light emitting diode",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "F4",
+      "value": "750mA",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "Fuse",
+      "description": "Fuse",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J26",
+      "value": "Dedicated START button input",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x02",
+      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J27",
+      "value": "Expansion inputs 4-7; 1=GND, 2=3.3 V",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x06",
+      "description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J34",
+      "value": "PLC positions 5-8 of J7 bank; software-mapped isolated inputs",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x08",
+      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "Pin_8",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J35",
+      "value": "PLC positions 5-8 of J8 bank; software-mapped isolated inputs",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x08",
+      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "Pin_8",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J5",
+      "value": "Dedicated E-stop loop",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x02",
+      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J6",
+      "value": "Dedicated HOLD button input",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x02",
+      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J7",
+      "value": "PLC positions 1-4; software-mapped isolated inputs",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x08",
+      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "Pin_8",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J8",
+      "value": "PLC positions 9-12; software-mapped isolated inputs",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x08",
+      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "Pin_8",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J9",
+      "value": "Expansion inputs 0-3; 1=GND, 2=3.3 V",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x06",
+      "description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "JP2",
+      "value": "J7 24V/CONTACT",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x03",
+      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "JP3",
+      "value": "J8 24V/CONTACT",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x03",
+      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "JP4",
+      "value": "SAFETY 24V/CONTACT",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x03",
+      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Pin_1",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R108",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R109",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R16",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R17",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R18",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R19",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R20",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R21",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R22",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R23",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R24",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R25",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R26",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R27",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R28",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R29",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R30",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R31",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R32",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R33",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R74",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R75",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R76",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R77",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R78",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R79",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R80",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R81",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R82",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R83",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R84",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R85",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R86",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R87",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R88",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R89",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R90",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R91",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "lib": "Device",
+      "part": "R",
+      "description": "Resistor",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "~",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "~",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "RN6",
+      "value": "4x10k",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "R1A",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "RN7",
+      "value": "4x10k",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "R1A",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U18",
+      "value": "LTV-847S",
+      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "QuadOpto",
+      "description": "Four-channel optocoupler, LTV-847S pinout",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "CH1_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CH1_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "CH2_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "CH2_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "CH3_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "CH3_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "CH4_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "CH4_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "CH4_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "CH4_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "11",
+          "name": "CH3_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "CH3_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "CH2_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "14",
+          "name": "CH2_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "15",
+          "name": "CH1_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "16",
+          "name": "CH1_COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U19",
+      "value": "LTV-847S",
+      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "QuadOpto",
+      "description": "Four-channel optocoupler, LTV-847S pinout",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "CH1_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CH1_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "CH2_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "CH2_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "CH3_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "CH3_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "CH4_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "CH4_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "CH4_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "CH4_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "11",
+          "name": "CH3_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "CH3_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "CH2_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "14",
+          "name": "CH2_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "15",
+          "name": "CH1_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "16",
+          "name": "CH1_COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U20",
+      "value": "LTV-847S",
+      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "QuadOpto",
+      "description": "Four-channel optocoupler, LTV-847S pinout",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "CH1_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CH1_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "CH2_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "CH2_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "CH3_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "CH3_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "CH4_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "CH4_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "CH4_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "CH4_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "11",
+          "name": "CH3_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "CH3_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "CH2_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "14",
+          "name": "CH2_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "15",
+          "name": "CH1_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "16",
+          "name": "CH1_COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U21",
+      "value": "LTV-847S",
+      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "lib": "LeanCam",
+      "part": "QuadOpto",
+      "description": "Four-channel optocoupler, LTV-847S pinout",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "CH1_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CH1_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "CH2_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "CH2_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "CH3_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "CH3_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "CH4_ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "CH4_CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "CH4_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "10",
+          "name": "CH4_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "11",
+          "name": "CH3_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "12",
+          "name": "CH3_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "13",
+          "name": "CH2_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "14",
+          "name": "CH2_COLLECTOR",
+          "type": "passive"
+        },
+        {
+          "number": "15",
+          "name": "CH1_EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "16",
+          "name": "CH1_COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U35",
+      "value": "EL3H7",
+      "footprint": "Package_DIP:DIP-4_W7.62mm",
+      "lib": "LeanCam",
+      "part": "EL3H7",
+      "description": "Everlight EL3H7 single-channel phototransistor optocoupler, DIP-4",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U36",
+      "value": "EL3H7",
+      "footprint": "Package_DIP:DIP-4_W7.62mm",
+      "lib": "LeanCam",
+      "part": "EL3H7",
+      "description": "Everlight EL3H7 single-channel phototransistor optocoupler, DIP-4",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U39",
+      "value": "EL3H7",
+      "footprint": "Package_DIP:DIP-4_W7.62mm",
+      "lib": "LeanCam",
+      "part": "EL3H7",
+      "description": "Everlight EL3H7 single-channel phototransistor optocoupler, DIP-4",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "ANODE",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "CATHODE",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "EMITTER",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "COLLECTOR",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "U40",
+      "value": "TBA2-0512",
+      "footprint": "Converter_DCDC:Converter_DCDC_TRACO_TBA2-xxxx_Single_THT",
+      "lib": "Converter_DCDC",
+      "part": "TBA2-0512",
+      "description": "2W DC/DC converter unregulated, 4.5-5.5V input, 12V output voltage, 165mA output, 1.5kVDC isolation, SIP-7",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+Vin",
+          "type": "power_in"
+        },
+        {
+          "number": "2",
+          "name": "-Vin",
+          "type": "power_in"
+        },
+        {
+          "number": "4",
+          "name": "-Vout",
+          "type": "power_out"
+        },
+        {
+          "number": "6",
+          "name": "+Vout",
+          "type": "power_out"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "+3V3",
+      "is_power": true,
+      "connections": [
+        [
+          "J27",
+          "2"
+        ],
+        [
+          "J9",
+          "2"
+        ],
+        [
+          "R109",
+          "2"
+        ],
+        [
+          "R74",
+          "2"
+        ],
+        [
+          "R75",
+          "2"
+        ],
+        [
+          "R76",
+          "2"
+        ],
+        [
+          "R77",
+          "2"
+        ],
+        [
+          "R78",
+          "2"
+        ],
+        [
+          "R79",
+          "2"
+        ],
+        [
+          "R80",
+          "2"
+        ],
+        [
+          "R81",
+          "2"
+        ],
+        [
+          "R82",
+          "2"
+        ],
+        [
+          "R83",
+          "2"
+        ],
+        [
+          "R84",
+          "2"
+        ],
+        [
+          "R85",
+          "2"
+        ],
+        [
+          "R86",
+          "2"
+        ],
+        [
+          "R87",
+          "2"
+        ],
+        [
+          "R88",
+          "2"
+        ],
+        [
+          "R89",
+          "2"
+        ],
+        [
+          "R90",
+          "2"
+        ],
+        [
+          "R91",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "+5V",
+      "is_power": true,
+      "connections": [
+        [
+          "F4",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+5V_ISO_IN",
+      "is_power": false,
+      "connections": [
+        [
+          "C103",
+          "1"
+        ],
+        [
+          "F4",
+          "2"
+        ],
+        [
+          "U40",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "+12V_FIELD",
+      "is_power": false,
+      "connections": [
+        [
+          "C105",
+          "1"
+        ],
+        [
+          "D56",
+          "1"
+        ],
+        [
+          "JP2",
+          "3"
+        ],
+        [
+          "JP3",
+          "3"
+        ],
+        [
+          "JP4",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "+12V_RAW",
+      "is_power": false,
+      "connections": [
+        [
+          "D56",
+          "2"
+        ],
+        [
+          "U40",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_FIELD",
+      "is_power": false,
+      "connections": [
+        [
+          "J5",
+          "1"
+        ],
+        [
+          "R16",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_LED_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D10",
+          "1"
+        ],
+        [
+          "D9",
+          "2"
+        ],
+        [
+          "R16",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R74",
+          "1"
+        ],
+        [
+          "U35",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_OPTO_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D9",
+          "1"
+        ],
+        [
+          "U35",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN0",
+      "is_power": false,
+      "connections": [
+        [
+          "J9",
+          "3"
+        ],
+        [
+          "RN6",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN1",
+      "is_power": false,
+      "connections": [
+        [
+          "J9",
+          "4"
+        ],
+        [
+          "RN6",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN2",
+      "is_power": false,
+      "connections": [
+        [
+          "J9",
+          "5"
+        ],
+        [
+          "RN6",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN3",
+      "is_power": false,
+      "connections": [
+        [
+          "J9",
+          "6"
+        ],
+        [
+          "RN6",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN4",
+      "is_power": false,
+      "connections": [
+        [
+          "J27",
+          "3"
+        ],
+        [
+          "RN7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN5",
+      "is_power": false,
+      "connections": [
+        [
+          "J27",
+          "4"
+        ],
+        [
+          "RN7",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN6",
+      "is_power": false,
+      "connections": [
+        [
+          "J27",
+          "5"
+        ],
+        [
+          "RN7",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "EXP_IN7",
+      "is_power": false,
+      "connections": [
+        [
+          "J27",
+          "6"
+        ],
+        [
+          "RN7",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_COM0",
+      "is_power": false,
+      "connections": [
+        [
+          "J34",
+          "2"
+        ],
+        [
+          "J34",
+          "4"
+        ],
+        [
+          "J34",
+          "6"
+        ],
+        [
+          "J34",
+          "8"
+        ],
+        [
+          "J7",
+          "2"
+        ],
+        [
+          "J7",
+          "4"
+        ],
+        [
+          "J7",
+          "6"
+        ],
+        [
+          "J7",
+          "8"
+        ],
+        [
+          "JP2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_COM1",
+      "is_power": false,
+      "connections": [
+        [
+          "J35",
+          "2"
+        ],
+        [
+          "J35",
+          "4"
+        ],
+        [
+          "J35",
+          "6"
+        ],
+        [
+          "J35",
+          "8"
+        ],
+        [
+          "J8",
+          "2"
+        ],
+        [
+          "J8",
+          "4"
+        ],
+        [
+          "J8",
+          "6"
+        ],
+        [
+          "J8",
+          "8"
+        ],
+        [
+          "JP3",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN1",
+      "is_power": false,
+      "connections": [
+        [
+          "J8",
+          "1"
+        ],
+        [
+          "R18",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN2",
+      "is_power": false,
+      "connections": [
+        [
+          "J8",
+          "3"
+        ],
+        [
+          "R19",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN3",
+      "is_power": false,
+      "connections": [
+        [
+          "J8",
+          "5"
+        ],
+        [
+          "R20",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN4",
+      "is_power": false,
+      "connections": [
+        [
+          "J8",
+          "7"
+        ],
+        [
+          "R21",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN5",
+      "is_power": false,
+      "connections": [
+        [
+          "J35",
+          "1"
+        ],
+        [
+          "R22",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN6",
+      "is_power": false,
+      "connections": [
+        [
+          "J35",
+          "3"
+        ],
+        [
+          "R23",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN7",
+      "is_power": false,
+      "connections": [
+        [
+          "J35",
+          "5"
+        ],
+        [
+          "R24",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN8",
+      "is_power": false,
+      "connections": [
+        [
+          "J35",
+          "7"
+        ],
+        [
+          "R25",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN9",
+      "is_power": false,
+      "connections": [
+        [
+          "J7",
+          "1"
+        ],
+        [
+          "R26",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN10",
+      "is_power": false,
+      "connections": [
+        [
+          "J7",
+          "3"
+        ],
+        [
+          "R27",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN11",
+      "is_power": false,
+      "connections": [
+        [
+          "J7",
+          "5"
+        ],
+        [
+          "R28",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN12",
+      "is_power": false,
+      "connections": [
+        [
+          "J7",
+          "7"
+        ],
+        [
+          "R29",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN13",
+      "is_power": false,
+      "connections": [
+        [
+          "J34",
+          "1"
+        ],
+        [
+          "R30",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN14",
+      "is_power": false,
+      "connections": [
+        [
+          "J34",
+          "3"
+        ],
+        [
+          "R31",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN15",
+      "is_power": false,
+      "connections": [
+        [
+          "J34",
+          "5"
+        ],
+        [
+          "R32",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_IN16",
+      "is_power": false,
+      "connections": [
+        [
+          "J34",
+          "7"
+        ],
+        [
+          "R33",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FIELD_SAFETY_COM",
+      "is_power": false,
+      "connections": [
+        [
+          "J26",
+          "2"
+        ],
+        [
+          "J5",
+          "2"
+        ],
+        [
+          "J6",
+          "2"
+        ],
+        [
+          "JP4",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED1_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D13",
+          "2"
+        ],
+        [
+          "D14",
+          "1"
+        ],
+        [
+          "R18",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED2_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D15",
+          "2"
+        ],
+        [
+          "D16",
+          "1"
+        ],
+        [
+          "R19",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED3_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D17",
+          "2"
+        ],
+        [
+          "D18",
+          "1"
+        ],
+        [
+          "R20",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED4_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D19",
+          "2"
+        ],
+        [
+          "D20",
+          "1"
+        ],
+        [
+          "R21",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED5_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D21",
+          "2"
+        ],
+        [
+          "D22",
+          "1"
+        ],
+        [
+          "R22",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED6_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D23",
+          "2"
+        ],
+        [
+          "D24",
+          "1"
+        ],
+        [
+          "R23",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED7_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D25",
+          "2"
+        ],
+        [
+          "D26",
+          "1"
+        ],
+        [
+          "R24",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED8_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D27",
+          "2"
+        ],
+        [
+          "D28",
+          "1"
+        ],
+        [
+          "R25",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED9_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D29",
+          "2"
+        ],
+        [
+          "D30",
+          "1"
+        ],
+        [
+          "R26",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED10_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D31",
+          "2"
+        ],
+        [
+          "D32",
+          "1"
+        ],
+        [
+          "R27",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED11_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D33",
+          "2"
+        ],
+        [
+          "D34",
+          "1"
+        ],
+        [
+          "R28",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED12_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D35",
+          "2"
+        ],
+        [
+          "D36",
+          "1"
+        ],
+        [
+          "R29",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED13_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D37",
+          "2"
+        ],
+        [
+          "D38",
+          "1"
+        ],
+        [
+          "R30",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED14_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D39",
+          "2"
+        ],
+        [
+          "D40",
+          "1"
+        ],
+        [
+          "R31",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED15_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D41",
+          "2"
+        ],
+        [
+          "D42",
+          "1"
+        ],
+        [
+          "R32",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_LED16_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D43",
+          "2"
+        ],
+        [
+          "D44",
+          "1"
+        ],
+        [
+          "R33",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO1_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D13",
+          "1"
+        ],
+        [
+          "U18",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO2_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D15",
+          "1"
+        ],
+        [
+          "U18",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO3_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D17",
+          "1"
+        ],
+        [
+          "U18",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO4_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D19",
+          "1"
+        ],
+        [
+          "U18",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO5_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D21",
+          "1"
+        ],
+        [
+          "U19",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO6_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D23",
+          "1"
+        ],
+        [
+          "U19",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO7_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D25",
+          "1"
+        ],
+        [
+          "U19",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO8_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D27",
+          "1"
+        ],
+        [
+          "U19",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO9_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D29",
+          "1"
+        ],
+        [
+          "U20",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO10_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D31",
+          "1"
+        ],
+        [
+          "U20",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO11_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D33",
+          "1"
+        ],
+        [
+          "U20",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO12_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D35",
+          "1"
+        ],
+        [
+          "U20",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO13_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D37",
+          "1"
+        ],
+        [
+          "U21",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO14_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D39",
+          "1"
+        ],
+        [
+          "U21",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO15_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D41",
+          "1"
+        ],
+        [
+          "U21",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "FLD_OPTO16_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D43",
+          "1"
+        ],
+        [
+          "U21",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "GND",
+      "is_power": true,
+      "connections": [
+        [
+          "C103",
+          "2"
+        ],
+        [
+          "J27",
+          "1"
+        ],
+        [
+          "J9",
+          "1"
+        ],
+        [
+          "RN6",
+          "5"
+        ],
+        [
+          "RN6",
+          "6"
+        ],
+        [
+          "RN6",
+          "7"
+        ],
+        [
+          "RN6",
+          "8"
+        ],
+        [
+          "RN7",
+          "5"
+        ],
+        [
+          "RN7",
+          "6"
+        ],
+        [
+          "RN7",
+          "7"
+        ],
+        [
+          "RN7",
+          "8"
+        ],
+        [
+          "U18",
+          "11"
+        ],
+        [
+          "U18",
+          "13"
+        ],
+        [
+          "U18",
+          "15"
+        ],
+        [
+          "U18",
+          "9"
+        ],
+        [
+          "U19",
+          "11"
+        ],
+        [
+          "U19",
+          "13"
+        ],
+        [
+          "U19",
+          "15"
+        ],
+        [
+          "U19",
+          "9"
+        ],
+        [
+          "U20",
+          "11"
+        ],
+        [
+          "U20",
+          "13"
+        ],
+        [
+          "U20",
+          "15"
+        ],
+        [
+          "U20",
+          "9"
+        ],
+        [
+          "U21",
+          "11"
+        ],
+        [
+          "U21",
+          "13"
+        ],
+        [
+          "U21",
+          "15"
+        ],
+        [
+          "U21",
+          "9"
+        ],
+        [
+          "U35",
+          "3"
+        ],
+        [
+          "U36",
+          "3"
+        ],
+        [
+          "U39",
+          "3"
+        ],
+        [
+          "U40",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "HOLD_FIELD",
+      "is_power": false,
+      "connections": [
+        [
+          "J6",
+          "1"
+        ],
+        [
+          "R17",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "HOLD_LED_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D11",
+          "2"
+        ],
+        [
+          "D12",
+          "1"
+        ],
+        [
+          "R17",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "HOLD_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R75",
+          "1"
+        ],
+        [
+          "U36",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "HOLD_OPTO_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D11",
+          "1"
+        ],
+        [
+          "U36",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ISO_GND",
+      "is_power": false,
+      "connections": [
+        [
+          "C105",
+          "2"
+        ],
+        [
+          "D10",
+          "2"
+        ],
+        [
+          "D12",
+          "2"
+        ],
+        [
+          "D14",
+          "2"
+        ],
+        [
+          "D16",
+          "2"
+        ],
+        [
+          "D18",
+          "2"
+        ],
+        [
+          "D20",
+          "2"
+        ],
+        [
+          "D22",
+          "2"
+        ],
+        [
+          "D24",
+          "2"
+        ],
+        [
+          "D26",
+          "2"
+        ],
+        [
+          "D28",
+          "2"
+        ],
+        [
+          "D30",
+          "2"
+        ],
+        [
+          "D32",
+          "2"
+        ],
+        [
+          "D34",
+          "2"
+        ],
+        [
+          "D36",
+          "2"
+        ],
+        [
+          "D38",
+          "2"
+        ],
+        [
+          "D40",
+          "2"
+        ],
+        [
+          "D42",
+          "2"
+        ],
+        [
+          "D44",
+          "2"
+        ],
+        [
+          "D55",
+          "2"
+        ],
+        [
+          "JP2",
+          "1"
+        ],
+        [
+          "JP3",
+          "1"
+        ],
+        [
+          "JP4",
+          "1"
+        ],
+        [
+          "U18",
+          "2"
+        ],
+        [
+          "U18",
+          "4"
+        ],
+        [
+          "U18",
+          "6"
+        ],
+        [
+          "U18",
+          "8"
+        ],
+        [
+          "U19",
+          "2"
+        ],
+        [
+          "U19",
+          "4"
+        ],
+        [
+          "U19",
+          "6"
+        ],
+        [
+          "U19",
+          "8"
+        ],
+        [
+          "U20",
+          "2"
+        ],
+        [
+          "U20",
+          "4"
+        ],
+        [
+          "U20",
+          "6"
+        ],
+        [
+          "U20",
+          "8"
+        ],
+        [
+          "U21",
+          "2"
+        ],
+        [
+          "U21",
+          "4"
+        ],
+        [
+          "U21",
+          "6"
+        ],
+        [
+          "U21",
+          "8"
+        ],
+        [
+          "U35",
+          "2"
+        ],
+        [
+          "U36",
+          "2"
+        ],
+        [
+          "U39",
+          "2"
+        ],
+        [
+          "U40",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN1_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R76",
+          "1"
+        ],
+        [
+          "U18",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN2_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R77",
+          "1"
+        ],
+        [
+          "U18",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN3_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R78",
+          "1"
+        ],
+        [
+          "U18",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN4_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R79",
+          "1"
+        ],
+        [
+          "U18",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN5_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R80",
+          "1"
+        ],
+        [
+          "U19",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN6_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R81",
+          "1"
+        ],
+        [
+          "U19",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN7_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R82",
+          "1"
+        ],
+        [
+          "U19",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN8_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R83",
+          "1"
+        ],
+        [
+          "U19",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN9_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R84",
+          "1"
+        ],
+        [
+          "U20",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN10_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R85",
+          "1"
+        ],
+        [
+          "U20",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN11_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R86",
+          "1"
+        ],
+        [
+          "U20",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN12_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R87",
+          "1"
+        ],
+        [
+          "U20",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN13_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R88",
+          "1"
+        ],
+        [
+          "U21",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN14_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R89",
+          "1"
+        ],
+        [
+          "U21",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN15_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R90",
+          "1"
+        ],
+        [
+          "U21",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_IN16_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R91",
+          "1"
+        ],
+        [
+          "U21",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "START_FIELD",
+      "is_power": false,
+      "connections": [
+        [
+          "J26",
+          "1"
+        ],
+        [
+          "R108",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "START_LED_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D54",
+          "2"
+        ],
+        [
+          "D55",
+          "1"
+        ],
+        [
+          "R108",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "START_N",
+      "is_power": false,
+      "connections": [
+        [
+          "R109",
+          "1"
+        ],
+        [
+          "U39",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "START_OPTO_A",
+      "is_power": false,
+      "connections": [
+        [
+          "D54",
+          "1"
+        ],
+        [
+          "U39",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

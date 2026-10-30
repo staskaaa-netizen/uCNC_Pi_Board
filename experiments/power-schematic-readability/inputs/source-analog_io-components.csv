@@ -1,0 +1,41 @@
+Reference,Value,LibId,PinCount
+C100,1uF 50V,Device:C,2
+C101,10uF 25V,Device:C,2
+C102,100nF,Device:C,2
+C73,100nF,Device:C,2
+C74,100nF,Device:C,2
+C75,100nF,Device:C,2
+C92,1uF,Device:C,2
+C93,100nF,Device:C,2
+C94,1uF,Device:C,2
+C95,100nF,Device:C,2
+C96,1uF,Device:C,2
+C97,100nF,Device:C,2
+C98,1uF,Device:C,2
+C99,100nF,Device:C,2
+J24,AI0/GND/AI1/GND/AI2,Connector_Generic:Conn_01x05,5
+J25,0-10 V outputs 0-3; pin 1 = common GND,Connector_Generic:Conn_01x05,5
+R100,22k,Device:R,2
+R101,22k,Device:R,2
+R102,22k,Device:R,2
+R103,22k,Device:R,2
+R104,10k,Device:R,2
+R105,10k,Device:R,2
+R106,10k,Device:R,2
+R107,10k,Device:R,2
+R61,100k,Device:R,2
+R63,33k,Device:R,2
+R64,100k,Device:R,2
+R66,33k,Device:R,2
+R67,100k,Device:R,2
+R69,33k,Device:R,2
+R92,10k,Device:R,2
+R93,10k,Device:R,2
+R94,10k,Device:R,2
+R95,10k,Device:R,2
+R96,10k,Device:R,2
+R97,10k,Device:R,2
+R98,10k,Device:R,2
+R99,10k,Device:R,2
+U37,L78L12ACUTR,LeanCam:L78L12,3
+U38,TLV2374IDR,LeanCam:TLV2374,14

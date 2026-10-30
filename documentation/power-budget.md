@@ -4,17 +4,21 @@
 
 - PLC inputs support external 24 V wetting or an internal isolated 12 V
   short-pair mode.
-- Main input protection: 2 A fuse, one 24 V bidirectional TVS and an
-  Infineon IRF7240PBF reverse-polarity P-channel MOSFET. Q1 is rated for
-  `-40 V`, `-10.5 A` at 25 C and `-8.6 A` at 70 C, with 15 mOhm maximum
-  on-resistance at `VGS=-10 V`. The SO-8 package keeps the input path
-  comfortably within its current and voltage ratings while the 2 A fuse
-  remains the assembly limit.
-  Datasheet: <https://www.infineon.com/dgdl/irf7240pbf.pdf?fileId=5546d462533600a4015355e30d5a1b56>
+- Main input protection: 2 A fuse, one 24 V bidirectional TVS and two
+  independent 60 V, 1 A SS16 series diodes. D2 feeds the logic-side
+  `VIN_PROT` rail; D3 feeds the dedicated backlight-buck input. Reverse input
+  polarity blocks both branches.
+- C1 is omitted: C2 keeps the common 100 nF bypass at `VIN_FUSED`, while the
+  logic and backlight branches each retain 22 uF local bulk capacitance.
 - 5 V rail: TI LMR36510ADDAR, 1 A synchronous buck at 400 kHz. The reference
-  network uses 22 uH, 2 x 22 uF output capacitance, 34 k + 46.4 k / 20 k
+  network uses 22 uH, 2 x 22 uF/25 V output capacitance, 34 k + 46.4 k / 20 k
   feedback divider, 1 uF VCC bypass and a 100 nF bootstrap capacitor. No catch
   diode is fitted.
+- Backlight rail: a second TI LMR36510ADDAR generates ground-referenced
+  `+12V_BL` at up to 1 A. The 12 V/400 kHz design uses 47 uH,
+  100 k / 9.09 k feedback, 3 x 22 uF/25 V output capacitance,
+  22 uF/50 V + 100 nF/100 V local input capacitance, 1 uF VCC bypass and a
+  100 nF bootstrap capacitor.
 - The WeAct `5V` pin is supplied directly from the motherboard 5 V rail. Its
   onboard 3.3 V regulator powers only the module.
 - A separate AMS1117-3.3 LDO supplies the motherboard peripheral `+3V3` rail,
@@ -42,6 +46,7 @@
 | Encoders | 30 mA | 150 mA | +5V_ENC |
 | Four 0-10 V outputs | 3 mA | 12 mA | +12V_AO, U37 from VIN_PROT |
 | Isolated field wetting | 110 mA | 167 mA | +5V_ISO_IN via U40 |
+| Backlight/CCFL | load dependent | 1 A | +12V_BL via U3 |
 
 The LMR36510 is rated to 1 A and is sized for the expected 100-200 mA
 motherboard load. The two 3.3 V LDOs are powered from its 5 V output:
@@ -51,12 +56,18 @@ motherboard load. The two 3.3 V LDOs are powered from its 5 V output:
 - U34 AMS1117-3.3 feeds only the optional ESP-01/ESP-01S. Its 500 mA transmit peak is
   locally reservoir-supported by 10 uF plus 100 nF.
 
-The 1 A buck limit must include both LDO input currents plus the direct 5 V
-encoder load. Do not operate the ESP at peak transmit and all other
-loads simultaneously. The 2 A input fuse remains the hard assembly limit.
-Backlight power is not supplied by this board. MOD1 GPIO1 is reserved for a
-future backlight PWM, but the verified J22 pinout has no backlight contact and
-no board net or separate backlight-driver interface is currently assigned.
+The first 1 A buck limit must include both LDO input currents plus the direct
+5 V encoder load. Do not operate the ESP at peak transmit and all other
+logic-side loads simultaneously. The 2 A input fuse remains the hard assembly
+limit for both converter branches.
+
+The second buck supplies only `+12V_BL`; J2 provides 12 V, PWM, ground and an
+optional Q8-switched LED return. The direct PWM and MOSFET gate share GPIO35.
+High-current switching and CCFL inverter circuitry remain external.
+R131 provides 100 ohm series protection between GPIO35 and J2 pin 3. R129
+branches directly from the MCU-side node to Q8. Backlight-control tracks use a
+0.2 mm netclass.
+The 0-10 V output amplifier remains on the independent U37 `+12V_AO` rail.
 
 A linear 5 V regulator is not acceptable from the specified 12-24 V input. At
 24 V and only 200 mA it would dissipate approximately 3.8 W.
@@ -78,10 +89,11 @@ firmware/application to 150 mA per channel and 500 mA per package for thermal
 margin. Motion outputs are 5 V CMOS logic, not motor power.
 
 Each PLC channel has a 2.2 k series resistor, indicator LED,
-reverse-protection diode and optocoupler channel. The board can either use an
-external 24 V wetting source or generate its own isolated 12 V wetting source
-with U40, a Traco `TBA2-0512`, rated at 2 W and approximately 167 mA. F4 limits
-the converter input to 750 mA, and D56 prevents field-side backfeed into U40.
+reverse-protection diode and LTV-847S optocoupler channel. RN32-RN35 provide
+4x4.7 k logic-side PLC pull-ups. The board can either use an external 24 V wetting
+source or generate its own isolated 12 V wetting source with U40, a Traco
+`TBA2-0512`, rated at 2 W and approximately 167 mA. F4 limits the converter
+input to 750 mA, and D56 prevents field-side backfeed into U40.
 One bottom-side selector per input bank chooses 24 V or `CONTACT`; see
 `documentation/input-wetting.md`.
 

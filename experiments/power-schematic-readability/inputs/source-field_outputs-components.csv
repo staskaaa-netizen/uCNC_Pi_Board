@@ -1,0 +1,72 @@
+Reference,Value,LibId,PinCount
+C53,100nF,Device:C,2
+C54,100nF,Device:C,2
+C55,100nF,Device:C,2
+C56,100nF,Device:C,2
+D45,DO0,Device:LED,2
+D46,DO1,Device:LED,2
+D47,DO2,Device:LED,2
+D48,DO3,Device:LED,2
+D49,DO4,Device:LED,2
+D50,DO5,Device:LED,2
+D51,DO6,Device:LED,2
+D52,DO7,Device:LED,2
+D57,DO8,Device:LED,2
+D58,DO9,Device:LED,2
+D59,DO10,Device:LED,2
+D60,DO11,Device:LED,2
+D61,DO12,Device:LED,2
+D62,DO13,Device:LED,2
+D63,DO14,Device:LED,2
+D64,DO15,Device:LED,2
+J10,"AX0: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
+J11,"AX1: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
+J12,General outputs 0-7,Connector_Generic:Conn_01x08,8
+J28,"AX2: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
+J29,"AX3: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
+J30,"AX4: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
+J31,AUX open-drain output and GND,Connector_Generic:Conn_01x02,2
+J32,General outputs 8-15; DO_COM and GND are shared through J12,Connector_Generic:Conn_01x08,8
+J33,General outputs field +V and GND,Connector_Generic:Conn_01x02,2
+Q5,BSS138,Transistor_FET:Q_NMOS_GSD,3
+Q6,BSS138,Transistor_FET:Q_NMOS_GSD,3
+Q7,BSS138,Transistor_FET:Q_NMOS_GSD,3
+R113,100k,Device:R,2
+R114,100R,Device:R,2
+R115,100k,Device:R,2
+R116,100R,Device:R,2
+R117,100k,Device:R,2
+R118,2.2k,Device:R,2
+R119,2.2k,Device:R,2
+R120,2.2k,Device:R,2
+R121,2.2k,Device:R,2
+R122,2.2k,Device:R,2
+R123,2.2k,Device:R,2
+R124,2.2k,Device:R,2
+R125,2.2k,Device:R,2
+R34,2.2k,Device:R,2
+R35,2.2k,Device:R,2
+R36,2.2k,Device:R,2
+R37,2.2k,Device:R,2
+R38,2.2k,Device:R,2
+R39,2.2k,Device:R,2
+R40,2.2k,Device:R,2
+R41,2.2k,Device:R,2
+RN10,4x10k,LeanCam:ResistorPack04,8
+RN11,4x10k,LeanCam:ResistorPack04,8
+RN12,4x10k,LeanCam:ResistorPack04,8
+RN13,4x10k,LeanCam:ResistorPack04,8
+RN16,4x100R,LeanCam:ResistorPack04,8
+RN17,4x100R,LeanCam:ResistorPack04,8
+RN18,4x100R,LeanCam:ResistorPack04,8
+RN19,4x100R,LeanCam:ResistorPack04,8
+RN20,4x100R,LeanCam:ResistorPack04,8
+RN21,4x100R,LeanCam:ResistorPack04,8
+RN30,4x10k,LeanCam:ResistorPack04,8
+RN31,4x10k,LeanCam:ResistorPack04,8
+RN8,4x10k,LeanCam:ResistorPack04,8
+RN9,4x10k,LeanCam:ResistorPack04,8
+U24,SN74AHCT541DW,LeanCam:OctalBuffer5V,20
+U25,SN74AHCT541DW,LeanCam:OctalBuffer5V,20
+U26,ULN2003ADR,Transistor_Array:ULN2003A,16
+U27,ULN2003ADR,Transistor_Array:ULN2003A,16

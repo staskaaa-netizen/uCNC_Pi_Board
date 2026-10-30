@@ -1,0 +1,111 @@
+{
+  "source_netlist": "experiments\\power-schematic-readability\\inputs\\source-encoders.json",
+  "generated_netlist": "experiments\\power-schematic-readability\\other-sheets\\encoders-python.net",
+  "source_component_count": 9,
+  "generated_component_count": 9,
+  "source_net_count": 22,
+  "generated_net_count": 22,
+  "root_local_label_prefix_normalized": true,
+  "missing_components": [],
+  "extra_components": [],
+  "value_changes": [],
+  "footprint_changes": [],
+  "missing_net_names": [],
+  "extra_net_names": [],
+  "changed_named_connections": [],
+  "source_nodes_missing_from_generated": [],
+  "generated_nodes_not_in_source": [],
+  "generated_connection_groups": {
+    "/+3V3": [
+      "C57.1",
+      "U28.20"
+    ],
+    "/+5V": [
+      "F2.1"
+    ],
+    "/+5V_ENC": [
+      "D53.1",
+      "F2.2",
+      "J13.1",
+      "J14.1",
+      "J15.1"
+    ],
+    "/ENC0_A_3V3": [
+      "U28.18"
+    ],
+    "/ENC0_A_5V": [
+      "J13.2",
+      "U28.2"
+    ],
+    "/ENC0_B_3V3": [
+      "U28.17"
+    ],
+    "/ENC0_B_5V": [
+      "J13.3",
+      "U28.3"
+    ],
+    "/ENC0_Z_3V3": [
+      "U28.16"
+    ],
+    "/ENC0_Z_5V": [
+      "J13.4",
+      "U28.4"
+    ],
+    "/ENC1_A_3V3": [
+      "U28.15"
+    ],
+    "/ENC1_A_5V": [
+      "J14.2",
+      "U28.5"
+    ],
+    "/ENC1_B_3V3": [
+      "U28.14"
+    ],
+    "/ENC1_B_5V": [
+      "J14.3",
+      "U28.6"
+    ],
+    "/ENC1_Z_3V3": [
+      "U28.13"
+    ],
+    "/ENC1_Z_5V": [
+      "J14.4",
+      "U28.7"
+    ],
+    "/ENC2_A_3V3": [
+      "U28.12"
+    ],
+    "/ENC2_A_5V": [
+      "J15.2",
+      "U28.8"
+    ],
+    "/ENC2_B_3V3": [
+      "U28.11"
+    ],
+    "/ENC2_B_5V": [
+      "J15.3",
+      "U28.9"
+    ],
+    "/ENC2_Z_3V3": [
+      "R110.2",
+      "R111.1"
+    ],
+    "/ENC2_Z_5V": [
+      "J15.4",
+      "R110.1"
+    ],
+    "/GND": [
+      "C57.2",
+      "D53.2",
+      "J13.5",
+      "J14.5",
+      "J15.5",
+      "R111.2",
+      "U28.1",
+      "U28.10",
+      "U28.19"
+    ]
+  },
+  "netlist_partition_identical": true,
+  "named_netlists_identical": true
+}

@@ -1,0 +1,4777 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\mcu_io-python.kicad_sch")
+		(date "2026-10-29T17:48:43")
+		(tool "Eeschema 10.0.1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "RP2350B module, shift-register chains and safety I/O")
+				(company "LeanCam / uCNC Python hierarchy experiment")
+				(rev)
+				(date "2026-10-29")
+				(source "mcu_io-python.kicad_sch")
+				(comment
+					(number "1")
+					(value "Existing symbols grouped by function; local nets routed where practical")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C22")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5e6b9e21-df78-5acf-9066-db668a20dbd4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C23")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d208f402-b4f8-5424-bcad-fb3c264b0960")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C24")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "00480809-d539-5e5d-a469-36c3a1f1a209")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C25")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "928a0869-f3dc-52cb-847e-91393b6138fa")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C26")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5af3fdd3-8451-54a3-b6df-7d92ef7ba078")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C27")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1d12a9c8-f64f-5228-ae7c-d876c2a5b09b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C28")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f1b861a8-dbbf-5769-95c0-850b836fd114")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C29")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "CL21 series 0805 X7R 100nF")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL21 series 0805 X7R 100nF")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "481f2021-7577-54c5-933b-6928c66386d9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J4")
+			(value "SWD")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "MPN") "SWD")
+				(field
+					(name "Manufacturer") "generic")
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Generic")
+				(part "Conn_01x04")
+				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "SWD")
+			)
+			(property
+				(name "Manufacturer")
+				(value "generic")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0c8a4864-b6a5-5c16-969e-3ea58e723989")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "MOD1")
+			(value "WeAct RP2350B Core Board (socketed)")
+			(footprint "LeanCam:WeAct_RP2350B_Socket")
+			(fields
+				(field
+					(name "MPN") "WeAct Studio RP2350B Core Board")
+				(field
+					(name "Manufacturer") "WeAct Studio")
+				(field
+					(name "Footprint") "LeanCam:WeAct_RP2350B_Socket")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "LeanCam")
+				(part "WeAct_RP2350B")
+				(description "WeAct Studio RP2350B Core Board on 2x15 perimeter socket rows plus four internal programming pads")
+			)
+			(property
+				(name "MPN")
+				(value "WeAct Studio RP2350B Core Board")
+			)
+			(property
+				(name "Manufacturer")
+				(value "WeAct Studio")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "WeAct_RP2350B_Socket")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e385ea6d-1b99-5975-9032-510a1b6aa609")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "30")
+						)
+						(pin
+							(num "31")
+						)
+						(pin
+							(num "32")
+						)
+						(pin
+							(num "64")
+						)
+						(pin
+							(num "63")
+						)
+						(pin
+							(num "62")
+						)
+						(pin
+							(num "61")
+						)
+						(pin
+							(num "60")
+						)
+						(pin
+							(num "59")
+						)
+						(pin
+							(num "58")
+						)
+						(pin
+							(num "57")
+						)
+						(pin
+							(num "56")
+						)
+						(pin
+							(num "55")
+						)
+						(pin
+							(num "54")
+						)
+						(pin
+							(num "53")
+						)
+						(pin
+							(num "52")
+						)
+						(pin
+							(num "51")
+						)
+						(pin
+							(num "50")
+						)
+						(pin
+							(num "49")
+						)
+						(pin
+							(num "48")
+						)
+						(pin
+							(num "47")
+						)
+						(pin
+							(num "46")
+						)
+						(pin
+							(num "45")
+						)
+						(pin
+							(num "44")
+						)
+						(pin
+							(num "43")
+						)
+						(pin
+							(num "42")
+						)
+						(pin
+							(num "41")
+						)
+						(pin
+							(num "40")
+						)
+						(pin
+							(num "39")
+						)
+						(pin
+							(num "38")
+						)
+						(pin
+							(num "37")
+						)
+						(pin
+							(num "36")
+						)
+						(pin
+							(num "35")
+						)
+						(pin
+							(num "34")
+						)
+						(pin
+							(num "33")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "10k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cf12aaec-af4c-5c30-b670-a31dc3f84e08")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R10")
+			(value "10k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9dab1a5e-3490-5ab7-9e96-cbc9a04dd510")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R11")
+			(value "10k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a6096e88-fcf4-5ed0-95a4-9904b378b1c5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R12")
+			(value "10k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "99d88600-28fe-52da-b77b-1f65ae513034")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R13")
+			(value "10k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "RC1206FR-07 1% 10k")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RC1206FR-07 1% 10k")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cfcd948b-eb6d-5c67-9ddd-0d0bad6de2c5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U6")
+			(value "74HC165D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC165D,653")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC165")
+				(description "Shift Register, 8-bit, Parallel Load")
+			)
+			(property
+				(name "MPN")
+				(value "74HC165D,653")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "8 bit shift register parallel load cmos")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a1d6957c-bae3-51f9-8779-32c76cf8bf2d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U7")
+			(value "74HC165D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC165D,653")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC165")
+				(description "Shift Register, 8-bit, Parallel Load")
+			)
+			(property
+				(name "MPN")
+				(value "74HC165D,653")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "8 bit shift register parallel load cmos")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "90227987-f07d-5282-85ad-383dff315e8a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U8")
+			(value "74HC165D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC165D,653")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC165")
+				(description "Shift Register, 8-bit, Parallel Load")
+			)
+			(property
+				(name "MPN")
+				(value "74HC165D,653")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "8 bit shift register parallel load cmos")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d0bfd80e-fecb-59d9-aefe-2aab341c8c05")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U9")
+			(value "74HC165D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC165D,653")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC165")
+				(description "Shift Register, 8-bit, Parallel Load")
+			)
+			(property
+				(name "MPN")
+				(value "74HC165D,653")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "8 bit shift register parallel load cmos")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dd109e15-7d74-5722-94f3-534fdb9cdaf8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U10")
+			(value "74HC595D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC595D,118")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC595")
+				(description "8-bit serial in/out Shift Register 3-State Outputs")
+			)
+			(property
+				(name "MPN")
+				(value "74HC595D,118")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "HCMOS SR 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "73ca2ca8-3e8e-5040-94da-30f34b05d13e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11")
+			(value "74HC595D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC595D,118")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC595")
+				(description "8-bit serial in/out Shift Register 3-State Outputs")
+			)
+			(property
+				(name "MPN")
+				(value "74HC595D,118")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "HCMOS SR 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c5aa789d-1eb9-5dd6-957c-f25390bfe20e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12")
+			(value "74HC595D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC595D,118")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC595")
+				(description "8-bit serial in/out Shift Register 3-State Outputs")
+			)
+			(property
+				(name "MPN")
+				(value "74HC595D,118")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "HCMOS SR 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2281407e-bfab-55e7-8996-3c84710c7fe9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U13")
+			(value "74HC595D")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "MPN") "74HC595D,118")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC595")
+				(description "8-bit serial in/out Shift Register 3-State Outputs")
+			)
+			(property
+				(name "MPN")
+				(value "74HC595D,118")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/mcu_io-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "HCMOS SR 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "722a9ea6-dbe6-5d40-8795-ae295e7bf0b6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "74xx")
+			(part "74HC165")
+			(description "Shift Register, 8-bit, Parallel Load")
+			(docs "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf")
+			(footprints
+				(fp "DIP?16*")
+				(fp "SO*16*3.9x9.9mm*P1.27mm*")
+				(fp "SSOP*16*5.3x6.2mm*P0.65mm*")
+				(fp "TSSOP*16*4.4x5mm*P0.65*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HC165")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf")
+				(field
+					(name "Description") "Shift Register, 8-bit, Parallel Load")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "~{PL}")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "CP")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "D4")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "D5")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "D6")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "D7")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "~{Q7}")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "Q7")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "DS")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "D0")
+					(type "input")
+				)
+				(pin
+					(num "12")
+					(name "D1")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "D2")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "D3")
+					(type "input")
+				)
+				(pin
+					(num "15")
+					(name "~{CE}")
+					(type "input")
+				)
+				(pin
+					(num "16")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "74xx")
+			(part "74HC595")
+			(description "8-bit serial in/out Shift Register 3-State Outputs")
+			(docs "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf")
+			(footprints
+				(fp "DIP*W7.62mm*")
+				(fp "SOIC*3.9x9.9mm*P1.27mm*")
+				(fp "TSSOP*4.4x5mm*P0.65mm*")
+				(fp "SOIC*5.3x10.2mm*P1.27mm*")
+				(fp "SOIC*7.5x10.3mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HC595")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf")
+				(field
+					(name "Description") "8-bit serial in/out Shift Register 3-State Outputs")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "QB")
+					(type "tri_state")
+				)
+				(pin
+					(num "2")
+					(name "QC")
+					(type "tri_state")
+				)
+				(pin
+					(num "3")
+					(name "QD")
+					(type "tri_state")
+				)
+				(pin
+					(num "4")
+					(name "QE")
+					(type "tri_state")
+				)
+				(pin
+					(num "5")
+					(name "QF")
+					(type "tri_state")
+				)
+				(pin
+					(num "6")
+					(name "QG")
+					(type "tri_state")
+				)
+				(pin
+					(num "7")
+					(name "QH")
+					(type "tri_state")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "QH'")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "~{SRCLR}")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "SRCLK")
+					(type "input")
+				)
+				(pin
+					(num "12")
+					(name "RCLK")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "~{OE}")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "SER")
+					(type "input")
+				)
+				(pin
+					(num "15")
+					(name "QA")
+					(type "tri_state")
+				)
+				(pin
+					(num "16")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x04")
+			(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x04")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LeanCam")
+			(part "WeAct_RP2350B")
+			(description "WeAct Studio RP2350B Core Board on 2x15 perimeter socket rows plus four internal programming pads")
+			(docs "~")
+			(footprints
+				(fp "WeAct_RP2350B_Socket")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "WeAct_RP2350B")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "~")
+				(field
+					(name "Description") "WeAct Studio RP2350B Core Board on 2x15 perimeter socket rows plus four internal programming pads")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "RUN")
+					(type "bidirectional")
+				)
+				(pin
+					(num "5")
+					(name "GP46")
+					(type "bidirectional")
+				)
+				(pin
+					(num "6")
+					(name "GP44")
+					(type "bidirectional")
+				)
+				(pin
+					(num "7")
+					(name "GP42")
+					(type "bidirectional")
+				)
+				(pin
+					(num "8")
+					(name "GP40")
+					(type "bidirectional")
+				)
+				(pin
+					(num "9")
+					(name "GP38")
+					(type "bidirectional")
+				)
+				(pin
+					(num "10")
+					(name "GP36")
+					(type "bidirectional")
+				)
+				(pin
+					(num "11")
+					(name "GP34")
+					(type "bidirectional")
+				)
+				(pin
+					(num "12")
+					(name "GP32")
+					(type "bidirectional")
+				)
+				(pin
+					(num "13")
+					(name "GP30")
+					(type "bidirectional")
+				)
+				(pin
+					(num "14")
+					(name "GP28")
+					(type "bidirectional")
+				)
+				(pin
+					(num "15")
+					(name "GP26")
+					(type "bidirectional")
+				)
+				(pin
+					(num "16")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "EN")
+					(type "bidirectional")
+				)
+				(pin
+					(num "18")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "19")
+					(name "GP47")
+					(type "bidirectional")
+				)
+				(pin
+					(num "20")
+					(name "GP45")
+					(type "bidirectional")
+				)
+				(pin
+					(num "21")
+					(name "GP43")
+					(type "bidirectional")
+				)
+				(pin
+					(num "22")
+					(name "GP41")
+					(type "bidirectional")
+				)
+				(pin
+					(num "23")
+					(name "GP39")
+					(type "bidirectional")
+				)
+				(pin
+					(num "24")
+					(name "GP37")
+					(type "bidirectional")
+				)
+				(pin
+					(num "25")
+					(name "GP35")
+					(type "bidirectional")
+				)
+				(pin
+					(num "26")
+					(name "GP33")
+					(type "bidirectional")
+				)
+				(pin
+					(num "27")
+					(name "GP31")
+					(type "bidirectional")
+				)
+				(pin
+					(num "28")
+					(name "GP29")
+					(type "bidirectional")
+				)
+				(pin
+					(num "29")
+					(name "GP27")
+					(type "bidirectional")
+				)
+				(pin
+					(num "30")
+					(name "GP25")
+					(type "bidirectional")
+				)
+				(pin
+					(num "31")
+					(name "5V")
+					(type "passive")
+				)
+				(pin
+					(num "32")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "33")
+					(name "GP0")
+					(type "bidirectional")
+				)
+				(pin
+					(num "34")
+					(name "GP2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "35")
+					(name "GP4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "36")
+					(name "GP6")
+					(type "bidirectional")
+				)
+				(pin
+					(num "37")
+					(name "GP8")
+					(type "bidirectional")
+				)
+				(pin
+					(num "38")
+					(name "GP10")
+					(type "bidirectional")
+				)
+				(pin
+					(num "39")
+					(name "GP12")
+					(type "bidirectional")
+				)
+				(pin
+					(num "40")
+					(name "GP14")
+					(type "bidirectional")
+				)
+				(pin
+					(num "41")
+					(name "GP16")
+					(type "bidirectional")
+				)
+				(pin
+					(num "42")
+					(name "GP18")
+					(type "bidirectional")
+				)
+				(pin
+					(num "43")
+					(name "GP20")
+					(type "bidirectional")
+				)
+				(pin
+					(num "44")
+					(name "GP22")
+					(type "bidirectional")
+				)
+				(pin
+					(num "45")
+					(name "GP24")
+					(type "bidirectional")
+				)
+				(pin
+					(num "46")
+					(name "VBUS")
+					(type "passive")
+				)
+				(pin
+					(num "47")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "48")
+					(name "REF")
+					(type "passive")
+				)
+				(pin
+					(num "49")
+					(name "GP1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "50")
+					(name "GP3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "51")
+					(name "GP5")
+					(type "bidirectional")
+				)
+				(pin
+					(num "52")
+					(name "GP7")
+					(type "bidirectional")
+				)
+				(pin
+					(num "53")
+					(name "GP9")
+					(type "bidirectional")
+				)
+				(pin
+					(num "54")
+					(name "GP11")
+					(type "bidirectional")
+				)
+				(pin
+					(num "55")
+					(name "GP13")
+					(type "bidirectional")
+				)
+				(pin
+					(num "56")
+					(name "GP15")
+					(type "bidirectional")
+				)
+				(pin
+					(num "57")
+					(name "GP17")
+					(type "bidirectional")
+				)
+				(pin
+					(num "58")
+					(name "GP19")
+					(type "bidirectional")
+				)
+				(pin
+					(num "59")
+					(name "GP21")
+					(type "bidirectional")
+				)
+				(pin
+					(num "60")
+					(name "GP23")
+					(type "bidirectional")
+				)
+				(pin
+					(num "61")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "62")
+					(name "SWCLK")
+					(type "bidirectional")
+				)
+				(pin
+					(num "63")
+					(name "SWDIO")
+					(type "bidirectional")
+				)
+				(pin
+					(num "64")
+					(name "3V3_DEBUG")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "74xx")
+			(uri "${KICAD10_SYMBOL_DIR}/74xx.kicad_sym")
+		)
+		(library
+			(logical "Connector_Generic")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/+3V3")
+			(class "Default")
+			(node
+				(ref "C22")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C23")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C24")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C25")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C26")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C27")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C28")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C29")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "10")
+				(pinfunction "~{SRCLR}_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U10")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11")
+				(pin "10")
+				(pinfunction "~{SRCLR}_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U11")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12")
+				(pin "10")
+				(pinfunction "~{SRCLR}_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U12")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U13")
+				(pin "10")
+				(pinfunction "~{SRCLR}_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U13")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U6")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U7")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U8")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U9")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "/+3V3_A")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "48")
+				(pinfunction "REF_48")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/+5V")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "31")
+				(pinfunction "5V_31")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/AI0_ADC")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "8")
+				(pinfunction "GP40_8")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "5")
+			(name "/AI1_ADC")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "22")
+				(pinfunction "GP41_22")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "6")
+			(name "/AI2_ADC")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "7")
+				(pinfunction "GP42_7")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "7")
+			(name "/AOUT0_PWM")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "19")
+				(pinfunction "GP47_19")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "8")
+			(name "/AOUT1_PWM")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "6")
+				(pinfunction "GP44_6")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "9")
+			(name "/AOUT2_PWM")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "20")
+				(pinfunction "GP45_20")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "10")
+			(name "/AOUT3_PWM")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "5")
+				(pinfunction "GP46_5")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "11")
+			(name "/ENC0_A_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "15")
+				(pinfunction "GP26_15")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "12")
+			(name "/ENC0_B_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "29")
+				(pinfunction "GP27_29")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "13")
+			(name "/ENC0_Z_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "14")
+				(pinfunction "GP28_14")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "14")
+			(name "/ENC1_A_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "28")
+				(pinfunction "GP29_28")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "15")
+			(name "/ENC1_B_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "13")
+				(pinfunction "GP30_13")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "16")
+			(name "/ENC1_Z_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "27")
+				(pinfunction "GP31_27")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "17")
+			(name "/ENC2_A_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "12")
+				(pinfunction "GP32_12")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "18")
+			(name "/ENC2_B_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "26")
+				(pinfunction "GP33_26")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "19")
+			(name "/ENC2_Z_3V3")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "11")
+				(pinfunction "GP34_11")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "20")
+			(name "/ESTOP_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "24")
+				(pinfunction "GP37_24")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "21")
+			(name "/EXP_IN0")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "22")
+			(name "/EXP_IN1")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "23")
+			(name "/EXP_IN2")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "24")
+			(name "/EXP_IN3")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "14")
+				(pinfunction "D3_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "25")
+			(name "/EXP_IN4")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "3")
+				(pinfunction "D4_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "26")
+			(name "/EXP_IN5")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "4")
+				(pinfunction "D5_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "27")
+			(name "/EXP_IN6")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "5")
+				(pinfunction "D6_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "28")
+			(name "/EXP_IN7")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "6")
+				(pinfunction "D7_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "29")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C22")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C23")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C24")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C25")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C26")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C27")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C28")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C29")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "16")
+				(pinfunction "GND_16")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "32")
+				(pinfunction "GND_32")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "47")
+				(pinfunction "GND_47")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "61")
+				(pinfunction "GND_61")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R12")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "13")
+				(pinfunction "~{OE}_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U10")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11")
+				(pin "13")
+				(pinfunction "~{OE}_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U11")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12")
+				(pin "13")
+				(pinfunction "~{OE}_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U12")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U13")
+				(pin "13")
+				(pinfunction "~{OE}_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U13")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U6")
+				(pin "15")
+				(pinfunction "~{CE}_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U6")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U7")
+				(pin "15")
+				(pinfunction "~{CE}_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U7")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U8")
+				(pin "15")
+				(pinfunction "~{CE}_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U8")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U9")
+				(pin "15")
+				(pinfunction "~{CE}_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U9")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "30")
+			(name "/HOLD_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "9")
+				(pinfunction "GP38_9")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "31")
+			(name "/HSTX_CLK_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "58")
+				(pinfunction "GP19_58")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "32")
+			(name "/HSTX_CLK_P")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "42")
+				(pinfunction "GP18_42")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "33")
+			(name "/HSTX_D0_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "55")
+				(pinfunction "GP13_55")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "34")
+			(name "/HSTX_D0_P")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "39")
+				(pinfunction "GP12_39")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "35")
+			(name "/HSTX_D1_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "56")
+				(pinfunction "GP15_56")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "36")
+			(name "/HSTX_D1_P")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "40")
+				(pinfunction "GP14_40")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "37")
+			(name "/HSTX_D2_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "57")
+				(pinfunction "GP17_57")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "38")
+			(name "/HSTX_D2_P")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "41")
+				(pinfunction "GP16_41")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "39")
+			(name "/I2C_SCL")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "53")
+				(pinfunction "GP9_53")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "40")
+			(name "/I2C_SDA")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "37")
+				(pinfunction "GP8_37")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "41")
+			(name "/KIN0_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "42")
+			(name "/KIN1_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "43")
+			(name "/KIN2_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "44")
+			(name "/KIN3_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "14")
+				(pinfunction "D3_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "45")
+			(name "/KIN4_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "3")
+				(pinfunction "D4_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "46")
+			(name "/KIN5_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "4")
+				(pinfunction "D5_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "47")
+			(name "/KIN6_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "5")
+				(pinfunction "D6_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "48")
+			(name "/KIN7_FILT")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "6")
+				(pinfunction "D7_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "49")
+			(name "/OUT0")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "1")
+				(pinfunction "QB_1")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "50")
+			(name "/OUT1")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "15")
+				(pinfunction "QA_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "51")
+			(name "/OUT2")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "3")
+				(pinfunction "QD_3")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "52")
+			(name "/OUT3")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "2")
+				(pinfunction "QC_2")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "53")
+			(name "/OUT4")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "5")
+				(pinfunction "QF_5")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "54")
+			(name "/OUT5")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "4")
+				(pinfunction "QE_4")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "55")
+			(name "/OUT6")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "7")
+				(pinfunction "QH_7")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "56")
+			(name "/OUT7")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "6")
+				(pinfunction "QG_6")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "57")
+			(name "/OUT8")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "2")
+				(pinfunction "QC_2")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "58")
+			(name "/OUT9")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "1")
+				(pinfunction "QB_1")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "59")
+			(name "/OUT10")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "15")
+				(pinfunction "QA_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "60")
+			(name "/OUT11")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "3")
+				(pinfunction "QD_3")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "61")
+			(name "/OUT12")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "4")
+				(pinfunction "QE_4")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "62")
+			(name "/OUT13")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "5")
+				(pinfunction "QF_5")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "63")
+			(name "/OUT14")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "6")
+				(pinfunction "QG_6")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "64")
+			(name "/OUT15")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "7")
+				(pinfunction "QH_7")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "65")
+			(name "/OUT16")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "1")
+				(pinfunction "QB_1")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "66")
+			(name "/OUT17")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "2")
+				(pinfunction "QC_2")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "67")
+			(name "/OUT18")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "3")
+				(pinfunction "QD_3")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "68")
+			(name "/OUT19")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "4")
+				(pinfunction "QE_4")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "69")
+			(name "/OUT20")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "5")
+				(pinfunction "QF_5")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "70")
+			(name "/OUT21")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "6")
+				(pinfunction "QG_6")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "71")
+			(name "/OUT22")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "7")
+				(pinfunction "QH_7")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "72")
+			(name "/OUT23")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "15")
+				(pinfunction "QA_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "73")
+			(name "/OUT24")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "15")
+				(pinfunction "QA_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "74")
+			(name "/OUT25")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "1")
+				(pinfunction "QB_1")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "75")
+			(name "/OUT26")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "2")
+				(pinfunction "QC_2")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "76")
+			(name "/OUT27")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "3")
+				(pinfunction "QD_3")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "77")
+			(name "/OUT28")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "4")
+				(pinfunction "QE_4")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "78")
+			(name "/OUT29")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "5")
+				(pinfunction "QF_5")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "79")
+			(name "/OUT30")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "6")
+				(pinfunction "QG_6")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "80")
+			(name "/OUT31")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "7")
+				(pinfunction "QH_7")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "81")
+			(name "/PLC_IN1_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "6")
+				(pinfunction "D7_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "82")
+			(name "/PLC_IN2_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "5")
+				(pinfunction "D6_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "83")
+			(name "/PLC_IN3_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "4")
+				(pinfunction "D5_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "84")
+			(name "/PLC_IN4_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "3")
+				(pinfunction "D4_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "85")
+			(name "/PLC_IN5_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "86")
+			(name "/PLC_IN6_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "87")
+			(name "/PLC_IN7_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "88")
+			(name "/PLC_IN8_N")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "14")
+				(pinfunction "D3_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "89")
+			(name "/PLC_IN9_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "6")
+				(pinfunction "D7_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "90")
+			(name "/PLC_IN10_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "5")
+				(pinfunction "D6_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "91")
+			(name "/PLC_IN11_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "4")
+				(pinfunction "D5_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "92")
+			(name "/PLC_IN12_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "3")
+				(pinfunction "D4_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "93")
+			(name "/PLC_IN13_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "94")
+			(name "/PLC_IN14_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "95")
+			(name "/PLC_IN15_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "96")
+			(name "/PLC_IN16_N")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "14")
+				(pinfunction "D3_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "97")
+			(name "/PWR_GOOD_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "21")
+				(pinfunction "GP43_21")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "98")
+			(name "/SD_CD_MCU")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "34")
+				(pinfunction "GP2_34")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "99")
+			(name "/SD_CS_MCU")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "51")
+				(pinfunction "GP5_51")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "100")
+			(name "/SD_MISO_MCU")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "35")
+				(pinfunction "GP4_35")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "101")
+			(name "/SD_MOSI_MCU")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "52")
+				(pinfunction "GP7_52")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "102")
+			(name "/SD_SCK_MCU")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "36")
+				(pinfunction "GP6_36")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "103")
+			(name "/SR_IN_CHAIN1")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "9")
+				(pinfunction "Q7_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U7")
+				(pin "10")
+				(pinfunction "DS_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "104")
+			(name "/SR_IN_CHAIN2")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "9")
+				(pinfunction "Q7_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U8")
+				(pin "10")
+				(pinfunction "DS_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "105")
+			(name "/SR_IN_CHAIN3")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "9")
+				(pinfunction "Q7_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U9")
+				(pin "10")
+				(pinfunction "DS_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "106")
+			(name "/SR_IN_DS0")
+			(class "Default")
+			(node
+				(ref "R9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "10")
+				(pinfunction "DS_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "107")
+			(name "/SR_IN_Q7")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "60")
+				(pinfunction "GP23_60")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U9")
+				(pin "9")
+				(pinfunction "Q7_9")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "108")
+			(name "/SR_LATCH")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "44")
+				(pinfunction "GP22_44")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "R13")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "12")
+				(pinfunction "RCLK_12")
+				(pintype "input")
+			)
+			(node
+				(ref "U11")
+				(pin "12")
+				(pinfunction "RCLK_12")
+				(pintype "input")
+			)
+			(node
+				(ref "U12")
+				(pin "12")
+				(pinfunction "RCLK_12")
+				(pintype "input")
+			)
+			(node
+				(ref "U13")
+				(pin "12")
+				(pinfunction "RCLK_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "109")
+			(name "/SR_OUT_CHAIN1")
+			(class "Default")
+			(node
+				(ref "U10")
+				(pin "9")
+				(pinfunction "QH'_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U11")
+				(pin "14")
+				(pinfunction "SER_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "110")
+			(name "/SR_OUT_CHAIN2")
+			(class "Default")
+			(node
+				(ref "U11")
+				(pin "9")
+				(pinfunction "QH'_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12")
+				(pin "14")
+				(pinfunction "SER_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "111")
+			(name "/SR_OUT_CHAIN3")
+			(class "Default")
+			(node
+				(ref "U12")
+				(pin "9")
+				(pinfunction "QH'_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U13")
+				(pin "14")
+				(pinfunction "SER_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "112")
+			(name "/SR_OUT_SER")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "43")
+				(pinfunction "GP20_43")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "R12")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "14")
+				(pinfunction "SER_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "113")
+			(name "/SR_PL_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "45")
+				(pinfunction "GP24_45")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "R11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "1")
+				(pinfunction "~{PL}_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U7")
+				(pin "1")
+				(pinfunction "~{PL}_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U8")
+				(pin "1")
+				(pinfunction "~{PL}_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U9")
+				(pin "1")
+				(pinfunction "~{PL}_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "114")
+			(name "/SR_SCK")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "59")
+				(pinfunction "GP21_59")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "R10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "11")
+				(pinfunction "SRCLK_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U11")
+				(pin "11")
+				(pinfunction "SRCLK_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U12")
+				(pin "11")
+				(pinfunction "SRCLK_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U13")
+				(pin "11")
+				(pinfunction "SRCLK_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U6")
+				(pin "2")
+				(pinfunction "CP_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U7")
+				(pin "2")
+				(pinfunction "CP_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U8")
+				(pin "2")
+				(pinfunction "CP_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U9")
+				(pin "2")
+				(pinfunction "CP_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "115")
+			(name "/START_N")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "23")
+				(pinfunction "GP39_23")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "116")
+			(name "/SWCLK")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "62")
+				(pinfunction "SWCLK_62")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "117")
+			(name "/SWDIO")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "MOD1")
+				(pin "63")
+				(pinfunction "SWDIO_63")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "118")
+			(name "/WIFI_RX")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "54")
+				(pinfunction "GP11_54")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "119")
+			(name "/WIFI_TX")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "38")
+				(pinfunction "GP10_38")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "120")
+			(name "unconnected-(MOD1-3V3-Pad3)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "3")
+				(pinfunction "3V3_3")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "121")
+			(name "unconnected-(MOD1-3V3-Pad18)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "18")
+				(pinfunction "3V3_18")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "122")
+			(name "unconnected-(MOD1-3V3_DEBUG-Pad64)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "64")
+				(pinfunction "3V3_DEBUG_64")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "123")
+			(name "unconnected-(MOD1-EN-Pad17)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "17")
+				(pinfunction "EN_17")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "124")
+			(name "unconnected-(MOD1-GP0-Pad33)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "33")
+				(pinfunction "GP0_33")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "125")
+			(name "unconnected-(MOD1-GP1-Pad49)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "49")
+				(pinfunction "GP1_49")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "126")
+			(name "unconnected-(MOD1-GP3-Pad50)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "50")
+				(pinfunction "GP3_50")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "127")
+			(name "unconnected-(MOD1-GP25-Pad30)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "30")
+				(pinfunction "GP25_30")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "128")
+			(name "unconnected-(MOD1-GP35-Pad25)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "25")
+				(pinfunction "GP35_25")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "129")
+			(name "unconnected-(MOD1-GP36-Pad10)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "10")
+				(pinfunction "GP36_10")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "130")
+			(name "unconnected-(MOD1-RUN-Pad4)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "4")
+				(pinfunction "RUN_4")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "131")
+			(name "unconnected-(MOD1-VBUS-Pad46)")
+			(class "Default")
+			(node
+				(ref "MOD1")
+				(pin "46")
+				(pinfunction "VBUS_46")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "132")
+			(name "unconnected-(U6-~{Q7}-Pad7)")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "7")
+				(pinfunction "~{Q7}_7")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "133")
+			(name "unconnected-(U7-~{Q7}-Pad7)")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "7")
+				(pinfunction "~{Q7}_7")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "134")
+			(name "unconnected-(U8-~{Q7}-Pad7)")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "7")
+				(pinfunction "~{Q7}_7")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "135")
+			(name "unconnected-(U9-~{Q7}-Pad7)")
+			(class "Default")
+			(node
+				(ref "U9")
+				(pin "7")
+				(pinfunction "~{Q7}_7")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "136")
+			(name "unconnected-(U13-QH'-Pad9)")
+			(class "Default")
+			(node
+				(ref "U13")
+				(pin "9")
+				(pinfunction "QH'_9")
+				(pintype "output+no_connect")
+			)
+		)
+	)
+)

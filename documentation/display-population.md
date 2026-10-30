@@ -76,8 +76,26 @@ RN26/RN27 and U41 are mutually exclusive populations. Do not fit both.
 
 ## Backlight
 
-The verified J22 pinout contains no backlight contact. MOD1 GPIO1 is reserved
-for a future 3.3 V backlight PWM, but no board net or connector is assigned.
-The motherboard does not switch or select a backlight voltage rail. J2, JP1
-and the Q2/Q3 MOSFET stage remain removed. A separate external backlight-driver
-interface is not yet assigned.
+The verified J22 pinout contains no backlight contact. J2 is the separate
+4-position backlight/CCFL connector:
+
+| Pin | Signal |
+|---:|---|
+| 1 | `+12V_BL` |
+| 2 | GND |
+| 3 | `BL_PWM`, 3.3 V from GPIO35 |
+| 4 | `BL_LED_N`, low-side switched return through Q8 |
+
+U3 is a second TI LMR36510 buck using the datasheet's 12 V, 400 kHz reference
+network: 47 uH, 100 k / 9.09 k feedback, 3 x 10 uF output and 2.2 uF + 220 nF
+local input capacitance. The existing U37 `+12V_AO` supply for the 0-10 V
+output stage remains separate and is not shared with the backlight rail.
+
+GPIO35/MOD1 pin 25 drives `BL_PWM_MCU`. R131 (100 ohm) feeds only J2 pin 3;
+R129 (100 ohm) branches from the same MCU-side node to the Q8 gate. Use the
+direct PWM input for a CCFL inverter or display controller, or the Q8-switched
+low-side return for a small LED-backlight load. Any CCFL inverter stage,
+high-current switching and current limiting remain external.
+
+`BL_PWM_MCU`, `BL_PWM`, and `BL_SW_GATE` use 0.2 mm copper. The 12 V and
+switched-return paths use the 0.8 mm Power class.

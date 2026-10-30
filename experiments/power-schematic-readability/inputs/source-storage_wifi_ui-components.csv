@@ -1,0 +1,32 @@
+Reference,Value,LibId,PinCount
+C67,10uF,Device:C,2
+C68,100nF,Device:C,2
+C69,10uF,Device:C,2
+C70,100nF,Device:C,2
+C88,10uF,Device:C,2
+C89,100nF,Device:C,2
+FB2,600R@100MHz,Device:FerriteBead,2
+J16,Keyboard KIN0-7 / KOUT0-7,Connector_Generic:Conn_02x08_Odd_Even,16
+J17,Keyboard power/reference,Connector_Generic:Conn_01x03,3
+J18,I2C0,Connector_Generic:Conn_01x04,4
+J19,"Full-size SD, SPI",Connector:SD_Card_Receptacle,12
+J20,ESP-01/ESP-01S socket,Connector_Generic:Conn_02x04_Odd_Even,8
+R44,10k,Device:R,2
+R45,10k,Device:R,2
+R46,10k,Device:R,2
+R47,10k,Device:R,2
+R48,10k,Device:R,2
+R49,10k,Device:R,2
+R50,22R,Device:R,2
+R51,22R,Device:R,2
+R52,22R,Device:R,2
+R53,22R,Device:R,2
+R54,0R,Device:R,2
+R55,10k,Device:R,2
+R56,10k,Device:R,2
+R57,10k,Device:R,2
+R58,10k,Device:R,2
+RN22,4x1k,LeanCam:ResistorPack04,8
+RN24,4x1k,LeanCam:ResistorPack04,8
+SW2,ESP_PROG,Switch:SW_Push,2
+U34,AMS1117-3.3,Regulator_Linear:AMS1117-3.3,3

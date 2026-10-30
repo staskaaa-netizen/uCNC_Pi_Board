@@ -1,0 +1,10 @@
+Reference,Value,LibId,PinCount
+C57,100nF,Device:C,2
+D53,SMAJ5.0A,Device:D_TVS,2
+F2,500mA,Device:Fuse,2
+J13,"Encoder 0: +5,A,B,Z,GND",Connector_Generic:Conn_01x05,5
+J14,"Encoder 1: +5,A,B,Z,GND",Connector_Generic:Conn_01x05,5
+J15,"Encoder 2: +5,A,B,Z,GND",Connector_Generic:Conn_01x05,5
+R110,5.1k,Device:R,2
+R111,10k,Device:R,2
+U28,SN74AHCT541DW,LeanCam:OctalBufferAHCT,20

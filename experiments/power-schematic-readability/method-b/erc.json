@@ -1,0 +1,113 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-29T17:29:51",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.1",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/f4aaa61e-120b-578e-8a7a-a606a9737e3a",
+            "violations": [
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [PMOS_SO8]",
+                            "pos": {
+                                "x": 1.1938,
+                                "y": 0.762
+                            },
+                            "uuid": "b89c7153-4efe-5599-878d-15438f46cbc4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label '+5V_ENC'",
+                            "pos": {
+                                "x": 5.4991,
+                                "y": 0.9017
+                            },
+                            "uuid": "459eae8f-66ce-5778-bbfc-452a2938e010"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label '+3V3_SD'",
+                            "pos": {
+                                "x": 5.4991,
+                                "y": 1.1049
+                            },
+                            "uuid": "65cb47a2-04f1-50c4-a5d3-1ee512227e0d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label '+5V_ISO_IN'",
+                            "pos": {
+                                "x": 5.4991,
+                                "y": 1.2954
+                            },
+                            "uuid": "dd5fd9fd-7b85-5c16-b417-f0a70dd4863c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label '+12V_FIELD'",
+                            "pos": {
+                                "x": 5.4991,
+                                "y": 1.4986
+                            },
+                            "uuid": "e50bc59e-d54f-56bf-a607-1a1fe471f343"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                }
+            ]
+        }
+    ],
+    "source": "lean-power-b.kicad_sch"
+}

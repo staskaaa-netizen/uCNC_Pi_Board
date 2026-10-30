@@ -1,0 +1,653 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-29T17:49:27",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.1",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/b91a7065-654d-578a-8093-a2749fec1a46",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U26 Pin 8 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.3114,
+                                "y": 1.524
+                            },
+                            "uuid": "61ccccd5-8e07-56fe-8f8f-b1ad4eb7d88a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT6'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.5207
+                            },
+                            "uuid": "0e2940d0-61b2-531a-b2d2-b9a5350ff803"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT7'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.5461
+                            },
+                            "uuid": "4b5618fd-bf98-5acb-848f-d84b5d3dd140"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT4'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.5715
+                            },
+                            "uuid": "2d45dd2b-c507-5b41-9e25-c45479ef0c7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT5'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.5969
+                            },
+                            "uuid": "f80c04c6-ee46-5e19-89c7-447f259b027f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT2'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.6223
+                            },
+                            "uuid": "1de67358-29bc-5182-8938-ffc7beb9cd78"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT3'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.6477
+                            },
+                            "uuid": "082069dd-d0b7-5d8c-ab21-0d761e6e13f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT0'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.6731
+                            },
+                            "uuid": "8c800398-6d17-562c-94a5-b6a676607e2d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT1'",
+                            "pos": {
+                                "x": 2.5908,
+                                "y": 0.6985
+                            },
+                            "uuid": "f3049823-5b8e-5fe1-b762-73124dd19bd1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U24 [OctalBuffer5V]",
+                            "pos": {
+                                "x": 2.7432,
+                                "y": 0.6096
+                            },
+                            "uuid": "37650613-ed99-58c4-8c7a-db61c4c065f4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT15'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.5207
+                            },
+                            "uuid": "02cfbbe8-8856-5f11-94fc-f041b1e59629"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT14'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.5461
+                            },
+                            "uuid": "1893bf00-ad7d-5ebe-9f17-62fe697079b2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT13'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.5715
+                            },
+                            "uuid": "eae65754-a5e2-59c2-ba1f-19965de09ff1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT12'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.5969
+                            },
+                            "uuid": "4a5ca72d-1bdb-5272-a45a-e066431bfd8f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT11'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.6223
+                            },
+                            "uuid": "e4a3c6b0-0f27-5bfb-aa8d-e92ddf1aff4f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT10'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.6477
+                            },
+                            "uuid": "7173d966-c8de-5acf-9cb3-ebafec4a6ab6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT8'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.6731
+                            },
+                            "uuid": "f46290f0-ca61-5a74-9582-dd2fa32d2c6c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'OUT9'",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.6985
+                            },
+                            "uuid": "20140da1-59a9-5264-b8f6-fc58a055812e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U25 [OctalBuffer5V]",
+                            "pos": {
+                                "x": 3.2258,
+                                "y": 0.6096
+                            },
+                            "uuid": "e5b9f614-bbfd-5e68-b8dd-1cea5ed39803"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN12 [ResistorPack04]",
+                            "pos": {
+                                "x": 3.1115,
+                                "y": 1.2954
+                            },
+                            "uuid": "1b118495-1968-5f65-b957-1842ddf6a84f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN8 [ResistorPack04]",
+                            "pos": {
+                                "x": 3.6957,
+                                "y": 0.5334
+                            },
+                            "uuid": "c2e505d9-67ae-55b8-8cac-a3654c463a23"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN13 [ResistorPack04]",
+                            "pos": {
+                                "x": 3.5941,
+                                "y": 1.2954
+                            },
+                            "uuid": "d61a5051-b2c5-5deb-8b86-d50b6d8401fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN9 [ResistorPack04]",
+                            "pos": {
+                                "x": 4.1783,
+                                "y": 0.5334
+                            },
+                            "uuid": "955669fc-9106-57a6-9c34-48590309a184"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN16 [ResistorPack04]",
+                            "pos": {
+                                "x": 4.064,
+                                "y": 1.2954
+                            },
+                            "uuid": "32bcd087-fe1b-574d-a4e2-99aec4537179"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN10 [ResistorPack04]",
+                            "pos": {
+                                "x": 4.6482,
+                                "y": 0.5334
+                            },
+                            "uuid": "57b87a9d-ae09-59ec-96e5-5db8e3d9eb88"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN17 [ResistorPack04]",
+                            "pos": {
+                                "x": 4.5466,
+                                "y": 1.2954
+                            },
+                            "uuid": "2bccdc0c-f0ae-5c99-8029-082b5e96fa51"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT0'",
+                            "pos": {
+                                "x": 3.0607,
+                                "y": 4.064
+                            },
+                            "uuid": "9727eda5-278a-5dd9-a57a-bd9adf042b39"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT1'",
+                            "pos": {
+                                "x": 3.0607,
+                                "y": 4.0894
+                            },
+                            "uuid": "7dcdbf34-beec-5da4-b256-50b508d67e77"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT2'",
+                            "pos": {
+                                "x": 3.0607,
+                                "y": 4.1148
+                            },
+                            "uuid": "9f8712e8-b444-5eb8-a1db-a99992d5b19f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT3'",
+                            "pos": {
+                                "x": 3.0607,
+                                "y": 4.1402
+                            },
+                            "uuid": "05c4ba93-cda6-5403-9676-bdac0925f277"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN11 [ResistorPack04]",
+                            "pos": {
+                                "x": 5.1308,
+                                "y": 0.5334
+                            },
+                            "uuid": "08058389-ba39-523f-b561-42ec48f251f9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN18 [ResistorPack04]",
+                            "pos": {
+                                "x": 5.0165,
+                                "y": 1.2954
+                            },
+                            "uuid": "eeec6af3-3e2c-521c-a5c0-be9c9efde43f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN20 [ResistorPack04]",
+                            "pos": {
+                                "x": 3.2131,
+                                "y": 4.1021
+                            },
+                            "uuid": "91e7cb88-f3bc-51e6-bc93-1381473020b3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT4'",
+                            "pos": {
+                                "x": 3.5433,
+                                "y": 4.064
+                            },
+                            "uuid": "12f7fdc5-cdea-58d4-add3-ff2c74f9186c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT5'",
+                            "pos": {
+                                "x": 3.5433,
+                                "y": 4.0894
+                            },
+                            "uuid": "d333b40a-3b57-5852-82cd-c1b3a36de5d3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT6'",
+                            "pos": {
+                                "x": 3.5433,
+                                "y": 4.1148
+                            },
+                            "uuid": "13200689-4c47-5c56-a01c-1d7c30db59a9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'KOUT7'",
+                            "pos": {
+                                "x": 3.5433,
+                                "y": 4.1402
+                            },
+                            "uuid": "1fa0014e-de15-5944-8f5e-a73a637e8d9a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN21 [ResistorPack04]",
+                            "pos": {
+                                "x": 3.6957,
+                                "y": 4.1021
+                            },
+                            "uuid": "6fb032dd-22d5-5f66-84a2-c16cf21e4791"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN19 [ResistorPack04]",
+                            "pos": {
+                                "x": 5.4991,
+                                "y": 1.2954
+                            },
+                            "uuid": "189cedc5-08da-5d95-9abf-a33a2d8ca500"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN30 [ResistorPack04]",
+                            "pos": {
+                                "x": 4.1656,
+                                "y": 4.1021
+                            },
+                            "uuid": "f5c8dfa1-c8df-5111-b009-7e2a802528f6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN31 [ResistorPack04]",
+                            "pos": {
+                                "x": 4.6482,
+                                "y": 4.1021
+                            },
+                            "uuid": "f4b429d9-d5fd-512b-bd8e-dca0307289bf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "field_outputs-python.kicad_sch"
+}

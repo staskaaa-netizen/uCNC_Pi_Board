@@ -1,0 +1,218 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-29T17:49:36",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.1",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/0e1182d8-ca62-5942-ba80-7ed7b7a0fa04",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U40 Pin 1 [+Vin, Power input, Line]",
+                            "pos": {
+                                "x": 5.5753,
+                                "y": 0.508
+                            },
+                            "uuid": "ca871c4d-7776-55a7-971c-8cecfff5c4eb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U40 Pin 2 [-Vin, Power input, Line]",
+                            "pos": {
+                                "x": 5.5753,
+                                "y": 0.5588
+                            },
+                            "uuid": "39ac7dd8-8dfa-5b71-8013-77d466d4cd3a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label '+5V'",
+                            "pos": {
+                                "x": 5.3213,
+                                "y": 0.4953
+                            },
+                            "uuid": "f06ce7bf-bb3f-5c29-a5fd-d957dc0a62d5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U18 [QuadOpto]",
+                            "pos": {
+                                "x": 5.1181,
+                                "y": 3.1877
+                            },
+                            "uuid": "0ece87d0-f28c-5ed2-8ef4-6763057c524e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN6 [ResistorPack04]",
+                            "pos": {
+                                "x": 6.0833,
+                                "y": 1.1303
+                            },
+                            "uuid": "3665d783-d124-5f0e-b30e-66852d9b1a7a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U35 [EL3H7]",
+                            "pos": {
+                                "x": 6.1595,
+                                "y": 1.7526
+                            },
+                            "uuid": "a3b1822c-13db-53ab-b01f-9861ad4f7693"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U19 [QuadOpto]",
+                            "pos": {
+                                "x": 5.588,
+                                "y": 3.1877
+                            },
+                            "uuid": "9aee42db-b220-5a37-99da-2a136daa04f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN7 [ResistorPack04]",
+                            "pos": {
+                                "x": 6.5532,
+                                "y": 1.1303
+                            },
+                            "uuid": "12bfddbb-f5b8-588a-b4c4-c1ba74f74414"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U36 [EL3H7]",
+                            "pos": {
+                                "x": 6.477,
+                                "y": 1.7526
+                            },
+                            "uuid": "a4ced6ea-e4f7-54d2-a5e9-ee9b76d55790"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U39 [EL3H7]",
+                            "pos": {
+                                "x": 6.7945,
+                                "y": 1.7526
+                            },
+                            "uuid": "be96e9a0-7c09-5666-ad5a-58aa27ebfd3f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U20 [QuadOpto]",
+                            "pos": {
+                                "x": 5.1181,
+                                "y": 5.0673
+                            },
+                            "uuid": "f9bc3944-cca6-5deb-808a-1cab8f0ead94"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol U21 [QuadOpto]",
+                            "pos": {
+                                "x": 5.588,
+                                "y": 5.0673
+                            },
+                            "uuid": "a3dbaee0-da0f-55d3-aeec-a0016a5bac9f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "field_inputs-python.kicad_sch"
+}
