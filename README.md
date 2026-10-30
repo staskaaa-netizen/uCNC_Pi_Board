@@ -65,8 +65,8 @@ them using KiCad 10 and the project-local vendor footprint:
 ## Release status
 
 The current board is a 200 x 150 mm, two-layer prototype. All footprints are
-inside the outline; final manual routing is in progress. The schematic verifies
-with 324 components and 338 nets, and ERC has no electrical-rule errors. PCB DRC
-reports no shorts, with two expected unconnected items and the documented
-prototype clearance/silkscreen findings. The design contains documented
+inside the outline and the routed connectivity is complete. The schematic
+verifies with 324 components and 338 nets, and ERC has no electrical-rule
+errors. PCB DRC reports no shorts and no unconnected items; the documented
+prototype clearance/silkscreen findings remain. The design contains documented
 prototype assumptions and is not a safety-certified controller.

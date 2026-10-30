@@ -1574,7 +1574,7 @@ backlight converter:
 - The PC817C experiment was reverted because the separate optocouplers did not
   fit. The four LTV-847S and three EL3H7 footprints are restored, and no
   existing copper was changed.
-- All footprints are now inside the 200 x 150 mm PCB outline; final manual
-  routing remains in progress.
-- ERC has no electrical errors. PCB DRC reports no shorts and two expected
-  unconnected items.
+- All footprints are inside the 200 x 150 mm PCB outline and the routed
+  connectivity is complete.
+- ERC has no electrical errors. PCB DRC reports no shorts and no unconnected
+  items; documented clearance and silkscreen findings remain.

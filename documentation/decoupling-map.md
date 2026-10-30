@@ -142,6 +142,5 @@ The PCB uses these project netclasses:
 | LVDSConnector | 0.12 mm | 0.12 mm | 0.60/0.30 mm | J22 LVDS pair fanout |
 | Analog | 0.25 mm | 0.25 mm | 0.60/0.30 mm | AI and AOUT nets |
 
-The board remains incomplete: all footprints are inside the outline and two
-connections remain intentionally unrouted. Local capacitor-to-IC placement must
-still be reviewed whenever the footprint placement changes.
+The board currently has no unrouted connections. Local capacitor-to-IC placement
+must still be reviewed whenever footprint placement changes.
