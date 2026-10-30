@@ -5,6 +5,8 @@ Generated board documents:
 - [Combined board review](../manufacturing/board-review.pdf)
 - [Front artwork and assembly layer](../manufacturing/board-front.pdf)
 - [Mirrored rear artwork](../manufacturing/board-back.pdf)
+- [Top 3D render](../manufacturing/board-3d-top.png)
+- [Bottom 3D render](../manufacturing/board-3d-bottom.png)
 
 ## Board specification
 
@@ -140,7 +142,7 @@ supply and the ULN2003A/MOSFET ratings.
 | PCB footprints | 333 |
 | BOM component quantity | 327 |
 | Through-hole / SMD pads | 269 / 1018 |
-| Through vias | 214 |
+| Through vias | 232 |
 | Minimum track width | 0.12 mm |
 | Minimum drill | 0.30 mm |
 

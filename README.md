@@ -46,6 +46,8 @@ Open `hardware/motherboard.kicad_pro` in KiCad 10.0 or newer.
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
+- [Top 3D render](manufacturing/board-3d-top.png)
+- [Bottom 3D render](manufacturing/board-3d-bottom.png)
 
 ## Reproducible generation
 

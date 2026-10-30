@@ -936,21 +936,23 @@ def build_board() -> None:
             elif pad.GetNumber():
                 missing_pads.append(f"{component.reference}.{pad.GetNumber()}")
 
-    # LMR36510 exposed pad: six 0.30 mm drill thermal vias tied to GND.
-    if "U1" in footprints:
-        exposed_pad = footprints["U1"].FindPadByNumber("9")
+    # LMR36510 exposed pads: six 0.30 mm drill thermal vias tied to GND.
+    for regulator_reference in ("U1", "U3"):
+        if regulator_reference not in footprints:
+            continue
+        exposed_pad = footprints[regulator_reference].FindPadByNumber("9")
         if exposed_pad is not None:
             # Pad global positions are not reliable until connectivity has
-            # been rebuilt; the exposed pad is centered on the SOT-23-8 body.
-            u1 = footprints["U1"]
-            center = u1.GetPosition()
-            angle = math.radians(u1.GetOrientationDegrees())
+            # been rebuilt; each exposed pad is centered on its IC body.
+            regulator = footprints[regulator_reference]
+            center = regulator.GetPosition()
+            angle = math.radians(regulator.GetOrientationDegrees())
             cos_angle = math.cos(angle)
             sin_angle = math.sin(angle)
             for dx, dy in (
-                (-0.6, -1.2), (0.6, -1.2),
+                (-0.6, -1.0), (0.6, -1.0),
                 (-0.6, 0.0), (0.6, 0.0),
-                (-0.6, 1.2), (0.6, 1.2),
+                (-0.6, 1.0), (0.6, 1.0),
             ):
                 rotated_dx = dx * cos_angle - dy * sin_angle
                 rotated_dy = dx * sin_angle + dy * cos_angle

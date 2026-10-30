@@ -405,6 +405,8 @@ def main() -> None:
 
         cached_top = ROOT / "tmp" / "board-3d-top.png"
         cached_bottom = ROOT / "tmp" / "board-3d-bottom.png"
+        output_top = args.output_dir / "board-3d-top.png"
+        output_bottom = args.output_dir / "board-3d-bottom.png"
         if args.reuse_3d and cached_top.exists() and cached_bottom.exists():
             top_image = cached_top
             bottom_image = cached_bottom
@@ -414,6 +416,8 @@ def main() -> None:
         else:
             top_image = export_3d(kicad_cli, args.board, build_dir, "top")
             bottom_image = export_3d(kicad_cli, args.board, build_dir, "bottom")
+            shutil.copyfile(top_image, output_top)
+            shutil.copyfile(bottom_image, output_bottom)
 
         if top_image.exists() and bottom_image.exists():
             create_review_pdf(
@@ -425,7 +429,14 @@ def main() -> None:
                 bottom_image,
             )
 
-        for path in (front_pdf, back_pdf, spec_pdf, review_pdf):
+        for path in (
+            front_pdf,
+            back_pdf,
+            spec_pdf,
+            review_pdf,
+            output_top,
+            output_bottom,
+        ):
             if path.exists():
                 print(f"{path.relative_to(ROOT)}: {path.stat().st_size} bytes")
 

@@ -74,10 +74,14 @@ serves as the converter's bulk output reservoir. The manufacturer's optional
 events; C103 provides the local input bypass on this fused board supply.
 
 For U1, C3-C5 form the input loop, C6/C7/C11 form the output filter, C86 is
-the bootstrap capacitor and C91 is the internal VCC bypass. The 0.3 mm thermal
-vias under the PowerPAD tie the exposed pad to the B.Cu GND plane. U3 uses the
-TI 12 V reference capacitor set and is user-placed on the board with its
-passives.
+the bootstrap capacitor and C91 is the internal VCC bypass. U1 and U3 each
+have six 0.3 mm-drill GND vias under the PowerPAD, tying the exposed pad to the
+B.Cu GND plane. U3 uses the TI 12 V reference capacitor set and is user-placed
+on the board with its passives.
+
+The SOT-223 and SOT-89 regulators use a local 0.3 mm-drill GND via at their
+ground lead. Their tabs are connected to the regulated output, so those tabs
+cannot use the B.Cu ground plane for thermal transfer.
 
 ## Module and connector-local rail capacitors
 
