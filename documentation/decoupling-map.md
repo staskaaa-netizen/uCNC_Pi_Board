@@ -40,11 +40,12 @@ are fitted; firmware provides debounce timing.
 | U3 LMR36510ADDAR | VIN_BL_PROT to +12V_BL, 1 A backlight buck | C107 22 uF/50 V 1210, C108 100 nF/100 V 1206 | C109-C111 3 x 22 uF/50 V 1210, C112 100 nF 0805 | C113 100 nF BOOT-to-SW; C114 1 uF VCC-to-GND |
 | U2 AMS1117-3.3 | +5V to peripheral +3V3 | C10 22 uF/50 V 1210, C76 100 nF 0805 | C13 100 nF 0805, C90 22 uF/50 V 1210 | Supplies logic, SD, J22 LCD logic and analog prefilter |
 | U34 AMS1117-3.3 | +5V to ESP +3V3_WIFI | C88 22 uF/50 V 1210, C89 100 nF 0805 | C69 22 uF/50 V 1210, C70 100 nF 0805 | Dedicated ESP-01/ESP-01S rail |
-| U40 TBA2-0512 | +5V to isolated +12V_FIELD | C103 22 uF/50 V 1210 | C105 10 uF/100 V 1206, after D56 | Dry-contact wetting supply |
+| U40 TBA2-0512 | +5V to isolated +12V_FIELD | C103 22 uF/50 V 1210 | C105 10 uF/25 V 1206, after D56 | Dry-contact wetting supply |
 | U37 L78L12 | VIN_PROT to +12V_AO | C100 22 uF/50 V 1210 | C101 22 uF/50 V 1210 | Supplies U38 only |
 
 The ceramic package standard is 0805 for low-voltage 100 nF and 1 uF parts,
 1206 for 10 uF and 100 nF/100 V parts, and 1210 for 22 uF bulk capacitors.
+Both 10 uF capacitors use the same 25 V X7R part.
 
 RN36 provides the four 10 k pull-ups for `EN`, `RST`, `GPIO0` and `GPIO2` at
 the ESP socket. Its supply side is referenced to `+3V3_WIFI`, not the
@@ -87,8 +88,8 @@ cannot use the B.Cu ground plane for thermal transfer.
 
 | Load | Rail | Capacitors |
 |---|---|---|
-| ESP-01/ESP-01S at J20 | +3V3_WIFI | C69 10 uF, C70 100 nF |
-| SD card at J19 | +3V3_SD | C67 10 uF at `(166.80, 75.70)`, C68 100 nF at `(166.80, 70.80)`; FB2 at `(166.80, 67.62)` |
+| ESP-01/ESP-01S at J20 | +3V3_WIFI | C69 22 uF/50 V, C70 100 nF |
+| SD card at J19 | +3V3_SD | C67 10 uF/25 V at `(166.80, 68.00)`, C68 100 nF at `(166.80, 72.40)`; FB2 at `(162.50, 85.15)` |
 These are local load or connector bypasses, not IC decoupling.
 
 ## Current placement qualification

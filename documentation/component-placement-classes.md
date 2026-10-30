@@ -49,7 +49,7 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 | Encoder channel | Keep U28 between J13-J15 and the MCU with C106 at its supply; keep R110/R111 at J15 for the ENC2_Z divider |
 | Keyboard matrix | J16, RN20/RN21 and RN22/RN24 stay on F.Cu away from the bottom edge; KOUT arrays sit above J16 and KIN arrays below |
 | Expansion inputs | J9 and J27 flank U7 on F.Cu; each carries GND, +3V3 and four inputs |
-| Backlight power | Keep U3, L2, D3, C107-C114, R126/R127 and the Q8/R131 gate network grouped on the manually selected side; keep J2 at an accessible edge |
+| Backlight power | Keep U3, L2, D3, C107-C114, R126-R128 and the Q8/R131 gate network grouped on the manually selected side; keep J2 at an accessible edge |
 | Display option | J22 driven by U41/C57 active LVDS; RN26/RN27 are the mutually exclusive passive-LVDS alternative |
 | Fixed mechanical part | Do not move without explicit approval |
 
@@ -99,7 +99,7 @@ The final main-power placement pass keeps the high-current loops local:
   open area between MOD1 and the regulators.
 
 Place D2/D3 immediately after the shared input fuse/TVS, then group U3, L2,
-C107-C114 and R126-R127 as one short-loop buck block. Place R131 and
+C107-C114 and R126-R128 as one short-loop buck block. Place R131 and
 Q8/R129/R130 near J2. Keep J2 at an accessible board edge.
 
 ## Isolated input block

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "components": 315,
+    "components": 316,
     "by_role": {
       "ADC filter capacitor": 3,
       "IC": 28,
@@ -23,7 +23,7 @@
       "module": 1,
       "output clamp capacitor": 2,
       "pull-up resistor": 15,
-      "resistor": 72,
+      "resistor": 73,
       "resistor network": 25,
       "signal filter capacitor": 9,
       "solder jumper": 1,
@@ -83,7 +83,7 @@
       "encoder interface": 3,
       "expansion input 0": 1,
       "expansion input 4": 2,
-      "input protection and power": 11,
+      "input protection and power": 12,
       "isolated PLC input channel": 8,
       "isolated PLC input connectors": 2,
       "keyboard matrix": 2,
@@ -109,9 +109,7 @@
       "storage/UI support": 7,
       "storage/wireless connector": 2
     },
-    "parked": [
-      "J36"
-    ]
+    "parked": []
   },
   "components": [
     {
@@ -477,8 +475,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 190.35,
-      "y_mm": 136.95,
+      "x_mm": 190.325,
+      "y_mm": 137.725,
       "dnp": false,
       "nets": "GND; VIN_FUSED"
     },
@@ -692,7 +690,7 @@
     },
     {
       "reference": "R70",
-      "value": "34k",
+      "value": "33k",
       "sheet": "Power and supervision",
       "functional_block": "24V to 5V buck",
       "channels": "",
@@ -708,7 +706,7 @@
     },
     {
       "reference": "R71",
-      "value": "46.4k",
+      "value": "100k",
       "sheet": "Power and supervision",
       "functional_block": "24V to 5V buck",
       "channels": "",
@@ -724,7 +722,7 @@
     },
     {
       "reference": "R72",
-      "value": "20k",
+      "value": "33k",
       "sheet": "Power and supervision",
       "functional_block": "24V to 5V buck",
       "channels": "",
@@ -765,14 +763,14 @@
       "placement_rule": "keep switching/input/output loop compact at regulator pins",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 193.8,
-      "y_mm": 133.075,
+      "x_mm": 195.375,
+      "y_mm": 132.995,
       "dnp": false,
       "nets": "+12V_BL; FB12"
     },
     {
       "reference": "R127",
-      "value": "9.09k",
+      "value": "10k",
       "sheet": "Power and supervision",
       "functional_block": "12V backlight buck",
       "channels": "",
@@ -781,7 +779,23 @@
       "placement_rule": "keep switching/input/output loop compact at regulator pins",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 188.7,
+      "x_mm": 188.675,
+      "y_mm": 132.425,
+      "dnp": false,
+      "nets": "FB12; GND"
+    },
+    {
+      "reference": "R128",
+      "value": "100k",
+      "sheet": "Power and supervision",
+      "functional_block": "input protection and power",
+      "channels": "",
+      "role": "resistor",
+      "associated_ic_or_net": "series/divider/limit passive",
+      "placement_rule": "place in functional block; keep GND return short",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 192.775,
       "y_mm": 133.0,
       "dnp": false,
       "nets": "FB12; GND"
@@ -1268,7 +1282,7 @@
     },
     {
       "reference": "C105",
-      "value": "10uF",
+      "value": "10uF 25V",
       "sheet": "16 PLC inputs and expansion",
       "functional_block": "isolated PLC input channel",
       "channels": "",
@@ -4052,7 +4066,7 @@
     },
     {
       "reference": "C67",
-      "value": "10uF",
+      "value": "10uF 25V",
       "sheet": "Storage, Wi-Fi and UI",
       "functional_block": "storage/UI support",
       "channels": "",
@@ -4093,8 +4107,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 181.47,
-      "y_mm": 39.375,
+      "x_mm": 170.45,
+      "y_mm": 39.05,
       "dnp": false,
       "nets": "+3V3_WIFI; GND"
     },
@@ -4109,8 +4123,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 170.815,
-      "y_mm": 37.465,
+      "x_mm": 176.2,
+      "y_mm": 37.225,
       "dnp": false,
       "nets": "+3V3_WIFI; GND"
     },
@@ -4125,8 +4139,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 189.575,
-      "y_mm": 44.475,
+      "x_mm": 157.175,
+      "y_mm": 39.975,
       "dnp": false,
       "nets": "+5V; GND"
     },
@@ -4141,8 +4155,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 185.765,
-      "y_mm": 37.49,
+      "x_mm": 161.0,
+      "y_mm": 45.075,
       "dnp": false,
       "nets": "+5V; GND"
     },
@@ -4237,7 +4251,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 172.085,
+      "x_mm": 177.55,
       "y_mm": 40.64,
       "dnp": false,
       "nets": "+3V3_WIFI; GND; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST; WIFI_RX; WIFI_TX"
@@ -4251,10 +4265,10 @@
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "parked",
-      "side": "F.Cu",
-      "x_mm": 208.0,
-      "y_mm": 68.58,
+      "current_status": "inside",
+      "side": "B.Cu",
+      "x_mm": 189.162,
+      "y_mm": 68.5,
       "dnp": true,
       "nets": "+3V3_SD; GND; SD_CD; SD_CS_N; SD_DAT1; SD_DAT2; SD_MISO; SD_MOSI; SD_SCK"
     },
@@ -4477,8 +4491,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 176.8,
-      "y_mm": 45.775,
+      "x_mm": 181.425,
+      "y_mm": 45.8,
       "dnp": false,
       "nets": "+3V3_WIFI; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST"
     },
@@ -4493,8 +4507,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 173.95,
-      "y_mm": 33.05,
+      "x_mm": 178.575,
+      "y_mm": 33.0,
       "dnp": false,
       "nets": "GND; WIFI_GPIO0"
     },
@@ -4509,8 +4523,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 183.225,
-      "y_mm": 44.475,
+      "x_mm": 163.525,
+      "y_mm": 39.975,
       "dnp": false,
       "nets": "+3V3_WIFI; +5V; GND"
     },

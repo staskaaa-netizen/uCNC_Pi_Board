@@ -142,7 +142,7 @@ supply and the ULN2003A/MOSFET ratings.
 | PCB footprints | 333 |
 | BOM component quantity | 327 |
 | Through-hole / SMD pads | 269 / 1018 |
-| Through vias | 232 |
+| Through vias | 235 |
 | Minimum track width | 0.12 mm |
 | Minimum drill | 0.30 mm |
 

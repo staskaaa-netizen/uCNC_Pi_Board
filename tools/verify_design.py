@@ -1004,12 +1004,12 @@ def main() -> None:
             failures.append(f"Power-good network is missing {expected}")
     if {("U1", "6"), ("C91", "1")} - nets.get("VCC5", set()):
         failures.append("LMR36510 VCC bypass capacitor is not connected")
-    if component_values.get("R70") != "34k":
-        failures.append("LMR36510 feedback upper resistor is not 34k")
-    if component_values.get("R71") != "46.4k":
-        failures.append("LMR36510 feedback upper resistor is not 46.4k")
-    if component_values.get("R72") != "20k":
-        failures.append("LMR36510 feedback lower resistor is not 20k")
+    if component_values.get("R70") != "33k":
+        failures.append("LMR36510 feedback upper resistor is not 33k")
+    if component_values.get("R71") != "100k":
+        failures.append("LMR36510 feedback upper resistor is not 100k")
+    if component_values.get("R72") != "33k":
+        failures.append("LMR36510 feedback lower resistor is not 33k")
     if component_values.get("U2") != "AMS1117-3.3":
         failures.append("Peripheral 3.3 V rail is not supplied by its dedicated LDO")
     if component_values.get("U3") != "LMR36510ADDAR":
@@ -1020,8 +1020,14 @@ def main() -> None:
         failures.append("Backlight buck inductor is not the TI 12 V reference value")
     if component_values.get("R126") != "100k":
         failures.append("Backlight buck upper feedback resistor is not 100k")
-    if component_values.get("R127") != "9.09k":
-        failures.append("Backlight buck lower feedback resistor is not 9.09k")
+    if component_values.get("R127") != "10k":
+        failures.append("Backlight buck lower feedback resistor is not 10k")
+    if component_values.get("R128") != "100k":
+        failures.append("Backlight feedback parallel resistor is not 100k")
+    if ("R128", "1") not in nets.get("FB12", set()):
+        failures.append("R128 pin 1 is not on FB12")
+    if ("R128", "2") not in nets.get("GND", set()):
+        failures.append("R128 pin 2 is not on GND")
     if ("U3", "4") in {
         endpoint for endpoints in nets.values() for endpoint in endpoints
     }:

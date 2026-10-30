@@ -16,8 +16,9 @@ The RP2350 side remains galvanically isolated because `+12V_FIELD` and
 with margin. `F4` is the 750 mA primary fuse.
 
 `D56` is an `SS54` Schottky diode in series with the converter output. It
-blocks current from the field rail back into the converter. C103 is the 10 uF
-primary bulk capacitor; C105 is the 10 uF, 100 V isolated-output capacitor.
+blocks current from the field rail back into the converter. C103 is the 22 uF,
+50 V primary bulk capacitor; C105 is the common 10 uF, 25 V isolated-output
+capacitor.
 
 U40, D56, F4, C103 and C105 are on F.Cu in the relocated bottom-left power
 area near the encoder interface.

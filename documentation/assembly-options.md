@@ -12,7 +12,7 @@
 - External field wiring uses Phoenix `MCV 1,5` vertical 3.5 mm connectors.
 - Two SS16 input diodes split the fused 24 V feed into separate logic and
   backlight branches. The first LMR36510 makes the 1 A +5 V rail; the second
-  LMR36510 makes a separate 1 A +12 V backlight/CCFL rail.
+  LMR36510 makes a separate 1 A, approximately 12 V backlight/CCFL rail.
 - The 5 V rail feeds the WeAct module and two local 3.3 V LDOs: one for
   peripheral logic/SD/LCD and one dedicated to the ESP-01/ESP-01S.
 - U37, an L78L12 SOT-89 regulator, creates a separate `+12V_AO` rail for the
@@ -26,8 +26,8 @@
   regulated and 24 V-side rails. The 50 V rating retains margin above the
   SMBJ24CA input clamp; a 30 V part is not sufficient for a 24 V input.
   High-frequency bypasses are 100 nF in 0805, except 100 nF/100 V 1206 parts
-  on 24 V-side nodes. C105 remains 10 uF/100 V for field-side backfeed
-  exposure.
+  on 24 V-side nodes. Both 10 uF capacitors use the same 25 V X7R part,
+  including C105 on the isolated field rail.
 - `BL_PWM_MCU`, `BL_PWM`, and `BL_SW_GATE` use a dedicated 0.2 mm control
   netclass. The
   `+12V_BL` and switched `BL_LED_N` power path use the 0.8 mm Power class.

@@ -11,12 +11,13 @@
 - C1 is omitted: C2 keeps the common 100 nF bypass at `VIN_FUSED`, while the
   logic and backlight branches each retain 22 uF local bulk capacitance.
 - 5 V rail: TI LMR36510ADDAR, 1 A synchronous buck at 400 kHz. The reference
-  network uses 22 uH, 2 x 22 uF/50 V output capacitance, 34 k + 46.4 k / 20 k
+  network uses 22 uH, 2 x 22 uF/50 V output capacitance, 33 k + 100 k / 33 k
   feedback divider, 1 uF VCC bypass and a 100 nF bootstrap capacitor. No catch
   diode is fitted.
 - Backlight rail: a second TI LMR36510ADDAR generates ground-referenced
-  `+12V_BL` at up to 1 A. The 12 V/400 kHz design uses 47 uH,
-  100 k / 9.09 k feedback, 3 x 22 uF/50 V output capacitance,
+  `+12V_BL` at approximately 12 V and up to 1 A. The 400 kHz design uses 47 uH,
+  a 100 k upper feedback resistor and 10 k in parallel with 100 k in the lower
+  leg, 3 x 22 uF/50 V output capacitance,
   22 uF/50 V + 100 nF/100 V local input capacitance, 1 uF VCC bypass and a
   100 nF bootstrap capacitor.
 - The WeAct `5V` pin is supplied directly from the motherboard 5 V rail. Its
@@ -61,7 +62,8 @@ The first 1 A buck limit must include both LDO input currents plus the direct
 logic-side loads simultaneously. The 2 A input fuse remains the hard assembly
 limit for both converter branches.
 
-The second buck supplies only `+12V_BL`; J2 provides 12 V, PWM, ground and an
+The second buck supplies only `+12V_BL`; J2 provides approximately 12 V, PWM,
+ground and an
 optional Q8-switched LED return. The direct PWM and MOSFET gate share GPIO35.
 High-current switching and CCFL inverter circuitry remain external.
 R131 provides 100 ohm series protection between GPIO35 and J2 pin 3. R129

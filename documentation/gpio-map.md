@@ -102,4 +102,4 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 - The LED/CCFL PWM output is GPIO35/MOD1 pin 25, not a bit in the 74HC595 chain.
 - GPIO47 and GPIO44-GPIO46 are dedicated to the four 0-10 V outputs. Drive them at
   a common PWM frequency and calibrate the maximum duty because the output
-  stage has 3.2x gain.
+  stage has approximately 3.2x gain.

@@ -566,7 +566,7 @@ def add_power(builder: SheetBuilder) -> None:
     b.note(
         "Power tree: fused 12-24 V input with a TVS and two independent 1 A "
         "series-diode feeds. One feed powers the 5 V logic buck and analog housekeeping; "
-        "the other powers a dedicated 12 V backlight buck. WeAct onboard 3.3 V "
+        "the other powers the nominal 11 V backlight buck. WeAct onboard 3.3 V "
         "regulation supplies only the module, and the ESP has its own 3.3 V LDO.",
         15,
         15,
@@ -604,7 +604,7 @@ def add_power(builder: SheetBuilder) -> None:
     b.capacitor("VIN_PROT", "GND", "100nF 100V", (157, 65), footprint_key="C1206_100V")
 
     # TI LMR36510 reference values for 5 V/1 A at 400 kHz:
-    # L1=22 uH, COUT=2x22 uF, RFBT=34k+46.4k, RFBB=20k.
+    # L1=22 uH, COUT=2x22 uF, RFBT=33k+100k, RFBB=33k.
     b.add(
         lib_id="Regulator_Switching:LMR36510ADDA",
         value="LMR36510ADDAR",
@@ -1082,9 +1082,9 @@ def add_isolated_field_supply(builder: SheetBuilder) -> None:
     b.capacitor(
         "+12V_FIELD",
         "ISO_GND",
-        "10uF",
+        "10uF 25V",
         (525, 85),
-        footprint_key="C1206_100V",
+        footprint_key="C1206",
         reference="C105",
     )
     # One three-pin selector per field bank:
@@ -1561,7 +1561,7 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
     ]:
         b.resistor(source, target, "22R", pos)
     b.two_pin("FB", "Device:FerriteBead", "600R@100MHz", "R1206", "+3V3", "+3V3_SD", (75, 170), mpn="BLM18KG601SN1D", manufacturer="Murata")
-    b.capacitor("+3V3_SD", "GND", "10uF", (90, 170))
+    b.capacitor("+3V3_SD", "GND", "10uF 25V", (90, 170))
     b.capacitor("+3V3_SD", "GND", "100nF", (102, 170))
     b.next_ref("R")  # preserve the retired R54 card-detect resistor reference
     b.add(
@@ -1864,7 +1864,7 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     b = builder
     b.note(
         "U3 is a second LMR36510 buck set to 12 V for the LCD backlight/CCFL "
-        "inverter supply. It uses 47 uH, 100 k / 9.09 k feedback, 3x22 uF/25 V "
+        "inverter supply. It uses 47 uH, 100 k / 10 k feedback, 3x22 uF/25 V "
         "output and 22 uF/50 V + 100 nF/100 V local input. The existing U37 "
         "+12V_AO supply remains separate.",
         250,
@@ -1964,9 +1964,16 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     b.resistor(
         "FB12",
         "GND",
-        "9.09k",
+        "10k",
         (299, 325),
         reference="R127",
+    )
+    b.resistor(
+        "FB12",
+        "GND",
+        "100k",
+        (312, 325),
+        reference="R128",
     )
     b.resistor(
         "BL_PWM_MCU",
@@ -2008,7 +2015,8 @@ def add_backlight_power(builder: SheetBuilder) -> None:
 def add_backlight(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "J2 carries the dedicated +12 V backlight/CCFL supply, a 3.3 V PWM "
+        "J2 carries the nominal 11 V backlight/CCFL supply on the legacy "
+        "+12V_BL net, a 3.3 V PWM "
         "control signal from GPIO1, and ground. GPIO1 also drives the optional "
         "Q8 low-side return through a 100 ohm gate resistor. High-current "
         "switching remains on the external inverter or backlight driver.",
@@ -2131,9 +2139,9 @@ def main() -> None:
         reference="C90",
     )
     for net_a, net_b, value, position, reference in (
-        ("+5V", "FB5_TOP", "34k", (400, 240), "R70"),
-        ("FB5_TOP", "FB5", "46.4k", (412, 240), "R71"),
-        ("FB5", "GND", "20k", (424, 240), "R72"),
+        ("+5V", "FB5_TOP", "33k", (400, 240), "R70"),
+        ("FB5_TOP", "FB5", "100k", (412, 240), "R71"),
+        ("FB5", "GND", "33k", (424, 240), "R72"),
         ("PWR_GOOD_N", "+3V3", "100k", (436, 240), "R73"),
     ):
         sheets["power"].two_pin(

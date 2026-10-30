@@ -21,9 +21,9 @@ DEFAULT_NETLIST = ROOT / "hardware" / "motherboard.net.xml"
 
 NEW_REFERENCES = {
     "D2", "D3", "U3", "L2", "C107", "C108", "C109", "C110", "C111",
-    "C112", "C113", "C114", "R126", "R127", "R131", "J2", "Q8", "R129", "R130",
+    "C112", "C113", "C114", "R126", "R127", "R128", "R131", "J2", "Q8", "R129", "R130",
 }
-REMOVE_REFERENCES = {"Q1", "R1", "C1", "C115", "R128", "J3"}
+REMOVE_REFERENCES = {"Q1", "R1", "C1", "C115", "J3"}
 TIDY_TRACK_UUIDS = {
     # Branches that ended on the removed Q1/R1/D2 network.
     "5af0e949-dfdb-4c27-8e93-8e1d98672e4f",
@@ -45,6 +45,7 @@ PARKED_PLACEMENTS = {
     "C112": (235.0, 121.0, 0.0),
     "R126": (244.0, 106.0, 0.0),
     "R127": (244.0, 111.0, 0.0),
+    "R128": (197.0, 136.7, 90.0),
     "R131": (249.0, 121.0, 90.0),
     "J2": (255.0, 92.0, 0.0),
     "Q8": (255.0, 124.0, 0.0),

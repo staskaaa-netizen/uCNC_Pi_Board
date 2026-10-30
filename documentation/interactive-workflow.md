@@ -1553,7 +1553,8 @@ backlight converter:
   `VIN_BL_PROT` for the backlight converter.
 - Q1, R1 and the Q1 gate zener are removed.
 - U3 is a second LMR36510ADDAR buck configured for 12 V / 1 A. The passive
-  set is standardized with the other regulators: 47 uH, 100 k / 9.09 k
+  set is standardized with the other regulators: 47 uH, 100 k upper feedback
+  and 10 k || 100 k lower feedback
   feedback, 3 x 22 uF/25 V output, 22 uF/50 V input, 1 uF VCC bypass and
   100 nF bootstrap. C1 is removed because both diode-fed branches retain bulk
   input capacitance.
@@ -1583,6 +1584,9 @@ backlight converter:
   electrically excluded from the fitted configuration.
 - J36 is an off-board DNP Molex microSD alternate sharing J19's SPI, power,
   ground and card-detect nets. J19 and J36 are mutually exclusive.
+- Feedback values are normalized to common stock: `33k + 100k / 33k` gives
+  approximately 5.03 V, `22k / 10k` retains the analog-output gain, and
+  `100k / (10k || 100k)` gives approximately 12.0 V for the backlight rail.
 - All footprints are inside the 200 x 150 mm PCB outline and the routed
   connectivity is complete.
 - ERC has no electrical errors. PCB DRC reports no shorts and no unconnected

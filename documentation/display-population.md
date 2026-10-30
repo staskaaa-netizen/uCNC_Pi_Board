@@ -88,8 +88,9 @@ The verified J22 pinout contains no backlight contact. J2 is the separate
 | 4 | `BL_LED_N`, low-side switched return through Q8 |
 
 U3 is a second TI LMR36510 buck using the datasheet's 12 V, 400 kHz reference
-network: 47 uH, 100 k / 9.09 k feedback, 3 x 10 uF output and 2.2 uF + 220 nF
-local input capacitance. The existing U37 `+12V_AO` supply for the 0-10 V
+network: 47 uH, 100 k upper feedback and 10 k || 100 k lower feedback,
+3 x 22 uF/50 V output, 22 uF/50 V + 100 nF/100 V local input capacitance.
+The existing U37 `+12V_AO` supply for the 0-10 V
 output stage remains separate and is not shared with the backlight rail.
 
 GPIO35/MOD1 pin 25 drives `BL_PWM_MCU`. R131 (100 ohm) feeds only J2 pin 3;
