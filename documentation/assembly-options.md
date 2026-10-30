@@ -90,7 +90,7 @@ arrays:
 - RN16-RN21: 100 ohm motion and keyboard output series resistors.
 - R114-R117: 100 ohm gate resistors and 100 k pull-downs for the two extra
   low-side BSS138 outputs.
-- RN22 and RN24: 1 k keyboard input series protection only.
+- RN22 and RN24: 10 k keyboard input series protection only.
 - RN26/RN27: 4 x 330 ohm passive LVDS series resistors.
 - R92-R99: individual 0805 10 k resistors for the two PWM filter stages.
 - R100-R103: individual 0805 22 k feedback resistors.

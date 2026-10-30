@@ -1513,7 +1513,7 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
     for pack_index in range(2):
         signals = range(pack_index * 4, pack_index * 4 + 4)
         b.resistor_pack4(
-            "1k",
+            "10k",
             "R_Array_4x0603",
             [(f"KIN{signal}_FILT", f"KIN{signal}") for signal in signals],
             (130 + pack_index * 60, 85),
