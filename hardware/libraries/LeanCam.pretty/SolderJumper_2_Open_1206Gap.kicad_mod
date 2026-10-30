@@ -1,0 +1,90 @@
+(footprint "SolderJumper_2_Open_1206Gap"
+	(version 20260206)
+	(generator "codex")
+	(layer "F.Cu")
+	(descr "Open two-pad solder jumper using the 1206 land spacing for easy hand soldering")
+	(tags "solder jumper open 1206")
+	(property "Reference" "JP**"
+		(at 0 -1.83 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SolderJumper_2_Open_1206Gap"
+		(at 0 1.83 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.78 -0.88)
+		(end -0.78 0.88)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 0.78 -0.88)
+		(end 0.78 0.88)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -2.28 -1.13)
+		(end 2.28 1.13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_rect
+		(start -1.6 -0.8)
+		(end 1.6 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.4625 0)
+		(size 1.125 1.75)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.222222)
+	)
+	(pad "2" smd roundrect
+		(at 1.4625 0)
+		(size 1.125 1.75)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.222222)
+	)
+	(embedded_fonts no)
+)

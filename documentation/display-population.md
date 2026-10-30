@@ -13,6 +13,7 @@ J22 is the only display connector.
 
 - Fit U41, a DS90LV047A quad CMOS-to-LVDS driver in SOIC-16.
 - Leave RN26 and RN27 unfitted.
+- RN26 and RN27 are included in the BOM as optional DNP items.
 - J22 is the 2.00 mm, 2x10 LCD connector and is mounted on B.Cu.
 - Odd pins are the left column and even pins are the right column. Rows 1-8
   are used; rows 9-10 and pins 17-20 are no-connect.

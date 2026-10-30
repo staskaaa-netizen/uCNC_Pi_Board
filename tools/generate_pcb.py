@@ -6,6 +6,7 @@ import csv
 import json
 import math
 import os
+import re
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from dataclasses import dataclass
@@ -69,6 +70,7 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "J33": (173.5, 145.0, 180),
     "J34": (8.0, 43.25, 270),
     "J35": (8.0, 105.75, 270),
+    "J36": (208.0, 68.58, 90),
     "J33": (20.25, 6.75, 180),
     "J34": (8.0, 53.5, 270),
     "J35": (8.0, 116.5, 270),
@@ -214,7 +216,7 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "R51": (178.700, 62.620, 0),
     "R50": (178.700, 70.120, 0),
     "R52": (178.700, 75.060, 0),
-    "R54": (178.700, 78.060, 0),
+    "JP5": (178.700, 78.060, 0),
     "R44": (172.600, 60.120, 0),
     "R45": (172.600, 62.620, 0),
     "R49": (172.600, 57.620, 0),
@@ -1113,21 +1115,63 @@ def export_bom() -> None:
     by_ref = {item.get("ref"): item for item in root.findall("./components/comp")}
     output = ROOT / "manufacturing" / "bom.csv"
     output.parent.mkdir(parents=True, exist_ok=True)
-    grouped: dict[tuple[str, str, str, str], list[str]] = defaultdict(list)
+    grouped: dict[
+        tuple[str, str, str, str],
+        dict[str, set[str] | list[str]],
+    ] = {}
     for component in components:
-        if component.dnp:
+        if "SolderJumper" in component.footprint:
             continue
         node = by_ref[component.reference]
         mpn = parse_property(node, "MPN")
         manufacturer = parse_property(node, "Manufacturer")
-        grouped[(component.value, component.footprint, manufacturer, mpn)].append(
-            component.reference
-        )
+        assembly = "DNP" if component.dnp else "FIT"
+        key = (component.footprint, manufacturer, mpn, assembly)
+        group = grouped.setdefault(key, {"values": set(), "references": []})
+        group["values"].add(component.value)
+        group["references"].append(component.reference)
+
+    def natural_key(value: str) -> list[str | int]:
+        return [
+            int(part) if part.isdigit() else part
+            for part in re.split(r"(\d+)", value)
+        ]
+
     with output.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["Quantity", "Value", "Footprint", "Manufacturer", "MPN", "References"])
-        for (value, footprint, manufacturer, mpn), refs in sorted(grouped.items()):
-            writer.writerow([len(refs), value, footprint, manufacturer, mpn, " ".join(refs)])
+        writer.writerow(
+            [
+                "Quantity",
+                "Design Values",
+                "Footprint",
+                "Manufacturer",
+                "MPN",
+                "Assembly",
+                "References",
+            ]
+        )
+        for (footprint, manufacturer, mpn, assembly), group in sorted(
+            grouped.items(),
+            key=lambda item: (
+                item[0][0],
+                item[0][1],
+                item[0][2],
+                item[0][3],
+            ),
+        ):
+            values = sorted(group["values"], key=natural_key)
+            references = sorted(group["references"], key=natural_key)
+            writer.writerow(
+                [
+                    len(references),
+                    " | ".join(values),
+                    footprint,
+                    manufacturer,
+                    mpn,
+                    assembly,
+                    " ".join(references),
+                ]
+            )
     print(f"BOM: {output}")
 
 

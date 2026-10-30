@@ -1569,11 +1569,20 @@ backlight converter:
   only `+12V_BL` and `BL_LED_N` remain on the 0.8 mm Power class.
 - RN36 pulls ESP `EN`, `RST`, `GPIO0` and `GPIO2` to `+3V3_WIFI`, keeping
   those interface pins in the dedicated ESP supply domain.
-- RN32-RN35 provide four PLC 4x4.7 k pull-up networks and RN36 provides the
+- RN32-RN35 provide four PLC 4x10 k pull-up networks and RN36 provides the
   ESP 4x10 k pull-up network. The three safety pull-ups remain discrete.
 - The PC817C experiment was reverted because the separate optocouplers did not
   fit. The four LTV-847S and three EL3H7 footprints are restored, and no
   existing copper was changed.
+- R54 was replaced by JP5, an open two-pad solder jumper using the existing
+  1206 land spacing in the SD-card-detect path. JP5 is excluded from the BOM.
+- Capacitor packages are standardized without changing resistor sizes:
+  100 nF and 1 uF low-voltage ceramics use 0805, 10 uF and 100 nF/100 V parts
+  use 1206, and all 22 uF bulk capacitors use the same 50 V 1210 part.
+- The BOM now retains RN26/RN27 as explicit DNP rows while keeping them
+  electrically excluded from the fitted configuration.
+- J36 is an off-board DNP Molex microSD alternate sharing J19's SPI, power,
+  ground and card-detect nets. J19 and J36 are mutually exclusive.
 - All footprints are inside the 200 x 150 mm PCB outline and the routed
   connectivity is complete.
 - ERC has no electrical errors. PCB DRC reports no shorts and no unconnected

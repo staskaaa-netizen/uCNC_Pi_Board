@@ -11,12 +11,12 @@
 - C1 is omitted: C2 keeps the common 100 nF bypass at `VIN_FUSED`, while the
   logic and backlight branches each retain 22 uF local bulk capacitance.
 - 5 V rail: TI LMR36510ADDAR, 1 A synchronous buck at 400 kHz. The reference
-  network uses 22 uH, 2 x 22 uF/25 V output capacitance, 34 k + 46.4 k / 20 k
+  network uses 22 uH, 2 x 22 uF/50 V output capacitance, 34 k + 46.4 k / 20 k
   feedback divider, 1 uF VCC bypass and a 100 nF bootstrap capacitor. No catch
   diode is fitted.
 - Backlight rail: a second TI LMR36510ADDAR generates ground-referenced
   `+12V_BL` at up to 1 A. The 12 V/400 kHz design uses 47 uH,
-  100 k / 9.09 k feedback, 3 x 22 uF/25 V output capacitance,
+  100 k / 9.09 k feedback, 3 x 22 uF/50 V output capacitance,
   22 uF/50 V + 100 nF/100 V local input capacitance, 1 uF VCC bypass and a
   100 nF bootstrap capacitor.
 - The WeAct `5V` pin is supplied directly from the motherboard 5 V rail. Its
@@ -90,7 +90,7 @@ margin. Motion outputs are 5 V CMOS logic, not motor power.
 
 Each PLC channel has a 2.2 k series resistor, indicator LED,
 reverse-protection diode and LTV-847S optocoupler channel. RN32-RN35 provide
-4x4.7 k logic-side PLC pull-ups. The board can either use an external 24 V wetting
+4x10 k logic-side PLC pull-ups. The board can either use an external 24 V wetting
 source or generate its own isolated 12 V wetting source with U40, a Traco
 `TBA2-0512`, rated at 2 W and approximately 167 mA. F4 limits the converter
 input to 750 mA, and D56 prevents field-side backfeed into U40.

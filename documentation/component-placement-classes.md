@@ -42,7 +42,7 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 | Isolated wetting supply | U40, D56, F4, C103 and C105 are in the F.Cu power area near the encoder interface; no secondary net may touch GND |
 | Input-mode selectors | JP2-JP4 are one 3-pin, 2.54 mm header per field bank on B.Cu |
 | Safety input optocoupler | Place the individual EL3H7 close to its J5/J6 field chain and discrete pull-up |
-| PLC pull-up | Place one 4x4.7 k network per four LTV-847S collector outputs on the logic side |
+| PLC pull-up | Place one 4x10 k network per four LTV-847S collector outputs on the logic side |
 | Shift-register decoupling | C22-C29 sit immediately right of their respective U6-U13 VCC pins; ground via on the outer pad |
 | Motion output array | Group source, pull-down, 100 ohm array and its connector; keep buffers between U10-U13 and J10-J11 |
 | ULN output | Group both ULN banks, clamp rail, existing indicator chains, J12 and J32 |
@@ -117,7 +117,7 @@ The 16 PLC chains follow the nearest J7/J8 rows: J7 positions 1-8 feed logical
 channels 9-16 and J8 positions 1-8 feed logical channels 1-8. The two dedicated
 safety chains are grouped beside J5 and J6. The four optocoupler output banks
 are also wired to their nearest 74HC165 data pins. Both permutations are fixed
-in `documentation/io-bit-map.md` for firmware. RN32-RN35 provide 4x4.7 k
+in `documentation/io-bit-map.md` for firmware. RN32-RN35 provide 4x10 k
 PLC pull-ups; the three safety outputs retain individual 4.7 k resistors. No
 input-node capacitors are fitted; input debouncing belongs in firmware.
 
@@ -127,8 +127,8 @@ input-node capacitors are fitted; input debouncing belongs in firmware.
 J19 remains the right-edge mechanical anchor. Its passives use three front-side
 ranks in the 22 mm corridor between MOD1 and J19:
 
-- R50-R54 are the five series resistors closest to J19 and align to the SCK,
-  MOSI, MISO, CS and card-detect pins.
+- R50-R53 are the four series resistors closest to J19 and align to the SCK,
+  MOSI, MISO and CS pins. JP5 is the open two-pad card-detect solder jumper.
 - R44-R49 are the six 10 k pull-ups on the next rank, grouped by their
   corresponding signal pin.
 - FB2, C68 and C67 form the `+3V3` to `+3V3_SD` filter and local reservoir

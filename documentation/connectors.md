@@ -41,6 +41,14 @@ height to the Phoenix footprint.
 | J33 | 2-pin 3.5 mm | 1=DO_COM field +V, 2=GND |
 | J34 | 8-pin 3.5 mm paired | FIELD_IN13-16 plus alternating isolated common 0 |
 | J35 | 8-pin 3.5 mm paired | FIELD_IN5-8 plus alternating isolated common 1 |
+| J36 | Molex 104031-0811 microSD | Alternate for J19; shares SPI, power and detect nets |
+
+JP5 is an open two-pad solder jumper between `SD_CD` and `SD_CD_MCU`. Bridge
+it to connect the SD-card detect switch to GPIO2. The jumper uses the original
+1206 pad spacing for easy hand soldering and is excluded from the BOM.
+
+J36 is an off-board DNP microSD alternative sharing the J19 SPI, power,
+ground and card-detect nets. Populate exactly one of J19 or J36.
 
 J4 intentionally omits debugger reset. The WeAct module's onboard reset button
 controls the RP2350. All four 74HC595 `~SRCLR` pins are tied to `+3V3`, so a
@@ -91,7 +99,7 @@ J7/J8 are arranged by shortest PCB fanout, not logical numbering. Firmware
 must use the position-to-bit permutation in `documentation/io-bit-map.md`.
 
 Each group of four PLC inputs uses one LTV-847S SOIC-16W optocoupler. Four
-isolated 4x4.7 k networks provide the PLC pull-ups, while the dedicated E-stop,
+isolated 4x10 k networks provide the PLC pull-ups, while the dedicated E-stop,
 HOLD and START channels use individual EL3H7 DIP-4 optocouplers and retain
 discrete 4.7 k pull-ups to `+3V3`. No input-node capacitors are fitted.
 Firmware must debounce the sampled contacts.

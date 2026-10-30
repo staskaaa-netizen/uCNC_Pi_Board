@@ -125,6 +125,8 @@ def role_for(reference: str, value: str, footprint: str, nets: set[str]) -> tupl
         return "module", "socketed controller module", "anchor; do not move without approval"
     if reference.startswith("H"):
         return "mounting hole", "mechanical mounting", "anchor; keep fixed"
+    if "SolderJumper" in footprint:
+        return "solder jumper", "configuration or isolation link", "place at the associated signal node"
     if reference.startswith("J"):
         return "connector", "external or board-level connection", "anchor; keep at approved board edge"
     if reference.startswith("RN"):

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "components": 314,
+    "components": 315,
     "by_role": {
       "ADC filter capacitor": 3,
       "IC": 28,
@@ -11,7 +11,7 @@
       "bulk output capacitor": 8,
       "bulk rail capacitor": 1,
       "capacitor": 1,
-      "connector": 35,
+      "connector": 36,
       "decoupling capacitor": 24,
       "diode": 24,
       "divider lower resistor": 3,
@@ -23,9 +23,10 @@
       "module": 1,
       "output clamp capacitor": 2,
       "pull-up resistor": 15,
-      "resistor": 73,
+      "resistor": 72,
       "resistor network": 25,
       "signal filter capacitor": 9,
+      "solder jumper": 1,
       "switch": 1,
       "transistor": 4
     },
@@ -53,7 +54,7 @@
       "PLC input 7": 3,
       "PLC input 8": 3,
       "PLC input 9": 3,
-      "SD interface": 11,
+      "SD interface": 12,
       "START button input connector": 1,
       "ULN open-collector outputs": 44,
       "ULN output connector": 1,
@@ -108,7 +109,9 @@
       "storage/UI support": 7,
       "storage/wireless connector": 2
     },
-    "parked": []
+    "parked": [
+      "J36"
+    ]
   },
   "components": [
     {
@@ -177,7 +180,7 @@
     },
     {
       "reference": "C6",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "24V to 5V buck",
       "channels": "",
@@ -209,7 +212,7 @@
     },
     {
       "reference": "C10",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "peripheral 3.3V regulator",
       "channels": "",
@@ -225,7 +228,7 @@
     },
     {
       "reference": "C11",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "24V to 5V buck",
       "channels": "",
@@ -305,7 +308,7 @@
     },
     {
       "reference": "C90",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "peripheral 3.3V regulator",
       "channels": "",
@@ -369,7 +372,7 @@
     },
     {
       "reference": "C109",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "12V backlight buck",
       "channels": "",
@@ -385,7 +388,7 @@
     },
     {
       "reference": "C110",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "12V backlight buck",
       "channels": "",
@@ -401,7 +404,7 @@
     },
     {
       "reference": "C111",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Power and supervision",
       "functional_block": "12V backlight buck",
       "channels": "",
@@ -1249,7 +1252,7 @@
     },
     {
       "reference": "C103",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "16 PLC inputs and expansion",
       "functional_block": "isolated PLC input channel",
       "channels": "",
@@ -2497,7 +2500,7 @@
     },
     {
       "reference": "RN32",
-      "value": "4x4.7k",
+      "value": "4x10k",
       "sheet": "16 PLC inputs and expansion",
       "functional_block": "PLC input 1",
       "channels": "PLC input 1; PLC input 2; PLC input 3; PLC input 4",
@@ -2513,7 +2516,7 @@
     },
     {
       "reference": "RN33",
-      "value": "4x4.7k",
+      "value": "4x10k",
       "sheet": "16 PLC inputs and expansion",
       "functional_block": "PLC input 5",
       "channels": "PLC input 5; PLC input 6; PLC input 7; PLC input 8",
@@ -2529,7 +2532,7 @@
     },
     {
       "reference": "RN34",
-      "value": "4x4.7k",
+      "value": "4x10k",
       "sheet": "16 PLC inputs and expansion",
       "functional_block": "PLC input 10",
       "channels": "PLC input 10; PLC input 11; PLC input 12; PLC input 9",
@@ -2545,7 +2548,7 @@
     },
     {
       "reference": "RN35",
-      "value": "4x4.7k",
+      "value": "4x10k",
       "sheet": "16 PLC inputs and expansion",
       "functional_block": "PLC input 13",
       "channels": "PLC input 13; PLC input 14; PLC input 15; PLC input 16",
@@ -4081,7 +4084,7 @@
     },
     {
       "reference": "C69",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Storage, Wi-Fi and UI",
       "functional_block": "ESP-01/ESP-01S interface",
       "channels": "",
@@ -4113,7 +4116,7 @@
     },
     {
       "reference": "C88",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Storage, Wi-Fi and UI",
       "functional_block": "storage/UI support",
       "channels": "",
@@ -4238,6 +4241,38 @@
       "y_mm": 40.64,
       "dnp": false,
       "nets": "+3V3_WIFI; GND; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST; WIFI_RX; WIFI_TX"
+    },
+    {
+      "reference": "J36",
+      "value": "MicroSD alternative, SPI",
+      "sheet": "Storage, Wi-Fi and UI",
+      "functional_block": "SD interface",
+      "channels": "",
+      "role": "connector",
+      "associated_ic_or_net": "external or board-level connection",
+      "placement_rule": "mechanical anchor; do not move without approval",
+      "current_status": "parked",
+      "side": "F.Cu",
+      "x_mm": 208.0,
+      "y_mm": 68.58,
+      "dnp": true,
+      "nets": "+3V3_SD; GND; SD_CD; SD_CS_N; SD_DAT1; SD_DAT2; SD_MISO; SD_MOSI; SD_SCK"
+    },
+    {
+      "reference": "JP5",
+      "value": "SD_CD_EN",
+      "sheet": "Storage, Wi-Fi and UI",
+      "functional_block": "SD interface",
+      "channels": "",
+      "role": "solder jumper",
+      "associated_ic_or_net": "configuration or isolation link",
+      "placement_rule": "place with functional block; review after placement",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 162.56,
+      "y_mm": 81.915,
+      "dnp": false,
+      "nets": "SD_CD; SD_CD_MCU"
     },
     {
       "reference": "R44",
@@ -4398,22 +4433,6 @@
       "y_mm": 58.42,
       "dnp": false,
       "nets": "SD_CS_MCU; SD_CS_N"
-    },
-    {
-      "reference": "R54",
-      "value": "0R",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
-      "channels": "",
-      "role": "resistor",
-      "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "place with functional block; review after placement",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 162.56,
-      "y_mm": 81.915,
-      "dnp": false,
-      "nets": "SD_CD; SD_CD_MCU"
     },
     {
       "reference": "RN22",
@@ -4689,7 +4708,7 @@
     },
     {
       "reference": "C101",
-      "value": "22uF 25V",
+      "value": "22uF 50V",
       "sheet": "Analog I/O",
       "functional_block": "analog output power",
       "channels": "",
@@ -4698,7 +4717,7 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 161.375,
+      "x_mm": 161.025,
       "y_mm": 127.525,
       "dnp": false,
       "nets": "+12V_AO; GND"

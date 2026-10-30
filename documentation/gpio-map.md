@@ -25,7 +25,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 |---:|---:|---|---|---|---|---|
 | 0 | 33 | — | Reserved | Module PSRAM chip select | 3.3 V | Left free for the module's solderable PSRAM |
 | 1 | 49 | — | Reserved | Not connected | — | Released from the backlight PWM allocation |
-| 2 | 34 | SD_CD_MCU | Input | SD-card detect | 3.3 V | Active low; moved from GPIO47 as requested |
+| 2 | 34 | SD_CD_MCU | Input | SD-card detect | 3.3 V | Active low; bridge JP5 to enable |
 | 3 | 50 | — | Reserved | Not connected | — | On-board backlight switch removed |
 | 4 | 35 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Alternate SPI0 mapping |
 | 5 | 51 | SD_CS_MCU | Output | SPI0 CS | 3.3 V | Active low |

@@ -34,7 +34,7 @@ safety circuit.
 
 | Function | Capacity | Implementation |
 |---|---:|---|
-| Isolated PLC inputs | 16 | Four LTV-847S quad optocouplers with four 4x4.7 k pull-up networks |
+| Isolated PLC inputs | 16 | Four LTV-847S quad optocouplers with four 4x10 k pull-up networks |
 | Dedicated safety/control inputs | 3 | E-stop, HOLD and START through individual EL3H7 DIP-4 optocouplers |
 | 3.3 V expansion inputs | 8 | Two four-channel headers, J9 and J27 |
 | Keyboard inputs | 8 | KIN0-KIN7 through the input shift chain |
@@ -42,6 +42,7 @@ safety circuit.
 | Motion outputs | 15 | Five EN/STEP/DIR axes plus one AUX output |
 | Keyboard outputs | 8 | KOUT0-KOUT7 through the output shift chain |
 | Encoder inputs | 3 | A/B/Z channels with 5 V to 3.3 V conditioning |
+| SD storage | 1 of 2 | Full-size J19 or alternate microSD J36, mutually exclusive |
 | Analog inputs | 3 | 0-10 V, resistor-divided into RP2350 ADC inputs |
 | Analog outputs | 4 | 0-10 V through TLV2374 and RC filtering |
 
@@ -69,7 +70,7 @@ to motherboard GND. D56 prevents external field voltage from backfeeding U40.
 
 Each PLC channel includes a 2.2 k series resistor, indicator LED,
 reverse-protection diode and one LTV-847S optocoupler channel plus one element
-from a 4x4.7 k logic-side pull-up network. The E-stop, HOLD and START pull-ups
+from a 4x10 k logic-side pull-up network. The E-stop, HOLD and START pull-ups
 remain discrete. Firmware must debounce the sampled contacts.
 
 ## Connectors
@@ -91,6 +92,7 @@ remain discrete. Firmware must debounce the sampled contacts.
 | J17 | Keyboard power/reference |
 | J18 | I2C0 |
 | J19 | Full-size SD card, SPI mode |
+| J36 | Optional DNP microSD alternate; mutually exclusive with J19 |
 | J20 | Optional ESP-01/ESP-01S |
 | J22 | 2x10, 2.00 mm LCD LVDS |
 | J24 | Three 0-10 V analog inputs |

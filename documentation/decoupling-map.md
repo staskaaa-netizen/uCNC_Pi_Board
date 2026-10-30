@@ -28,7 +28,7 @@ They are field-output rail clamps, not IC VCC bypass capacitors.
 
 U18-U21 are LTV-847S four-channel PLC optocouplers; U35/U36/U39 are individual
 EL3H7 DIP-4 safety optocouplers. They have no VCC pin. RN32-RN35 provide one
-4x4.7 k isolated pull-up network per PLC bank; the E-stop, HOLD and START
+4x10 k isolated pull-up network per PLC bank; the E-stop, HOLD and START
 collectors retain discrete 4.7 k pull-ups to `+3V3`. No input-node capacitors
 are fitted; firmware provides debounce timing.
 
@@ -36,12 +36,15 @@ are fitted; firmware provides debounce timing.
 
 | Regulator | Rail and role | Input capacitors | Output/VCC capacitors | Other |
 |---|---|---|---|---|
-| U1 LMR36510ADDAR | VIN_PROT to +5V, 1 A buck | C3 22 uF/50 V 1210, C4 100 nF/100 V 1206, C5 22 uF/50 V 1210 | C6 22 uF/25 V 1210, C7 100 nF 0805, C11 22 uF/25 V 1210 | C86 100 nF BOOT-to-SW; C91 1 uF VCC-to-GND |
-| U3 LMR36510ADDAR | VIN_BL_PROT to +12V_BL, 1 A backlight buck | C107 22 uF/50 V 1210, C108 100 nF/100 V 1206 | C109-C111 3 x 22 uF/25 V 1210, C112 100 nF 0805 | C113 100 nF BOOT-to-SW; C114 1 uF VCC-to-GND |
-| U2 AMS1117-3.3 | +5V to peripheral +3V3 | C10 22 uF/25 V 1210, C76 100 nF 0805 | C13 100 nF 0805, C90 22 uF/25 V 1210 | Supplies logic, SD, J22 LCD logic and analog prefilter |
-| U34 AMS1117-3.3 | +5V to ESP +3V3_WIFI | C88 22 uF/25 V 1210, C89 100 nF 0805 | C69 22 uF/25 V 1210, C70 100 nF 0805 | Dedicated ESP-01/ESP-01S rail |
-| U40 TBA2-0512 | +5V to isolated +12V_FIELD | C103 22 uF/25 V 1210 | C105 10 uF/100 V 1206, after D56 | Dry-contact wetting supply |
-| U37 L78L12 | VIN_PROT to +12V_AO | C100 22 uF/50 V 1210 | C101 22 uF/25 V 1210 | Supplies U38 only |
+| U1 LMR36510ADDAR | VIN_PROT to +5V, 1 A buck | C3 22 uF/50 V 1210, C4 100 nF/100 V 1206, C5 22 uF/50 V 1210 | C6 22 uF/50 V 1210, C7 100 nF 0805, C11 22 uF/50 V 1210 | C86 100 nF BOOT-to-SW; C91 1 uF VCC-to-GND |
+| U3 LMR36510ADDAR | VIN_BL_PROT to +12V_BL, 1 A backlight buck | C107 22 uF/50 V 1210, C108 100 nF/100 V 1206 | C109-C111 3 x 22 uF/50 V 1210, C112 100 nF 0805 | C113 100 nF BOOT-to-SW; C114 1 uF VCC-to-GND |
+| U2 AMS1117-3.3 | +5V to peripheral +3V3 | C10 22 uF/50 V 1210, C76 100 nF 0805 | C13 100 nF 0805, C90 22 uF/50 V 1210 | Supplies logic, SD, J22 LCD logic and analog prefilter |
+| U34 AMS1117-3.3 | +5V to ESP +3V3_WIFI | C88 22 uF/50 V 1210, C89 100 nF 0805 | C69 22 uF/50 V 1210, C70 100 nF 0805 | Dedicated ESP-01/ESP-01S rail |
+| U40 TBA2-0512 | +5V to isolated +12V_FIELD | C103 22 uF/50 V 1210 | C105 10 uF/100 V 1206, after D56 | Dry-contact wetting supply |
+| U37 L78L12 | VIN_PROT to +12V_AO | C100 22 uF/50 V 1210 | C101 22 uF/50 V 1210 | Supplies U38 only |
+
+The ceramic package standard is 0805 for low-voltage 100 nF and 1 uF parts,
+1206 for 10 uF and 100 nF/100 V parts, and 1210 for 22 uF bulk capacitors.
 
 RN36 provides the four 10 k pull-ups for `EN`, `RST`, `GPIO0` and `GPIO2` at
 the ESP socket. Its supply side is referenced to `+3V3_WIFI`, not the

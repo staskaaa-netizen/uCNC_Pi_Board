@@ -2,6 +2,9 @@
 
 ## Fabrication
 
+- `manufacturing/bom.csv` is grouped at part level by footprint, manufacturer,
+  MPN and assembly status. The `Design Values` column records every schematic
+  value represented by that physical part, and DNP alternates are included.
 - Two-layer PCB, nominal 1.6 mm FR-4.
 - The main assembly is front-side. J22, C57 and the JP2-JP4 field-mode
   selectors are on the back. The backlight-buck parts are user-placed on the
@@ -17,10 +20,11 @@
 - General minimum track/clearance: 0.25/0.20 mm; 0.30 mm drill with 0.60 mm
   via pad. The eight LVDS connector signals use 0.12 mm tracks and 0.12 mm
   spacing to fan out between the 2.00 mm J22 pins.
-- General 100 nF IC decoupling uses 0805 to keep loop area small. High-voltage
-  input ceramics, bulk components and most other passives remain 1206.
-- Regulator bulk capacitors are standardized to 22 uF/25 V in 1210 on the
-  regulated 5 V/12 V rails, and 22 uF/50 V in 1210 on 24 V-side inputs.
+- Low-voltage 100 nF decoupling and all 1 uF bypass/filter capacitors use
+  0805. The 10 uF capacitors and 100 nF/100 V input ceramics use 1206.
+- Regulator bulk capacitors are standardized to 22 uF/50 V in 1210 on both the
+  regulated and 24 V-side rails. The 50 V rating retains margin above the
+  SMBJ24CA input clamp; a 30 V part is not sufficient for a 24 V input.
   High-frequency bypasses are 100 nF in 0805, except 100 nF/100 V 1206 parts
   on 24 V-side nodes. C105 remains 10 uF/100 V for field-side backfeed
   exposure.
@@ -41,6 +45,7 @@ The default build is the active LCD LVDS configuration and no Wi-Fi module:
 - Fit the WeAct RP2350B socket, all input/output logic, power supply and standard
   decoupling.
 - Fit U41 (DS90LV047A) and its C57 bypass. Leave the passive RN26/RN27 arrays unfitted.
+- RN26 and RN27 are included in the BOM as optional DNP items.
 - Do not insert the ESP-01/ESP-01S module unless Wi-Fi is required.
 - The module and RP2350B board are supplied separately.
 
@@ -52,16 +57,23 @@ The default build is the active LCD LVDS configuration and no Wi-Fi module:
 | Passive LCD LVDS | RN26/RN27, J22 | U41 |
 | Wi-Fi | ESP-01 or ESP-01S in J20 | None |
 | Backlight/CCFL | U3 and its buck passives, J2 | None |
+| Storage | J19 full-size SD | J36 microSD |
+| Storage alternative | J36 microSD | J19 full-size SD |
 
 
 Fit only one LVDS driver path. No HDMI connector or HDMI signal path is fitted.
 No solder jumper is required for backlight selection.
+Fit exactly one storage socket: full-size J19 or alternate microSD J36.
 
 The verified J22 pinout contains the LCD LVDS signals and logic supply only.
 J2 is the separate backlight/CCFL connector: `+12V_BL`, GND, `BL_PWM`, and an
 optional Q8-switched low-side return. GPIO35/MOD1 pin 25 drives both the direct
 PWM pin and the Q8 gate path. Backlight current switching remains external.
 LCD-panel logic is powered from J22.
+
+JP5 is an open two-pad solder jumper in the SD-card-detect path. Bridge it to
+enable card detection to GPIO2. With JP5 open, firmware should enable the
+RP2350 internal pull-up or ignore the card-detect input.
 
 The WeAct module's own reset button, power-on reset, brownout detector and
 watchdog are used. The external reset branch and TPS3839 supervisor have been
@@ -91,7 +103,7 @@ parts, as requested, rather than resistor networks.
 
 The 16 PLC inputs use four LTV-847S SOIC-16W quad optocouplers. The dedicated
 E-stop, HOLD and START channels use individual EL3H7 DIP-4 optocouplers. The
-PLC channels use four isolated 4x4.7 k pull-up networks, one per four-channel
+PLC channels use four isolated 4x10 k pull-up networks, one per four-channel
 group; the safety channels retain discrete 4.7 k pull-ups. Each input has one
 2.2 k field resistor, indicator LED and reverse diode. The optocoupler
 collectors drive the RP2350 directly; no receiver gates are fitted.

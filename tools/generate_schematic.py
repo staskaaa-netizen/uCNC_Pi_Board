@@ -51,6 +51,7 @@ FP = {
     "TO263_5": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
     "USON10": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
     "SD": "Connector_Card:SD_TE_2041021",
+    "MICROSD": "Connector_Card:microSD_HC_Molex_104031-0811",
     "PH2": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
     "SWITCH": "Button_Switch_THT:SW_PUSH_6mm",
     "WEACT": "LeanCam:WeAct_RP2350B_Socket",
@@ -59,7 +60,7 @@ FP = {
     "L_SRN6045": "Inductor_SMD:L_Bourns_SRN6045TA",
     "DCDC_TMA0505": "Converter_DCDC:Converter_DCDC_TRACO_TMA-05xxS_12xxS_Single_THT",
     "DCDC_TBA2": "Converter_DCDC:Converter_DCDC_TRACO_TBA2-xxxx_Single_THT",
-    "SJ2": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+    "SJ2": "LeanCam:SolderJumper_2_Open_1206Gap",
     "SJ3": "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm",
 }
 
@@ -108,9 +109,11 @@ MPN = {
     "TO263_5": ("Texas Instruments", "LM2596S-5.0/NOPB"),
     "USON10": ("Texas Instruments", "TPD4E05U06DQA"),
     "SD": ("TE Connectivity", "2041021-4"),
+    "MICROSD": ("Molex", "104031-0811"),
     "PH2": ("Nichicon", "UWT1H101MNL1GS"),
     "SWITCH": ("C&K", "PTS645"),
     "HDR2X4": ("Wurth Elektronik", "61300821121"),
+    "SJ2": ("PCB fabrication", "2-pad solder jumper"),
     "L_SRR1260": ("Bourns", "SRR1260 series"),
     "L_SRN6045": ("Bourns", "SRN6045TA series"),
     "SJ3": ("PCB fabrication", "3-pad solder jumper"),
@@ -373,7 +376,7 @@ class SheetBuilder:
         reference: str | None = None,
     ):
         if footprint_key is None:
-            footprint_key = "C0805" if value == "100nF" else "C1206"
+            footprint_key = "C0805" if value in {"100nF", "1uF"} else "C1206"
         manufacturer, mpn = MPN[footprint_key]
         return self.two_pin(
             "C",
@@ -624,7 +627,7 @@ def add_power(builder: SheetBuilder) -> None:
     )
     b.two_pin("L", "Device:L", "22uH 1.5A", "L_SRN6045", "BUCK5_SW", "+5V", (75, 100), mpn="SRN6045TA-220M", manufacturer="Bourns")
     b.capacitor("VIN_PROT", "GND", "22uF 50V", (30, 120), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 25V", (115, 100), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 50V", (115, 100), footprint_key="C1210")
     b.capacitor("+5V", "GND", "100nF", (127, 100))
     b.next_ref("C")  # retired C8: C6/C11 already provide 2x22uF output bulk
 
@@ -647,8 +650,8 @@ def add_power(builder: SheetBuilder) -> None:
     )
     b.next_ref("L")  # reserve L2 for the dedicated backlight buck
     b.next_ref("C")  # retired 3.3 V buck bootstrap C9
-    b.capacitor("+5V", "GND", "22uF 25V", (52, 155), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 25V", (118, 145), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 50V", (52, 155), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 50V", (118, 145), footprint_key="C1210")
     b.next_ref("C")  # retired optional output capacitor C12
     b.capacitor("+3V3", "GND", "100nF", (142, 145))
     # Isolated 3.3 V analog rail.
@@ -1047,7 +1050,7 @@ def add_isolated_field_supply(builder: SheetBuilder) -> None:
     b.capacitor(
         "+5V_ISO_IN",
         "GND",
-        "22uF 25V",
+        "22uF 50V",
         (485, 65),
         footprint_key="C1210",
         reference="C103",
@@ -1375,7 +1378,7 @@ def add_input_pullups(
     for group in range(4):
         numbers = tuple(range(group * 4 + 1, group * 4 + 5))
         b.resistor_pack4(
-            "4.7k",
+            "10k",
             "R_Array_4x0603",
             [(f"PLC_IN{number}_N", "+3V3") for number in numbers],
             (55 + group * 60, 340),
@@ -1560,7 +1563,18 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
     b.two_pin("FB", "Device:FerriteBead", "600R@100MHz", "R1206", "+3V3", "+3V3_SD", (75, 170), mpn="BLM18KG601SN1D", manufacturer="Murata")
     b.capacitor("+3V3_SD", "GND", "10uF", (90, 170))
     b.capacitor("+3V3_SD", "GND", "100nF", (102, 170))
-    b.resistor("SD_CD_MCU", "SD_CD", "0R", (300, 165))
+    b.next_ref("R")  # preserve the retired R54 card-detect resistor reference
+    b.add(
+        lib_id="Jumper:SolderJumper_2_Open",
+        value="SD_CD_EN",
+        footprint_key="SJ2",
+        nets={"1": "SD_CD_MCU", "2": "SD_CD"},
+        position=(300, 165),
+        prefix="JP",
+        reference="JP5",
+        mpn="",
+        manufacturer="PCB fabrication",
+    )
 
     # ESP-01/ESP-01S socket and programming/test header.
     b.header(2, 4, {
@@ -1583,7 +1597,7 @@ def add_keyboard_storage_wifi(builder: SheetBuilder) -> None:
     b.capacitor(
         "+3V3_WIFI",
         "GND",
-        "22uF 25V",
+        "22uF 50V",
         (105, 220),
         footprint_key="C1210",
     )
@@ -1832,7 +1846,7 @@ def add_analog(builder: SheetBuilder) -> None:
     b.capacitor(
         "+12V_AO",
         "GND",
-        "22uF 25V",
+        "22uF 50V",
         (385, 295),
         footprint_key="C1210",
         reference="C101",
@@ -1911,7 +1925,7 @@ def add_backlight_power(builder: SheetBuilder) -> None:
         b.capacitor(
             "+12V_BL",
             "GND",
-            "22uF 25V",
+            "22uF 50V",
             (x, 310),
             footprint_key="C1210",
             reference=f"C{109 + index}",
@@ -2096,7 +2110,7 @@ def main() -> None:
     sheets["storage"].capacitor(
         "+5V",
         "GND",
-        "22uF 25V",
+        "22uF 50V",
         (342, 260),
         footprint_key="C1210",
         reference="C88",
@@ -2111,7 +2125,7 @@ def main() -> None:
     sheets["power"].capacitor(
         "+3V3",
         "GND",
-        "22uF 25V",
+        "22uF 50V",
         (417, 240),
         footprint_key="C1210",
         reference="C90",
@@ -2301,6 +2315,31 @@ def main() -> None:
         ],
         (440, 235),
         reference="RN31",
+    )
+
+    sheets["storage"].add(
+        lib_id="Connector:Micro_SD_Card_Det2",
+        value="MicroSD alternative, SPI",
+        footprint_key="MICROSD",
+        nets={
+            "1": "SD_DAT2",
+            "2": "SD_CS_N",
+            "3": "SD_MOSI",
+            "4": "+3V3_SD",
+            "5": "SD_SCK",
+            "6": "GND",
+            "7": "SD_MISO",
+            "8": "SD_DAT1",
+            "9": "GND",
+            "10": "SD_CD",
+            "SH": "GND",
+        },
+        position=(380, 165),
+        prefix="J",
+        reference="J36",
+        dnp=True,
+        mpn="104031-0811",
+        manufacturer="Molex",
     )
 
     add_backlight_power(sheets["power"])

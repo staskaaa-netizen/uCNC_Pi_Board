@@ -231,7 +231,7 @@ def main() -> None:
         for component in components
         if "SolderJumper" in (component.findtext("footprint") or "")
     ]
-    if solder_jumpers:
+    if solder_jumpers != ["JP5"]:
         failures.append(f"Unexpected solder jumpers: {solder_jumpers}")
     mode_headers = [
         component.get("ref")
@@ -423,6 +423,31 @@ def main() -> None:
         failures.append("12 V analog regulator is not supplied from VIN_PROT")
     if ("MOD1", "34") not in nets.get("SD_CD_MCU", set()):
         failures.append("SD-card detect is not on the requested MOD1 pin 34")
+    if component_values.get("J36") != "MicroSD alternative, SPI":
+        failures.append("J36 is not the alternate microSD socket")
+    microsd_pins = {
+        "1": "SD_DAT2", "2": "SD_CS_N", "3": "SD_MOSI", "4": "+3V3_SD",
+        "5": "SD_SCK", "6": "GND", "7": "SD_MISO", "8": "SD_DAT1",
+        "9": "GND", "10": "SD_CD", "SH": "GND",
+    }
+    for pin, expected_net in microsd_pins.items():
+        if ("J36", pin) not in nets.get(expected_net, set()):
+            failures.append(f"J36 pin {pin} is not on {expected_net}")
+    j36 = next(
+        (component for component in components if component.get("ref") == "J36"),
+        None,
+    )
+    j36_properties = (
+        {prop.get("name"): prop.get("value") for prop in j36.findall("property")}
+        if j36 is not None
+        else {}
+    )
+    if j36_properties.get("Assembly") != "DNP":
+        failures.append("J36 microSD alternate must be marked DNP")
+    if ("JP5", "1") not in nets.get("SD_CD_MCU", set()):
+        failures.append("JP5 pin 1 is not connected to SD_CD_MCU")
+    if ("JP5", "2") not in nets.get("SD_CD", set()):
+        failures.append("JP5 pin 2 is not connected to SD_CD")
     if "STATUS_LED" in nets:
         failures.append("Legacy external status-LED net remains")
     if any(name in {"PGND", "AGND"} for name in nets):
@@ -784,6 +809,7 @@ def main() -> None:
         "R42", "R43", "SW1", "U4", "U14", "U15", "U16", "U17", "U22", "U23",
         "RN1", "RN2", "RN3", "RN4", "RN5", "RN23", "RN25",
         *(f"R{index}" for index in range(55, 59)),
+        "R54",
         *(f"R{index}" for index in range(76, 92)),
         *(f"U{index}" for index in range(42, 54)),
         *(f"C{index}" for index in range(30, 53)),
@@ -889,8 +915,8 @@ def main() -> None:
 
     for group in range(4):
         reference = f"RN{32 + group}"
-        if component_values.get(reference) != "4x4.7k":
-            failures.append(f"{reference} is not the PLC 4x4.7k pull-up network")
+        if component_values.get(reference) != "4x10k":
+            failures.append(f"{reference} is not the PLC 4x10k pull-up network")
         for channel in range(4):
             number = group * 4 + channel + 1
             signal_pin = str(channel + 1)
