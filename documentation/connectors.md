@@ -10,7 +10,7 @@ height to the Phoenix footprint.
 | Ref | Type | Pinout / function |
 |---|---|---|
 | J1 | 2-pin 3.5 mm | 1=VIN 12-24 V, 2=GND |
-| J2 | 3-pin 3.5 mm | 1=`+12V_BL`, 2=`ISO_GND`, 3=protected `BL_PWM` |
+| J2 | 2-pin 3.5 mm | 1=`+12V_BL`, 2=`ISO_GND` |
 | J4 | 1x4 2.54 mm | 1=3.3 V, 2/3=NC, 4=GND; module debug pins are not connected |
 | J5 | 2-pin 3.5 mm | 1=dedicated E-stop loop, 2=`ISO_GND` |
 | J7 | 1x8 3.5 mm | `FIELD_IN1`-`FIELD_IN8` |
@@ -25,7 +25,7 @@ height to the Phoenix footprint.
 | J18 | 1x5 3.5 mm I2C1 | 1=SDA, 2=SCL, 3=+3.3 V, 4=+5 V, 5=GND |
 | J20 | 2x4 2.54 mm socket | ESP-01/ESP-01S: 1=GND, 2=3V3, 3=GPIO2, 4=GPIO0, 5=RX, 6=TX, 7=EN/CH_PD, 8=RST |
 | J22 | 2x10 2.00 mm LCD | 1-3=3.3 V, 4-6=GND, 7/8=D0-/+, 9/10=D1-/+, 11/12=D2-/+, 13/14=GND, 15/16=CLK-/+, 17-20=NC |
-| J24 | 5-pin 3.5 mm analog in | 1=AI0, 2=GND, 3=AI1, 4=GND, 5=AI2 |
+| J24 | 5-pin 3.5 mm analog in | 1=GND, 2=AI0, 3=AI1, 4=AI2, 5=AI3 |
 | J25 | 5-pin 3.5 mm analog out | 1=GND, 2=AOUT0, 3=AOUT1, 4=AOUT2, 5=AOUT3 |
 | J28 | 1x3 3.5 mm | 1=`EN_3AX`, 2=AX2_STEP, 3=AX2_DIR |
 | J29 | 1x3 3.5 mm | 1=`EN_4AX`, 2=AX3_STEP, 3=AX3_DIR |
@@ -69,7 +69,6 @@ single-row connectors:
 | Positions | Intended use |
 |---:|---|
 | 2 | Power input, E-stop and field supply |
-| 3 | Backlight |
 | 5 | I2C, one encoder or the analog-output group |
 | 8 | One PLC signal half-bank |
 
@@ -80,8 +79,7 @@ The former larger field connectors are converted as follows:
 - J12/J32 carry the eight output signals; their field supply and return are
   shared on J33/J45.
 - J33 and J45 provide parallel `+24V_FIELD` / `ISO_GND` field connections.
-- J24 uses the 5-position standard because three analog inputs need only two
-  shared ground terminals.
+- J24 uses one shared ground on pin 1 followed by four analog-input channels.
 The former 2x10 expansion-input connector J37 is removed. U8 carries PLC
 inputs 1-8 and U9 carries PLC inputs 9-16. U6/U7 carry paired servo
 ZERO/ERROR inputs.
@@ -112,14 +110,14 @@ Each axis has a 3-pin output connector (`EN, STEP, DIR`) and a paired 3-pin
 input connector (`ZERO, ERROR, GND`). `EN_3AX` is shared by AX0-AX2;
 `EN_4AX` is shared by AX3-AX6. J51 and the former AUX connector J31 are removed.
 
-The verified J22 pinout has no backlight contact. MOD1 GPIO35 drives `BL_PWM`
-through R131. U3 converts the J33/J45 PLC 24 V field supply to isolated
-`+12V_BL`; J2 carries `+12V_BL`, `ISO_GND` and the 3.3 V PWM signal. Backlight
-current switching, CCFL inversion and PWM isolation remain external.
+The verified J22 pinout has no backlight contact. U3 converts the J33/J45 PLC
+24 V field supply to isolated `+12V_BL`; J2 carries only `+12V_BL` and
+`ISO_GND`. Backlight PWM, current switching, CCFL inversion and PWM isolation
+remain external.
 
 J9 and J27 flank U7 on the front side. J16 remains on the front side above the
 mid-board area, with KOUT arrays above it and KIN arrays below it.
 
-J24 is the 0-10 V analog input connector. J25 provides four ground-referenced
-0-10 V outputs sharing pin 1 as the return. The outputs are functional signals,
-not isolated outputs.
+J24 is the four-channel 0-10 V analog input connector with a shared ground on
+pin 1. J25 provides four ground-referenced 0-10 V outputs sharing pin 1 as the
+return. The outputs are functional signals, not isolated outputs.

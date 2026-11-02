@@ -25,8 +25,7 @@
   SMBJ24CA input clamp; a 30 V part is not sufficient for a 24 V input.
   High-frequency bypasses are 100 nF in 0805, except 100 nF/100 V 1206 parts
   on 24 V-side nodes. Both 10 uF capacitors use the same 25 V X7R part.
-- `BL_PWM_MCU` and `BL_PWM` use a dedicated 0.2 mm control netclass.
-  `+24V_FIELD` and `ISO_GND` use the field-power class.
+- `+24V_FIELD` and `ISO_GND` use the field-power class.
 - Four M3 mounting positions.
 - The seven 3-pin axis outputs, seven paired 3-pin ZERO/ERROR inputs, J18,
   and the U3 backlight-converter group are currently parked outside the
@@ -64,10 +63,10 @@ removed. The breakout is passive and must not contain a 5 V regulator or level
 shifter.
 
 The verified J22 pinout contains the LCD LVDS signals and logic supply only.
-J2 is the separate backlight/CCFL connector: isolated `+12V_BL`, `ISO_GND`,
-and 3.3 V `BL_PWM`. U3 derives 12 V from the PLC 24 V field rail. GPIO35/MOD1
-pin 25 drives PWM through R131. The external driver must provide current
-switching and PWM isolation. LCD-panel logic is powered from J22.
+J2 is the separate backlight/CCFL connector carrying isolated `+12V_BL` and
+`ISO_GND`. U3 derives 12 V from the PLC 24 V field rail. The external driver
+must provide current switching and PWM isolation. LCD-panel logic is powered
+from J22.
 
 JP5 is an open two-pad solder jumper in the SD-card-detect path. Bridge it to
 enable card detection to GPIO2. With JP5 open, firmware should enable the

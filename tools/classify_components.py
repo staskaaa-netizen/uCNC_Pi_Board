@@ -78,9 +78,12 @@ ANALOG_ROLE_OVERRIDES = {
     "R66": ("divider lower resistor", "AI1 ADC to GND"),
     "R67": ("divider upper resistor", "AI2 to AI2_ADC"),
     "R69": ("divider lower resistor", "AI2 ADC to GND"),
+    "R182": ("divider upper resistor", "AI3 to AI3_ADC"),
+    "R183": ("divider lower resistor", "AI3 ADC to GND"),
     "C73": ("ADC filter capacitor", "AI0_ADC / MOD1 pin 8"),
-    "C74": ("ADC filter capacitor", "AI1_ADC / MOD1 pin 22"),
-    "C75": ("ADC filter capacitor", "AI2_ADC / MOD1 pin 7"),
+    "C74": ("ADC filter capacitor", "AI1_ADC / MOD1 pin 7"),
+    "C75": ("ADC filter capacitor", "AI2_ADC / MOD1 pin 22"),
+    "C118": ("ADC filter capacitor", "AI3_ADC / MOD1 pin 21"),
 }
 
 
@@ -94,7 +97,7 @@ def component_properties(component: ET.Element) -> dict[str, str]:
 def channels_from_nets(nets: set[str]) -> list[str]:
     channels: set[str] = set()
     patterns = (
-        (r"^AI([0-2])(?:_|$)", "analog input {}"),
+        (r"^AI([0-3])(?:_|$)", "analog input {}"),
         (r"^AOUT([0-3])(?:_|$)", "analog output {}"),
         (r"^PLC_IN(\d+)_N$", "PLC input {}"),
         (r"^FIELD_IN(\d+)$", "PLC input {}"),

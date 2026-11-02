@@ -13,8 +13,10 @@
 The WeAct `5V` pin is supplied from the motherboard 5 V rail and feeds the
 module's onboard 3.3 V regulator. The module `3V3` output pins remain local to
 the module; the separately regulated peripheral `+3V3` rail is not tied to them.
-VBUS, regulator-enable and onboard LED/GPIO25 are not connected to motherboard
-peripherals. GPIO23 is repurposed as the 74HC165 return, so the module's onboard
+VBUS and regulator-enable are not connected to motherboard peripherals. GPIO25
+is connected to the module's onboard LED and is also allocated to `ENC2_Z`;
+remove the module-side LED series resistor when a clean digital input is
+required. GPIO23 is repurposed as the 74HC165 return, so the module's onboard
 USER key must not be used. The module's reset button, POR/BOR and watchdog are
 used; MOD1 `RUN` is not connected, and no duplicate reset button or external
 supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
@@ -24,13 +26,13 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | GPIO | MOD1 pin | Signal | Direction | Peripheral / function | Voltage | Firmware note |
 |---:|---:|---|---|---|---|---|
 | 0 | 33 | — | Reserved | Module PSRAM chip select | 3.3 V | Left free for the module's solderable PSRAM |
-| 1 | 49 | — | Reserved | Not connected | — | Released from the backlight PWM allocation |
+| 1 | 49 | SD_CS_MCU | Output | SPI0 CS | 3.3 V | Active low |
 | 2 | 34 | SD_CD_MCU | Input | SD-card detect | 3.3 V | Active low; bridge JP5 to enable |
-| 3 | 50 | — | Reserved | Not connected | — | On-board backlight switch removed |
-| 4 | 35 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Alternate SPI0 mapping |
-| 5 | 51 | SD_CS_MCU | Output | SPI0 CS | 3.3 V | Active low |
-| 6 | 36 | SD_SCK_MCU | Output | SPI0 SCK | 3.3 V | Alternate SPI0 mapping |
-| 7 | 52 | SD_MOSI_MCU | Output | SPI0 MOSI | 3.3 V | Alternate SPI0 mapping |
+| 3 | 50 | PWR_GOOD_N | Input | LMR36510 power-good | 3.3 V | Open-drain, pulled up to +3V3 |
+| 4 | 35 | — | Reserved | Not connected | — | Available GPIO |
+| 5 | 51 | — | Reserved | Not connected | — | Available GPIO |
+| 6 | 36 | — | Reserved | Not connected | — | Available GPIO |
+| 7 | 52 | — | Reserved | Not connected | — | Available GPIO |
 | 8 | 37 | — | Reserved | Not connected | — | Released from I2C0 |
 | 9 | 53 | ESTOP_N | Input | Dedicated isolated E-stop | 3.3 V | Active low; external hardware blocks outputs |
 | 10 | 38 | WIFI_TX | Output | UART1 TX | 3.3 V | Direct to ESP-01/ESP-01S RX |
@@ -48,7 +50,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 22 | 44 | SR_LATCH | Output | 74HC595 storage-register clock | 3.3 V | PIO LATCH; rising edge updates all 32 outputs |
 | 23 | 60 | SR_IN_Q7 | Input | 74HC165 serial return | 3.3 V | Remove WeAct R16 (0R) to isolate the onboard key network |
 | 24 | 45 | SR_PL_N | Output | 74HC165 parallel load | 3.3 V | Active-low pulse before read |
-| 25 | 30 | — | Reserved | Onboard LED | 3.3 V | Not connected on motherboard |
+| 25 | 30 | ENC2_Z_3V3 | Input | Encoder 2 Z | 3.3 V | Also connected to the module's onboard LED |
 | 26 | 15 | ENC0_A_3V3 | Input | Encoder 0 A | 3.3 V | Conditioned from 5 V TTL |
 | 27 | 29 | ENC0_B_3V3 | Input | Encoder 0 B | 3.3 V | Conditioned from 5 V TTL |
 | 28 | 14 | ENC0_Z_3V3 | Input | Encoder 0 Z | 3.3 V | Conditioned from 5 V TTL |
@@ -57,16 +59,16 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 31 | 27 | ENC1_Z_3V3 | Input | Encoder 1 Z | 3.3 V | Conditioned from 5 V TTL |
 | 32 | 12 | ENC2_A_3V3 | Input | Encoder 2 A | 3.3 V | Conditioned from 5 V TTL |
 | 33 | 26 | ENC2_B_3V3 | Input | Encoder 2 B | 3.3 V | Conditioned from 5 V TTL |
-| 34 | 11 | ENC2_Z_3V3 | Input | Encoder 2 Z | 3.3 V | Conditioned from 5 V TTL |
-| 35 | 25 | BL_PWM_MCU | Output | Backlight/CCFL PWM | 3.3 V | R131 series-protects J2 pin 3; external driver must isolate PWM |
-| 36 | 10 | — | Reserved | Not connected | — | Local output-enable gate removed |
+| 34 | 11 | SD_SCK_MCU | Output | SPI0 SCK | 3.3 V | Located on the side-1 header |
+| 35 | 25 | SD_MOSI_MCU | Output | SPI0 MOSI | 3.3 V | Located on the side-1 header |
+| 36 | 10 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Located on the side-1 header |
 | 37 | 24 | — | Reserved | Not connected | — | Released from E-stop |
 | 38 | 9 | I2C_SDA | Bidirectional | Hardware I2C1 SDA | 3.3 V | External pull-up required |
 | 39 | 23 | I2C_SCL | Bidirectional | Hardware I2C1 SCL | 3.3 V | External pull-up required |
 | 40 | 8 | AI0_ADC | Input | ADC channel 0 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
 | 41 | 22 | AI2_ADC | Input | ADC channel 2 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
 | 42 | 7 | AI1_ADC | Input | ADC channel 1 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
-| 43 | 21 | PWR_GOOD_N | Input | LMR36510 power-good | 3.3 V | Open-drain, pulled up to +3V3 |
+| 43 | 21 | AI3_ADC | Input | ADC channel 3 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
 | 44 | 6 | AOUT1_PWM | Output | 0-10 V analog output 1 | 3.3 V PWM | Two-stage RC filter into U38B |
 | 45 | 20 | AOUT2_PWM | Output | 0-10 V analog output 2 | 3.3 V PWM | Two-stage RC filter into U38C |
 | 46 | 5 | AOUT0_PWM | Output | 0-10 V analog output 0 | 3.3 V PWM | Two-stage RC filter into U38A; 20 kHz recommended |
@@ -98,7 +100,8 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
   `SN74AHCT541DW` channel powered at 3.3 V. The single `ENC2_Z` input uses R110
   (5.1 k series) and R111 (10 k to GND), producing about 3.31 V from a 5 V
   push-pull output.
-- The LED/CCFL PWM output is GPIO35/MOD1 pin 25, not a bit in the 74HC595 chain.
+- Backlight PWM is not routed on the motherboard; J2 provides isolated 12 V
+  power only.
 - GPIO47 and GPIO44-GPIO46 are dedicated to the four 0-10 V outputs. Drive them at
   a common PWM frequency and calibrate the maximum duty because the output
   stage has approximately 3.2x gain.

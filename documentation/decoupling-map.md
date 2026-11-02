@@ -101,7 +101,7 @@ The 5 V output rail uses C6/C11 as the two 22 uF bulk capacitors and C7 as
 the local high-frequency bypass. Redundant C8, C16, C17 and C77 are removed.
 FB1 and C15 form the `+3V3_A` reference filter beside MOD1 pin 48. The 10 uF
 C14 bulk capacitor is removed because C15 provides the required local bypass. R73
-is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO43.
+is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO3/MOD1 pin 50.
 
 The 5 V and 3.3 V indicators are D4/R4 and D5/R5, respectively. Both indicator
 pairs are on F.Cu in the open area between MOD1 and the two regulators.

@@ -18,7 +18,7 @@ CHANNELS = {
     2: ("R67", "R69", "C75"),
 }
 AI0_COMPONENTS = ("R61", "R63", "C73")
-J24_AI_PINS = {0: "1", 1: "3", 2: "5"}
+J24_AI_PINS = {0: "2", 1: "3", 2: "4", 3: "5"}
 
 
 def main() -> None:

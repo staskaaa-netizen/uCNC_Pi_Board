@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "f937bea1-110d-452d-9b79-81f8fcb9fd9c")
+	(uuid "979bad61-1e4e-4bdf-915b-67604f26a217")
 	(paper "A1")
 	(title_block
 		(title "16 PLC inputs")
@@ -1974,7 +1974,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "92c01b84-89a8-49d9-96ea-6f44f4509c48")
+		(uuid "68522bd5-5968-4c2a-98f5-9953e9687fef")
 		(property "Reference" "J5"
 			(at 25.4 72.39 0.0000)
 			(effects
@@ -2021,14 +2021,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "00dfe06a-0ad2-413a-80d0-52e9f59a702f")
+			(uuid "99ecb683-4674-4792-acf7-e0a3acb10edf")
 		)
 		(pin "2"
-			(uuid "0a1fec32-cb42-4eba-93c2-0e7e41ee6739")
+			(uuid "ec5673dc-ff1b-4e6e-adf8-96352b2d06ef")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "J5")
 					(unit 1)
 				)
@@ -2044,7 +2044,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "a4d315b3-9987-4ae5-9e13-62314544e981")
+		(uuid "3558211f-2b94-4110-9a7d-23c5fd8604f7")
 		(property "Reference" "J7"
 			(at 25.4 134.62 0.0000)
 			(effects
@@ -2091,32 +2091,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "029c24c8-bbc7-49a8-a715-f5accf4ec198")
+			(uuid "0a6d7472-3cea-4732-a64e-64fb4680344f")
 		)
 		(pin "2"
-			(uuid "90385638-197c-412a-8ecf-b6ddc55d5017")
+			(uuid "f6c77858-a69e-4f36-b3c8-37ec408f3af4")
 		)
 		(pin "3"
-			(uuid "04bf9a96-0582-41ce-af87-1dd0d888a1bc")
+			(uuid "73842ad0-e45c-4fd9-b1b0-eec4dfd81076")
 		)
 		(pin "4"
-			(uuid "20340aed-8c55-4324-a2fd-91b7621e0261")
+			(uuid "4a3c862d-12f0-4f31-b25a-d4308c6bccaa")
 		)
 		(pin "5"
-			(uuid "159ea736-e2cd-49f9-92c7-7451dda9f925")
+			(uuid "663255da-405d-44f2-815d-6447f8e234f3")
 		)
 		(pin "6"
-			(uuid "c5d78198-cd7d-4583-bc6b-bb65e7bdadc8")
+			(uuid "ec3c3bf1-0f44-4138-b30c-9328d03f731a")
 		)
 		(pin "7"
-			(uuid "6a08fd1d-8262-46b4-820d-5697589ed75c")
+			(uuid "8a50e7b5-3274-4617-9162-399f9e63384d")
 		)
 		(pin "8"
-			(uuid "2a7e04f7-d91b-48b7-a002-1cee9aede198")
+			(uuid "033f14f1-a4b6-4991-a959-779c1e282d67")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "J7")
 					(unit 1)
 				)
@@ -2132,7 +2132,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "0d9c958c-405b-47a7-9b7c-22d0df0ae516")
+		(uuid "5c930344-d67b-4052-b2ed-42a53f1eab95")
 		(property "Reference" "J8"
 			(at 25.4 182.88 0.0000)
 			(effects
@@ -2179,32 +2179,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "2e67aa15-e6fe-422e-ab39-432c489a5568")
+			(uuid "df577103-6621-4682-bebf-2021e51aff55")
 		)
 		(pin "2"
-			(uuid "933c2e4d-ec68-43d6-87bb-cea2545468e1")
+			(uuid "af09b3a7-a54a-48df-b505-51e526dfd35a")
 		)
 		(pin "3"
-			(uuid "bfb7c3dd-2961-4d4e-8d12-d84e27647654")
+			(uuid "9cb667d2-0886-40a6-b659-ecde57c1e18e")
 		)
 		(pin "4"
-			(uuid "c1e788b4-e6b1-45c7-bb55-6217c499959c")
+			(uuid "9df48a07-2ce7-459f-9aa4-a91dab20d7f3")
 		)
 		(pin "5"
-			(uuid "6cc5e31e-befd-4018-bce9-06992e13221d")
+			(uuid "e2f641ee-38d8-435a-91df-a17409692c84")
 		)
 		(pin "6"
-			(uuid "dd15c444-eebe-46ca-afac-676f0ca9c686")
+			(uuid "80278128-f568-4805-9fd8-0c0f7b291b5b")
 		)
 		(pin "7"
-			(uuid "516200b1-d33f-4413-ab90-a62d0d018895")
+			(uuid "fcc4b078-ab8c-4144-9c32-ce6eee9a3225")
 		)
 		(pin "8"
-			(uuid "a1b03e6b-53f3-46df-86d0-c836efdc9acc")
+			(uuid "6010032c-4ce4-4758-9d96-6c3692fc09a3")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "J8")
 					(unit 1)
 				)
@@ -2220,7 +2220,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "3438a7c7-4c40-4615-964e-214df0eb6696")
+		(uuid "643cc01d-8ae0-4cf3-9d3e-6f3308e207e2")
 		(property "Reference" "R16"
 			(at 108.712 72.39 90)
 			(effects
@@ -2267,14 +2267,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8e77813c-6b9a-4fa0-aee3-b480ee091514")
+			(uuid "c238baba-7ef7-4d37-bdff-0276c2af366a")
 		)
 		(pin "2"
-			(uuid "39907222-2bea-4c50-af95-0b952c83a1d6")
+			(uuid "b0ff1819-5da0-4885-8237-5fed950ff85f")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R16")
 					(unit 1)
 				)
@@ -2290,7 +2290,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "adf79856-e720-4502-837a-649bdbd9191f")
+		(uuid "61afdc02-5505-4434-a027-c7bc63026b22")
 		(property "Reference" "D9"
 			(at 100.33 90.17 0.0000)
 			(effects
@@ -2337,14 +2337,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "45041997-dd18-4d9e-8e45-a057bf1e572e")
+			(uuid "e384c869-56b8-4e4b-9100-7db515dcc149")
 		)
 		(pin "2"
-			(uuid "9f418ab1-ec2d-47bd-8d83-0e8bd434440b")
+			(uuid "5d3b7cde-3fc2-4004-8ac5-31ff7262a0ef")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D9")
 					(unit 1)
 				)
@@ -2360,7 +2360,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "bf630869-09a3-4bb9-bbde-627d4901f6eb")
+		(uuid "6d479a83-8414-44b5-9a3b-57d449db515a")
 		(property "Reference" "D10"
 			(at 106.68 74.93 0.0000)
 			(effects
@@ -2407,14 +2407,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3aad4ab0-bc12-4461-aa6a-2136e3e50ddf")
+			(uuid "4e432c9f-abc2-4f6b-8f9b-2665a0925b83")
 		)
 		(pin "2"
-			(uuid "6b1c2e9b-893d-4ae1-94b5-03c9202736a1")
+			(uuid "3f1d4afd-14c4-4a5b-b7f4-d47d6638023f")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D10")
 					(unit 1)
 				)
@@ -2430,7 +2430,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "37706dc9-0480-4184-9e00-2719cb508d6b")
+		(uuid "fb551ae4-2905-49d8-b73d-de154e5bc89d")
 		(property "Reference" "R18"
 			(at 248.412 64.77 90)
 			(effects
@@ -2477,14 +2477,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0132f941-b9a4-4c32-8a9c-c5fea58438ab")
+			(uuid "d592dcef-41e2-4b93-b6f5-b927ee8fe6c4")
 		)
 		(pin "2"
-			(uuid "5460eb5a-d4fb-4ad8-b6cb-36a95a9948b2")
+			(uuid "a4c8ba2d-40af-4f44-b87e-95359d7fcfc4")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R18")
 					(unit 1)
 				)
@@ -2500,7 +2500,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "5f5712be-7c59-47aa-80df-f7526e65a579")
+		(uuid "b5005e04-7453-4bbd-83a6-2ab43303f98b")
 		(property "Reference" "D13"
 			(at 240.03 82.55 0.0000)
 			(effects
@@ -2547,14 +2547,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "85621dcf-fe51-413c-9244-48e0cae420aa")
+			(uuid "496e1a96-7c00-4f47-ac4d-288039f908d1")
 		)
 		(pin "2"
-			(uuid "7513097a-a330-4fb6-9296-58c67d21c016")
+			(uuid "fe556d3e-8d8c-4fdc-a4e8-77481ca146ce")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D13")
 					(unit 1)
 				)
@@ -2570,7 +2570,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "52e3804f-a453-4643-9891-8ffdd9df92a9")
+		(uuid "aad270ff-d8d7-459b-a8d0-c9423f91d890")
 		(property "Reference" "D14"
 			(at 246.38 67.31 0.0000)
 			(effects
@@ -2617,14 +2617,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4becda65-ebb8-41ac-b55d-3f2c029726f1")
+			(uuid "cade2908-0f69-446b-bc27-20c9a1e9fa4f")
 		)
 		(pin "2"
-			(uuid "6ba59e40-4506-4130-af6c-7e224567e04b")
+			(uuid "f19ae063-77d0-49b1-99ae-a231802ab529")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D14")
 					(unit 1)
 				)
@@ -2640,7 +2640,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d9ccf496-2a7a-43b9-878e-79109ca7a294")
+		(uuid "0d3f9a03-505d-412b-b47c-1453fa7dfda4")
 		(property "Reference" "R19"
 			(at 266.192 64.77 90)
 			(effects
@@ -2687,14 +2687,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2245bff8-6889-46d0-a269-dd51be7de9db")
+			(uuid "384b7734-6fe2-44b1-9991-159ea8d1865b")
 		)
 		(pin "2"
-			(uuid "f5b86880-e8a4-465a-9938-9dc89f794e7d")
+			(uuid "8330747a-c3ea-4a87-a4aa-6a26ff371c3c")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R19")
 					(unit 1)
 				)
@@ -2710,7 +2710,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "ca688904-925e-48ad-9afa-cd1a165f8bc5")
+		(uuid "000b89bf-c3a4-4ee1-8091-27d45a755cc5")
 		(property "Reference" "D15"
 			(at 256.54 82.55 0.0000)
 			(effects
@@ -2757,14 +2757,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "920b8f6b-786f-4db1-812e-9c76f068d7bb")
+			(uuid "ff59c9aa-ef48-4df2-bf6d-c759bcd7818f")
 		)
 		(pin "2"
-			(uuid "7b60534e-b963-4234-b714-0c05f480a0cd")
+			(uuid "8dfec52c-f3d9-4005-bd0b-cdd4078bbd72")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D15")
 					(unit 1)
 				)
@@ -2780,7 +2780,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "def95e9e-7af1-4a54-a7d8-98406ece874f")
+		(uuid "4aab8763-4ce4-4241-8d2a-07186b2d5610")
 		(property "Reference" "D16"
 			(at 264.16 67.31 0.0000)
 			(effects
@@ -2827,14 +2827,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c2bbbb64-422e-4582-b00d-095a11cbbbf5")
+			(uuid "55d07752-d3b1-4903-a67c-37bbb07e6722")
 		)
 		(pin "2"
-			(uuid "6c3cf1ad-34ce-4cc7-bc75-7de6fd8e0450")
+			(uuid "b5d0cffe-39ad-4e64-b032-8e23a4f79a09")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D16")
 					(unit 1)
 				)
@@ -2850,7 +2850,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f08cfd4e-60dc-401d-9981-e66020aa3b48")
+		(uuid "ee61cb1f-3f64-4073-8a3d-a41ce1515006")
 		(property "Reference" "R20"
 			(at 282.702 64.77 90)
 			(effects
@@ -2897,14 +2897,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "888d0742-967c-44a3-bb0c-f1adfab87732")
+			(uuid "a7a3dba5-b1b0-407c-be75-50259b1243b8")
 		)
 		(pin "2"
-			(uuid "cea60e5f-41d7-473e-8889-bbb248750053")
+			(uuid "4bc08fef-4778-401e-8561-ddccd2f86050")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R20")
 					(unit 1)
 				)
@@ -2920,7 +2920,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "40401eb8-6650-460c-a937-0714941af2f3")
+		(uuid "2aaf4494-bf55-4e82-9ee7-4e43dab3aa2a")
 		(property "Reference" "D17"
 			(at 274.32 82.55 0.0000)
 			(effects
@@ -2967,14 +2967,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "cd48efb6-76d4-4a0f-a613-74c6b0b8672c")
+			(uuid "935747b6-f7f3-4898-aafc-82298757666c")
 		)
 		(pin "2"
-			(uuid "9fa98cc3-9f51-4de3-985c-4223caef7709")
+			(uuid "c41c00e0-ef91-4e04-8c66-cdab207a8951")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D17")
 					(unit 1)
 				)
@@ -2990,7 +2990,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "8f49f4b3-97bd-4385-a3d2-86550e24fefe")
+		(uuid "b51629da-ff67-427a-948e-ed07354332ac")
 		(property "Reference" "D18"
 			(at 280.67 67.31 0.0000)
 			(effects
@@ -3037,14 +3037,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fe75660d-2baa-4472-a6a0-5cd9431fdaa4")
+			(uuid "388a0eef-df98-4c1f-8af5-af6d1b20af6b")
 		)
 		(pin "2"
-			(uuid "935caa9c-261e-45ce-be74-601b3eeffec2")
+			(uuid "59764c02-01cd-4465-8c74-a05fed081c56")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D18")
 					(unit 1)
 				)
@@ -3060,7 +3060,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "372c47ce-0343-42bc-8ff0-9973abdad78d")
+		(uuid "a5cefd13-6ab8-4e30-b775-f6a375658c52")
 		(property "Reference" "R21"
 			(at 300.482 64.77 90)
 			(effects
@@ -3107,14 +3107,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc48ec61-0482-45c8-ad95-a50593be5c0a")
+			(uuid "b1b227f3-1ee0-4bf8-88bc-d995a478c1e0")
 		)
 		(pin "2"
-			(uuid "659e2eec-38bd-4383-8b26-f848be8a1543")
+			(uuid "e7cbb0c6-b974-494c-b965-416ca4720606")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R21")
 					(unit 1)
 				)
@@ -3130,7 +3130,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d40167f7-c4c9-4275-a76b-787b6ba387f9")
+		(uuid "c74ecd24-fa65-4536-ac3e-f99d76f74b21")
 		(property "Reference" "D19"
 			(at 290.83 82.55 0.0000)
 			(effects
@@ -3177,14 +3177,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3b93da3a-813a-44f7-a605-ea32585a8d9c")
+			(uuid "f971bd66-ba21-439b-9542-9b11e3166b06")
 		)
 		(pin "2"
-			(uuid "a6fd22d4-d5ff-48fe-9f37-5fab33543dbd")
+			(uuid "fb503415-cbf5-4d80-abeb-7f1d1755bb74")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D19")
 					(unit 1)
 				)
@@ -3200,7 +3200,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "fd231d14-746e-4f71-a7eb-90f86a6c165d")
+		(uuid "cc8dc0e1-2765-4f43-a5f5-ad0345382369")
 		(property "Reference" "D20"
 			(at 298.45 67.31 0.0000)
 			(effects
@@ -3247,14 +3247,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8abab746-9e7c-48b7-b47d-e035c0550a5b")
+			(uuid "0667a964-75a1-4deb-93b9-aea3208d766b")
 		)
 		(pin "2"
-			(uuid "e73af345-e84c-47ca-bb5b-55ad4e486d50")
+			(uuid "d22d81f6-adfd-4ccb-b9c9-fe96ce0f838a")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D20")
 					(unit 1)
 				)
@@ -3270,7 +3270,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "74252821-b6c4-400c-97f4-ff7880eb3189")
+		(uuid "20d608ec-edaf-435e-b3de-b92fdcb341e8")
 		(property "Reference" "U21"
 			(at 261.62 156.21 0.0000)
 			(effects
@@ -3317,56 +3317,56 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2c4b227-89b8-4782-8a0a-aec8d20e5439")
+			(uuid "e6bc9220-e940-4367-99d8-105e32f588bd")
 		)
 		(pin "2"
-			(uuid "8d8362fc-cc77-4a51-8a41-1122212b5f92")
+			(uuid "f0c72cc9-a0fc-4120-9893-c03fc2804364")
 		)
 		(pin "3"
-			(uuid "7416b0eb-a2c1-4eaf-ba96-fc669704b9e6")
+			(uuid "f58e74ee-ef0e-417b-a114-07a315dc2565")
 		)
 		(pin "4"
-			(uuid "da91f0d4-2082-46c8-b4e7-39df1ac02d87")
+			(uuid "6bee8008-e079-4fd8-a34a-be384fb7e247")
 		)
 		(pin "5"
-			(uuid "698e02ec-ad9e-476f-91ac-13221f87a992")
+			(uuid "cc2cb5d3-fec7-4b37-9013-e5b428c67954")
 		)
 		(pin "6"
-			(uuid "8332d281-e71e-43d2-8c9f-07821ed85b5d")
+			(uuid "5da65c2c-1b69-48f3-9619-bbabf1703a43")
 		)
 		(pin "7"
-			(uuid "8d3df145-c29d-4353-93ba-fd58ebfa9cc8")
+			(uuid "a3b7dc5c-f820-4c7b-9ff7-f47458b72986")
 		)
 		(pin "8"
-			(uuid "c7dc2d19-b561-4577-b3cc-48e3a23885bc")
+			(uuid "8de51cf2-2e21-445a-9e8f-11242fac3d56")
 		)
 		(pin "9"
-			(uuid "54c61b51-0513-4176-bc8d-f118a78bb2d3")
+			(uuid "e20d7c03-2150-4bde-8e4c-74aa13e4db39")
 		)
 		(pin "10"
-			(uuid "06335c33-7265-4d02-b0ce-a09d66ee2665")
+			(uuid "a2d7baf9-085b-4f54-bacf-6578e5b3611d")
 		)
 		(pin "11"
-			(uuid "eb01392a-7565-4f96-a57c-d1a8ead93c89")
+			(uuid "b0537373-09eb-4c2a-aec4-2000699295b7")
 		)
 		(pin "12"
-			(uuid "825da295-51b1-4dac-b7d2-1540759b0369")
+			(uuid "bd5f0315-c6cd-410d-bd40-9ba0a983f4e9")
 		)
 		(pin "13"
-			(uuid "7cc34a02-bab1-4f28-94c3-d8ce604c551d")
+			(uuid "5aa7bb1e-a8e5-4f05-98e1-09620d66f309")
 		)
 		(pin "14"
-			(uuid "d00dd1ed-5d97-40b7-845b-7172557a5560")
+			(uuid "c26d1119-fb7d-416d-b4eb-0a823797f141")
 		)
 		(pin "15"
-			(uuid "406b832b-1966-49e8-9bb4-8eb452eb8ddf")
+			(uuid "e00f4a3c-236e-456a-b8fa-a3f290ed47a5")
 		)
 		(pin "16"
-			(uuid "7e03ef44-219a-4a1e-9ba9-bf1d9231a177")
+			(uuid "8413693d-fac6-4487-81e7-d98b4ccfd76e")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "U21")
 					(unit 1)
 				)
@@ -3382,7 +3382,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d657c4b5-3371-49f6-843a-98595eb6e9ff")
+		(uuid "f95d5785-84ba-48f7-ab66-d767cafc993b")
 		(property "Reference" "R22"
 			(at 348.742 64.77 90)
 			(effects
@@ -3429,14 +3429,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a3aac69-2d62-4ab7-90cc-6122edf0d354")
+			(uuid "433c9d16-d892-4c12-81f6-a941fce6b2b5")
 		)
 		(pin "2"
-			(uuid "f7e55db3-8ec1-4a7d-a49d-a8fe3c581100")
+			(uuid "f1b03346-7799-4027-a078-33cf64abe8ef")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R22")
 					(unit 1)
 				)
@@ -3452,7 +3452,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "ac5ea7b8-965f-4393-a50b-d84dc6a40427")
+		(uuid "36eae3a7-2d6c-40d4-9c58-76e08e306b08")
 		(property "Reference" "D21"
 			(at 340.36 82.55 0.0000)
 			(effects
@@ -3499,14 +3499,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a3258f0c-f6e6-4ecb-bb1b-122c1c84c03a")
+			(uuid "4055dffd-3d1e-4889-aab9-001a91fcc9b0")
 		)
 		(pin "2"
-			(uuid "0148a495-b991-4f7a-993b-43ef457097e5")
+			(uuid "1938e86d-bf5e-4313-a983-94d369cf21c1")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D21")
 					(unit 1)
 				)
@@ -3522,7 +3522,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "0009d1bd-5a07-48c8-bef8-4bd26bc00e75")
+		(uuid "82e8fd30-b436-43a2-a13d-d8e346b90646")
 		(property "Reference" "D22"
 			(at 346.71 67.31 0.0000)
 			(effects
@@ -3569,14 +3569,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4aa2be79-fcb6-4c30-bc41-ccf4a2a0926a")
+			(uuid "bece9126-1942-4e21-9493-6a60881a03ec")
 		)
 		(pin "2"
-			(uuid "7f0410a0-b159-4df4-854f-f2d1055af693")
+			(uuid "b6c22de8-7573-4d23-a87a-907dc7adbb5b")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D22")
 					(unit 1)
 				)
@@ -3592,7 +3592,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "a1771052-0b4e-4cbb-b6b1-82bb3e61cb8f")
+		(uuid "f6688eec-5278-41f4-a71f-50f6bdf0cee8")
 		(property "Reference" "R23"
 			(at 366.522 64.77 90)
 			(effects
@@ -3639,14 +3639,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "05719a0a-e5ce-4de6-a28f-8b4f6785832f")
+			(uuid "90c3a3a6-15ff-416c-acb2-efcbd590ce2a")
 		)
 		(pin "2"
-			(uuid "c065a679-3f17-478e-ac07-2a91927a5955")
+			(uuid "a6e5316f-eebf-40df-961d-4aa8fa3f87c9")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R23")
 					(unit 1)
 				)
@@ -3662,7 +3662,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "91252f8d-4d33-4c4f-9785-4e063661cfe4")
+		(uuid "3f081115-a8bc-4b87-9ac6-626d9abd6284")
 		(property "Reference" "D23"
 			(at 356.87 82.55 0.0000)
 			(effects
@@ -3709,14 +3709,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5b399312-80d5-4871-80a0-4fdcd51d8303")
+			(uuid "13bc0b94-8cde-42ae-8be7-d724165d5666")
 		)
 		(pin "2"
-			(uuid "5cb24b1d-32c0-44ce-9cd0-967d1c8e875d")
+			(uuid "24188e9a-564c-4495-ada8-be1d5d420cde")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D23")
 					(unit 1)
 				)
@@ -3732,7 +3732,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d228fadb-8fbd-4759-8154-ccde5114128c")
+		(uuid "a08e4a07-e3ad-4ad0-92bf-64507b492045")
 		(property "Reference" "D24"
 			(at 364.49 67.31 0.0000)
 			(effects
@@ -3779,14 +3779,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2a5ef3be-29d5-48f8-9f2d-07b04ac3e6ea")
+			(uuid "0f666943-db61-447a-8f5e-52e5b5386b4c")
 		)
 		(pin "2"
-			(uuid "de566445-ac43-4f87-a4f5-b383b6bc926d")
+			(uuid "9be46eda-d561-4f51-bd60-a80932fb5764")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D24")
 					(unit 1)
 				)
@@ -3802,7 +3802,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "65ac2a4e-cdab-4848-bddd-bc46e7801e3b")
+		(uuid "e3edc64c-10ab-487f-aa26-31a3caf77339")
 		(property "Reference" "R24"
 			(at 383.032 64.77 90)
 			(effects
@@ -3849,14 +3849,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e58a4d58-09df-4314-bdf7-a511d2691327")
+			(uuid "5e85baee-f3ea-43f3-acef-f18ee2b244db")
 		)
 		(pin "2"
-			(uuid "46b020e4-c9f6-4278-8fbd-82e63ca10837")
+			(uuid "5ca976f2-feb6-451f-a9d7-ead97b77d17d")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R24")
 					(unit 1)
 				)
@@ -3872,7 +3872,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d3371883-710d-4ce4-8766-5425b785b35c")
+		(uuid "172c1d8e-587f-48ce-9aca-49983764be03")
 		(property "Reference" "D25"
 			(at 373.38 82.55 0.0000)
 			(effects
@@ -3919,14 +3919,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5a0cc196-9688-4f47-9127-1cbcd12343b1")
+			(uuid "b5c00201-0f09-4b05-9624-65401e99da74")
 		)
 		(pin "2"
-			(uuid "a7108115-f739-4cd2-9e06-54ecc6e437ca")
+			(uuid "3bca6c85-15cf-4cea-ad44-02a03e43a96b")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D25")
 					(unit 1)
 				)
@@ -3942,7 +3942,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "8152e89a-b4bf-45e1-8dc6-0ec179a47618")
+		(uuid "fb76b27b-d36f-4def-8e90-094ab5d85045")
 		(property "Reference" "D26"
 			(at 381 67.31 0.0000)
 			(effects
@@ -3989,14 +3989,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b6777194-6882-40d0-915d-f19a04807c10")
+			(uuid "48f8c8f3-632b-4572-bb71-6e1da486009e")
 		)
 		(pin "2"
-			(uuid "0ea73173-9f45-492c-a90f-5ffb27aabd30")
+			(uuid "2d22bf36-1596-48c3-ada9-75f68090862f")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D26")
 					(unit 1)
 				)
@@ -4012,7 +4012,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "382b6bd1-9ce8-48ef-946b-49b61fa216ea")
+		(uuid "df92a4e9-3bd6-4fa6-ac71-98148bb96481")
 		(property "Reference" "R25"
 			(at 399.542 64.77 90)
 			(effects
@@ -4059,14 +4059,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8de712f8-8ab8-4484-ab05-7d083a552ad5")
+			(uuid "6b667878-b150-40d5-adb4-c0274dcd7c3d")
 		)
 		(pin "2"
-			(uuid "de032a6c-9c60-458e-ad13-e731e86f6c00")
+			(uuid "29dbcd95-9a39-40c4-82cb-683498058ca3")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R25")
 					(unit 1)
 				)
@@ -4082,7 +4082,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "3a8ccd9d-7978-4fdd-a033-dedce3c67d18")
+		(uuid "9d2ba5cb-64d0-479d-8196-ff139153e87e")
 		(property "Reference" "D27"
 			(at 391.16 82.55 0.0000)
 			(effects
@@ -4129,14 +4129,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5d4e6630-5bf6-4b6b-80ff-b13bd7882351")
+			(uuid "9811a028-dfd6-47e6-bfd2-7ec0ae002f93")
 		)
 		(pin "2"
-			(uuid "0bde1ff2-4995-4f8c-8d4d-d51dd5414d56")
+			(uuid "482b6263-798f-4d7f-baa7-1b9f2f4e296b")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D27")
 					(unit 1)
 				)
@@ -4152,7 +4152,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "abbbe4b7-a0b2-44e9-8069-e74bd7f96514")
+		(uuid "ebc7647d-abe7-410d-9503-724b78c53d93")
 		(property "Reference" "D28"
 			(at 397.51 67.31 0.0000)
 			(effects
@@ -4199,14 +4199,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4d8f38b0-f62e-403e-a614-314441e12f0b")
+			(uuid "684a29fa-32fa-4b45-a687-31467faf0cf1")
 		)
 		(pin "2"
-			(uuid "a927e734-5226-4762-b1c8-d49823d5bf5c")
+			(uuid "65803096-4a32-4f84-ba58-d25c02e4cdd8")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D28")
 					(unit 1)
 				)
@@ -4222,7 +4222,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "7c1a5011-7af0-41a8-8809-2c2191c4aab1")
+		(uuid "05accfd4-9941-4fc3-a5fc-9c4c8a530889")
 		(property "Reference" "U20"
 			(at 361.95 156.21 0.0000)
 			(effects
@@ -4269,56 +4269,56 @@
 			)
 		)
 		(pin "1"
-			(uuid "dbcbb902-1f23-4e65-8b52-757f8bee7097")
+			(uuid "649b1bb7-7aa1-43f8-bf59-195ccf63b1d5")
 		)
 		(pin "2"
-			(uuid "c0183173-62d9-4dfc-80d6-b4c71b9a6b0a")
+			(uuid "92a1e097-15f2-43d5-a11c-7754bbf3a5cf")
 		)
 		(pin "3"
-			(uuid "8ef440d8-3376-4ce1-8be8-53c19cd63241")
+			(uuid "176df98d-e94d-414b-9038-c2023c217b21")
 		)
 		(pin "4"
-			(uuid "76767ee3-c405-4419-b5b3-cd12d5abb347")
+			(uuid "861caf1c-3c60-46fc-822a-8fec2530ab33")
 		)
 		(pin "5"
-			(uuid "9d0d46db-4366-44b1-a51c-1ee7219586e4")
+			(uuid "cdfcba59-8451-4d10-bc13-972a4be12ebf")
 		)
 		(pin "6"
-			(uuid "86623c4f-1811-4a86-8f1d-4809a82a3a9f")
+			(uuid "aa2c08cc-9d16-4231-a3db-15bed5301af2")
 		)
 		(pin "7"
-			(uuid "7d99e174-e56e-4498-9c6d-ab2cffe2df84")
+			(uuid "4f78c152-3103-4e37-b48b-62d8b9a5574b")
 		)
 		(pin "8"
-			(uuid "b8868d1e-c1b3-4a13-909a-74223feb54e2")
+			(uuid "d01d229f-77ac-48c0-aa57-cbb438c4155c")
 		)
 		(pin "9"
-			(uuid "feb184a1-2ea0-4675-98f6-91f39b382c2c")
+			(uuid "0300a14d-b276-490c-8bef-ea26c7648fbe")
 		)
 		(pin "10"
-			(uuid "7c872a5c-60c7-4a36-83b9-3421fd00d0c7")
+			(uuid "d185d1f8-878f-4cf7-b071-23d8f894bdd1")
 		)
 		(pin "11"
-			(uuid "8d0a14a8-cea6-471a-9e4c-ddf9fad9126e")
+			(uuid "1c5a95eb-70af-4857-86e4-659f4bc87a31")
 		)
 		(pin "12"
-			(uuid "88f54282-23ce-4c72-9cef-c08c743fb51b")
+			(uuid "6ed5aa80-ed21-4957-92ae-ca35a923eec3")
 		)
 		(pin "13"
-			(uuid "ec59293c-851a-498e-a7e9-f1c12fa83e85")
+			(uuid "0a0f1753-fbfb-4339-a1a1-c4bcf9797584")
 		)
 		(pin "14"
-			(uuid "5352a5c4-fa25-44a5-8998-0cc619a4046a")
+			(uuid "d39bf164-75ce-4527-b204-7668b8ff08ed")
 		)
 		(pin "15"
-			(uuid "b46a5e6e-7d25-4b73-bbed-e195a19096a4")
+			(uuid "cbe3b2cf-65ab-4ae4-9e5c-42accd919096")
 		)
 		(pin "16"
-			(uuid "4061eee7-7cdc-487b-b175-48e4f39ffeb8")
+			(uuid "4ea1215e-eca8-4e82-91e7-24bd92e987d1")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "U20")
 					(unit 1)
 				)
@@ -4334,7 +4334,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "e5da9a6f-4e9e-4e7a-a2cd-180567e86b6b")
+		(uuid "41486261-e6cf-44ca-870c-73f385591b02")
 		(property "Reference" "R26"
 			(at 248.412 165.1 90)
 			(effects
@@ -4381,14 +4381,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "06046ac7-bb05-4691-aa76-99ad9c9c0565")
+			(uuid "17a4ad40-2024-46c7-9bc8-c9ea9222a135")
 		)
 		(pin "2"
-			(uuid "3881dbb8-14ae-4d15-8097-f2b458500acf")
+			(uuid "4c8fa2ce-3563-4f52-a4b1-ebf90b7c5fa9")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R26")
 					(unit 1)
 				)
@@ -4404,7 +4404,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b33a4e5b-45f4-4cb1-8226-89a1f275f5db")
+		(uuid "b5b129ee-9cca-45cb-bd9b-77dedb77639a")
 		(property "Reference" "D29"
 			(at 240.03 182.88 0.0000)
 			(effects
@@ -4451,14 +4451,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "67b6aee3-b441-4f71-962d-46d6bbc0b3bb")
+			(uuid "6e9e90e2-d7af-48f6-ab0a-4c5092e84f56")
 		)
 		(pin "2"
-			(uuid "965965ee-13b6-4ca9-9bf1-8b4f8541d803")
+			(uuid "cba1513f-5085-4bf5-8e04-2555b88570c6")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D29")
 					(unit 1)
 				)
@@ -4474,7 +4474,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "65ed2532-25d0-4362-b933-193c616d9bdc")
+		(uuid "61eae514-aa00-4964-8a0b-bfa28885bd01")
 		(property "Reference" "D30"
 			(at 246.38 167.64 0.0000)
 			(effects
@@ -4521,14 +4521,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "aa1a3e8f-1fe0-4c6e-bb75-b2848591c1aa")
+			(uuid "ab428448-809c-45e2-94da-f4fcf3877353")
 		)
 		(pin "2"
-			(uuid "3fd70ac6-9364-46a4-b61b-4422c64e72b5")
+			(uuid "2709cd9a-14f9-497b-b20a-ebb309b410b4")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D30")
 					(unit 1)
 				)
@@ -4544,7 +4544,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "4703a569-6f85-4228-a04c-15c64f01afea")
+		(uuid "96af17d5-e649-4710-b0b1-91eeed0e0533")
 		(property "Reference" "R27"
 			(at 266.192 165.1 90)
 			(effects
@@ -4591,14 +4591,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b64c091b-1a78-4135-abee-f4a729fe872a")
+			(uuid "b642b5ca-7d5e-4e29-8d01-a11591844f98")
 		)
 		(pin "2"
-			(uuid "ea41fe7c-1cb4-4649-992c-e3ed975c2348")
+			(uuid "1e3ac09b-9d31-4896-980b-83a579f48b52")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R27")
 					(unit 1)
 				)
@@ -4614,7 +4614,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "5499092c-e1f1-413c-9847-39086aa8f55c")
+		(uuid "c5366cb1-a103-43ae-92ae-0e279bdf0d72")
 		(property "Reference" "D31"
 			(at 256.54 182.88 0.0000)
 			(effects
@@ -4661,14 +4661,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "cb75864a-dfd2-49bb-8225-ad170e69d6ed")
+			(uuid "f6631391-59d4-437a-938b-f928b7732251")
 		)
 		(pin "2"
-			(uuid "01ce4e76-f301-4796-88a7-ef45adc9b325")
+			(uuid "a1c6f0c9-7d2d-42f2-aebe-2a07e7f44d8e")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D31")
 					(unit 1)
 				)
@@ -4684,7 +4684,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "87adf0e1-d02c-4085-9c8b-f85f31e0ccc3")
+		(uuid "696068e6-fb81-4c51-b297-eeb843424626")
 		(property "Reference" "D32"
 			(at 264.16 167.64 0.0000)
 			(effects
@@ -4731,14 +4731,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8f2cb53a-acca-4674-b993-1ba074d00912")
+			(uuid "e77c6cbc-fac7-4be6-90d2-7c8d777688b4")
 		)
 		(pin "2"
-			(uuid "54b1c14a-b34e-4fdc-a0fe-1dc701637c67")
+			(uuid "a7352cf2-ca2e-431e-82a0-3b4d7eb3faec")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D32")
 					(unit 1)
 				)
@@ -4754,7 +4754,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b791c264-b87a-4ae9-886e-8a933a44cfee")
+		(uuid "5d032dca-7c5e-44e8-b7e0-fad84b3f3139")
 		(property "Reference" "R28"
 			(at 282.702 165.1 90)
 			(effects
@@ -4801,14 +4801,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3b6dae57-e950-4341-9cf9-a7d443a5105c")
+			(uuid "dab41890-db6a-48f7-a782-c12add74281f")
 		)
 		(pin "2"
-			(uuid "b70fa74e-357f-4ffb-a442-a86da3dcb38a")
+			(uuid "e175c216-17f4-4e31-9243-dc7e4bc45734")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R28")
 					(unit 1)
 				)
@@ -4824,7 +4824,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "8b37b002-3467-41f8-b548-c49e1d311d31")
+		(uuid "5318e468-4f22-4a9a-92c8-b556602c754c")
 		(property "Reference" "D33"
 			(at 274.32 182.88 0.0000)
 			(effects
@@ -4871,14 +4871,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b3dba7f1-cfe8-4e41-ae99-3e500bf8df25")
+			(uuid "efc39aff-45cf-405b-9dd7-d0e1ed81ea95")
 		)
 		(pin "2"
-			(uuid "f15c162d-e520-48b1-a641-6b3ea2323bc6")
+			(uuid "5c3d7109-9bc6-4d83-b3bb-19d5075942fc")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D33")
 					(unit 1)
 				)
@@ -4894,7 +4894,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c9c58d18-2d6e-4035-87d4-ac95ba6bae99")
+		(uuid "e8184c45-99ce-45d0-8bd1-23c0818a5d50")
 		(property "Reference" "D34"
 			(at 280.67 167.64 0.0000)
 			(effects
@@ -4941,14 +4941,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a3930843-b7a9-4d6b-b037-e65a84212b89")
+			(uuid "e4203c94-68f1-46e9-a018-9db5e48ac97c")
 		)
 		(pin "2"
-			(uuid "8bfca22b-d7f4-47a8-abc5-513c8868951a")
+			(uuid "a31026d5-05ee-4703-b0e4-cd8795945316")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D34")
 					(unit 1)
 				)
@@ -4964,7 +4964,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "14126a92-c3d2-4ac2-a4ea-2d9b755fdb20")
+		(uuid "f53c5209-40a4-494f-8a30-9e86abd85041")
 		(property "Reference" "R29"
 			(at 300.482 165.1 90)
 			(effects
@@ -5011,14 +5011,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e3c85b37-46ac-4132-b51e-70c56404d10f")
+			(uuid "f9dde1e0-2cca-48c8-b257-7b34d30209dc")
 		)
 		(pin "2"
-			(uuid "0762fbdd-2248-4c38-9ed7-7856333eae99")
+			(uuid "55bf8805-00dc-49f1-a791-dc2837f8a252")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R29")
 					(unit 1)
 				)
@@ -5034,7 +5034,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "51a1fcf7-b36e-409d-bdc3-a5d437ed6fee")
+		(uuid "777a4e19-07fb-4d0a-acf7-eca6cbf60fb1")
 		(property "Reference" "D35"
 			(at 290.83 182.88 0.0000)
 			(effects
@@ -5081,14 +5081,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "54bb760c-11ab-4a8b-9a5e-38a8b1048eda")
+			(uuid "ad56d1db-dc69-4fd2-840e-bcb92b46ca89")
 		)
 		(pin "2"
-			(uuid "33e446e4-c455-41d3-ab2e-1313593698da")
+			(uuid "30aa2343-8e22-44a0-80b2-3c951b5e405d")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D35")
 					(unit 1)
 				)
@@ -5104,7 +5104,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "45b9ebc1-9b36-4c30-b493-c268b31a608c")
+		(uuid "7e2b8fed-3352-42ba-9068-438b6d551c6c")
 		(property "Reference" "D36"
 			(at 298.45 167.64 0.0000)
 			(effects
@@ -5151,14 +5151,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7ce36683-9b09-4f2a-94f4-49b9982d4e71")
+			(uuid "88924ae6-7543-4ca3-9176-2253729ae871")
 		)
 		(pin "2"
-			(uuid "eb2ab6a7-2072-4b34-acd3-162ff8f41b30")
+			(uuid "4f0e2ca2-5535-46d7-b184-573ee666192f")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D36")
 					(unit 1)
 				)
@@ -5174,7 +5174,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "17764132-c99e-4c13-a8df-0bb8f67f05d9")
+		(uuid "424ab1f5-3242-45a9-a7ea-7eee800d6e96")
 		(property "Reference" "U19"
 			(at 261.62 256.54 0.0000)
 			(effects
@@ -5221,56 +5221,56 @@
 			)
 		)
 		(pin "1"
-			(uuid "26253067-ab07-4b67-b203-f3bdabb6b70d")
+			(uuid "f804deb3-8455-4fd9-a382-82054cd3f9c4")
 		)
 		(pin "2"
-			(uuid "20b42035-3cd8-4193-b107-49d780040cfc")
+			(uuid "0f0bf50f-f85f-4b92-b36e-807558adb51f")
 		)
 		(pin "3"
-			(uuid "3b85b924-a90a-456d-9122-41f18a7473f1")
+			(uuid "fbe3e36d-e25f-4a09-9c4a-735961a336bf")
 		)
 		(pin "4"
-			(uuid "58356002-21e6-4b2b-ab1c-22faec130dd3")
+			(uuid "d68ae2da-5df5-41e7-9a46-ac92bdbab236")
 		)
 		(pin "5"
-			(uuid "64cfb34a-4820-451a-8d80-fbb723fcd70d")
+			(uuid "f5f3e79c-a320-48e4-bb31-bfad57e192ff")
 		)
 		(pin "6"
-			(uuid "1a2b935a-0cb1-4fcb-a304-bc8a88caf285")
+			(uuid "d18870ef-45ac-4ef1-926b-89829806ccb6")
 		)
 		(pin "7"
-			(uuid "aba60314-8881-4674-9456-9e1c5ebcfa23")
+			(uuid "9c9c587c-870b-4970-b8a6-bcd452046c17")
 		)
 		(pin "8"
-			(uuid "cc4ea08b-9dc8-4a99-8501-c85c180cf33e")
+			(uuid "a425477e-9136-49f5-b308-3e0cbd99d9d9")
 		)
 		(pin "9"
-			(uuid "ddbca915-9c59-4dba-889f-3b7c08d9d2b3")
+			(uuid "fce96244-3d37-4406-bede-5a5098e8513c")
 		)
 		(pin "10"
-			(uuid "24ff26c6-19f5-41b3-9305-166fbbd1f684")
+			(uuid "41955b8f-e1b3-4d1f-8f70-9fdb48aea60d")
 		)
 		(pin "11"
-			(uuid "40f486ee-028d-4ce9-b967-3d3357cbbe13")
+			(uuid "82a77ca3-d724-4684-9543-1ac0a495d9d3")
 		)
 		(pin "12"
-			(uuid "cb7331c6-9cde-4f56-b102-5ea68c0f1ddb")
+			(uuid "174262d5-50b9-459b-a1cc-9685a91aea1f")
 		)
 		(pin "13"
-			(uuid "b0e5c8cf-cbad-4c72-a98d-21bdda6a56be")
+			(uuid "88f5d091-f778-4bc3-ac80-10befe890857")
 		)
 		(pin "14"
-			(uuid "febad440-dfd0-4d4d-ace9-380168686ca4")
+			(uuid "5616bc50-baba-45ff-80a1-3616b51ddda4")
 		)
 		(pin "15"
-			(uuid "681aabb3-e7b6-4f6c-b1c2-812ecb201f9d")
+			(uuid "b88645fd-de9a-4e69-a4e7-a5e5532543a9")
 		)
 		(pin "16"
-			(uuid "d1fc32fc-0890-4772-89e8-bac4530122ba")
+			(uuid "eef4088c-9ec2-4675-a6db-3a24558c9ad2")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "U19")
 					(unit 1)
 				)
@@ -5286,7 +5286,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "62ec5ee1-ed66-4389-829a-97989a5a1ee2")
+		(uuid "fe2855cf-dd9e-4b48-abd4-d9e854139c4c")
 		(property "Reference" "R30"
 			(at 348.742 165.1 90)
 			(effects
@@ -5333,14 +5333,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c4c90f8b-6a3d-4b2d-90be-5f126749599f")
+			(uuid "73faf4ad-18c5-487a-b8ba-182bd7c15890")
 		)
 		(pin "2"
-			(uuid "d49f79b1-604a-466b-907f-663364eaa1be")
+			(uuid "06b716b6-246e-4490-993d-04b4d1882773")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R30")
 					(unit 1)
 				)
@@ -5356,7 +5356,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b4ae87c5-2d06-4ac7-b917-79cfab62871f")
+		(uuid "17110c9c-387e-4709-8aae-df375b2fec51")
 		(property "Reference" "D37"
 			(at 340.36 182.88 0.0000)
 			(effects
@@ -5403,14 +5403,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "352f38e8-ea78-4618-bc78-b137b56f2f06")
+			(uuid "62c618e0-6d0b-4942-87e4-9bcfb69abff0")
 		)
 		(pin "2"
-			(uuid "fa87c456-3c5c-44d2-a014-b97e51ae3f4e")
+			(uuid "c99045a5-4593-45a3-90b6-f1651908fe5a")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D37")
 					(unit 1)
 				)
@@ -5426,7 +5426,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "23049fb3-c34d-43ff-af25-67981ae9c129")
+		(uuid "554eb629-4bbd-4e76-94cf-5c4e1e0421cb")
 		(property "Reference" "D38"
 			(at 346.71 167.64 0.0000)
 			(effects
@@ -5473,14 +5473,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "08b61d69-a6da-48b1-b80c-416293ced76f")
+			(uuid "e397bbaf-bdfe-4656-9687-a8c2e02d00e8")
 		)
 		(pin "2"
-			(uuid "7a26fee4-b8a8-47a8-8da9-f73cf91915e7")
+			(uuid "80473a04-2d51-4671-ad3e-d4827b06c9fa")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D38")
 					(unit 1)
 				)
@@ -5496,7 +5496,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "45cf08d6-845a-4c0c-873e-180229ea0295")
+		(uuid "b2faedcd-76aa-45e7-8ca0-2df59e3f3368")
 		(property "Reference" "R31"
 			(at 366.522 165.1 90)
 			(effects
@@ -5543,14 +5543,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "02467db8-34b3-4221-a6bf-0a983a536e3e")
+			(uuid "813f2dcb-c224-470e-9719-92cf6812d250")
 		)
 		(pin "2"
-			(uuid "8de4bddf-4a6b-4a1a-9cb5-f9ad9193d3d1")
+			(uuid "09f32f89-e5f2-46d1-b730-0db17155cf50")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R31")
 					(unit 1)
 				)
@@ -5566,7 +5566,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f35ad249-0924-4361-b3ca-8ef4b3ca1148")
+		(uuid "e854c2de-6d66-4f25-864a-790ad22aad98")
 		(property "Reference" "D39"
 			(at 356.87 182.88 0.0000)
 			(effects
@@ -5613,14 +5613,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "43074179-3b56-43c6-be4a-86dc9116f4eb")
+			(uuid "19e4c02d-0229-4638-ac62-1cbe4c36f943")
 		)
 		(pin "2"
-			(uuid "cb9f6249-1cf4-4d5c-806e-5c701f688a89")
+			(uuid "792411da-0ae2-46e8-8143-3c3e4aa25814")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D39")
 					(unit 1)
 				)
@@ -5636,7 +5636,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "075f051a-6aad-4ec1-966f-eccebe6f2bf1")
+		(uuid "5c324553-2f67-4816-a7f2-a39b2ab39592")
 		(property "Reference" "D40"
 			(at 364.49 167.64 0.0000)
 			(effects
@@ -5683,14 +5683,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "495eb8a2-7941-4895-9b53-250c787755a5")
+			(uuid "d4dcfff0-896d-43b9-9c95-18239a6331c2")
 		)
 		(pin "2"
-			(uuid "5b49bc86-eff1-4d2f-aef0-68f0b2c7c457")
+			(uuid "a17e052f-9854-42cd-8caf-4a33c5318783")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D40")
 					(unit 1)
 				)
@@ -5706,7 +5706,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d53e8ae4-d08b-4704-8876-ea802e4b32db")
+		(uuid "21ef7f7f-abc3-4adc-9fab-6f8b5eb91fa2")
 		(property "Reference" "R32"
 			(at 383.032 165.1 90)
 			(effects
@@ -5753,14 +5753,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f0bd555d-92f1-4f1a-9e6e-df02b8d04647")
+			(uuid "212a054d-4222-49a3-bdd3-9ed21442c032")
 		)
 		(pin "2"
-			(uuid "dee17f07-56d8-41b1-a237-5cc124200639")
+			(uuid "d848c1a6-148b-45a9-a361-fba670ce3c09")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R32")
 					(unit 1)
 				)
@@ -5776,7 +5776,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d6c102c9-8c75-467d-a2a1-7e8b70c61753")
+		(uuid "9093b89d-fd44-4afb-8b4f-b67e07d4c7e2")
 		(property "Reference" "D41"
 			(at 373.38 182.88 0.0000)
 			(effects
@@ -5823,14 +5823,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d7095fdb-fd01-45cb-9385-b695a0c97fe0")
+			(uuid "4c33caa9-7e58-4621-90c0-e8a31ca4888e")
 		)
 		(pin "2"
-			(uuid "08e5ac1a-439c-435d-8103-acbe079547bc")
+			(uuid "f7ce092c-e918-4445-9fa7-5b83171d7b05")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D41")
 					(unit 1)
 				)
@@ -5846,7 +5846,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "05240ad8-312f-4172-92bf-e9ba421166c1")
+		(uuid "6a230f3e-f77e-4657-adfc-857164c973de")
 		(property "Reference" "D42"
 			(at 381 167.64 0.0000)
 			(effects
@@ -5893,14 +5893,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3ea51122-1f46-4861-85f3-435afc46e152")
+			(uuid "c73f1fe3-4b16-4460-8224-48254089dd3a")
 		)
 		(pin "2"
-			(uuid "2cf68903-24b8-41f8-bd82-175f618cb2f4")
+			(uuid "26766578-5ec0-40fe-8905-95b87ed02de2")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D42")
 					(unit 1)
 				)
@@ -5916,7 +5916,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "09ac9f7b-a940-4d2a-9db9-8572636ed198")
+		(uuid "89e9edca-6cd0-4fa5-90f0-52a9098d3bd9")
 		(property "Reference" "R33"
 			(at 399.542 165.1 90)
 			(effects
@@ -5963,14 +5963,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "cb987e9b-342e-486f-9e6f-9f1f59c31692")
+			(uuid "7d411fa0-f42d-4a08-ac49-c35e1baf2fc0")
 		)
 		(pin "2"
-			(uuid "6cb40cbe-acc8-4f59-953d-688a94541478")
+			(uuid "040f4c0a-3c25-4c5e-96b4-ee699d654a86")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R33")
 					(unit 1)
 				)
@@ -5986,7 +5986,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b1d1ab1d-90f4-4d36-94c3-f3338ec07ee3")
+		(uuid "7b48f4bc-0e2d-4e94-baa5-11ad88045f81")
 		(property "Reference" "D43"
 			(at 391.16 182.88 0.0000)
 			(effects
@@ -6033,14 +6033,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7a791fed-9aa4-4ce7-9c20-164457c18a0e")
+			(uuid "1861b947-22a2-41e3-a335-285d68e2623a")
 		)
 		(pin "2"
-			(uuid "e4c196d2-381c-40bf-99d7-16e125e11655")
+			(uuid "b1f8e4c5-add6-4553-81b4-8519856683cc")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D43")
 					(unit 1)
 				)
@@ -6056,7 +6056,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "591efaa6-166d-4264-ad82-09441888bdf1")
+		(uuid "f147e58b-ade7-4a5f-8024-b2a2f561503c")
 		(property "Reference" "D44"
 			(at 397.51 167.64 0.0000)
 			(effects
@@ -6103,14 +6103,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2163e31f-0bd8-45bb-8358-d746fc93bc71")
+			(uuid "01643093-3752-4a00-bbc4-379176409aca")
 		)
 		(pin "2"
-			(uuid "df08e0c6-f703-4c83-bb6c-6b088e10b11a")
+			(uuid "441fa3d3-87ef-4f13-9d01-63677fdb981c")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "D44")
 					(unit 1)
 				)
@@ -6126,7 +6126,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b98885fc-e96d-4747-9bc6-810e9956870f")
+		(uuid "fa3d8921-b343-4220-934f-2b21df2e465a")
 		(property "Reference" "U18"
 			(at 361.95 256.54 0.0000)
 			(effects
@@ -6173,56 +6173,56 @@
 			)
 		)
 		(pin "1"
-			(uuid "c15393f7-5212-4b65-9b2a-f2c0c100ad89")
+			(uuid "42d8862b-44d4-4c33-ac74-294c8916bc6d")
 		)
 		(pin "2"
-			(uuid "91644aa7-aeb9-4382-88d8-adf3648f0c5c")
+			(uuid "b33c7e3d-ebb8-4d09-aa9a-f94260971e7d")
 		)
 		(pin "3"
-			(uuid "4bb20b40-828d-4fcb-8571-eae637cac3f7")
+			(uuid "cb93346f-f567-4335-a6b8-db0c680bee6e")
 		)
 		(pin "4"
-			(uuid "fec5a47b-2fd2-45bd-a23a-e1c3deffaacc")
+			(uuid "7c51f46a-ba72-4a7b-a621-47875e2faf3c")
 		)
 		(pin "5"
-			(uuid "333e6474-9180-42ed-9624-a4709e0e9a78")
+			(uuid "dc1ab182-fc9b-44b5-bece-62320fe045b2")
 		)
 		(pin "6"
-			(uuid "386931a0-1f96-4e65-9448-d97ce25e0663")
+			(uuid "3d114750-ee5d-465f-b425-a7170ddf0d4d")
 		)
 		(pin "7"
-			(uuid "99c3acf1-13f3-4453-af0a-54d8aa6f50fc")
+			(uuid "767ab49f-92df-4448-8aaa-5cddc6e4ad9f")
 		)
 		(pin "8"
-			(uuid "3a8343b5-24a8-4169-9659-411bac0016bd")
+			(uuid "d9edaaff-531a-42dc-8e36-58c4a174c6c7")
 		)
 		(pin "9"
-			(uuid "4a0513c2-9376-4f40-807d-9449ce1f8457")
+			(uuid "02aa7e31-4b56-4870-b1b5-e639e58003be")
 		)
 		(pin "10"
-			(uuid "4c661953-a961-466b-8391-6ce7213d9b52")
+			(uuid "dc7bfdb9-1bed-4b7b-b016-93fe43e7ff00")
 		)
 		(pin "11"
-			(uuid "f537876a-a248-44c6-a047-f4ddfad77b73")
+			(uuid "a45d3ca3-1e9f-4669-bb43-cc4a1e125398")
 		)
 		(pin "12"
-			(uuid "963c73a8-d107-483d-aee6-1f329a6790db")
+			(uuid "1025866f-e71a-481a-8020-62cb46726fff")
 		)
 		(pin "13"
-			(uuid "e752c1fb-1520-4d44-a0b3-255c33df055f")
+			(uuid "c03311aa-75f5-422b-9ef7-abe1691da3c8")
 		)
 		(pin "14"
-			(uuid "97e8f6fa-8402-41e8-90a5-1a4248b04266")
+			(uuid "a3478fd1-22b0-49ec-90ee-2748a4c1a996")
 		)
 		(pin "15"
-			(uuid "4cedba43-00b5-4ac8-b189-b0b366cb36b2")
+			(uuid "8c941fb9-61b9-41c9-bf60-977e1ac1b1f4")
 		)
 		(pin "16"
-			(uuid "53a246b9-45ce-4bd4-8a8a-57771e39375c")
+			(uuid "7fad26fa-a9f8-448e-b505-cd8fc3279d91")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "U18")
 					(unit 1)
 				)
@@ -6238,7 +6238,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "138c1d04-3d63-485e-833b-fa0b08acc3c8")
+		(uuid "783299c5-6288-4d8e-99ba-1dba2f98c941")
 		(property "Reference" "U35"
 			(at 434.34 255.27 0.0000)
 			(effects
@@ -6285,20 +6285,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "7fb2ab5e-90de-4366-a54b-5b589e5d951a")
+			(uuid "ced8968f-3081-4023-b45c-9d1985246a10")
 		)
 		(pin "2"
-			(uuid "4c605a6f-5178-4d8a-acef-a64fb617d5e9")
+			(uuid "18d681f3-2e74-4eaf-bcff-ac31e9fa4da1")
 		)
 		(pin "3"
-			(uuid "cb6c7ab9-0154-4f1c-b669-88e217739efb")
+			(uuid "40223c28-66d9-4298-8af6-e5a2e07014e4")
 		)
 		(pin "4"
-			(uuid "0cdb6830-b3d1-45bc-8d10-31f7af86d9ff")
+			(uuid "884d7945-26d6-4083-9d90-8d0b1f35a7ee")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "U35")
 					(unit 1)
 				)
@@ -6314,7 +6314,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "72b79c21-a35b-4c90-bb61-e40091558fa1")
+		(uuid "b90c437c-9585-40aa-b586-8dbb82b8043a")
 		(property "Reference" "R74"
 			(at 56.642 250.19 90)
 			(effects
@@ -6361,14 +6361,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ba2fce8a-2482-491c-a9a8-d3fe928ca81a")
+			(uuid "af5b7a62-b278-4b91-8d8e-049dec86040a")
 		)
 		(pin "2"
-			(uuid "b8d5fec4-842d-449f-94cf-0ba5b3403b0e")
+			(uuid "dff1cbe9-acf7-448d-83e4-a609205e2b42")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "R74")
 					(unit 1)
 				)
@@ -6384,7 +6384,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "fbd8e5cf-9435-43e8-a194-965877d6c604")
+		(uuid "d26def3a-946b-497e-8ecd-b1f40e691c75")
 		(property "Reference" "RN35"
 			(at 36.83 347.98 0.0000)
 			(effects
@@ -6431,32 +6431,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "e248c48d-e00b-4015-ab89-8ef3b77656e5")
+			(uuid "49d806fe-a635-437c-a636-db20682aeab8")
 		)
 		(pin "2"
-			(uuid "09f795d9-6e7f-4ec0-84e5-3039ac859ad5")
+			(uuid "1e06376a-4a83-42ab-bf14-b772e80d69f3")
 		)
 		(pin "3"
-			(uuid "85c6e8e8-653b-47da-88c0-b537f73ca0ee")
+			(uuid "dbfb8788-cfeb-4c04-a250-95505e0b0943")
 		)
 		(pin "4"
-			(uuid "306f3c7b-dce2-4d32-937b-c6092c836d52")
+			(uuid "55f364cb-0c83-4000-afc5-c6b0ad76ad58")
 		)
 		(pin "5"
-			(uuid "71c488fb-a117-4fe3-b8de-ee90fc27bd4f")
+			(uuid "5b3fbbed-bb28-4f5a-9edd-1f54c73a7d6b")
 		)
 		(pin "6"
-			(uuid "5534d9f9-6243-45a6-94a0-a0a9c02f8479")
+			(uuid "4336dbf1-d49a-4a84-8dc1-21710af4bb0c")
 		)
 		(pin "7"
-			(uuid "30969cfe-7f38-489c-a4d2-190b398625e3")
+			(uuid "910989dd-7a90-413c-b8b3-3e01b9eeb10d")
 		)
 		(pin "8"
-			(uuid "b21bc305-44ee-4229-ade6-6157af70cbf5")
+			(uuid "ab532152-5a7b-41cc-ab81-e65044676887")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "RN35")
 					(unit 1)
 				)
@@ -6472,7 +6472,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "aab6d34c-dd7a-4d1a-a5c9-a7ad95564f8b")
+		(uuid "285fbf89-0e7b-4b16-9850-4a1864e78c64")
 		(property "Reference" "RN34"
 			(at 97.79 347.98 0.0000)
 			(effects
@@ -6519,32 +6519,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "c0931f4d-c656-46ff-901d-70cfafbe1856")
+			(uuid "64745b26-f3fa-47d8-9fa5-72b236c43760")
 		)
 		(pin "2"
-			(uuid "f52d9375-c690-401c-afa3-17fcace2d7ea")
+			(uuid "bf490d78-5aa7-4cde-8411-784d04593184")
 		)
 		(pin "3"
-			(uuid "4829e3e6-b5e9-4bb3-bfa5-9cda71e38cde")
+			(uuid "eb7739d5-6566-4416-96fc-12d3c1e06962")
 		)
 		(pin "4"
-			(uuid "f29541ab-1ef4-4017-b33c-c96990b404a6")
+			(uuid "5c4838d6-b20c-4f93-92a3-67a070cb970c")
 		)
 		(pin "5"
-			(uuid "2298569c-a377-4393-aa76-a002ca5012dc")
+			(uuid "1b44875e-89ea-4144-8e9b-a68f6921c648")
 		)
 		(pin "6"
-			(uuid "e2941058-c497-4059-a870-b9dda5edcb1c")
+			(uuid "8b5a4d24-8487-4b70-af98-3cf9a2abc81a")
 		)
 		(pin "7"
-			(uuid "6f154643-ef18-42d4-aef9-67e865b236ed")
+			(uuid "8e88db35-49a4-4061-a0fc-33368eb00c60")
 		)
 		(pin "8"
-			(uuid "5f6338b0-6d0f-4c2d-beca-a4e9d85a9700")
+			(uuid "5959ae75-bf6c-4ae6-a6af-894fca7a5e71")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "RN34")
 					(unit 1)
 				)
@@ -6560,7 +6560,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "77e0c74b-cc18-48f4-be78-18a3149be49b")
+		(uuid "63276091-1e8c-4b21-9b79-ee85ac826328")
 		(property "Reference" "RN33"
 			(at 157.48 347.98 0.0000)
 			(effects
@@ -6607,32 +6607,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "c8594aa9-7c85-4deb-aaa0-af3c758f5fde")
+			(uuid "69b4b609-2d4d-4bd9-b903-ce9eb6f6aa01")
 		)
 		(pin "2"
-			(uuid "6d5010c2-c217-49f1-91ce-b68f97a46439")
+			(uuid "2c71c0ca-6eff-4599-a59d-30ffa373eb19")
 		)
 		(pin "3"
-			(uuid "58ce5e6a-eaef-43c1-808a-14e5a0e6cf73")
+			(uuid "45cbb910-56c3-4d18-9e93-a12bc15caa17")
 		)
 		(pin "4"
-			(uuid "7733e6db-bc92-4ec7-ba92-3a777852e572")
+			(uuid "f888a22c-3ca3-4320-9ba7-269a57b9306f")
 		)
 		(pin "5"
-			(uuid "0b4cce45-6f43-4fe4-9b97-d55825bcec01")
+			(uuid "4c261f67-a17c-4c2b-bf8d-d28dc99983d0")
 		)
 		(pin "6"
-			(uuid "1cda9c40-c6eb-4660-b5c2-fa81710f0055")
+			(uuid "eeeaa9c5-955a-4060-97c3-cc4043cedcff")
 		)
 		(pin "7"
-			(uuid "03b3cc06-2843-4a05-bc07-f1c8f02f1afb")
+			(uuid "a7dc1f0e-6b2d-4427-8045-5af66eb2a199")
 		)
 		(pin "8"
-			(uuid "a51b128f-0392-44da-a24d-22a602b77947")
+			(uuid "2fcfb4d0-4d78-4087-aa11-51c4f6f1df2b")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "RN33")
 					(unit 1)
 				)
@@ -6648,7 +6648,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "28213d2d-74cd-4807-874d-9f7590ba2eca")
+		(uuid "96e7e391-48ef-4278-a345-4772c2604534")
 		(property "Reference" "RN32"
 			(at 217.17 347.98 0.0000)
 			(effects
@@ -6695,32 +6695,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "621ffb9c-991b-4d3d-946f-27fcfd44d36d")
+			(uuid "31df6733-35c4-43c9-b882-14598850fd0e")
 		)
 		(pin "2"
-			(uuid "3444c144-514e-4705-bac7-7721103cedbd")
+			(uuid "0325bbe4-adfa-432e-aca7-03d245c2920d")
 		)
 		(pin "3"
-			(uuid "17797511-01ce-4b6d-bd54-32e86e8d77af")
+			(uuid "935d8b5d-962a-4033-a045-8e81d647b694")
 		)
 		(pin "4"
-			(uuid "a3616477-b31a-4a72-bdd5-644e0e56fa04")
+			(uuid "0a638f02-b980-42ab-9663-a683de2dd183")
 		)
 		(pin "5"
-			(uuid "4f6573a2-6d1f-4887-9a43-edc03915c0d5")
+			(uuid "18235bb5-c975-4def-bd32-4308289dbe1d")
 		)
 		(pin "6"
-			(uuid "38994df1-913e-42bd-bd32-d42db83cf172")
+			(uuid "5e30310b-01cb-4609-bc04-3baee2355ce8")
 		)
 		(pin "7"
-			(uuid "605fb0fb-4244-4907-b6ad-31ba97f7f9e9")
+			(uuid "fb63f7a0-0853-49ff-bd32-6abab41cdb89")
 		)
 		(pin "8"
-			(uuid "777bcc16-1a65-4a78-ae6c-dd96c26342f6")
+			(uuid "27e94446-da1a-4516-a336-ed0c620ec6dd")
 		)
 		(instances
 			(project "16 PLC inputs"
-				(path "/f937bea1-110d-452d-9b79-81f8fcb9fd9c"
+				(path "/979bad61-1e4e-4bdf-915b-67604f26a217"
 					(reference "RN32")
 					(unit 1)
 				)
@@ -6737,7 +6737,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f2219cff-df20-4906-948e-984335290456")
+		(uuid "f63f206a-bd9a-4a54-91e4-63866d04809f")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -6749,7 +6749,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5194ad8d-aca6-4df2-8e6d-26c45fadf539")
+		(uuid "a9c91a5a-a9aa-4e95-896e-27f5bee48d32")
 	)
 	(global_label "FIELD_IN1"
 		(shape passive)
@@ -6761,7 +6761,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5e3df821-b895-449a-ab06-305c11cb47bf")
+		(uuid "a3bee359-216d-4948-a076-f6935f5087f2")
 	)
 	(global_label "FIELD_IN2"
 		(shape passive)
@@ -6773,7 +6773,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1ea015e2-4e26-4562-92fc-3ce00ca76e0b")
+		(uuid "02fdced4-80d5-436d-8c0f-0dacdbcbc9c2")
 	)
 	(global_label "FIELD_IN3"
 		(shape passive)
@@ -6785,7 +6785,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "21709b1b-ac34-487d-b911-faf49ca92a59")
+		(uuid "e855ff6c-2dde-48c1-bf5a-587414c67b05")
 	)
 	(global_label "FIELD_IN4"
 		(shape passive)
@@ -6797,7 +6797,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "db13fa4d-dd1f-42a7-aa0c-6b9c6595886b")
+		(uuid "c25dcfb2-3fa0-4eb6-895f-8e3b6271647e")
 	)
 	(global_label "FIELD_IN5"
 		(shape passive)
@@ -6809,7 +6809,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "182be99c-2447-4914-ae58-7b0bffa54ae8")
+		(uuid "cc90910f-35d4-4d96-88b7-af13d63ce725")
 	)
 	(global_label "FIELD_IN6"
 		(shape passive)
@@ -6821,7 +6821,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "235a0757-7d15-42ae-80c0-c264f8bd0157")
+		(uuid "47a3be15-a392-4af4-a632-c82f067e61cd")
 	)
 	(global_label "FIELD_IN7"
 		(shape passive)
@@ -6833,7 +6833,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3f249351-5d1a-4c7d-8917-4007ca74ed09")
+		(uuid "6b2721fd-6929-4992-8280-dcea8697bc15")
 	)
 	(global_label "FIELD_IN8"
 		(shape passive)
@@ -6845,7 +6845,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "77cc755a-8fc3-4c3b-be56-07214784b583")
+		(uuid "ce9384d5-9beb-44b5-9829-89167b8e888e")
 	)
 	(global_label "FIELD_IN9"
 		(shape passive)
@@ -6857,7 +6857,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a1ecf946-488e-493a-a0cf-0499d97d2e8f")
+		(uuid "e81efe7b-73a1-4c90-839f-8e9abc9667ee")
 	)
 	(global_label "FIELD_IN10"
 		(shape passive)
@@ -6869,7 +6869,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3a42f03d-46ff-46a3-9181-de344a812a28")
+		(uuid "25373ef6-0e3c-45b6-8482-22e14b349817")
 	)
 	(global_label "FIELD_IN11"
 		(shape passive)
@@ -6881,7 +6881,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4b6c2ad3-fad3-47a0-ae7d-91dd990c35c9")
+		(uuid "f9b1cbbb-1c55-4619-ade3-49a061b466fd")
 	)
 	(global_label "FIELD_IN12"
 		(shape passive)
@@ -6893,7 +6893,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "51120f26-dc28-4d97-9065-e76b92445a5e")
+		(uuid "d888504e-9601-46aa-bddb-5106578df983")
 	)
 	(global_label "FIELD_IN13"
 		(shape passive)
@@ -6905,7 +6905,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c54c6187-0f03-4669-8e91-269842fd1033")
+		(uuid "63c0e894-6ab8-4a68-b8e4-6f709376a502")
 	)
 	(global_label "FIELD_IN14"
 		(shape passive)
@@ -6917,7 +6917,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a4b5bdc5-0028-44dc-9424-7b04210ea853")
+		(uuid "0b80ea34-5aae-4037-9a90-c664ddb0c99f")
 	)
 	(global_label "FIELD_IN15"
 		(shape passive)
@@ -6929,7 +6929,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cdc2acf8-22c7-46fc-ac57-e77faf89a72b")
+		(uuid "7005ea7c-fc38-4b25-8c82-fdbc53f12fdb")
 	)
 	(global_label "FIELD_IN16"
 		(shape passive)
@@ -6941,7 +6941,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "77280e0e-2288-4373-b615-0a7b38e2587c")
+		(uuid "e7c82275-b264-478d-8841-8789102a454e")
 	)
 	(global_label "ESTOP_LED_A"
 		(shape passive)
@@ -6953,7 +6953,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1807b87c-a76c-4439-8aa4-ffffa1f681fc")
+		(uuid "1c2a370a-5262-49f4-b0e9-19678d7d5a25")
 	)
 	(global_label "ESTOP_OPTO_A"
 		(shape passive)
@@ -6965,7 +6965,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b45f5576-9197-45eb-89b0-3bacc8c24277")
+		(uuid "7891bfd2-941c-468f-b183-78ec3d3da0bc")
 	)
 	(global_label "ESTOP_LED_A"
 		(shape passive)
@@ -6977,7 +6977,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "22c2a563-597d-48d4-8cc2-2687e85df28d")
+		(uuid "9c85f21e-3696-429c-ba13-297cceeb7a04")
 	)
 	(global_label "ESTOP_FIELD"
 		(shape passive)
@@ -6989,7 +6989,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "50d14f4c-0091-4191-81ad-dbd913232704")
+		(uuid "99f8b651-1a73-4846-b37b-c083d6802f6e")
 	)
 	(global_label "ESTOP_LED_A"
 		(shape passive)
@@ -7001,7 +7001,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ba8e4a61-1e7d-4402-8926-996b8146f258")
+		(uuid "9b8b2b45-d25e-42e6-820b-458544148502")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7013,7 +7013,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9ad689a5-f063-406a-9e66-88c1443adbdc")
+		(uuid "b5e2172a-6ce7-4b55-b313-513be6f82730")
 	)
 	(global_label "FLD_LED1_A"
 		(shape passive)
@@ -7025,7 +7025,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "26000799-5869-495a-9ea1-5ab23bda87be")
+		(uuid "efebb1f4-1004-421a-951b-bc0bec237719")
 	)
 	(global_label "FLD_OPTO1_A"
 		(shape passive)
@@ -7037,7 +7037,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3fa0f06d-3e60-4d72-93dd-9c8750080ea9")
+		(uuid "b61e4196-e31b-45cb-8f91-98d645bd7f85")
 	)
 	(global_label "FLD_LED1_A"
 		(shape passive)
@@ -7049,7 +7049,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "977f3c72-e201-4dd5-8f99-4e9543229e7c")
+		(uuid "dd3b44df-4bdd-4476-9865-754ed9215b54")
 	)
 	(global_label "FIELD_IN1"
 		(shape passive)
@@ -7061,7 +7061,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d92e328d-65e0-4207-b5fe-a11263c824a4")
+		(uuid "1d1ab54b-2853-4427-b51a-3405b44cb36a")
 	)
 	(global_label "FLD_LED1_A"
 		(shape passive)
@@ -7073,7 +7073,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5bff6d68-0586-46e1-954a-d703bd029e04")
+		(uuid "ff5c8646-d7de-494a-a4d2-6d55b6aa586c")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7085,7 +7085,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "624e2aae-c368-481a-bcc2-5c0975860c70")
+		(uuid "cff76bdd-6ad8-4ad9-9b1a-681cf72c97da")
 	)
 	(global_label "FLD_LED2_A"
 		(shape passive)
@@ -7097,7 +7097,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b7ff7409-c5b3-4659-9d02-02f8d4dded52")
+		(uuid "7702cde9-273a-4234-a2ba-bfe69f750213")
 	)
 	(global_label "FLD_OPTO2_A"
 		(shape passive)
@@ -7109,7 +7109,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4d25b8e4-7d57-4aa8-93c9-16b75d524b0a")
+		(uuid "edfcdf82-bb86-469d-89a8-f05b51842f37")
 	)
 	(global_label "FLD_LED2_A"
 		(shape passive)
@@ -7121,7 +7121,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8c005e7c-ba2c-4b5b-978a-24f67ddb96ac")
+		(uuid "97835c0a-e5cc-4f71-bced-f01467f5ff2b")
 	)
 	(global_label "FIELD_IN2"
 		(shape passive)
@@ -7133,7 +7133,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5584ce2c-674d-496d-a44d-4b6d4afadf42")
+		(uuid "c1af9bd9-311e-4bcc-afdf-8e9ecbe9892c")
 	)
 	(global_label "FLD_LED2_A"
 		(shape passive)
@@ -7145,7 +7145,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "afd5e2f6-a5ea-4a5d-be48-bdbbed09c52f")
+		(uuid "12b2bb2f-5dac-4fbe-8b57-ef32b6ca64b2")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7157,7 +7157,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bb8bafa7-8e9f-4d80-b777-e1082f89b9b7")
+		(uuid "565b0135-2f18-46fc-8318-e179e22d39bc")
 	)
 	(global_label "FLD_LED3_A"
 		(shape passive)
@@ -7169,7 +7169,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fff179ab-6c1e-476d-828c-12c5e070ccca")
+		(uuid "f7df0660-28a4-4cae-9b05-0f1896703c90")
 	)
 	(global_label "FLD_OPTO3_A"
 		(shape passive)
@@ -7181,7 +7181,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c336d98e-1100-40ab-8a6f-7b0f370a72f1")
+		(uuid "ad4675f6-56ed-4179-99d7-20e9cf15693a")
 	)
 	(global_label "FLD_LED3_A"
 		(shape passive)
@@ -7193,7 +7193,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1c0acf0a-c651-4425-94aa-3510f26681e2")
+		(uuid "af1c9b6f-9dcb-4a1b-9841-b2ab151f90a0")
 	)
 	(global_label "FIELD_IN3"
 		(shape passive)
@@ -7205,7 +7205,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c239fe8b-cbc8-42dd-af45-1ed8ac2dd3ac")
+		(uuid "1c4c8549-6f37-4f86-aecc-ac57aac11219")
 	)
 	(global_label "FLD_LED3_A"
 		(shape passive)
@@ -7217,7 +7217,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "013d059b-aa1f-40c1-b6f1-b7d15ec9c675")
+		(uuid "5b65852b-ff04-4f31-972f-14fd74bea49f")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7229,7 +7229,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "270e7509-e8d7-4b9d-b950-9ccbb57b6acc")
+		(uuid "ca2b4799-576d-42d4-a573-3c30221b52fa")
 	)
 	(global_label "FLD_LED4_A"
 		(shape passive)
@@ -7241,7 +7241,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bceb5e42-a559-4e99-b547-f1e5f5ae20c8")
+		(uuid "fd1a23e3-563f-41d5-bc33-0878eac6cbbc")
 	)
 	(global_label "FLD_OPTO4_A"
 		(shape passive)
@@ -7253,7 +7253,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "18088fa8-fa24-423f-a7eb-ea4c5f2444f2")
+		(uuid "248f829f-1430-46f7-8041-76cbce01ee99")
 	)
 	(global_label "FLD_LED4_A"
 		(shape passive)
@@ -7265,7 +7265,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b1437629-dd3f-47fa-b16c-558f06ad759d")
+		(uuid "a713b7ca-f102-4f1a-928c-05995797ab56")
 	)
 	(global_label "FIELD_IN4"
 		(shape passive)
@@ -7277,7 +7277,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b3ccf2bc-a2ae-4587-9182-2f3002fc1319")
+		(uuid "cb2463df-2a16-435c-9016-fc5682c1fe4e")
 	)
 	(global_label "FLD_LED4_A"
 		(shape passive)
@@ -7289,7 +7289,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3872afc1-14c6-42f3-a4c6-efef69a4c6c6")
+		(uuid "a15e028f-6b59-4ff7-a5cc-3192db59b732")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7301,7 +7301,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "880a5834-41b0-44bd-99a4-7c9c650c18fc")
+		(uuid "60be2593-8f50-416c-8c48-aa3a32e7e9d6")
 	)
 	(global_label "FLD_OPTO1_A"
 		(shape passive)
@@ -7313,7 +7313,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ba297d37-4be4-45b7-87ed-650b295199ff")
+		(uuid "47963fee-6ae5-45b1-b421-07d5f5ada9bd")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7325,7 +7325,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "982e7b48-43b4-4f3b-bb85-1ac8b2dc3cba")
+		(uuid "bef25d59-8819-4d6c-8662-de2b7e6b9478")
 	)
 	(global_label "PLC_IN1_N"
 		(shape passive)
@@ -7337,7 +7337,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d02b2902-16fc-4025-9d08-0d4267d54c02")
+		(uuid "564a1ed3-e60d-41f7-a276-0ab7487b9912")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7349,7 +7349,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ebf034a5-76f9-4bf4-9af5-00f50293d8cd")
+		(uuid "714d95d0-038b-48d3-a91a-41b0de0f1b7b")
 	)
 	(global_label "FLD_OPTO2_A"
 		(shape passive)
@@ -7361,7 +7361,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "380ee3ac-ac52-4d92-a890-2f47c43ad52d")
+		(uuid "4c4d4f46-18e2-4806-84a7-acf1e54ea2a1")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7373,7 +7373,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d019d935-f41e-499a-bfcf-dfe308bdb1d2")
+		(uuid "6785275b-06d8-4bf7-a43c-938c3da819a1")
 	)
 	(global_label "PLC_IN2_N"
 		(shape passive)
@@ -7385,7 +7385,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c3a7fa8a-9fb6-4569-9e67-fa68fd417523")
+		(uuid "aa4381a5-a9fb-4efc-b18d-877129c41f12")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7397,7 +7397,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1fc10504-89dc-441a-bad0-200e07a656ad")
+		(uuid "b6297fc6-2b61-449c-9f8b-47c3dc94aeb6")
 	)
 	(global_label "FLD_OPTO3_A"
 		(shape passive)
@@ -7409,7 +7409,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "440c5f39-5623-48e0-9b8f-8c6dc07a1f71")
+		(uuid "0e75e411-7705-4895-9ec2-ed7fc2a7c4ab")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7421,7 +7421,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0c6c28eb-b2b7-4938-8b58-989d1fd53399")
+		(uuid "5e8c8711-d809-46de-9ed0-45ed0c57676b")
 	)
 	(global_label "PLC_IN3_N"
 		(shape passive)
@@ -7433,7 +7433,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b58c3d9e-f28b-48f2-8a25-5bea3b246c9d")
+		(uuid "76473d2e-5a9f-4211-964e-eac012a1cd18")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7445,7 +7445,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3d08e21a-3f97-45de-a3d9-5cc78d0bf195")
+		(uuid "06ac463e-f240-4528-92b6-64b8d39db1d5")
 	)
 	(global_label "FLD_OPTO4_A"
 		(shape passive)
@@ -7457,7 +7457,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bc939f6c-06f1-483c-b94a-fc210b0aac5d")
+		(uuid "b6233e64-0e4b-4907-b45f-2445fd4ea6ed")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7469,7 +7469,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "62350752-eca3-4971-9e04-a2c19f957a3e")
+		(uuid "2595718a-3168-45ed-a813-6f15048aa607")
 	)
 	(global_label "PLC_IN4_N"
 		(shape passive)
@@ -7481,7 +7481,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3d4b0f03-b939-4475-a57c-c1af0b2ef652")
+		(uuid "93b10087-3922-4d67-bf15-07fbb7d40851")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7493,7 +7493,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bdf1e53e-ff3c-4f4f-9523-6bc8bfec05b9")
+		(uuid "eac76cdd-d849-41c7-ae9a-859e66532b5a")
 	)
 	(global_label "FLD_LED5_A"
 		(shape passive)
@@ -7505,7 +7505,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c231952d-a0a3-4e6d-8ea1-95b167fd0441")
+		(uuid "cf00c6ed-3eb7-42dc-a636-ba41fdc211e1")
 	)
 	(global_label "FLD_OPTO5_A"
 		(shape passive)
@@ -7517,7 +7517,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1969adb2-63a1-405d-9471-aab44e8c0020")
+		(uuid "b9794f7c-af78-4ce5-adac-dd4d03ab99b1")
 	)
 	(global_label "FLD_LED5_A"
 		(shape passive)
@@ -7529,7 +7529,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5d69bda3-4065-422e-8cff-81742a29f882")
+		(uuid "c619d464-0f37-449e-82c2-c7e469455039")
 	)
 	(global_label "FIELD_IN5"
 		(shape passive)
@@ -7541,7 +7541,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8ce3646f-2783-4f9f-bec1-2e8e70a36e10")
+		(uuid "224050ac-6757-4baf-abd0-b1611f5b6a84")
 	)
 	(global_label "FLD_LED5_A"
 		(shape passive)
@@ -7553,7 +7553,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3c700e36-65c4-409c-90f8-0003d2efb077")
+		(uuid "02bbaeb9-a3b0-4113-8fc3-83413ef25885")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7565,7 +7565,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "67d8c373-906c-4825-a59d-09e9b467cf6a")
+		(uuid "d7468f8d-0eb5-49d4-a377-0e40ab7b608d")
 	)
 	(global_label "FLD_LED6_A"
 		(shape passive)
@@ -7577,7 +7577,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "782867d3-f7e9-4723-aa5d-b5cd496a331c")
+		(uuid "7e7041b5-6d2c-413d-bc03-c4df06c50e26")
 	)
 	(global_label "FLD_OPTO6_A"
 		(shape passive)
@@ -7589,7 +7589,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cba99b1b-88ce-41de-a5c4-4198ed047666")
+		(uuid "5f7233bc-1ea4-40db-8122-cd3b5a62edf8")
 	)
 	(global_label "FLD_LED6_A"
 		(shape passive)
@@ -7601,7 +7601,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d6066eab-709c-4fdb-bf78-8b5fdd7e18a4")
+		(uuid "17ac6c4a-da85-44cb-abfa-1153f58d59ae")
 	)
 	(global_label "FIELD_IN6"
 		(shape passive)
@@ -7613,7 +7613,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6457d56f-4e58-4cc6-8dec-d2f46438bc0f")
+		(uuid "91ed3238-8758-40fc-b97f-a4733e986e61")
 	)
 	(global_label "FLD_LED6_A"
 		(shape passive)
@@ -7625,7 +7625,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d9b263d7-de21-461e-9cc5-57b1bc7e4e92")
+		(uuid "0f30a371-455e-48c3-bf0e-446e945ab9ec")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7637,7 +7637,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8ce8b371-d898-4430-b8fe-f8c8e7c5f2bc")
+		(uuid "1de4971f-d2af-43dc-8d76-0ac132f91b7b")
 	)
 	(global_label "FLD_LED7_A"
 		(shape passive)
@@ -7649,7 +7649,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ea1d4e5f-6d85-47ff-a98c-e10c0c20dec9")
+		(uuid "514d6b17-f970-42b1-b057-97eaae300c76")
 	)
 	(global_label "FLD_OPTO7_A"
 		(shape passive)
@@ -7661,7 +7661,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "14ccc697-8db1-47ca-afdd-ce8276e38887")
+		(uuid "b2a189da-c25f-497d-aeea-9dce9012ebaa")
 	)
 	(global_label "FLD_LED7_A"
 		(shape passive)
@@ -7673,7 +7673,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3e3a9af8-d536-44b8-ac43-d0c8ca682d3c")
+		(uuid "54df7a9c-3bd3-446f-8fd1-9cf40c67789d")
 	)
 	(global_label "FIELD_IN7"
 		(shape passive)
@@ -7685,7 +7685,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c95f0382-b6ba-4500-a3a5-fd7ca9c9362c")
+		(uuid "538b12ea-90e4-4268-ba55-2e569fdcc8ba")
 	)
 	(global_label "FLD_LED7_A"
 		(shape passive)
@@ -7697,7 +7697,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "91c73170-b482-42e7-9ced-01ea6809862a")
+		(uuid "a7d1608d-51a1-4db7-b319-c513d5cbfea0")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7709,7 +7709,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "13e68bca-3667-4116-85a3-4b42548ac100")
+		(uuid "584ee2dd-4e12-4500-ba72-5a8dce191776")
 	)
 	(global_label "FLD_LED8_A"
 		(shape passive)
@@ -7721,7 +7721,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "096450e2-e490-4414-adf4-e89883d22a0a")
+		(uuid "97e526df-4e4e-4de9-94c6-eb0278bcd94d")
 	)
 	(global_label "FLD_OPTO8_A"
 		(shape passive)
@@ -7733,7 +7733,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b9d89c37-944e-437e-b8ca-6e28c32a4247")
+		(uuid "7b26ac8d-ab6c-4b22-a3eb-507302d38874")
 	)
 	(global_label "FLD_LED8_A"
 		(shape passive)
@@ -7745,7 +7745,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cec75ef3-3b52-4e2d-b364-14170f1b43e5")
+		(uuid "993b0bb2-2588-4666-bf08-1a81bf8ee9c0")
 	)
 	(global_label "FIELD_IN8"
 		(shape passive)
@@ -7757,7 +7757,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c51667ad-f83d-4a14-a29e-1219963ee9a8")
+		(uuid "e19481d8-2271-4dea-8b35-58720eb7478d")
 	)
 	(global_label "FLD_LED8_A"
 		(shape passive)
@@ -7769,7 +7769,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3e39a39e-b5e6-4547-8287-560f3b0e7216")
+		(uuid "f958d9cf-be2c-4135-ac03-e7dcbc9e6881")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7781,7 +7781,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "40af8cb9-81a6-4c4f-be93-6410d84ce2eb")
+		(uuid "075c24e0-5040-4ea5-8926-342665b66515")
 	)
 	(global_label "FLD_OPTO5_A"
 		(shape passive)
@@ -7793,7 +7793,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "222d71d5-80a1-432c-ab33-e312032a49ec")
+		(uuid "27e9880a-8507-477b-8af1-cf02b6136313")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7805,7 +7805,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f4d71197-be0c-4d42-9c76-e4008b852c1e")
+		(uuid "ba89ce6c-89b1-4c14-863c-d98018b41b8b")
 	)
 	(global_label "PLC_IN5_N"
 		(shape passive)
@@ -7817,7 +7817,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4131473d-f71c-40db-bb5e-fc133ee30f49")
+		(uuid "ebbeb735-7901-427d-8403-70ba245d9089")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7829,7 +7829,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fcb5b817-7ee5-406a-bd36-41f7cd14de0e")
+		(uuid "9dde94f9-d020-4619-bc83-f4de41fca6b6")
 	)
 	(global_label "FLD_OPTO6_A"
 		(shape passive)
@@ -7841,7 +7841,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8e3da5c8-d392-40df-896b-ae8028fce31c")
+		(uuid "269a5068-76c2-4b5c-b87a-033d0ab65ac7")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7853,7 +7853,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4fd57c5b-2a70-4172-a791-e448c696f0ed")
+		(uuid "86a6be57-eb55-4b68-a348-5c5dc88e71a3")
 	)
 	(global_label "PLC_IN6_N"
 		(shape passive)
@@ -7865,7 +7865,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "877eaf64-c30c-4d53-a55c-276245d3457a")
+		(uuid "fd25696d-b968-4a89-8873-f1ca1dbc040d")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7877,7 +7877,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "00842ebc-4d3d-425e-9cd3-529ec73bd9b5")
+		(uuid "99b3ece8-d691-4b3c-93df-261e9e71ed8c")
 	)
 	(global_label "FLD_OPTO7_A"
 		(shape passive)
@@ -7889,7 +7889,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c4cdfaf1-a6c5-416e-a297-455c38ab5580")
+		(uuid "ee9ba748-cbc5-4ddd-9c0c-bf3033bfb560")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7901,7 +7901,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a996fe4e-32ca-41f1-b68c-567de6d918d2")
+		(uuid "fd0e4dd2-f079-45e1-b193-af5560969d61")
 	)
 	(global_label "PLC_IN7_N"
 		(shape passive)
@@ -7913,7 +7913,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "99888ad1-6f88-4061-899c-a23005afc423")
+		(uuid "311e2c65-b7c2-4111-9767-acb4b63218bd")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7925,7 +7925,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6cf5a1ac-0405-4188-b5bf-3bf1f7684df4")
+		(uuid "2e77302e-0ac2-4b93-9d61-5f8886287754")
 	)
 	(global_label "FLD_OPTO8_A"
 		(shape passive)
@@ -7937,7 +7937,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d0301f69-909f-4aba-847f-ff7bc1eb3e6a")
+		(uuid "dd4b606e-3191-4110-8376-3a84edaad395")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -7949,7 +7949,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c0397a70-3674-4b25-ab10-0b609da7b3ec")
+		(uuid "d1c870d3-c2c1-4da0-856c-77f2f5ec644e")
 	)
 	(global_label "PLC_IN8_N"
 		(shape passive)
@@ -7961,7 +7961,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d8588ee0-6690-459e-90d7-95b2275ab32d")
+		(uuid "359a4a2c-6077-418c-8aab-67d157d91a92")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -7973,7 +7973,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a1c92381-25ea-40e8-85f0-679ff2af05bd")
+		(uuid "07e702b2-f3e9-4d5b-8d82-33bd15c1d8ca")
 	)
 	(global_label "FLD_LED9_A"
 		(shape passive)
@@ -7985,7 +7985,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d4f3440a-707b-40ec-8700-fdd72558c80d")
+		(uuid "95ac7d01-0e72-44d7-a7bb-faa7849837a8")
 	)
 	(global_label "FLD_OPTO9_A"
 		(shape passive)
@@ -7997,7 +7997,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cf47c093-9484-42ed-8f20-46c1832bba0e")
+		(uuid "3f01156f-0aea-47d8-b815-72bf8e2ab6cc")
 	)
 	(global_label "FLD_LED9_A"
 		(shape passive)
@@ -8009,7 +8009,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6f62dea1-131e-4947-ac73-5fd934131241")
+		(uuid "9f63808a-7d20-4dbd-9f02-34a364d70498")
 	)
 	(global_label "FIELD_IN9"
 		(shape passive)
@@ -8021,7 +8021,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "66ac8a55-6513-4463-9820-a14c14565933")
+		(uuid "58a4f0b6-8238-4380-8d18-f77c1370e4dd")
 	)
 	(global_label "FLD_LED9_A"
 		(shape passive)
@@ -8033,7 +8033,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b0262b13-ae26-493b-af6e-e818725f26b8")
+		(uuid "7159b062-0bb6-4e3a-bb9b-9a1924ca869c")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8045,7 +8045,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c24b5a80-8a18-45c8-8fc2-504548896dc7")
+		(uuid "0c9d5b21-725f-466a-89dc-daa077df47fe")
 	)
 	(global_label "FLD_LED10_A"
 		(shape passive)
@@ -8057,7 +8057,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e5cec6da-9094-45c0-974a-d2ac4c383f2b")
+		(uuid "3810d779-5410-42ed-8f7b-af2197661e17")
 	)
 	(global_label "FLD_OPTO10_A"
 		(shape passive)
@@ -8069,7 +8069,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b952cf28-415e-41a2-bac8-bd647d34e528")
+		(uuid "ec77c2d2-f1be-48b6-a7aa-d9f1b039e116")
 	)
 	(global_label "FLD_LED10_A"
 		(shape passive)
@@ -8081,7 +8081,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "404be175-90f1-44a9-9a2d-0e61f27ed584")
+		(uuid "c699bf1c-0031-4ef6-b387-caa573443079")
 	)
 	(global_label "FIELD_IN10"
 		(shape passive)
@@ -8093,7 +8093,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9b20758f-223e-4798-a4ea-a9902092a00e")
+		(uuid "a5bf7487-d7fa-434c-8345-317144491a62")
 	)
 	(global_label "FLD_LED10_A"
 		(shape passive)
@@ -8105,7 +8105,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2b328eb4-af0f-4092-bb8d-281dbf6b0899")
+		(uuid "57142f24-935b-4501-8176-4e5559d78c12")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8117,7 +8117,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "dec86a39-cf8c-4aa9-903e-f8d629eea8c7")
+		(uuid "018d12b6-7c2d-4890-b184-1ba02728ae27")
 	)
 	(global_label "FLD_LED11_A"
 		(shape passive)
@@ -8129,7 +8129,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0699ae27-2196-42a4-83e1-d318dec1cd9a")
+		(uuid "1664b209-9016-44af-a276-450f628a7c2d")
 	)
 	(global_label "FLD_OPTO11_A"
 		(shape passive)
@@ -8141,7 +8141,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a6b74dc8-dcd6-4d7e-8efe-a543e62f20b0")
+		(uuid "c8ec6dc5-722a-434d-b05c-b933fdc4b30e")
 	)
 	(global_label "FLD_LED11_A"
 		(shape passive)
@@ -8153,7 +8153,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b699915b-832c-487c-9926-5a8d38163877")
+		(uuid "adcfe33f-03b3-42df-91e8-a82b4c2f7157")
 	)
 	(global_label "FIELD_IN11"
 		(shape passive)
@@ -8165,7 +8165,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ab4de087-c0bf-4a5e-ba17-9b5ffbf93dd0")
+		(uuid "7afb5c40-ec32-40c3-a942-bee1357762f0")
 	)
 	(global_label "FLD_LED11_A"
 		(shape passive)
@@ -8177,7 +8177,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4a47f430-81d3-4082-ba55-a5e7c5937af8")
+		(uuid "f898daa2-18fe-4a96-88a5-120b364cd6ae")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8189,7 +8189,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bcd12227-0fce-448c-8c40-c6044e907d2d")
+		(uuid "d4f47c2f-ed6d-4990-b9ae-2a6d049ecbff")
 	)
 	(global_label "FLD_LED12_A"
 		(shape passive)
@@ -8201,7 +8201,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e8aa4cf9-a3e9-44e7-a190-0e2fa2963a82")
+		(uuid "7e13c2ce-221e-42d5-ba24-e8bdcd1a9405")
 	)
 	(global_label "FLD_OPTO12_A"
 		(shape passive)
@@ -8213,7 +8213,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "dc507681-9abd-42c2-8418-debf112c877e")
+		(uuid "af8b9925-32f2-4da1-af66-2b1e19c36e02")
 	)
 	(global_label "FLD_LED12_A"
 		(shape passive)
@@ -8225,7 +8225,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "58b7b69a-c30d-477f-ae32-b60bd0b24d7a")
+		(uuid "f50080bb-bde2-40fe-897c-e8c2565b3eb0")
 	)
 	(global_label "FIELD_IN12"
 		(shape passive)
@@ -8237,7 +8237,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "28217569-feb4-40e1-a1b1-375e93b6bbaa")
+		(uuid "4f9a0e1f-f736-4ebe-b682-83c9eb25fc6c")
 	)
 	(global_label "FLD_LED12_A"
 		(shape passive)
@@ -8249,7 +8249,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d170d63b-6137-4908-8828-1a170a495ec1")
+		(uuid "e8ce8540-9ef8-4008-a8b3-f38e4ba425a3")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8261,7 +8261,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "90d32096-158c-4511-8e4d-6e88350f8499")
+		(uuid "e06d64c4-a8d1-4e0c-b80a-6bd2b48c80c9")
 	)
 	(global_label "FLD_OPTO9_A"
 		(shape passive)
@@ -8273,7 +8273,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "47e46dc3-9d2f-4ff9-a18b-df54383c3840")
+		(uuid "0186cf8b-fe72-438c-9215-789b13ab787a")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8285,7 +8285,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e9ec9849-cb5b-4cbc-9afd-a59a828439ef")
+		(uuid "62acd86b-a18b-4834-b019-6b756676d163")
 	)
 	(global_label "PLC_IN9_N"
 		(shape passive)
@@ -8297,7 +8297,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0aec49df-0964-4a64-b4c9-deea0b012364")
+		(uuid "d4a7119f-ab5e-4283-8ab9-cc35747fb6c8")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8309,7 +8309,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b7782d3e-0561-4e0f-92e4-70ca564f0726")
+		(uuid "3f6a48d6-1db3-4cfc-a8e9-e103d49b5eb4")
 	)
 	(global_label "FLD_OPTO10_A"
 		(shape passive)
@@ -8321,7 +8321,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "728234f6-be48-49bb-bcaf-512cf22756af")
+		(uuid "94062f65-7cdd-43fd-8129-b07914df75b7")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8333,7 +8333,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "abe47c29-423f-46f1-a348-3738b503770d")
+		(uuid "8dd3d495-d8b5-4e7b-8bfd-c6c20209a9d1")
 	)
 	(global_label "PLC_IN10_N"
 		(shape passive)
@@ -8345,7 +8345,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bdc71754-eaef-4912-98da-dce2077a984b")
+		(uuid "aa963d56-2451-40b4-886c-b2427aecdda2")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8357,7 +8357,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fbee0273-1db4-4527-a3c7-0edc34ab9a99")
+		(uuid "d227eac1-bac5-4214-97fd-29a593ac4cfa")
 	)
 	(global_label "FLD_OPTO11_A"
 		(shape passive)
@@ -8369,7 +8369,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ab0511b4-5b01-4751-9822-afbd4e6f27f0")
+		(uuid "f93ab850-d053-44d0-81b0-ff4638c7dcb6")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8381,7 +8381,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d7fb796c-47b5-4f99-a479-e8fb3d5663a6")
+		(uuid "abc339cc-e9df-49ba-bfc2-f1ec4977d360")
 	)
 	(global_label "PLC_IN11_N"
 		(shape passive)
@@ -8393,7 +8393,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3e7a83b6-e432-4f60-b342-619d71f86c64")
+		(uuid "125320a3-258c-4b87-9fbf-e3ccc94d074e")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8405,7 +8405,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ec6ceecc-f26d-4923-9be8-99553a8d1330")
+		(uuid "bfd4e3ab-0ede-4483-a723-c65d29385668")
 	)
 	(global_label "FLD_OPTO12_A"
 		(shape passive)
@@ -8417,7 +8417,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b9013c9f-7e83-43c4-b36d-a8462b41d14b")
+		(uuid "b9f2d121-f85f-45c2-969d-6d8adc13bade")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8429,7 +8429,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "beeae9b8-abf3-41ca-905f-9358d16b861d")
+		(uuid "3f0bcde3-63b6-4743-a45f-19847e6a9cc9")
 	)
 	(global_label "PLC_IN12_N"
 		(shape passive)
@@ -8441,7 +8441,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bf4ea089-3a9b-4502-9b4a-860d0d32fcd4")
+		(uuid "8c46f374-2608-44b0-abc5-79eb544c9801")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8453,7 +8453,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "12186487-010a-4d18-90e5-b9f310ca40d1")
+		(uuid "c1e2801d-6faa-496f-8cea-eea9a22ae21a")
 	)
 	(global_label "FLD_LED13_A"
 		(shape passive)
@@ -8465,7 +8465,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f12fb291-d5f5-4387-af83-f3a523876152")
+		(uuid "08719f3a-0dce-49e5-8c0b-4287d83c32ef")
 	)
 	(global_label "FLD_OPTO13_A"
 		(shape passive)
@@ -8477,7 +8477,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f5566094-5190-4c38-9cf5-382d5bff7463")
+		(uuid "26b92d52-43f4-49ec-b80a-f0e38a25cd79")
 	)
 	(global_label "FLD_LED13_A"
 		(shape passive)
@@ -8489,7 +8489,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "561f009b-9172-4b21-9def-f5a5dc47036e")
+		(uuid "34110c13-a4fd-448f-84b7-654303fe76ce")
 	)
 	(global_label "FIELD_IN13"
 		(shape passive)
@@ -8501,7 +8501,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "33e9705f-648f-4ac3-a848-11f6c40e46c5")
+		(uuid "71487c7f-dedd-4494-b065-dd8e4d02cdde")
 	)
 	(global_label "FLD_LED13_A"
 		(shape passive)
@@ -8513,7 +8513,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5ad8ef58-bc6d-4d06-80c2-1506717f1617")
+		(uuid "ca9cc430-650c-4ce3-936b-6e70dc07f50f")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8525,7 +8525,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d08f8bd2-57af-4887-9a76-3476f5fe6d1a")
+		(uuid "3a571790-4633-49d8-9768-af27294c860e")
 	)
 	(global_label "FLD_LED14_A"
 		(shape passive)
@@ -8537,7 +8537,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ffbb2254-366d-4ef4-8f5a-8423a8cc2d4a")
+		(uuid "fb56e609-bbf3-45f3-aac4-08dcd704ee73")
 	)
 	(global_label "FLD_OPTO14_A"
 		(shape passive)
@@ -8549,7 +8549,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c2dc7708-1237-44f6-9668-149d9e1bb4cb")
+		(uuid "77150663-586f-4442-a126-a3b652e47ab7")
 	)
 	(global_label "FLD_LED14_A"
 		(shape passive)
@@ -8561,7 +8561,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "025f1b60-6171-40b1-b7d5-2facd1fa5a57")
+		(uuid "5209c1d4-7d3f-4f4a-92d7-2c84a5c2a3b2")
 	)
 	(global_label "FIELD_IN14"
 		(shape passive)
@@ -8573,7 +8573,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0f14d630-7a2f-406f-846e-b640f0e67d5b")
+		(uuid "de6f214f-e34f-42ef-a440-937cb09a0949")
 	)
 	(global_label "FLD_LED14_A"
 		(shape passive)
@@ -8585,7 +8585,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7685fe89-639f-4289-8679-3ad6db259586")
+		(uuid "7b4eded9-a0dd-4a9c-9468-d4301d878ac5")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8597,7 +8597,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c3f2543f-0377-4a84-b332-d9e36b5a37fa")
+		(uuid "937fbc58-1326-46dc-98be-3b87d3039e82")
 	)
 	(global_label "FLD_LED15_A"
 		(shape passive)
@@ -8609,7 +8609,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "72dfa627-55d0-41f6-a641-61aaa181709e")
+		(uuid "70d580c1-4d10-4851-b007-ded2957e8727")
 	)
 	(global_label "FLD_OPTO15_A"
 		(shape passive)
@@ -8621,7 +8621,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "927190fc-6e39-4079-bfad-1f924a669880")
+		(uuid "c2eb9ac3-1d56-4448-856e-334dcfd2ee09")
 	)
 	(global_label "FLD_LED15_A"
 		(shape passive)
@@ -8633,7 +8633,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "65fb6f7b-0509-4e5b-85fb-db54c673cab5")
+		(uuid "c9980d59-3214-4834-8250-7ffd01706db8")
 	)
 	(global_label "FIELD_IN15"
 		(shape passive)
@@ -8645,7 +8645,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2aba8e07-d355-4cee-88d5-c2e95da13572")
+		(uuid "c608e508-9146-4095-932d-12c2916817c6")
 	)
 	(global_label "FLD_LED15_A"
 		(shape passive)
@@ -8657,7 +8657,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7aa4944a-3a6a-4876-845b-45cf510fa02b")
+		(uuid "aa1d531d-4e15-4027-a337-d92e9dcb85cb")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8669,7 +8669,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b716464d-29d3-40f1-92f2-6973aa75a890")
+		(uuid "e26cae09-5b6b-4de2-b46b-d19ed2c7b0e0")
 	)
 	(global_label "FLD_LED16_A"
 		(shape passive)
@@ -8681,7 +8681,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ab94d386-797a-467c-8afc-36a653623748")
+		(uuid "dd4d2403-b264-4249-94bc-ad78fbfdf2de")
 	)
 	(global_label "FLD_OPTO16_A"
 		(shape passive)
@@ -8693,7 +8693,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d93df4fd-f257-498c-b4dd-e2427ab07daa")
+		(uuid "1ef28495-1496-4493-bc15-5475a9af7996")
 	)
 	(global_label "FLD_LED16_A"
 		(shape passive)
@@ -8705,7 +8705,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d638230a-53ed-4f30-9f6c-dcec18e633e8")
+		(uuid "a963ddb1-e6c6-48ed-9d3d-0289efa4c8f8")
 	)
 	(global_label "FIELD_IN16"
 		(shape passive)
@@ -8717,7 +8717,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5f8b8788-473f-49f0-baf0-98fbe0f02a7f")
+		(uuid "bc97ee15-0553-4b07-8a6e-5ac52826711e")
 	)
 	(global_label "FLD_LED16_A"
 		(shape passive)
@@ -8729,7 +8729,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a7cb3c26-dd56-46d1-bf74-fd380c06f3f0")
+		(uuid "acb5c40f-29b3-4c6c-ac3c-c17a9641f073")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8741,7 +8741,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f793750f-89aa-4eac-a7ef-bf99ea0f8445")
+		(uuid "cc09c431-3193-4d91-bef3-bb24c2a21061")
 	)
 	(global_label "FLD_OPTO13_A"
 		(shape passive)
@@ -8753,7 +8753,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2a701bc8-dd27-4347-a149-96e45afc2174")
+		(uuid "6fb8d9b8-22cf-4e52-81f4-269a4bbf6b38")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8765,7 +8765,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d24767b3-311c-4200-909d-693132094f04")
+		(uuid "22c57e19-cacb-4c6b-87fb-c817f24d018b")
 	)
 	(global_label "PLC_IN13_N"
 		(shape passive)
@@ -8777,7 +8777,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e3a5a577-add5-4a2c-89ed-ba6ecb95ccde")
+		(uuid "cfa7a893-747e-44af-a304-07ca00b7c401")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8789,7 +8789,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ab84a686-f9e4-411d-95c9-4007d97a8ee5")
+		(uuid "970eb534-14e8-4f71-8dbc-92b23567265e")
 	)
 	(global_label "FLD_OPTO14_A"
 		(shape passive)
@@ -8801,7 +8801,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e7f16976-a0a1-4368-bf93-380f2c423357")
+		(uuid "5fdc9cf8-3867-46f3-97f4-75de4fda7737")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8813,7 +8813,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "253754d1-7b7d-4b08-8e42-3a13a3e98646")
+		(uuid "d578131f-0a4d-4a45-af9b-01ab80231ec3")
 	)
 	(global_label "PLC_IN14_N"
 		(shape passive)
@@ -8825,7 +8825,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cdaef4dd-4d43-44ef-8489-2aff02f1b30b")
+		(uuid "8d51f0a7-a3e5-4e41-b680-6919b060d68c")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8837,7 +8837,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "10dd453c-5de4-4595-8a2c-30ff3a044d97")
+		(uuid "1b379985-795b-4d22-9fcc-ab0b2aaf47b0")
 	)
 	(global_label "FLD_OPTO15_A"
 		(shape passive)
@@ -8849,7 +8849,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a07d5327-5087-46f7-8e25-b6885c577a69")
+		(uuid "ad3801b2-e3e6-459a-a9db-d91de90875a2")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8861,7 +8861,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4ed6260a-30d8-4223-b645-1d8f4a9b0672")
+		(uuid "2d3f4fa7-ba77-4d9b-97dd-760ea0efda41")
 	)
 	(global_label "PLC_IN15_N"
 		(shape passive)
@@ -8873,7 +8873,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "66ebf9c6-18db-444d-901b-a853e9f8e769")
+		(uuid "ed5cf68a-5059-49d2-9404-e060765c09fb")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8885,7 +8885,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "30020d41-783d-449f-809e-a3129ad31087")
+		(uuid "83451111-645d-477d-a662-54efefcfcffc")
 	)
 	(global_label "FLD_OPTO16_A"
 		(shape passive)
@@ -8897,7 +8897,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1fa34df1-4b12-482d-994f-0482530bcd75")
+		(uuid "39cf15f1-7315-4841-b213-31c3e522a183")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8909,7 +8909,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9c2d3265-7ecf-488d-a86e-c1095a8ac4cf")
+		(uuid "25f7d9fe-15bb-4750-a9ca-72c7bbdf3611")
 	)
 	(global_label "PLC_IN16_N"
 		(shape passive)
@@ -8921,7 +8921,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3383fdc7-0adb-475e-9873-5055133c0491")
+		(uuid "12d8294b-e5d1-4f95-be2e-7206495d77cf")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8933,7 +8933,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a3940a22-8f36-4579-b576-2399b750c0a4")
+		(uuid "da76c70e-f4a9-408a-b57f-9ea46c20c9e7")
 	)
 	(global_label "ESTOP_OPTO_A"
 		(shape passive)
@@ -8945,7 +8945,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "378e343b-d636-452a-b6f9-952b44db0d98")
+		(uuid "1a6cb3e3-fd76-4fac-95f8-4b9d48ffaa99")
 	)
 	(global_label "ISO_GND"
 		(shape passive)
@@ -8957,7 +8957,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e3b34505-4026-41ff-9844-ef5b091ac000")
+		(uuid "d8a7ca6d-8bcb-473a-95b9-727d4acd881b")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -8969,7 +8969,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b6296d18-d7f8-4a45-8dcb-c2f078111e96")
+		(uuid "28733d38-eec3-4d1a-9883-880dfa2fb802")
 	)
 	(global_label "ESTOP_N"
 		(shape passive)
@@ -8981,7 +8981,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0de57e7b-96d0-44a2-bbba-64a558a73b69")
+		(uuid "e934c301-d602-4ead-b35c-955c592002ae")
 	)
 	(global_label "ESTOP_N"
 		(shape passive)
@@ -8993,7 +8993,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b269993f-f6e2-4fef-b76c-777a16e31f57")
+		(uuid "058cf628-4377-411f-950b-c3cf784ce3db")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9005,7 +9005,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8dd95b1a-bf95-4a3b-9bd3-f1b3529571f1")
+		(uuid "3e7e7ab8-cc56-46ac-808c-d9910e2d7e87")
 	)
 	(global_label "PLC_IN4_N"
 		(shape passive)
@@ -9017,7 +9017,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "103de9d7-8b2a-4a9f-9e1a-09371ba6326b")
+		(uuid "24c146fe-7c67-43d5-9dde-4845ef4e87c8")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9029,7 +9029,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1a4eac20-fdf8-4979-8e6d-c002def62034")
+		(uuid "d2e55b1e-72be-4aec-8e0b-dcd64036aac3")
 	)
 	(global_label "PLC_IN3_N"
 		(shape passive)
@@ -9041,7 +9041,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c0e5e634-b08c-49a3-a175-1eed8fee97ce")
+		(uuid "acd2292f-7699-42b8-9dc4-f41d2823b888")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9053,7 +9053,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0ad2f2de-0dc6-44b0-ba64-d0f48728fc93")
+		(uuid "21fbcd52-a9ac-4a79-a9a4-0b93f2eed001")
 	)
 	(global_label "PLC_IN2_N"
 		(shape passive)
@@ -9065,7 +9065,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6189074e-8011-4d2c-974d-f77b8159ae8a")
+		(uuid "cb7e5399-690e-42b2-9d0c-b2a814ea5f28")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9077,7 +9077,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "06694b3e-9d9d-4807-a9c6-06b1541a673e")
+		(uuid "f9dcd6c1-39d1-4912-b58a-e80445a799cf")
 	)
 	(global_label "PLC_IN1_N"
 		(shape passive)
@@ -9089,7 +9089,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9c53f2f5-9e8e-4c28-b527-7e30e581a3c8")
+		(uuid "ea45d375-4fc3-407d-9160-47b992f749c2")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9101,7 +9101,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "66db9e0e-1d29-4975-91cb-573b9a9f76d8")
+		(uuid "8d6f3996-6a38-4369-95c9-d1345c0e65bc")
 	)
 	(global_label "PLC_IN8_N"
 		(shape passive)
@@ -9113,7 +9113,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "db22a67e-95c0-4334-a9de-10ad7cfc7bb6")
+		(uuid "f32e1666-e44a-4239-a195-f1c69cb7350a")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9125,7 +9125,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6225672b-aa47-485f-889f-7893111b2ffd")
+		(uuid "214e9262-d980-4216-9831-79fdba8e28bd")
 	)
 	(global_label "PLC_IN7_N"
 		(shape passive)
@@ -9137,7 +9137,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1e1727f4-4e61-426e-bfb9-77a3efeeddca")
+		(uuid "357bcea8-3349-4f6e-a0cd-a0a444cf4e72")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9149,7 +9149,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "625db73b-c2e5-4c0a-bf2c-e2fdbda1a781")
+		(uuid "e24c0099-4e5f-4e2e-bd4b-8285fefc550c")
 	)
 	(global_label "PLC_IN6_N"
 		(shape passive)
@@ -9161,7 +9161,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bae51f3b-c5aa-4f5e-8f9f-311c8d6d610b")
+		(uuid "b51b1108-470b-4f63-8876-c74a92e985d2")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9173,7 +9173,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0e2646da-03b0-4957-b3cd-7a66104502ef")
+		(uuid "6b435137-4460-4ee9-9e1e-99142c360915")
 	)
 	(global_label "PLC_IN5_N"
 		(shape passive)
@@ -9185,7 +9185,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e02843af-daad-41b3-90ad-76873058d1bb")
+		(uuid "248176c9-1a3e-4ed4-830e-780325dcf58b")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9197,7 +9197,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fdf3ee56-7353-4d66-bb75-559cf02f746d")
+		(uuid "fec13294-ad23-4221-99aa-4000b8f78482")
 	)
 	(global_label "PLC_IN12_N"
 		(shape passive)
@@ -9209,7 +9209,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cf4b6ec6-9e63-42a0-85b2-ffd16787c93f")
+		(uuid "4714ad3d-8f73-4a1a-84d2-a9387e60212a")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9221,7 +9221,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "04705ee0-f42d-4900-a602-65cf01ed737f")
+		(uuid "dabedcda-c54e-4f15-9296-295ac51137d4")
 	)
 	(global_label "PLC_IN11_N"
 		(shape passive)
@@ -9233,7 +9233,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9e4a4edc-ecc0-4303-b7ac-580fda539b34")
+		(uuid "77685ed0-2406-4edb-90dc-44dab54a27de")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9245,7 +9245,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bcbb4e21-b53a-4c83-a7dd-477bcc4738d7")
+		(uuid "79ee4d8c-4afa-49f9-97d2-e4625de7fbb9")
 	)
 	(global_label "PLC_IN10_N"
 		(shape passive)
@@ -9257,7 +9257,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "93cf8efc-9818-44dd-9387-62dbee1c6b35")
+		(uuid "3b787d19-7983-4fb8-94fe-e4000f8f5ea0")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9269,7 +9269,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d46dfa4a-365e-4da0-8883-fefc4e3d78a5")
+		(uuid "1ff9f945-ee42-452a-b70c-4e1f5d0d1079")
 	)
 	(global_label "PLC_IN9_N"
 		(shape passive)
@@ -9281,7 +9281,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "642505de-c62c-4f26-a2fa-513a6f3d7083")
+		(uuid "da4c3925-3585-4b27-b8d9-c5e0ffce2935")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9293,7 +9293,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "743d19f7-0300-4f8d-8ca5-2f29e72ee3a0")
+		(uuid "d44ca57f-1afb-4721-b76d-64379999ad60")
 	)
 	(global_label "PLC_IN16_N"
 		(shape passive)
@@ -9305,7 +9305,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7aab2a4c-a905-41e8-a55c-e7e995a33331")
+		(uuid "d635fad3-c484-4e0e-8b21-d2dcc9e1427d")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9317,7 +9317,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "96e79b2e-c977-4d7a-bc46-543ea3711518")
+		(uuid "77f52b95-da55-4330-aa61-3572546b716c")
 	)
 	(global_label "PLC_IN15_N"
 		(shape passive)
@@ -9329,7 +9329,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bb9a141a-07c6-4181-a0b4-ca78157fa1c9")
+		(uuid "483e1c5c-6ea4-4dda-b381-49fc926db18f")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9341,7 +9341,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "36ff3129-0c71-41e6-bcb8-b2ad72785fb9")
+		(uuid "2b3b18be-9cd0-44d0-8b7a-af348e2ce952")
 	)
 	(global_label "PLC_IN14_N"
 		(shape passive)
@@ -9353,7 +9353,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ce690367-29a1-4f3b-aaea-ef65b6fc6d4a")
+		(uuid "f3f36047-2cb8-4af3-bc0a-9747bbf107fb")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9365,7 +9365,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "94715cf1-259c-46aa-a484-e45fc7fc35e8")
+		(uuid "66eba6a3-b985-4dc4-8839-5eb95dccbe86")
 	)
 	(global_label "PLC_IN13_N"
 		(shape passive)
@@ -9377,7 +9377,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "829b17e1-b53d-4602-8e00-95b4daaab915")
+		(uuid "a0ab056c-8787-46af-8155-514129d8c1f0")
 	)
 	(global_label "+3V3"
 		(shape passive)
@@ -9389,7 +9389,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "235ca6c3-4a72-438c-bbb7-be1ff017e616")
+		(uuid "4f3a31f1-b615-49a0-aeb4-7f86b5034f06")
 	)
 	(text_box "16 isolated PLC field positions use software-remapped logical channels to minimize PCB crossings. The dedicated E-stop optochannel is separate from the shift-register bits. PLC and control channels keep the indicator LED, 2.2 k series limit and reverse diode. The LED is placed first so it can sit at the input connector. Every four isolated inputs share one TLP291-4 SOP-16 optocoupler. Four 4x10 k isolated networks provide the PLC pull-ups and no input-node capacitor is fitted. U8 adds eight isolated AX0-AX3 servo ready/error inputs; U9 is the final unisolated byte for AX4."
 		(exclude_from_sim no)
@@ -9409,7 +9409,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "1531548f-7e42-4e3d-9d2a-50c1e577e77b")
+		(uuid "32a04a31-5f67-472c-aafd-5e6a96d0c136")
 	)
 	(text_box "The dedicated E-stop uses one TLP291 SOP-4 optocoupler and R74. PLC inputs use four TLP291-4 packages with two 8x10 k pull-up networks. Every field input uses the same connector-side indicator LED / 2.2 k / reverse-diode chain. Firmware provides debouncing."
 		(exclude_from_sim no)
@@ -9429,7 +9429,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "cfdf89b8-45b5-4df0-9852-d6ca4e7e6b0b")
+		(uuid "568e8fa2-d6e2-4d64-9deb-bf5625c05de9")
 	)
 	(sheet_instances
 		(path "/"

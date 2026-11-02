@@ -5,7 +5,7 @@ architecture uses a 32-bit input shift-register chain and a 32-bit output chain,
 with 16 isolated PLC inputs, seven paired servo ZERO/ERROR inputs, a dedicated
 direct E-stop input, seven STEP/DIR motion axes with grouped 3-axis/4-axis
 enables, 16 general low-side field outputs, three encoders,
-microSD, optional ESP-01/ESP-01S, LCD LVDS output, three 0-10 V analog inputs
+microSD, optional ESP-01/ESP-01S, LCD LVDS output, four 0-10 V analog inputs
 and four 0-10 V analog outputs. The backlight has an isolated 24 V to 12 V
 buck converter sourced from the J33/J45 PLC field rail.
 

@@ -1,13 +1,13 @@
 Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 1,ESP_PROG,Button_Switch_THT:SW_PUSH_6mm,C&K,PTS645SM43SMTR92LFS,FIT,SW2
-28,100nF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 100nF,FIT,C7 C13 C15 C22 C23 C24 C25 C26 C27 C28 C29 C68 C70 C73 C74 C75 C76 C86 C89 C93 C95 C97 C99 C102 C112 C113 C115 C116
+29,100nF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 100nF,FIT,C7 C13 C15 C22 C23 C24 C25 C26 C27 C28 C29 C68 C70 C73 C74 C75 C76 C86 C89 C93 C95 C97 C99 C102 C112 C113 C115 C116 C118
 6,1uF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 1uF,FIT,C91 C92 C94 C96 C98 C114
 3,100nF 100V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 100nF 100V,FIT,C2 C4 C108
 1,10uF 25V,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF 25V,FIT,C67
 14,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,FIT,C3 C5 C6 C10 C11 C69 C88 C90 C100 C101 C107 C109 C110 C111
-4,24 V DC input | Dedicated E-stop loop | External isolated field 24 V supply / relay common A | External isolated field 24 V supply / relay common B,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J5 J33 J45
-15,"AX0: EN_3AX, STEP, DIR | AX0: ZERO, ERROR, GND | AX1: EN_3AX, STEP, DIR | AX1: ZERO, ERROR, GND | AX2: EN_3AX, STEP, DIR | AX2: ZERO, ERROR, GND | AX3: EN_4AX, STEP, DIR | AX3: ZERO, ERROR, GND | AX4: EN_4AX, STEP, DIR | AX4: ZERO, ERROR, GND | AX5: EN_4AX, STEP, DIR | AX5: ZERO, ERROR, GND | AX6: EN_4AX, STEP, DIR | AX6: ZERO, ERROR, GND | Backlight: +12V_BL, ISO_GND, isolated PWM input","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J2 J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
-6,"0-10 V outputs 0-3; pin 1 = common GND | AI0/GND/AI1/GND/AI2 | Encoder 0: +5,A,B,Z,GND | Encoder 1: +5,A,B,Z,GND | Encoder 2: +5,A,B,Z,GND | I2C0: SDA, SCL, 3.3 V, 5 V, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
+5,"24 V DC input | Backlight: +12V_BL, ISO_GND | Dedicated E-stop loop | External isolated field 24 V supply / relay common A | External isolated field 24 V supply / relay common B","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
+14,"AX0: EN_3AX, STEP, DIR | AX0: ZERO, ERROR, GND | AX1: EN_3AX, STEP, DIR | AX1: ZERO, ERROR, GND | AX2: EN_3AX, STEP, DIR | AX2: ZERO, ERROR, GND | AX3: EN_4AX, STEP, DIR | AX3: ZERO, ERROR, GND | AX4: EN_4AX, STEP, DIR | AX4: ZERO, ERROR, GND | AX5: EN_4AX, STEP, DIR | AX5: ZERO, ERROR, GND | AX6: EN_4AX, STEP, DIR | AX6: ZERO, ERROR, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
+6,"0-10 V outputs 0-3; pin 1 = common GND | Encoder 0: +5,A,B,Z,GND | Encoder 1: +5,A,B,Z,GND | Encoder 2: +5,A,B,Z,GND | GND/AI0/AI1/AI2/AI3 | I2C0: SDA, SCL, 3.3 V, 5 V, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
 4,General outputs 0-7 | General outputs 8-15 | PLC positions 1-8 signals | PLC positions 9-16 signals,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
 1,"LCD LVDS 2x10, 2.00 mm",Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,"LCD LVDS 2x10, 2.00 mm",FIT,J22
 1,SWD,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,generic,SWD,FIT,J4
@@ -32,18 +32,17 @@ Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 2,TBD62083AFG,Package_SO:SOP-18_7.495x11.515mm_P1.27mm,Toshiba,TBD62083AFG,FIT,U26 U27
 2,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2,Advanced Monolithic Systems,AMS1117-3.3,FIT,U2 U34
 1,L78L12ACUTR,Package_TO_SOT_SMD:SOT-89-3_Handsoldering,Texas Instruments,L78L12ACUTR,FIT,U37
-1,100R,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 100R,FIT,R131
 13,10k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 10k,FIT,R92 R93 R94 R95 R96 R97 R98 R99 R104 R105 R106 R107 R111
 4,22k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 22k,FIT,R100 R101 R102 R103
 1,5.1k,Resistor_SMD:R_0805_2012Metric,Yageo,RC0805 series 1% 5.1k,FIT,R110
 1,500mA,Resistor_SMD:R_1206_3216Metric,Bel Fuse,0ZCG0050FF2E,FIT,F2
 1,2 A,Resistor_SMD:R_1206_3216Metric,Bel Fuse,0ZCG0200FF2E,FIT,F1
 2,600R@100MHz,Resistor_SMD:R_1206_3216Metric,Murata,BLM18KG601SN1D,FIT,FB1 FB2
-7,100k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 100k,FIT,R61 R64 R67 R71 R73 R126 R128
+8,100k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 100k,FIT,R61 R64 R67 R71 R73 R126 R128 R182
 2,10k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 10k,FIT,R9 R127
 2,1k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 1k,FIT,R4 R5
 33,2.2k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 2.2k,FIT,R16 R18 R19 R20 R21 R22 R23 R24 R25 R26 R27 R28 R29 R30 R31 R32 R33 R34 R35 R36 R37 R38 R39 R40 R41 R118 R119 R120 R121 R122 R123 R124 R125
-5,33k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 33k,FIT,R63 R66 R69 R70 R72
+6,33k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 33k,FIT,R63 R66 R69 R70 R72 R183
 1,4.7k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 4K7L,FIT,R74
 1,4x22R,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-07 series 1%,FIT,RN44
 16,4x10k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-0710KL,FIT,RN8 RN9 RN10 RN11 RN12 RN13 RN30 RN31 RN32 RN33 RN34 RN35 RN36 RN41 RN42 RN43

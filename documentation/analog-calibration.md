@@ -1,8 +1,8 @@
 # Analog input and output calibration
 
-## Inputs AI0-AI2
+## Inputs AI0-AI3
 
-Each input uses a 100 k upper divider and a 33 k lower divider:
+Each of the four inputs uses a 100 k upper divider and a 33 k lower divider:
 
 ```text
 Vadc = Vin * 33 / (100 + 33)

@@ -409,13 +409,7 @@ def main() -> None:
     for pin, expected_net in hstx_pin_map.items():
         if ("MOD1", pin) not in nets.get(expected_net, set()):
             failures.append(f"MOD1 pin {pin} is not mapped to {expected_net}")
-    if ("MOD1", "25") not in nets.get("BL_PWM_MCU", set()):
-        failures.append("GPIO35/MOD1 pin 25 is not connected to BL_PWM_MCU")
-    if {("R131", "1"), ("MOD1", "25")} - nets.get("BL_PWM_MCU", set()):
-        failures.append("R131 is not in series with the PWM source")
-    if ("R131", "2") not in nets.get("BL_PWM", set()):
-        failures.append("R131 is not connected to the protected BL_PWM node")
-    for channel in range(3):
+    for channel in range(4):
         if f"AI{channel}" not in nets:
             failures.append(f"Missing analog input net AI{channel}")
         if f"AI{channel}_ADC" not in nets:
@@ -425,10 +419,20 @@ def main() -> None:
     analog_upper = {
         component.get("ref"): (component.findtext("value") or "").strip()
         for component in components
-        if component.get("ref") in {"R61", "R64", "R67"}
+        if component.get("ref") in {"R61", "R64", "R67", "R182"}
     }
-    if analog_upper != {"R61": "100k", "R64": "100k", "R67": "100k"}:
+    if analog_upper != {
+        "R61": "100k", "R64": "100k", "R67": "100k", "R182": "100k",
+    }:
         failures.append(f"Analog upper resistors are not all 100k: {analog_upper}")
+    analog_module_pins = {
+        "8": "AI0_ADC", "7": "AI1_ADC", "22": "AI2_ADC", "21": "AI3_ADC",
+    }
+    for module_pin, expected_net in analog_module_pins.items():
+        if ("MOD1", module_pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"{expected_net} is not on MOD1 pin {module_pin}"
+            )
     pwm_pins = ("5", "6", "20", "19")
     for bit in range(4):
         expected = {
@@ -477,6 +481,17 @@ def main() -> None:
         failures.append("12 V analog regulator is not supplied from VIN_PROT")
     if ("MOD1", "34") not in nets.get("SD_CD_MCU", set()):
         failures.append("SD-card detect is not on the requested MOD1 pin 34")
+    sd_module_pins = {
+        "10": "SD_MISO_MCU",
+        "11": "SD_SCK_MCU",
+        "25": "SD_MOSI_MCU",
+        "49": "SD_CS_MCU",
+    }
+    for module_pin, expected_net in sd_module_pins.items():
+        if ("MOD1", module_pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"{expected_net} is not on MOD1 pin {module_pin}"
+            )
     if component_values.get("J36") != "Open-Smart TF Card Breakout":
         failures.append("J36 is not the Open-Smart TF card breakout header")
     microsd_pins = {
@@ -597,7 +612,7 @@ def main() -> None:
             5: "DO12", 6: "DO13", 7: "DO14", 8: "DO15",
         },
         "J24": {
-            1: "AI0", 2: "GND", 3: "AI1", 4: "GND", 5: "AI2",
+            1: "GND", 2: "AI0", 3: "AI1", 4: "AI2", 5: "AI3",
         },
         "J18": {1: "I2C_SDA", 2: "I2C_SCL", 3: "+3V3", 4: "+5V", 5: "GND"},
         "J10": {1: "EN_3AX", 2: "AX0_STEP", 3: "AX0_DIR"},
@@ -614,7 +629,7 @@ def main() -> None:
         "J48": {1: "AX4_ZERO", 2: "AX4_ERROR_N", 3: "GND"},
         "J49": {1: "AX5_ZERO", 2: "AX5_ERROR_N", 3: "GND"},
         "J50": {1: "AX6_ZERO", 2: "AX6_ERROR_N", 3: "GND"},
-        "J2": {1: "+12V_BL", 2: "ISO_GND", 3: "BL_PWM"},
+        "J2": {1: "+12V_BL", 2: "ISO_GND"},
         "J33": {1: "+24V_FIELD", 2: "ISO_GND"},
         "J45": {1: "+24V_FIELD", 2: "ISO_GND"},
         "J13": {1: "+5V_ENC", 2: "ENC0_A_5V", 3: "ENC0_B_5V", 4: "ENC0_Z_5V", 5: "GND"},
@@ -873,7 +888,7 @@ def main() -> None:
         *(f"R{index}" for index in range(132, 148)),
         *(f"R{index}" for index in range(148, 165)),
         "J6", "J19", "J26", "J31", "J34", "J35", "J37", "J38", "J39",
-        "J44", "J51",
+        "J44", "J51", "R131",
         "JP2", "JP3", "JP4",
         "R17", "R50", "R51", "R52", "R53", "R75", "R108", "R109",
         *(f"R{index}" for index in range(44, 50)),
@@ -1080,7 +1095,7 @@ def main() -> None:
         failures.append("U1 is not the specified LMR36510 buck")
     for retired_net in (
         "+5V_ISO_IN", "+12V_FIELD", "+12V_RAW", "DO_COM", "DO_GND",
-        "BL_SW_GATE", "BL_LED_N", "AUX_OUT",
+        "BL_PWM_MCU", "BL_PWM", "BL_SW_GATE", "BL_LED_N", "AUX_OUT",
         "FIELD_COM0", "FIELD_COM1", "FIELD_SAFETY_COM",
     ):
         if retired_net in nets:
@@ -1115,7 +1130,7 @@ def main() -> None:
         failures.append("D2 anode is not on VIN_FUSED")
     if "Q1" in references or "Q1_GATE" in nets:
         failures.append("Retired Q1 input MOSFET or gate net remains")
-    for expected in (("U1", "4"), ("MOD1", "21"), ("R73", "1")):
+    for expected in (("U1", "4"), ("MOD1", "50"), ("R73", "1")):
         if expected not in nets.get("PWR_GOOD_N", set()):
             failures.append(f"Power-good network is missing {expected}")
     if {("U1", "6"), ("C91", "1")} - nets.get("VCC5", set()):

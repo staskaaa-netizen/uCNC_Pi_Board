@@ -1,8 +1,8 @@
 {
   "summary": {
-    "components": 270,
+    "components": 272,
     "by_role": {
-      "ADC filter capacitor": 3,
+      "ADC filter capacitor": 4,
       "IC": 28,
       "IC VCC bypass capacitor": 2,
       "LED": 35,
@@ -13,15 +13,15 @@
       "connector": 33,
       "decoupling capacitor": 22,
       "diode": 21,
-      "divider lower resistor": 3,
-      "divider upper resistor": 3,
+      "divider lower resistor": 4,
+      "divider upper resistor": 4,
       "ferrite bead": 2,
       "fuse": 2,
       "inductor": 2,
       "input bypass capacitor": 1,
       "module": 1,
       "pull-up resistor": 6,
-      "resistor": 57,
+      "resistor": 56,
       "resistor network": 23,
       "signal filter capacitor": 8,
       "solder jumper": 1,
@@ -40,6 +40,7 @@
       "analog input 0": 3,
       "analog input 1": 3,
       "analog input 2": 3,
+      "analog input 3": 3,
       "analog inputs connector": 1,
       "analog output 0": 7,
       "analog output 1": 6,
@@ -57,7 +58,7 @@
       "encoder 2": 2,
       "encoder 2 connector": 1,
       "encoder interface": 2,
-      "input protection and power": 22,
+      "input protection and power": 21,
       "isolated PLC input connectors": 2,
       "isolated general outputs": 43,
       "main power connector": 1,
@@ -80,7 +81,6 @@
     "parked": [
       "C76",
       "D1",
-      "R131",
       "J4",
       "D53",
       "F2",
@@ -88,7 +88,10 @@
       "C68",
       "FB2",
       "JP5",
-      "SW2"
+      "SW2",
+      "C118",
+      "R182",
+      "R183"
     ]
   },
   "components": [
@@ -574,7 +577,7 @@
     },
     {
       "reference": "J2",
-      "value": "Backlight: +12V_BL, ISO_GND, isolated PWM input",
+      "value": "Backlight: +12V_BL, ISO_GND",
       "sheet": "Power and supervision",
       "functional_block": "backlight/CCFL connector",
       "channels": "",
@@ -586,7 +589,7 @@
       "x_mm": 33.2,
       "y_mm": 6.215,
       "dnp": false,
-      "nets": "+12V_BL; BL_PWM; ISO_GND"
+      "nets": "+12V_BL; ISO_GND"
     },
     {
       "reference": "L1",
@@ -763,22 +766,6 @@
       "y_mm": 32.766,
       "dnp": false,
       "nets": "FB12; ISO_GND"
-    },
-    {
-      "reference": "R131",
-      "value": "100R",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
-      "channels": "",
-      "role": "resistor",
-      "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "place with functional block; review after placement",
-      "current_status": "parked",
-      "side": "F.Cu",
-      "x_mm": 93.482,
-      "y_mm": -4.976,
-      "dnp": false,
-      "nets": "BL_PWM; BL_PWM_MCU"
     },
     {
       "reference": "U1",
@@ -977,7 +964,7 @@
       "value": "WeAct RP2350B Core Board (socketed)",
       "sheet": "MCU, shift chains and safety",
       "functional_block": "controller module",
-      "channels": "analog input 0; analog output 0; encoder 0; analog input 1; analog output 1; encoder 1; analog input 2; analog output 2; encoder 2; analog output 3",
+      "channels": "analog input 0; analog output 0; encoder 0; analog input 1; analog output 1; encoder 1; analog input 2; analog output 2; encoder 2; analog input 3; analog output 3",
       "role": "module",
       "associated_ic_or_net": "socketed controller module",
       "placement_rule": "mechanical anchor; do not move without approval",
@@ -986,7 +973,7 @@
       "x_mm": 116.586,
       "y_mm": 65.786,
       "dnp": false,
-      "nets": "+3V3_A; +5V; AI0_ADC; AI1_ADC; AI2_ADC; AOUT0_PWM; AOUT1_PWM; AOUT2_PWM; AOUT3_PWM; BL_PWM_MCU; ENC0_A_3V3; ENC0_B_3V3; ENC0_Z_3V3; ENC1_A_3V3; ENC1_B_3V3; ENC1_Z_3V3; ENC2_A_3V3; ENC2_B_3V3; ENC2_Z_3V3; ESTOP_N; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; PWR_GOOD_N; SD_CD_MCU; SD_CS_MCU; SD_MISO_MCU; SD_MOSI_MCU; SD_SCK_MCU; SR_IN_Q7; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK; WIFI_RX; WIFI_TX"
+      "nets": "+3V3_A; +5V; AI0_ADC; AI1_ADC; AI2_ADC; AI3_ADC; AOUT0_PWM; AOUT1_PWM; AOUT2_PWM; AOUT3_PWM; ENC0_A_3V3; ENC0_B_3V3; ENC0_Z_3V3; ENC1_A_3V3; ENC1_B_3V3; ENC1_Z_3V3; ENC2_A_3V3; ENC2_B_3V3; ENC2_Z_3V3; ESTOP_N; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; PWR_GOOD_N; SD_CD_MCU; SD_CS_MCU; SD_MISO_MCU; SD_MOSI_MCU; SD_SCK_MCU; SR_IN_Q7; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK; WIFI_RX; WIFI_TX"
     },
     {
       "reference": "R9",
@@ -3997,11 +3984,27 @@
       "nets": "+12V_AO; GND"
     },
     {
+      "reference": "C118",
+      "value": "100nF",
+      "sheet": "Analog I/O",
+      "functional_block": "analog input 3",
+      "channels": "analog input 3",
+      "role": "ADC filter capacitor",
+      "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
+      "placement_rule": "place beside J24 with its channel divider; keep the high-impedance branch short",
+      "current_status": "parked",
+      "side": "F.Cu",
+      "x_mm": 236.0,
+      "y_mm": 12.0,
+      "dnp": false,
+      "nets": "AI3_ADC; GND"
+    },
+    {
       "reference": "J24",
-      "value": "AI0/GND/AI1/GND/AI2",
+      "value": "GND/AI0/AI1/AI2/AI3",
       "sheet": "Analog I/O",
       "functional_block": "analog inputs connector",
-      "channels": "analog input 0; analog input 1; analog input 2",
+      "channels": "analog input 0; analog input 1; analog input 2; analog input 3",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
@@ -4010,7 +4013,7 @@
       "x_mm": 155.583,
       "y_mm": 57.529,
       "dnp": false,
-      "nets": "AI0; AI1; AI2; GND"
+      "nets": "AI0; AI1; AI2; AI3; GND"
     },
     {
       "reference": "J25",
@@ -4379,6 +4382,38 @@
       "y_mm": 22.387,
       "dnp": false,
       "nets": "AOUT3_FB; GND"
+    },
+    {
+      "reference": "R182",
+      "value": "100k",
+      "sheet": "Analog I/O",
+      "functional_block": "analog input 3",
+      "channels": "analog input 3",
+      "role": "divider upper resistor",
+      "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
+      "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
+      "current_status": "parked",
+      "side": "F.Cu",
+      "x_mm": 220.0,
+      "y_mm": 12.0,
+      "dnp": false,
+      "nets": "AI3; AI3_ADC"
+    },
+    {
+      "reference": "R183",
+      "value": "33k",
+      "sheet": "Analog I/O",
+      "functional_block": "analog input 3",
+      "channels": "analog input 3",
+      "role": "divider lower resistor",
+      "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
+      "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
+      "current_status": "parked",
+      "side": "F.Cu",
+      "x_mm": 228.0,
+      "y_mm": 12.0,
+      "dnp": false,
+      "nets": "AI3_ADC; GND"
     },
     {
       "reference": "U37",

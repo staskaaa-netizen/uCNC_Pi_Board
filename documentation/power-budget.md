@@ -59,9 +59,8 @@ The first 1 A buck limit must include both LDO input currents plus the direct
 logic-side loads simultaneously. The 2 A input fuse remains the hard assembly
 limit for both converter branches.
 
-J2 provides the isolated 12 V rail, return and protected PWM signal.
-High-current switching, CCFL inversion and PWM isolation remain external.
-R131 provides 100 ohm series protection between GPIO35 and J2 pin 3.
+J2 provides the isolated 12 V rail and return. High-current switching, CCFL
+inversion and PWM isolation remain external.
 The 0-10 V output amplifier remains on the independent U37 `+12V_AO` rail.
 
 A linear 5 V regulator is not acceptable from the specified 12-24 V input. At

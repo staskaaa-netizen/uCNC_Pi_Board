@@ -46,7 +46,7 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 | Motion output array | Group source and pulldowns; keep U42/U43 between U10-U13 and J10/J11/J28-J30/J46/J47 |
 | ULN output | Group both ULN banks, clamp rail, existing indicator chains, J12 and J32 |
 | Encoder channel | Keep U28 between J13-J15 and the MCU; keep R110/R111 at J15 for the ENC2_Z divider |
-| Backlight power | Keep U3, L2, D3, C107-C114 and R126-R128 together; keep J2 and R131 at an accessible edge |
+| Backlight power | Keep U3, L2, D3, C107-C114 and R126-R128 together; keep 2-pin J2 at an accessible edge |
 | Display option | J22 driven through the fitted RN26/RN27 passive LVDS path |
 | Fixed mechanical part | Do not move without explicit approval |
 
@@ -61,6 +61,7 @@ All three analog inputs use the approved AI0 template on F.Cu:
 | C73 | 100 nF ADC filter | AI0_ADC / MOD1 pin 8 |
 | R64 / R66 / C74 | AI1 equivalent divider/filter | AI1_ADC / MOD1 pin 7 |
 | R67 / R69 / C75 | AI2 equivalent divider/filter | AI2_ADC / MOD1 pin 22 |
+| R182 / R183 / C118 | AI3 equivalent divider/filter | AI3_ADC / MOD1 pin 21 |
 
 Each three-part group is aligned to its corresponding J24 input pin.
 
@@ -91,13 +92,13 @@ The final main-power placement pass keeps the high-current loops local:
   J22. U41 and C106 are removed.
 - FB1 and C15 form the `+3V3_A` reference filter at MOD1 pin 48. The redundant
   10 uF C14 bulk capacitor is removed.
-- R73 is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO43.
+- R73 is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO3/MOD1 pin 50.
 - D4/R4 indicate +5 V and D5/R5 indicate +3.3 V. Both pairs are placed in the
   open area between MOD1 and the regulators.
 
 Place D2 and D3 at their respective protected inputs. Keep U3, L2,
-C107-C114 and R126-R128 as one short-loop isolated converter block. Place R131
-in the PWM path to J2 and keep J2 at an accessible board edge.
+C107-C114 and R126-R128 as one short-loop isolated converter block. Keep the
+2-pin isolated J2 power output at an accessible board edge.
 
 ## Isolated input block
 

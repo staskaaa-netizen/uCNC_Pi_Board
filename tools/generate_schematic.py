@@ -781,19 +781,19 @@ def add_mcu(builder: SheetBuilder) -> None:
     gpio_nets = {
         "1": "GND", "2": "GND", "3": None, "4": None, "5": "AOUT0_PWM",
         "6": "AOUT1_PWM", "7": "AI1_ADC", "8": "AI0_ADC", "9": "I2C_SDA",
-        "10": None, "11": "ENC2_Z_3V3", "12": "ENC2_A_3V3",
+        "10": "SD_MISO_MCU", "11": "SD_SCK_MCU", "12": "ENC2_A_3V3",
         "13": "ENC1_B_3V3", "14": "ENC0_Z_3V3", "15": "ENC0_A_3V3",
         "16": "GND", "17": None, "18": None, "19": "AOUT3_PWM",
-        "20": "AOUT2_PWM", "21": "PWR_GOOD_N", "22": "AI2_ADC", "23": "I2C_SCL",
-        "24": None, "25": "BL_PWM_MCU", "26": "ENC2_B_3V3",
+        "20": "AOUT2_PWM", "21": "AI3_ADC", "22": "AI2_ADC", "23": "I2C_SCL",
+        "24": None, "25": "SD_MOSI_MCU", "26": "ENC2_B_3V3",
         "27": "ENC1_Z_3V3", "28": "ENC1_A_3V3", "29": "ENC0_B_3V3",
-        "30": None, "31": "+5V", "32": "GND", "33": None,
-        "34": "SD_CD_MCU", "35": "SD_MISO_MCU", "36": "SD_SCK_MCU",
+        "30": "ENC2_Z_3V3", "31": "+5V", "32": "GND", "33": None,
+        "34": "SD_CD_MCU", "35": None, "36": None,
         "37": None, "38": "WIFI_TX", "39": "HSTX_D0_P",
         "40": "HSTX_D1_P", "41": "HSTX_D2_P", "42": "HSTX_CLK_P",
         "43": "SR_OUT_SER", "44": "SR_LATCH", "45": "SR_PL_N", "46": None,
-        "47": "GND", "48": "+3V3_A", "49": None, "50": None,
-        "51": "SD_CS_MCU", "52": "SD_MOSI_MCU", "53": "ESTOP_N", "54": "WIFI_RX",
+        "47": "GND", "48": "+3V3_A", "49": "SD_CS_MCU", "50": "PWR_GOOD_N",
+        "51": None, "52": None, "53": "ESTOP_N", "54": "WIFI_RX",
         "55": "HSTX_D0_N", "56": "HSTX_D1_N", "57": "HSTX_D2_N",
         "58": "HSTX_CLK_N", "59": "SR_SCK", "60": "SR_IN_Q7",
         "61": None, "62": None, "63": None, "64": None,
@@ -1608,7 +1608,7 @@ def add_display(builder: SheetBuilder) -> None:
 def add_analog(builder: SheetBuilder) -> None:
     b = builder
     b.note(
-        "Three 0-10 V ADC inputs use a 100 k over 33 k divider and one 100 nF ADC "
+        "Four 0-10 V ADC inputs use a 100 k over 33 k divider and one 100 nF ADC "
         "capacitor per channel. Place each divider/filter group at J24, not at the MCU. "
         "Four ground-referenced 0-10 V outputs use individual 0805 resistors for "
         "the approved two-stage 10 k / 1 uF and 10 k / 100 nF PWM filters. A "
@@ -1621,13 +1621,13 @@ def add_analog(builder: SheetBuilder) -> None:
     )
 
     analog_in_nets = {
-        "1": "AI0",
-        "2": "GND",
+        "1": "GND",
+        "2": "AI0",
         "3": "AI1",
-        "4": "GND",
-        "5": "AI2",
+        "4": "AI2",
+        "5": "AI3",
     }
-    b.terminal(5, analog_in_nets, (38, 75), "AI0/GND/AI1/GND/AI2")
+    b.terminal(5, analog_in_nets, (38, 75), "GND/AI0/AI1/AI2/AI3")
 
     for bit in range(3):
         x = 100 + bit * 50
@@ -1653,6 +1653,15 @@ def add_analog(builder: SheetBuilder) -> None:
             (x, 130),
             reference=f"C{73 + bit}",
         )
+    b.resistor(
+        "AI3", "AI3_ADC", "100k", (250, 70), reference="R182"
+    )
+    b.resistor(
+        "AI3_ADC", "GND", "33k", (250, 100), reference="R183"
+    )
+    b.capacitor(
+        "AI3_ADC", "GND", "100nF", (250, 130), reference="C118"
+    )
 
     b.terminal(
         5,
@@ -1787,8 +1796,7 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     b.note(
         "U3 is a 24 V to 12 V LMR36510 buck powered from the isolated PLC "
         "field supply on J33/J45. D3 provides reverse protection and the "
-        "complete converter loop references ISO_GND. R131 protects the "
-        "logic-side PWM output.",
+        "complete converter loop references ISO_GND.",
         250,
         250,
         210,
@@ -1863,32 +1871,22 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     b.resistor("+12V_BL", "FB12", "100k", (311, 325), reference="R126")
     b.resistor("FB12", "ISO_GND", "10k", (324, 325), reference="R127")
     b.resistor("FB12", "ISO_GND", "100k", (337, 325), reference="R128")
-    b.resistor(
-        "BL_PWM_MCU",
-        "BL_PWM",
-        "100R",
-        (302, 338),
-        footprint_key="R0805",
-        reference="R131",
-    )
-
-
 def add_backlight(builder: SheetBuilder) -> None:
     b = builder
     b.note(
         "J2 carries the isolated 12 V backlight rail generated from the PLC "
-        "24 V field supply, its ISO_GND return and a 3.3 V PWM signal. The "
-        "external backlight driver must provide PWM isolation.",
+        "24 V field supply and its ISO_GND return. Backlight PWM is not "
+        "provided by this board.",
         15,
         240,
         180,
         30,
     )
     b.terminal(
-        3,
-        {"1": "+12V_BL", "2": "ISO_GND", "3": "BL_PWM"},
+        2,
+        {"1": "+12V_BL", "2": "ISO_GND"},
         (40, 260),
-        "Backlight: +12V_BL, ISO_GND, isolated PWM input",
+        "Backlight: +12V_BL, ISO_GND",
         reference="J2",
     )
     # Preserve the reference sequence of the removed backlight circuit so the

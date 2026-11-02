@@ -1591,3 +1591,24 @@ backlight converter:
   connectivity is complete.
 - ERC has no electrical errors. PCB DRC reports no shorts and no unconnected
   items; documented clearance and silkscreen findings remain.
+
+Checkpoint 102 removes the backlight PWM interface while retaining the isolated
+backlight power converter:
+
+- `BL_PWM_MCU`, `BL_PWM`, R131 and the BacklightControl netclass are removed.
+- J2 is now a two-pin isolated power connector: `+12V_BL` and `ISO_GND`.
+- U3, D3, L2, C107-C114, R126-R128 and the `+24V_FIELD` feed remain unchanged.
+- Analog input 3 is added at GPIO43/MOD1 pin 21 with R182, R183 and C118.
+  J24 is `GND, AI0, AI1, AI2, AI3`.
+- SD uses the side-1 pins for MISO/SCK/MOSI, while CS moves to GPIO1/MOD1 pin
+  49. Power-good moves to GPIO3/MOD1 pin 50. The three encoder A/B pairs remain
+  adjacent, with ENC2_Z on GPIO25/MOD1 pin 30.
+- R182, R183 and C118 are parked outside the board outline for manual
+  placement. Existing user-placed footprints and routed copper are preserved.
+- The only copper removed is one 4.132 mm `PWR_GOOD_N` segment that physically
+  landed on the newly repurposed MOD1 pin 21.
+- ERC has 37 existing symbol-cache warnings and no electrical errors. DRC has
+  234 findings including 128 unconnected items; there are no shorts. The four
+  extra unconnected markers relative to the prior checkpoint are caused by the
+  requested pin remap and the three parked AI3 parts, which require manual
+  routing and placement.

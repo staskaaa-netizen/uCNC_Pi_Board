@@ -1,4 +1,4 @@
-"""Apply width rules only to the backlight control nets."""
+"""Apply width rules to the isolated backlight power nets."""
 
 from __future__ import annotations
 
@@ -11,10 +11,9 @@ import pcbnew
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 WIDTHS_MM = {
-    "BL_PWM_MCU": 0.2,
-    "BL_PWM": 0.2,
-    "BL_SW_GATE": 0.2,
-    "BL_LED_N": 0.8,
+    "+12V_BL": 0.8,
+    "+24V_FIELD": 0.8,
+    "ISO_GND": 0.8,
 }
 
 

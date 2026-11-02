@@ -61,21 +61,18 @@ the HSTX source nets remain 0.20 mm.
 ## Backlight
 
 The verified J22 pinout contains no backlight contact. J2 is the separate
-3-position backlight/CCFL connector:
+2-position isolated backlight/CCFL power connector:
 
 | Pin | Signal |
 |---:|---|
 | 1 | isolated `+12V_BL` from U3 |
 | 2 | `ISO_GND` |
-| 3 | `BL_PWM`, 3.3 V from GPIO35 |
 
 U3 is an LMR36510 buck powered from the isolated PLC 24 V rail on J33/J45. Its
 input, output and feedback network all reference `ISO_GND`. The existing U37
 `+12V_AO` supply remains dedicated to the 0-10 V output stage.
 
-GPIO35/MOD1 pin 25 drives `BL_PWM_MCU`; R131 (100 ohm) feeds J2 pin 3. Any
-CCFL inverter stage, high-current switching, current limiting and PWM isolation
-remain external.
-
-`BL_PWM_MCU` and `BL_PWM` use 0.2 mm copper. `+24V_FIELD` and `ISO_GND` use
-the field-power class.
+Backlight PWM is not routed by this board. Any CCFL inverter stage,
+high-current switching, current limiting and PWM isolation remain external.
+`+24V_FIELD` and `ISO_GND` use the field-power class; `+12V_BL` uses the
+power class.
