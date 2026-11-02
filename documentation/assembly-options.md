@@ -69,7 +69,7 @@ must provide current switching and PWM isolation. LCD-panel logic is powered
 from J22.
 
 JP5 is an open two-pad solder jumper in the SD-card-detect path. Bridge it to
-enable card detection to GPIO2. With JP5 open, firmware should enable the
+enable card detection to GPIO2/MOD1 pin 34. With JP5 open, firmware should enable the
 RP2350 internal pull-up or ignore the card-detect input.
 
 The WeAct module's own reset button, power-on reset, brownout detector and

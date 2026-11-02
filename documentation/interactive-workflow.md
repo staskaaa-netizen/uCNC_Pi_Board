@@ -1612,3 +1612,15 @@ backlight power converter:
   extra unconnected markers relative to the prior checkpoint are caused by the
   requested pin remap and the three parked AI3 parts, which require manual
   routing and placement.
+
+Checkpoint 103 moves SD chip-select to the side-1 header:
+
+- `SD_CS_MCU` moves from GPIO1/MOD1 pin 49 to GPIO37/MOD1 pin 24.
+- GPIO1/MOD1 pin 49 becomes unconnected.
+- Slow-changing `SD_CD_MCU` remains on GPIO2/MOD1 pin 34.
+- The encoder allocation and `ENC2_Z` on GPIO25/MOD1 pin 30 are unchanged.
+- No footprint or copper geometry was moved. The affected MOD1 pad nets are
+  synchronized from the regenerated netlist.
+- ERC remains at 37 symbol-cache warnings with no electrical errors. DRC
+  remains at 234 findings with 128 unconnected items and no shorts; the
+  relocated CS connection is one of the expected unrouted remap connections.

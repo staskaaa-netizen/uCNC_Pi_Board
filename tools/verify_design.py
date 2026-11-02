@@ -485,7 +485,7 @@ def main() -> None:
         "10": "SD_MISO_MCU",
         "11": "SD_SCK_MCU",
         "25": "SD_MOSI_MCU",
-        "49": "SD_CS_MCU",
+        "24": "SD_CS_MCU",
     }
     for module_pin, expected_net in sd_module_pins.items():
         if ("MOD1", module_pin) not in nets.get(expected_net, set()):

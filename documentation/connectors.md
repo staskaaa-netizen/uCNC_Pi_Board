@@ -45,7 +45,7 @@ height to the Phoenix footprint.
 | J36 | 1x9 2.54 mm | Open-Smart TF Card Breakout: CDN, DAT1, DO, GND, SCLK, VCC=3.3 V, DI, CS, DAT2 |
 
 JP5 is an open two-pad solder jumper between `SD_CD` and `SD_CD_MCU`. Bridge
-it to connect the SD-card detect switch to GPIO2. The jumper uses the original
+it to connect the SD-card detect switch to GPIO2/MOD1 pin 34. The jumper uses the original
 1206 pad spacing for easy hand soldering and is excluded from the BOM.
 
 J36 is a 1x9 header for the passive Open-Smart TF Card Breakout. Its exact pin

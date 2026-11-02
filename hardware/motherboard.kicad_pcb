@@ -52292,6 +52292,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "SD_CS_MCU")
 			(uuid "0a511db8-c44d-4569-8f28-7fa21d94dc32")
 		)
 		(pad "25" thru_hole circle
@@ -52511,7 +52512,6 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "SD_CS_MCU")
 			(uuid "d18bbdc3-28f3-464b-83d5-40b5a4822ba2")
 		)
 		(pad "50" thru_hole circle

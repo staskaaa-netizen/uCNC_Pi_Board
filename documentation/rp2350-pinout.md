@@ -53,12 +53,13 @@ This allocation uses the vendor 64-pad footprint numbering and the generated
 | GPIO | MOD1 pin | Signal | Notes |
 |---:|---:|---|---|
 | 0 | 33 | — | Reserved for module PSRAM CS |
-| 1 | 49 | `SD_CS_MCU` | SPI0 CS |
+| 1 | 49 | — | Available GPIO |
 | 2 | 34 | `SD_CD_MCU` | SD-card detect |
 | 3 | 50 | `PWR_GOOD_N` | LMR36510 power-good |
 | 34 | 11 | `SD_SCK_MCU` | SPI0 SCK |
 | 35 | 25 | `SD_MOSI_MCU` | SPI0 MOSI |
 | 36 | 10 | `SD_MISO_MCU` | SPI0 MISO |
+| 37 | 24 | `SD_CS_MCU` | SPI0 CS |
 | 40 | 8 | `AI0_ADC` | ADC input 0 |
 | 41 | 22 | `AI2_ADC` | ADC input 2 |
 | 42 | 7 | `AI1_ADC` | ADC input 1 |

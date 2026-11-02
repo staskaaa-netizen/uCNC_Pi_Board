@@ -26,7 +26,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | GPIO | MOD1 pin | Signal | Direction | Peripheral / function | Voltage | Firmware note |
 |---:|---:|---|---|---|---|---|
 | 0 | 33 | — | Reserved | Module PSRAM chip select | 3.3 V | Left free for the module's solderable PSRAM |
-| 1 | 49 | SD_CS_MCU | Output | SPI0 CS | 3.3 V | Active low |
+| 1 | 49 | — | Reserved | Not connected | — | Available GPIO |
 | 2 | 34 | SD_CD_MCU | Input | SD-card detect | 3.3 V | Active low; bridge JP5 to enable |
 | 3 | 50 | PWR_GOOD_N | Input | LMR36510 power-good | 3.3 V | Open-drain, pulled up to +3V3 |
 | 4 | 35 | — | Reserved | Not connected | — | Available GPIO |
@@ -62,7 +62,7 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 34 | 11 | SD_SCK_MCU | Output | SPI0 SCK | 3.3 V | Located on the side-1 header |
 | 35 | 25 | SD_MOSI_MCU | Output | SPI0 MOSI | 3.3 V | Located on the side-1 header |
 | 36 | 10 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Located on the side-1 header |
-| 37 | 24 | — | Reserved | Not connected | — | Released from E-stop |
+| 37 | 24 | SD_CS_MCU | Output | SPI0 CS | 3.3 V | Active low |
 | 38 | 9 | I2C_SDA | Bidirectional | Hardware I2C1 SDA | 3.3 V | External pull-up required |
 | 39 | 23 | I2C_SCL | Bidirectional | Hardware I2C1 SCL | 3.3 V | External pull-up required |
 | 40 | 8 | AI0_ADC | Input | ADC channel 0 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
