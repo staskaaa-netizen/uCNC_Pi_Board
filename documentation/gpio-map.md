@@ -31,8 +31,8 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 5 | 51 | SD_CS_MCU | Output | SPI0 CS | 3.3 V | Active low |
 | 6 | 36 | SD_SCK_MCU | Output | SPI0 SCK | 3.3 V | Alternate SPI0 mapping |
 | 7 | 52 | SD_MOSI_MCU | Output | SPI0 MOSI | 3.3 V | Alternate SPI0 mapping |
-| 8 | 37 | I2C_SDA | Bidirectional | I2C0 SDA | 3.3 V | External pull-up required when used |
-| 9 | 53 | I2C_SCL | Bidirectional | I2C0 SCL | 3.3 V | External pull-up required when used |
+| 8 | 37 | — | Reserved | Not connected | — | Released from I2C0 |
+| 9 | 53 | ESTOP_N | Input | Dedicated isolated E-stop | 3.3 V | Active low; external hardware blocks outputs |
 | 10 | 38 | WIFI_TX | Output | UART1 TX | 3.3 V | Direct to ESP-01/ESP-01S RX |
 | 11 | 54 | WIFI_RX | Input | UART1 RX | 3.3 V | Direct from ESP-01/ESP-01S TX |
 | 12 | 39 | HSTX_D0_P | Output | HSTX lane 0 positive | 3.3 V differential | LCD LVDS D0+ driver input |
@@ -58,29 +58,28 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 32 | 12 | ENC2_A_3V3 | Input | Encoder 2 A | 3.3 V | Conditioned from 5 V TTL |
 | 33 | 26 | ENC2_B_3V3 | Input | Encoder 2 B | 3.3 V | Conditioned from 5 V TTL |
 | 34 | 11 | ENC2_Z_3V3 | Input | Encoder 2 Z | 3.3 V | Conditioned from 5 V TTL |
-| 35 | 25 | BL_PWM_MCU | Output | Backlight/CCFL PWM and Q8 gate | 3.3 V | R131 series-protects J2 pin 3 and the R129/Q8 branch |
+| 35 | 25 | BL_PWM_MCU | Output | Backlight/CCFL PWM | 3.3 V | R131 series-protects J2 pin 3; external driver must isolate PWM |
 | 36 | 10 | — | Reserved | Not connected | — | Local output-enable gate removed |
-| 37 | 24 | ESTOP_N | Input | Dedicated isolated E-stop | 3.3 V | Active-low open-collector input; external hardware blocks outputs |
-| 38 | 9 | HOLD_N | Input | Dedicated HOLD button | 3.3 V | uCNC FHOLD input; active-low open-collector |
-| 39 | 23 | START_N | Input | Dedicated START button | 3.3 V | uCNC CS_RES input; active-low open-collector |
+| 37 | 24 | — | Reserved | Not connected | — | Released from E-stop |
+| 38 | 9 | I2C_SDA | Bidirectional | Hardware I2C1 SDA | 3.3 V | External pull-up required |
+| 39 | 23 | I2C_SCL | Bidirectional | Hardware I2C1 SCL | 3.3 V | External pull-up required |
 | 40 | 8 | AI0_ADC | Input | ADC channel 0 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
-| 41 | 22 | AI1_ADC | Input | ADC channel 1 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
-| 42 | 7 | AI2_ADC | Input | ADC channel 2 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
+| 41 | 22 | AI2_ADC | Input | ADC channel 2 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
+| 42 | 7 | AI1_ADC | Input | ADC channel 1 | 0-2.48 V | 0-10 V through 100 k/33 k divider at J24 |
 | 43 | 21 | PWR_GOOD_N | Input | LMR36510 power-good | 3.3 V | Open-drain, pulled up to +3V3 |
 | 44 | 6 | AOUT1_PWM | Output | 0-10 V analog output 1 | 3.3 V PWM | Two-stage RC filter into U38B |
 | 45 | 20 | AOUT2_PWM | Output | 0-10 V analog output 2 | 3.3 V PWM | Two-stage RC filter into U38C |
-| 46 | 5 | AOUT3_PWM | Output | 0-10 V analog output 3 | 3.3 V PWM | Uses the module's onboard status LED; external D8/R8 removed |
-| 47 | 19 | AOUT0_PWM | Output | 0-10 V analog output 0 | 3.3 V PWM | Two-stage RC filter into U38A; 20 kHz recommended |
+| 46 | 5 | AOUT0_PWM | Output | 0-10 V analog output 0 | 3.3 V PWM | Two-stage RC filter into U38A; 20 kHz recommended |
+| 47 | 19 | AOUT3_PWM | Output | 0-10 V analog output 3 | 3.3 V PWM | Two-stage RC filter into U38D |
 
 ## Module power pins
 
 | MOD1 pins | Signal | Motherboard connection |
 |---:|---|---|
-| 1, 2, 16, 32, 47, 61 | GND/G | Digital ground |
+| 1, 2, 16, 32, 47 | GND/G | Digital ground |
 | 31 | 5V | LMR36510 +5 V input to the module regulator |
 | 48 | REF | Locally filtered `+3V3_A` ADC reference |
-| 62 | CLK | SWCLK header/test |
-| 63 | DIO | SWDIO header/test |
+| 61-64 | DEBUG | Module pads intentionally unconnected |
 | 3, 18, 64 | 3V3 | Module-local regulator output; not connected on motherboard |
 | 17 | EN | No connect; module's onboard regulator network controls it |
 | 46 | VBUS | No connect |

@@ -94,17 +94,14 @@ defaults to PIO0/SM0/offset0, while the 595 PIO path also initializes PIO0/SM0.
 
 ## Control inputs
 
-The RP2350 inputs are active-low open-collector outputs from U35/U36/U39:
+The only remaining dedicated control input is active-low from U35:
 
 | uCNC function | Signal | GPIO | MOD1 pin |
 |---|---|---:|---:|
-| `ESTOP` | `ESTOP_N` | GPIO37 | 24 |
-| `FHOLD` | `HOLD_N` | GPIO38 | 9 |
-| `CS_RES` | `START_N` | GPIO39 | 23 |
+| `ESTOP` | `ESTOP_N` | GPIO9 | 53 |
 
-Configure the expected polarity in the custom uCNC board map. `HOLD_N` and
-`START_N` are normally-open pushbutton inputs: pressing a button energizes its
-optocoupler LED and pulls the RP2350 input low.
+Configure active-low polarity for `ESTOP` in the custom uCNC board map. The
+former HOLD and START inputs and their GPIOs are removed.
 
 The stock Pico 2 board map must not be used unchanged: it assigns step/dir and
 other functions to different GPIOs. A LeanCam-specific uCNC board map is needed.

@@ -23,7 +23,7 @@ points, for example 1 V and 9 V. Store gain and offset per channel.
 
 ## Outputs AOUT0-AOUT3
 
-GPIO2, GPIO44, GPIO45 and GPIO46 generate the four PWM signals. Each channel
+GPIO44, GPIO46, GPIO45 and GPIO47 generate AOUT0-AOUT3 respectively. Each channel
 uses the requested two-stage low-pass filter:
 
 ```text

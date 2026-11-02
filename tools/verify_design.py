@@ -74,18 +74,15 @@ def main() -> None:
         net = f"PLC_IN{bit + 1}_N"
         if not nets.get(net):
             failures.append(f"Missing input register net {net}")
-    for bit in range(8):
-        net = f"EXP_IN{bit}"
-        if len(nets.get(net, set())) < 2:
-            failures.append(f"Missing spare header input net {net}")
     for bit in range(32):
         net = f"OUT{bit}"
         endpoints = nets.get(net, set())
         if len(endpoints) < 2:
-            failures.append(f"Output register bit {bit} is not in a 595-to-buffer chain")
-    for bit in range(15):
-        if f"MOTION{bit}" not in nets:
-            failures.append(f"Missing motion output {bit}")
+            failures.append(f"Output register bit {bit} does not reach its load")
+    for axis in range(7):
+        for signal in ("STEP", "DIR"):
+            if f"AX{axis}_{signal}" not in nets:
+                failures.append(f"Missing AX{axis}_{signal} output")
     for bit in range(16):
         if f"DO{bit}" not in nets:
             failures.append(f"Missing low-side output {bit}")
@@ -95,11 +92,11 @@ def main() -> None:
             failures.append(f"{led_ref} is not the DO{bit} indicator")
         if (resistor_ref, "2") not in nets.get(f"DO_LED{bit}_A", set()):
             failures.append(f"{resistor_ref} is not the DO{bit} LED resistor")
-    for bit in range(8):
-        if f"KOUT{bit}" not in nets:
-            failures.append(f"Missing keyboard output {bit}")
-        if f"KIN{bit}" not in nets:
-            failures.append(f"Missing keyboard input {bit}")
+    if any(
+        name.startswith(("KIN", "KOUT"))
+        for name in nets
+    ):
+        failures.append("Retired keyboard nets remain")
     for encoder in range(3):
         for signal in "ABZ":
             input_net = f"ENC{encoder}_{signal}_5V"
@@ -111,98 +108,97 @@ def main() -> None:
             if output_net not in nets:
                 failures.append(f"Missing translated encoder {encoder} signal {signal}")
 
-    # The first two 595/541 pairs use optimized equivalent-channel maps.
-    # OUTn remains paired with BUFYn, so the firmware-visible logical map is
-    # unchanged even though the physical package pins are non-sequential.
-    buffer_pairs = {0: ("U10", "U24"), 1: ("U11", "U25")}
-    buffer_contracts = {
-        0: {0: ("1", "8", "12"), 1: ("15", "9", "11"),
-            2: ("3", "6", "14"), 3: ("2", "7", "13"),
-            4: ("5", "4", "16"), 5: ("4", "5", "15"),
-            6: ("7", "2", "18"), 7: ("6", "3", "17")},
-        1: {0: ("2", "8", "12"), 1: ("1", "9", "11"),
-            2: ("15", "7", "13"), 3: ("3", "6", "14"),
-            4: ("4", "5", "15"), 5: ("5", "4", "16"),
-            6: ("6", "3", "17"), 7: ("7", "2", "18")},
+    # The physical Q-pin maps remain non-sequential for layout compatibility,
+    # but every logical OUTn now leaves its AHCT595 and drives the load directly.
+    output_register_contracts = {
+        "U10": {1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 15: 7},
+        "U11": {1: 8, 2: 9, 3: 10, 4: 11, 5: 12, 6: 13, 7: 14, 15: 15},
+        "U12": {1: 16, 2: 17, 3: 18, 4: 19, 5: 20, 6: 21, 7: 22, 15: 23},
+        "U13": {1: 24, 2: 25, 3: 26, 4: 27, 5: 28, 6: 29, 7: 30, 15: 31},
     }
-    for byte, (register_ref, buffer_ref) in buffer_pairs.items():
-        for bit in range(8):
-            output_bits = byte * 8 + bit
-            source_pin, input_pin, output_pin = buffer_contracts[byte][bit]
-            expected = {
-                (register_ref, source_pin),
-                (buffer_ref, input_pin),
-            }
-            if not expected.issubset(nets.get(f"OUT{output_bits}", set())):
+    for register_ref, pin_bits in output_register_contracts.items():
+        for source_pin, output_bit in pin_bits.items():
+            if (register_ref, str(source_pin)) not in nets.get(
+                f"OUT{output_bit}", set()
+            ):
                 failures.append(
-                    f"Misaligned 595/541 connection for output bit {output_bits}"
-                )
-            if (buffer_ref, output_pin) not in nets.get(f"BUFY{output_bits}", set()):
-                failures.append(
-                    f"Misaligned 541 output for logical bit {output_bits}"
+                    f"{register_ref} pin {source_pin} is not OUT{output_bit}"
                 )
 
-    # Bits 16-29 drive all fourteen ULN channels directly from the 3.3 V 595.
-    uln_contracts = {
-        16: ("U12", "1", "U26", "7", "10"),
-        17: ("U12", "2", "U26", "6", "11"),
-        18: ("U12", "3", "U26", "5", "12"),
-        19: ("U12", "4", "U26", "4", "13"),
-        20: ("U12", "5", "U26", "3", "14"),
-        21: ("U12", "6", "U26", "2", "15"),
-        22: ("U12", "7", "U26", "1", "16"),
-        23: ("U12", "15", "U27", "7", "10"),
-        24: ("U13", "15", "U27", "6", "11"),
-        25: ("U13", "1", "U27", "5", "12"),
-        26: ("U13", "2", "U27", "4", "13"),
-        27: ("U13", "3", "U27", "3", "14"),
-        28: ("U13", "4", "U27", "2", "15"),
-        29: ("U13", "5", "U27", "1", "16"),
+    motion_buffer_pins = {
+        "U42": {2: 7, 3: 6, 4: 5, 5: 4, 6: 3, 7: 2, 8: 1, 9: 0},
+        "U43": {2: 15, 3: 14, 4: 13, 5: 12, 6: 11, 7: 10, 8: 9, 9: 8},
     }
-    for output_bits, (
-        register_ref,
-        source_pin,
-        uln_ref,
-        uln_pin,
-        output_pin,
-    ) in uln_contracts.items():
-        expected = {(register_ref, source_pin), (uln_ref, uln_pin)}
-        if not expected.issubset(nets.get(f"OUT{output_bits}", set())):
-            failures.append(f"Direct 3.3 V ULN connection missing for bit {output_bits}")
-        if (uln_ref, output_pin) not in nets.get(f"DO{output_bits - 16}", set()):
-            failures.append(f"ULN output channel mismatch for bit {output_bits}")
-    mosfet_outputs = {
-        30: ("U13", "6", "R114", "R115", "Q6", "DO14_GATE", "DO14"),
-        31: ("U13", "7", "R116", "R117", "Q7", "DO15_GATE", "DO15"),
-    }
-    for bit, (
-        register_ref,
-        source_pin,
-        series_ref,
-        pulldown_ref,
-        transistor_ref,
-        gate_net,
-        output_net,
-    ) in mosfet_outputs.items():
-        expected = {
-            (register_ref, source_pin),
-            (series_ref, "1"),
-        }
-        if not expected.issubset(nets.get(f"OUT{bit}", set())):
-            failures.append(f"MOSFET output source missing for bit {bit}")
-        for endpoint in (
-            (series_ref, "2"),
-            (pulldown_ref, "1"),
-            (transistor_ref, "1"),
-        ):
-            if endpoint not in nets.get(gate_net, set()):
-                failures.append(f"MOSFET gate contract incomplete for bit {bit}")
-        if (pulldown_ref, "2") not in nets.get("GND", set()):
-            failures.append(f"{pulldown_ref} is not a gate pull-down")
-        if (transistor_ref, "2") not in nets.get("GND", set()):
-            failures.append(f"{transistor_ref} source is not grounded")
-        if (transistor_ref, "3") not in nets.get(output_net, set()):
-            failures.append(f"{transistor_ref} drain is not {output_net}")
+    buffer_input_order = (2, 3, 4, 5, 6, 7, 8, 9)
+    buffer_output_by_input = dict(zip(buffer_input_order, range(18, 10, -1)))
+    motion_net_by_bit = {}
+    for axis in range(7):
+        motion_net_by_bit[axis * 2] = f"AX{axis}_STEP"
+        motion_net_by_bit[axis * 2 + 1] = f"AX{axis}_DIR"
+    for reference, pin_bits in motion_buffer_pins.items():
+        for input_pin, bit in pin_bits.items():
+            if (reference, str(input_pin)) not in nets.get(f"OUT{bit}", set()):
+                failures.append(
+                    f"{reference} input pin {input_pin} is not OUT{bit}"
+                )
+            output_pin = buffer_output_by_input[input_pin]
+            output_net = motion_net_by_bit.get(bit)
+            if output_net is None:
+                continue
+            if (reference, str(output_pin)) not in nets.get(output_net, set()):
+                failures.append(
+                    f"{reference} output pin {output_pin} is not "
+                    f"{output_net}"
+                )
+
+    uln_package_channels = (
+        ("U26", tuple(range(7, -1, -1))),
+        ("U27", tuple(range(15, 7, -1))),
+    )
+    uln_input_pins = tuple(range(1, 9))
+    uln_output_pins = tuple(range(18, 10, -1))
+    for uln_ref, channel_indices in uln_package_channels:
+        for channel, index in enumerate(channel_indices):
+            source_net = f"OUT{16 + index}"
+            final_net = f"DO{index}"
+            opto_ref = f"U{61 + index // 4}"
+            led_anode = f"DO_OPTO_LED{index}_A"
+            driver_net = f"DO_DRV{index}"
+            opto_slot = index % 4
+            led_network = f"RN{37 + index // 4}"
+            led_input_pin = str(4 - opto_slot)
+            led_output_pin = str(8 - opto_slot)
+            if (led_network, led_input_pin) not in nets.get(source_net, set()):
+                failures.append(
+                    f"{led_network} pin {led_input_pin} is not {source_net}"
+                )
+            if (led_network, led_output_pin) not in nets.get(led_anode, set()):
+                failures.append(
+                    f"{led_network} pin {led_output_pin} is not {led_anode}"
+                )
+            opto_contract = {
+                str(1 + opto_slot * 2): led_anode,
+                str(2 + opto_slot * 2): "GND",
+                str(15 - opto_slot * 2): (
+                    f"DO_DRV{(index // 4) * 4 + (3 - opto_slot)}"
+                ),
+                str(16 - opto_slot * 2): "+24V_FIELD",
+            }
+            for pin, expected_net in opto_contract.items():
+                if (opto_ref, pin) not in nets.get(expected_net, set()):
+                    failures.append(
+                        f"{opto_ref} pin {pin} is not on {expected_net}"
+                    )
+            input_pin = uln_input_pins[channel]
+            output_pin = uln_output_pins[channel]
+            if (uln_ref, str(input_pin)) not in nets.get(driver_net, set()):
+                failures.append(
+                    f"{uln_ref} input pin {input_pin} is not {driver_net}"
+                )
+            if (uln_ref, str(output_pin)) not in nets.get(final_net, set()):
+                failures.append(
+                    f"{uln_ref} output pin {output_pin} is not {final_net}"
+                )
 
     tpd_refs = {
         component.get("ref")
@@ -239,8 +235,8 @@ def main() -> None:
         if component.get("ref", "").startswith("JP")
         and "PinHeader_1x03" in (component.findtext("footprint") or "")
     ]
-    if set(mode_headers) != {"JP2", "JP3", "JP4"}:
-        failures.append(f"Unexpected input mode headers: {mode_headers}")
+    if mode_headers:
+        failures.append(f"Retired input mode headers remain: {mode_headers}")
     for legacy in ("BL_EN", "BL_EN_REQ", "BL_VIN", "BL_RAW", "BL_GATE", "BL_GATE_NPN"):
         if legacy in nets:
             failures.append(f"Legacy backlight switching net {legacy} remains")
@@ -263,40 +259,67 @@ def main() -> None:
             "Retired redundant +5V capacitors remain: "
             + ", ".join(sorted(retired_capacitors))
         )
-    for reference in ("RN16", "RN17", "RN18", "RN19", "RN20", "RN21"):
-        if reference not in references:
-            failures.append(f"Missing 100 ohm series array {reference}")
-    motion_array_pins = {
-        "RN16": {
-            1: "BUFY2", 8: "MOTION2", 2: "BUFY3", 7: "MOTION1",
-            3: "BUFY0", 6: "AUX_GATE", 4: "BUFY1", 5: "MOTION0",
-        },
-        "RN17": {
-            1: "BUFY6", 8: "MOTION6", 2: "BUFY7", 7: "MOTION5",
-            3: "BUFY4", 6: "MOTION4", 4: "BUFY5", 5: "MOTION3",
-        },
-        "RN18": {
-            1: "BUFY11", 8: "MOTION10", 2: "BUFY10", 7: "MOTION9",
-            3: "BUFY8", 6: "MOTION8", 4: "BUFY9", 5: "MOTION7",
-        },
-        "RN19": {
-            1: "BUFY15", 8: "MOTION14", 2: "BUFY14", 7: "MOTION13",
-            3: "BUFY13", 6: "MOTION12", 4: "BUFY12", 5: "MOTION11",
-        },
-    }
-    for reference, pin_nets in motion_array_pins.items():
-        for pin, expected_net in pin_nets.items():
-            if (reference, str(pin)) not in nets.get(expected_net, set()):
-                failures.append(
-                    f"{reference} pin {pin} is not {expected_net}"
-                )
     if any(net.startswith("SR_KD") for net in nets):
         failures.append("Keyboard still passes through a separate buffered net")
+    components_by_ref = {
+        component.get("ref"): component for component in components
+    }
     component_values = {
         component.get("ref"): (component.findtext("value") or "").strip()
         for component in components
     }
-    direct_control_pins = {"ESTOP_N": "24", "HOLD_N": "9", "START_N": "23"}
+    for reference in ("RN37", "RN38", "RN39", "RN40"):
+        if component_values.get(reference) != "4x1k":
+            failures.append(f"{reference} is not a 4x1k output opto-drive network")
+    for reference in ("U10", "U11", "U12", "U13"):
+        if component_values.get(reference) != "SN74AHCT595DR":
+            failures.append(f"{reference} is not an SN74AHCT595DR")
+        component = components_by_ref.get(reference)
+        if not component or not (component.findtext("footprint") or "").strip().startswith(
+            "Package_SO:SOIC-16"
+        ):
+            failures.append(f"{reference} is not in a SOIC-16 package")
+        for pin in ("10", "16"):
+            if (reference, pin) not in nets.get("+5V", set()):
+                failures.append(f"{reference} pin {pin} is not powered from +5V")
+    for reference in ("U6", "U7", "U8", "U9"):
+        if component_values.get(reference) != "74HC165D":
+            failures.append(f"{reference} is not a 74HC165D input register")
+        component = components_by_ref.get(reference)
+        if not component or not (component.findtext("footprint") or "").strip().startswith(
+            "Package_SO:SOIC-16"
+        ):
+            failures.append(f"{reference} is not in a SOIC-16 package")
+        if (reference, "16") not in nets.get("+3V3", set()):
+            failures.append(f"{reference} input register is not powered from +3V3")
+    for reference in ("U42", "U43"):
+        if component_values.get(reference) != "TC74AC541F":
+            failures.append(f"{reference} is not a TC74AC541F motion buffer")
+        component = components_by_ref.get(reference)
+        if not component or not (component.findtext("footprint") or "").strip().startswith(
+            "Package_SO:SOIC-20W"
+        ):
+            failures.append(f"{reference} is not in a SOIC-20W package")
+        if (reference, "20") not in nets.get("+5V", set()):
+            failures.append(f"{reference} is not powered from +5V")
+    for reference in ("U26", "U27"):
+        if component_values.get(reference) != "TBD62083AFG":
+            failures.append(f"{reference} is not a TBD62083AFG output driver")
+        component = components_by_ref.get(reference)
+        if not component or not (component.findtext("footprint") or "").strip().startswith(
+            "Package_SO:SOP-18_7.495x11.515mm"
+        ):
+            failures.append(f"{reference} is not in the TBD62083AFG SOP-18 package")
+        if (reference, "9") not in nets.get("ISO_GND", set()):
+            failures.append(f"{reference} field ground is not ISO_GND")
+        if (reference, "10") not in nets.get("+24V_FIELD", set()):
+            failures.append(f"{reference} clamp pin is not +24V_FIELD")
+    if any(
+        reference in references
+        for reference in ("U24", "U25", "C53", "C54")
+    ):
+        failures.append("Retired motion buffer U24/U25 or bypass remains")
+    direct_control_pins = {"ESTOP_N": "53"}
     for direct_net, module_pin in direct_control_pins.items():
         refs = {ref for ref, _ in nets.get(direct_net, set())}
         if "MOD1" not in refs:
@@ -305,6 +328,11 @@ def main() -> None:
             failures.append(f"{direct_net} is not on MOD1 pin {module_pin}")
         if any(component_values.get(ref) == "74HC165D" for ref in refs):
             failures.append(f"{direct_net} is incorrectly routed through the input chain")
+    for module_pin, expected_net in (("9", "I2C_SDA"), ("23", "I2C_SCL")):
+        if ("MOD1", module_pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"Hardware I2C1 {expected_net} is not on MOD1 pin {module_pin}"
+            )
     shift_module_pins = {
         "SR_OUT_SER": "43",  # GPIO20, DATA
         "SR_SCK": "59",      # GPIO21, CLK
@@ -318,7 +346,10 @@ def main() -> None:
                 f"{shift_net} is not on MOD1 pin {module_pin} in the shift-chain map"
             )
     shift_endpoints = {
-        "SR_OUT_SER": {("U10", "14")},
+        "SR_OUT_SER": {("U13", "14")},
+        "SR_OUT_CHAIN1": {("U13", "9"), ("U12", "14")},
+        "SR_OUT_CHAIN2": {("U12", "9"), ("U11", "14")},
+        "SR_OUT_CHAIN3": {("U11", "9"), ("U10", "14")},
         "SR_SCK": {
             ("U6", "2"), ("U7", "2"), ("U8", "2"), ("U9", "2"),
             ("U10", "11"), ("U11", "11"), ("U12", "11"), ("U13", "11"),
@@ -334,14 +365,37 @@ def main() -> None:
     for shift_net, required_endpoints in shift_endpoints.items():
         if not required_endpoints.issubset(nets.get(shift_net, set())):
             failures.append(f"{shift_net} does not reach every required shift-chain pin")
+    for reference in ("R10", "R11", "R12", "R13"):
+        if reference in references:
+            failures.append(f"Discrete shift-control resistor {reference} remains")
+    shift_pullup_contract = {
+        "1": "SR_SCK",
+        "8": "GND",
+        "2": "SR_PL_N",
+        "7": "+3V3",
+        "3": "SR_OUT_SER",
+        "6": "GND",
+        "4": "SR_LATCH",
+        "5": "GND",
+    }
+    for pin, expected_net in shift_pullup_contract.items():
+        if ("RN41", pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"RN41 pin {pin} is not connected to {expected_net}"
+            )
     connector_values = set(component_values.values())
-    for required in (
-        "Dedicated E-stop loop",
+    for required in ("Dedicated E-stop loop",):
+        if required not in connector_values:
+            failures.append(f"Missing dedicated connector: {required}")
+    for retired in (
         "Dedicated HOLD button input",
         "Dedicated START button input",
     ):
-        if required not in connector_values:
-            failures.append(f"Missing dedicated connector: {required}")
+        if retired in connector_values:
+            failures.append(f"Retired control connector remains: {retired}")
+    for retired_net in ("HOLD_N", "START_N", "HOLD_FIELD", "START_FIELD"):
+        if retired_net in nets:
+            failures.append(f"Retired control net remains: {retired_net}")
     hstx_pin_map = {
         "39": "HSTX_D0_P",
         "55": "HSTX_D0_N",
@@ -375,7 +429,7 @@ def main() -> None:
     }
     if analog_upper != {"R61": "100k", "R64": "100k", "R67": "100k"}:
         failures.append(f"Analog upper resistors are not all 100k: {analog_upper}")
-    pwm_pins = ("19", "6", "20", "5")
+    pwm_pins = ("5", "6", "20", "19")
     for bit in range(4):
         expected = {
             f"AOUT{bit}_PWM": {("MOD1", pwm_pins[bit]), (f"R{92 + bit}", "1")},
@@ -423,12 +477,12 @@ def main() -> None:
         failures.append("12 V analog regulator is not supplied from VIN_PROT")
     if ("MOD1", "34") not in nets.get("SD_CD_MCU", set()):
         failures.append("SD-card detect is not on the requested MOD1 pin 34")
-    if component_values.get("J36") != "MicroSD alternative, SPI":
-        failures.append("J36 is not the alternate microSD socket")
+    if component_values.get("J36") != "Open-Smart TF Card Breakout":
+        failures.append("J36 is not the Open-Smart TF card breakout header")
     microsd_pins = {
-        "1": "SD_DAT2", "2": "SD_CS_N", "3": "SD_MOSI", "4": "+3V3_SD",
-        "5": "SD_SCK", "6": "GND", "7": "SD_MISO", "8": "SD_DAT1",
-        "9": "GND", "10": "SD_CD", "SH": "GND",
+        "1": "SD_CD", "2": "SD_DAT1", "3": "SD_MISO",
+        "4": "GND", "5": "SD_SCK", "6": "+3V3_SD",
+        "7": "SD_MOSI", "8": "SD_CS_N", "9": "SD_DAT2",
     }
     for pin, expected_net in microsd_pins.items():
         if ("J36", pin) not in nets.get(expected_net, set()):
@@ -442,8 +496,40 @@ def main() -> None:
         if j36 is not None
         else {}
     )
-    if j36_properties.get("Assembly") != "DNP":
-        failures.append("J36 microSD alternate must be marked DNP")
+    if j36_properties.get("Assembly") == "DNP":
+        failures.append("J36 Open-Smart breakout header must be fitted")
+    if "J19" in references:
+        failures.append("Retired full-size SD socket J19 remains")
+    for reference in ("R44", "R45", "R46", "R47", "R48", "R49"):
+        if reference in references:
+            failures.append(f"Discrete SD pull-up {reference} remains")
+    sd_pullup_contract = {
+        "1": "SD_CS_N", "8": "+3V3_SD",
+        "2": "SD_MOSI", "7": "+3V3_SD",
+        "3": "SD_MISO", "6": "+3V3_SD",
+        "4": "SD_CD", "5": "+3V3_SD",
+    }
+    for pin, expected_net in sd_pullup_contract.items():
+        if ("RN42", pin) not in nets.get(expected_net, set()):
+            failures.append(f"RN42 pin {pin} is not connected to {expected_net}")
+    sd_data_pullup_contract = {
+        "1": "SD_DAT1", "8": "+3V3_SD",
+        "2": "SD_DAT2", "7": "+3V3_SD",
+    }
+    for pin, expected_net in sd_data_pullup_contract.items():
+        if ("RN43", pin) not in nets.get(expected_net, set()):
+            failures.append(f"RN43 pin {pin} is not connected to {expected_net}")
+    if component_values.get("RN44") != "4x22R":
+        failures.append("RN44 is not the SD series-resistor network")
+    sd_series_contract = {
+        "1": "SD_CS_MCU", "8": "SD_CS_N",
+        "2": "SD_MOSI_MCU", "7": "SD_MOSI",
+        "3": "SD_SCK_MCU", "6": "SD_SCK",
+        "4": "SD_MISO_MCU", "5": "SD_MISO",
+    }
+    for pin, expected_net in sd_series_contract.items():
+        if ("RN44", pin) not in nets.get(expected_net, set()):
+            failures.append(f"RN44 pin {pin} is not connected to {expected_net}")
     if ("JP5", "1") not in nets.get("SD_CD_MCU", set()):
         failures.append("JP5 pin 1 is not connected to SD_CD_MCU")
     if ("JP5", "2") not in nets.get("SD_CD", set()):
@@ -456,7 +542,7 @@ def main() -> None:
         failures.append("Legacy ground net ties remain")
     output_enable_pins = {
         ("U10", "13"), ("U11", "13"), ("U12", "13"), ("U13", "13"),
-        ("U24", "1"), ("U24", "19"), ("U25", "1"), ("U25", "19"),
+        ("U42", "1"), ("U42", "19"), ("U43", "1"), ("U43", "19"),
     }
     for reference, pin in output_enable_pins:
         if (reference, pin) not in nets.get("GND", set()):
@@ -489,34 +575,18 @@ def main() -> None:
             failures.append(
                 f"{reference} pin {pin} is not on expected net {expected_net}"
             )
-    expansion_headers = {
-        "J9": {
-            "1": "GND", "2": "+3V3", "3": "EXP_IN0", "4": "EXP_IN1",
-            "5": "EXP_IN2", "6": "EXP_IN3",
-        },
-        "J27": {
-            "1": "GND", "2": "+3V3", "3": "EXP_IN4", "4": "EXP_IN5",
-            "5": "EXP_IN6", "6": "EXP_IN7",
-        },
-    }
-    for reference, pins in expansion_headers.items():
-        for pin, expected_net in pins.items():
-            if (reference, pin) not in nets.get(expected_net, set()):
-                failures.append(
-                    f"{reference} pin {pin} is not on expected net {expected_net}"
-                )
+    for retired_net in sorted(name for name in nets if name.startswith("EXP_")):
+        failures.append(f"Retired expansion-input net {retired_net} remains")
     motion_connectors = {
         "J7": {
-            1: "FIELD_IN9", 2: "FIELD_COM0",
-            3: "FIELD_IN10", 4: "FIELD_COM0",
-            5: "FIELD_IN11", 6: "FIELD_COM0",
-            7: "FIELD_IN12", 8: "FIELD_COM0",
+            1: "FIELD_IN1", 2: "FIELD_IN2", 3: "FIELD_IN3",
+            4: "FIELD_IN4", 5: "FIELD_IN5", 6: "FIELD_IN6",
+            7: "FIELD_IN7", 8: "FIELD_IN8",
         },
         "J8": {
-            1: "FIELD_IN1", 2: "FIELD_COM1",
-            3: "FIELD_IN2", 4: "FIELD_COM1",
-            5: "FIELD_IN3", 6: "FIELD_COM1",
-            7: "FIELD_IN4", 8: "FIELD_COM1",
+            1: "FIELD_IN9", 2: "FIELD_IN10", 3: "FIELD_IN11",
+            4: "FIELD_IN12", 5: "FIELD_IN13", 6: "FIELD_IN14",
+            7: "FIELD_IN15", 8: "FIELD_IN16",
         },
         "J12": {
             1: "DO0", 2: "DO1", 3: "DO2", 4: "DO3",
@@ -529,26 +599,27 @@ def main() -> None:
         "J24": {
             1: "AI0", 2: "GND", 3: "AI1", 4: "GND", 5: "AI2",
         },
-        "J10": {1: "MOTION0", 2: "MOTION1", 3: "MOTION2", 4: "GND"},
-        "J11": {1: "MOTION3", 2: "MOTION4", 3: "MOTION5", 4: "GND"},
-        "J28": {1: "MOTION6", 2: "MOTION7", 3: "MOTION8", 4: "GND"},
-        "J29": {1: "MOTION9", 2: "MOTION10", 3: "MOTION11", 4: "GND"},
-        "J30": {1: "MOTION12", 2: "MOTION13", 3: "MOTION14", 4: "GND"},
-        "J31": {1: "AUX_OUT", 2: "GND"},
-        "J2": {1: "+12V_BL", 2: "GND", 3: "BL_PWM", 4: "BL_LED_N"},
-        "J33": {1: "DO_COM", 2: "GND"},
-        "J34": {
-            1: "FIELD_IN13", 2: "FIELD_COM0",
-            3: "FIELD_IN14", 4: "FIELD_COM0",
-            5: "FIELD_IN15", 6: "FIELD_COM0",
-            7: "FIELD_IN16", 8: "FIELD_COM0",
-        },
-        "J35": {
-            1: "FIELD_IN5", 2: "FIELD_COM1",
-            3: "FIELD_IN6", 4: "FIELD_COM1",
-            5: "FIELD_IN7", 6: "FIELD_COM1",
-            7: "FIELD_IN8", 8: "FIELD_COM1",
-        },
+        "J18": {1: "I2C_SDA", 2: "I2C_SCL", 3: "+3V3", 4: "+5V", 5: "GND"},
+        "J10": {1: "EN_3AX", 2: "AX0_STEP", 3: "AX0_DIR"},
+        "J11": {1: "EN_3AX", 2: "AX1_STEP", 3: "AX1_DIR"},
+        "J28": {1: "EN_3AX", 2: "AX2_STEP", 3: "AX2_DIR"},
+        "J29": {1: "EN_4AX", 2: "AX3_STEP", 3: "AX3_DIR"},
+        "J30": {1: "EN_4AX", 2: "AX4_STEP", 3: "AX4_DIR"},
+        "J46": {1: "EN_4AX", 2: "AX5_STEP", 3: "AX5_DIR"},
+        "J47": {1: "EN_4AX", 2: "AX6_STEP", 3: "AX6_DIR"},
+        "J40": {1: "AX0_ZERO", 2: "AX0_ERROR_N", 3: "GND"},
+        "J41": {1: "AX1_ZERO", 2: "AX1_ERROR_N", 3: "GND"},
+        "J42": {1: "AX2_ZERO", 2: "AX2_ERROR_N", 3: "GND"},
+        "J43": {1: "AX3_ZERO", 2: "AX3_ERROR_N", 3: "GND"},
+        "J48": {1: "AX4_ZERO", 2: "AX4_ERROR_N", 3: "GND"},
+        "J49": {1: "AX5_ZERO", 2: "AX5_ERROR_N", 3: "GND"},
+        "J50": {1: "AX6_ZERO", 2: "AX6_ERROR_N", 3: "GND"},
+        "J2": {1: "+12V_BL", 2: "ISO_GND", 3: "BL_PWM"},
+        "J33": {1: "+24V_FIELD", 2: "ISO_GND"},
+        "J45": {1: "+24V_FIELD", 2: "ISO_GND"},
+        "J13": {1: "+5V_ENC", 2: "ENC0_A_5V", 3: "ENC0_B_5V", 4: "ENC0_Z_5V", 5: "GND"},
+        "J14": {1: "+5V_ENC", 2: "ENC1_A_5V", 3: "ENC1_B_5V", 4: "ENC1_Z_5V", 5: "GND"},
+        "J15": {1: "+5V_ENC", 2: "ENC2_A_5V", 3: "ENC2_B_5V", 4: "ENC2_Z_5V", 5: "GND"},
     }
     for reference, pins in motion_connectors.items():
         for pin, expected_net in pins.items():
@@ -558,65 +629,71 @@ def main() -> None:
                 failures.append(
                     f"{reference} pin {pin} is not on expected net {expected_net}"
                 )
-    aux_mosfet = {
-        ("RN16", "3", "BUFY0"),
-        ("RN16", "6", "AUX_GATE"),
-        ("R113", "1", "AUX_GATE"),
-        ("R113", "2", "GND"),
-        ("Q5", "1", "AUX_GATE"),
-        ("Q5", "2", "GND"),
-        ("Q5", "3", "AUX_OUT"),
+    connector_footprints = {
+        "J7": "PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+        "J8": "PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+        "J12": "PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+        "J32": "PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
+        "J10": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J11": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J28": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J29": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J30": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J46": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J47": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J13": "PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+        "J14": "PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+        "J15": "PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+        "J40": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J41": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J42": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J43": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J48": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J49": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J50": "PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",
+        "J18": "PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
+        "J45": "PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
+        "J36": "PinHeader_1x09_P2.54mm_Vertical",
     }
-    for reference, pin, expected_net in aux_mosfet:
-        if (reference, pin) not in nets.get(expected_net, set()):
+    for reference, expected_name in connector_footprints.items():
+        component = components_by_ref.get(reference)
+        footprint = (
+            (component.findtext("footprint") or "").strip()
+            if component is not None
+            else ""
+        )
+        if footprint.rsplit(":", 1)[-1] != expected_name:
             failures.append(
-                f"{reference} pin {pin} is not on expected AUX net {expected_net}"
+                f"{reference} is not in the expected single-row footprint"
             )
-    backlight_mosfet = {
-        ("R129", "1", "BL_PWM_MCU"),
-        ("R129", "2", "BL_SW_GATE"),
-        ("R130", "1", "BL_SW_GATE"),
-        ("R130", "2", "GND"),
-        ("Q8", "1", "BL_SW_GATE"),
-        ("Q8", "2", "GND"),
-        ("Q8", "3", "BL_LED_N"),
-        ("J2", "4", "BL_LED_N"),
+    if component_values.get("U3") != "LMR36510ADDAR":
+        failures.append("U3 is not the isolated 24 V to 12 V LMR36510 buck")
+    u3_contract = {
+        "1": "ISO_GND", "2": "VIN_BL_PROT", "3": "VIN_BL_PROT",
+        "5": "FB12", "6": "VCC12", "7": "BUCK12_BST",
+        "8": "BUCK12_SW", "9": "ISO_GND",
     }
-    for reference, pin, expected_net in backlight_mosfet:
-        if (reference, pin) not in nets.get(expected_net, set()):
-            failures.append(
-                f"{reference} pin {pin} is not on expected backlight net {expected_net}"
-            )
-    if component_values.get("Q8") != "BSS138":
-        failures.append("Q8 is not the optional backlight low-side MOSFET")
-    if ("U24", "8") not in nets.get("OUT0", set()):
-        failures.append("U24 spare buffer input pin 8 is not OUT0")
-    if ("U24", "12") not in nets.get("BUFY0", set()):
-        failures.append("U24 spare buffer output pin 12 is not BUFY0")
-    # The physical connector order is chosen for the shortest, crossing-free
-    # PCB fanout. Firmware maps these positions to logical PLC channels.
-    for block, references_for_bank in ((0, ("J7", "J34")), (1, ("J8", "J35"))):
-        for half, reference in enumerate(references_for_bank):
-            for local in range(4):
-                number = (9 if block == 0 else 1) + half * 4 + local
-                signal_pin = str(2 * local + 1)
-                common_pin = str(2 * local + 2)
-                if (reference, signal_pin) not in nets.get(
-                    f"FIELD_IN{number}", set()
-                ):
-                    failures.append(
-                        f"{reference} pin {signal_pin} is not FIELD_IN{number}"
-                    )
-                if (reference, common_pin) not in nets.get(
-                    f"FIELD_COM{block}", set()
-                ):
-                    failures.append(
-                        f"{reference} pin {common_pin} is not FIELD_COM{block}"
-                    )
-
+    for pin, expected_net in u3_contract.items():
+        if ("U3", pin) not in nets.get(expected_net, set()):
+            failures.append(f"U3 pin {pin} is not {expected_net}")
+    if ("D3", "1") not in nets.get("VIN_BL_PROT", set()):
+        failures.append("D3 cathode is not on VIN_BL_PROT")
+    if ("D3", "2") not in nets.get("+24V_FIELD", set()):
+        failures.append("D3 anode is not on +24V_FIELD")
+    for reference, value in (
+        ("L2", "47uH 1.5A"), ("R126", "100k"),
+        ("R127", "10k"), ("R128", "100k"),
+    ):
+        if component_values.get(reference) != value:
+            failures.append(f"{reference} is not {value}")
+    if {"C55", "C56", "C117"} & set(references):
+        failures.append("Redundant ULN DO_COM bypass capacitors remain")
+    for retired_net in ("AUX_GATE", "DO14_GATE", "DO15_GATE"):
+        if retired_net in nets:
+            failures.append(f"Retired MOSFET output net {retired_net} remains")
     plc_register_pin_numbers = {
-        "U9": (5, 6, 7, 8, 4, 3, 2, 1),
-        "U8": (13, 14, 15, 16, 12, 11, 10, 9),
+        "U8": tuple(range(1, 9)),
+        "U9": tuple(range(9, 17)),
     }
     plc_data_pins = ("11", "12", "13", "14", "3", "4", "5", "6")
     for reference, numbers in plc_register_pin_numbers.items():
@@ -625,66 +702,69 @@ def main() -> None:
                 failures.append(
                     f"{reference} data pin {data_pin} is not PLC_IN{number}_N"
                 )
+    status_register_contracts = {
+        "U6": {
+            "11": "AX0_ZERO", "12": "AX0_ERROR_N",
+            "13": "AX6_ZERO", "14": "AX6_ERROR_N",
+            "3": "AX4_ERROR_N", "4": "AX4_ZERO",
+            "5": "AX5_ERROR_N", "6": "AX5_ZERO",
+        },
+        "U7": {
+            "11": "AX3_ZERO", "12": "AX3_ERROR_N",
+            "13": "GND", "14": "GND",
+            "3": "AX1_ZERO", "4": "AX1_ERROR_N",
+            "5": "AX2_ZERO", "6": "AX2_ERROR_N",
+        },
+    }
+    for reference, pin_contract in status_register_contracts.items():
+        for data_pin, expected_net in pin_contract.items():
+            if (reference, data_pin) not in nets.get(expected_net, set()):
+                failures.append(
+                    f"{reference} data pin {data_pin} is not {expected_net}"
+                )
     keyboard_network_pins = {
-        ("RN8", "1", "GND"), ("RN8", "8", "BUFY2"),
-        ("RN8", "2", "GND"), ("RN8", "7", "BUFY3"),
-        ("RN8", "3", "GND"), ("RN8", "6", "BUFY0"),
-        ("RN8", "4", "GND"), ("RN8", "5", "BUFY1"),
-        ("RN9", "1", "BUFY5"), ("RN9", "8", "GND"),
-        ("RN9", "2", "BUFY4"), ("RN9", "7", "GND"),
-        ("RN9", "3", "BUFY7"), ("RN9", "6", "GND"),
-        ("RN9", "4", "BUFY6"), ("RN9", "5", "GND"),
-        ("RN10", "1", "BUFY9"), ("RN10", "8", "GND"),
-        ("RN10", "2", "BUFY8"), ("RN10", "7", "GND"),
-        ("RN10", "3", "BUFY10"), ("RN10", "6", "GND"),
-        ("RN10", "4", "BUFY11"), ("RN10", "5", "GND"),
-        ("RN11", "1", "GND"), ("RN11", "8", "BUFY15"),
-        ("RN11", "2", "GND"), ("RN11", "7", "BUFY14"),
-        ("RN11", "3", "GND"), ("RN11", "6", "BUFY13"),
-        ("RN11", "4", "GND"), ("RN11", "5", "BUFY12"),
+        ("RN8", "1", "GND"), ("RN8", "8", "OUT7"),
+        ("RN8", "2", "GND"), ("RN8", "7", "OUT6"),
+        ("RN8", "3", "GND"), ("RN8", "6", "OUT5"),
+        ("RN8", "4", "GND"), ("RN8", "5", "OUT4"),
+        ("RN9", "1", "OUT0"), ("RN9", "8", "GND"),
+        ("RN9", "2", "OUT1"), ("RN9", "7", "GND"),
+        ("RN9", "3", "OUT2"), ("RN9", "6", "GND"),
+        ("RN9", "4", "OUT3"), ("RN9", "5", "GND"),
+        ("RN10", "1", "OUT8"), ("RN10", "8", "GND"),
+        ("RN10", "2", "OUT9"), ("RN10", "7", "GND"),
+        ("RN10", "3", "OUT10"), ("RN10", "6", "GND"),
+        ("RN10", "4", "OUT11"), ("RN10", "5", "GND"),
+        ("RN11", "1", "GND"), ("RN11", "8", "OUT15"),
+        ("RN11", "2", "GND"), ("RN11", "7", "OUT14"),
+        ("RN11", "3", "GND"), ("RN11", "6", "OUT13"),
+        ("RN11", "4", "GND"), ("RN11", "5", "OUT12"),
         ("RN12", "1", "OUT19"), ("RN12", "8", "GND"),
         ("RN12", "2", "OUT18"), ("RN12", "7", "GND"),
         ("RN12", "3", "OUT17"), ("RN12", "6", "GND"),
         ("RN12", "4", "OUT16"), ("RN12", "5", "GND"),
+        ("RN13", "1", "OUT23"), ("RN13", "8", "GND"),
         ("RN13", "2", "OUT22"), ("RN13", "7", "GND"),
         ("RN13", "3", "OUT21"), ("RN13", "6", "GND"),
         ("RN13", "4", "OUT20"), ("RN13", "5", "GND"),
-        ("RN20", "1", "KOUT0"), ("RN20", "8", "OUT24"),
-        ("RN20", "2", "KOUT1"), ("RN20", "7", "OUT25"),
-        ("RN20", "3", "KOUT2"), ("RN20", "6", "OUT26"),
-        ("RN20", "4", "KOUT3"), ("RN20", "5", "OUT27"),
-        ("RN21", "1", "KOUT4"), ("RN21", "8", "OUT28"),
-        ("RN21", "2", "KOUT5"), ("RN21", "7", "OUT29"),
-        ("RN21", "3", "KOUT6"), ("RN21", "6", "OUT30"),
-        ("RN21", "4", "KOUT7"), ("RN21", "5", "OUT31"),
-        ("RN30", "1", "OUT26"), ("RN30", "8", "GND"),
-        ("RN30", "2", "OUT24"), ("RN30", "7", "GND"),
+        ("RN30", "1", "OUT27"), ("RN30", "8", "GND"),
+        ("RN30", "2", "OUT26"), ("RN30", "7", "GND"),
         ("RN30", "3", "OUT25"), ("RN30", "6", "GND"),
-        ("RN30", "4", "OUT23"), ("RN30", "5", "GND"),
-        ("RN31", "1", "OUT29"), ("RN31", "8", "GND"),
-        ("RN31", "2", "OUT28"), ("RN31", "7", "GND"),
-        ("RN31", "3", "OUT27"), ("RN31", "6", "GND"),
-        ("RN22", "1", "KIN0_FILT"), ("RN22", "8", "KIN0"),
-        ("RN22", "2", "KIN1_FILT"), ("RN22", "7", "KIN1"),
-        ("RN22", "3", "KIN2_FILT"), ("RN22", "6", "KIN2"),
-        ("RN22", "4", "KIN3_FILT"), ("RN22", "5", "KIN3"),
-        ("RN24", "1", "KIN4_FILT"), ("RN24", "8", "KIN4"),
-        ("RN24", "2", "KIN5_FILT"), ("RN24", "7", "KIN5"),
-        ("RN24", "3", "KIN6_FILT"), ("RN24", "6", "KIN6"),
-        ("RN24", "4", "KIN7_FILT"), ("RN24", "5", "KIN7"),
+        ("RN30", "4", "OUT24"), ("RN30", "5", "GND"),
+        ("RN31", "1", "OUT31"), ("RN31", "8", "GND"),
+        ("RN31", "2", "OUT30"), ("RN31", "7", "GND"),
+        ("RN31", "3", "OUT29"), ("RN31", "6", "GND"),
+        ("RN31", "4", "OUT28"), ("RN31", "5", "GND"),
     }
     for reference, pin, expected_net in keyboard_network_pins:
         if (reference, pin) not in nets.get(expected_net, set()):
             failures.append(
-                f"{reference} pin {pin} is not on expected keyboard net {expected_net}"
+                f"{reference} pin {pin} is not on expected network {expected_net}"
             )
     connected_pads = {
         endpoint for endpoints in nets.values() for endpoint in endpoints
     }
-    spare_array_pins = {
-        "RN13": ("1", "8"),
-        "RN31": ("4", "5"),
-    }
+    spare_array_pins = {}
     for reference, pins in spare_array_pins.items():
         for pin in pins:
             if (reference, pin) in connected_pads:
@@ -692,7 +772,7 @@ def main() -> None:
     decoupling_required = {
         "U1", "U2", "U3", "U37", "U38",
         "U6", "U7", "U8", "U9", "U10", "U11", "U12", "U13",
-        "U24", "U25", "U28", "U34", "U41",
+        "U28", "U34", "U42", "U43",
     }
     decouplers = [
         reference
@@ -700,27 +780,25 @@ def main() -> None:
         if reference.startswith("C") and value.startswith("100nF")
     ]
     for reference in sorted(decoupling_required):
+        return_net = "ISO_GND" if reference == "U3" else "GND"
         supply_nets = {
             net
             for net in component_nets.get(reference, set())
-            if net.startswith(("+", "VIN")) or net == "DO_COM"
+            if net.startswith(("+", "VIN"))
             and not net.endswith(("_SW", "_BST"))
         }
         has_local = any(
             supply_nets & component_nets.get(capacitor, set())
-            and "GND" in component_nets.get(capacitor, set())
+            and return_net in component_nets.get(capacitor, set())
             for capacitor in decouplers
         )
         if not has_local:
-            failures.append(f"{reference} has no 100nF capacitor to GND")
+            failures.append(
+                f"{reference} has no 100nF capacitor to {return_net}"
+            )
 
-    components_by_ref = {
-        component.get("ref"): component for component in components
-    }
-    dnp_required = {
-        "RN26", "RN27",
-    }
-    for reference in sorted(dnp_required):
+    fitted_passive_lvds = {"RN26", "RN27"}
+    for reference in sorted(fitted_passive_lvds):
         component = components_by_ref.get(reference)
         assembly = next(
             (
@@ -730,26 +808,26 @@ def main() -> None:
             ),
             "",
         ) if component is not None else ""
-        if assembly != "DNP":
-            failures.append(f"Legacy component {reference} is not marked DNP")
+        if assembly == "DNP":
+            failures.append(f"Passive LVDS component {reference} must be fitted")
 
     lvds_required = {
-        ("RN26", "1", "HSTX_D1_N"),
-        ("RN26", "8", "LVDS_D1_N"),
-        ("RN26", "2", "HSTX_D1_P"),
-        ("RN26", "7", "LVDS_D1_P"),
-        ("RN26", "3", "HSTX_D0_P"),
-        ("RN26", "6", "LVDS_D0_P"),
-        ("RN26", "4", "HSTX_D0_N"),
-        ("RN26", "5", "LVDS_D0_N"),
-        ("RN27", "1", "HSTX_CLK_N"),
-        ("RN27", "8", "LVDS_CLK_N"),
-        ("RN27", "2", "HSTX_CLK_P"),
-        ("RN27", "7", "LVDS_CLK_P"),
-        ("RN27", "3", "HSTX_D2_P"),
-        ("RN27", "6", "LVDS_D2_P"),
-        ("RN27", "4", "HSTX_D2_N"),
-        ("RN27", "5", "LVDS_D2_N"),
+        ("RN26", "1", "HSTX_D0_P"),
+        ("RN26", "8", "LVDS_D0_P"),
+        ("RN26", "2", "HSTX_D0_N"),
+        ("RN26", "7", "LVDS_D0_N"),
+        ("RN26", "3", "HSTX_D1_P"),
+        ("RN26", "6", "LVDS_D1_P"),
+        ("RN26", "4", "HSTX_D1_N"),
+        ("RN26", "5", "LVDS_D1_N"),
+        ("RN27", "1", "HSTX_D2_P"),
+        ("RN27", "8", "LVDS_D2_P"),
+        ("RN27", "2", "HSTX_D2_N"),
+        ("RN27", "7", "LVDS_D2_N"),
+        ("RN27", "3", "HSTX_CLK_P"),
+        ("RN27", "6", "LVDS_CLK_P"),
+        ("RN27", "4", "HSTX_CLK_N"),
+        ("RN27", "5", "LVDS_CLK_N"),
     }
     for reference, pin, expected_net in lvds_required:
         if (reference, pin) not in nets.get(expected_net, set()):
@@ -782,36 +860,47 @@ def main() -> None:
     for pin in ("17", "18", "19", "20"):
         if any(("J22", pin) in endpoints for endpoints in nets.values()):
             failures.append(f"J22 pin {pin} must remain unconnected")
-    if "U41" not in references:
-        failures.append("Missing active LVDS driver U41")
-    lvds_driver_pins = {
-        "1": "+3V3", "2": "HSTX_CLK_P", "3": "HSTX_D2_P",
-        "4": "+3V3", "5": "GND", "6": "HSTX_D1_P",
-        "7": "HSTX_D0_P", "8": "GND",
-        "9": "LVDS_D0_N", "10": "LVDS_D0_P",
-        "11": "LVDS_D1_P", "12": "LVDS_D1_N",
-        "13": "LVDS_D2_N", "14": "LVDS_D2_P",
-        "15": "LVDS_CLK_P", "16": "LVDS_CLK_N",
-    }
-    for pin, expected_net in lvds_driver_pins.items():
-        if ("U41", pin) not in nets.get(expected_net, set()):
-            failures.append(f"U41 pin {pin} is not on {expected_net}")
-    if ("C106", "1") not in nets.get("+3V3", set()):
-        failures.append("C106 is not connected to U28 +3V3")
-    if ("C106", "2") not in nets.get("GND", set()):
-        failures.append("C106 is not connected to GND")
-
+    if "U41" in references:
+        failures.append("Retired LVDS driver U41 remains")
+    if "C106" in references:
+        failures.append("Retired LVDS driver bypass C106 remains")
     removed = {
-        "C9", "C12", "C18", "C19", "C20", "C21", "C78", "C81", "C82", "C83",
+        "C9", "C12", "C18", "C19", "C20", "C21", "C57", "C78", "C81", "C82", "C83",
         "C1", "C84", "C85", "D6", "D7", "D8", "FB3", "JP1",
-        "Q1", "Q2", "Q3", "Q4", "R2", "R3", "R6", "R7", "R8",
+        "Q1", "Q2", "Q3", "Q4", "Q8", "R2", "R3", "R6", "R7", "R8",
         "R14", "R15",
-        "R42", "R43", "SW1", "U4", "U14", "U15", "U16", "U17", "U22", "U23",
-        "RN1", "RN2", "RN3", "RN4", "RN5", "RN23", "RN25",
+        "R42", "R43",
+        *(f"R{index}" for index in range(132, 148)),
+        *(f"R{index}" for index in range(148, 165)),
+        "J6", "J19", "J26", "J31", "J34", "J35", "J37", "J38", "J39",
+        "J44", "J51",
+        "JP2", "JP3", "JP4",
+        "R17", "R50", "R51", "R52", "R53", "R75", "R108", "R109",
+        *(f"R{index}" for index in range(44, 50)),
+        "D11", "D12", "D54", "D55", "C106", "U41",
+        "U45", "U46",
+        "U36", "U39", "R129", "R130",
+        *(f"R{index}" for index in range(166, 174)),
+        *(f"D{index}" for index in range(65, 73)),
+        *(f"D{index}" for index in range(81, 89)),
+        "U40", "F4", "D56", "C103", "C105",
+        "RN23", "RN25",
+        *(f"R{index}" for index in range(174, 182)),
+        *(f"D{index}" for index in range(73, 81)),
+        *(f"D{index}" for index in range(89, 97)),
+        "SW1", "U4", "U14", "U15", "U16", "U17", "U22", "U23", "U44", "U65",
+        *(f"U{index}" for index in range(47, 61)),
+        *(f"U{index}" for index in range(66, 78)),
+        "U24", "U25", "C53", "C54", "C55", "C56", "C117",
+        "Q5", "Q6", "Q7", "R113", "R114", "R115", "R116", "R117",
+        "RN1", "RN2", "RN3", "RN4", "RN5", "RN6", "RN7",
+        "RN14", "RN15",
+        *(f"RN{index}" for index in range(16, 23)),
+        "RN24",
+        "J9", "J16", "J17", "J27",
         *(f"R{index}" for index in range(55, 59)),
         "R54",
         *(f"R{index}" for index in range(76, 92)),
-        *(f"U{index}" for index in range(42, 54)),
         *(f"C{index}" for index in range(30, 53)),
         *(f"C{index}" for index in range(59, 67)),
     }
@@ -819,15 +908,20 @@ def main() -> None:
     if remaining:
         failures.append(f"Obsolete components remain: {remaining}")
 
-    quad_opto_refs = {
+    expected_optos = (
+        {f"U{index}" for index in range(18, 22)}
+        | {f"U{index}" for index in range(61, 65)}
+    )
+    opto_refs = {
         reference
         for reference, value in component_values.items()
-        if value == "LTV-847S"
+        if value == "TLP291-4"
     }
-    expected_quad_opto = {f"U{index}" for index in range(18, 22)}
-    if quad_opto_refs != expected_quad_opto:
-        failures.append(f"Unexpected quad optocoupler set: {sorted(quad_opto_refs)}")
-    for reference in sorted(expected_quad_opto):
+    if opto_refs != expected_optos:
+        failures.append(
+            f"Unexpected TLP291-4 optocoupler set: {sorted(opto_refs)}"
+        )
+    for reference in sorted(expected_optos):
         footprint = next(
             (
                 (component.findtext("footprint") or "").strip()
@@ -836,27 +930,23 @@ def main() -> None:
             ),
             "",
         )
-        if footprint != "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm":
-            failures.append(f"{reference} does not use the SOIC-16W optocoupler footprint")
+        if footprint != "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm":
+            failures.append(f"{reference} does not use the TLP291-4 SOIC-16 footprint")
+    if component_values.get("U35") != "TLP291":
+        failures.append("U35 is not the single-channel TLP291 E-stop optocoupler")
+    u35_component = components_by_ref.get("U35")
+    if not u35_component or (u35_component.findtext("footprint") or "").strip() != (
+        "Package_SO:SOIC-4_4.55x2.6mm_P1.27mm"
+    ):
+        failures.append("U35 does not use the TLP291 SOIC-4 footprint")
 
-    safety_optos = {
-        reference
-        for reference, value in component_values.items()
-        if value == "EL3H7"
-    }
-    if safety_optos != {"U35", "U36", "U39"}:
-        failures.append(f"Unexpected individual safety optocouplers: {sorted(safety_optos)}")
-
-    expected_pullups = {"R74", "R75", "R109"}
-    actual_pullups = {
-        reference
-        for reference in expected_pullups
-        if component_values.get(reference) == "4.7k"
-    }
-    if actual_pullups != expected_pullups:
-        failures.append(
-            f"Missing individual 4.7k input pull-ups: {sorted(expected_pullups - actual_pullups)}"
-        )
+    for reference, output_net in (("R74", "ESTOP_N"),):
+        if component_values.get(reference) != "4.7k":
+            failures.append(f"{reference} is not a 4.7k safety pull-up")
+        if (reference, "1") not in nets.get(output_net, set()):
+            failures.append(f"{reference} is not connected to {output_net}")
+        if (reference, "2") not in nets.get("+3V3", set()):
+            failures.append(f"{reference} is not pulled to +3V3")
 
     isolated_input_contracts = []
     for bit in range(16):
@@ -864,12 +954,22 @@ def main() -> None:
         isolated_input_contracts.append(
             {
                 "channel": f"PLC input {number}",
-                "R": (f"R{18 + bit}", "2.2k", {f"FIELD_IN{number}", f"FLD_LED{number}_A"}),
-                "LED": (f"D{13 + 2 * bit}", "indicator", {f"FLD_OPTO{number}_A", f"FLD_LED{number}_A"}),
+                "R": (f"R{18 + bit}", "2.2k", {f"FLD_LED{number}_A", f"FLD_OPTO{number}_A"}),
+                "LED": (f"D{13 + 2 * bit}", "indicator", {f"FIELD_IN{number}", f"FLD_LED{number}_A"}),
                 "D": (
                     f"D{14 + 2 * bit}",
                     "1N4148WS",
                     {f"FLD_LED{number}_A", "ISO_GND"},
+                ),
+                "OPTO": (
+                    ("U21", "U20", "U19", "U18")[bit // 4],
+                    "TLP291-4",
+                    {
+                        f"FLD_OPTO{number}_A",
+                        "ISO_GND",
+                        "GND",
+                        f"PLC_IN{number}_N",
+                    },
                 ),
             }
         )
@@ -877,24 +977,14 @@ def main() -> None:
         (
             {
                 "channel": "E-stop",
-                "R": ("R16", "2.2k", {"ESTOP_FIELD", "ESTOP_LED_A"}),
-                "LED": ("D9", "indicator", {"ESTOP_OPTO_A", "ESTOP_LED_A"}),
+                "R": ("R16", "2.2k", {"ESTOP_LED_A", "ESTOP_OPTO_A"}),
+                "LED": ("D9", "indicator", {"ESTOP_FIELD", "ESTOP_LED_A"}),
                 "D": ("D10", "1N4148WS", {"ESTOP_LED_A", "ISO_GND"}),
-                "RV": ("R74", "4.7k", {"ESTOP_N", "+3V3"}),
-            },
-            {
-                "channel": "HOLD",
-                "R": ("R17", "2.2k", {"HOLD_FIELD", "HOLD_LED_A"}),
-                "LED": ("D11", "indicator", {"HOLD_OPTO_A", "HOLD_LED_A"}),
-                "D": ("D12", "1N4148WS", {"HOLD_LED_A", "ISO_GND"}),
-                "RV": ("R75", "4.7k", {"HOLD_N", "+3V3"}),
-            },
-            {
-                "channel": "START",
-                "R": ("R108", "2.2k", {"START_FIELD", "START_LED_A"}),
-                "LED": ("D54", "indicator", {"START_OPTO_A", "START_LED_A"}),
-                "D": ("D55", "1N4148WS", {"START_LED_A", "ISO_GND"}),
-                "RV": ("R109", "4.7k", {"START_N", "+3V3"}),
+                "OPTO": (
+                    "U35",
+                    "TLP291",
+                    {"ESTOP_OPTO_A", "ISO_GND", "GND", "ESTOP_N"},
+                ),
             },
         )
     )
@@ -913,12 +1003,68 @@ def main() -> None:
                     f"{sorted(expected_nets - actual_nets)}"
                 )
 
+    isolated_input_pins = []
+    for bit in range(16):
+        number = bit + 1
+        isolated_input_pins.extend(
+            (
+                (f"R{18 + bit}", "1", f"FLD_LED{number}_A"),
+                (f"R{18 + bit}", "2", f"FLD_OPTO{number}_A"),
+                (f"D{13 + 2 * bit}", "1", f"FLD_LED{number}_A"),
+                (f"D{13 + 2 * bit}", "2", f"FIELD_IN{number}"),
+                (f"D{14 + 2 * bit}", "1", f"FLD_LED{number}_A"),
+                (f"D{14 + 2 * bit}", "2", "ISO_GND"),
+            )
+        )
+    isolated_input_pins.extend(
+        (
+            ("R16", "1", "ESTOP_LED_A"),
+            ("R16", "2", "ESTOP_OPTO_A"),
+            ("D9", "1", "ESTOP_LED_A"),
+            ("D9", "2", "ESTOP_FIELD"),
+            ("D10", "1", "ESTOP_LED_A"),
+            ("D10", "2", "ISO_GND"),
+        )
+    )
+    for reference, pin, expected_net in isolated_input_pins:
+        if (reference, pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"Input indicator chain {reference} pin {pin} is not "
+                f"{expected_net}"
+            )
+
+    for bit in range(16):
+        number = bit + 1
+        reference = ("U21", "U20", "U19", "U18")[bit // 4]
+        slot = bit % 4
+        pin_contract = {
+            str(1 + slot * 2): f"FLD_OPTO{number}_A",
+            str(2 + slot * 2): "ISO_GND",
+            str(15 - slot * 2): "GND",
+            str(16 - slot * 2): f"PLC_IN{number}_N",
+        }
+        for pin, expected_net in pin_contract.items():
+            if (reference, pin) not in nets.get(expected_net, set()):
+                failures.append(
+                    f"{reference} pin {pin} is not {expected_net}"
+                )
+    estop_opto_pins = {
+        "1": "ESTOP_OPTO_A",
+        "2": "ISO_GND",
+        "3": "GND",
+        "4": "ESTOP_N",
+    }
+    for pin, expected_net in estop_opto_pins.items():
+        if ("U35", pin) not in nets.get(expected_net, set()):
+            failures.append(f"U35 pin {pin} is not {expected_net}")
+
+    pullup_references = ("RN35", "RN34", "RN33", "RN32")
     for group in range(4):
-        reference = f"RN{32 + group}"
+        reference = pullup_references[group]
         if component_values.get(reference) != "4x10k":
             failures.append(f"{reference} is not the PLC 4x10k pull-up network")
         for channel in range(4):
-            number = group * 4 + channel + 1
+            number = group * 4 + 4 - channel
             signal_pin = str(channel + 1)
             supply_pin = str(8 - channel)
             if (reference, signal_pin) not in nets.get(
@@ -928,59 +1074,32 @@ def main() -> None:
                     f"{reference} pin {signal_pin} is not PLC_IN{number}_N"
                 )
             if (reference, supply_pin) not in nets.get("+3V3", set()):
-                failures.append(
-                    f"{reference} pin {supply_pin} is not +3V3"
-                )
+                failures.append(f"{reference} pin {supply_pin} is not +3V3")
 
     if component_values.get("U1") != "LMR36510ADDAR":
         failures.append("U1 is not the specified LMR36510 buck")
-    if component_values.get("U40") != "TBA2-0512":
-        failures.append("U40 is not the isolated 5 V to 12 V converter")
-    isolated_fields = {
-        ("U40", "1", "+5V_ISO_IN"),
-        ("U40", "2", "GND"),
-        ("U40", "4", "ISO_GND"),
-        ("U40", "6", "+12V_RAW"),
-        ("D56", "1", "+12V_FIELD"),
-        ("D56", "2", "+12V_RAW"),
-        ("F4", "1", "+5V"),
-        ("F4", "2", "+5V_ISO_IN"),
-        ("C103", "1", "+5V_ISO_IN"),
-        ("C105", "1", "+12V_FIELD"),
-    }
-    for reference, pin, expected_net in isolated_fields:
-        if (reference, pin) not in nets.get(expected_net, set()):
-            failures.append(
-                f"{reference} pin {pin} is not on isolated-field net {expected_net}"
-            )
-    isolated_selectors = {
-        ("JP2", "1", "ISO_GND"),
-        ("JP2", "2", "FIELD_COM0"),
-        ("JP2", "3", "+12V_FIELD"),
-        ("JP3", "1", "ISO_GND"),
-        ("JP3", "2", "FIELD_COM1"),
-        ("JP3", "3", "+12V_FIELD"),
-        ("JP4", "1", "ISO_GND"),
-        ("JP4", "2", "FIELD_SAFETY_COM"),
-        ("JP4", "3", "+12V_FIELD"),
-    }
-    for reference, pin, expected_net in isolated_selectors:
-        if (reference, pin) not in nets.get(expected_net, set()):
-            failures.append(
-                f"{reference} pin {pin} is not on field-mode net {expected_net}"
-            )
-    if ("U35", "2") not in nets.get("ISO_GND", set()):
-        failures.append("E-stop optocoupler return is not on ISO_GND")
-    if ("U36", "2") not in nets.get("ISO_GND", set()):
-        failures.append("HOLD optocoupler return is not on ISO_GND")
-    if ("U39", "2") not in nets.get("ISO_GND", set()):
-        failures.append("START optocoupler return is not on ISO_GND")
-    for reference in expected_quad_opto:
-        for pin in ("2", "4", "6", "8"):
-            if (reference, pin) not in nets.get("ISO_GND", set()):
-                failures.append(
-                    f"{reference} cathode {pin} is not on ISO_GND"
-                )
+    for retired_net in (
+        "+5V_ISO_IN", "+12V_FIELD", "+12V_RAW", "DO_COM", "DO_GND",
+        "BL_SW_GATE", "BL_LED_N", "AUX_OUT",
+        "FIELD_COM0", "FIELD_COM1", "FIELD_SAFETY_COM",
+    ):
+        if retired_net in nets:
+            failures.append(f"Retired isolated-field net {retired_net} remains")
+    for prefix in ("MOTION", "AX0_SERVO_", "AX1_SERVO_", "AX2_SERVO_",
+                   "AX3_SERVO_", "AX4_SERVO_", "SERVO_DIAG_"):
+        for retired_net in sorted(name for name in nets if name.startswith(prefix)):
+            failures.append(f"Retired motion/diagnostic net {retired_net} remains")
+    if ("J33", "1") not in nets.get("+24V_FIELD", set()):
+        failures.append("J33 pin 1 is not the external field +24 V input")
+    if ("J33", "2") not in nets.get("ISO_GND", set()):
+        failures.append("J33 pin 2 is not the isolated field return")
+    if ("J45", "1") not in nets.get("+24V_FIELD", set()):
+        failures.append("J45 pin 1 is not in parallel with J33")
+    if ("J45", "2") not in nets.get("ISO_GND", set()):
+        failures.append("J45 pin 2 is not in parallel with J33")
+    for pin, channel in (("2", "E-stop"),):
+        if ("U35", pin) not in nets.get("ISO_GND", set()):
+            failures.append(f"{channel} optocoupler return is not on ISO_GND")
     if not {("U1", "2"), ("U1", "3")}.issubset(nets.get("VIN_PROT", set())):
         failures.append("LMR36510 EN pin is not tied to its VIN pin")
     for pin in ("3", "18", "64"):
@@ -988,15 +1107,12 @@ def main() -> None:
             failures.append(f"WeAct 3V3 output pin {pin} must remain local to the module")
     if ("MOD1", "31") not in nets.get("+5V", set()):
         failures.append("WeAct 5 V input is not connected to the main 5 V rail")
-    for reference in ("D2", "D3"):
-        if component_values.get(reference) != "SS16":
-            failures.append(f"{reference} is not the intended 1 A input diode")
-        if (reference, "1") not in nets.get(
-            "VIN_PROT" if reference == "D2" else "VIN_BL_PROT", set()
-        ):
-            failures.append(f"{reference} cathode is not on its protected input rail")
-        if (reference, "2") not in nets.get("VIN_FUSED", set()):
-            failures.append(f"{reference} anode is not on VIN_FUSED")
+    if component_values.get("D2") != "SS16":
+        failures.append("D2 is not the intended 1 A input diode")
+    if ("D2", "1") not in nets.get("VIN_PROT", set()):
+        failures.append("D2 cathode is not on VIN_PROT")
+    if ("D2", "2") not in nets.get("VIN_FUSED", set()):
+        failures.append("D2 anode is not on VIN_FUSED")
     if "Q1" in references or "Q1_GATE" in nets:
         failures.append("Retired Q1 input MOSFET or gate net remains")
     for expected in (("U1", "4"), ("MOD1", "21"), ("R73", "1")):
@@ -1012,26 +1128,6 @@ def main() -> None:
         failures.append("LMR36510 feedback lower resistor is not 33k")
     if component_values.get("U2") != "AMS1117-3.3":
         failures.append("Peripheral 3.3 V rail is not supplied by its dedicated LDO")
-    if component_values.get("U3") != "LMR36510ADDAR":
-        failures.append("U3 is not the dedicated LMR36510 backlight buck")
-    if not {("U3", "2"), ("U3", "3")}.issubset(nets.get("VIN_BL_PROT", set())):
-        failures.append("Backlight buck input/enable pins are not on VIN_BL_PROT")
-    if component_values.get("L2") != "47uH 1.5A":
-        failures.append("Backlight buck inductor is not the TI 12 V reference value")
-    if component_values.get("R126") != "100k":
-        failures.append("Backlight buck upper feedback resistor is not 100k")
-    if component_values.get("R127") != "10k":
-        failures.append("Backlight buck lower feedback resistor is not 10k")
-    if component_values.get("R128") != "100k":
-        failures.append("Backlight feedback parallel resistor is not 100k")
-    if ("R128", "1") not in nets.get("FB12", set()):
-        failures.append("R128 pin 1 is not on FB12")
-    if ("R128", "2") not in nets.get("GND", set()):
-        failures.append("R128 pin 2 is not on GND")
-    if ("U3", "4") in {
-        endpoint for endpoints in nets.values() for endpoint in endpoints
-    }:
-        failures.append("U3 power-good pin should remain unconnected")
     if "J3" in references:
         failures.append("Redundant two-pin +12 V output J3 remains")
     if component_values.get("U37") != "L78L12ACUTR":

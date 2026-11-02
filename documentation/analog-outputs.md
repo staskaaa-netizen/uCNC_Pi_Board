@@ -45,14 +45,14 @@ used in this block:
 
 | Channel | RP2350 GPIO | MOD1 pin | J25 pin |
 |---|---:|---:|---:|
-| AOUT0 | GPIO47 | 19 | 2 |
-| AOUT1 | GPIO44 | 6 | 3 |
+| AOUT0 | GPIO44 | 6 | 2 |
+| AOUT1 | GPIO46 | 5 | 3 |
 | AOUT2 | GPIO45 | 20 | 4 |
-| AOUT3 | GPIO46 | 5 | 5 |
+| AOUT3 | GPIO47 | 19 | 5 |
 
 J25 pin 1 is the common ground return. These are ground-referenced outputs, not
-isolated outputs. MOD1 pins 34 and 19 are intentionally swapped relative to the
-previous revision: GPIO2 now carries SD-card detect, while GPIO47 drives AOUT0.
+isolated outputs. AOUT0, AOUT1 and AOUT3 use MOD1 pins 6, 5 and 19 respectively;
+the corresponding GPIO assignments are recorded in the firmware GPIO map.
 
 The external status LED formerly on GPIO46 is removed. Use the WeAct module's
 onboard LED; it is already fitted to the module.

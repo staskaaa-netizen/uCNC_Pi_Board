@@ -1,61 +1,45 @@
 # Isolated PLC input wetting
 
-The optocoupled input stage supports two field-wiring modes without changing
-the motherboard resistor population:
-
-- External 24 V wetting supply.
-- Dry contacts powered by the onboard isolated 12 V supply.
-
-The RP2350 side remains galvanically isolated because `+12V_FIELD` and
+The optocoupled input stage is fixed for dry-contact field loops powered from
+the external isolated 24 V field supply. No input-mode selectors are fitted.
+The RP2350 side remains galvanically isolated because `+24V_FIELD` and
 `ISO_GND` have no connection to motherboard `GND`.
 
-## Isolated supply
+## Field supply
 
-`U40` is a Traco Power `TBA2-0512`: 5 V input, isolated 12 V output, 2 W
-(approximately 167 mA). This covers 24 active channels at about 4.5 mA each
-with margin. `F4` is the 750 mA primary fuse.
+J33 and J45 are electrically parallel two-pin connections:
 
-`D56` is an `SS54` Schottky diode in series with the converter output. It
-blocks current from the field rail back into the converter. C103 is the 22 uF,
-50 V primary bulk capacitor; C105 is the common 10 uF, 25 V isolated-output
-capacitor.
+| Pin | Net | Function |
+|---:|---|---|
+| 1 | `+24V_FIELD` | External isolated 24 V field supply |
+| 2 | `ISO_GND` | Single isolated field return |
 
-U40, D56, F4, C103 and C105 are on F.Cu in the relocated bottom-left power
-area near the encoder interface.
+Either connector can supply the field domain. The second connector provides a
+parallel terminal for convenient wiring or looping to another enclosure
+connection; it is not an additional logic supply and must not be connected to
+motherboard GND.
 
-## One selector per input bank
+The same field supply feeds the 16 PLC contact loops, the isolated servo
+diagnostic channels and the relay-output common. The onboard isolated DC/DC
+converter and its support components are removed.
 
-Each field bank has one 2.54 mm three-pin header. Fit one removable shunt across
-the required pair. The center pin is the isolated field common:
+## Field wiring
 
-| Jumper | Input bank |
-|---|---|
-| JP2 | J7, eight PLC inputs |
-| JP3 | J8, eight PLC inputs |
-| JP4 | E-stop, HOLD and START |
+Each J7/J8 input pin is one side of a normally open dry-contact loop. Wire the
+other side of every contact to `+24V_FIELD` from J33 or J45. The optocoupler
+cathode and reverse-protection diode return through the shared `ISO_GND` pin.
+J7/J8 therefore carry signals only; duplicate return pins are not provided on
+the input connectors.
 
-Configuration:
-
-| Pads bridged | Mode |
-|---|---|
-| 1-2 | External 24 V: field common connected to `ISO_GND` |
-| 2-3 | `CONTACT`: field common connected to protected isolated `+12V_FIELD` |
-
-Only one pair can be bridged on a three-pin selector. In 24 V mode the isolated
-12 V rail is disconnected from the field common; D56 additionally blocks any
-backfeed into U40. In `CONTACT` mode, an external dry contact merely shorts the
-odd signal pin to its adjacent even common and the board supplies the isolated
-loop current.
+The dedicated E-stop loop on J5 uses the same `ISO_GND` field return. It drives
+GPIO9 on MOD1 pin 53 directly and remains outside the shift-register chain.
 
 ## Input current
 
-The existing 2.2 k series resistor is retained for both modes. With about 3 V
-total LED drop:
+Each channel retains one 2.2 k field-side series resistor. With approximately
+3 V total LED drop at 24 V, the nominal loop current is about 9.5 mA.
 
-- 24 V mode: approximately 9.5 mA.
-- Isolated 12 V mode, allowing about 0.5 V for D56: approximately 3.9 mA.
-
-The LTV-847S channels are rated for these currents. If the selected
-optocoupler shipment has lower-than-expected CTR at 12 V, use a 1.8-2.0 k
-1206 resistor or two 3.6 k 1206 resistors in parallel. This remains one
-resistor population, not a second switchable bank.
+The TLP291-4 channels are rated for this current. If the selected optocoupler
+shipment has lower-than-expected CTR, use a 1.8-2.0 k 1206 resistor or two
+3.6 k 1206 resistors in parallel. Do not fit the lower value in addition to the
+nominal resistor.

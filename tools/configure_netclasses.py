@@ -64,7 +64,7 @@ def make_class(
 CLASSES = (
     make_class("Default", 0.2, 0.2, 0.6, 0.3, priority=2147483647),
     make_class("Power", 0.8, 0.3, 0.8, 0.4),
-    make_class("FieldPower", 0.5, 0.5, 0.6, 0.3),
+    make_class("FieldPower", 0.8, 0.5, 0.8, 0.4),
     make_class("AnalogPower", 0.3, 0.2, 0.6, 0.3),
     make_class("EncoderPower", 0.3, 0.2, 0.6, 0.3),
     make_class("BacklightControl", 0.2, 0.2, 0.6, 0.3),
@@ -84,12 +84,8 @@ CLASSES = (
 
 PATTERNS = (
     # Field and isolated-domain power must win over the generic supply rules.
-    ("FieldPower", "FIELD_COM*"),
-    ("FieldPower", "FIELD_SAFETY_COM"),
     ("FieldPower", "ISO_GND"),
-    ("FieldPower", "+5V_ISO_IN"),
-    ("FieldPower", "+12V_FIELD"),
-    ("FieldPower", "DO_COM"),
+    ("FieldPower", "+24V_FIELD"),
     ("AnalogPower", "+12V_AO"),
     ("AnalogPower", "+12V_RAW"),
     ("EncoderPower", "+5V_ENC"),

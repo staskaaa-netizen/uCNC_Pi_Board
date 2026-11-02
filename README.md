@@ -1,12 +1,13 @@
 # uCNC RP2350B Motherboard
 
 Native KiCad 10 design for a socketed WeAct Studio RP2350B Core Board. The
-architecture preserves LeanCam's 32-bit input and output shift-register chains,
-with 16 isolated PLC inputs, dedicated direct E-stop, HOLD and START inputs, an
-eight-input expansion inputs, 15 motion outputs plus AUX, 16 general low-side
-field outputs, eight keyboard outputs, three encoders, full-size SD, optional ESP-01/ESP-01S,
-LCD LVDS output with a dedicated 12 V backlight supply, three 0-10 V analog
-inputs and four 0-10 V analog outputs.
+architecture uses a 32-bit input shift-register chain and a 32-bit output chain,
+with 16 isolated PLC inputs, seven paired servo ZERO/ERROR inputs, a dedicated
+direct E-stop input, seven STEP/DIR motion axes with grouped 3-axis/4-axis
+enables, 16 general low-side field outputs, three encoders,
+microSD, optional ESP-01/ESP-01S, LCD LVDS output, three 0-10 V analog inputs
+and four 0-10 V analog outputs. The backlight has an isolated 24 V to 12 V
+buck converter sourced from the J33/J45 PLC field rail.
 
 ## Open the project
 
@@ -66,9 +67,18 @@ them using KiCad 10 and the project-local vendor footprint:
 
 ## Release status
 
-The current board is a 200 x 150 mm, two-layer prototype. All footprints are
-inside the outline and the routed connectivity is complete. The schematic
-verifies with 326 components and 338 nets, and ERC has no electrical-rule
-errors. PCB DRC reports no shorts and no unconnected items; the documented
-prototype clearance/silkscreen findings remain. The design contains documented
-prototype assumptions and is not a safety-certified controller.
+The current board is a 200 x 150 mm, two-layer routed prototype variant.
+The schematic netlist verifies with zero connectivity failures; manual PCB
+routing and final DRC cleanup are still in progress. The design contains
+documented prototype assumptions and is not a safety-certified controller.
+
+## PLC I/O variant summary
+
+- U8/U9 carry PLC inputs 1-16; U6/U7 carry paired servo ZERO/ERROR inputs.
+- Servo axes use separate 3-pin output and input connectors; no shared alarm
+  connector is fitted.
+- Seven STEP/DIR axes use grouped `EN_3AX` and `EN_4AX` enables.
+- Hardware I2C1 uses MOD1 pins 9/23; E-stop uses MOD1 pin 53.
+- The backlight converter is isolated and is powered from the PLC 24 V field
+  rail.
+- U42/U43 retain local 100 nF bypass capacitors C115/C116.

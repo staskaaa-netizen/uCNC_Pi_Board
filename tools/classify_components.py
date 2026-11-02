@@ -24,9 +24,7 @@ POWER_SUPPLIES = {
 }
 DECOUPLING_IC = {
     "C22": "U6", "C23": "U7", "C24": "U8", "C25": "U9",
-    "C26": "U10", "C27": "U11", "C28": "U12", "C29": "U13",
-    "C53": "U24", "C54": "U25", "C55": "U26", "C56": "U27",
-    "C57": "U41",
+    "C26": "U13", "C27": "U12", "C28": "U11", "C29": "U10",
     "C106": "U28",
     "C10": "U2 input", "C76": "U2 input",
     "C13": "U2 output", "C90": "U2 output",
@@ -51,8 +49,6 @@ CAP_ROLE_OVERRIDES = {
     "C13": ("decoupling capacitor", "U2 output"),
     "C15": ("decoupling capacitor", "+3V3_A filter"),
     "C21": ("reset capacitor", "retired"),
-    "C55": ("output clamp capacitor", "U26 DO_COM"),
-    "C56": ("output clamp capacitor", "U27 DO_COM"),
     "C67": ("bulk rail capacitor", "SD +3V3_SD"),
     "C68": ("decoupling capacitor", "SD +3V3_SD"),
     "C69": ("bulk output capacitor", "U34 output"),
@@ -103,9 +99,7 @@ def channels_from_nets(nets: set[str]) -> list[str]:
         (r"^PLC_IN(\d+)_N$", "PLC input {}"),
         (r"^FIELD_IN(\d+)$", "PLC input {}"),
         (r"^EXP_IN(\d+)$", "expansion input {}"),
-        (r"^KIN(\d+)(?:_|$)", "keyboard input {}"),
-        (r"^KOUT(\d+)$", "keyboard output {}"),
-        (r"^MOTION(\d+)$", "motion output {}"),
+        (r"^AX([0-6])_(?:STEP|DIR)$", "motion axis {}"),
         (r"^BUFY(\d+)$", "motion output {}"),
         (r"^OUT(\d+)$", "output bit {}"),
         (r"^DO(\d+)$", "ULN output {}"),
@@ -199,13 +193,13 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "dedicated safety input connector"
         if reference == "J26":
             return "START button input connector"
-        if reference in {"J9", "J16"}:
-            return "spare keyboard/expansion interface"
+        if reference == "J37":
+            return "16-channel input expander"
         if reference == "J24":
             return "analog inputs connector"
         if reference == "J25":
             return "analog outputs connector"
-        if reference in {"J10", "J11"}:
+        if reference in {"J10", "J11", "J28", "J29", "J30", "J46", "J47"}:
             return "motion output connector"
         if reference == "J12":
             return "ULN output connector"
@@ -215,6 +209,11 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "main power connector"
         if reference == "J2":
             return "backlight/CCFL connector"
+        if reference in {
+            "U3", "L2", "D3", "C107", "C108", "C109", "C110",
+            "C111", "C112", "C113", "C114", "R126", "R127", "R128",
+        }:
+            return "isolated 12V backlight buck"
         if reference in {"J19", "J20"}:
             return "storage/wireless connector"
     if sheet == "Analog I/O":
@@ -238,16 +237,10 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "SD interface"
         if any(net.startswith("WIFI_") or net == "+3V3_WIFI" for net in nets):
             return "ESP-01/ESP-01S interface"
-        if any(net.startswith(("KIN", "KOUT")) for net in nets):
-            return "keyboard matrix"
         return "storage/UI support"
     if sheet == "Power and supervision":
-        if reference in {
-            "U3", "L2", "D3", "J2",
-            "C107", "C108", "C109", "C110", "C111", "C112", "C113",
-            "C114", "R126", "R127",
-        }:
-            return "12V backlight buck"
+        if reference == "J2":
+            return "backlight/CCFL connector"
         if reference in {"U1", "L1", "C3", "C4", "C5", "C6", "C7", "C11", "C86", "C91", "R70", "R71", "R72"}:
             return "24V to 5V buck"
         if reference in {"U2", "C10", "C13", "C76", "C90"}:
@@ -261,9 +254,11 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
         if reference in {"U6", "U7", "U8", "U9"}:
             return "74HC165 input chain"
         if reference in {"U10", "U11", "U12", "U13"}:
-            return "74HC595 output chain"
+            return "AHCT595 output chain"
         return "MCU and shift-chain support"
     if sheet == "16 PLC inputs and expansion":
+        if reference in {"J37", "RN6", "RN7", "RN23", "RN25"}:
+            return "16-channel input expander"
         channels = channels_from_nets(nets)
         if any("ESTOP" in net for net in nets):
             return "dedicated E-stop input"
@@ -273,8 +268,10 @@ def functional_block(reference: str, sheet: str, nets: set[str], role: str) -> s
             return "dedicated START input"
         return channels[0] if channels else "isolated PLC input channel"
     if sheet == "24 PLC outputs":
+        if reference in {"U42", "U43"}:
+            return "motion output buffers"
         if reference in {"U26", "U27"} or any(net.startswith("DO") for net in nets):
-            return "ULN open-collector outputs"
+            return "isolated general outputs"
         channels = channels_from_nets(nets)
         return channels[0] if channels else "motion output channel"
     return sheet
@@ -305,8 +302,8 @@ def placement_rule(role: str, block: str, nets: set[str]) -> str:
         return "keep field-side passives together at connector; preserve isolation barrier"
     if "motion output" in block or "ULN" in block:
         return "place with source register/buffer and output connector; preserve channel order"
-    if "keyboard" in block:
-        return "place at keyboard connector and corresponding shift-register byte"
+    if block == "16-channel input expander":
+        return "place input pull-up arrays close to J37; maintain 3.3 V logic-side grouping"
     if "encoder" in block:
         return "place between connector and buffer; keep A/B/Z channel grouping"
     if "buck" in block or "regulator" in block:
