@@ -407,6 +407,8 @@ def main() -> None:
         cached_bottom = ROOT / "tmp" / "board-3d-bottom.png"
         output_top = args.output_dir / "board-3d-top.png"
         output_bottom = args.output_dir / "board-3d-bottom.png"
+        current_top = args.output_dir / "board-3d-top-current.png"
+        current_bottom = args.output_dir / "board-3d-bottom-current.png"
         if args.reuse_3d and cached_top.exists() and cached_bottom.exists():
             top_image = cached_top
             bottom_image = cached_bottom
@@ -420,6 +422,8 @@ def main() -> None:
             shutil.copyfile(bottom_image, output_bottom)
 
         if top_image.exists() and bottom_image.exists():
+            shutil.copyfile(top_image, current_top)
+            shutil.copyfile(bottom_image, current_bottom)
             create_review_pdf(
                 review_pdf,
                 front_pdf,
@@ -436,6 +440,8 @@ def main() -> None:
             review_pdf,
             output_top,
             output_bottom,
+            current_top,
+            current_bottom,
         ):
             if path.exists():
                 print(f"{path.relative_to(ROOT)}: {path.stat().st_size} bytes")
