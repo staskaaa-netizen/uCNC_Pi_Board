@@ -25,11 +25,8 @@ gain = 1 + 22 / 10 = 3.2
 With 3.3 V PWM logic, use a maximum duty cycle near 94.7% for a 10.0 V output.
 Leave the remaining range for calibration and supply tolerance.
 
-The supplied drawing showed the op-amp output tied back to its inverting input
-and a 10 k pull-up to +12 V. That is a unity-gain buffer, or an open-collector
-comparator output, and cannot linearly convert a 3.3 V PWM duty cycle into
-0-10 V. The implementation therefore omits the pull-up and unused trim/threshold
-network, uses the TLV2374 push-pull output, and performs calibration digitally.
+The op-amp is configured as a non-inverting gain stage. Its push-pull output
+drives J25 directly; calibration is performed digitally.
 
 All signal resistors are individual 1% 0805 parts. No resistor networks are
 used in this block:
@@ -54,8 +51,8 @@ J25 pin 1 is the common ground return. These are ground-referenced outputs, not
 isolated outputs. AOUT0, AOUT1 and AOUT3 use MOD1 pins 6, 5 and 19 respectively;
 the corresponding GPIO assignments are recorded in the firmware GPIO map.
 
-The external status LED formerly on GPIO46 is removed. Use the WeAct module's
-onboard LED; it is already fitted to the module.
+Use the WeAct module's onboard LED; no separate status LED is connected to the
+analog-output GPIOs.
 
 ## Power
 

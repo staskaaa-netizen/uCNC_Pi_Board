@@ -1,24 +1,24 @@
-# Mechanical and placement notes
+# Mechanical notes
 
-- Board outline: 200 mm x 150 mm, two copper layers.
-- Four M3 clearance mounting holes.
-- WeAct body: 41.402 mm x 41.148 mm, socketed on 2.54 mm headers.
-- The supplied WeAct STEP model uses its PCB corner as the model origin. The
-  footprint applies `(-20.7, +20.6, 0) mm`, centering the module body within
-  the four socket rows and placing its reference plane on the board top.
-- The module is rotated so its USB connector faces the top board edge and remains
-  accessible with the module installed.
-- Dedicated E-stop connector J5 and PLC inputs J7/J8 are on the input
-  side. Field outputs J10-J12 are on the opposite long edge.
-- Input optocouplers straddle the marked field/logic boundary.
-- The main assembly is on the front.
-- The J36 1x9 header accepts the passive Open-Smart 3.3 V TF breakout.
-- ESP-01/ESP-01S J20 is directly above and left of the RP2350 module; its antenna must
-  face away from the PCB with at least 15 mm of copper clearance.
-- LCD J22 follows the upper display edge on the front side.
-- Encoder connectors J13-J15 are aligned along the bottom edge with additional
-  spacing for mating connector bodies.
-- The switch-mode supply is grouped away from encoders and analog circuitry.
-- C2 is user-placed inside the 200 x 150 mm
-  outline; final manual routing is in progress.
-- No component is intentionally placed under the WeAct module footprint.
+- PCB outline: 200 mm x 150 mm, two copper layers, 1.6 mm nominal thickness.
+- Mounting: four M3 clearance holes.
+- Main assembly and J22 are on F.Cu.
+- The WeAct body is 41.402 mm x 41.148 mm and uses 2.54 mm perimeter headers.
+- The WeAct module is not soldered directly to the carrier. Fit four 1 x 15,
+  2.54 mm female sockets on the motherboard and mating male pin headers on the
+  module.
+- The 3D module reference is raised 8.5 mm above F.Cu to represent the mated
+  socket stack. Confirm the chosen socket hardware against the enclosure
+  clearance and USB opening.
+- The module USB connector faces the accessible board edge.
+- J5, J7 and J8 are grouped on the isolated field-input side.
+- J10-J12 and J28-J30/J32 are grouped on the output side.
+- The J36 TF-card breakout header and J54 microSD socket share one electrical
+  interface. Use one card source at a time.
+- ESP socket J20 faces the board perimeter. Keep at least 15 mm of copper- and
+  component-free clearance around its antenna.
+- J22 is a 2 x 10, 2.00 mm LCD connector on F.Cu.
+- J13-J15 are aligned on one long edge for encoder access.
+- The switching supplies are grouped away from the ADC dividers and encoder
+  receivers.
+- No component is intentionally placed under the WeAct module.

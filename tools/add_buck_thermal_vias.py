@@ -11,7 +11,10 @@ import pcbnew
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
-REGULATORS = ("U1", "U3")
+REGULATORS = {
+    "U1": "GND",
+    "U3": "ISO_GND",
+}
 LOCAL_GROUND_PADS = {
     "U2": "1",
     "U34": "1",
@@ -24,6 +27,38 @@ OFFSETS_MM = (
     (-0.6, 0.0), (0.6, 0.0),
     (-0.6, 1.0), (0.6, 1.0),
 )
+
+
+def ensure_isolated_back_plane(board, apply: bool) -> bool:
+    """Mirror the local F.Cu ISO_GND region under the isolated converter."""
+    isolated_net = board.FindNet("ISO_GND")
+    if isolated_net is None:
+        raise SystemExit("Board has no ISO_GND net")
+    if any(
+        zone.GetNetname() == "ISO_GND" and zone.IsOnLayer(pcbnew.B_Cu)
+        for zone in board.Zones()
+    ):
+        return False
+
+    source = next(
+        (
+            zone
+            for zone in board.Zones()
+            if zone.GetNetname() == "ISO_GND" and zone.IsOnLayer(pcbnew.F_Cu)
+        ),
+        None,
+    )
+    if source is None:
+        raise SystemExit("Board has no F.Cu ISO_GND source region")
+
+    if apply:
+        zone = pcbnew.ZONE(board)
+        zone.SetLayer(pcbnew.B_Cu)
+        zone.SetNet(isolated_net)
+        zone.SetAssignedPriority(3)
+        zone.SetOutline(source.Outline())
+        board.Add(zone)
+    return True
 
 
 def same_point(
@@ -45,21 +80,27 @@ def main() -> None:
 
     board = pcbnew.LoadBoard(str(args.board))
     footprints = {item.GetReference(): item for item in board.GetFootprints()}
-    ground = board.FindNet("GND")
-    if ground is None:
+    logic_ground = board.FindNet("GND")
+    if logic_ground is None:
         raise SystemExit("Board has no GND net")
+    missing_isolated_back_plane = ensure_isolated_back_plane(board, args.apply)
 
     added = []
     existing_count = {}
-    for reference in REGULATORS:
+    for reference, return_net_name in REGULATORS.items():
         footprint = footprints.get(reference)
         if footprint is None:
             raise SystemExit(f"{reference} is missing")
         exposed_pad = footprint.FindPadByNumber("9")
-        if exposed_pad is None or exposed_pad.GetNetname() != "GND":
-            raise SystemExit(f"{reference} pin 9 is not the GND PowerPAD")
+        if exposed_pad is None or exposed_pad.GetNetname() != return_net_name:
+            raise SystemExit(
+                f"{reference} pin 9 is not the {return_net_name} PowerPAD"
+            )
         if exposed_pad.GetPosition() != footprint.GetPosition():
             raise SystemExit(f"{reference} PowerPAD is not centered as expected")
+        return_net = board.FindNet(return_net_name)
+        if return_net is None:
+            raise SystemExit(f"Board has no {return_net_name} net")
 
         center = footprint.GetPosition()
         angle = math.radians(footprint.GetOrientationDegrees())
@@ -73,7 +114,7 @@ def main() -> None:
             )
             if any(
                 isinstance(item, pcbnew.PCB_VIA)
-                and item.GetNetname() == "GND"
+                and item.GetNetname() == return_net_name
                 and same_point(item.GetPosition(), position)
                 for item in board.GetTracks()
             ):
@@ -86,7 +127,7 @@ def main() -> None:
                 via.SetDrill(pcbnew.FromMM(VIA_DRILL_MM))
                 via.SetWidth(pcbnew.FromMM(VIA_DIAMETER_MM))
                 via.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu)
-                via.SetNet(ground)
+                via.SetNet(return_net)
                 board.Add(via)
             added.append((reference, pcbnew.ToMM(position)))
         existing_count[reference] = found
@@ -112,15 +153,17 @@ def main() -> None:
             via.SetDrill(pcbnew.FromMM(VIA_DRILL_MM))
             via.SetWidth(pcbnew.FromMM(VIA_DIAMETER_MM))
             via.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu)
-            via.SetNet(ground)
+            via.SetNet(logic_ground)
             board.Add(via)
         local_ground_added.append((reference, pin, pcbnew.ToMM(pad.GetPosition())))
 
     print(f"existing_thermal_vias={existing_count}")
     print(f"missing_vias={len(added)} {added}")
     print(f"missing_local_ground_vias={local_ground_added}")
+    print(f"missing_isolated_back_plane={missing_isolated_back_plane}")
     if args.apply:
         board.BuildConnectivity()
+        pcbnew.ZONE_FILLER(board).Fill(board.Zones())
         pcbnew.SaveBoard(str(args.board), board)
         print(f"saved {args.board}")
 

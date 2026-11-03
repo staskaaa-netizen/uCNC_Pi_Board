@@ -56,15 +56,15 @@ def main() -> None:
         return
 
     for reference, pin, _, new_name in changes:
-        pad = footprints[reference].FindPadByNumber(pin)
-        if not new_name:
-            pad.SetNet(None)
-            continue
-        net = board.FindNet(new_name)
-        if net is None:
-            net = pcbnew.NETINFO_ITEM(board, new_name)
-            board.Add(net)
-        pad.SetNet(net)
+        net = None
+        if new_name:
+            net = board.FindNet(new_name)
+            if net is None:
+                net = pcbnew.NETINFO_ITEM(board, new_name)
+                board.Add(net)
+        for pad in footprints[reference].Pads():
+            if pad.GetNumber() == pin:
+                pad.SetNet(net)
     pcbnew.SaveBoard(str(args.board), board)
     print(f"Saved {args.board}")
 

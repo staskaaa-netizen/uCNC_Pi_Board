@@ -1,116 +1,141 @@
 # Connector map
 
-All field-side 3.5 mm positions use the Phoenix `MCV 1,5` vertical land pattern.
-This keeps the mating plugs perpendicular to the PCB and reduces edge clearance
-problems compared with the previous horizontal `MC 1,5` footprints. A supplier
-KF2EDG-specific mechanical drawing was not available in the source set; clones
-must not be substituted without comparing their body, keying and vertical entry
-height to the Phoenix footprint.
+Field-side 3.5 mm connectors use Phoenix `MCV 1,5` vertical footprints.
+Verify connector body, keying and vertical entry height before substituting a
+different supplier.
+
+## Field connectors
+
+| Ref | Size | Pinout / function |
+|---|---|---|
+| J1 | 2-pin 3.5 mm | 1=`VIN` 12-24 V, 2=`GND` |
+| J2 | 2-pin 3.5 mm | 1=`+12V_BL`, 2=`ISO_GND` |
+| J5 | 2-pin 3.5 mm | 1=E-stop loop, 2=`ISO_GND` |
+| J7 | 1 x 8, 3.5 mm | 1-8=PLC inputs 1-8 |
+| J8 | 1 x 8, 3.5 mm | 1-8=PLC inputs 9-16 |
+| J10 | 1 x 3, 3.5 mm | 1=`EN_3AX`, 2=AX0_STEP, 3=AX0_DIR |
+| J11 | 1 x 3, 3.5 mm | 1=`EN_3AX`, 2=AX1_STEP, 3=AX1_DIR |
+| J12 | 1 x 8, 3.5 mm | 1-8=DO0-DO7 |
+| J13 | 1 x 5, 3.5 mm | 1=+5 V, 2=ENC0_A, 3=ENC0_B, 4=ENC0_Z, 5=GND |
+| J14 | 1 x 5, 3.5 mm | 1=+5 V, 2=ENC1_A, 3=ENC1_B, 4=ENC1_Z, 5=GND |
+| J15 | 1 x 5, 3.5 mm | 1=+5 V, 2=ENC2_A, 3=ENC2_B, 4=ENC2_Z, 5=GND |
+| J28 | 1 x 3, 3.5 mm | 1=`EN_3AX`, 2=AX2_STEP, 3=AX2_DIR |
+| J29 | 1 x 3, 3.5 mm | 1=`EN_4AX`, 2=AX3_STEP, 3=AX3_DIR |
+| J30 | 1 x 3, 3.5 mm | 1=`EN_4AX`, 2=AX4_STEP, 3=AX4_DIR |
+| J32 | 1 x 8, 3.5 mm | 1-8=DO8-DO15 |
+| J33 | 2-pin 3.5 mm | 1=`+24V_FIELD`, 2=`ISO_GND` |
+| J40 | 1 x 3, 3.5 mm | 1=GND, 2=AX0_ERROR_N, 3=AX0_ZERO |
+| J41 | 1 x 3, 3.5 mm | 1=GND, 2=AX1_ERROR_N, 3=AX1_ZERO |
+| J42 | 1 x 3, 3.5 mm | 1=GND, 2=AX2_ERROR_N, 3=AX2_ZERO |
+| J43 | 1 x 3, 3.5 mm | 1=GND, 2=AX3_ERROR_N, 3=AX3_ZERO |
+| J45 | 2-pin 3.5 mm | 1=`+24V_FIELD`, 2=`ISO_GND` |
+| J46 | 1 x 3, 3.5 mm | 1=`EN_4AX`, 2=AX5_STEP, 3=AX5_DIR |
+| J47 | 1 x 3, 3.5 mm | 1=`EN_4AX`, 2=AX6_STEP, 3=AX6_DIR |
+| J48 | 1 x 3, 3.5 mm | 1=GND, 2=AX4_ERROR_N, 3=AX4_ZERO |
+| J49 | 1 x 3, 3.5 mm | 1=GND, 2=AX5_ERROR_N, 3=AX5_ZERO |
+| J50 | 1 x 3, 3.5 mm | 1=GND, 2=AX6_ERROR_N, 3=AX6_ZERO |
+
+J33 and J45 provide parallel access to the external isolated 24 V field rail
+and its single `ISO_GND` return. The field domain supplies PLC contact wetting,
+the output optocoupler side and the isolated backlight converter input. It is
+not connected to motherboard GND.
+
+J7/J8 carry PLC signals only. Use the `+24V_FIELD` terminal from J33 or J45 for
+the other side of each dry-contact loop.
+
+## Logic and mixed connectors
 
 | Ref | Type | Pinout / function |
 |---|---|---|
-| J1 | 2-pin 3.5 mm | 1=VIN 12-24 V, 2=GND |
-| J2 | 2-pin 3.5 mm | 1=`+12V_BL`, 2=`ISO_GND` |
-| J5 | 2-pin 3.5 mm | 1=dedicated E-stop loop, 2=`ISO_GND` |
-| J7 | 1x8 3.5 mm | `FIELD_IN1`-`FIELD_IN8` |
-| J8 | 1x8 3.5 mm | `FIELD_IN9`-`FIELD_IN16` |
-| J10 | 1x3 3.5 mm | 1=`EN_3AX`, 2=AX0_STEP, 3=AX0_DIR |
-| J11 | 1x3 3.5 mm | 1=`EN_3AX`, 2=AX1_STEP, 3=AX1_DIR |
-| J12 | 1x8 3.5 mm | 1-8=DO0-DO7 |
-| J13 | 1x5 3.5 mm encoder 0 | 1=+5 V, 2=A, 3=B, 4=Z, 5=GND |
-| J14 | 1x5 3.5 mm encoder 1 | 1=+5 V, 2=A, 3=B, 4=Z, 5=GND |
-| J15 | 1x5 3.5 mm encoder 2 | 1=+5 V, 2=A, 3=B, 4=Z, 5=GND |
-| J17 | 1x3 2.54 mm | 1=+5 V, 2=GND, 3=GND |
-| J18 | 1x5 3.5 mm I2C1 | 1=SDA, 2=SCL, 3=+3.3 V, 4=+5 V, 5=GND |
-| J20 | 2x4 2.54 mm socket | ESP-01/ESP-01S: 1=GND, 2=3V3, 3=GPIO2, 4=GPIO0, 5=RX, 6=TX, 7=EN/CH_PD, 8=RST |
-| J22 | 2x10 2.00 mm LCD | 1-3=3.3 V, 4-6=GND, 7/8=D0-/+, 9/10=D1-/+, 11/12=D2-/+, 13/14=GND, 15/16=CLK-/+, 17-20=NC |
-| J24 | 5-pin 3.5 mm analog in | 1=GND, 2=AI0, 3=AI1, 4=AI2, 5=AI3 |
-| J25 | 5-pin 3.5 mm analog out | 1=GND, 2=AOUT0, 3=AOUT1, 4=AOUT2, 5=AOUT3 |
-| J28 | 1x3 3.5 mm | 1=`EN_3AX`, 2=AX2_STEP, 3=AX2_DIR |
-| J29 | 1x3 3.5 mm | 1=`EN_4AX`, 2=AX3_STEP, 3=AX3_DIR |
-| J30 | 1x3 3.5 mm | 1=`EN_4AX`, 2=AX4_STEP, 3=AX4_DIR |
-| J46 | 1x3 3.5 mm | 1=`EN_4AX`, 2=AX5_STEP, 3=AX5_DIR |
-| J47 | 1x3 3.5 mm | 1=`EN_4AX`, 2=AX6_STEP, 3=AX6_DIR |
-| J32 | 1x8 3.5 mm | 1-8=DO8-DO15 |
-| J33 | 2-pin 3.5 mm | 1=external isolated field +24 V, 2=`ISO_GND` |
-| J40 | 1x3 3.5 mm | 1=AX0_ZERO, 2=AX0_ERROR_N, 3=GND |
-| J41 | 1x3 3.5 mm | 1=AX1_ZERO, 2=AX1_ERROR_N, 3=GND |
-| J42 | 1x3 3.5 mm | 1=AX2_ZERO, 2=AX2_ERROR_N, 3=GND |
-| J43 | 1x3 3.5 mm | 1=AX3_ZERO, 2=AX3_ERROR_N, 3=GND |
-| J48 | 1x3 3.5 mm | 1=AX4_ZERO, 2=AX4_ERROR_N, 3=GND |
-| J49 | 1x3 3.5 mm | 1=AX5_ZERO, 2=AX5_ERROR_N, 3=GND |
-| J50 | 1x3 3.5 mm | 1=AX6_ZERO, 2=AX6_ERROR_N, 3=GND |
-| J45 | 2-pin 3.5 mm | Parallel field +24 V / `ISO_GND` input, identical to J33 |
-| J36 | 1x9 2.54 mm | Open-Smart TF Card Breakout: CDN, DAT1, DO, GND, SCLK, VCC=3.3 V, DI, CS, DAT2 |
+| J18 | 1 x 5, 3.5 mm | 1=SDA, 2=SCL, 3=+3.3 V, 4=+5 V, 5=GND |
+| J20 | 2 x 4, 2.54 mm socket | ESP-01/ESP-01S module socket |
+| J22 | 2 x 10, 2.00 mm | LCD LVDS and logic supply |
+| J24 | 1 x 5, 3.5 mm | 1=GND, 2=AI0, 3=AI1, 4=AI2, 5=AI3 |
+| J25 | 1 x 5, 3.5 mm | 1=GND, 2=AOUT0, 3=AOUT1, 4=AOUT2, 5=AOUT3 |
+| J36 | 1 x 9, 2.54 mm | Open-Smart TF Card Breakout |
+| J51 | 1 x 7, 2.54 mm socket | +3.3 V, GND, GPIO4-GPIO8 |
+| J54 | SOFNG TF-15x15 | On-board microSD socket, LCSC `C111196` |
 
-JP5 is an open two-pad solder jumper between `SD_CD` and `SD_CD_MCU`. Bridge
-it to connect the SD-card detect switch to GPIO2/MOD1 pin 34. The jumper uses the original
-1206 pad spacing for easy hand soldering and is excluded from the BOM.
+## J20 ESP socket
 
-J36 is a 1x9 header for the passive Open-Smart TF Card Breakout. Its exact pin
-order from pin 1 is `CDN`, `DAT1`, `DO`, `GND`, `SCLK`, `VCC`, `DI`, `CS`,
-`DAT2`; `VCC` is 3.3 V only. The breakout must not include a 5 V regulator or
-level shifter. The former full-size J19 and motherboard microSD sockets are
-removed.
-
-## Field-connector standardization
-
-The board-side field-connector family uses the existing Phoenix `MCV 1,5`
-3.5 mm vertical terminal blocks. Wider functions are split across stackable
-single-row connectors:
-
-| Positions | Intended use |
+| Pin | Signal |
 |---:|---|
-| 2 | Power input, E-stop and field supply |
-| 5 | I2C, one encoder or the analog-output group |
-| 8 | One PLC signal half-bank |
+| 1 | GND |
+| 2 | `+3V3_WIFI` |
+| 3 | ESP GPIO2 with 10 k pull-up |
+| 4 | ESP GPIO0 with 10 k pull-up |
+| 5 | RP2350 GPIO11 `WIFI_RX` |
+| 6 | RP2350 GPIO10 `WIFI_TX` |
+| 7 | EN/CH_PD with 10 k pull-up |
+| 8 | RST with 10 k pull-up |
 
-The former larger field connectors are converted as follows:
+## J22 LCD LVDS
 
-- J7/J8 carry the eight PLC signals per bank; their return is the shared
-  `ISO_GND` on J33/J45.
-- J12/J32 carry the eight output signals; their field supply and return are
-  shared on J33/J45.
-- J33 and J45 provide parallel `+24V_FIELD` / `ISO_GND` field connections.
-- J24 uses one shared ground on pin 1 followed by four analog-input channels.
-The former 2x10 expansion-input connector J37 is removed. U8 carries PLC
-inputs 1-8 and U9 carries PLC inputs 9-16. U6/U7 carry paired servo
-ZERO/ERROR inputs.
-SD, LCD, ESP and other logic-level headers remain purpose-specific
-and are excluded from the field-terminal inventory.
+| Row | Left pin | Right pin | Signal |
+|---:|---|---|---|
+| 1 | 1 | 2 | `+3V3` |
+| 2 | 3 | 4 | `+3V3` / `GND` |
+| 3 | 5 | 6 | `GND` |
+| 4 | 7 | 8 | D0- / D0+ |
+| 5 | 9 | 10 | D1- / D1+ |
+| 6 | 11 | 12 | D2- / D2+ |
+| 7 | 13 | 14 | `GND` |
+| 8 | 15 | 16 | CLK- / CLK+ |
+| 9 | 17 | 18 | NC |
+| 10 | 19 | 20 | NC |
 
-The encoder A/B/Z inputs require 5 V push-pull outputs. They drive
-`SN74AHCT541DW` inputs powered at 3.3 V through no series resistor, filter
-capacitor or board-level ESD array. Encoders with open-collector outputs need
-external pull-up resistors.
+Odd pins are the left column and even pins are the right column. J22 is mounted
+on F.Cu.
 
-J5-J8 form dry-contact input loops. J33 and J45 provide parallel access to the
-external isolated 24 V field rail and its single `ISO_GND` return. The isolated
-field domain is not connected to motherboard GND. See
-`documentation/input-wetting.md` for the field-wiring rules.
+## J36 TF-card breakout
 
-J7/J8 follow physical left-to-right channel numbering. Firmware must still use
-the register bit permutation in `documentation/io-bit-map.md`.
+| Pin | Signal |
+|---:|---|
+| 1 | CDN |
+| 2 | DAT1 |
+| 3 | DO / MISO |
+| 4 | GND |
+| 5 | SCLK |
+| 6 | 3.3 V |
+| 7 | DI / MOSI |
+| 8 | CS |
+| 9 | DAT2 |
 
-Each group of four PLC inputs uses one TLP291-4 SOIC-16 optocoupler. Four
-isolated 4x10 k networks provide the PLC pull-ups. The dedicated E-stop uses
-one TLP291 SOP-4 optocoupler and a 4.7 k pull-up to `+3V3`. No input-node
-capacitors are fitted. Firmware must debounce the sampled contacts.
+Use the passive 3.3 V breakout. It must not contain a regulator or level
+shifter.
 
-J5 is the dedicated E-stop connector and drives GPIO9/MOD1 pin 53 directly. It is not an
-input-chain bit. Output blocking is external.
-Each axis has a 3-pin output connector (`EN, STEP, DIR`) and a paired 3-pin
-input connector (`ZERO, ERROR, GND`). `EN_3AX` is shared by AX0-AX2;
-`EN_4AX` is shared by AX3-AX6. J51 and the former AUX connector J31 are removed.
+## J54 SOFNG TF-15x15
 
-The verified J22 pinout has no backlight contact. U3 converts the J33/J45 PLC
-24 V field supply to isolated `+12V_BL`; J2 carries only `+12V_BL` and
-`ISO_GND`. Backlight PWM, current switching, CCFL inversion and PWM isolation
-remain external.
+| Pad | Signal |
+|---:|---|
+| 1 | DAT2 |
+| 2 | CS |
+| 3 | MOSI |
+| 4 | `+3V3_SD` |
+| 5 | SCK |
+| 6 | GND |
+| 7 | MISO |
+| 8 | DAT1 |
+| 9 | Card detect |
+| 10-13 | Ground tabs |
 
-J9 and J27 flank U7 on the front side. J16 remains on the front side above the
-mid-board area, with KOUT arrays above it and KIN arrays below it.
+The footprint was converted from the JLCEDA/EasyEDA Official Library and its
+STEP/WRL models are stored under `hardware/libraries/3d/`.
 
-J24 is the four-channel 0-10 V analog input connector with a shared ground on
-pin 1. J25 provides four ground-referenced 0-10 V outputs sharing pin 1 as the
-return. The outputs are functional signals, not isolated outputs.
+J36 and J54 are electrically parallel. Both connectors may be fitted, but use
+one card source at a time. JP5 is a standard open two-pad solder jumper in the
+card-detect path; close it to connect detection to GPIO2.
+
+## J51 expansion
+
+| Pin | Signal |
+|---:|---|
+| 1 | `+3V3` |
+| 2 | GND |
+| 3 | GPIO4 |
+| 4 | GPIO5 |
+| 5 | GPIO6 |
+| 6 | GPIO7 |
+| 7 | GPIO8 |
+
+GPIO4/6/8 are on MOD1 pins 35/36/37. GPIO5/7 are on MOD1 pins 51/52.

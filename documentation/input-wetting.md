@@ -1,45 +1,48 @@
-# Isolated PLC input wetting
+# Isolated field inputs
 
-The optocoupled input stage is fixed for dry-contact field loops powered from
-the external isolated 24 V field supply. No input-mode selectors are fitted.
-The RP2350 side remains galvanically isolated because `+24V_FIELD` and
-`ISO_GND` have no connection to motherboard `GND`.
+The PLC inputs are isolated dry-contact loops powered from an external 24 V
+field supply. `+24V_FIELD` and `ISO_GND` are separate from motherboard GND.
 
 ## Field supply
 
-J33 and J45 are electrically parallel two-pin connections:
+J33 and J45 are parallel two-pin access points:
 
 | Pin | Net | Function |
 |---:|---|---|
-| 1 | `+24V_FIELD` | External isolated 24 V field supply |
-| 2 | `ISO_GND` | Single isolated field return |
+| 1 | `+24V_FIELD` | External isolated field positive |
+| 2 | `ISO_GND` | Isolated field return |
 
-Either connector can supply the field domain. The second connector provides a
-parallel terminal for convenient wiring or looping to another enclosure
-connection; it is not an additional logic supply and must not be connected to
-motherboard GND.
+Either connector can feed the field domain. The second connector is useful for
+looping the supply to another enclosure terminal. Never connect `ISO_GND` to
+logic GND.
 
-The same field supply feeds the 16 PLC contact loops, the isolated servo
-diagnostic channels and the relay-output common. The onboard isolated DC/DC
-converter and its support components are removed.
+The same field domain supplies the PLC contact loops, the E-stop loop, the
+general-output optocouplers and the isolated backlight converter.
 
-## Field wiring
+## Wiring
 
-Each J7/J8 input pin is one side of a normally open dry-contact loop. Wire the
-other side of every contact to `+24V_FIELD` from J33 or J45. The optocoupler
-cathode and reverse-protection diode return through the shared `ISO_GND` pin.
-J7/J8 therefore carry signals only; duplicate return pins are not provided on
-the input connectors.
+Each J7/J8 pin is one side of a dry-contact loop. Wire the other side of the
+contact to `+24V_FIELD` from J33 or J45. The optocoupler input current returns
+through the shared `ISO_GND`.
 
-The dedicated E-stop loop on J5 uses the same `ISO_GND` field return. It drives
-GPIO9 on MOD1 pin 53 directly and remains outside the shift-register chain.
+The dedicated E-stop loop on J5 uses the same field return. Its optocoupler
+output drives GPIO9 on MOD1 pin 53 and is outside the shift-register chain.
 
-## Input current
+Each input contains:
 
-Each channel retains one 2.2 k field-side series resistor. With approximately
-3 V total LED drop at 24 V, the nominal loop current is about 9.5 mA.
+`connector -> LED -> 2.2 k series resistor -> optocoupler LED -> reverse diode -> ISO_GND`
 
-The TLP291-4 channels are rated for this current. If the selected optocoupler
-shipment has lower-than-expected CTR, use a 1.8-2.0 k 1206 resistor or two
-3.6 k 1206 resistors in parallel. Do not fit the lower value in addition to the
-nominal resistor.
+U18-U21 provide the sixteen PLC channels. U35 provides the E-stop channel.
+RN32-RN35 provide logic-side 10 k pull-ups, and R74 pulls up the E-stop output.
+There are no input-node filter capacitors; debounce in firmware or at the
+contact/field wiring level.
+
+## Current
+
+With approximately 3 V total LED drop at 24 V, the nominal 2.2 k loop current
+is about 9.5 mA. Confirm optocoupler CTR and saturation over temperature before
+production.
+
+If a selected optocoupler batch needs more LED current, reduce the series value
+to no less than 1.8 k and verify total package dissipation. Do not fit a second
+parallel resistor in addition to the nominal part.

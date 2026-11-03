@@ -1,19 +1,14 @@
-# uCNC RP2350 pin compatibility
+# uCNC RP2350 compatibility
 
-Checked against the local uCNC source in `tmp/leancam-sources/uCNC`.
+This page records the firmware-facing constraints found in the local uCNC
+RP2350 source review. The motherboard needs a LeanCam-specific board map; the
+stock Pico 2 map does not match these pin assignments.
 
 ## Encoders
 
-There are two relevant uCNC paths:
-
-- the generic encoder module, which uses GPIO interrupts and pulse/dir inputs;
-- `modules/rp2350_pio_encoder`, which replaces the backend with one PIO
-  quadrature counter.
-
-The RP2350 PIO module requires the pulse input at `ENC0_PULSE_GPIO` and the
-direction input at the immediately following GPIO. The provisional
-routing-oriented board map uses adjacent pairs with B on the lower GPIO and A
-on the higher GPIO:
+The uCNC RP2350 PIO encoder backend requires the quadrature pair on adjacent
+GPIOs, with the PULSE input at the configured base and DIR at the next GPIO.
+The board provides three adjacent A/B pairs:
 
 | Encoder | A / PULSE | B / DIR | Z / INDEX |
 |---|---|---|---|
@@ -21,53 +16,35 @@ on the higher GPIO:
 | ENC1 | GPIO30 | GPIO29 | GPIO28 |
 | ENC2 | GPIO27 | GPIO26 | GPIO25 |
 
-The final connector naming pass must keep this reversal in sync with firmware.
-For the stock PIO backend, use the lower-numbered B GPIO as the PIO input base
-and compensate the A/B interpretation, or rename the connector assignments
-after routing.
+The reviewed `rp2350_pio_encoder.c` implements one encoder only: one PIO block,
+one state machine and one index GPIO. ENC0 is compatible with that implementation.
+ENC1 and ENC2 require the backend to be generalized or instantiated three times.
 
-However, the checked-in `rp2350_pio_encoder.c` currently hard-codes one encoder:
+A practical three-channel implementation is one state machine per encoder in one
+PIO block, using GPIO32, GPIO29 and GPIO26 as the three A/B input bases. Keep
+the Z inputs on GPIO interrupts as the existing module does.
 
-- only `ENC0_*` configuration macros exist;
-- `enc_custom_read()` returns a count only when `i == ENC0`;
-- only one PIO block, state machine, program offset and index GPIO are stored;
-- Z/index is handled by a separate GPIO interrupt, not by the PIO program.
+The generic uCNC encoder backend uses GPIO interrupts and is not restricted to
+adjacent pins. Either backend can use this hardware layout, but the LeanCam board
+map must preserve the A/B polarity used by the selected driver.
 
-Therefore ENC0 is compatible with the module as-is. ENC1 and ENC2 require the
-module to be generalized or instanced three times. The hardware already has the
-correct adjacent A/B pairs for that work.
+## Shift registers
 
-The natural three-channel implementation is to place ENC0, ENC1 and ENC2 on
-three state machines in one PIO block, all using the same 24-instruction
-quadrature program. Their independent `IN_BASE` settings select the lower GPIO
-of each pair: GPIO32, GPIO29 and GPIO26. The three Z pins can remain GPIO
-interrupts, as the module already does for ENC0.
-
-The local `cnc_hal_overrides.h` is also still configured for the previous board:
-it sets ENC0 A/B to GPIO20/21 and Z to GPIO26, and enables only one encoder.
-That does not match this motherboard's provisional GPIO32/33/31 ENC0 pair.
-
-## 74HC165/74HC595 chain
-
-The normal uCNC `shift_register` driver toggles individual GPIOs and supports
-both 74HC165 inputs and 74HC595 outputs. The board now uses this pin map:
+The hardware interface is:
 
 | Function | GPIO | MOD1 pin |
 |---|---:|---:|
-| `SHIFT_REGISTER_SDO` / PIO DATA | GPIO20 | 43 |
-| `SHIFT_REGISTER_CLK` / PIO CLK | GPIO21 | 59 |
-| `IC74HC595_LATCH` / PIO LATCH | GPIO22 | 44 |
-| `IC74HC165_LOAD` | GPIO24 | 45 |
-| `SHIFT_REGISTER_SDI` | GPIO23 | 60 |
+| 74AHCT595 serial data / PIO DATA | GPIO20 | 43 |
+| Shared clock / PIO CLK | GPIO21 | 59 |
+| 74AHCT595 latch / PIO LATCH | GPIO22 | 44 |
+| 74HC165 serial return | GPIO23 | 60 |
+| 74HC165 parallel load | GPIO24 | 45 |
 
-Before fitting the WeAct module, remove **R16 (0R)** on the module. It joins
-GPIO23 to the onboard USER-key network, whose WeAct C27 capacitor position
-would otherwise load the 74HC165 serial-return signal. Motherboard C27 at U11
-is unrelated.
+The standard uCNC bit-banged `shift_register` driver supports both register
+types on arbitrary GPIOs and is the complete runtime path for this board.
 
-The output-control pins are **compatible with uCNC's optional
-`IC74HC595_CUSTOM_SHIFT_IO` PIO path**, which requires the exact order
-`DATA = base`, `CLK = base+1` and `LATCH = base+2`. Use:
+The optional `IC74HC595_CUSTOM_SHIFT_IO` PIO path can use GPIO20/21/22 because
+they are contiguous and in the required DATA, CLK, LATCH order:
 
 ```c
 #define IC74HC595_CUSTOM_SHIFT_IO
@@ -77,38 +54,34 @@ The output-control pins are **compatible with uCNC's optional
 #define IC74HC595_COUNT 4
 ```
 
-That PIO path:
+That driver handles the four outputs only. It does not read the four 74HC165
+input registers. Use the bit-banged combined path, or add a separate custom PIO
+input scanner, before selecting the output-only PIO path for the full machine
+I/O interface.
 
-- handles only the four 74HC595 outputs;
-- requires exactly four 595 devices;
-- would require a separate PIO implementation for the 74HC165 inputs.
+The encoder PIO backend and the 595 PIO path both claim one PIO block/state
+machine by default. A combined firmware must allocate distinct PIO resources
+and program offsets deliberately.
 
-The checked-in uCNC RP2350 PIO implementation disables the standard combined
-165/595 shift callback. Therefore the default complete implementation remains
-the bit-banged `shift_register` driver. The stock `IC74HC595_CUSTOM_SHIFT_IO`
-path can be used only as an output-only driver or after input scanning is moved
-to separate code or custom PIO.
+## E-stop
 
-GPIO20/21/22 form one RP2350 PIO GPIO window. The additional 74HC165 load and
-return pins at GPIO24/35 are outside that output-only PIO window, so a custom
-dual 74HC165/74HC595 PIO program remains a separate implementation task.
+| uCNC function | Signal | GPIO | MOD1 pin | Polarity |
+|---|---|---|---:|---|
+| `ESTOP` | `ESTOP_N` | GPIO9 | 53 | Active low |
 
-The current `uCNC-master` target has `IC74HC595_COUNT 0` and
-`IC74HC165_COUNT 0`, so it does not currently use either shift-register path.
-Enabling both PIO encoders and the stock 595 PIO also requires deliberate
-PIO-block, state-machine and program-offset allocation: the encoder module
-defaults to PIO0/SM0/offset0, while the 595 PIO path also initializes PIO0/SM0.
+E-stop is a direct input outside the shift-register chain. Configure the
+LeanCam board map for active-low E-stop and keep the machine's hard-wired
+safety energy removal independent of firmware.
 
-## Control inputs
+## I/O remapping
 
-The only remaining dedicated control input is active-low from U35:
+The physical chain assignments are in
+[Input and output bit map](io-bit-map.md). The LeanCam board map must preserve
+the U6-U9 input order, U10-U13 output order, paired motion outputs and the three
+servo status connectors per axis.
 
-| uCNC function | Signal | GPIO | MOD1 pin |
-|---|---|---:|---:|
-| `ESTOP` | `ESTOP_N` | GPIO9 | 53 |
+## WeAct preparation
 
-Configure active-low polarity for `ESTOP` in the custom uCNC board map. The
-former HOLD and START inputs and their GPIOs are removed.
-
-The stock Pico 2 board map must not be used unchanged: it assigns step/dir and
-other functions to different GPIOs. A LeanCam-specific uCNC board map is needed.
+Remove WeAct module resistor R16 before using GPIO23 as the 74HC165 return.
+GPIO25 is also connected to the module's onboard LED. GPIO0 is reserved for
+optional module PSRAM and must not be assigned to SD or other motherboard I/O.

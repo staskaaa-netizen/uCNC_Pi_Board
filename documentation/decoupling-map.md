@@ -1,142 +1,92 @@
-# Decoupling capacitor map
+# Decoupling and power-component map
 
-This map separates digital/interface bypass capacitors from regulator input,
-output, compensation and bulk capacitors. Reference assignments come from the
-regenerated netlist. Placement status comes from checkpoint 55.
+This page separates local IC bypasses, regulator loops, signal filters and load
+reservoirs. Reference designators come from the current KiCad netlist.
 
 ## Logic and interface ICs
 
-| IC | Device | Supply | Local decoupling |
+| IC | Device | Supply | Local bypass |
 |---|---|---|---|
-| U6 | 74HC165D input shift register | +3V3 | C22, 100 nF |
-| U7 | 74HC165D input shift register | +3V3 | C23, 100 nF |
-| U8 | 74HC165D PLC input register 1-8 | +3V3 | C24, 100 nF |
-| U9 | 74HC165D PLC input register 9-16 | +3V3 | C25, 100 nF |
-| U10 | SN74AHCT595DR output shift register | +5V | C29, 100 nF |
-| U11 | SN74AHCT595DR output shift register | +5V | C28, 100 nF |
-| U12 | SN74AHCT595DR output shift register | +5V | C27, 100 nF |
-| U13 | SN74AHCT595DR output shift register | +5V | C26, 100 nF |
-| U42 | TC74AC541F motion buffer | +5V | C115, 100 nF |
-| U43 | TC74AC541F motion buffer | +5V | C116, 100 nF |
-| MOD1 | WeAct RP2350B module | +5V input | On-module decoupling; no separate motherboard bypass assigned |
+| U6 | 74HC165D | `+3V3` | C22, 100 nF |
+| U7 | 74HC165D | `+3V3` | C23, 100 nF |
+| U8 | 74HC165D | `+3V3` | C24, 100 nF |
+| U9 | 74HC165D | `+3V3` | C25, 100 nF |
+| U10 | SN74AHCT595DR | `+5V` | C29, 100 nF |
+| U11 | SN74AHCT595DR | `+5V` | C28, 100 nF |
+| U12 | SN74AHCT595DR | `+5V` | C27, 100 nF |
+| U13 | SN74AHCT595DR | `+5V` | C26, 100 nF |
+| U28 | SN74AHCT541DW encoder receiver | `+3V3` | C119, 100 nF |
+| U38 | TLV2374IDR | `+12V_AO` | C102, 100 nF |
+| U42 | TC74AC541F motion buffer | `+5V` | C115, 100 nF |
+| U43 | TC74AC541F motion buffer | `+5V` | C116, 100 nF |
+| MOD1 | WeAct RP2350B module | `+5V` input | Module-local capacitors |
 
-U26 and U27 are TBD62083AFG open-collector arrays and have no logic supply
-pin. Their clamp rail is the external `+24V_FIELD` domain and their return is
-`ISO_GND`.
+U18-U21 are PLC input optocouplers, U35 is the E-stop optocoupler and U61-U64
+are general-output optocouplers. These parts have no logic supply pin. U26/U27
+are TBD62083AFG arrays and also have no logic-supply bypass requirement.
 
-U18-U21 are the TLP291-4 four-channel PLC optocouplers; U35 is a single-channel
-TLP291 E-stop optocoupler. They have no VCC pin. RN32-RN35 provide one
-4x10 k isolated pull-up network per PLC bank; the E-stop collector retains one
-discrete 4.7 k pull-up to `+3V3`. No input-node capacitors
-are fitted; firmware provides debounce timing.
+Each 74HC165/595 and U28/U42/U43 bypass capacitor sits beside its package supply
+or ground pin and has a dedicated ground via to the B.Cu plane. The bypass is a
+power-rail part; signal filters below are separate.
 
-## Voltage regulators
+## Switching regulators
 
-| Regulator | Rail and role | Input capacitors | Output/VCC capacitors | Other |
+| Regulator | Conversion | Input side | Output side | Compensation and support |
 |---|---|---|---|---|
-| U1 LMR36510ADDAR | VIN_PROT to +5V, 1 A buck | C3 22 uF/50 V 1210, C4 100 nF/100 V 1206, C5 22 uF/50 V 1210 | C6 22 uF/50 V 1210, C7 100 nF 0805, C11 22 uF/50 V 1210 | C86 100 nF BOOT-to-SW; C91 1 uF VCC-to-GND |
-| U3 LMR36510ADDAR | PLC +24V_FIELD/ISO_GND to isolated +12V_BL, 1 A buck | C107 22 uF/50 V 1210, C108 100 nF/100 V 1206 | C109-C111 3 x 22 uF/50 V 1210, C112 100 nF 0805 | C113 100 nF BOOT-to-SW; C114 1 uF VCC-to-ISO_GND |
-| U2 AMS1117-3.3 | +5V to peripheral +3V3 | C10 22 uF/50 V 1210, C76 100 nF 0805 | C13 100 nF 0805, C90 22 uF/50 V 1210 | Supplies logic, SD, J22 LCD logic and analog prefilter |
-| U34 AMS1117-3.3 | +5V to ESP +3V3_WIFI | C88 22 uF/50 V 1210, C89 100 nF 0805 | C69 22 uF/50 V 1210, C70 100 nF 0805 | Dedicated ESP-01/ESP-01S rail |
-| U37 L78L12 | VIN_PROT to +12V_AO | C100 22 uF/50 V 1210 | C101 22 uF/50 V 1210 | Supplies U38 only |
+| U1 LMR36510 | `VIN_PROT` to `+5V`, 1 A | C3 22 uF/50 V, C4 100 nF/100 V, C5 22 uF/50 V | C6/C11 22 uF/50 V, C7 100 nF | C86 100 nF BOOT-SW, C91 1 uF VCC-GND, L1 22 uH, R70/R71 upper and R72 lower feedback |
+| U3 LMR36510 | isolated 24 V to `+12V_BL`, 1 A | C107 22 uF/50 V, C108 100 nF/100 V | C109-C111 22 uF/50 V, C112 100 nF | C113 100 nF BOOT-SW, C114 1 uF VCC-ISO_GND, L2 47 uH, R126/R127/R128 feedback |
 
-The ceramic package standard is 0805 for low-voltage 100 nF and 1 uF parts,
-1206 for 10 uF and 100 nF/100 V parts, and 1210 for 22 uF bulk capacitors.
-Both 10 uF capacitors use the same 25 V X7R part.
+U1 and U3 each use six 0.3 mm ground vias under the exposed PowerPAD. Keep the
+input capacitors on the VIN/GND side, the inductor at SW and the bootstrap
+capacitor between BOOT and SW.
 
-RN36 provides the four 10 k pull-ups for `EN`, `RST`, `GPIO0` and `GPIO2` at
-the ESP socket. Its supply side is referenced to `+3V3_WIFI`, not the
-motherboard `+3V3` rail. This keeps those pins in the ESP supply domain and
-avoids backfeeding an unpowered ESP rail.
+## Linear regulators
 
-U38 TLV2374 uses C102 (100 nF) from `+12V_AO` to GND directly at the package.
-C92/C94/C96/C98 are the 1 uF first-stage PWM filter capacitors, while
-C93/C95/C97/C99 are the 100 nF second-stage filter capacitors. They are signal
-filter parts, not power-rail decoupling.
+| Regulator | Conversion | Input capacitors | Output capacitors | Load |
+|---|---|---|---|---|
+| U2 AMS1117-3.3 | `+5V` to `+3V3` | C10 22 uF, C76 100 nF | C13 100 nF, C90 22 uF | Logic, encoders, SD and LCD logic |
+| U34 AMS1117-3.3 | `+5V` to `+3V3_WIFI` | C88 22 uF, C89 100 nF | C69 22 uF, C70 100 nF | ESP-01/ESP-01S only |
+| U37 L78L12 | `VIN_PROT` to `+12V_AO` | C100 22 uF | C101 22 uF | U38 and 0-10 V outputs |
 
-The LVDS driver and C106 are removed. No dedicated bypass is fitted at U28.
+U34 has its own regulator because the ESP8266 transmit pulse is independent of
+the main peripheral 3.3 V load. U37 is a low-current analog rail and must not be
+used for field loads.
 
-One placement item remains worth reviewing:
+## Load and filter capacitors
 
-- U34's `+3V3_WIFI` output capacitors C69/C70 are approximately 13.0 mm and
-  17.6 mm from its supply pin. Move the 100 nF bypass closer to U34 or place an
-  additional 100 nF beside the regulator.
-
-For U1, C3-C5 form the input loop, C6/C7/C11 form the output filter, C86 is
-the bootstrap capacitor and C91 is the internal VCC bypass. U1 and U3 each
-have six
-0.3 mm-drill GND vias under the PowerPAD, tying the exposed pad to the B.Cu
-ground plane.
-
-The SOT-223 and SOT-89 regulators use a local 0.3 mm-drill GND via at their
-ground lead. Their tabs are connected to the regulated output, so those tabs
-cannot use the B.Cu ground plane for thermal transfer.
-
-## Module and connector-local rail capacitors
-
-| Load | Rail | Capacitors |
+| Function | Rail or node | Capacitors |
 |---|---|---|
-| ESP-01/ESP-01S at J20 | +3V3_WIFI | C69 22 uF/50 V, C70 100 nF |
-| SD card at J36 | +3V3_SD | C67 10 uF/25 V, C68 100 nF and FB2 form the isolated storage rail filter |
-These are local load or connector bypasses, not IC decoupling.
+| SD power filter at J36/J54 | `+3V3_SD` | FB2, C67 10 uF, C68 100 nF |
+| ADC reference filter at MOD1 | `+3V3_A` | FB1, C15 100 nF |
+| Encoder 5 V branch | `+5V_ENC` | F2 and D53 protection; module-side load bypass |
+| 0-10 V output filters | AOUT0-AOUT3 | C92/C94/C96/C98 1 uF and C93/C95/C97/C99 100 nF |
+| Analog divider filters | AI0-AI3 ADC nodes | C73, C74, C75 and C118, 100 nF each |
 
-## Current placement qualification
+C92-C99 are signal-filter capacitors, not supply decoupling. C86 and C113 are
+bootstrap capacitors and intentionally do not connect to ground.
 
-Checkpoint 55 has zero placement DRC violations. U2 remains at the user-selected
-front-side location `(198.12, 94.00)`, beside the main 5 V power stage. Its four
-local capacitors are grouped around it:
+The ESP socket uses RN36, a 4 x 10 k array referenced to `+3V3_WIFI`, for GPIO2,
+GPIO0, EN and RST.
 
-| Capacitor | Role | Position (mm) | Rotation |
-|---|---|---:|---:|
-| C76 | 100 nF input bypass | 191.135, 94.000 | 90 deg |
-| C13 | 100 nF output bypass | 191.135, 89.555 | 90 deg |
-| C10 | 10 uF input bulk | 191.135, 99.080 | 90 deg |
-| C90 | 22 uF output bulk | 195.580, 87.015 | 0 deg |
+## SD series and pull-up networks
 
-The measured supply-and-ground pad path scores are 8.13 mm for C76, 10.12 mm
-for C13, 12.77 mm for C10 and 12.17 mm for C90. These are aggregate
-two-terminal distances to U2, not routed track lengths.
+RN43 provides 10 k pull-ups for CS, MOSI, MISO and card detect. Its common side
+is `+3V3_SD`. RN44 provides 22 ohm series resistors for CS, MOSI, MISO and SCK.
+DAT1 and DAT2 remain unconnected in SPI mode.
 
-The 5 V output rail uses C6/C11 as the two 22 uF bulk capacitors and C7 as
-the local high-frequency bypass. Redundant C8, C16, C17 and C77 are removed.
-FB1 and C15 form the `+3V3_A` reference filter beside MOD1 pin 48. The 10 uF
-C14 bulk capacitor is removed because C15 provides the required local bypass. R73
-is the 100 k `PWR_GOOD_N` pull-up between U1 and GPIO3/MOD1 pin 50.
+## Net classes
 
-The 5 V and 3.3 V indicators are D4/R4 and D5/R5, respectively. Both indicator
-pairs are on F.Cu in the open area between MOD1 and the two regulators.
+| Class | Track | Clearance | Assignments |
+|---|---:|---:|---|
+| Default | 0.20 mm | 0.20 mm | Logic and general signals |
+| Power | 0.80 mm | 0.30 mm | Main 5 V, 3.3 V and 12 V rails |
+| FieldPower | 0.50 mm | 0.50 mm | `+24V_FIELD`, isolated commons |
+| AnalogPower | 0.30 mm | 0.20 mm | `+12V_AO` |
+| EncoderPower | 0.30 mm | 0.20 mm | Encoder +5 V branch |
+| Ground | 0.50 mm | 0.30 mm | GND and ground-via stubs |
+| DigitalDiffPair | 0.20 mm | 0.20 mm | HSTX source pairs |
+| LVDSConnector | 0.12 mm | 0.12 mm | J22 fan-out |
+| Analog | 0.25 mm | 0.25 mm | AI/AOUT signals |
 
-The former U29 encoder buffer and its C58 bypass are no longer fitted. U28
-handles the first eight encoder signals; the single
-remaining `ENC2_Z` channel uses R110 (5.1 k series) and R111 (10 k to GND),
-both 0805.
-
-The eight shift-register bypass capacitors are now local to their ICs:
-C22-C25 sit beside the U6-U9 VCC pins and C26-C29 beside U10-U13. Each 0805
-capacitor is to the right of its SOIC-16 body. C22-C25 reference `+3V3`;
-C26-C29 reference `+5V`. The GND pad connects toward a bottom-plane via. The input-register pad loops measure
-7.38 mm and the output-register loops 9.92 mm.
-
-Every fitted 100 nF capacitor with a GND terminal now has its own 0.6 mm /
-0.3 mm through-via placed beyond the GND pad, away from the supply pad. A
-0.5 mm F.Cu stub joins the capacitor pad to that via. Thirty decoupling
-capacitors are covered after removing C17/C77/C106; C86 is excluded
-because it is the buck bootstrap capacitor connected between BOOT and SW rather
-than GND.
-
-The PCB uses these project netclasses:
-
-| Class | Track | Clearance | Via diameter/drill | Assignment |
-|---|---:|---:|---:|---|
-| Default | 0.20 mm | 0.20 mm | 0.60/0.30 mm | Logic and general signals |
-| Power | 0.80 mm | 0.30 mm | 0.80/0.40 mm | VIN, +5 V, +3.3 V and +12 V rails |
-| FieldPower | 0.50 mm | 0.50 mm | 0.60/0.30 mm | Isolated commons, field commons and +24V_FIELD |
-| AnalogPower | 0.30 mm | 0.20 mm | 0.60/0.30 mm | Low-current +12 V analog rails |
-| EncoderPower | 0.30 mm | 0.20 mm | 0.60/0.30 mm | Shared encoder +5 V feeder |
-| Ground | 0.50 mm | 0.30 mm | 0.60/0.30 mm | GND and decoupling-via stubs |
-| DigitalDiffPair | 0.20 mm | 0.20 mm | 0.60/0.30 mm | HSTX source pairs |
-| LVDSConnector | 0.12 mm | 0.12 mm | 0.60/0.30 mm | J22 LVDS pair fanout |
-| Analog | 0.25 mm | 0.25 mm | 0.60/0.30 mm | AI and AOUT nets |
-
-The board currently has no unrouted connections. Local capacitor-to-IC placement
-must still be reviewed whenever footprint placement changes.
+The PCB currently has no unconnected nets. Local bypass placement must be
+rechecked after any footprint movement.

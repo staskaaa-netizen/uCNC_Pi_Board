@@ -30,9 +30,8 @@ uses the requested two-stage low-pass filter:
 PWM -> 10 k / 1 uF -> 10 k / 100 nF -> TLV2374 non-inverting input
 ```
 
-The unused connection in the supplied reference drawing was a unity-gain
-follower, which cannot turn 3.3 V PWM into 10 V. The implemented feedback is
-22 k from output to inverting input and 10 k from inverting input to GND:
+The feedback network is 22 k from output to inverting input and 10 k from
+inverting input to GND:
 
 ```text
 gain = 1 + 22 k / 10 k = 3.2

@@ -368,32 +368,18 @@ def main() -> None:
     for reference in ("R10", "R11", "R12", "R13"):
         if reference in references:
             failures.append(f"Discrete shift-control resistor {reference} remains")
-    shift_pullup_contract = {
-        "1": "SR_SCK",
-        "8": "GND",
-        "2": "SR_PL_N",
-        "7": "+3V3",
-        "3": "SR_OUT_SER",
-        "6": "GND",
-        "4": "SR_LATCH",
-        "5": "GND",
+    expansion_pins = {
+        "35": "EXP_GPIO4",
+        "51": "EXP_GPIO5",
+        "36": "EXP_GPIO6",
+        "52": "EXP_GPIO7",
+        "37": "EXP_GPIO8",
     }
-    for pin, expected_net in shift_pullup_contract.items():
-        if ("RN41", pin) not in nets.get(expected_net, set()):
+    for module_pin, expected_net in expansion_pins.items():
+        if ("MOD1", module_pin) not in nets.get(expected_net, set()):
             failures.append(
-                f"RN41 pin {pin} is not connected to {expected_net}"
+                f"{expected_net} is not on MOD1 expansion pin {module_pin}"
             )
-    rn41 = components_by_ref.get("RN41")
-    rn41_assembly = next(
-        (
-            prop.get("value", "")
-            for prop in rn41.findall("property")
-            if prop.get("name") == "Assembly"
-        ),
-        "",
-    ) if rn41 is not None else ""
-    if rn41_assembly != "DNP":
-        failures.append("RN41 must remain marked DNP pending review")
     connector_values = set(component_values.values())
     for required in ("Dedicated E-stop loop",):
         if required not in connector_values:
@@ -513,6 +499,14 @@ def main() -> None:
     for pin, expected_net in microsd_pins.items():
         if ("J36", pin) not in nets.get(expected_net, set()):
             failures.append(f"J36 pin {pin} is not on {expected_net}")
+    microsd_socket_pins = {
+        "1": "SD_DAT2", "2": "SD_CS_N", "3": "SD_MOSI",
+        "4": "+3V3_SD", "5": "SD_SCK", "6": "GND",
+        "7": "SD_MISO", "8": "SD_DAT1", "9": "SD_CD", "SH": "GND",
+    }
+    for pin, expected_net in microsd_socket_pins.items():
+        if ("J54", pin) not in nets.get(expected_net, set()):
+            failures.append(f"J54 pin {pin} is not on {expected_net}")
     j36 = next(
         (component for component in components if component.get("ref") == "J36"),
         None,
@@ -529,18 +523,11 @@ def main() -> None:
     for reference in ("R44", "R45", "R46", "R47", "R48", "R49"):
         if reference in references:
             failures.append(f"Discrete SD pull-up {reference} remains")
-    sd_pullup_contract = {
-        "1": "SD_DAT1", "8": "+3V3_SD",
-        "2": "SD_CD", "7": "+3V3_SD",
-    }
-    for pin, expected_net in sd_pullup_contract.items():
-        if ("RN42", pin) not in nets.get(expected_net, set()):
-            failures.append(f"RN42 pin {pin} is not connected to {expected_net}")
     sd_data_pullup_contract = {
-        "1": "SD_DAT2", "8": "+3V3_SD",
-        "2": "SD_CS_N", "7": "+3V3_SD",
-        "3": "SD_MOSI", "6": "+3V3_SD",
-        "4": "SD_MISO", "5": "+3V3_SD",
+        "1": "SD_CS_N", "8": "+3V3_SD",
+        "2": "SD_MOSI", "7": "+3V3_SD",
+        "3": "SD_MISO", "6": "+3V3_SD",
+        "4": "SD_CD", "5": "+3V3_SD",
     }
     for pin, expected_net in sd_data_pullup_contract.items():
         if ("RN43", pin) not in nets.get(expected_net, set()):
@@ -617,7 +604,7 @@ def main() -> None:
             failures.append(
                 f"{expected_net} is not on MOD1 encoder pin {module_pin}"
             )
-    for retired_net in sorted(name for name in nets if name.startswith("EXP_")):
+    for retired_net in sorted(name for name in nets if name.startswith("EXP_IN")):
         failures.append(f"Retired expansion-input net {retired_net} remains")
     motion_connectors = {
         "J7": {
@@ -649,16 +636,20 @@ def main() -> None:
         "J30": {1: "EN_4AX", 2: "AX4_STEP", 3: "AX4_DIR"},
         "J46": {1: "EN_4AX", 2: "AX5_STEP", 3: "AX5_DIR"},
         "J47": {1: "EN_4AX", 2: "AX6_STEP", 3: "AX6_DIR"},
-        "J40": {1: "AX0_ZERO", 2: "AX0_ERROR_N", 3: "GND"},
-        "J41": {1: "AX1_ZERO", 2: "AX1_ERROR_N", 3: "GND"},
-        "J42": {1: "AX2_ZERO", 2: "AX2_ERROR_N", 3: "GND"},
-        "J43": {1: "AX3_ZERO", 2: "AX3_ERROR_N", 3: "GND"},
-        "J48": {1: "AX4_ZERO", 2: "AX4_ERROR_N", 3: "GND"},
-        "J49": {1: "AX5_ZERO", 2: "AX5_ERROR_N", 3: "GND"},
-        "J50": {1: "AX6_ZERO", 2: "AX6_ERROR_N", 3: "GND"},
+        "J40": {1: "GND", 2: "AX0_ERROR_N", 3: "AX0_ZERO"},
+        "J41": {1: "GND", 2: "AX1_ERROR_N", 3: "AX1_ZERO"},
+        "J42": {1: "GND", 2: "AX2_ERROR_N", 3: "AX2_ZERO"},
+        "J43": {1: "GND", 2: "AX3_ERROR_N", 3: "AX3_ZERO"},
+        "J48": {1: "GND", 2: "AX4_ERROR_N", 3: "AX4_ZERO"},
+        "J49": {1: "GND", 2: "AX5_ERROR_N", 3: "AX5_ZERO"},
+        "J50": {1: "GND", 2: "AX6_ERROR_N", 3: "AX6_ZERO"},
         "J2": {1: "+12V_BL", 2: "ISO_GND"},
         "J33": {1: "+24V_FIELD", 2: "ISO_GND"},
         "J45": {1: "+24V_FIELD", 2: "ISO_GND"},
+        "J51": {
+            1: "+3V3", 2: "GND", 3: "EXP_GPIO4", 4: "EXP_GPIO5",
+            5: "EXP_GPIO6", 6: "EXP_GPIO7", 7: "EXP_GPIO8",
+        },
         "J13": {1: "+5V_ENC", 2: "ENC0_A_5V", 3: "ENC0_B_5V", 4: "ENC0_Z_5V", 5: "GND"},
         "J14": {1: "+5V_ENC", 2: "ENC1_A_5V", 3: "ENC1_B_5V", 4: "ENC1_Z_5V", 5: "GND"},
         "J15": {1: "+5V_ENC", 2: "ENC2_A_5V", 3: "ENC2_B_5V", 4: "ENC2_Z_5V", 5: "GND"},
@@ -696,6 +687,8 @@ def main() -> None:
         "J18": "PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
         "J45": "PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
         "J36": "PinHeader_1x09_P2.54mm_Vertical",
+        "J51": "PinSocket_1x07_P2.54mm_Vertical",
+        "J54": "TF-SMD_TF-15-15",
     }
     for reference, expected_name in connector_footprints.items():
         component = components_by_ref.get(reference)
@@ -915,7 +908,7 @@ def main() -> None:
         *(f"R{index}" for index in range(132, 148)),
         *(f"R{index}" for index in range(148, 165)),
         "J6", "J19", "J26", "J31", "J34", "J35", "J37", "J38", "J39",
-        "J4", "J44", "J51", "R131",
+        "J4", "J44", "J52", "J53", "R131", "RN41", "RN42", "SW2",
         "JP2", "JP3", "JP4",
         "R17", "R50", "R51", "R52", "R53", "R75", "R108", "R109",
         *(f"R{index}" for index in range(44, 50)),

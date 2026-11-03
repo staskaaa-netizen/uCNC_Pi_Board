@@ -10,7 +10,14 @@ import pcbnew
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
-OFFSET_MM = (-20.7, 20.6, 0.0)
+SOCKET_STACK_HEIGHT_MM = 8.5
+OFFSET_MM = (-20.7, 20.6, SOCKET_STACK_HEIGHT_MM)
+SOCKET_MODEL = (
+    "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/"
+    "PinSocket_1x15_P2.54mm_Vertical.step"
+)
+SOCKET_ROWS_Y_MM = (-19.47, -16.93, 16.09, 18.63)
+SOCKET_START_X_MM = -19.47
 
 
 def main() -> None:
@@ -27,9 +34,12 @@ def main() -> None:
     if footprint is None:
         raise SystemExit("MOD1 not found")
     models = footprint.Models()
-    if len(models) != 1:
-        raise SystemExit(f"Expected one MOD1 3D model, found {len(models)}")
-    model = models[0]
+    model = next(
+        (item for item in models if str(item.m_Filename).endswith("WeAct_RP2350B.step")),
+        None,
+    )
+    if model is None:
+        raise SystemExit("MOD1 WeAct 3D model not found")
     print(
         "before:",
         model.m_Filename,
@@ -39,6 +49,25 @@ def main() -> None:
     )
     model.m_Offset.x, model.m_Offset.y, model.m_Offset.z = OFFSET_MM
     print("after:", model.m_Offset.x, model.m_Offset.y, model.m_Offset.z)
+    existing_offsets = {
+        (round(float(item.m_Offset.x), 3), round(float(item.m_Offset.y), 3))
+        for item in models
+        if str(item.m_Filename) == SOCKET_MODEL
+    }
+    for y in SOCKET_ROWS_Y_MM:
+        key = (SOCKET_START_X_MM, y)
+        if key in existing_offsets:
+            continue
+        socket = pcbnew.FP_3DMODEL()
+        socket.m_Filename = SOCKET_MODEL
+        socket.m_Offset.x = SOCKET_START_X_MM
+        socket.m_Offset.y = y
+        socket.m_Offset.z = 0.0
+        socket.m_Scale.x = 1.0
+        socket.m_Scale.y = 1.0
+        socket.m_Scale.z = 1.0
+        footprint.Add3DModel(socket)
+        print("added socket model at", key)
     if not args.apply:
         return
     pcbnew.SaveBoard(str(args.board), board)

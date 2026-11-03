@@ -68,6 +68,7 @@ FP = {
     "DCDC_TMA0505": "Converter_DCDC:Converter_DCDC_TRACO_TMA-05xxS_12xxS_Single_THT",
     "DCDC_TBA2": "Converter_DCDC:Converter_DCDC_TRACO_TBA2-xxxx_Single_THT",
     "SJ2": "LeanCam:SolderJumper_2_Open_1206Gap",
+    "SJ2_STD": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
     "SJ3": "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm",
 }
 
@@ -81,6 +82,10 @@ for count in (2, 3, 4, 5, 6, 8, 9, 10):
     FP[f"HDR1X{count}"] = (
         f"Connector_PinHeader_2.54mm:PinHeader_1x{count:02d}_P2.54mm_Vertical"
     )
+FP["SOCKET1X7"] = (
+    "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical"
+)
+FP["MICROSD_SOFNG_C111196"] = "LeanCam:TF-SMD_TF-15-15"
 FP["HDR2X4"] = "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical"
 FP["HDR2X5"] = "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical"
 FP["HDR2X8"] = "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical"
@@ -132,6 +137,7 @@ MPN = {
     "L_SRR1260": ("Bourns", "SRR1260 series"),
     "L_SRN6045": ("Bourns", "SRN6045TA series"),
     "SJ3": ("PCB fabrication", "3-pad solder jumper"),
+    "MICROSD_SOFNG_C111196": ("SOFNG", "TF-15x15"),
 }
 
 cache_module._global_cache = cache_module.SymbolLibraryCache(CACHE_DIR)
@@ -788,12 +794,12 @@ def add_mcu(builder: SheetBuilder) -> None:
         "24": "SD_CS_MCU", "25": "SD_MOSI_MCU", "26": "ENC0_A_3V3",
         "27": "ENC0_Z_3V3", "28": "ENC1_B_3V3", "29": "ENC2_A_3V3",
         "30": "ENC2_Z_3V3", "31": "+5V", "32": "GND", "33": None,
-        "34": "SD_CD_MCU", "35": None, "36": None,
-        "37": None, "38": "WIFI_TX", "39": "HSTX_D0_P",
+        "34": "SD_CD_MCU", "35": "EXP_GPIO4", "36": "EXP_GPIO6",
+        "37": "EXP_GPIO8", "38": "WIFI_TX", "39": "HSTX_D0_P",
         "40": "HSTX_D1_P", "41": "HSTX_D2_P", "42": "HSTX_CLK_P",
         "43": "SR_OUT_SER", "44": "SR_LATCH", "45": "SR_PL_N", "46": None,
         "47": "GND", "48": "+3V3_A", "49": None, "50": "PWR_GOOD_N",
-        "51": None, "52": None, "53": "ESTOP_N", "54": "WIFI_RX",
+        "51": "EXP_GPIO5", "52": "EXP_GPIO7", "53": "ESTOP_N", "54": "WIFI_RX",
         "55": "HSTX_D0_N", "56": "HSTX_D1_N", "57": "HSTX_D2_N",
         "58": "HSTX_CLK_N", "59": "SR_SCK", "60": "SR_IN_Q7",
         "61": None, "62": None, "63": None, "64": None,
@@ -885,20 +891,8 @@ def add_mcu(builder: SheetBuilder) -> None:
         b.capacitor("+3V3", "GND", "100nF", (pos[0] + 16, pos[1]))
     b.resistor("SR_IN_DS0", "GND", "10k", (55, 210))
     for _ in range(4):
-        b.next_ref("R")  # consolidated discrete R10-R13 into RN41
-    b.resistor_pack4(
-        "10k",
-        "R_Array_4x0603",
-        [
-            ("SR_SCK", "GND"),
-            ("SR_PL_N", "+3V3"),
-            ("SR_OUT_SER", "GND"),
-            ("SR_LATCH", "GND"),
-        ],
-        (40, 225),
-        dnp=True,
-        reference="RN41",
-    )
+        b.next_ref("R")  # retired discrete R10-R13
+    b.next_ref("RN")  # retired RN41
 
     # Output chain: MCU data enters U13, then flows U13 -> U12 -> U11 -> U10.
     out_positions = [(70, 245), (100, 245), (130, 245), (160, 245)]
@@ -1383,6 +1377,13 @@ def add_encoders(builder: SheetBuilder) -> None:
         manufacturer="Texas Instruments",
     )
     b.next_ref("C")  # retired U28 bypass C57
+    b.capacitor(
+        "+3V3",
+        "GND",
+        "100nF",
+        (185, 125),
+        reference="C119",
+    )
     # Preserve later reference allocation: retired U29 and its C58 bypass.
     b.next_ref("U")
     b.next_ref("C")
@@ -1459,26 +1460,15 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
     b.next_ref("R")  # retired I2C SDA pull-up R42
     b.next_ref("R")  # retired I2C SCL pull-up R43
 
+    b.next_ref("RN")  # retired RN42; DAT1/DAT2 have no pull-ups in SPI mode
     b.resistor_pack4(
         "10k",
         "R_Array_4x0603",
         [
-            ("SD_DAT1", "+3V3_SD"),
-            ("SD_CD", "+3V3_SD"),
-            (None, None),
-            (None, None),
-        ],
-        (100, 145),
-        reference="RN42",
-    )
-    b.resistor_pack4(
-        "10k",
-        "R_Array_4x0603",
-        [
-            ("SD_DAT2", "+3V3_SD"),
             ("SD_CS_N", "+3V3_SD"),
             ("SD_MOSI", "+3V3_SD"),
             ("SD_MISO", "+3V3_SD"),
+            ("SD_CD", "+3V3_SD"),
         ],
         (125, 145),
         reference="RN43",
@@ -1504,7 +1494,7 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
     b.add(
         lib_id="Jumper:SolderJumper_2_Open",
         value="SD_CD_EN",
-        footprint_key="SJ2",
+        footprint_key="SJ2_STD",
         nets={"1": "SD_CD_MCU", "2": "SD_CD"},
         position=(300, 165),
         prefix="JP",
@@ -1521,16 +1511,7 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
     b.next_ref("J")  # retired J21 external UART header
     for _ in range(4):
         b.next_ref("R")  # preserve the retired discrete ESP pull-up references
-    b.add(
-        lib_id="Switch:SW_Push",
-        value="ESP_PROG",
-        footprint_key="SWITCH",
-        nets={"1": "WIFI_GPIO0", "2": "GND"},
-        position=(65, 230),
-        prefix="SW",
-        mpn="PTS645SM43SMTR92LFS",
-        manufacturer="C&K",
-    )
+    b.next_ref("SW")  # retired SW2 ESP programming button
     b.capacitor(
         "+3V3_WIFI",
         "GND",
@@ -2045,12 +2026,12 @@ def main() -> None:
         sheets["outputs"].terminal(
             3,
             {
-                "1": f"{axis}_ZERO",
+            "1": "GND",
                 "2": f"{axis}_ERROR_N",
-                "3": "GND",
+            "3": f"{axis}_ZERO",
             },
             (300 + (index % 4) * 55, 300 + (index // 4) * 30),
-            f"{axis}: ZERO, ERROR, GND",
+        f"{axis}: GND, ERROR, ZERO",
             reference=reference,
         )
     sheets["outputs"].terminal(
@@ -2141,6 +2122,44 @@ def main() -> None:
     )
 
     add_backlight_power(sheets["power"])
+    sheets["mcu"].header(
+        1,
+        7,
+        {
+            "1": "+3V3",
+            "2": "GND",
+            "3": "EXP_GPIO4",
+            "4": "EXP_GPIO5",
+            "5": "EXP_GPIO6",
+            "6": "EXP_GPIO7",
+            "7": "EXP_GPIO8",
+        },
+        (100, 155),
+        "Expansion socket: +3V3, GND, GPIO4-GPIO8",
+        footprint_key="SOCKET1X7",
+    )
+    sheets["storage"].add(
+        lib_id="Connector:Micro_SD_Card_Det1",
+        value="SOFNG TF-15x15 microSD socket (C111196)",
+        footprint_key="MICROSD_SOFNG_C111196",
+        nets={
+            "1": "SD_DAT2",
+            "2": "SD_CS_N",
+            "3": "SD_MOSI",
+            "4": "+3V3_SD",
+            "5": "SD_SCK",
+            "6": "GND",
+            "7": "SD_MISO",
+            "8": "SD_DAT1",
+            "9": "SD_CD",
+            "SH": "GND",
+        },
+        position=(510, 165),
+        prefix="J",
+        reference="J54",
+        mpn="TF-15x15",
+        manufacturer="SOFNG",
+    )
 
     for sheet in sheets.values():
         sheet.save()

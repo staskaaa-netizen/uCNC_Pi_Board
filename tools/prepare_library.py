@@ -14,6 +14,12 @@ LIBRARIES = HARDWARE / "libraries"
 SOURCE_ROOT = PROJECT.parent / "tmp" / "leancam-sources"
 WEACT_SOURCE = SOURCE_ROOT / "WeActStudio.RP2350B.footprint" / "WeAct2550B.kicad_mod"
 WEACT_STEP = SOURCE_ROOT / "WeActStudio.RP2350BCoreBoard" / "HDK" / "3D_RP350B.step"
+SOCKET_MODEL = (
+    "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/"
+    "PinSocket_1x15_P2.54mm_Vertical.step"
+)
+SOCKET_ROWS_Y_MM = (-19.47, -16.93, 16.09, 18.63)
+SOCKET_START_X_MM = -19.47
 
 
 def fmt(value: float) -> str:
@@ -466,6 +472,31 @@ def write_weact_footprint() -> Path:
         text,
         count=1,
     )
+    text = re.sub(
+        r'(\(offset\s*\n\s*\(xyz )[-0-9. ]+(\)\s*\n\s*\))',
+        r"\g<1>-20.7 20.6 8.5\g<2>",
+        text,
+        count=1,
+    )
+    socket_models = "".join(
+        f"""
+\t(model "{SOCKET_MODEL}"
+\t\t(offset
+\t\t\t(xyz {SOCKET_START_X_MM} {y} 0)
+\t\t)
+\t\t(scale
+\t\t\t(xyz 1 1 1)
+\t\t)
+\t\t(rotate
+\t\t\t(xyz 0 0 0)
+\t\t)
+\t)"""
+        for y in SOCKET_ROWS_Y_MM
+    )
+    text = text.rstrip()
+    if not text.endswith(")"):
+        raise RuntimeError("Unexpected WeAct footprint terminator")
+    text = text[:-1] + socket_models + "\n)\n"
     output = LIBRARIES / "LeanCam.pretty" / "WeAct_RP2350B_Socket.kicad_mod"
     output.write_text(text, encoding="utf-8")
     return output
@@ -521,6 +552,8 @@ def main() -> None:
         "`WeActStudio.RP2350B.footprint` coordinate data, with the manufacturer "
         "pad labels mapped deterministically to module pins 1-64 so the schematic "
         "and PCB agree.\n"
+        "- The 3D module is raised 8.5 mm above the carrier to represent the "
+        "socket-and-pin assembly.\n"
         f"- Local footprint generation identifier: `{generated_uuid}`.\n",
         encoding="utf-8",
     )

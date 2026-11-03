@@ -10,8 +10,8 @@
       "bulk input capacitor": 5,
       "bulk output capacitor": 8,
       "bulk rail capacitor": 1,
-      "connector": 32,
-      "decoupling capacitor": 22,
+      "connector": 34,
+      "decoupling capacitor": 23,
       "diode": 21,
       "divider lower resistor": 4,
       "divider upper resistor": 4,
@@ -22,17 +22,16 @@
       "module": 1,
       "pull-up resistor": 6,
       "resistor": 56,
-      "resistor network": 23,
+      "resistor network": 21,
       "signal filter capacitor": 8,
-      "solder jumper": 1,
-      "switch": 1
+      "solder jumper": 1
     },
     "by_block": {
       "16 PLC inputs": 61,
       "24V to 5V buck": 13,
       "74HC165 input chain": 4,
       "AHCT595 output chain": 4,
-      "ESP-01/ESP-01S interface": 5,
+      "ESP-01/ESP-01S interface": 4,
       "LCD LVDS display": 2,
       "MCU and shift-chain support": 10,
       "SD interface": 5,
@@ -57,7 +56,7 @@
       "encoder 1 connector": 1,
       "encoder 2": 2,
       "encoder 2 connector": 1,
-      "encoder interface": 2,
+      "encoder interface": 3,
       "input protection and power": 21,
       "isolated PLC input connectors": 2,
       "isolated general outputs": 43,
@@ -252,8 +251,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 148.844,
-      "y_mm": 65.024,
+      "x_mm": 149.606,
+      "y_mm": 63.754,
       "dnp": false,
       "nets": "+5V; GND"
     },
@@ -525,7 +524,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 114.554,
-      "y_mm": 3.302,
+      "y_mm": 4.572,
       "dnp": false,
       "nets": "VIN_FUSED; VIN_RAW"
     },
@@ -930,6 +929,22 @@
       "nets": "+5V; GND"
     },
     {
+      "reference": "J51",
+      "value": "Expansion socket: +3V3, GND, GPIO4-GPIO8",
+      "sheet": "MCU, shift chains and safety",
+      "functional_block": "MCU and shift-chain support",
+      "channels": "",
+      "role": "connector",
+      "associated_ic_or_net": "external or board-level connection",
+      "placement_rule": "mechanical anchor; do not move without approval",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 94.488,
+      "y_mm": 52.578,
+      "dnp": false,
+      "nets": "+3V3; EXP_GPIO4; EXP_GPIO5; EXP_GPIO6; EXP_GPIO7; EXP_GPIO8; GND"
+    },
+    {
       "reference": "MOD1",
       "value": "WeAct RP2350B Core Board (socketed)",
       "sheet": "MCU, shift chains and safety",
@@ -943,7 +958,7 @@
       "x_mm": 116.586,
       "y_mm": 65.786,
       "dnp": false,
-      "nets": "+3V3_A; +5V; AI0_ADC; AI1_ADC; AI2_ADC; AI3_ADC; AOUT0_PWM; AOUT1_PWM; AOUT2_PWM; AOUT3_PWM; ENC0_A_3V3; ENC0_B_3V3; ENC0_Z_3V3; ENC1_A_3V3; ENC1_B_3V3; ENC1_Z_3V3; ENC2_A_3V3; ENC2_B_3V3; ENC2_Z_3V3; ESTOP_N; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; PWR_GOOD_N; SD_CD_MCU; SD_CS_MCU; SD_MISO_MCU; SD_MOSI_MCU; SD_SCK_MCU; SR_IN_Q7; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK; WIFI_RX; WIFI_TX"
+      "nets": "+3V3_A; +5V; AI0_ADC; AI1_ADC; AI2_ADC; AI3_ADC; AOUT0_PWM; AOUT1_PWM; AOUT2_PWM; AOUT3_PWM; ENC0_A_3V3; ENC0_B_3V3; ENC0_Z_3V3; ENC1_A_3V3; ENC1_B_3V3; ENC1_Z_3V3; ENC2_A_3V3; ENC2_B_3V3; ENC2_Z_3V3; ESTOP_N; EXP_GPIO4; EXP_GPIO5; EXP_GPIO6; EXP_GPIO7; EXP_GPIO8; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; PWR_GOOD_N; SD_CD_MCU; SD_CS_MCU; SD_MISO_MCU; SD_MOSI_MCU; SD_SCK_MCU; SR_IN_Q7; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK; WIFI_RX; WIFI_TX"
     },
     {
       "reference": "R9",
@@ -960,22 +975,6 @@
       "y_mm": 74.422,
       "dnp": false,
       "nets": "GND; SR_IN_DS0"
-    },
-    {
-      "reference": "RN41",
-      "value": "4x10k",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
-      "channels": "",
-      "role": "resistor network",
-      "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "place in functional block; keep GND return short",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 92.456,
-      "y_mm": 77.47,
-      "dnp": true,
-      "nets": "+3V3; GND; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK"
     },
     {
       "reference": "U6",
@@ -2428,7 +2427,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 5.199,
+      "x_mm": 4.819,
       "y_mm": 14.552,
       "dnp": false,
       "nets": "AX0_DIR; AX0_STEP; EN_3AX"
@@ -2444,7 +2443,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 5.199,
+      "x_mm": 4.819,
       "y_mm": 28.267,
       "dnp": false,
       "nets": "AX1_DIR; AX1_STEP; EN_3AX"
@@ -2476,7 +2475,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 5.08,
+      "x_mm": 4.819,
       "y_mm": 41.983,
       "dnp": false,
       "nets": "AX2_DIR; AX2_STEP; EN_3AX"
@@ -2492,7 +2491,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 4.946,
+      "x_mm": 4.819,
       "y_mm": 55.7,
       "dnp": false,
       "nets": "AX3_DIR; AX3_STEP; EN_4AX"
@@ -2508,8 +2507,8 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 4.691,
-      "y_mm": 96.085,
+      "x_mm": 4.819,
+      "y_mm": 96.34,
       "dnp": false,
       "nets": "AX4_DIR; AX4_STEP; EN_4AX"
     },
@@ -2547,7 +2546,7 @@
     },
     {
       "reference": "J40",
-      "value": "AX0: ZERO, ERROR, GND",
+      "value": "AX0: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2556,14 +2555,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.089,
-      "y_mm": 14.552,
+      "x_mm": 14.867,
+      "y_mm": 21.517,
       "dnp": false,
       "nets": "AX0_ERROR_N; AX0_ZERO; GND"
     },
     {
       "reference": "J41",
-      "value": "AX1: ZERO, ERROR, GND",
+      "value": "AX1: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2572,14 +2571,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.344,
-      "y_mm": 28.267,
+      "x_mm": 14.867,
+      "y_mm": 35.306,
       "dnp": false,
       "nets": "AX1_ERROR_N; AX1_ZERO; GND"
     },
     {
       "reference": "J42",
-      "value": "AX2: ZERO, ERROR, GND",
+      "value": "AX2: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2588,14 +2587,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.224,
-      "y_mm": 41.983,
+      "x_mm": 14.867,
+      "y_mm": 48.949,
       "dnp": false,
       "nets": "AX2_ERROR_N; AX2_ZERO; GND"
     },
     {
       "reference": "J43",
-      "value": "AX3: ZERO, ERROR, GND",
+      "value": "AX3: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2604,8 +2603,8 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.089,
-      "y_mm": 55.7,
+      "x_mm": 14.867,
+      "y_mm": 62.738,
       "dnp": false,
       "nets": "AX3_ERROR_N; AX3_ZERO; GND"
     },
@@ -2652,14 +2651,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 4.925,
+      "x_mm": 4.819,
       "y_mm": 69.398,
       "dnp": false,
       "nets": "AX6_DIR; AX6_STEP; EN_4AX"
     },
     {
       "reference": "J48",
-      "value": "AX4: ZERO, ERROR, GND",
+      "value": "AX4: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2668,14 +2667,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.089,
-      "y_mm": 96.085,
+      "x_mm": 14.867,
+      "y_mm": 103.305,
       "dnp": false,
       "nets": "AX4_ERROR_N; AX4_ZERO; GND"
     },
     {
       "reference": "J49",
-      "value": "AX5: ZERO, ERROR, GND",
+      "value": "AX5: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2684,14 +2683,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.089,
-      "y_mm": 82.877,
+      "x_mm": 14.867,
+      "y_mm": 89.916,
       "dnp": false,
       "nets": "AX5_ERROR_N; AX5_ZERO; GND"
     },
     {
       "reference": "J50",
-      "value": "AX6: ZERO, ERROR, GND",
+      "value": "AX6: GND, ERROR, ZERO",
       "sheet": "24 PLC outputs",
       "functional_block": "motion output channel",
       "channels": "",
@@ -2700,8 +2699,8 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.089,
-      "y_mm": 69.398,
+      "x_mm": 14.867,
+      "y_mm": 76.38,
       "dnp": false,
       "nets": "AX6_ERROR_N; AX6_ZERO; GND"
     },
@@ -3068,7 +3067,7 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 91.44,
+      "x_mm": 91.186,
       "y_mm": 56.642,
       "dnp": false,
       "nets": "GND; OUT24; OUT25; OUT26; OUT27"
@@ -3282,6 +3281,22 @@
       "nets": "+24V_FIELD; DO_DRV12; DO_DRV13; DO_DRV14; DO_DRV15; DO_OPTO_LED12_A; DO_OPTO_LED13_A; DO_OPTO_LED14_A; DO_OPTO_LED15_A; GND"
     },
     {
+      "reference": "C119",
+      "value": "100nF",
+      "sheet": "Encoders",
+      "functional_block": "encoder interface",
+      "channels": "",
+      "role": "decoupling capacitor",
+      "associated_ic_or_net": "power rail",
+      "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 118.11,
+      "y_mm": 91.694,
+      "dnp": false,
+      "nets": "+3V3; GND"
+    },
+    {
       "reference": "D53",
       "value": "SMAJ5.0A",
       "sheet": "Encoders",
@@ -3293,7 +3308,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 92.71,
-      "y_mm": 105.156,
+      "y_mm": 107.188,
       "dnp": false,
       "nets": "+5V_ENC; GND"
     },
@@ -3308,8 +3323,8 @@
       "placement_rule": "place between connector and buffer; keep A/B/Z channel grouping",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 96.266,
-      "y_mm": 105.664,
+      "x_mm": 144.526,
+      "y_mm": 108.458,
       "dnp": false,
       "nets": "+5V; +5V_ENC"
     },
@@ -3468,8 +3483,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 145.542,
-      "y_mm": 78.994,
+      "x_mm": 148.209,
+      "y_mm": 79.629,
       "dnp": false,
       "nets": "+3V3_SD; GND"
     },
@@ -3484,8 +3499,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 145.034,
-      "y_mm": 76.454,
+      "x_mm": 138.684,
+      "y_mm": 92.456,
       "dnp": false,
       "nets": "+3V3_SD; GND"
     },
@@ -3564,7 +3579,7 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 144.272,
+      "x_mm": 148.59,
       "y_mm": 72.644,
       "dnp": false,
       "nets": "+3V3; +3V3_SD"
@@ -3618,6 +3633,22 @@
       "nets": "+3V3_SD; GND; SD_CD; SD_CS_N; SD_DAT1; SD_DAT2; SD_MISO; SD_MOSI; SD_SCK"
     },
     {
+      "reference": "J54",
+      "value": "SOFNG TF-15x15 microSD socket (C111196)",
+      "sheet": "Storage, Wi-Fi and UI",
+      "functional_block": "SD interface",
+      "channels": "",
+      "role": "connector",
+      "associated_ic_or_net": "external or board-level connection",
+      "placement_rule": "mechanical anchor; do not move without approval",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 150.368,
+      "y_mm": 93.218,
+      "dnp": false,
+      "nets": "+3V3_SD; GND; SD_CD; SD_CS_N; SD_DAT1; SD_DAT2; SD_MISO; SD_MOSI; SD_SCK"
+    },
+    {
       "reference": "JP5",
       "value": "SD_CD_EN",
       "sheet": "Storage, Wi-Fi and UI",
@@ -3628,8 +3659,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 137.16,
-      "y_mm": 101.092,
+      "x_mm": 143.891,
+      "y_mm": 78.105,
       "dnp": false,
       "nets": "SD_CD; SD_CD_MCU"
     },
@@ -3650,22 +3681,6 @@
       "nets": "+3V3_WIFI; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST"
     },
     {
-      "reference": "RN42",
-      "value": "4x10k",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
-      "channels": "",
-      "role": "resistor network",
-      "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "place with functional block; review after placement",
-      "current_status": "inside",
-      "side": "B.Cu",
-      "x_mm": 136.906,
-      "y_mm": 97.536,
-      "dnp": false,
-      "nets": "+3V3_SD; SD_CD; SD_DAT1"
-    },
-    {
       "reference": "RN43",
       "value": "4x10k",
       "sheet": "Storage, Wi-Fi and UI",
@@ -3675,11 +3690,11 @@
       "associated_ic_or_net": "isolated multi-channel passive network",
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
-      "side": "B.Cu",
-      "x_mm": 136.906,
-      "y_mm": 91.186,
+      "side": "F.Cu",
+      "x_mm": 144.526,
+      "y_mm": 73.406,
       "dnp": false,
-      "nets": "+3V3_SD; SD_CS_N; SD_DAT2; SD_MISO; SD_MOSI"
+      "nets": "+3V3_SD; SD_CD; SD_CS_N; SD_MISO; SD_MOSI"
     },
     {
       "reference": "RN44",
@@ -3696,22 +3711,6 @@
       "y_mm": 73.406,
       "dnp": false,
       "nets": "SD_CS_MCU; SD_CS_N; SD_MISO; SD_MISO_MCU; SD_MOSI; SD_MOSI_MCU; SD_SCK; SD_SCK_MCU"
-    },
-    {
-      "reference": "SW2",
-      "value": "ESP_PROG",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "ESP-01/ESP-01S interface",
-      "channels": "",
-      "role": "switch",
-      "associated_ic_or_net": "user control",
-      "placement_rule": "place in functional block; keep GND return short",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 119.94,
-      "y_mm": 2.322,
-      "dnp": false,
-      "nets": "GND; WIFI_GPIO0"
     },
     {
       "reference": "U34",
@@ -3820,8 +3819,8 @@
       "placement_rule": "place at protected node; keep branch short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 136.609,
-      "y_mm": 31.53,
+      "x_mm": 135.382,
+      "y_mm": 31.496,
       "dnp": false,
       "nets": "AOUT1_F1; GND"
     },
@@ -3852,7 +3851,7 @@
       "placement_rule": "place at protected node; keep branch short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 136.609,
+      "x_mm": 135.382,
       "y_mm": 29.244,
       "dnp": false,
       "nets": "AOUT2_F1; GND"
@@ -3948,8 +3947,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 149.606,
-      "y_mm": 30.226,
+      "x_mm": 138.176,
+      "y_mm": 30.48,
       "dnp": false,
       "nets": "+12V_AO; GND"
     },

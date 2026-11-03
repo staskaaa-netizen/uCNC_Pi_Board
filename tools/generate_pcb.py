@@ -54,6 +54,8 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "J15": (82, 144.75, 180),
     "J18": (154.0, 48.0, 270),
     "J20": (172.085, 40.640, 0),
+    "J51": (180.0, 20.0, 0),
+    "J54": (220.0, 50.0, 0),
     "J21": (83, 7, 0),
     "J22": (145.5, 34.0, 270),
     "J28": (220.0, 140.0, 0),
@@ -78,7 +80,6 @@ MAJOR: dict[str, tuple[float, float, float]] = {
     "J25": (149.75, 145.0, 0),
     "MOD1": (105, 40, 180),
     "SW1": (62.5, 61, 0),
-    "SW2": (151.130, 35.560, 0),
     "U1": (54, 30.86, 0),
     "C115": (112.946, -38.136, 0),
     "C116": (112.946, -23.136, 0),
@@ -1026,6 +1027,8 @@ def build_board() -> None:
 
     add_zones(board, net_map)
     add_lvds_connector_silkscreen(board)
+    update_field_connector_silkscreen(board)
+    fix_component_3d_models(board)
     board.BuildConnectivity()
 
     pcbnew.SaveBoard(str(PCB_PATH), board)
@@ -1037,7 +1040,7 @@ def build_board() -> None:
 
 
 def add_lvds_connector_silkscreen(board) -> None:
-    """Add the J22 pin-group legend on the component-side silkscreen."""
+    """Place the compact J22 pin-group legend on the rear silkscreen."""
     connector = next(
         (
             footprint
@@ -1048,28 +1051,34 @@ def add_lvds_connector_silkscreen(board) -> None:
     )
     if connector is None:
         return
-    position = connector.GetPosition()
-    origin_x = pcbnew.ToMM(position.x) - 28.0
-    origin_y = pcbnew.ToMM(position.y) - 16.0
+    bbox = connector.GetBoundingBox(False, False)
+    origin_x = pcbnew.ToMM(bbox.GetX()) + 0.6
+    origin_y = pcbnew.ToMM(bbox.GetY()) + 0.5
     labels = (
-        ("J22 LCD LVDS 2x10", 0.0, 0.0, 1.2),
-        ("1-3: 3V3", 0.0, 1.7, 0.9),
-        ("4-6,13-14: GND", 0.0, 3.0, 0.9),
-        ("7/8: D0- / D0+", 0.0, 4.3, 0.9),
-        ("9/10: D1- / D1+", 0.0, 5.6, 0.9),
-        ("11/12: D2- / D2+", 0.0, 6.9, 0.9),
-        ("15/16: CLK- / CLK+", 0.0, 8.2, 0.9),
-        ("17-20: NC", 0.0, 9.5, 0.9),
+        ("J22 LCD LVDS 2.00 mm", 0.0, 0.0, 0.8),
+        ("PWR 1-3   GND 4-6,13-14", 0.0, 0.9, 0.62),
+        ("D0- 7  D0+ 8   D1- 9  D1+ 10", 0.0, 1.9, 0.62),
+        ("D2- 11 D2+ 12  CLK- 15 CLK+ 16", 0.0, 2.9, 0.62),
+        ("NC 17-20", 0.0, 3.9, 0.62),
     )
-    existing = {
-        item.GetText()
-        for item in board.GetDrawings()
-        if isinstance(item, pcbnew.PCB_TEXT) and item.GetLayer() == pcbnew.B_SilkS
+    legacy_texts = {
+        "J22 LCD LVDS 2x10", "1-3: 3V3", "4-6,13-14: GND",
+        "7/8: D0- / D0+", "9/10: D1- / D1+", "11/12: D2- / D2+",
+        "15/16: CLK- / CLK+", "17-20: NC",
     }
-    for text, dx, dy, size in labels:
-        if text in existing:
-            continue
-        item = pcbnew.PCB_TEXT(board)
+    existing = [
+        item
+        for item in board.GetDrawings()
+        if isinstance(item, pcbnew.PCB_TEXT)
+        and item.GetLayer() == pcbnew.B_SilkS
+        and item.GetText() in legacy_texts
+    ]
+    for index, (text, dx, dy, size) in enumerate(labels):
+        if index < len(existing):
+            item = existing[index]
+        else:
+            item = pcbnew.PCB_TEXT(board)
+            board.Add(item)
         item.SetText(text)
         item.SetLayer(pcbnew.B_SilkS)
         item.SetTextSize(pcbnew.VECTOR2I_MM(size, size))
@@ -1077,7 +1086,105 @@ def add_lvds_connector_silkscreen(board) -> None:
         item.SetTextPos(pcbnew.VECTOR2I_MM(origin_x + dx, origin_y + dy))
         item.SetMirrored(True)
         item.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
-        board.Add(item)
+    for item in existing[len(labels):]:
+        board.Remove(item)
+
+
+def update_field_connector_silkscreen(board) -> None:
+    """Place concise rear-side labels adjacent to J5, J7 and J8."""
+    labels = {
+        "J7": "J7 PLC IN 1-8",
+        "J8": "J8 PLC IN 9-16",
+        "J5": "J5 E-STOP",
+    }
+    legacy_texts = {
+        "J7 1-2=24V  2-3=CONTACT",
+        "J8 1-2=24V  2-3=CONTACT",
+        "SAFETY 1-2=24V  2-3=CONTACT",
+    }
+    existing = {
+        item.GetText(): item
+        for item in board.GetDrawings()
+        if isinstance(item, pcbnew.PCB_TEXT)
+        and item.GetLayer() == pcbnew.B_SilkS
+        and item.GetText() in legacy_texts
+    }
+    for reference, text in labels.items():
+        connector = next(
+            (
+                footprint
+                for footprint in board.GetFootprints()
+                if footprint.GetReference() == reference
+            ),
+            None,
+        )
+        if connector is None:
+            continue
+        bbox = connector.GetBoundingBox(False, False)
+        item = existing.get(next(
+            (
+                legacy
+                for legacy in legacy_texts
+                if reference == "J5" and legacy.startswith("SAFETY")
+                or legacy.startswith(reference + " ")
+            ),
+            "",
+        ))
+        if item is None:
+            item = pcbnew.PCB_TEXT(board)
+            board.Add(item)
+        item.SetText(text)
+        item.SetLayer(pcbnew.B_SilkS)
+        item.SetTextSize(pcbnew.VECTOR2I_MM(0.7, 0.7))
+        item.SetTextThickness(pcbnew.FromMM(0.12))
+        item.SetTextPos(pcbnew.VECTOR2I_MM(
+            pcbnew.ToMM(bbox.GetX()) + 0.5,
+            pcbnew.ToMM(bbox.GetY()) - 1.0,
+        ))
+        item.SetMirrored(True)
+        item.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
+
+
+def fix_component_3d_models(board) -> None:
+    """Map package footprints whose stock STEP model names are unavailable."""
+    replacements = {
+        "SOP-18_7.495x11.515mm_P1.27mm.step":
+            "SOIC-18W_7.5x11.6mm_P1.27mm.step",
+        "SOIC-4_4.55x2.6mm_P1.27mm.step":
+            "SOP-4_4.4x2.6mm_P1.27mm.step",
+    }
+    for footprint in board.GetFootprints():
+        models = list(footprint.Models())
+        rebuilt = []
+        changed = False
+        for model in models:
+            filename = str(model.m_Filename)
+            replacement = next(
+                (
+                    (old_name, new_name)
+                    for old_name, new_name in replacements.items()
+                    if filename.endswith(old_name)
+                ),
+                None,
+            )
+            rebuilt.append((model, replacement))
+            changed = changed or replacement is not None
+        if not changed:
+            continue
+        footprint.Models().clear()
+        for old_model, replacement in rebuilt:
+            model = pcbnew.FP_3DMODEL()
+            model.m_Filename = (
+                str(old_model.m_Filename)[:-len(replacement[0])] + replacement[1]
+                if replacement
+                else old_model.m_Filename
+            )
+            model.m_Offset = old_model.m_Offset
+            model.m_Rotation = old_model.m_Rotation
+            model.m_Scale = old_model.m_Scale
+            model.m_Opacity = old_model.m_Opacity
+            model.m_Show = old_model.m_Show
+            footprint.Add3DModel(model)
 
 
 def export_bom() -> None:
