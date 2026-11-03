@@ -590,6 +590,22 @@ def main() -> None:
             failures.append(
                 f"{reference} pin {pin} is not on expected net {expected_net}"
             )
+    encoder_module_pins = {
+        "26": "ENC0_A_3V3",
+        "12": "ENC0_B_3V3",
+        "27": "ENC0_Z_3V3",
+        "13": "ENC1_A_3V3",
+        "28": "ENC1_B_3V3",
+        "14": "ENC1_Z_3V3",
+        "29": "ENC2_A_3V3",
+        "15": "ENC2_B_3V3",
+        "30": "ENC2_Z_3V3",
+    }
+    for module_pin, expected_net in encoder_module_pins.items():
+        if ("MOD1", module_pin) not in nets.get(expected_net, set()):
+            failures.append(
+                f"{expected_net} is not on MOD1 encoder pin {module_pin}"
+            )
     for retired_net in sorted(name for name in nets if name.startswith("EXP_")):
         failures.append(f"Retired expansion-input net {retired_net} remains")
     motion_connectors = {

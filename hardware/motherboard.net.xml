@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\acc\rp2350\LeanCam-NCC-RP2350B\hardware\motherboard.kicad_sch</source>
-    <date>2026-11-03T00:47:14</date>
+    <date>2026-11-03T01:03:30</date>
     <tool>Eeschema 10.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -22,7 +22,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="2" name="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/">
+    <sheet number="2" name="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/">
       <title_block>
         <title>Power and supervision</title>
         <company/>
@@ -40,7 +40,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="3" name="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/">
+    <sheet number="3" name="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/">
       <title_block>
         <title>MCU, shift chains and safety</title>
         <company/>
@@ -58,7 +58,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="4" name="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/">
+    <sheet number="4" name="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/">
       <title_block>
         <title>16 PLC inputs</title>
         <company/>
@@ -76,7 +76,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="5" name="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/">
+    <sheet number="5" name="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/">
       <title_block>
         <title>24 PLC outputs</title>
         <company/>
@@ -94,7 +94,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="6" name="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/">
+    <sheet number="6" name="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/">
       <title_block>
         <title>Encoders</title>
         <company/>
@@ -112,7 +112,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="7" name="/Display/" tstamps="/5cabb61b-3527-4dec-8da1-c7b82c5335d8/">
+    <sheet number="7" name="/Display/" tstamps="/7e1b57f8-c010-45f8-b71e-6876545d0d42/">
       <title_block>
         <title>Display</title>
         <company/>
@@ -130,7 +130,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="8" name="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/">
+    <sheet number="8" name="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/">
       <title_block>
         <title>Storage, Wi-Fi and UI</title>
         <company/>
@@ -148,7 +148,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="9" name="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/">
+    <sheet number="9" name="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/">
       <title_block>
         <title>Analog I/O</title>
         <company/>
@@ -185,8 +185,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>2a76fdbe-0447-4b1b-ba55-f6b6bee01c29</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d0371cbf-4eea-429c-82a9-f60db26c0b21</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -213,8 +213,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>7f35cf63-4c4c-4f11-baff-938c7413c42a</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>b29c8c2f-5748-43fe-a9e9-df55ff85e640</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -241,8 +241,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>5d369f7e-95d6-432f-8805-51135a60508c</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>c7b8225b-1e1c-409c-a51b-e7374f27be74</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -269,8 +269,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>8478d916-d9a6-4ad7-bcec-3279a1de9da7</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>a3863dbd-c070-4075-9c5d-9c3f057ae50c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -297,8 +297,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>12a13263-d78a-42de-a63a-e5ed691c6ca8</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>cdd5b0fb-0c3e-4a22-be5e-76c7ef6c0379</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -325,8 +325,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>7d496009-58bc-480c-a3b5-f02ff15f24fe</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>2e49a4cc-8a5a-4f9a-aaea-dd1e39823914</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -353,8 +353,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>d0f02adb-0ca0-435e-b81a-446864732066</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>c3b0b128-8b4c-4eb1-ac1f-e60cec970d49</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -381,8 +381,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>26ececdf-fb58-446b-9de7-56dcb3c0ed63</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>bd220e43-9e67-420b-a804-844747180e35</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -409,8 +409,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>7a492356-4b2c-4886-845c-13e578d1fed0</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>3a90f8b4-9862-46fe-8f86-50b3f37a3b5c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -437,8 +437,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>61ba89c5-c15b-49d8-aa39-c01d81935dd7</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>5edd3123-23dd-4d7d-b0a6-b01568c8444d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -465,8 +465,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>0dd70956-bd4d-43ed-b55e-77c8f78638c0</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>43e7d82d-2a73-48df-a611-7f8ed3f20bef</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -493,8 +493,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>3dca7687-828c-473e-a0b4-46fb34bbae34</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>0a9879e2-1fcb-4478-aaf3-38033e6309f3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -521,8 +521,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>0a87f730-7528-4fdd-8ee9-04df15ad6c7a</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>505139c3-fc01-40cc-864f-efd359a01aab</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -549,8 +549,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>5987499c-9f39-4a0a-a366-1bbbea3ceabd</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>630c4383-2ed7-4e0c-b051-0d9a162f61dd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -577,8 +577,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>3a0a0929-b042-4943-b480-d4954f9c6a72</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>a83ff593-efb3-4df1-a18a-81d93e2182c5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -605,8 +605,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>05d4064e-fcaf-4402-847d-1d0e1465695a</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>5e381ba5-8e77-4d8c-8e3a-143b485b1138</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -633,8 +633,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>67ed8d30-3498-41b2-92c7-ff9b0824cf7a</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>3846cf66-35b6-4f61-961f-af5f4960e975</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -661,8 +661,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>ebf17412-c55e-443a-a1ef-3cf03e87507d</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>5eb37fb2-c7b9-418c-af74-f396a24b884e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -689,8 +689,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>a6e5284a-2ba1-49e2-8115-cece93746bb0</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>0f5b0aff-3376-44e2-a8b7-082e376b1d8f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -717,8 +717,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>05d13093-0b3b-4b29-b64f-5a3196167ba5</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d245b7e5-9158-433a-9e19-c7bf4af9febc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -745,8 +745,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>37456be6-4941-4a40-83ea-48f53fa37161</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d11dc6be-6a80-4aa9-a059-f0084c71bba0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -773,8 +773,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>4b9453c6-9d73-4391-af1b-f4d81dcba2e9</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>39cef794-198c-4fb0-a5a5-5bc2b2f606ae</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -801,8 +801,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="diode TVS thyrector"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>7092092f-fb55-49c3-9b0c-f6ca3ba4763d</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>6eda68e8-ce64-4df6-b698-ee1aa86eded9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -829,8 +829,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>8b40d406-b328-4ffe-8acf-44a2d1ea67ba</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>e669ff5e-f91d-46c7-9a9f-ceb0dafae3ff</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -857,8 +857,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>1872e6cb-4d08-4720-8f4e-cb6c04f5d2b5</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>b6ce1eb5-aeec-4b48-a514-a5c33dca0a57</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -885,8 +885,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>8a9a9d07-9ba3-448a-90e0-3b9a9d39f08a</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>166c486a-84cf-4eec-a698-7d4c0ea39078</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -913,8 +913,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>b2e86327-839f-4f5a-8ca2-ccfef7a02c96</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d301cdec-c16e-4d03-afde-24668e0fa842</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -941,8 +941,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="fuse"/>
       <property name="ki_fp_filters" value="*Fuse*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>1f4a8a83-e2c2-4370-905c-8fc78a8d9c60</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>b51eeff9-af28-4a48-957c-d7affe4d6277</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -969,8 +969,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>2afca881-677e-498c-8335-3ca34ecbc64f</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>a19c1ba9-e29d-4c1c-8ad4-612717003217</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -995,8 +995,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>2bfcc991-9844-47cb-9a23-8dd7533444f1</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>9b1bf1af-acca-47c6-9105-6b4e1410bbed</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1020,8 +1020,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>4ab10a65-a23c-4ba0-86a1-ab2264e1f895</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>67fdda6e-d0ad-48bc-ae3b-d5577c4cb4dc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1045,8 +1045,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>15deaae5-2408-40ce-bd8a-24420e77f7fd</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>1d71300e-9c19-4f7f-86a7-05069d7a4664</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1070,8 +1070,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>c7be2360-c541-4eab-b358-05708b539987</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>604ec530-ea31-4d68-8fb0-78e929b0478a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1095,8 +1095,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>e97b9acb-ca1a-4e0b-95c9-033c36bb8186</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>4631a756-a7b0-4cca-a685-65884161ee23</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1120,8 +1120,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>9d59afcf-9742-4b11-a133-82761444b648</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>c75f5d10-2b7c-4941-8801-5b051061e8db</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1145,8 +1145,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>a1471c21-152d-43b4-8763-e614595fc779</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d2fd9fba-8c7a-4f98-aaba-9cf529a48659</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1170,8 +1170,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>a68f1ae6-f2e9-4036-a48f-4985918d0aa1</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d260361f-1eb4-4e40-9026-10628f31e91f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1195,8 +1195,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>b33f4dc9-56d0-4540-97cc-8749b3d620c2</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>53bfe600-4ce6-47c1-85ed-e72a7dd4a017</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1220,8 +1220,8 @@
       <property name="Sheetname" value="Power and supervision"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="flag power"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>992e210f-cf73-4d8d-81c9-9c9f6f54ed12</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>00d1e208-bbf5-437b-ad3e-9c6124218f96</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1247,8 +1247,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>a02b9c91-df2a-4c87-ada3-55cb2edf405a</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>15b5374b-b1f1-445b-9812-1e26a40bc807</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1275,8 +1275,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>2fc35064-852a-4b73-abb7-b908f5777db5</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d727da96-6e12-4069-8923-8c95798295cd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1303,8 +1303,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
       <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>d95a1a2e-aacf-4214-8baa-97a945a31fa2</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>6676ae2e-296d-43ad-ab73-844abe3aed3e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1331,8 +1331,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
       <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>eb7c53a3-70f0-4a9b-819a-0055e947c413</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>a7f82be6-d1a2-4249-8811-73feec1f5a99</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1359,8 +1359,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>997ba069-7011-49c5-ad3d-2206f28dfebf</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>b75c54ee-04fe-4502-8756-4cd4f0b06059</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1387,8 +1387,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>2b9efcb0-b0cf-416c-ba3e-38e76a1d5545</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>1dc817d4-125c-4587-8606-79eab02de441</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1415,8 +1415,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>e38a027c-642c-474b-ba77-157b9f3ca62b</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>642edfce-038b-4c05-914b-7c48788da21c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1443,8 +1443,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>4eaea219-5e0d-4ecb-96d8-43cbb619aced</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>11b04c5b-fe47-4201-8abe-782f9b72c798</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1471,8 +1471,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>4b891cbe-102f-4505-93b4-86e7ad2943e8</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>d2de7494-033f-4e09-b9b7-754cc3e65bcd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1499,8 +1499,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>5d012ae3-001c-4074-8b72-0d674801b4c3</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>8a4709c7-44e8-4c27-8912-046d4221e993</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1527,8 +1527,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>be0ab587-c929-4384-ab55-e4515169b32f</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>8dd877ff-1941-44b3-bde1-c284e56cc9c7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1555,8 +1555,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>390a49bc-b973-47f1-97d8-fd8ac1d93ffa</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>09def783-702c-4a5c-82ee-4104756a524a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1583,8 +1583,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>533ff88d-fe35-4d67-bc33-ca991acbbcd5</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>3d41f4f4-992c-46fd-9a25-d6981c63e0ba</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1611,8 +1611,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="synchronous buck step-down"/>
       <property name="ki_fp_filters" value="Texas*HTSOP*1EP*3.9x4.9mm*P1.27mm*EP2.95x4.9mm*Mask2.4x3.1mm*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>490b73b6-d641-41d4-ba30-43115309a1ab</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>18f6f031-4010-4e93-b810-e1f58ac703b8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1646,8 +1646,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
       <property name="ki_fp_filters" value="SOT?223*TabPin2*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>30702a1f-cbc3-45a0-957e-f3fc8bfab089</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>1ad23396-b180-4cb8-a29d-cc68d59a62c6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1675,8 +1675,8 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="synchronous buck step-down"/>
       <property name="ki_fp_filters" value="Texas*HTSOP*1EP*3.9x4.9mm*P1.27mm*EP2.95x4.9mm*Mask2.4x3.1mm*"/>
-      <sheetpath names="/Power and supervision/" tstamps="/8e84ba02-f7f8-4dce-b297-0f6ef1bced04/"/>
-      <tstamps>5b914cb2-3074-49fc-b911-f9c24ae970c1</tstamps>
+      <sheetpath names="/Power and supervision/" tstamps="/ca1e21cc-f59e-4455-b4ea-8d32fc55c6a8/"/>
+      <tstamps>67c6408c-a5a3-4353-8d76-4e1b1c2e176b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1710,8 +1710,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>6e16793f-372d-403f-b2a0-1b3ac7334faf</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>e7a99d4e-eb8d-4709-bb1a-75f5f267fa7d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1738,8 +1738,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>0fa359a1-9daf-4e54-a823-c78e526ebf7a</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>59ff9b20-9351-4787-86cb-1e87558d7d6e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1766,8 +1766,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>6e837ea1-c29d-4f61-802d-20eef880c308</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>ca45cc12-864f-4ec6-b54b-88456f97cb71</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1794,8 +1794,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>5a9d96c7-b452-4512-9b24-652a5f4032f7</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>7a08c8b1-18b6-4de6-954f-a0e91a059525</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1822,8 +1822,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>4488b795-8f6d-4a04-a26c-29eb621b9014</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>0088e36b-486b-4380-b0fc-a097876b7b7a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1850,8 +1850,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>4ab8a08e-96c7-47a0-aed2-2551507584e5</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>fd1aebdc-2426-44c6-9fe6-00e2a6bac31e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1878,8 +1878,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>cd6a5a38-b596-4555-a57a-b4e3b26a3ad9</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>3db62cd4-1601-40a9-9474-9d10b0fb0ecf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1906,8 +1906,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>97b04100-e4bd-4d65-b1da-8a316714180e</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>782e8222-6bcf-4650-8804-0dd1b769c32b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1934,8 +1934,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>d325478d-538c-450b-8be1-80d47220d741</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>3223a2ce-e959-4026-95b0-9ad3cd6940bf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1963,8 +1963,8 @@
       <property name="Sheetname" value="MCU, shift chains and safety"/>
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_fp_filters" value="WeAct_RP2350B_Socket"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>e3c42bfd-3d60-4811-8cfd-c0f7359ab1ad</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>174251a1-de29-4176-9600-9fd6b9bc18e7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2053,8 +2053,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>3afb673b-f5cf-4070-bdc4-1ef6899c54e6</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>e3a7d847-4570-4887-9b3e-8b2ff7b089e4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2080,8 +2080,8 @@
       <property name="Sheetname" value="MCU, shift chains and safety"/>
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>5ac87fca-b342-44ee-91a4-72f69837f64c</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>1f8a3cce-e0b9-4863-be66-44d32b3ba722</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2114,8 +2114,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="8 bit shift register parallel load cmos"/>
       <property name="ki_fp_filters" value="DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>94875da2-b477-4ffe-bc85-7355c44a219e</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>4b90d6cf-1aa7-4926-a75c-b4d68cd8a854</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2156,8 +2156,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="8 bit shift register parallel load cmos"/>
       <property name="ki_fp_filters" value="DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>49470b1b-f922-44ef-8918-cebcf9888dda</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>2773b3ea-81bc-4a2f-b644-95b3d1e157a1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2198,8 +2198,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="8 bit shift register parallel load cmos"/>
       <property name="ki_fp_filters" value="DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>a6ca2862-0868-4d27-abcc-15a3bfbdaeed</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>88504f27-650e-491c-bd75-54885c3a278d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2240,8 +2240,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="8 bit shift register parallel load cmos"/>
       <property name="ki_fp_filters" value="DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>ec3164d5-4787-4b5a-a3c9-23d41cd5bd05</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>04d796d8-bf44-45f7-9653-9e9da0fe51c0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2282,8 +2282,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="AHCTMOS SR 3State"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>71a94321-beec-41c9-9773-91c75dc987fe</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>09c9ca91-3f1c-49bb-8454-07b91e443576</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2324,8 +2324,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="AHCTMOS SR 3State"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>068f91e7-d827-461d-ae35-5553d3acacb5</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>58ff76b1-1b3a-4ed3-8462-0def4be60378</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2366,8 +2366,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="AHCTMOS SR 3State"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>6d398dc3-de98-4a14-94d7-3a50e8de609f</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>be3b93f2-a656-489e-a076-ce8f6679811f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2408,8 +2408,8 @@
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
       <property name="ki_keywords" value="AHCTMOS SR 3State"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*"/>
-      <sheetpath names="/MCU, shift chains and safety/" tstamps="/58ecc567-b5c4-4ed9-aacb-92f446038e00/"/>
-      <tstamps>1e24bbca-09a3-49d0-a730-24f3d9f4c569</tstamps>
+      <sheetpath names="/MCU, shift chains and safety/" tstamps="/22c729ef-de6b-437f-856f-52c15a6fd58f/"/>
+      <tstamps>7778985a-8131-4383-9315-e2027fbc3fd9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2450,8 +2450,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>e0a8ea27-8759-4651-b6cf-e13984436713</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>805677c3-ff93-4b80-b816-481b4fcc2304</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2478,8 +2478,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>68e5299e-06f8-48b0-a145-4988fee1f8a6</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>dab47563-2844-44e6-b617-cae544f371cf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2506,8 +2506,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>c52fec1f-55c4-4186-b622-76c60a272951</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>6beee980-a7f8-4f4e-bb95-e18ffdc5054f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2534,8 +2534,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>0a3ee697-aa86-4c10-b8ae-4f4475d21a5e</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>87f29de0-4383-4f9c-a5af-3cb6610f9ec2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2562,8 +2562,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>a1edcc93-e72d-4868-a612-61462a70615f</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>c8f88274-1c9d-443a-b6bf-99a73d037149</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2590,8 +2590,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>a21c83fe-75fc-43f2-8863-f0a86491d33f</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>30a5094a-435d-4407-8380-e407b7ac558c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2618,8 +2618,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>2a2ca544-7c3d-4238-9c1d-6d7eb07e954c</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>e7eff878-520e-4959-9b5b-0728788e1ab5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2646,8 +2646,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>6a3ea0a9-07a6-4c9f-8808-34ca139feb0c</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>d731e14e-b2c4-4545-9b62-e5f4b9bdd190</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2674,8 +2674,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>b6bc136d-10f3-4914-90bf-4b5827c71def</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>a1365b07-0eef-403b-bec8-14ebf284ae1f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2702,8 +2702,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>dbfcfc61-1d8f-4961-9f3d-1fa1866fef0f</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>dd2b9ddb-8a56-416a-b084-1e1fc3fddc9b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2730,8 +2730,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>bbfb9edc-21e4-435e-a941-29314777f04f</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>2561bd43-884a-44d9-b161-88ad90542fbe</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2758,8 +2758,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>f9ca80f2-66b0-4bc5-bea3-d2ef07cfd0b4</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>b5185a7e-82f6-4649-8878-baf9ea5b4674</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2786,8 +2786,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>c3d310f1-cf0f-4d37-a3c1-f32248a639b1</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>1cce507b-0cc4-465a-89cc-9f1d04599d69</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2814,8 +2814,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>31acf550-e521-4b83-9a2f-5bb057efa0fc</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>6b59d19e-9eb8-403d-9404-8bf9a38dd085</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2842,8 +2842,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>fa91756d-f409-41d2-858d-de910e72347f</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>ef6d6402-b9ed-4130-a2ff-3a75f74b4f8b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2870,8 +2870,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>2d46cd53-6276-4180-a3fa-cd843812a624</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>92e23424-97a3-4908-ad05-fc0d1cc6e08f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2898,8 +2898,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>65988cce-a684-4844-b711-80a819d0e18c</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>99fc2be8-0692-4d6f-b373-d7e7393f2a8b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2926,8 +2926,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>8befa7eb-df06-4bb2-ae18-5bfdb6a617f7</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>36c10dee-fabe-41cd-84b3-2712f33b4702</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2954,8 +2954,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>79687697-1cf5-48d8-9de5-621afa1942a1</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>418d1540-819e-4be0-a7d1-92fcd7e179cf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2982,8 +2982,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>2a19ef56-6c96-454b-85cc-92897b43b152</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>144d065a-1ce6-4a7a-97a6-30b7b2b29a83</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3010,8 +3010,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>e0a36829-12d4-4c54-bf02-2e90426149a4</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>56bfbf3c-e85a-4528-9f03-459d99727510</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3038,8 +3038,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>a5f1a93f-1953-4812-8043-3ea5d75b1c81</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>68ad6c8c-5c3c-4bfa-b4a2-625f89fc0d51</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3066,8 +3066,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>1fe04a54-0a07-400d-bb2a-e84dcb119f3e</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>b56030db-0d0a-4366-a720-5871b9b69051</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3094,8 +3094,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>b786ad08-ce2c-46ee-aaae-9378669715ff</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>d307dc74-f824-45c0-88ad-a8cf779af2d6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3122,8 +3122,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>b58662d2-49c4-4089-aaf4-e88e1ed845d6</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>d6c7939f-d705-4200-b4c8-46e1f8c311db</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3150,8 +3150,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>dddabc05-cc0c-43bf-8dbc-d605f88756c6</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>6f63a951-8a63-4df7-9782-9bf07f38a640</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3178,8 +3178,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>742e7030-93f5-410d-96a8-89f63027b2d7</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>72bcc8bb-9d6c-48c2-940d-bfa0901fd96b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3206,8 +3206,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>49296dfc-1c78-46fa-9075-b461df3d458a</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>5de1374c-dcb0-430f-8755-b63f8ce046e2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3234,8 +3234,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>e026b554-0411-4c1d-a044-40c357937ca9</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>2cec5934-157d-4c9b-909f-d0d51da6e171</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3262,8 +3262,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>d32f6f43-de1b-4dc8-84d9-38d93b59577a</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>395a5682-e20f-42d7-a999-2fde324cf6ec</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3290,8 +3290,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>b795012d-68c2-4d2f-b8bc-418a4a4edeb0</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>31cfd1b7-d0e2-48db-8d11-508cea9839be</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3318,8 +3318,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>7dcd6346-fe20-44fd-942b-25660a3fd7c8</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>40ecbaf8-abac-4b7a-803c-67b4f0e7d16b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3346,8 +3346,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>fce107a0-2d8d-4c01-9c3f-23d182735642</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>ce9ef1ca-45b0-4454-af57-e78c0309472d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3374,8 +3374,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>af98f143-973d-47b9-b64d-9c0813b50d35</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>ebf7f9ad-9bff-41f9-b1a5-ad107fa59c7a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3402,8 +3402,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>23635ae2-1aa0-473d-ab37-03ee3f6445c9</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>7403c782-5534-4db4-a3da-e18c425e1b46</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3430,8 +3430,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>52ab6ffa-94aa-4515-8994-0088c3d3a652</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>d2333ff9-ff64-40b2-beeb-cfe1f6ed41ba</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3464,8 +3464,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>19597cf5-03a7-47fc-84f3-b73e8eb5d65b</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>20cbb725-1674-4b6e-92a1-1ae6fc2217b4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3498,8 +3498,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>dd23cc0c-c96b-40b6-a78e-352e14076857</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>3267885c-1de2-4343-933e-68f02b5ad2cc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3526,8 +3526,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>c54fd500-d6ce-4c4f-84ed-026fc3540b70</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>64f4d9e7-c290-41e6-98df-fa259e82d69d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3554,8 +3554,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>5693b65f-3180-4143-9c7c-4ceaad9afefc</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>41362fd7-8f00-4699-a19a-3002ef92b5d7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3582,8 +3582,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>b4875bb1-3c80-49f4-897d-25d340870b76</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>f680e762-38e1-4bad-b4ba-970f9352b972</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3610,8 +3610,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>e5c5275d-c6e3-4162-80ba-a4fec1732208</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>4ce30ba4-d21f-47c1-abe3-a0e5d9e58e89</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3638,8 +3638,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>05c13076-1682-4d83-a280-b9565c52fd8e</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>4a18f295-0158-4498-9f5c-01a1d5b5c135</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3666,8 +3666,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>e96f05dd-c239-4c30-8af5-3e87eb72a8b4</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>d7c3d419-47df-42fe-9a88-9ebd876d1e42</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3694,8 +3694,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>76971286-33dc-4aad-be82-51b78dfc200e</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>3fd85dee-fe8d-4623-af8c-75d7cc9fcc0a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3722,8 +3722,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>acdcbbec-527b-40ca-8674-28826ffda67b</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>65a48849-2b1b-44ca-b8a9-179ab7b6fc6d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3750,8 +3750,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>e69ef9f1-d60a-473f-9c1a-448ebc763031</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>47ffecf2-19af-4a31-8240-154bd82b80a9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3778,8 +3778,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>57a9b93b-0bdf-4b14-8a01-6dcbcf88998a</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>057f5d0c-7ab2-4827-aa5a-2e0ff70dcd0d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3806,8 +3806,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>ef509e18-8045-436c-b1c5-6f1c63df1ad2</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>81bcc963-ec84-458c-838e-7fa3427799dd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3834,8 +3834,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>5c37e642-dccb-47b0-8d4f-345197d17467</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>a950499f-8445-4c0a-beea-5d5e24c29f7b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3862,8 +3862,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>43b309cf-d606-4f7e-920c-522bfd67b824</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>a6fc93ad-e568-49b0-b59c-f0850fd13f51</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3890,8 +3890,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>7264ef77-1637-41fd-8511-94a252df860f</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>45ea7807-1d85-4def-b5ab-055bb0c48c51</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3918,8 +3918,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>7c56f351-88ec-4ed2-b973-60ffa2a1711a</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>650ca761-0647-4673-bcb2-2079c8a8f69b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3946,8 +3946,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>641b4a29-c375-45b0-8fbc-3bed502a217b</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>1e67818d-a64b-4b2b-aa55-23c822d63fbc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3974,8 +3974,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>9ac49f53-7062-4a8b-8816-ea0b8160894a</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>8ca3711d-4049-4f74-b106-98bc9cebcbfb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4001,8 +4001,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>803b2754-c65f-40d1-b249-764b3741c518</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>e79bd477-2eae-4e19-9619-9d269691d279</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4034,8 +4034,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>4211aa9e-58fc-4703-a9bd-682fac1b47ae</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>cec88c29-b691-4396-9bfd-82611225c389</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4067,8 +4067,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>5dabd614-06a5-4159-bce0-661e80f3a68e</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>0bb662c0-9d86-4749-9dec-fbf3b1169605</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4100,8 +4100,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>922c22c5-d188-4314-b725-d65759ea4150</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>11c21ef2-5d40-43a8-9453-4310024d76c5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4133,8 +4133,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>92e6057a-a9bb-4871-ae8d-80e6afd33675</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>725a7f15-52a4-4d34-833c-f5d4a7fc2a8d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4174,8 +4174,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>acb7f0cc-a96f-40d2-b290-c2ff93f8f9f5</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>fec2179b-de07-468b-94e9-86a8065f69af</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4215,8 +4215,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>f31078c2-1fd2-48e9-9bac-d4dd91f6d4c9</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>7df25257-a500-484c-8f34-725512b6e188</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4256,8 +4256,8 @@
       <property name="Sheetname" value="16 PLC inputs"/>
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>d7950ad9-e6ee-4317-bcf8-7652f4a85fae</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>651d9067-e8cc-4a5e-8f87-9ad0286e4d37</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4298,8 +4298,8 @@
       <property name="Sheetfile" value="field_inputs.kicad_sch"/>
       <property name="ki_keywords" value="NPN DC Optocoupler"/>
       <property name="ki_fp_filters" value="SOIC*4.55x2.6mm*P1.27mm*"/>
-      <sheetpath names="/16 PLC inputs/" tstamps="/c3d22d9e-a860-4347-9e60-144299399753/"/>
-      <tstamps>62268cd6-63a4-44b1-8c47-eda97e65d0fa</tstamps>
+      <sheetpath names="/16 PLC inputs/" tstamps="/d4ad762a-38ee-4418-9d28-687855457128/"/>
+      <tstamps>45bc418d-99d0-480f-8966-47d22c3180dd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4328,8 +4328,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>808f6b3f-5245-4dcb-8c30-c43805342527</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>c25ea1c8-9005-450d-99b7-8e62e3a8ffdf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4356,8 +4356,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>822405a2-3e7d-4897-a369-4074c57e900c</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>fe8289ab-0e5a-4021-b54c-d7d45e594427</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4384,8 +4384,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>6d7467d3-7333-44da-b392-8cc70039ac33</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>9ad9f47b-7587-4044-93f9-c6600814f44c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4412,8 +4412,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>7fdcef6e-352c-41ed-ae18-b2bfda0851e3</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>05cf4ef5-22b5-48d0-a704-efc9fd3d05f8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4440,8 +4440,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>14c9bd15-a6ed-48d4-8dbe-ec0cdbee85d3</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>4088d202-5c80-4799-9550-01fcc60a58fc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4468,8 +4468,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ba14a20c-ef5f-4a94-b2dd-beea5466fe04</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>6e367827-76a1-4da8-b23c-bca0c6d7e823</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4496,8 +4496,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>9ea1c961-651c-4934-9cb9-9f11272129ae</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>657e0142-3fd0-4908-ae68-d8ebe9d68fd5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4524,8 +4524,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>abb170d2-a8ad-4bea-b90b-2851171497a1</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>492f6236-154e-4e4d-b436-9f080aa9a6dd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4552,8 +4552,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>8e117c96-047a-4383-a691-bf0ab2cc4944</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>ffc82705-86c2-4996-a98b-64fbf913d540</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4580,8 +4580,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>2581db83-26da-47b3-baf5-7e67ff7fdb2e</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>692be398-e02d-42fd-8603-c07372ab26e8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4608,8 +4608,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>cbd9eb19-6ec4-4916-bf6b-8790f5dc7970</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>e475bc44-1f96-4ac5-9bf1-83a0c4a6b2cb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4636,8 +4636,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ca66809a-9a19-4179-9a29-263c8ba7be35</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>da513993-ae96-4d27-af3e-2795351db022</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4664,8 +4664,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>16715ff4-98e7-40b4-992e-48b4937cd204</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>925b69f3-2f16-4c71-b73d-4edb079ef7ac</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4692,8 +4692,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>dd3639f8-fc83-4cdb-922c-5664d022d172</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>de1128f3-e09d-4ba1-80e5-4a85befb2a3f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4720,8 +4720,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>670fdcb1-91dd-43ab-a518-9a6182f3bf2a</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>160ad4ad-ef30-4b4f-8a9e-710a797f45f8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4748,8 +4748,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>a3ca04da-f4e2-4912-ace3-925a56fe69d2</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>c18476a3-cb17-40ea-8521-3f5363749d79</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4776,8 +4776,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>e39b71fd-d7f8-44d9-b819-5f84da50d8de</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>cd4267ce-0d75-40d8-817c-949986011b1e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4804,8 +4804,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>505d2cd4-52e9-4862-b526-30c3ed71a641</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>53136c28-15e8-4376-bc1b-1e7da8080b35</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4832,8 +4832,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>4c981cb6-f728-41dd-9978-7c1aac0e8e58</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>652fd2ca-15fc-412b-a4df-58809f01bfb5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4861,8 +4861,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>c8a989c2-54c4-43f3-afe7-8aa3e3038b1e</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>94b80e4a-d618-4164-9284-5e66ce328512</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4890,8 +4890,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>35c749f1-32d9-4389-a0b0-162b8b923481</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>f305d796-4b6b-4a59-ab6a-8567819d3fab</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4924,8 +4924,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>a1dc76d4-8d17-4f2a-bddd-93a262b79a1e</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>de8261cc-bcb3-4dbf-aa3a-67571b45198a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4953,8 +4953,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>468e8216-6c42-4f0f-927c-b0646f47bb75</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>8904e02c-9d67-43fa-b074-720194abe4e4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4982,8 +4982,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>46ee1ccc-d291-49ec-b14e-c5d907024bf6</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>831f84a9-5d4e-49c6-b989-554d8e15641c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5011,8 +5011,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>c184917c-662e-4b5b-b83e-43124fbad72d</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>2009a319-d5de-4b0f-a61b-1774d10ececc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5045,8 +5045,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>2d2b7f66-599f-4e47-83c7-4d9af0e36026</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>336b8c34-d6f4-42ef-a5a0-1ca44aff5acf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5073,8 +5073,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>7be74475-9ced-4f04-a8dc-4676cf7a4d05</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>660affd2-d51c-4e00-9043-3c4d97cb27a7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5102,8 +5102,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>f003fa94-91d3-4178-85c8-32779094e308</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>b86a8a3d-b6dd-4763-b260-96ff77934ba6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5131,8 +5131,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>258816d8-b8f0-45be-9701-1e814e98046a</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>db5070b6-b062-42ed-adc3-05f2e7d6f21a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5160,8 +5160,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>d0091776-c4f6-4878-8e70-32b0b9539b6b</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>38ca6511-9505-4002-b576-f0bd232407e5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5189,8 +5189,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ff7595fb-19fb-44ba-9044-25fd267d496e</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>73524636-3fac-4b36-a520-e2bc56191323</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5217,8 +5217,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>3590bd53-8cca-482d-be95-c0a341c46374</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>cbf6605c-3d62-4fd6-97e4-99c4d894b68e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5246,8 +5246,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>4b54acb2-be47-4d36-a50e-b483c348dbc3</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>884494ea-da90-43e3-ae67-0fc6a40214d2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5275,8 +5275,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>856cedc9-2bd3-4456-bb3e-36c32d569080</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>db0ba83d-86cd-418e-9b13-cc408bc27823</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5304,8 +5304,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>07b4bbd0-9674-400f-a8fe-cdcfbee899c9</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>b898bb19-efea-4a1d-b508-c8b114c0643c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5333,8 +5333,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>926965c0-4fe3-45cb-a241-5cfaedf63f13</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>0850344f-5da4-423e-b9bb-bd961f35ced6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5362,8 +5362,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>2322950e-683c-4a62-b8ef-851f5d89c9d2</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>2c372ea5-32c2-47b9-8cb3-e4ef2fc4f002</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5390,8 +5390,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>3bf1ec3e-c2a2-40c4-87b2-92b1d4c7eb5f</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>9ff4fde4-d030-4487-8773-c348683dbb7d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5418,8 +5418,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>c29cd9ee-bcc6-480a-8dbc-b75235a933ae</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>52d2fdd6-ed7d-458a-a8a6-d727b4e7ff3c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5446,8 +5446,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>3d31a250-e1cb-42a4-8a9a-f77855bee274</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>dc97411c-6633-472d-bbd0-f03404b349a6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5474,8 +5474,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>22ae9306-7a8a-4c52-91d8-1c53c84d9ca4</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>c48b338f-a4df-4331-b40a-c4eca574e627</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5502,8 +5502,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>1a579a95-9716-45c3-98f2-331906850244</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>7f3a5981-b8d8-4804-a79e-ea3974dbfd5d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5530,8 +5530,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>5afa3312-04cb-44a7-90fc-054ef2ba74b3</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>58f083f4-37e3-4f03-acbc-d99afc21e2c9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5558,8 +5558,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>fdf514cd-b7b0-43d6-95d6-c201fc94db69</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>144ec7c6-6a91-4826-b04b-cabbe4eb8c44</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5586,8 +5586,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>17e71059-d207-4d0b-9c16-1b77a47ed5ef</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>f811a0b5-d59a-4637-8c4b-d39450cf3df2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5614,8 +5614,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>dd191ee4-b350-4e71-83cf-ac189597cbd8</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>6096ecdd-5dcf-470e-bedb-f9bf8257aaf6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5642,8 +5642,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>3290232c-18c5-41ce-8432-4f7c05bf441d</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>ee4a71d1-4549-4966-a391-34421e2e8fd7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5670,8 +5670,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>bcd6254c-d81c-43c1-850b-10152e6cd83e</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>ab749c84-a807-4987-a4ac-b2668a163d1f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5698,8 +5698,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>7b540ea0-dbe8-4271-b5d5-4284fff1536d</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>72cac277-0d38-4e40-bead-9f10d0953b6e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5726,8 +5726,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>edbb0392-c96d-466c-b702-081543d11df8</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>1d39c8e5-3af9-4109-b100-593be3c53f34</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5754,8 +5754,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>b0c74559-0bcb-4190-9a78-305f2f7dcdbc</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>ca3b5bcc-f615-4966-b30d-b8ea2b413878</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5782,8 +5782,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>7234b9e0-a498-4119-9a6f-2e69552fe127</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>8db5fcad-f65e-445a-b02b-cc3f754ba3fa</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5809,8 +5809,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>e91ee676-2ce2-4bcd-8db0-68bd99e28058</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>02271467-87a1-4a36-9081-e97514a8c094</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5842,8 +5842,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>d5938634-a2d7-4cad-90cc-1c15f363c574</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>5be13f74-4cfc-45c2-9958-c1e4d23dc174</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5875,8 +5875,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>7e801487-be1d-4128-8ce5-88585c191119</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>81bd6390-5615-429f-ba0a-78187cba2b83</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5908,8 +5908,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ebae8ea0-ad36-4520-a9f3-749f88df76a6</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>6606d912-161f-4982-993f-be4c9e9520be</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5941,8 +5941,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>16db90ed-e3c0-4a52-83d1-02f3c1e131f0</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>a7ff8b73-3024-48ae-9837-9e01a2292016</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5974,8 +5974,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>b01cdd74-ac59-4846-b02e-a75d0adbe7d5</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>c96d2aac-6465-4361-a161-dca5952f84c5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6007,8 +6007,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>b06c5534-f91f-48ea-a807-d6637f2398fb</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>a66d1dab-f4bc-4ffb-aa6a-788d7cdc645d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6040,8 +6040,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>cd75dbe7-25ad-408b-9172-7962db2938df</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>ae4b2dac-1d01-493d-9a94-0238f0ff75f2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6073,8 +6073,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>8f97d2d5-c34a-41e9-bfe5-9a97738a9181</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>47ab9695-51a0-4d0c-aae2-0f382976a9b7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6106,8 +6106,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>10e0326e-616b-453c-80b1-0e226fb3eead</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>56203b43-0272-453b-99d4-7ff7ef54b80d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6139,8 +6139,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>5abd5548-bf27-40d3-8f32-39b4c09a7999</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>b84ed84d-2353-4a1d-96c4-2a279a0f1b68</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6172,8 +6172,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>70e60db2-18a8-4c4f-be0d-90dfbe6140e6</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>7d799781-ae45-4f0e-88c8-ca42b7b61bef</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6206,8 +6206,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="Darlington transistor array"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*7.5x11.6mm*P1.27mm*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>fda493ee-0d2d-4527-9ec2-22023af58fc6</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>09bfdfba-de8b-4a10-bfe3-1c0146f68889</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6250,8 +6250,8 @@
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_keywords" value="Darlington transistor array"/>
       <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*7.5x11.6mm*P1.27mm*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>b0dd4533-1cc7-4016-8992-4db4ed5c0607</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>6991e3ea-8e71-4615-bcdd-71d0a82c6faf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6293,8 +6293,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-20W*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>c27a7cd0-17d0-451a-bd52-162f1d1e8892</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>1bb6f48c-3083-4c74-96df-db369bbca35d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6338,8 +6338,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-20W*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>45e04952-bf2a-40bc-b17a-cac69bf827a5</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>7037ce39-92fb-4cea-892e-ae60a6a9222d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6383,8 +6383,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>4574594f-bfb2-470f-bcc9-88625b413324</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>a80835c9-18bf-463d-aca1-20ab1554001c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6424,8 +6424,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ce4a0234-3bbf-4150-b416-33c1f11d9145</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>c8dcd976-2391-4fac-aa43-48a57c8dec8e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6465,8 +6465,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ca34ebc1-0cad-4306-8675-e003befd01ab</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>e7d47014-97cf-43f7-a7f9-fe16603d711a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6506,8 +6506,8 @@
       <property name="Sheetname" value="24 PLC outputs"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-16W*"/>
-      <sheetpath names="/24 PLC outputs/" tstamps="/51401750-65c2-421f-b4bd-3e885248957b/"/>
-      <tstamps>ca03544b-2288-40d7-933c-9a6de4a95359</tstamps>
+      <sheetpath names="/24 PLC outputs/" tstamps="/1ca7d2ba-ed7e-4421-a188-ca7f397735bd/"/>
+      <tstamps>69feeb72-ca34-492f-81b5-ebe087f7d303</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6548,8 +6548,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="diode TVS thyrector"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>2beec08b-c17d-4338-bdb8-3ce4db3ef665</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>10729c42-92f9-448d-a41f-0ab7763580fe</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6576,8 +6576,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="fuse"/>
       <property name="ki_fp_filters" value="*Fuse*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>ce2f5cc6-0bdc-494a-b217-5096706584c6</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>2de722d1-f6a6-4bee-9411-f4a95a2e242e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6604,8 +6604,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>ae8fa868-7147-454f-8c4c-fc1ed12dcfda</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>5f9ee060-a919-46d8-855f-2c191889e9e1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6635,8 +6635,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>b823f716-449f-4748-9074-673aaf8e7d49</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>3047dc5e-0908-4668-927d-7a42ccec23f2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6666,8 +6666,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>cf1cdc8a-9d24-4016-bbc7-0c234f472d03</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>6ef1dd0b-2fda-4d8e-9cbc-be740c13627b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6697,8 +6697,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>a12cab84-1389-47df-8a40-54cef58e6d90</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>3ed31273-a8e3-40db-a85d-51d6a9d77a0b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6725,8 +6725,8 @@
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>949f50e3-2a32-4bdb-bf3e-5227f565aedb</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>b8962261-adf9-4ae5-87d5-0b998cb5aa19</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6752,8 +6752,8 @@
       <property name="Sheetname" value="Encoders"/>
       <property name="Sheetfile" value="encoders.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-20W*"/>
-      <sheetpath names="/Encoders/" tstamps="/791ed9bc-ec95-4990-98ca-9adbd75c5243/"/>
-      <tstamps>6c2414e3-3696-4b82-89bf-cbda57e98710</tstamps>
+      <sheetpath names="/Encoders/" tstamps="/1d357fc4-86e1-423a-9f78-efcbc4588ab7/"/>
+      <tstamps>00d172e6-8bee-4b70-8526-c6a459809b8e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6798,8 +6798,8 @@
       <property name="Sheetfile" value="display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
-      <sheetpath names="/Display/" tstamps="/5cabb61b-3527-4dec-8da1-c7b82c5335d8/"/>
-      <tstamps>82f7e52d-f9e1-4e63-b08d-32149e683dc7</tstamps>
+      <sheetpath names="/Display/" tstamps="/7e1b57f8-c010-45f8-b71e-6876545d0d42/"/>
+      <tstamps>c555df3a-2a10-49df-afe7-c9551ff7a6a7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6843,8 +6843,8 @@
       <property name="Sheetname" value="Display"/>
       <property name="Sheetfile" value="display.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/Display/" tstamps="/5cabb61b-3527-4dec-8da1-c7b82c5335d8/"/>
-      <tstamps>73462032-6552-4651-84c6-0965a4c5ceb9</tstamps>
+      <sheetpath names="/Display/" tstamps="/7e1b57f8-c010-45f8-b71e-6876545d0d42/"/>
+      <tstamps>cff551e3-6d01-4613-8e74-49f0d15a0be9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6876,8 +6876,8 @@
       <property name="Sheetname" value="Display"/>
       <property name="Sheetfile" value="display.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/Display/" tstamps="/5cabb61b-3527-4dec-8da1-c7b82c5335d8/"/>
-      <tstamps>67c240d9-c7af-4c02-b113-589ce603cb4f</tstamps>
+      <sheetpath names="/Display/" tstamps="/7e1b57f8-c010-45f8-b71e-6876545d0d42/"/>
+      <tstamps>86b0a8f4-7737-46bf-bbaa-07f3043a4b66</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6910,8 +6910,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>38d19fc7-16b1-4211-8714-c3cdd86fdbd1</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>d835ed92-4a43-4096-a4d1-c87af57cc9d0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6938,8 +6938,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>181605c4-672e-45dc-bbbe-a55b0f2e2ca0</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>3195994e-858c-497d-a5a8-630e0bad8607</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6966,8 +6966,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>c71b4b39-c3e2-485d-a225-94fe5961e3b0</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>459f246b-f26e-473a-8be9-c8eee47a53b2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6994,8 +6994,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>7f63d754-e11b-473a-8c54-79d1a03d81ec</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>c945cb0a-1f36-4381-b41a-95634d764c3b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7022,8 +7022,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>071efb67-3875-4fe4-8c70-0715e6eba10e</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>5f4ea778-1863-4e54-b796-0b711ecf16f4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7050,8 +7050,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>a8905656-faf8-44eb-9a19-f23fc5451ea6</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>bf4458d5-1083-4072-b843-e67081d1b1be</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7078,8 +7078,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>c8f1a553-9dab-466f-aae6-a9f233cd8ca5</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>05206580-4098-480a-9e7c-2c7cf8e6a4d9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7106,8 +7106,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>631e7a1b-4a94-4809-b0c6-af91421a0ee2</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>9855d0d5-dea4-4f2c-a01e-952f1c96daf9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7137,8 +7137,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>d8bea7e0-8ce7-4459-b8c6-a7ab43dfc788</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>cc2caca8-08ac-4a8b-a8f0-c0c64aa33c67</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7171,8 +7171,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>3e7a95e0-9f1e-400b-b311-92de9862e631</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>048e3396-036b-4b98-9623-53f0d5922721</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7206,8 +7206,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="solder jumper SPST"/>
       <property name="ki_fp_filters" value="SolderJumper*Open*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>06907b05-b0d2-4b21-b2aa-9cc8e80fe8d0</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>09f5c37d-30e2-4ea8-b05a-238a57a09e37</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7233,8 +7233,8 @@
       <property name="Sheetname" value="Storage, Wi-Fi and UI"/>
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>effedc5b-436a-4f11-ac90-b4dc0c4bcacc</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>91d24dbb-ea43-49b4-898e-e6120f8dc4f2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7266,8 +7266,8 @@
       <property name="Sheetname" value="Storage, Wi-Fi and UI"/>
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>40277e85-efed-40dc-958b-9c75eccf6572</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>cb6534c8-8edb-4e86-a79d-ef03c5fa5789</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7299,8 +7299,8 @@
       <property name="Sheetname" value="Storage, Wi-Fi and UI"/>
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>72f97feb-d53d-4bfa-bf6d-1bf23ec1ee79</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>57bdfc03-8ccf-432c-9abc-2007fba71bcd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7332,8 +7332,8 @@
       <property name="Sheetname" value="Storage, Wi-Fi and UI"/>
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_fp_filters" value="R_Array_*4x*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>0543f314-8186-4131-b7ce-f6999252cc57</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>a4c515bf-38e8-402f-80ba-b38c262daf15</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7365,8 +7365,8 @@
       <property name="Sheetname" value="Storage, Wi-Fi and UI"/>
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>48d04e17-f462-4f78-beb2-5395ec135cfd</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>cdccf062-1194-46c7-ac07-587ab2b711c0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7393,8 +7393,8 @@
       <property name="Sheetfile" value="storage_wifi_ui.kicad_sch"/>
       <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
       <property name="ki_fp_filters" value="SOT?223*TabPin2*"/>
-      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/af62a9c3-70b5-41c2-844f-d1ae5d2752cf/"/>
-      <tstamps>6548b95a-8df4-4a69-aa46-b6d34541e70d</tstamps>
+      <sheetpath names="/Storage, Wi-Fi and UI/" tstamps="/5becb87e-002e-4eb3-b017-6a7580cf1015/"/>
+      <tstamps>ec07a253-45db-4889-a9db-d911cae22c21</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7422,8 +7422,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>9dd01a43-fe06-4848-943a-88fd61aa28e2</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>08c4987c-b214-4c3e-bae1-55600115eccd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7450,8 +7450,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>be0a8dc2-bbe4-44a1-85d2-1a13133cc275</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>f392795d-174c-4f7f-b232-9cbead208da8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7478,8 +7478,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>4237b87c-9ea3-41fb-8815-6da7179808d8</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>4d5d3b13-8d0a-4405-8c38-a3a5fafe1b1b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7506,8 +7506,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>1bca216d-1c9f-4b5e-acd5-2ea2190e17db</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>d9b97c11-22ac-46ac-b086-360951f2e7cc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7534,8 +7534,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>e8cc4f83-413a-49d0-a84c-1fa37d07d75d</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>2478fac4-e4bb-4d3d-ab88-ef7a4bfe40d2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7562,8 +7562,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>d34fe1cd-1871-43be-8828-9dc32cfea6db</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>86e270f0-d5a8-4f33-9695-80249302dd88</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7590,8 +7590,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>88e77434-f5db-4b7a-abd4-fbc2403c4d65</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>28dc3de0-7102-4bbd-bdba-a327d714e0cb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7618,8 +7618,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>0097cc0e-df22-486d-8f7c-69ebc49f842e</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>2cf73341-1986-4d09-8a57-a1320eb3a7b2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7646,8 +7646,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>f487c449-daa3-4fd5-b632-ca66b027f71a</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>8a1da689-67fa-4772-a22c-fd20399f5847</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7674,8 +7674,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>884959e7-593a-4fb4-b90a-d59195587624</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>54d6b8c8-7d7b-4e30-bdd4-d7876ddc1251</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7702,8 +7702,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>0d8ba38c-b57e-4dee-81f5-ae42e88ee809</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>8c5c5a0c-8a47-4da7-953e-ec3789bd1d3c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7730,8 +7730,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>293eebe7-7c13-4198-835d-eb84cbb76bf0</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>393fb7bd-bf56-4444-b6da-5f786c628674</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7758,8 +7758,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>08dbabb9-c4fc-4425-bfe4-0385486607d4</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>79d709ae-1f2b-405a-a0a6-adc50ad333d8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7786,8 +7786,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>c21f4013-3a88-4d1e-9ee4-543d43bb41f9</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>834b39e2-8eb1-4f8b-93d8-2ba390557862</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7814,8 +7814,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>4e6258ad-d104-44c4-9355-1dd551dde770</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>2a1bd31e-35e1-451e-a0c9-91ff78064902</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7842,8 +7842,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>d2c1e728-9d89-4fa0-84d6-3593a317b30c</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>34865182-8edd-41b5-8368-6277df91f23a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7873,8 +7873,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>39094e5e-049e-41da-80db-7fbc6cdc4ad4</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>6c2b7309-cf62-41c0-8fad-e7cf1baf6b73</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7904,8 +7904,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>4d306949-bc3f-4387-ae32-9e7d8182a897</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>586d9441-71db-4a0b-bce5-2500e286bd8a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7932,8 +7932,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>12eae5b5-1245-424a-b560-1c31d52093bd</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>6c003c04-7088-4e6a-90e3-6162c5ff7db1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7960,8 +7960,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>16dad796-fc01-4f26-bc9b-84984fec3fd5</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>796860f9-cc5f-45b5-becd-2aceef33d85e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7988,8 +7988,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>dcb5081e-cfee-45a7-a18b-2f2b2a944eaa</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>4b794368-87f1-410b-8e1f-2dbdc5fb59af</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8016,8 +8016,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>0ae0db4a-db08-4321-b87f-8374ea3c38ef</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>220ba862-80f4-4f18-91c7-c428cf8f89ac</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8044,8 +8044,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>a6989496-82be-454f-93ac-b3235d0faa74</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>5f108d99-df32-45a5-ab97-ebd825b3e233</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8072,8 +8072,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>7338643c-fa1b-480d-a6c7-6af439570f89</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>c58d4005-36a1-4a19-af8e-601aaede5a3f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8100,8 +8100,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>141b7c17-dc8d-4146-9185-3c1ebfbecb4a</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>49950c66-78f0-46f3-9d25-d01d54383106</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8128,8 +8128,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>c9784343-43e4-4a18-be10-798561190576</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>588b04ab-0459-4cfd-918a-39563b7fb78f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8156,8 +8156,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>4940fefc-4a9a-45c6-8971-e49c41939dcf</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>e09e521c-8ef0-4a6f-833e-4ce5a1602c8e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8184,8 +8184,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>b1c0b235-243e-40dd-a160-9166219247b1</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>c7ff1df0-dfbe-4a9c-a067-ff3001305050</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8212,8 +8212,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>e386d0b7-2504-4db5-a1ca-141b6c9276cc</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>87c00db3-dd5e-4d5b-babf-75d6cc29d690</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8240,8 +8240,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>90b04006-e03f-4f2b-b821-aaf5d645c0bf</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>5ba9ccaf-cdc4-4edf-82d6-ba136429878f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8268,8 +8268,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>57d2e7e6-057c-488b-9ab2-fba5c3a0b2fe</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>6decd205-1be0-4a8b-b05d-9731974159c0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8296,8 +8296,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>c14cc147-62b6-44cc-8451-6a755a63e8cb</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>8203cd99-15f8-4557-9b9a-08a959b04f9e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8324,8 +8324,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>1f78578a-4e30-448d-bbc7-b5068422b632</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>55a6f639-b1d9-451a-8275-cd97f9479858</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8352,8 +8352,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>58b4a2c5-9b48-4358-ac85-1eab2d2e54eb</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>8af6aee8-4b6d-442f-a011-7e86fd268bde</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8380,8 +8380,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>6a081eeb-aa92-4c37-a9c3-302d7daa5e5e</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>e9f6d1c5-5cdc-49ca-a3bb-dd9226997903</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8408,8 +8408,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>df31523b-ed92-49ad-afec-dcd1773684e3</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>0cdecd51-45d8-4318-b5fe-7a3c72c5078c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8436,8 +8436,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>be90ecce-8a2c-4412-bbaa-4a2645013450</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>065c18d0-8a1c-4fbc-84c3-a88abc6e361f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8464,8 +8464,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>a23f820b-8289-460d-aea7-5f1f5630d23c</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>a8eb3906-ca32-489a-ba3a-b72c457b04f8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8492,8 +8492,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>30819671-c96b-4264-8ece-a416db9aae6c</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>3ce4b07f-3774-4fb2-aad7-fb8d9746ccfb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8520,8 +8520,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>bfad0427-9471-4bab-a40e-35e380cbb45e</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>c5e41623-4a56-43d9-8799-a8c4cecd28f2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8548,8 +8548,8 @@
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>aaa03940-223a-4d4c-b5de-e8d81bc39f4b</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>08d9fb1f-094c-48f4-9bc7-0ca445d7b2da</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8575,8 +8575,8 @@
       <property name="Sheetname" value="Analog I/O"/>
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_fp_filters" value="SOT-89*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>26676c15-efb1-4bcd-bd58-e6ec7d64ec16</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>5113d15d-ac9c-415a-b49d-3f85b5739d56</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -8603,8 +8603,8 @@
       <property name="Sheetname" value="Analog I/O"/>
       <property name="Sheetfile" value="analog_io.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-14*"/>
-      <sheetpath names="/Analog I/O/" tstamps="/c0bed708-d10a-40a9-9276-877a7495cd03/"/>
-      <tstamps>6ad8b737-7149-4202-836f-cd47eac3bf7e</tstamps>
+      <sheetpath names="/Analog I/O/" tstamps="/644730e7-5991-4ca7-bdc7-abd264d8508c/"/>
+      <tstamps>458386dd-f284-49e4-b9fe-ad75cff481ea</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -10167,7 +10167,7 @@
       <node ref="U64" pin="7" pinfunction="CH4_ANODE_7" pintype="passive"/>
     </net>
     <net code="134" name="ENC0_A_3V3" class="Default">
-      <node ref="MOD1" pin="15" pinfunction="GP26_15" pintype="bidirectional"/>
+      <node ref="MOD1" pin="26" pinfunction="GP33_26" pintype="bidirectional"/>
       <node ref="U28" pin="18" pinfunction="Y7_18" pintype="passive"/>
     </net>
     <net code="135" name="ENC0_A_5V" class="Default">
@@ -10175,7 +10175,7 @@
       <node ref="U28" pin="2" pinfunction="A0_2" pintype="passive"/>
     </net>
     <net code="136" name="ENC0_B_3V3" class="Default">
-      <node ref="MOD1" pin="29" pinfunction="GP27_29" pintype="bidirectional"/>
+      <node ref="MOD1" pin="12" pinfunction="GP32_12" pintype="bidirectional"/>
       <node ref="U28" pin="17" pinfunction="A7_17" pintype="passive"/>
     </net>
     <net code="137" name="ENC0_B_5V" class="Default">
@@ -10183,7 +10183,7 @@
       <node ref="U28" pin="3" pinfunction="Y0_3" pintype="passive"/>
     </net>
     <net code="138" name="ENC0_Z_3V3" class="Default">
-      <node ref="MOD1" pin="14" pinfunction="GP28_14" pintype="bidirectional"/>
+      <node ref="MOD1" pin="27" pinfunction="GP31_27" pintype="bidirectional"/>
       <node ref="U28" pin="16" pinfunction="Y6_16" pintype="passive"/>
     </net>
     <net code="139" name="ENC0_Z_5V" class="Default">
@@ -10191,7 +10191,7 @@
       <node ref="U28" pin="4" pinfunction="A1_4" pintype="passive"/>
     </net>
     <net code="140" name="ENC1_A_3V3" class="Default">
-      <node ref="MOD1" pin="28" pinfunction="GP29_28" pintype="bidirectional"/>
+      <node ref="MOD1" pin="13" pinfunction="GP30_13" pintype="bidirectional"/>
       <node ref="U28" pin="15" pinfunction="A6_15" pintype="passive"/>
     </net>
     <net code="141" name="ENC1_A_5V" class="Default">
@@ -10199,7 +10199,7 @@
       <node ref="U28" pin="5" pinfunction="Y1_5" pintype="passive"/>
     </net>
     <net code="142" name="ENC1_B_3V3" class="Default">
-      <node ref="MOD1" pin="13" pinfunction="GP30_13" pintype="bidirectional"/>
+      <node ref="MOD1" pin="28" pinfunction="GP29_28" pintype="bidirectional"/>
       <node ref="U28" pin="14" pinfunction="Y5_14" pintype="passive"/>
     </net>
     <net code="143" name="ENC1_B_5V" class="Default">
@@ -10207,7 +10207,7 @@
       <node ref="U28" pin="6" pinfunction="A2_6" pintype="passive"/>
     </net>
     <net code="144" name="ENC1_Z_3V3" class="Default">
-      <node ref="MOD1" pin="27" pinfunction="GP31_27" pintype="bidirectional"/>
+      <node ref="MOD1" pin="14" pinfunction="GP28_14" pintype="bidirectional"/>
       <node ref="U28" pin="13" pinfunction="A5_13" pintype="passive"/>
     </net>
     <net code="145" name="ENC1_Z_5V" class="Default">
@@ -10215,7 +10215,7 @@
       <node ref="U28" pin="7" pinfunction="Y2_7" pintype="passive"/>
     </net>
     <net code="146" name="ENC2_A_3V3" class="Default">
-      <node ref="MOD1" pin="12" pinfunction="GP32_12" pintype="bidirectional"/>
+      <node ref="MOD1" pin="29" pinfunction="GP27_29" pintype="bidirectional"/>
       <node ref="U28" pin="12" pinfunction="Y4_12" pintype="passive"/>
     </net>
     <net code="147" name="ENC2_A_5V" class="Default">
@@ -10223,7 +10223,7 @@
       <node ref="U28" pin="8" pinfunction="A3_8" pintype="passive"/>
     </net>
     <net code="148" name="ENC2_B_3V3" class="Default">
-      <node ref="MOD1" pin="26" pinfunction="GP33_26" pintype="bidirectional"/>
+      <node ref="MOD1" pin="15" pinfunction="GP26_15" pintype="bidirectional"/>
       <node ref="U28" pin="11" pinfunction="A4_11" pintype="passive"/>
     </net>
     <net code="149" name="ENC2_B_5V" class="Default">

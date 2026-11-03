@@ -25,14 +25,14 @@ This allocation uses the vendor 64-pad footprint numbering and the generated
 
 | GPIO | MOD1 pin | Signal |
 |---:|---:|---|
-| 26 | 15 | `ENC0_A_3V3` |
-| 27 | 29 | `ENC0_B_3V3` |
-| 28 | 14 | `ENC0_Z_3V3` |
-| 29 | 28 | `ENC1_A_3V3` |
-| 30 | 13 | `ENC1_B_3V3` |
-| 31 | 27 | `ENC1_Z_3V3` |
-| 32 | 12 | `ENC2_A_3V3` |
-| 33 | 26 | `ENC2_B_3V3` |
+| 26 | 15 | `ENC2_B_3V3` |
+| 27 | 29 | `ENC2_A_3V3` |
+| 28 | 14 | `ENC1_Z_3V3` |
+| 29 | 28 | `ENC1_B_3V3` |
+| 30 | 13 | `ENC1_A_3V3` |
+| 31 | 27 | `ENC0_Z_3V3` |
+| 32 | 12 | `ENC0_B_3V3` |
+| 33 | 26 | `ENC0_A_3V3` |
 | 25 | 30 | `ENC2_Z_3V3` |
 
 ## Display

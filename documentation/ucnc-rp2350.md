@@ -10,14 +10,21 @@ There are two relevant uCNC paths:
 - `modules/rp2350_pio_encoder`, which replaces the backend with one PIO
   quadrature counter.
 
-The RP2350 PIO module requires encoder A at `ENC0_PULSE_GPIO` and encoder B at
-the immediately following GPIO. The board's A/B pairs satisfy that requirement:
+The RP2350 PIO module requires the pulse input at `ENC0_PULSE_GPIO` and the
+direction input at the immediately following GPIO. The provisional
+routing-oriented board map uses adjacent pairs with B on the lower GPIO and A
+on the higher GPIO:
 
 | Encoder | A / PULSE | B / DIR | Z / INDEX |
 |---|---|---|---|
-| ENC0 | GPIO26 | GPIO27 | GPIO28 |
-| ENC1 | GPIO29 | GPIO30 | GPIO31 |
-| ENC2 | GPIO32 | GPIO33 | GPIO34 |
+| ENC0 | GPIO33 | GPIO32 | GPIO31 |
+| ENC1 | GPIO30 | GPIO29 | GPIO28 |
+| ENC2 | GPIO27 | GPIO26 | GPIO25 |
+
+The final connector naming pass must keep this reversal in sync with firmware.
+For the stock PIO backend, use the lower-numbered B GPIO as the PIO input base
+and compensate the A/B interpretation, or rename the connector assignments
+after routing.
 
 However, the checked-in `rp2350_pio_encoder.c` currently hard-codes one encoder:
 
@@ -32,13 +39,13 @@ correct adjacent A/B pairs for that work.
 
 The natural three-channel implementation is to place ENC0, ENC1 and ENC2 on
 three state machines in one PIO block, all using the same 24-instruction
-quadrature program. Their independent `IN_BASE` settings select GPIO26, GPIO29
-and GPIO32. The three Z pins can remain GPIO interrupts, as the module already
-does for ENC0.
+quadrature program. Their independent `IN_BASE` settings select the lower GPIO
+of each pair: GPIO32, GPIO29 and GPIO26. The three Z pins can remain GPIO
+interrupts, as the module already does for ENC0.
 
 The local `cnc_hal_overrides.h` is also still configured for the previous board:
 it sets ENC0 A/B to GPIO20/21 and Z to GPIO26, and enables only one encoder.
-That does not match this motherboard's GPIO26/27/28 assignment.
+That does not match this motherboard's provisional GPIO32/33/31 ENC0 pair.
 
 ## 74HC165/74HC595 chain
 

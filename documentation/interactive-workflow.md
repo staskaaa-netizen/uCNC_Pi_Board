@@ -1624,3 +1624,12 @@ Checkpoint 103 moves SD chip-select to the side-1 header:
 - ERC remains at 37 symbol-cache warnings with no electrical errors. DRC
   remains at 234 findings with 128 unconnected items and no shorts; the
   relocated CS connection is one of the expected unrouted remap connections.
+
+Checkpoint 105 reverses the level-shifter-to-MCU channel order:
+
+- U28 outputs 18 through 11 map to MOD1 pins 26, 12, 27, 13, 28, 14, 29 and 15.
+- The resulting MCU map is `ENC0_A/B/Z` on pins 26/12/27, `ENC1_A/B/Z` on pins
+  13/28/14, and `ENC2_A/B` on pins 29/15.
+- `ENC2_Z_3V3` remains on MOD1 pin 30 through R110/R111.
+- Encoder connector pin assignments are intentionally unchanged until their
+  final naming pass.

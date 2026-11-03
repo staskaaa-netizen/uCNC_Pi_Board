@@ -51,14 +51,14 @@ supervisor is fitted. The four 74HC595 `~SRCLR` pins are tied to `+3V3`.
 | 23 | 60 | SR_IN_Q7 | Input | 74HC165 serial return | 3.3 V | Remove WeAct R16 (0R) to isolate the onboard key network |
 | 24 | 45 | SR_PL_N | Output | 74HC165 parallel load | 3.3 V | Active-low pulse before read |
 | 25 | 30 | ENC2_Z_3V3 | Input | Encoder 2 Z | 3.3 V | Also connected to the module's onboard LED |
-| 26 | 15 | ENC0_A_3V3 | Input | Encoder 0 A | 3.3 V | Conditioned from 5 V TTL |
-| 27 | 29 | ENC0_B_3V3 | Input | Encoder 0 B | 3.3 V | Conditioned from 5 V TTL |
-| 28 | 14 | ENC0_Z_3V3 | Input | Encoder 0 Z | 3.3 V | Conditioned from 5 V TTL |
-| 29 | 28 | ENC1_A_3V3 | Input | Encoder 1 A | 3.3 V | Conditioned from 5 V TTL |
-| 30 | 13 | ENC1_B_3V3 | Input | Encoder 1 B | 3.3 V | Conditioned from 5 V TTL |
-| 31 | 27 | ENC1_Z_3V3 | Input | Encoder 1 Z | 3.3 V | Conditioned from 5 V TTL |
-| 32 | 12 | ENC2_A_3V3 | Input | Encoder 2 A | 3.3 V | Conditioned from 5 V TTL |
-| 33 | 26 | ENC2_B_3V3 | Input | Encoder 2 B | 3.3 V | Conditioned from 5 V TTL |
+| 26 | 15 | ENC2_B_3V3 | Input | Provisional encoder channel 2 B | 3.3 V | U28 pin 15; connector naming to be revised |
+| 27 | 29 | ENC2_A_3V3 | Input | Provisional encoder channel 2 A | 3.3 V | U28 pin 12; connector naming to be revised |
+| 28 | 14 | ENC1_Z_3V3 | Input | Provisional encoder channel 1 Z | 3.3 V | U28 pin 13; connector naming to be revised |
+| 29 | 28 | ENC1_B_3V3 | Input | Provisional encoder channel 1 B | 3.3 V | U28 pin 14; connector naming to be revised |
+| 30 | 13 | ENC1_A_3V3 | Input | Provisional encoder channel 1 A | 3.3 V | U28 pin 15; connector naming to be revised |
+| 31 | 27 | ENC0_Z_3V3 | Input | Provisional encoder channel 0 Z | 3.3 V | U28 pin 16; connector naming to be revised |
+| 32 | 12 | ENC0_B_3V3 | Input | Provisional encoder channel 0 B | 3.3 V | U28 pin 17; connector naming to be revised |
+| 33 | 26 | ENC0_A_3V3 | Input | Provisional encoder channel 0 A | 3.3 V | U28 pin 18; connector naming to be revised |
 | 34 | 11 | SD_SCK_MCU | Output | SPI0 SCK | 3.3 V | Located on the side-1 header |
 | 35 | 25 | SD_MOSI_MCU | Output | SPI0 MOSI | 3.3 V | Located on the side-1 header |
 | 36 | 10 | SD_MISO_MCU | Input | SPI0 MISO | 3.3 V | Located on the side-1 header |
