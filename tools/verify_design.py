@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from configure_netclasses import CLASSES, PATTERNS, PROJECT, RULES
+from design_names import canonical_name
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,11 +17,15 @@ NETLIST = ROOT / "hardware" / "motherboard.net.xml"
 def main() -> None:
     root = ET.parse(NETLIST).getroot()
     components = root.findall("./components/comp")
-    nets = {
+    physical_nets = {
         net.get("name", ""): {
             (node.get("ref", ""), node.get("pin", "")) for node in net.findall("node")
         }
         for net in root.findall("./nets/net")
+    }
+    nets = {
+        canonical_name(name): endpoints
+        for name, endpoints in physical_nets.items()
     }
     references = [component.get("ref") for component in components]
     failures: list[str] = []
@@ -381,7 +386,7 @@ def main() -> None:
                 f"{expected_net} is not on MOD1 expansion pin {module_pin}"
             )
     connector_values = set(component_values.values())
-    for required in ("Dedicated E-stop loop",):
+    for required in ("1=ESTOP 2=PLC-",):
         if required not in connector_values:
             failures.append(f"Missing dedicated connector: {required}")
     for retired in (
@@ -489,8 +494,8 @@ def main() -> None:
             failures.append(
                 f"{expected_net} is not on MOD1 pin {module_pin}"
             )
-    if component_values.get("J36") != "Open-Smart TF Card Breakout":
-        failures.append("J36 is not the Open-Smart TF card breakout header")
+    if component_values.get("J36") != "microSD header":
+        failures.append("J36 is not the microSD header")
     microsd_pins = {
         "1": "SD_CD", "2": "SD_DAT1", "3": "SD_MISO",
         "4": "GND", "5": "SD_SCK", "6": "+3V3_SD",
@@ -517,7 +522,7 @@ def main() -> None:
         else {}
     )
     if j36_properties.get("Assembly") == "DNP":
-        failures.append("J36 Open-Smart breakout header must be fitted")
+        failures.append("J36 microSD header must be fitted")
     if "J19" in references:
         failures.append("Retired full-size SD socket J19 remains")
     for reference in ("R44", "R45", "R46", "R47", "R48", "R49"):
@@ -661,6 +666,33 @@ def main() -> None:
             if (reference, str(pin)) not in nets.get(expected_net, set()):
                 failures.append(
                     f"{reference} pin {pin} is not on expected net {expected_net}"
+                )
+    short_connector_nets = {
+        "J1": {1: "VIN", 2: "GND"},
+        "J2": {1: "BL_12V", 2: "PLC_0V"},
+        "J5": {1: "ESTOP_IN", 2: "PLC_0V"},
+        "J7": {pin: f"I{pin:02d}" for pin in range(1, 9)},
+        "J8": {pin: f"I{pin + 8:02d}" for pin in range(1, 9)},
+        "J10": {1: "EN3", 2: "STP0", 3: "DIR0"},
+        "J11": {1: "EN3", 2: "STP1", 3: "DIR1"},
+        "J28": {1: "EN3", 2: "STP2", 3: "DIR2"},
+        "J29": {1: "EN4", 2: "STP3", 3: "DIR3"},
+        "J47": {1: "EN4", 2: "STP4", 3: "DIR4"},
+        "J46": {1: "EN4", 2: "STP5", 3: "DIR5"},
+        "J30": {1: "EN4", 2: "STP6", 3: "DIR6"},
+        "J50": {1: "GND", 2: "ERR4", 3: "Z4"},
+        "J49": {1: "GND", 2: "ERR5", 3: "Z5"},
+        "J48": {1: "GND", 2: "ERR6", 3: "Z6"},
+        "J12": {pin: f"D{pin:02d}" for pin in range(1, 9)},
+        "J32": {pin: f"D{pin + 8:02d}" for pin in range(1, 9)},
+        "J33": {1: "PLC_24V", 2: "PLC_0V"},
+        "J45": {1: "PLC_24V", 2: "PLC_0V"},
+    }
+    for reference, pins in short_connector_nets.items():
+        for pin, expected_net in pins.items():
+            if (reference, str(pin)) not in physical_nets.get(expected_net, set()):
+                failures.append(
+                    f"{reference} pin {pin} is not on short net {expected_net}"
                 )
     connector_footprints = {
         "J7": "PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",

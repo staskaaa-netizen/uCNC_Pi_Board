@@ -1,7 +1,11 @@
-# WeAct RP2350B pin allocation
+# WeAct RP2350B pin allocation - PRE-FINAL
 
 This is a grouped view of the generated `MOD1` socket mapping. The complete
 GPIO table is in [GPIO map](gpio-map.md).
+
+The external PLC inputs are `I01-I16`; the isolated logic-side nets are
+`I01_N-I16_N`. General outputs are `D01-D16`. Motion interfaces use
+`EN3 STPn DIRn` and paired inputs use `- ERRn Zn`.
 
 ## Control, storage and safety
 
@@ -54,28 +58,28 @@ the R110/R111 divider at J15.
 | AI1 | 42 | 7 | J24 pin 3 |
 | AI2 | 41 | 22 | J24 pin 4 |
 | AI3 | 43 | 21 | J24 pin 5 |
-| AOUT0 | 46 | 5 | J25 pin 2 |
-| AOUT1 | 44 | 6 | J25 pin 3 |
-| AOUT2 | 45 | 20 | J25 pin 4 |
-| AOUT3 | 47 | 19 | J25 pin 5 |
+| AO0 | 46 | 5 | J25 pin 2 |
+| AO1 | 44 | 6 | J25 pin 3 |
+| AO2 | 45 | 20 | J25 pin 4 |
+| AO3 | 47 | 19 | J25 pin 5 |
 
 ## Expansion
 
 | Signal | GPIO | MOD1 pin | J51 pin |
 |---|---:|---:|---:|
-| `EXP_GPIO4` | 4 | 35 | 3 |
-| `EXP_GPIO5` | 5 | 51 | 4 |
-| `EXP_GPIO6` | 6 | 36 | 5 |
-| `EXP_GPIO7` | 7 | 52 | 6 |
-| `EXP_GPIO8` | 8 | 37 | 7 |
+| `IO4` | 4 | 35 | 3 |
+| `IO5` | 5 | 51 | 4 |
+| `IO6` | 6 | 36 | 5 |
+| `IO7` | 7 | 52 | 6 |
+| `IO8` | 8 | 37 | 7 |
 
 ## Module power and debug
 
 | MOD1 pins | Signal | Motherboard use |
 |---:|---|---|
 | 1, 2, 16, 32, 47 | GND | Logic ground |
-| 31 | 5V | `+5V` input |
-| 48 | REF | `+3V3_A` ADC reference |
+| 31 | 5V | `5V` input |
+| 48 | REF | `ADC_3V3` ADC reference |
 | 3, 18 | 3V3 | Module-local output, unconnected |
 | 4 | RUN | Unconnected |
 | 17 | EN | Unconnected |

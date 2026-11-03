@@ -349,7 +349,7 @@ def net_weight(name: str) -> float:
         return 3.0
     if name.startswith(("SR_", "ENC")):
         return 1.5
-    if name.startswith(("VIN", "BUCK", "MODULE_5V", "+12V_AO")) or name.startswith("+"):
+    if name.startswith(("VIN", "B5", "B12", "MODULE_5V", "AO_12V")) or name.startswith(("5V", "3V3")):
         return 0.35
     return 1.0
 
@@ -700,13 +700,13 @@ def build_board() -> None:
 
     nets = {
         "GND",
-        "+5V",
-        "+12V_AO",
-        "+3V3",
-        "+3V3_A",
-        "+3V3_SD",
-        "+3V3_WIFI",
-        "+5V_ENC",
+        "5V",
+        "AO_12V",
+        "3V3",
+        "ADC_3V3",
+        "SD_3V3",
+        "WIFI_3V3",
+        "ENC_5V",
         "+5V_MCU",
         "VIN_RAW",
         "VIN_FUSED",
@@ -1010,8 +1010,8 @@ def build_board() -> None:
     # Make power and motor nets wider than logic nets.
     power_nets = {
         "GND", "VIN_RAW", "VIN_FUSED", "VIN_PROT",
-        "+5V", "+12V_AO", "+5V_MCU", "+5V_ENC", "+3V3", "+3V3_A",
-        "+3V3_SD", "+3V3_WIFI", "VIN_BL_PROT", "+12V_BL",
+        "5V", "AO_12V", "+5V_MCU", "ENC_5V", "3V3", "ADC_3V3",
+        "SD_3V3", "WIFI_3V3", "BL_VIN", "BL_12V",
     }
     netclasses = board.GetNetClasses()
     power_class = pcbnew.NETCLASS("Power")
@@ -1055,14 +1055,14 @@ def add_lvds_connector_silkscreen(board) -> None:
     origin_x = pcbnew.ToMM(bbox.GetX()) + 0.6
     origin_y = pcbnew.ToMM(bbox.GetY()) + 0.5
     labels = (
-        ("J22 LCD LVDS 2.00 mm", 0.0, 0.0, 0.8),
+        ("J22 LVDS", 0.0, 0.0, 0.8),
         ("PWR 1-3   GND 4-6,13-14", 0.0, 0.9, 0.62),
         ("D0- 7  D0+ 8   D1- 9  D1+ 10", 0.0, 1.9, 0.62),
         ("D2- 11 D2+ 12  CLK- 15 CLK+ 16", 0.0, 2.9, 0.62),
         ("NC 17-20", 0.0, 3.9, 0.62),
     )
     legacy_texts = {
-        "J22 LCD LVDS 2x10", "1-3: 3V3", "4-6,13-14: GND",
+        "J22 LVDS", "1-3: 3V3", "4-6,13-14: GND",
         "7/8: D0- / D0+", "9/10: D1- / D1+", "11/12: D2- / D2+",
         "15/16: CLK- / CLK+", "17-20: NC",
     }
@@ -1095,7 +1095,7 @@ def update_field_connector_silkscreen(board) -> None:
     labels = {
         "J7": "J7 PLC IN 1-8",
         "J8": "J8 PLC IN 9-16",
-        "J5": "J5 E-STOP",
+        "J5": "J5 ESTOP",
     }
     legacy_texts = {
         "J7 1-2=24V  2-3=CONTACT",

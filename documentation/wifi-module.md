@@ -6,19 +6,19 @@ female socket for the original ESP-01 or ESP-01S.
 | Pin | Signal |
 |---:|---|
 | 1 | GND |
-| 2 | `+3V3_WIFI` |
+| 2 | `WIFI_3V3` |
 | 3 | ESP GPIO2 |
 | 4 | ESP GPIO0 |
-| 5 | RP2350 GPIO11 `WIFI_RX` to ESP TX |
-| 6 | RP2350 GPIO10 `WIFI_TX` to ESP RX |
+| 5 | RP2350 GPIO11 `UART_RX` to ESP TX |
+| 6 | RP2350 GPIO10 `UART_TX` to ESP RX |
 | 7 | EN/CH_PD |
 | 8 | RST |
 
 RN36 provides 4 x 10 k pull-ups on ESP GPIO2, GPIO0, EN and RST. Its supply
-reference is `+3V3_WIFI`, so the ESP pins do not backfeed the motherboard
-`+3V3` rail when the ESP regulator is unpowered.
+reference is `WIFI_3V3`, so the ESP pins do not backfeed the motherboard
+`3V3` rail when the ESP regulator is unpowered.
 
-U34 is a dedicated AMS1117-3.3 regulator from `+5V`. C88/C89 provide input
+U34 is a dedicated AMS1117-3.3 regulator from `5V`. C88/C89 provide input
 reservoir and bypass; C69/C70 provide local output reservoir and bypass. This
 supports the ESP8266 transmit-current pulse without loading U2.
 

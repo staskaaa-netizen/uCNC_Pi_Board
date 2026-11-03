@@ -4,23 +4,23 @@ Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 3,100nF 100V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 100nF 100V,FIT,C2 C4 C108
 1,10uF 25V,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF 25V,FIT,C67
 14,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,FIT,C3 C5 C6 C10 C11 C69 C88 C90 C100 C101 C107 C109 C110 C111
-5,"24 V DC input | Backlight: +12V_BL, ISO_GND | Dedicated E-stop loop | External isolated field 24 V supply / relay common A | External isolated field 24 V supply / relay common B","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
-14,"AX0: EN_3AX, STEP, DIR | AX0: GND, ERROR, ZERO | AX1: EN_3AX, STEP, DIR | AX1: GND, ERROR, ZERO | AX2: EN_3AX, STEP, DIR | AX2: GND, ERROR, ZERO | AX3: EN_4AX, STEP, DIR | AX3: GND, ERROR, ZERO | AX4: EN_4AX, STEP, DIR | AX4: GND, ERROR, ZERO | AX5: EN_4AX, STEP, DIR | AX5: GND, ERROR, ZERO | AX6: EN_4AX, STEP, DIR | AX6: GND, ERROR, ZERO","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
-6,"0-10 V outputs 0-3; pin 1 = common GND | Encoder 0: +5,A,B,Z,GND | Encoder 1: +5,A,B,Z,GND | Encoder 2: +5,A,B,Z,GND | GND/AI0/AI1/AI2/AI3 | I2C0: SDA, SCL, 3.3 V, 5 V, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
-4,General outputs 0-7 | General outputs 8-15 | PLC positions 1-8 signals | PLC positions 9-16 signals,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
-1,"LCD LVDS 2x10, 2.00 mm",Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,"LCD LVDS 2x10, 2.00 mm",FIT,J22
-1,Open-Smart TF Card Breakout,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,generic,Open-Smart TF Card Breakout,FIT,J36
-1,"Expansion socket: +3V3, GND, GPIO4-GPIO8",Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical,generic,"Expansion socket: +3V3, GND, GPIO4-GPIO8",FIT,J51
-1,ESP-01/ESP-01S socket,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,Wurth Elektronik,61300821121,FIT,J20
+5,1=24+ 2=- | 1=BL12+ 2=PLC- | 1=ESTOP 2=PLC- | 1=PLC24+ 2=PLC-,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
+14,- ERR0 Z0 | - ERR1 Z1 | - ERR2 Z2 | - ERR3 Z3 | - ERR4 Z4 | - ERR5 Z5 | - ERR6 Z6 | EN3 STP0 DIR0 | EN3 STP1 DIR1 | EN3 STP2 DIR2 | EN4 STP3 DIR3 | EN4 STP4 DIR4 | EN4 STP5 DIR5 | EN4 STP6 DIR6,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
+6,1=5V 2=A 3=B 4=Z 5=- | 1=- 2=AI0 3=AI1 4=AI2 5=AI3 | 1=- 2=AO0 3=AO1 4=AO2 5=AO3 | 1=SDA 2=SCL 3=3V3 4=5V 5=-,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
+4,1=D01 2=D02 3=D03 4=D04 5=D05 6=D06 7=D07 8=D08 | 1=D09 2=D10 3=D11 4=D12 5=D13 6=D14 7=D15 8=D16 | 1=I01 2=I02 3=I03 4=I04 5=I05 6=I06 7=I07 8=I08 | 1=I09 2=I10 3=I11 4=I12 5=I13 6=I14 7=I15 8=I16,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
+1,LVDS 2x10,Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,LVDS 2x10,FIT,J22
+1,microSD header,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,generic,microSD header,FIT,J36
+1,1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8,Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical,generic,1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8,FIT,J51
+1,ESP-01,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,Wurth Elektronik,61300821121,FIT,J20
 1,SMAJ5.0A,Diode_SMD:D_SMA,Bourns,SMAJ5.0A,FIT,D53
 2,SS16,Diode_SMD:D_SMA,Diodes Incorporated,SS16,FIT,D2 D3
 1,SMBJ24CA,Diode_SMD:D_SMB,Bourns,SMBJ24CA,FIT,D1
 17,1N4148WS,Diode_SMD:D_SOD-323,Diodes Incorporated,1N4148WS,FIT,D10 D14 D16 D18 D20 D22 D24 D26 D28 D30 D32 D34 D36 D38 D40 D42 D44
 1,22uH 1.5A,Inductor_SMD:L_Bourns_SRN6045TA,Bourns,SRN6045TA-220M,FIT,L1
 1,47uH 1.5A,Inductor_SMD:L_Bourns_SRN6045TA,Bourns,SRN6045TA-470M,FIT,L2
-35,3V3_PWR | 5V_PWR | DO0 | DO1 | DO2 | DO3 | DO4 | DO5 | DO6 | DO7 | DO8 | DO9 | DO10 | DO11 | DO12 | DO13 | DO14 | DO15 | indicator,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,FIT,D4 D5 D9 D13 D15 D17 D19 D21 D23 D25 D27 D29 D31 D33 D35 D37 D39 D41 D43 D45 D46 D47 D48 D49 D50 D51 D52 D57 D58 D59 D60 D61 D62 D63 D64
-1,SOFNG TF-15x15 microSD socket (C111196),LeanCam:TF-SMD_TF-15-15,SOFNG,TF-15x15,FIT,J54
-1,WeAct RP2350B Core Board (socketed),LeanCam:WeAct_RP2350B_Socket,WeAct Studio,WeAct Studio RP2350B Core Board,FIT,MOD1
+35,3V3 LED | 5V LED | D01 | D02 | D03 | D04 | D05 | D06 | D07 | D08 | D09 | D10 | D11 | D12 | D13 | D14 | D15 | D16 | indicator,LED_SMD:LED_1206_3216Metric,Lite-On,LTST-C150 series,FIT,D4 D5 D9 D13 D15 D17 D19 D21 D23 D25 D27 D29 D31 D33 D35 D37 D39 D41 D43 D45 D46 D47 D48 D49 D50 D51 D52 D57 D58 D59 D60 D61 D62 D63 D64
+1,microSD TF15,LeanCam:TF-SMD_TF-15-15,SOFNG,TF-15x15,FIT,J54
+1,WeAct RP2350B,LeanCam:WeAct_RP2350B_Socket,WeAct Studio,WeAct Studio RP2350B Core Board,FIT,MOD1
 1,TLV2374IDR,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,Texas Instruments,TLV2374IDR,FIT,U38
 4,74HC165D,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,Nexperia,"74HC165D,653",FIT,U6 U7 U8 U9
 4,SN74AHCT595DR,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,Texas Instruments,SN74AHCT595DR,FIT,U10 U11 U12 U13

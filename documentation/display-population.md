@@ -15,8 +15,8 @@ resistor arrays:
 
 | Row | Left pin | Right pin | Required |
 |---|---|---|---|
-| 1 | 1=`+3V3` | 2=`+3V3` | Yes |
-| 2 | 3=`+3V3` | 4=`GND` | Yes |
+| 1 | 1=`3V3` | 2=`3V3` | Yes |
+| 2 | 3=`3V3` | 4=`GND` | Yes |
 | 3 | 5=`GND` | 6=`GND` | Yes |
 | 4 | 7=D0- | 8=D0+ | Yes |
 | 5 | 9=D1- | 10=D1+ | Yes |
@@ -54,11 +54,11 @@ J22 does not carry backlight power. J2 provides:
 
 | Pin | Signal |
 |---:|---|
-| 1 | isolated `+12V_BL` |
-| 2 | `ISO_GND` |
+| 1 | isolated `BL_12V` |
+| 2 | `PLC_0V` |
 
-U3 is an LMR36510 converter powered from the isolated field rail on J33/J45.
-Its input, output and feedback networks all reference `ISO_GND`.
+U3 is an LMR36510 converter powered from PLC 24+ on J33/J45.
+Its input, output and feedback networks all reference `PLC_0V`.
 
 Backlight PWM, current limiting, CCFL inversion and high-current switching are
-external. Do not connect `+12V_BL` or `ISO_GND` to the logic-side GND domain.
+external. Do not connect `BL_12V` or `PLC_0V` to the logic-side GND domain.

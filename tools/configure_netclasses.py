@@ -24,6 +24,16 @@ RULE_TEXT = """(version 1)
     (constraint clearance (min 0.12mm))
     (condition "(A.NetName == 'LVDS_*' && B.memberOfFootprint('J22')) || (B.NetName == 'LVDS_*' && A.memberOfFootprint('J22'))")
 )
+
+(rule "LMR36510 package pad clearance"
+    (constraint clearance (min 0.25mm))
+    (condition "(A.memberOfFootprint('U1') && B.memberOfFootprint('U1')) || (A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
+)
+
+(rule "PLC field clearance"
+    (constraint clearance (min 0.5mm))
+    (condition "(A.NetName == 'PLC_*' || B.NetName == 'PLC_*') && !(A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
+)
 """
 
 TRANSPARENT = "rgba(0, 0, 0, 0.000)"
@@ -83,21 +93,27 @@ CLASSES = (
 
 PATTERNS = (
     # Field and isolated-domain power must win over the generic supply rules.
-    ("FieldPower", "ISO_GND"),
-    ("FieldPower", "+24V_FIELD"),
-    ("AnalogPower", "+12V_AO"),
-    ("AnalogPower", "+12V_RAW"),
-    ("EncoderPower", "+5V_ENC"),
+    ("FieldPower", "PLC_0V"),
+    ("FieldPower", "PLC_24V"),
+    ("AnalogPower", "AO_12V"),
+    ("EncoderPower", "ENC_5V"),
     ("Ground", "GND"),
     ("Power", "VIN_*"),
-    ("Power", "+5V"),
-    ("Power", "+5V_*"),
-    ("Power", "+3V3*"),
-    ("Power", "+12V_*"),
+    ("Power", "5V"),
+    ("Power", "5V_*"),
+    ("Power", "3V3"),
+    ("Power", "3V3_*"),
+    ("Power", "WIFI_3V3"),
+    ("Power", "SD_3V3"),
+    ("Power", "ADC_3V3"),
+    ("Power", "12V_*"),
+    ("Power", "BL_12V"),
     ("DigitalDiffPair", "HSTX_*"),
     ("LVDSConnector", "LVDS_*"),
     ("Analog", "AI*"),
-    ("Analog", "AOUT*"),
+    ("Analog", "ADC*"),
+    ("Analog", "AO*"),
+    ("Analog", "PWM*"),
 )
 
 

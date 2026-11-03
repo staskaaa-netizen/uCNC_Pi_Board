@@ -1,4 +1,4 @@
-# uCNC RP2350B Motherboard Specification
+# uCNC RP2350B Motherboard Specification - PRE-FINAL
 
 Generated review documents:
 
@@ -13,19 +13,19 @@ Generated review documents:
 | Item | Specification |
 |---|---|
 | Product | LeanCam NCC / uCNC RP2350B Motherboard |
-| Status | Routed prototype; manufacturing review outstanding |
+| Status | PRE-FINAL; manufacturing review outstanding |
 | Controller | Socketed WeAct Studio RP2350B Core Board |
-| PCB outline | 200 mm x 150 mm |
+| PCB outline | 160 mm x 120 mm |
 | PCB construction | Two copper layers, 1.6 mm nominal FR-4 |
 | Mounting | Four M3 clearance holes |
 | Assembly | Main population on F.Cu; J22 is also on F.Cu |
 | Main input | 12-24 V DC machine supply |
 | Main logic rail | LMR36510 5 V, 1 A synchronous buck |
-| Peripheral logic | AMS1117-3.3, `+3V3` |
-| Wi-Fi supply | Dedicated AMS1117-3.3, `+3V3_WIFI` |
-| Analog-output rail | L78L12, `+12V_AO` |
-| Isolated field rail | External 24 V through J33/J45 |
-| Backlight rail | LMR36510 isolated 24 V to `+12V_BL` |
+| Peripheral logic | AMS1117-3.3, `3V3` |
+| Wi-Fi supply | Dedicated AMS1117-3.3, `WIFI_3V3` |
+| Analog-output rail | L78L12, `AO_12V` |
+| PLC supply | 1=PLC24+ 2=PLC- through J33/J45 |
+| Backlight rail | LMR36510 isolated 24 V to `BL_12V` |
 
 The board is a machine-control carrier, not a safety-rated controller.
 Hazardous output power must be removed through an independent hard-wired
@@ -40,7 +40,7 @@ safety circuit.
 | Servo ZERO inputs | 7 | Direct 3.3 V logic into U6/U7 |
 | Servo ERROR inputs | 7 | Direct 3.3 V logic into U6/U7 |
 | General field outputs | 16 | U61-U64 optocouplers into U26/U27 TBD62083AFG arrays |
-| Motion outputs | 7 axes | STEP/DIR, with grouped `EN_3AX` and `EN_4AX` enables |
+| Motion outputs | 7 axes | A0-A6 STEP/DIR, with grouped `EN3` and `EN4` enables |
 | Encoder inputs | 3 | A/B/Z, 5 V to 3.3 V through U28 |
 | Analog inputs | 4 | 0-10 V resistor dividers into RP2350 ADC pins |
 | Analog outputs | 4 | TLV2374 and two-stage RC filters |
@@ -56,9 +56,9 @@ The exact register-bit assignments are in
 
 ## Field I/O
 
-J33 and J45 are parallel two-pin access points for `+24V_FIELD` and
-`ISO_GND`. The isolated field domain supplies PLC contact wetting and the
-general-output side and has no connection to motherboard GND.
+J33 and J45 are parallel two-pin access points for PLC 24+ and PLC -. The PLC
+domain supplies the contact loops and output side and has no connection to
+motherboard GND.
 
 Each PLC input contains one connector-side indicator LED, 2.2 k field resistor,
 reverse diode and TLP291-4 channel. Each four-channel group has one RN32-RN35
@@ -75,17 +75,17 @@ or general-output power.
 
 ## Motion and encoders
 
-J10, J11, J28, J29, J30, J46 and J47 expose the seven STEP/DIR axes. Each
+J10, J11, J28, J29, J47, J46 and J30 expose A0-A6 from top to bottom. Each
 connector also carries the applicable grouped enable:
 
-- `EN_3AX` is shared by AX0-AX2.
-- `EN_4AX` is shared by AX3-AX6.
+- `EN3` is shared by A0-A2.
+- `EN4` is shared by A3-A6.
 
 The 3.3 V 74AHCT595 outputs drive two TC74AC541F buffers powered from 5 V.
 The buffers provide the 5 V STEP, DIR and enable outputs.
 
-J40-J43 and J48-J50 are paired 3-pin axis inputs with `GND`, `ERROR` and
-`ZERO`. J13-J15 are 5 V encoder connectors. U28 converts the 5 V A/B/Z
+J40, J41, J42, J43, J50, J49 and J48 are the paired inputs for A0-A6. Each is
+3-pin: `-`, `ERR`, `Z`. J13-J15 are 5 V encoder connectors. U28 converts the 5 V A/B/Z
 push-pull signals to 3.3 V logic; open-collector encoders require external
 pull-ups.
 
@@ -96,7 +96,7 @@ differential channels through RN26/RN27 4 x 330 ohm arrays. Pins 1-6 supply
 3.3 V and ground, pins 7-16 carry D0, D1, D2 and clock, and pins 17-20 are
 unconnected.
 
-J2 carries isolated `+12V_BL` and `ISO_GND` for the backlight. PWM switching,
+J2 carries isolated `BL_12V` and `PLC_0V` for the backlight. PWM switching,
 current limiting, any CCFL inverter and high-current LED drive remain off
 board.
 
@@ -105,39 +105,39 @@ TF-15x15 `C111196` microSD socket wired in parallel. Fit either card interface
 for use and never insert a card into both simultaneously. RN43 provides pull-ups
 and RN44 provides 22 ohm series resistors; JP5 enables the card-detect switch.
 
-J51 exposes GPIO4-GPIO8, `+3V3` and GND on a 1 x 7, 2.54 mm socket. J20 accepts
-an ESP-01 or ESP-01S on the separately regulated `+3V3_WIFI` rail.
+J51 exposes GPIO4-GPIO8, `3V3` and GND on a 1 x 7, 2.54 mm socket. J20 accepts
+an ESP-01 or ESP-01S on the separately regulated `WIFI_3V3` rail.
 
 ## Power
 
 The main logic path is protected by F1, D1 and D2. U1 converts the protected
-input to `+5V`; the WeAct module is supplied from that rail and uses its onboard
+input to `5V`; the WeAct module is supplied from that rail and uses its onboard
 3.3 V regulator. U2 supplies the motherboard peripheral rail, and U34 supplies
 the optional ESP module independently.
 
-U3 converts the isolated 24 V field input to `+12V_BL` and is protected by D3.
-U37 creates the low-current `+12V_AO` rail for U38 and the four 0-10 V outputs.
+U3 converts the isolated 24 V field input to `BL_12V` and is protected by D3.
+U37 creates the low-current `AO_12V` rail for U38 and the four 0-10 V outputs.
 All regulator loops, bulk capacitors, bypass capacitors and feedback networks
 are documented in [Decoupling map](decoupling-map.md).
 
 The main switching return, peripheral logic and analog return share one GND
-plane. `ISO_GND` remains a separate isolated domain.
+plane. `PLC_0V` remains a separate isolated domain.
 
 ## Connector inventory
 
 | Ref | Function |
 |---|---|
-| J1 | 12-24 V DC input |
-| J2 | Isolated backlight `+12V_BL` / `ISO_GND` |
+| J1 | 12-1=24+ 2=- |
+| J2 | Isolated backlight `BL_12V` / `PLC_0V` |
 | J5 | Isolated E-stop loop |
 | J7, J8 | PLC input signals 1-16 |
-| J10, J11, J28, J29, J30, J46, J47 | Seven STEP/DIR axis outputs |
-| J12, J32 | General outputs DO0-DO15 |
-| J33, J45 | Parallel isolated field +24 V / return |
+| J10, J11, J28, J29, J47, J46, J30 | A0-A6 STEP/DIR outputs |
+| J12, J32 | General outputs D01-D16 |
+| J33, J45 | Parallel 1=PLC24+ 2=PLC- |
 | J13-J15 | Three encoder interfaces |
-| J40-J43, J48-J50 | Seven paired servo status inputs |
+| J40, J41, J42, J43, J50, J49, J48 | A0-A6 paired status inputs |
 | J18 | 5-pin I2C interface |
-| J20 | ESP-01/ESP-01S socket |
+| J20 | ESP-01 |
 | J22 | 2 x 10 LCD LVDS interface |
 | J24 | Four 0-10 V analog inputs plus ground |
 | J25 | Four 0-10 V analog outputs plus ground |
@@ -145,19 +145,19 @@ plane. `ISO_GND` remains a separate isolated domain.
 | J51 | GPIO expansion socket |
 | J54 | On-board SOFNG TF-15x15 microSD socket |
 
-Complete pinouts are in [Connector map](connectors.md).
+Complete pinouts are in [Connector map](connectors.md). Net and connector
+abbreviations are in [Signal naming](naming.md).
 
 ## Verification
 
 Current KiCad 10 checks:
 
 - Schematic: 281 components and 320 nets, with no connectivity failures.
-- PCB: 275 footprints, 2,262 routed track segments and 189 vias.
-- DRC: zero unconnected items; 55 errors and 183 warnings remain.
-- Error classes: 28 clearance, 23 starved thermal and 4 courtyard overlap.
-- Warning classes: silkscreen, text height, dangling copper and minor
-  mechanical checks.
+- PCB: 275 footprints, 2,276 routed track segments and 187 vias.
+- DRC: zero errors and zero unconnected items; 172 silkscreen warnings remain.
+- Warning classes: silkscreen over mask, silkscreen clearance, text height and
+  board-edge clipping.
 - ERC: no electrical errors; 35 library-symbol cache warnings.
 
-The board is a routed prototype and must not be released to fabrication until
-the DRC findings and isolated-field clearances have been reviewed.
+The board is electrically complete. Review or accept the remaining silkscreen
+warnings before fabrication.

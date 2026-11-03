@@ -11,6 +11,8 @@ from typing import Iterable
 import kicad_sch_api.library.cache as cache_module
 from kicad_sch_api import Schematic
 from kicad_sch_api.core.types import Point
+from configure_netclasses import configure_netclasses
+from design_names import shorten_name, shorten_quoted_tokens
 
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -241,6 +243,7 @@ class SheetBuilder:
         rotation: float = 0,
     ):
         footprint = FP[footprint_key] if footprint_key else None
+        value = shorten_name(value)
         if reference is None:
             reference = self.next_ref(prefix)
         else:
@@ -269,7 +272,7 @@ class SheetBuilder:
             if not matches:
                 raise RuntimeError(f"No pin selector {selector!r} on {reference} ({lib_id})")
             for pin_number in matches:
-                normalized[pin_number] = net
+                normalized[pin_number] = shorten_name(net) if net else None
         missing = sorted(set(defined) - set(normalized))
         if missing:
             raise RuntimeError(
@@ -614,7 +617,16 @@ def make_root() -> None:
         font_size=1.6,
         stroke_width=0.2,
     )
-    root.save(HARDWARE / "motherboard.kicad_sch")
+    path = HARDWARE / "motherboard.kicad_sch"
+    root.save(path)
+    text = path.read_text(encoding="utf-8")
+    text = re.sub(
+        r'(\(title_block\s*\n\s*\(title "[^"]*"\))',
+        r'\1\n\t\t(rev "PRE-FINAL")',
+        text,
+        count=1,
+    )
+    path.write_text(text, encoding="utf-8")
 
 
 def add_power(builder: SheetBuilder) -> None:
@@ -961,8 +973,8 @@ def add_field_inputs(builder: SheetBuilder) -> None:
         "placed first so it can sit at the input connector. Every "
         "four isolated inputs share one TLP291-4 SOP-16 optocoupler. Four 4x10 k "
         "isolated networks provide the PLC pull-ups and no input-node capacitor "
-        "is fitted. U8 adds eight isolated AX0-AX3 servo ready/error inputs; "
-        "U9 is the final unisolated byte for AX4.",
+        "is fitted. U6/U7 carry seven paired servo status signals with two "
+        "grounded spares; U8/U9 carry PLC inputs 1-16.",
         15,
         15,
         190,
@@ -2164,6 +2176,10 @@ def main() -> None:
     for sheet in sheets.values():
         sheet.save()
     make_root()
+    for path in HARDWARE.glob("*.kicad_sch"):
+        text = path.read_text(encoding="utf-8")
+        path.write_text(shorten_quoted_tokens(text), encoding="utf-8")
+    configure_netclasses()
 
     # Deterministic reference check across the hierarchy.
     duplicates = sorted(ref for ref, count in defaultdict(

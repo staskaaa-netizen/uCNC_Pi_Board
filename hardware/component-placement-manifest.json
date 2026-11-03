@@ -27,14 +27,12 @@
       "solder jumper": 1
     },
     "by_block": {
-      "16 PLC inputs": 61,
-      "24V to 5V buck": 13,
-      "74HC165 input chain": 4,
-      "AHCT595 output chain": 4,
-      "ESP-01/ESP-01S interface": 4,
+      "16 PLC IN": 61,
       "LCD LVDS display": 2,
-      "MCU and shift-chain support": 10,
-      "SD interface": 5,
+      "MCU / SHIFT": 18,
+      "PLC OUT": 64,
+      "Power": 43,
+      "SD / Wi-Fi": 15,
       "ULN output connector": 1,
       "analog input 0": 3,
       "analog input 1": 3,
@@ -57,24 +55,9 @@
       "encoder 2": 2,
       "encoder 2 connector": 1,
       "encoder interface": 3,
-      "input protection and power": 21,
       "isolated PLC input connectors": 2,
-      "isolated general outputs": 43,
       "main power connector": 1,
-      "motion output buffers": 2,
-      "motion output channel": 11,
       "motion output connector": 7,
-      "output bit 0": 1,
-      "output bit 10": 1,
-      "output bit 12": 1,
-      "output bit 16": 1,
-      "output bit 20": 1,
-      "output bit 24": 1,
-      "output bit 28": 1,
-      "output bit 4": 1,
-      "peripheral 3.3V regulator": 5,
-      "power indicators": 4,
-      "storage/UI support": 6,
       "storage/wireless connector": 1
     },
     "parked": []
@@ -83,24 +66,24 @@
     {
       "reference": "C2",
       "value": "100nF 100V",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "input bypass capacitor",
-      "associated_ic_or_net": "VIN_FUSED input filter",
+      "associated_ic_or_net": "VIN_F input filter",
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 115.062,
       "y_mm": 16.51,
       "dnp": false,
-      "nets": "GND; VIN_FUSED"
+      "nets": "GND; VIN_F"
     },
     {
       "reference": "C3",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk input capacitor",
       "associated_ic_or_net": "U1 input",
@@ -110,13 +93,13 @@
       "x_mm": 112.364,
       "y_mm": 23.641,
       "dnp": false,
-      "nets": "GND; VIN_PROT"
+      "nets": "GND; VIN_P"
     },
     {
       "reference": "C4",
       "value": "100nF 100V",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U1 input",
@@ -126,13 +109,13 @@
       "x_mm": 109.316,
       "y_mm": 23.641,
       "dnp": false,
-      "nets": "GND; VIN_PROT"
+      "nets": "GND; VIN_P"
     },
     {
       "reference": "C5",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk input capacitor",
       "associated_ic_or_net": "U1 input",
@@ -142,13 +125,13 @@
       "x_mm": 115.92,
       "y_mm": 23.641,
       "dnp": false,
-      "nets": "GND; VIN_PROT"
+      "nets": "GND; VIN_P"
     },
     {
       "reference": "C6",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U1 output",
@@ -158,13 +141,13 @@
       "x_mm": 112.364,
       "y_mm": 29.352,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C7",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U1 output",
@@ -174,13 +157,13 @@
       "x_mm": 109.316,
       "y_mm": 28.852,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C10",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "peripheral 3.3V regulator",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk input capacitor",
       "associated_ic_or_net": "U2 input",
@@ -190,13 +173,13 @@
       "x_mm": 122.936,
       "y_mm": 29.21,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C11",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U1 output",
@@ -206,13 +189,13 @@
       "x_mm": 115.92,
       "y_mm": 29.229,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C13",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "peripheral 3.3V regulator",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U2 output",
@@ -222,45 +205,45 @@
       "x_mm": 123.286,
       "y_mm": 41.279,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "C15",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
-      "associated_ic_or_net": "+3V3_A filter",
+      "associated_ic_or_net": "ADC_3V3 filter",
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 99.06,
       "y_mm": 42.672,
       "dnp": false,
-      "nets": "+3V3_A; GND"
+      "nets": "ADC_3V3; GND"
     },
     {
       "reference": "C76",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "peripheral 3.3V regulator",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U2 input",
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 149.606,
-      "y_mm": 63.754,
+      "x_mm": 149.352,
+      "y_mm": 63.5,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C86",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bootstrap capacitor",
       "associated_ic_or_net": "U1 BOOT to SW",
@@ -270,13 +253,13 @@
       "x_mm": 98.648,
       "y_mm": 24.403,
       "dnp": false,
-      "nets": "BUCK5_BST; BUCK5_SW"
+      "nets": "B5_BST; B5_SW"
     },
     {
       "reference": "C90",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "peripheral 3.3V regulator",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U2 output",
@@ -286,13 +269,13 @@
       "x_mm": 125.984,
       "y_mm": 41.279,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "C91",
       "value": "1uF",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "IC VCC bypass capacitor",
       "associated_ic_or_net": "U1 VCC",
@@ -302,13 +285,13 @@
       "x_mm": 98.648,
       "y_mm": 20.847,
       "dnp": false,
-      "nets": "GND; VCC5"
+      "nets": "B5_VCC; GND"
     },
     {
       "reference": "C107",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk input capacitor",
       "associated_ic_or_net": "U3 input",
@@ -318,13 +301,13 @@
       "x_mm": 27.686,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "ISO_GND; VIN_BL_PROT"
+      "nets": "BL_VIN; PLC_0V"
     },
     {
       "reference": "C108",
       "value": "100nF 100V",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U3 input",
@@ -334,13 +317,13 @@
       "x_mm": 27.686,
       "y_mm": 24.13,
       "dnp": false,
-      "nets": "ISO_GND; VIN_BL_PROT"
+      "nets": "BL_VIN; PLC_0V"
     },
     {
       "reference": "C109",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U3 output",
@@ -350,13 +333,13 @@
       "x_mm": 35.052,
       "y_mm": 22.098,
       "dnp": false,
-      "nets": "+12V_BL; ISO_GND"
+      "nets": "BL_12V; PLC_0V"
     },
     {
       "reference": "C110",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U3 output",
@@ -366,13 +349,13 @@
       "x_mm": 35.052,
       "y_mm": 18.542,
       "dnp": false,
-      "nets": "+12V_BL; ISO_GND"
+      "nets": "BL_12V; PLC_0V"
     },
     {
       "reference": "C111",
       "value": "22uF 50V",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U3 output",
@@ -382,13 +365,13 @@
       "x_mm": 35.052,
       "y_mm": 14.732,
       "dnp": false,
-      "nets": "+12V_BL; ISO_GND"
+      "nets": "BL_12V; PLC_0V"
     },
     {
       "reference": "C112",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U3 output",
@@ -398,13 +381,13 @@
       "x_mm": 34.29,
       "y_mm": 25.146,
       "dnp": false,
-      "nets": "+12V_BL; ISO_GND"
+      "nets": "BL_12V; PLC_0V"
     },
     {
       "reference": "C113",
       "value": "100nF",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "bootstrap capacitor",
       "associated_ic_or_net": "U3 BOOT to SW",
@@ -414,13 +397,13 @@
       "x_mm": 30.734,
       "y_mm": 35.052,
       "dnp": false,
-      "nets": "BUCK12_BST; BUCK12_SW"
+      "nets": "B12_BST; B12_SW"
     },
     {
       "reference": "C114",
       "value": "1uF",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "IC VCC bypass capacitor",
       "associated_ic_or_net": "U3 VCC",
@@ -430,13 +413,13 @@
       "x_mm": 26.924,
       "y_mm": 35.052,
       "dnp": false,
-      "nets": "ISO_GND; VCC12"
+      "nets": "B12_VCC; PLC_0V"
     },
     {
       "reference": "D1",
       "value": "SMBJ24CA",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
@@ -446,13 +429,13 @@
       "x_mm": 114.3,
       "y_mm": 8.89,
       "dnp": false,
-      "nets": "GND; VIN_FUSED"
+      "nets": "GND; VIN_F"
     },
     {
       "reference": "D2",
       "value": "SS16",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
@@ -462,13 +445,13 @@
       "x_mm": 111.76,
       "y_mm": 17.018,
       "dnp": false,
-      "nets": "VIN_FUSED; VIN_PROT"
+      "nets": "VIN_F; VIN_P"
     },
     {
       "reference": "D3",
       "value": "SS16",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
@@ -478,13 +461,13 @@
       "x_mm": 25.908,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "+24V_FIELD; VIN_BL_PROT"
+      "nets": "BL_VIN; PLC_24V"
     },
     {
       "reference": "D4",
-      "value": "5V_PWR",
-      "sheet": "Power and supervision",
-      "functional_block": "power indicators",
+      "value": "5V LED",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -494,13 +477,13 @@
       "x_mm": 91.965,
       "y_mm": 33.02,
       "dnp": false,
-      "nets": "GND; PWR5_LEDA"
+      "nets": "GND; P5V_LED"
     },
     {
       "reference": "D5",
-      "value": "3V3_PWR",
-      "sheet": "Power and supervision",
-      "functional_block": "power indicators",
+      "value": "3V3 LED",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -510,13 +493,13 @@
       "x_mm": 91.948,
       "y_mm": 36.576,
       "dnp": false,
-      "nets": "GND; PWR3_LEDA"
+      "nets": "GND; P3V3_LED"
     },
     {
       "reference": "F1",
       "value": "2 A",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "fuse",
       "associated_ic_or_net": "input/load protection",
@@ -526,13 +509,13 @@
       "x_mm": 114.554,
       "y_mm": 4.572,
       "dnp": false,
-      "nets": "VIN_FUSED; VIN_RAW"
+      "nets": "VIN; VIN_F"
     },
     {
       "reference": "FB1",
       "value": "600R@100MHz",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "ferrite bead",
       "associated_ic_or_net": "rail filtering",
@@ -542,12 +525,12 @@
       "x_mm": 99.568,
       "y_mm": 39.624,
       "dnp": false,
-      "nets": "+3V3; +3V3_A"
+      "nets": "3V3; ADC_3V3"
     },
     {
       "reference": "J1",
-      "value": "24 V DC input",
-      "sheet": "Power and supervision",
+      "value": "1=24+ 2=-",
+      "sheet": "Power",
       "functional_block": "main power connector",
       "channels": "",
       "role": "connector",
@@ -558,12 +541,12 @@
       "x_mm": 106.38,
       "y_mm": 6.215,
       "dnp": false,
-      "nets": "GND; VIN_RAW"
+      "nets": "GND; VIN"
     },
     {
       "reference": "J2",
-      "value": "Backlight: +12V_BL, ISO_GND",
-      "sheet": "Power and supervision",
+      "value": "1=BL12+ 2=PLC-",
+      "sheet": "Power",
       "functional_block": "backlight/CCFL connector",
       "channels": "",
       "role": "connector",
@@ -574,29 +557,29 @@
       "x_mm": 33.2,
       "y_mm": 6.215,
       "dnp": false,
-      "nets": "+12V_BL; ISO_GND"
+      "nets": "BL_12V; PLC_0V"
     },
     {
       "reference": "L1",
       "value": "22uH 1.5A",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "inductor",
       "associated_ic_or_net": "switching power stage",
-      "placement_rule": "keep switching/input/output loop compact at regulator pins",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 104.14,
       "y_mm": 29.352,
       "dnp": false,
-      "nets": "+5V; BUCK5_SW"
+      "nets": "5V; B5_SW"
     },
     {
       "reference": "L2",
       "value": "47uH 1.5A",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "inductor",
       "associated_ic_or_net": "switching power stage",
@@ -606,13 +589,13 @@
       "x_mm": 35.306,
       "y_mm": 29.972,
       "dnp": false,
-      "nets": "+12V_BL; BUCK12_SW"
+      "nets": "B12_SW; BL_12V"
     },
     {
       "reference": "R4",
       "value": "1k",
-      "sheet": "Power and supervision",
-      "functional_block": "power indicators",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "pull-up resistor",
       "associated_ic_or_net": "digital state definition",
@@ -622,13 +605,13 @@
       "x_mm": 97.79,
       "y_mm": 33.02,
       "dnp": false,
-      "nets": "+5V; PWR5_LEDA"
+      "nets": "5V; P5V_LED"
     },
     {
       "reference": "R5",
       "value": "1k",
-      "sheet": "Power and supervision",
-      "functional_block": "power indicators",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "pull-up resistor",
       "associated_ic_or_net": "digital state definition",
@@ -638,49 +621,49 @@
       "x_mm": 97.663,
       "y_mm": 36.576,
       "dnp": false,
-      "nets": "+3V3; PWR3_LEDA"
+      "nets": "3V3; P3V3_LED"
     },
     {
       "reference": "R70",
       "value": "33k",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "pull-up resistor",
       "associated_ic_or_net": "digital state definition",
-      "placement_rule": "keep switching/input/output loop compact at regulator pins",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 104.806,
       "y_mm": 16.256,
       "dnp": false,
-      "nets": "+5V; FB5_TOP"
+      "nets": "5V; FB5_T"
     },
     {
       "reference": "R71",
       "value": "100k",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep switching/input/output loop compact at regulator pins",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 101.854,
       "y_mm": 16.256,
       "dnp": false,
-      "nets": "FB5; FB5_TOP"
+      "nets": "FB5; FB5_T"
     },
     {
       "reference": "R72",
       "value": "33k",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep switching/input/output loop compact at regulator pins",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 98.806,
@@ -691,8 +674,8 @@
     {
       "reference": "R73",
       "value": "100k",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "pull-up resistor",
       "associated_ic_or_net": "digital state definition",
@@ -702,13 +685,13 @@
       "x_mm": 125.476,
       "y_mm": 35.814,
       "dnp": false,
-      "nets": "+3V3; PWR_GOOD_N"
+      "nets": "3V3; PG_N"
     },
     {
       "reference": "R126",
       "value": "100k",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "pull-up resistor",
       "associated_ic_or_net": "digital state definition",
@@ -718,13 +701,13 @@
       "x_mm": 22.098,
       "y_mm": 25.146,
       "dnp": false,
-      "nets": "+12V_BL; FB12"
+      "nets": "BL_12V; FB12"
     },
     {
       "reference": "R127",
       "value": "10k",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -734,13 +717,13 @@
       "x_mm": 22.098,
       "y_mm": 29.718,
       "dnp": false,
-      "nets": "FB12; ISO_GND"
+      "nets": "FB12; PLC_0V"
     },
     {
       "reference": "R128",
       "value": "100k",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -750,45 +733,45 @@
       "x_mm": 22.16,
       "y_mm": 32.766,
       "dnp": false,
-      "nets": "FB12; ISO_GND"
+      "nets": "FB12; PLC_0V"
     },
     {
       "reference": "U1",
       "value": "LMR36510ADDAR",
-      "sheet": "Power and supervision",
-      "functional_block": "24V to 5V buck",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep switching/input/output loop compact at regulator pins",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 104.14,
       "y_mm": 22.352,
       "dnp": false,
-      "nets": "BUCK5_BST; BUCK5_SW; FB5; GND; PWR_GOOD_N; VCC5; VIN_PROT"
+      "nets": "B5_BST; B5_SW; B5_VCC; FB5; GND; PG_N; VIN_P"
     },
     {
       "reference": "U2",
       "value": "AMS1117-3.3",
-      "sheet": "Power and supervision",
-      "functional_block": "peripheral 3.3V regulator",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep switching/input/output loop compact at regulator pins",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 116.586,
       "y_mm": 39.624,
       "dnp": false,
-      "nets": "+3V3; +5V; GND"
+      "nets": "3V3; 5V; GND"
     },
     {
       "reference": "U3",
       "value": "LMR36510ADDAR",
-      "sheet": "Power and supervision",
-      "functional_block": "input protection and power",
+      "sheet": "Power",
+      "functional_block": "Power",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -798,13 +781,13 @@
       "x_mm": 28.194,
       "y_mm": 29.972,
       "dnp": false,
-      "nets": "BUCK12_BST; BUCK12_SW; FB12; ISO_GND; VCC12; VIN_BL_PROT"
+      "nets": "B12_BST; B12_SW; B12_VCC; BL_VIN; FB12; PLC_0V"
     },
     {
       "reference": "C22",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U6",
@@ -814,13 +797,13 @@
       "x_mm": 77.216,
       "y_mm": 85.344,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "C23",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U7",
@@ -830,13 +813,13 @@
       "x_mm": 59.944,
       "y_mm": 85.344,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "C24",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U8",
@@ -846,13 +829,13 @@
       "x_mm": 44.196,
       "y_mm": 85.344,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "C25",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U9",
@@ -862,13 +845,13 @@
       "x_mm": 27.94,
       "y_mm": 85.344,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "C26",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U13",
@@ -878,13 +861,13 @@
       "x_mm": 88.392,
       "y_mm": 68.072,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C27",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U12",
@@ -894,13 +877,13 @@
       "x_mm": 70.866,
       "y_mm": 68.58,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C28",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U11",
@@ -910,13 +893,13 @@
       "x_mm": 53.594,
       "y_mm": 68.58,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C29",
       "value": "100nF",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U10",
@@ -926,28 +909,28 @@
       "x_mm": 36.068,
       "y_mm": 68.834,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "J51",
-      "value": "Expansion socket: +3V3, GND, GPIO4-GPIO8",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "value": "1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 94.488,
-      "y_mm": 52.578,
+      "x_mm": 94.361,
+      "y_mm": 53.467,
       "dnp": false,
-      "nets": "+3V3; EXP_GPIO4; EXP_GPIO5; EXP_GPIO6; EXP_GPIO7; EXP_GPIO8; GND"
+      "nets": "3V3; GND; IO4; IO5; IO6; IO7; IO8"
     },
     {
       "reference": "MOD1",
-      "value": "WeAct RP2350B Core Board (socketed)",
-      "sheet": "MCU, shift chains and safety",
+      "value": "WeAct RP2350B",
+      "sheet": "MCU / SHIFT",
       "functional_block": "controller module",
       "channels": "analog input 0; analog output 0; encoder 0; analog input 1; analog output 1; encoder 1; analog input 2; analog output 2; encoder 2; analog input 3; analog output 3",
       "role": "module",
@@ -958,13 +941,13 @@
       "x_mm": 116.586,
       "y_mm": 65.786,
       "dnp": false,
-      "nets": "+3V3_A; +5V; AI0_ADC; AI1_ADC; AI2_ADC; AI3_ADC; AOUT0_PWM; AOUT1_PWM; AOUT2_PWM; AOUT3_PWM; ENC0_A_3V3; ENC0_B_3V3; ENC0_Z_3V3; ENC1_A_3V3; ENC1_B_3V3; ENC1_Z_3V3; ENC2_A_3V3; ENC2_B_3V3; ENC2_Z_3V3; ESTOP_N; EXP_GPIO4; EXP_GPIO5; EXP_GPIO6; EXP_GPIO7; EXP_GPIO8; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; PWR_GOOD_N; SD_CD_MCU; SD_CS_MCU; SD_MISO_MCU; SD_MOSI_MCU; SD_SCK_MCU; SR_IN_Q7; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK; WIFI_RX; WIFI_TX"
+      "nets": "5V; ADC0; ADC1; ADC2; ADC3; ADC_3V3; CD; E0_A3V3; E0_B3V3; E0_Z3V3; E1_A3V3; E1_B3V3; E1_Z3V3; E2_A3V3; E2_B3V3; E2_Z3V3; ESTOP; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; IO4; IO5; IO6; IO7; IO8; LAT; PG_N; PL; PWM0; PWM1; PWM2; PWM3; Q7; SCK; SER0; SPI_CK; SPI_CS; SPI_SI; SPI_SO; UART_RX; UART_TX"
     },
     {
       "reference": "R9",
       "value": "10k",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -974,13 +957,13 @@
       "x_mm": 24.638,
       "y_mm": 74.422,
       "dnp": false,
-      "nets": "GND; SR_IN_DS0"
+      "nets": "GND; IN0"
     },
     {
       "reference": "U6",
       "value": "74HC165D",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "74HC165 input chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -990,13 +973,13 @@
       "x_mm": 29.972,
       "y_mm": 78.994,
       "dnp": false,
-      "nets": "+3V3; AX0_ERROR_N; AX0_ZERO; AX4_ERROR_N; AX4_ZERO; AX5_ERROR_N; AX5_ZERO; AX6_ERROR_N; AX6_ZERO; GND; SR_IN_CHAIN1; SR_IN_DS0; SR_PL_N; SR_SCK"
+      "nets": "3V3; ERR0; ERR4; ERR5; ERR6; GND; IN0; IN1; PL; SCK; Z0; Z4; Z5; Z6"
     },
     {
       "reference": "U7",
       "value": "74HC165D",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "74HC165 input chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1006,13 +989,13 @@
       "x_mm": 46.228,
       "y_mm": 78.994,
       "dnp": false,
-      "nets": "+3V3; AX1_ERROR_N; AX1_ZERO; AX2_ERROR_N; AX2_ZERO; AX3_ERROR_N; AX3_ZERO; GND; SR_IN_CHAIN1; SR_IN_CHAIN2; SR_PL_N; SR_SCK"
+      "nets": "3V3; ERR1; ERR2; ERR3; GND; IN1; IN2; PL; SCK; Z1; Z2; Z3"
     },
     {
       "reference": "U8",
       "value": "74HC165D",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "74HC165 input chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "PLC input 1; PLC input 2; PLC input 3; PLC input 4; PLC input 5; PLC input 6; PLC input 7; PLC input 8",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1022,13 +1005,13 @@
       "x_mm": 61.722,
       "y_mm": 78.994,
       "dnp": false,
-      "nets": "+3V3; GND; PLC_IN1_N; PLC_IN2_N; PLC_IN3_N; PLC_IN4_N; PLC_IN5_N; PLC_IN6_N; PLC_IN7_N; PLC_IN8_N; SR_IN_CHAIN2; SR_IN_CHAIN3; SR_PL_N; SR_SCK"
+      "nets": "3V3; GND; I01_N; I02_N; I03_N; I04_N; I05_N; I06_N; I07_N; I08_N; IN2; IN3; PL; SCK"
     },
     {
       "reference": "U9",
       "value": "74HC165D",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "74HC165 input chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "PLC input 10; PLC input 11; PLC input 12; PLC input 13; PLC input 14; PLC input 15; PLC input 16; PLC input 9",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1038,13 +1021,13 @@
       "x_mm": 78.994,
       "y_mm": 78.994,
       "dnp": false,
-      "nets": "+3V3; GND; PLC_IN10_N; PLC_IN11_N; PLC_IN12_N; PLC_IN13_N; PLC_IN14_N; PLC_IN15_N; PLC_IN16_N; PLC_IN9_N; SR_IN_CHAIN3; SR_IN_Q7; SR_PL_N; SR_SCK"
+      "nets": "3V3; GND; I09_N; I10_N; I11_N; I12_N; I13_N; I14_N; I15_N; I16_N; IN3; PL; Q7; SCK"
     },
     {
       "reference": "U10",
       "value": "SN74AHCT595DR",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "AHCT595 output chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "output bit 0; output bit 1; output bit 2; output bit 3; output bit 4; output bit 5; output bit 6; output bit 7",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1054,13 +1037,13 @@
       "x_mm": 28.956,
       "y_mm": 65.024,
       "dnp": false,
-      "nets": "+5V; GND; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7; SR_LATCH; SR_OUT_CHAIN3; SR_SCK"
+      "nets": "5V; GND; LAT; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7; SCK; SER3"
     },
     {
       "reference": "U11",
       "value": "SN74AHCT595DR",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "AHCT595 output chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "output bit 10; output bit 11; output bit 12; output bit 13; output bit 14; output bit 15; output bit 8; output bit 9",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1070,13 +1053,13 @@
       "x_mm": 46.482,
       "y_mm": 65.024,
       "dnp": false,
-      "nets": "+5V; GND; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9; SR_LATCH; SR_OUT_CHAIN2; SR_OUT_CHAIN3; SR_SCK"
+      "nets": "5V; GND; LAT; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9; SCK; SER2; SER3"
     },
     {
       "reference": "U12",
       "value": "SN74AHCT595DR",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "AHCT595 output chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "output bit 16; output bit 17; output bit 18; output bit 19; output bit 20; output bit 21; output bit 22; output bit 23",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1086,13 +1069,13 @@
       "x_mm": 63.5,
       "y_mm": 65.024,
       "dnp": false,
-      "nets": "+5V; GND; OUT16; OUT17; OUT18; OUT19; OUT20; OUT21; OUT22; OUT23; SR_LATCH; SR_OUT_CHAIN1; SR_OUT_CHAIN2; SR_SCK"
+      "nets": "5V; GND; LAT; OUT16; OUT17; OUT18; OUT19; OUT20; OUT21; OUT22; OUT23; SCK; SER1; SER2"
     },
     {
       "reference": "U13",
       "value": "SN74AHCT595DR",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "AHCT595 output chain",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
       "channels": "output bit 24; output bit 25; output bit 26; output bit 27; output bit 28; output bit 29; output bit 30; output bit 31",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -1102,556 +1085,556 @@
       "x_mm": 81.28,
       "y_mm": 65.024,
       "dnp": false,
-      "nets": "+5V; GND; OUT24; OUT25; OUT26; OUT27; OUT28; OUT29; OUT30; OUT31; SR_LATCH; SR_OUT_CHAIN1; SR_OUT_SER; SR_SCK"
+      "nets": "5V; GND; LAT; OUT24; OUT25; OUT26; OUT27; OUT28; OUT29; OUT30; OUT31; SCK; SER0; SER1"
     },
     {
       "reference": "D9",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 82.55,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "ESTOP_FIELD; ESTOP_LED_A"
+      "nets": "ESTOP_IN; ESTOP_L"
     },
     {
       "reference": "D10",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 85.09,
       "y_mm": 105.41,
       "dnp": false,
-      "nets": "ESTOP_LED_A; ISO_GND"
+      "nets": "ESTOP_L; PLC_0V"
     },
     {
       "reference": "D13",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 1",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 20.32,
       "y_mm": 107.508,
       "dnp": false,
-      "nets": "FIELD_IN1; FLD_LED1_A"
+      "nets": "I01; LI01"
     },
     {
       "reference": "D14",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 1",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 22.606,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED1_A; ISO_GND"
+      "nets": "LI01; PLC_0V"
     },
     {
       "reference": "D15",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 2",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 24.892,
       "y_mm": 107.508,
       "dnp": false,
-      "nets": "FIELD_IN2; FLD_LED2_A"
+      "nets": "I02; LI02"
     },
     {
       "reference": "D16",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 2",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 22.606,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FLD_LED2_A; ISO_GND"
+      "nets": "LI02; PLC_0V"
     },
     {
       "reference": "D17",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 3",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 27.432,
       "y_mm": 107.508,
       "dnp": false,
-      "nets": "FIELD_IN3; FLD_LED3_A"
+      "nets": "I03; LI03"
     },
     {
       "reference": "D18",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 3",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 29.718,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED3_A; ISO_GND"
+      "nets": "LI03; PLC_0V"
     },
     {
       "reference": "D19",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 4",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 32.004,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN4; FLD_LED4_A"
+      "nets": "I04; LI04"
     },
     {
       "reference": "D20",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 4",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 29.718,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FLD_LED4_A; ISO_GND"
+      "nets": "LI04; PLC_0V"
     },
     {
       "reference": "D21",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 5",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 34.544,
       "y_mm": 107.485,
       "dnp": false,
-      "nets": "FIELD_IN5; FLD_LED5_A"
+      "nets": "I05; LI05"
     },
     {
       "reference": "D22",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 5",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 36.83,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED5_A; ISO_GND"
+      "nets": "LI05; PLC_0V"
     },
     {
       "reference": "D23",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 6",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 39.116,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN6; FLD_LED6_A"
+      "nets": "I06; LI06"
     },
     {
       "reference": "D24",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 6",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 36.83,
       "y_mm": 107.696,
       "dnp": false,
-      "nets": "FLD_LED6_A; ISO_GND"
+      "nets": "LI06; PLC_0V"
     },
     {
       "reference": "D25",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 7",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 41.656,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN7; FLD_LED7_A"
+      "nets": "I07; LI07"
     },
     {
       "reference": "D26",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 7",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 43.942,
       "y_mm": 102.87,
       "dnp": false,
-      "nets": "FLD_LED7_A; ISO_GND"
+      "nets": "LI07; PLC_0V"
     },
     {
       "reference": "D27",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 8",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 46.228,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN8; FLD_LED8_A"
+      "nets": "I08; LI08"
     },
     {
       "reference": "D28",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 8",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 43.942,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FLD_LED8_A; ISO_GND"
+      "nets": "LI08; PLC_0V"
     },
     {
       "reference": "D29",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 9",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 51.054,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN9; FLD_LED9_A"
+      "nets": "I09; LI09"
     },
     {
       "reference": "D30",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 9",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 53.594,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED9_A; ISO_GND"
+      "nets": "LI09; PLC_0V"
     },
     {
       "reference": "D31",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 10",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 56.134,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN10; FLD_LED10_A"
+      "nets": "I10; LI10"
     },
     {
       "reference": "D32",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 10",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 53.594,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FLD_LED10_A; ISO_GND"
+      "nets": "LI10; PLC_0V"
     },
     {
       "reference": "D33",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 11",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 58.674,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN11; FLD_LED11_A"
+      "nets": "I11; LI11"
     },
     {
       "reference": "D34",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 11",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 60.96,
       "y_mm": 102.87,
       "dnp": false,
-      "nets": "FLD_LED11_A; ISO_GND"
+      "nets": "LI11; PLC_0V"
     },
     {
       "reference": "D35",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 12",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 63.246,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN12; FLD_LED12_A"
+      "nets": "I12; LI12"
     },
     {
       "reference": "D36",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 12",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 60.96,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FLD_LED12_A; ISO_GND"
+      "nets": "LI12; PLC_0V"
     },
     {
       "reference": "D37",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 13",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 65.786,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN13; FLD_LED13_A"
+      "nets": "I13; LI13"
     },
     {
       "reference": "D38",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 13",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 68.072,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED13_A; ISO_GND"
+      "nets": "LI13; PLC_0V"
     },
     {
       "reference": "D39",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 14",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 70.358,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN14; FLD_LED14_A"
+      "nets": "I14; LI14"
     },
     {
       "reference": "D40",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 14",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 68.072,
       "y_mm": 107.188,
       "dnp": false,
-      "nets": "FLD_LED14_A; ISO_GND"
+      "nets": "LI14; PLC_0V"
     },
     {
       "reference": "D41",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 15",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 72.898,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN15; FLD_LED15_A"
+      "nets": "I15; LI15"
     },
     {
       "reference": "D42",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 15",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 75.184,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED15_A; ISO_GND"
+      "nets": "LI15; PLC_0V"
     },
     {
       "reference": "D43",
       "value": "indicator",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 16",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 77.724,
       "y_mm": 107.442,
       "dnp": false,
-      "nets": "FIELD_IN16; FLD_LED16_A"
+      "nets": "I16; LI16"
     },
     {
       "reference": "D44",
       "value": "1N4148WS",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 16",
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 75.184,
       "y_mm": 107.188,
       "dnp": false,
-      "nets": "FLD_LED16_A; ISO_GND"
+      "nets": "LI16; PLC_0V"
     },
     {
       "reference": "J5",
-      "value": "Dedicated E-stop loop",
-      "sheet": "16 PLC inputs",
+      "value": "1=ESTOP 2=PLC-",
+      "sheet": "16 PLC IN",
       "functional_block": "dedicated safety input connector",
       "channels": "",
       "role": "connector",
@@ -1662,12 +1645,12 @@
       "x_mm": 82.85,
       "y_mm": 114.942,
       "dnp": false,
-      "nets": "ESTOP_FIELD; ISO_GND"
+      "nets": "ESTOP_IN; PLC_0V"
     },
     {
       "reference": "J7",
-      "value": "PLC positions 1-8 signals",
-      "sheet": "16 PLC inputs",
+      "value": "1=I01 2=I02 3=I03 4=I04 5=I05 6=I06 7=I07 8=I08",
+      "sheet": "16 PLC IN",
       "functional_block": "isolated PLC input connectors",
       "channels": "PLC input 1; PLC input 2; PLC input 3; PLC input 4; PLC input 5; PLC input 6; PLC input 7; PLC input 8",
       "role": "connector",
@@ -1678,12 +1661,12 @@
       "x_mm": 21.041,
       "y_mm": 114.942,
       "dnp": false,
-      "nets": "FIELD_IN1; FIELD_IN2; FIELD_IN3; FIELD_IN4; FIELD_IN5; FIELD_IN6; FIELD_IN7; FIELD_IN8"
+      "nets": "I01; I02; I03; I04; I05; I06; I07; I08"
     },
     {
       "reference": "J8",
-      "value": "PLC positions 9-16 signals",
-      "sheet": "16 PLC inputs",
+      "value": "1=I09 2=I10 3=I11 4=I12 5=I13 6=I14 7=I15 8=I16",
+      "sheet": "16 PLC IN",
       "functional_block": "isolated PLC input connectors",
       "channels": "PLC input 10; PLC input 11; PLC input 12; PLC input 13; PLC input 14; PLC input 15; PLC input 16; PLC input 9",
       "role": "connector",
@@ -1694,445 +1677,445 @@
       "x_mm": 52.029,
       "y_mm": 114.942,
       "dnp": false,
-      "nets": "FIELD_IN10; FIELD_IN11; FIELD_IN12; FIELD_IN13; FIELD_IN14; FIELD_IN15; FIELD_IN16; FIELD_IN9"
+      "nets": "I09; I10; I11; I12; I13; I14; I15; I16"
     },
     {
       "reference": "R16",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 82.55,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "ESTOP_LED_A; ESTOP_OPTO_A"
+      "nets": "ESTOP_L; ESTOP_O"
     },
     {
       "reference": "R18",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 1",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 20.32,
       "y_mm": 102.638,
       "dnp": false,
-      "nets": "FLD_LED1_A; FLD_OPTO1_A"
+      "nets": "LI01; OI01"
     },
     {
       "reference": "R19",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 2",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 24.892,
       "y_mm": 102.638,
       "dnp": false,
-      "nets": "FLD_LED2_A; FLD_OPTO2_A"
+      "nets": "LI02; OI02"
     },
     {
       "reference": "R20",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 3",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 27.432,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED3_A; FLD_OPTO3_A"
+      "nets": "LI03; OI03"
     },
     {
       "reference": "R21",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 4",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 32.004,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED4_A; FLD_OPTO4_A"
+      "nets": "LI04; OI04"
     },
     {
       "reference": "R22",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 5",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 34.544,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED5_A; FLD_OPTO5_A"
+      "nets": "LI05; OI05"
     },
     {
       "reference": "R23",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 6",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 39.116,
       "y_mm": 102.641,
       "dnp": false,
-      "nets": "FLD_LED6_A; FLD_OPTO6_A"
+      "nets": "LI06; OI06"
     },
     {
       "reference": "R24",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 7",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 41.656,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED7_A; FLD_OPTO7_A"
+      "nets": "LI07; OI07"
     },
     {
       "reference": "R25",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 8",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 46.228,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED8_A; FLD_OPTO8_A"
+      "nets": "LI08; OI08"
     },
     {
       "reference": "R26",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 9",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 51.054,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED9_A; FLD_OPTO9_A"
+      "nets": "LI09; OI09"
     },
     {
       "reference": "R27",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 10",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 56.134,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED10_A; FLD_OPTO10_A"
+      "nets": "LI10; OI10"
     },
     {
       "reference": "R28",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 11",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 58.674,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED11_A; FLD_OPTO11_A"
+      "nets": "LI11; OI11"
     },
     {
       "reference": "R29",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 12",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 63.276,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED12_A; FLD_OPTO12_A"
+      "nets": "LI12; OI12"
     },
     {
       "reference": "R30",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 13",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 65.786,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED13_A; FLD_OPTO13_A"
+      "nets": "LI13; OI13"
     },
     {
       "reference": "R31",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 14",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 70.358,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED14_A; FLD_OPTO14_A"
+      "nets": "LI14; OI14"
     },
     {
       "reference": "R32",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 15",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 72.898,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED15_A; FLD_OPTO15_A"
+      "nets": "LI15; OI15"
     },
     {
       "reference": "R33",
       "value": "2.2k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 16",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 77.724,
       "y_mm": 102.616,
       "dnp": false,
-      "nets": "FLD_LED16_A; FLD_OPTO16_A"
+      "nets": "LI16; OI16"
     },
     {
       "reference": "R74",
       "value": "4.7k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "",
       "role": "pull-up resistor",
       "associated_ic_or_net": "digital state definition",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 89.916,
       "y_mm": 85.598,
       "dnp": false,
-      "nets": "+3V3; ESTOP_N"
+      "nets": "3V3; ESTOP"
     },
     {
       "reference": "RN32",
       "value": "4x10k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 13; PLC input 14; PLC input 15; PLC input 16",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 85.09,
       "y_mm": 93.218,
       "dnp": false,
-      "nets": "+3V3; PLC_IN13_N; PLC_IN14_N; PLC_IN15_N; PLC_IN16_N"
+      "nets": "3V3; I13_N; I14_N; I15_N; I16_N"
     },
     {
       "reference": "RN33",
       "value": "4x10k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 10; PLC input 11; PLC input 12; PLC input 9",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 69.596,
       "y_mm": 93.472,
       "dnp": false,
-      "nets": "+3V3; PLC_IN10_N; PLC_IN11_N; PLC_IN12_N; PLC_IN9_N"
+      "nets": "3V3; I09_N; I10_N; I11_N; I12_N"
     },
     {
       "reference": "RN34",
       "value": "4x10k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 5; PLC input 6; PLC input 7; PLC input 8",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 54.102,
       "y_mm": 93.472,
       "dnp": false,
-      "nets": "+3V3; PLC_IN5_N; PLC_IN6_N; PLC_IN7_N; PLC_IN8_N"
+      "nets": "3V3; I05_N; I06_N; I07_N; I08_N"
     },
     {
       "reference": "RN35",
       "value": "4x10k",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 1; PLC input 2; PLC input 3; PLC input 4",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 38.354,
       "y_mm": 93.472,
       "dnp": false,
-      "nets": "+3V3; PLC_IN1_N; PLC_IN2_N; PLC_IN3_N; PLC_IN4_N"
+      "nets": "3V3; I01_N; I02_N; I03_N; I04_N"
     },
     {
       "reference": "U18",
       "value": "TLP291-4",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 13; PLC input 14; PLC input 15; PLC input 16",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 77.47,
       "y_mm": 93.98,
       "dnp": false,
-      "nets": "FLD_OPTO13_A; FLD_OPTO14_A; FLD_OPTO15_A; FLD_OPTO16_A; GND; ISO_GND; PLC_IN13_N; PLC_IN14_N; PLC_IN15_N; PLC_IN16_N"
+      "nets": "GND; I13_N; I14_N; I15_N; I16_N; OI13; OI14; OI15; OI16; PLC_0V"
     },
     {
       "reference": "U19",
       "value": "TLP291-4",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 10; PLC input 11; PLC input 12; PLC input 9",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 61.722,
       "y_mm": 93.98,
       "dnp": false,
-      "nets": "FLD_OPTO10_A; FLD_OPTO11_A; FLD_OPTO12_A; FLD_OPTO9_A; GND; ISO_GND; PLC_IN10_N; PLC_IN11_N; PLC_IN12_N; PLC_IN9_N"
+      "nets": "GND; I09_N; I10_N; I11_N; I12_N; OI09; OI10; OI11; OI12; PLC_0V"
     },
     {
       "reference": "U20",
       "value": "TLP291-4",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 5; PLC input 6; PLC input 7; PLC input 8",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 46.228,
       "y_mm": 93.98,
       "dnp": false,
-      "nets": "FLD_OPTO5_A; FLD_OPTO6_A; FLD_OPTO7_A; FLD_OPTO8_A; GND; ISO_GND; PLC_IN5_N; PLC_IN6_N; PLC_IN7_N; PLC_IN8_N"
+      "nets": "GND; I05_N; I06_N; I07_N; I08_N; OI05; OI06; OI07; OI08; PLC_0V"
     },
     {
       "reference": "U21",
       "value": "TLP291-4",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "PLC input 1; PLC input 2; PLC input 3; PLC input 4",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 29.718,
       "y_mm": 93.98,
       "dnp": false,
-      "nets": "FLD_OPTO1_A; FLD_OPTO2_A; FLD_OPTO3_A; FLD_OPTO4_A; GND; ISO_GND; PLC_IN1_N; PLC_IN2_N; PLC_IN3_N; PLC_IN4_N"
+      "nets": "GND; I01_N; I02_N; I03_N; I04_N; OI01; OI02; OI03; OI04; PLC_0V"
     },
     {
       "reference": "U35",
       "value": "TLP291",
-      "sheet": "16 PLC inputs",
-      "functional_block": "16 PLC inputs",
+      "sheet": "16 PLC IN",
+      "functional_block": "16 PLC IN",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "keep field-side passives together at connector; preserve isolation barrier",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 90.17,
       "y_mm": 93.218,
       "dnp": false,
-      "nets": "ESTOP_N; ESTOP_OPTO_A; GND; ISO_GND"
+      "nets": "ESTOP; ESTOP_O; GND; PLC_0V"
     },
     {
       "reference": "C115",
       "value": "100nF",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "power rail",
@@ -2142,13 +2125,13 @@
       "x_mm": 37.084,
       "y_mm": 41.402,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C116",
       "value": "100nF",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "power rail",
@@ -2158,13 +2141,13 @@
       "x_mm": 20.066,
       "y_mm": 44.45,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "D45",
-      "value": "DO0",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D01",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 0",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2174,13 +2157,13 @@
       "x_mm": 62.992,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO0; DO_LED0_A"
+      "nets": "D01; DL01"
     },
     {
       "reference": "D46",
-      "value": "DO1",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D02",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 1",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2190,13 +2173,13 @@
       "x_mm": 59.944,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO1; DO_LED1_A"
+      "nets": "D02; DL02"
     },
     {
       "reference": "D47",
-      "value": "DO2",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D03",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 2",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2206,13 +2189,13 @@
       "x_mm": 56.896,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO2; DO_LED2_A"
+      "nets": "D03; DL03"
     },
     {
       "reference": "D48",
-      "value": "DO3",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D04",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 3",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2222,13 +2205,13 @@
       "x_mm": 53.848,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO3; DO_LED3_A"
+      "nets": "D04; DL04"
     },
     {
       "reference": "D49",
-      "value": "DO4",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D05",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 4",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2238,13 +2221,13 @@
       "x_mm": 50.8,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO4; DO_LED4_A"
+      "nets": "D05; DL05"
     },
     {
       "reference": "D50",
-      "value": "DO5",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D06",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 5",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2254,13 +2237,13 @@
       "x_mm": 47.752,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO5; DO_LED5_A"
+      "nets": "D06; DL06"
     },
     {
       "reference": "D51",
-      "value": "DO6",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D07",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 6",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2270,13 +2253,13 @@
       "x_mm": 44.704,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO6; DO_LED6_A"
+      "nets": "D07; DL07"
     },
     {
       "reference": "D52",
-      "value": "DO7",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D08",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 7",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2286,13 +2269,13 @@
       "x_mm": 41.656,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO7; DO_LED7_A"
+      "nets": "D08; DL08"
     },
     {
       "reference": "D57",
-      "value": "DO8",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D09",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 8",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2302,13 +2285,13 @@
       "x_mm": 92.202,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO8; DO_LED8_A"
+      "nets": "D09; DL09"
     },
     {
       "reference": "D58",
-      "value": "DO9",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D10",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 9",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2318,13 +2301,13 @@
       "x_mm": 89.154,
       "y_mm": 15.738,
       "dnp": false,
-      "nets": "DO9; DO_LED9_A"
+      "nets": "D10; DL10"
     },
     {
       "reference": "D59",
-      "value": "DO10",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D11",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 10",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2334,13 +2317,13 @@
       "x_mm": 86.106,
       "y_mm": 15.738,
       "dnp": false,
-      "nets": "DO10; DO_LED10_A"
+      "nets": "D11; DL11"
     },
     {
       "reference": "D60",
-      "value": "DO11",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D12",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 11",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2350,13 +2333,13 @@
       "x_mm": 83.058,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO11; DO_LED11_A"
+      "nets": "D12; DL12"
     },
     {
       "reference": "D61",
-      "value": "DO12",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D13",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 12",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2366,13 +2349,13 @@
       "x_mm": 80.01,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO12; DO_LED12_A"
+      "nets": "D13; DL13"
     },
     {
       "reference": "D62",
-      "value": "DO13",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D14",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 13",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2382,13 +2365,13 @@
       "x_mm": 76.962,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO13; DO_LED13_A"
+      "nets": "D14; DL14"
     },
     {
       "reference": "D63",
-      "value": "DO14",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D15",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 14",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2398,13 +2381,13 @@
       "x_mm": 73.914,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO14; DO_LED14_A"
+      "nets": "D15; DL15"
     },
     {
       "reference": "D64",
-      "value": "DO15",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "D16",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 15",
       "role": "LED",
       "associated_ic_or_net": "indicator/protection",
@@ -2414,12 +2397,12 @@
       "x_mm": 70.866,
       "y_mm": 15.748,
       "dnp": false,
-      "nets": "DO15; DO_LED15_A"
+      "nets": "D16; DL16"
     },
     {
       "reference": "J10",
-      "value": "AX0: EN_3AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN3 STP0 DIR0",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 0",
       "role": "connector",
@@ -2430,12 +2413,12 @@
       "x_mm": 4.819,
       "y_mm": 14.552,
       "dnp": false,
-      "nets": "AX0_DIR; AX0_STEP; EN_3AX"
+      "nets": "DIR0; EN3; STP0"
     },
     {
       "reference": "J11",
-      "value": "AX1: EN_3AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN3 STP1 DIR1",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 1",
       "role": "connector",
@@ -2446,12 +2429,12 @@
       "x_mm": 4.819,
       "y_mm": 28.267,
       "dnp": false,
-      "nets": "AX1_DIR; AX1_STEP; EN_3AX"
+      "nets": "DIR1; EN3; STP1"
     },
     {
       "reference": "J12",
-      "value": "General outputs 0-7",
-      "sheet": "24 PLC outputs",
+      "value": "1=D01 2=D02 3=D03 4=D04 5=D05 6=D06 7=D07 8=D08",
+      "sheet": "PLC OUT",
       "functional_block": "ULN output connector",
       "channels": "ULN output 0; ULN output 1; ULN output 2; ULN output 3; ULN output 4; ULN output 5; ULN output 6; ULN output 7",
       "role": "connector",
@@ -2462,12 +2445,12 @@
       "x_mm": 64.049,
       "y_mm": 6.215,
       "dnp": false,
-      "nets": "DO0; DO1; DO2; DO3; DO4; DO5; DO6; DO7"
+      "nets": "D01; D02; D03; D04; D05; D06; D07; D08"
     },
     {
       "reference": "J28",
-      "value": "AX2: EN_3AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN3 STP2 DIR2",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 2",
       "role": "connector",
@@ -2478,12 +2461,12 @@
       "x_mm": 4.819,
       "y_mm": 41.983,
       "dnp": false,
-      "nets": "AX2_DIR; AX2_STEP; EN_3AX"
+      "nets": "DIR2; EN3; STP2"
     },
     {
       "reference": "J29",
-      "value": "AX3: EN_4AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN4 STP3 DIR3",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 3",
       "role": "connector",
@@ -2494,12 +2477,12 @@
       "x_mm": 4.819,
       "y_mm": 55.7,
       "dnp": false,
-      "nets": "AX3_DIR; AX3_STEP; EN_4AX"
+      "nets": "DIR3; EN4; STP3"
     },
     {
       "reference": "J30",
-      "value": "AX4: EN_4AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN4 STP6 DIR6",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 4",
       "role": "connector",
@@ -2510,13 +2493,13 @@
       "x_mm": 4.819,
       "y_mm": 96.34,
       "dnp": false,
-      "nets": "AX4_DIR; AX4_STEP; EN_4AX"
+      "nets": "DIR6; EN4; STP6"
     },
     {
       "reference": "J32",
-      "value": "General outputs 8-15",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "value": "1=D09 2=D10 3=D11 4=D12 5=D13 6=D14 7=D15 8=D16",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 10; ULN output 11; ULN output 12; ULN output 13; ULN output 14; ULN output 15; ULN output 8; ULN output 9",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2526,29 +2509,29 @@
       "x_mm": 95.544,
       "y_mm": 6.215,
       "dnp": false,
-      "nets": "DO10; DO11; DO12; DO13; DO14; DO15; DO8; DO9"
+      "nets": "D09; D10; D11; D12; D13; D14; D15; D16"
     },
     {
       "reference": "J33",
-      "value": "External isolated field 24 V supply / relay common A",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "1=PLC24+ 2=PLC-",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 14.941,
-      "y_mm": 113.912,
+      "x_mm": 11.476,
+      "y_mm": 114.942,
       "dnp": false,
-      "nets": "+24V_FIELD; ISO_GND"
+      "nets": "PLC_0V; PLC_24V"
     },
     {
       "reference": "J40",
-      "value": "AX0: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR0 Z0",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2558,13 +2541,13 @@
       "x_mm": 14.867,
       "y_mm": 21.517,
       "dnp": false,
-      "nets": "AX0_ERROR_N; AX0_ZERO; GND"
+      "nets": "ERR0; GND; Z0"
     },
     {
       "reference": "J41",
-      "value": "AX1: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR1 Z1",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2574,13 +2557,13 @@
       "x_mm": 14.867,
       "y_mm": 35.306,
       "dnp": false,
-      "nets": "AX1_ERROR_N; AX1_ZERO; GND"
+      "nets": "ERR1; GND; Z1"
     },
     {
       "reference": "J42",
-      "value": "AX2: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR2 Z2",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2590,13 +2573,13 @@
       "x_mm": 14.867,
       "y_mm": 48.949,
       "dnp": false,
-      "nets": "AX2_ERROR_N; AX2_ZERO; GND"
+      "nets": "ERR2; GND; Z2"
     },
     {
       "reference": "J43",
-      "value": "AX3: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR3 Z3",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2606,28 +2589,28 @@
       "x_mm": 14.867,
       "y_mm": 62.738,
       "dnp": false,
-      "nets": "AX3_ERROR_N; AX3_ZERO; GND"
+      "nets": "ERR3; GND; Z3"
     },
     {
       "reference": "J45",
-      "value": "External isolated field 24 V supply / relay common B",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "1=PLC24+ 2=PLC-",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 17.48,
-      "y_mm": 6.215,
+      "x_mm": 23.195,
+      "y_mm": 6.343,
       "dnp": false,
-      "nets": "+24V_FIELD; ISO_GND"
+      "nets": "PLC_0V; PLC_24V"
     },
     {
       "reference": "J46",
-      "value": "AX5: EN_4AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN4 STP5 DIR5",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 5",
       "role": "connector",
@@ -2638,12 +2621,12 @@
       "x_mm": 4.811,
       "y_mm": 82.877,
       "dnp": false,
-      "nets": "AX5_DIR; AX5_STEP; EN_4AX"
+      "nets": "DIR5; EN4; STP5"
     },
     {
       "reference": "J47",
-      "value": "AX6: EN_4AX, STEP, DIR",
-      "sheet": "24 PLC outputs",
+      "value": "EN4 STP4 DIR4",
+      "sheet": "PLC OUT",
       "functional_block": "motion output connector",
       "channels": "motion axis 6",
       "role": "connector",
@@ -2654,13 +2637,13 @@
       "x_mm": 4.819,
       "y_mm": 69.398,
       "dnp": false,
-      "nets": "AX6_DIR; AX6_STEP; EN_4AX"
+      "nets": "DIR4; EN4; STP4"
     },
     {
       "reference": "J48",
-      "value": "AX4: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR6 Z6",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2670,13 +2653,13 @@
       "x_mm": 14.867,
       "y_mm": 103.305,
       "dnp": false,
-      "nets": "AX4_ERROR_N; AX4_ZERO; GND"
+      "nets": "ERR6; GND; Z6"
     },
     {
       "reference": "J49",
-      "value": "AX5: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR5 Z5",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2686,13 +2669,13 @@
       "x_mm": 14.867,
       "y_mm": 89.916,
       "dnp": false,
-      "nets": "AX5_ERROR_N; AX5_ZERO; GND"
+      "nets": "ERR5; GND; Z5"
     },
     {
       "reference": "J50",
-      "value": "AX6: GND, ERROR, ZERO",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output channel",
+      "value": "- ERR4 Z4",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -2702,13 +2685,13 @@
       "x_mm": 14.867,
       "y_mm": 76.38,
       "dnp": false,
-      "nets": "AX6_ERROR_N; AX6_ZERO; GND"
+      "nets": "ERR4; GND; Z4"
     },
     {
       "reference": "R34",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2718,13 +2701,13 @@
       "x_mm": 62.992,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED0_A"
+      "nets": "DL01; PLC_24V"
     },
     {
       "reference": "R35",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2734,13 +2717,13 @@
       "x_mm": 59.944,
       "y_mm": 21.02,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED1_A"
+      "nets": "DL02; PLC_24V"
     },
     {
       "reference": "R36",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2750,13 +2733,13 @@
       "x_mm": 56.896,
       "y_mm": 21.02,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED2_A"
+      "nets": "DL03; PLC_24V"
     },
     {
       "reference": "R37",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2766,13 +2749,13 @@
       "x_mm": 53.848,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED3_A"
+      "nets": "DL04; PLC_24V"
     },
     {
       "reference": "R38",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2782,13 +2765,13 @@
       "x_mm": 50.8,
       "y_mm": 21.02,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED4_A"
+      "nets": "DL05; PLC_24V"
     },
     {
       "reference": "R39",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2798,13 +2781,13 @@
       "x_mm": 47.752,
       "y_mm": 21.02,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED5_A"
+      "nets": "DL06; PLC_24V"
     },
     {
       "reference": "R40",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2814,13 +2797,13 @@
       "x_mm": 44.704,
       "y_mm": 21.02,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED6_A"
+      "nets": "DL07; PLC_24V"
     },
     {
       "reference": "R41",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2830,13 +2813,13 @@
       "x_mm": 41.69,
       "y_mm": 21.02,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED7_A"
+      "nets": "DL08; PLC_24V"
     },
     {
       "reference": "R118",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2846,13 +2829,13 @@
       "x_mm": 92.202,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED8_A"
+      "nets": "DL09; PLC_24V"
     },
     {
       "reference": "R119",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2862,13 +2845,13 @@
       "x_mm": 89.154,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED9_A"
+      "nets": "DL10; PLC_24V"
     },
     {
       "reference": "R120",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2878,13 +2861,13 @@
       "x_mm": 86.106,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED10_A"
+      "nets": "DL11; PLC_24V"
     },
     {
       "reference": "R121",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2894,13 +2877,13 @@
       "x_mm": 83.058,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED11_A"
+      "nets": "DL12; PLC_24V"
     },
     {
       "reference": "R122",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2910,13 +2893,13 @@
       "x_mm": 80.01,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED12_A"
+      "nets": "DL13; PLC_24V"
     },
     {
       "reference": "R123",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2926,13 +2909,13 @@
       "x_mm": 76.962,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED13_A"
+      "nets": "DL14; PLC_24V"
     },
     {
       "reference": "R124",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2942,13 +2925,13 @@
       "x_mm": 73.914,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED14_A"
+      "nets": "DL15; PLC_24V"
     },
     {
       "reference": "R125",
       "value": "2.2k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "resistor",
       "associated_ic_or_net": "series/divider/limit passive",
@@ -2958,13 +2941,13 @@
       "x_mm": 70.866,
       "y_mm": 21.082,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_LED15_A"
+      "nets": "DL16; PLC_24V"
     },
     {
       "reference": "RN8",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 4",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 4; output bit 5; output bit 6; output bit 7",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -2979,8 +2962,8 @@
     {
       "reference": "RN9",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 0",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 0; output bit 1; output bit 2; output bit 3",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -2995,8 +2978,8 @@
     {
       "reference": "RN10",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 10",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 10; output bit 11; output bit 8; output bit 9",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3011,8 +2994,8 @@
     {
       "reference": "RN11",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 12",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 12; output bit 13; output bit 14; output bit 15",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3027,8 +3010,8 @@
     {
       "reference": "RN12",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 16",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 16; output bit 17; output bit 18; output bit 19",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3043,8 +3026,8 @@
     {
       "reference": "RN13",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 20",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 20; output bit 21; output bit 22; output bit 23",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3059,15 +3042,15 @@
     {
       "reference": "RN30",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 24",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 24; output bit 25; output bit 26; output bit 27",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 91.186,
+      "x_mm": 90.932,
       "y_mm": 56.642,
       "dnp": false,
       "nets": "GND; OUT24; OUT25; OUT26; OUT27"
@@ -3075,8 +3058,8 @@
     {
       "reference": "RN31",
       "value": "4x10k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "output bit 28",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 28; output bit 29; output bit 30; output bit 31",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3091,8 +3074,8 @@
     {
       "reference": "RN37",
       "value": "4x1k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 16; output bit 17; output bit 18; output bit 19",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3102,13 +3085,13 @@
       "x_mm": 66.04,
       "y_mm": 56.642,
       "dnp": false,
-      "nets": "DO_OPTO_LED0_A; DO_OPTO_LED1_A; DO_OPTO_LED2_A; DO_OPTO_LED3_A; OUT16; OUT17; OUT18; OUT19"
+      "nets": "OD01; OD02; OD03; OD04; OUT16; OUT17; OUT18; OUT19"
     },
     {
       "reference": "RN38",
       "value": "4x1k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 20; output bit 21; output bit 22; output bit 23",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3118,29 +3101,29 @@
       "x_mm": 59.436,
       "y_mm": 56.642,
       "dnp": false,
-      "nets": "DO_OPTO_LED4_A; DO_OPTO_LED5_A; DO_OPTO_LED6_A; DO_OPTO_LED7_A; OUT20; OUT21; OUT22; OUT23"
+      "nets": "OD05; OD06; OD07; OD08; OUT20; OUT21; OUT22; OUT23"
     },
     {
       "reference": "RN39",
       "value": "4x1k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 24; output bit 25; output bit 26; output bit 27",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 86.614,
+      "x_mm": 86.328,
       "y_mm": 56.642,
       "dnp": false,
-      "nets": "DO_OPTO_LED10_A; DO_OPTO_LED11_A; DO_OPTO_LED8_A; DO_OPTO_LED9_A; OUT24; OUT25; OUT26; OUT27"
+      "nets": "OD09; OD10; OD11; OD12; OUT24; OUT25; OUT26; OUT27"
     },
     {
       "reference": "RN40",
       "value": "4x1k",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 28; output bit 29; output bit 30; output bit 31",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3150,13 +3133,13 @@
       "x_mm": 80.264,
       "y_mm": 56.642,
       "dnp": false,
-      "nets": "DO_OPTO_LED12_A; DO_OPTO_LED13_A; DO_OPTO_LED14_A; DO_OPTO_LED15_A; OUT28; OUT29; OUT30; OUT31"
+      "nets": "OD13; OD14; OD15; OD16; OUT28; OUT29; OUT30; OUT31"
     },
     {
       "reference": "U26",
       "value": "TBD62083AFG",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 0; ULN output 1; ULN output 2; ULN output 3; ULN output 4; ULN output 5; ULN output 6; ULN output 7",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3166,13 +3149,13 @@
       "x_mm": 56.642,
       "y_mm": 33.528,
       "dnp": false,
-      "nets": "+24V_FIELD; DO0; DO1; DO2; DO3; DO4; DO5; DO6; DO7; DO_DRV0; DO_DRV1; DO_DRV2; DO_DRV3; DO_DRV4; DO_DRV5; DO_DRV6; DO_DRV7; ISO_GND"
+      "nets": "D01; D02; D03; D04; D05; D06; D07; D08; PLC_0V; PLC_24V; TD01; TD02; TD03; TD04; TD05; TD06; TD07; TD08"
     },
     {
       "reference": "U27",
       "value": "TBD62083AFG",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "ULN output 10; ULN output 11; ULN output 12; ULN output 13; ULN output 14; ULN output 15; ULN output 8; ULN output 9",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3182,45 +3165,45 @@
       "x_mm": 78.994,
       "y_mm": 33.528,
       "dnp": false,
-      "nets": "+24V_FIELD; DO10; DO11; DO12; DO13; DO14; DO15; DO8; DO9; DO_DRV10; DO_DRV11; DO_DRV12; DO_DRV13; DO_DRV14; DO_DRV15; DO_DRV8; DO_DRV9; ISO_GND"
+      "nets": "D09; D10; D11; D12; D13; D14; D15; D16; PLC_0V; PLC_24V; TD09; TD10; TD11; TD12; TD13; TD14; TD15; TD16"
     },
     {
       "reference": "U42",
       "value": "TC74AC541F",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output buffers",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "motion axis 0; output bit 0; motion axis 1; output bit 1; motion axis 2; output bit 2; motion axis 3; output bit 3; output bit 4; output bit 5; output bit 6; output bit 7",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "place with source register/buffer and output connector; preserve channel order",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 27.94,
       "y_mm": 48.514,
       "dnp": false,
-      "nets": "+5V; AX0_DIR; AX0_STEP; AX1_DIR; AX1_STEP; AX2_DIR; AX2_STEP; AX3_DIR; AX3_STEP; GND; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7"
+      "nets": "5V; DIR0; DIR1; DIR2; DIR3; GND; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7; STP0; STP1; STP2; STP3"
     },
     {
       "reference": "U43",
       "value": "TC74AC541F",
-      "sheet": "24 PLC outputs",
-      "functional_block": "motion output buffers",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "output bit 10; output bit 11; output bit 12; output bit 13; output bit 14; output bit 15; motion axis 4; motion axis 5; motion axis 6; output bit 8; output bit 9",
       "role": "IC",
       "associated_ic_or_net": "active device",
-      "placement_rule": "place with source register/buffer and output connector; preserve channel order",
+      "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 42.418,
       "y_mm": 48.514,
       "dnp": false,
-      "nets": "+5V; AX4_DIR; AX4_STEP; AX5_DIR; AX5_STEP; AX6_DIR; AX6_STEP; EN_3AX; EN_4AX; GND; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9"
+      "nets": "5V; DIR4; DIR5; DIR6; EN3; EN4; GND; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9; STP4; STP5; STP6"
     },
     {
       "reference": "U61",
       "value": "TLP291-4",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3230,13 +3213,13 @@
       "x_mm": 67.056,
       "y_mm": 46.99,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_DRV0; DO_DRV1; DO_DRV2; DO_DRV3; DO_OPTO_LED0_A; DO_OPTO_LED1_A; DO_OPTO_LED2_A; DO_OPTO_LED3_A; GND"
+      "nets": "GND; OD01; OD02; OD03; OD04; PLC_24V; TD01; TD02; TD03; TD04"
     },
     {
       "reference": "U62",
       "value": "TLP291-4",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3246,13 +3229,13 @@
       "x_mm": 56.134,
       "y_mm": 46.99,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_DRV4; DO_DRV5; DO_DRV6; DO_DRV7; DO_OPTO_LED4_A; DO_OPTO_LED5_A; DO_OPTO_LED6_A; DO_OPTO_LED7_A; GND"
+      "nets": "GND; OD05; OD06; OD07; OD08; PLC_24V; TD05; TD06; TD07; TD08"
     },
     {
       "reference": "U63",
       "value": "TLP291-4",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3262,13 +3245,13 @@
       "x_mm": 88.9,
       "y_mm": 46.99,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_DRV10; DO_DRV11; DO_DRV8; DO_DRV9; DO_OPTO_LED10_A; DO_OPTO_LED11_A; DO_OPTO_LED8_A; DO_OPTO_LED9_A; GND"
+      "nets": "GND; OD09; OD10; OD11; OD12; PLC_24V; TD09; TD10; TD11; TD12"
     },
     {
       "reference": "U64",
       "value": "TLP291-4",
-      "sheet": "24 PLC outputs",
-      "functional_block": "isolated general outputs",
+      "sheet": "PLC OUT",
+      "functional_block": "PLC OUT",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3278,7 +3261,7 @@
       "x_mm": 77.978,
       "y_mm": 46.99,
       "dnp": false,
-      "nets": "+24V_FIELD; DO_DRV12; DO_DRV13; DO_DRV14; DO_DRV15; DO_OPTO_LED12_A; DO_OPTO_LED13_A; DO_OPTO_LED14_A; DO_OPTO_LED15_A; GND"
+      "nets": "GND; OD13; OD14; OD15; OD16; PLC_24V; TD13; TD14; TD15; TD16"
     },
     {
       "reference": "C119",
@@ -3294,7 +3277,7 @@
       "x_mm": 118.11,
       "y_mm": 91.694,
       "dnp": false,
-      "nets": "+3V3; GND"
+      "nets": "3V3; GND"
     },
     {
       "reference": "D53",
@@ -3307,10 +3290,10 @@
       "placement_rule": "place between connector and buffer; keep A/B/Z channel grouping",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 92.71,
-      "y_mm": 107.188,
+      "x_mm": 92.837,
+      "y_mm": 106.426,
       "dnp": false,
-      "nets": "+5V_ENC; GND"
+      "nets": "ENC_5V; GND"
     },
     {
       "reference": "F2",
@@ -3326,11 +3309,11 @@
       "x_mm": 144.526,
       "y_mm": 108.458,
       "dnp": false,
-      "nets": "+5V; +5V_ENC"
+      "nets": "5V; ENC_5V"
     },
     {
       "reference": "J13",
-      "value": "Encoder 0: +5,A,B,Z,GND",
+      "value": "1=5V 2=A 3=B 4=Z 5=-",
       "sheet": "Encoders",
       "functional_block": "encoder 0 connector",
       "channels": "encoder 0",
@@ -3342,11 +3325,11 @@
       "x_mm": 92.71,
       "y_mm": 114.942,
       "dnp": false,
-      "nets": "+5V_ENC; ENC0_A_5V; ENC0_B_5V; ENC0_Z_5V; GND"
+      "nets": "E0_A5V; E0_B5V; E0_Z5V; ENC_5V; GND"
     },
     {
       "reference": "J14",
-      "value": "Encoder 1: +5,A,B,Z,GND",
+      "value": "1=5V 2=A 3=B 4=Z 5=-",
       "sheet": "Encoders",
       "functional_block": "encoder 1 connector",
       "channels": "encoder 1",
@@ -3358,11 +3341,11 @@
       "x_mm": 113.03,
       "y_mm": 115.062,
       "dnp": false,
-      "nets": "+5V_ENC; ENC1_A_5V; ENC1_B_5V; ENC1_Z_5V; GND"
+      "nets": "E1_A5V; E1_B5V; E1_Z5V; ENC_5V; GND"
     },
     {
       "reference": "J15",
-      "value": "Encoder 2: +5,A,B,Z,GND",
+      "value": "1=5V 2=A 3=B 4=Z 5=-",
       "sheet": "Encoders",
       "functional_block": "encoder 2 connector",
       "channels": "encoder 2",
@@ -3371,10 +3354,10 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 133.35,
-      "y_mm": 114.942,
+      "x_mm": 133.533,
+      "y_mm": 115.062,
       "dnp": false,
-      "nets": "+5V_ENC; ENC2_A_5V; ENC2_B_5V; ENC2_Z_5V; GND"
+      "nets": "E2_A5V; E2_B5V; E2_Z5V; ENC_5V; GND"
     },
     {
       "reference": "R110",
@@ -3390,7 +3373,7 @@
       "x_mm": 136.906,
       "y_mm": 108.204,
       "dnp": false,
-      "nets": "ENC2_Z_3V3; ENC2_Z_5V"
+      "nets": "E2_Z3V3; E2_Z5V"
     },
     {
       "reference": "R111",
@@ -3406,7 +3389,7 @@
       "x_mm": 136.906,
       "y_mm": 105.41,
       "dnp": false,
-      "nets": "ENC2_Z_3V3; GND"
+      "nets": "E2_Z3V3; GND"
     },
     {
       "reference": "U28",
@@ -3422,11 +3405,11 @@
       "x_mm": 126.238,
       "y_mm": 97.536,
       "dnp": false,
-      "nets": "+3V3; ENC0_A_3V3; ENC0_A_5V; ENC0_B_3V3; ENC0_B_5V; ENC0_Z_3V3; ENC0_Z_5V; ENC1_A_3V3; ENC1_A_5V; ENC1_B_3V3; ENC1_B_5V; ENC1_Z_3V3; ENC1_Z_5V; ENC2_A_3V3; ENC2_A_5V; ENC2_B_3V3; ENC2_B_5V; GND"
+      "nets": "3V3; E0_A3V3; E0_A5V; E0_B3V3; E0_B5V; E0_Z3V3; E0_Z5V; E1_A3V3; E1_A5V; E1_B3V3; E1_B5V; E1_Z3V3; E1_Z5V; E2_A3V3; E2_A5V; E2_B3V3; E2_B5V; GND"
     },
     {
       "reference": "J22",
-      "value": "LCD LVDS 2x10, 2.00 mm",
+      "value": "LVDS 2x10",
       "sheet": "Display",
       "functional_block": "display connector",
       "channels": "",
@@ -3438,7 +3421,7 @@
       "x_mm": 116.586,
       "y_mm": 97.028,
       "dnp": false,
-      "nets": "+3V3; GND; LVDS_CLK_N; LVDS_CLK_P; LVDS_D0_N; LVDS_D0_P; LVDS_D1_N; LVDS_D1_P; LVDS_D2_N; LVDS_D2_P"
+      "nets": "3V3; GND; LVDS_CLK_N; LVDS_CLK_P; LVDS_D0_N; LVDS_D0_P; LVDS_D1_N; LVDS_D1_P; LVDS_D2_N; LVDS_D2_P"
     },
     {
       "reference": "RN26",
@@ -3475,40 +3458,40 @@
     {
       "reference": "C67",
       "value": "10uF 25V",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "storage/UI support",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "bulk rail capacitor",
-      "associated_ic_or_net": "SD +3V3_SD",
+      "associated_ic_or_net": "SD SD_3V3",
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 148.209,
+      "x_mm": 147.955,
       "y_mm": 79.629,
       "dnp": false,
-      "nets": "+3V3_SD; GND"
+      "nets": "GND; SD_3V3"
     },
     {
       "reference": "C68",
       "value": "100nF",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "storage/UI support",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "decoupling capacitor",
-      "associated_ic_or_net": "SD +3V3_SD",
+      "associated_ic_or_net": "SD SD_3V3",
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 138.684,
       "y_mm": 92.456,
       "dnp": false,
-      "nets": "+3V3_SD; GND"
+      "nets": "GND; SD_3V3"
     },
     {
       "reference": "C69",
       "value": "22uF 50V",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "ESP-01/ESP-01S interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "bulk output capacitor",
       "associated_ic_or_net": "U34 output",
@@ -3518,13 +3501,13 @@
       "x_mm": 121.92,
       "y_mm": 21.609,
       "dnp": false,
-      "nets": "+3V3_WIFI; GND"
+      "nets": "GND; WIFI_3V3"
     },
     {
       "reference": "C70",
       "value": "100nF",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "ESP-01/ESP-01S interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U34 output",
@@ -3534,13 +3517,13 @@
       "x_mm": 123.19,
       "y_mm": 16.51,
       "dnp": false,
-      "nets": "+3V3_WIFI; GND"
+      "nets": "GND; WIFI_3V3"
     },
     {
       "reference": "C88",
       "value": "22uF 50V",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "storage/UI support",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "bulk input capacitor",
       "associated_ic_or_net": "U34 input",
@@ -3550,13 +3533,13 @@
       "x_mm": 119.476,
       "y_mm": 29.229,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "C89",
       "value": "100nF",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "storage/UI support",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U34 input",
@@ -3566,13 +3549,13 @@
       "x_mm": 127.762,
       "y_mm": 27.94,
       "dnp": false,
-      "nets": "+5V; GND"
+      "nets": "5V; GND"
     },
     {
       "reference": "FB2",
       "value": "600R@100MHz",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "storage/UI support",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "ferrite bead",
       "associated_ic_or_net": "rail filtering",
@@ -3582,28 +3565,28 @@
       "x_mm": 148.59,
       "y_mm": 72.644,
       "dnp": false,
-      "nets": "+3V3; +3V3_SD"
+      "nets": "3V3; SD_3V3"
     },
     {
       "reference": "J18",
-      "value": "I2C0: SDA, SCL, 3.3 V, 5 V, GND",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "storage/UI support",
+      "value": "1=SDA 2=SCL 3=3V3 4=5V 5=-",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 155.583,
+      "x_mm": 155.194,
       "y_mm": 77.849,
       "dnp": false,
-      "nets": "+3V3; +5V; GND; I2C_SCL; I2C_SDA"
+      "nets": "3V3; 5V; GND; I2C_SCL; I2C_SDA"
     },
     {
       "reference": "J20",
-      "value": "ESP-01/ESP-01S socket",
-      "sheet": "Storage, Wi-Fi and UI",
+      "value": "ESP-01",
+      "sheet": "SD / Wi-Fi",
       "functional_block": "storage/wireless connector",
       "channels": "",
       "role": "connector",
@@ -3614,13 +3597,13 @@
       "x_mm": 127.508,
       "y_mm": 11.43,
       "dnp": false,
-      "nets": "+3V3_WIFI; GND; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST; WIFI_RX; WIFI_TX"
+      "nets": "ESP_EN; ESP_IO0; ESP_IO2; ESP_RST; GND; UART_RX; UART_TX; WIFI_3V3"
     },
     {
       "reference": "J36",
-      "value": "Open-Smart TF Card Breakout",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
+      "value": "microSD header",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -3630,13 +3613,13 @@
       "x_mm": 141.732,
       "y_mm": 103.886,
       "dnp": false,
-      "nets": "+3V3_SD; GND; SD_CD; SD_CS_N; SD_DAT1; SD_DAT2; SD_MISO; SD_MOSI; SD_SCK"
+      "nets": "GND; SD_3V3; SD_CD; SD_CK; SD_CS; SD_DAT1; SD_DAT2; SD_SI; SD_SO"
     },
     {
       "reference": "J54",
-      "value": "SOFNG TF-15x15 microSD socket (C111196)",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
+      "value": "microSD TF15",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
@@ -3646,13 +3629,13 @@
       "x_mm": 150.368,
       "y_mm": 93.218,
       "dnp": false,
-      "nets": "+3V3_SD; GND; SD_CD; SD_CS_N; SD_DAT1; SD_DAT2; SD_MISO; SD_MOSI; SD_SCK"
+      "nets": "GND; SD_3V3; SD_CD; SD_CK; SD_CS; SD_DAT1; SD_DAT2; SD_SI; SD_SO"
     },
     {
       "reference": "JP5",
       "value": "SD_CD_EN",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "solder jumper",
       "associated_ic_or_net": "configuration or isolation link",
@@ -3662,13 +3645,13 @@
       "x_mm": 143.891,
       "y_mm": 78.105,
       "dnp": false,
-      "nets": "SD_CD; SD_CD_MCU"
+      "nets": "CD; SD_CD"
     },
     {
       "reference": "RN36",
       "value": "4x10k",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "ESP-01/ESP-01S interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3678,13 +3661,13 @@
       "x_mm": 131.318,
       "y_mm": 7.874,
       "dnp": false,
-      "nets": "+3V3_WIFI; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST"
+      "nets": "ESP_EN; ESP_IO0; ESP_IO2; ESP_RST; WIFI_3V3"
     },
     {
       "reference": "RN43",
       "value": "4x10k",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3694,13 +3677,13 @@
       "x_mm": 144.526,
       "y_mm": 73.406,
       "dnp": false,
-      "nets": "+3V3_SD; SD_CD; SD_CS_N; SD_MISO; SD_MOSI"
+      "nets": "SD_3V3; SD_CD; SD_CS; SD_SI; SD_SO"
     },
     {
       "reference": "RN44",
       "value": "4x22R",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "SD interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "resistor network",
       "associated_ic_or_net": "isolated multi-channel passive network",
@@ -3710,13 +3693,13 @@
       "x_mm": 140.462,
       "y_mm": 73.406,
       "dnp": false,
-      "nets": "SD_CS_MCU; SD_CS_N; SD_MISO; SD_MISO_MCU; SD_MOSI; SD_MOSI_MCU; SD_SCK; SD_SCK_MCU"
+      "nets": "SD_CK; SD_CS; SD_SI; SD_SO; SPI_CK; SPI_CS; SPI_SI; SPI_SO"
     },
     {
       "reference": "U34",
       "value": "AMS1117-3.3",
-      "sheet": "Storage, Wi-Fi and UI",
-      "functional_block": "ESP-01/ESP-01S interface",
+      "sheet": "SD / Wi-Fi",
+      "functional_block": "SD / Wi-Fi",
       "channels": "",
       "role": "IC",
       "associated_ic_or_net": "active device",
@@ -3726,7 +3709,7 @@
       "x_mm": 128.016,
       "y_mm": 22.352,
       "dnp": false,
-      "nets": "+3V3_WIFI; +5V; GND"
+      "nets": "5V; GND; WIFI_3V3"
     },
     {
       "reference": "C73",
@@ -3735,14 +3718,14 @@
       "functional_block": "analog input 0",
       "channels": "analog input 0",
       "role": "ADC filter capacitor",
-      "associated_ic_or_net": "AI0_ADC / MOD1 pin 8",
+      "associated_ic_or_net": "ADC0 / MOD1 pin 8",
       "placement_rule": "place beside J24 with its channel divider; keep the high-impedance branch short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.624,
       "y_mm": 58.554,
       "dnp": false,
-      "nets": "AI0_ADC; GND"
+      "nets": "ADC0; GND"
     },
     {
       "reference": "C74",
@@ -3751,14 +3734,14 @@
       "functional_block": "analog input 1",
       "channels": "analog input 1",
       "role": "ADC filter capacitor",
-      "associated_ic_or_net": "AI1_ADC / MOD1 pin 7",
+      "associated_ic_or_net": "ADC1 / MOD1 pin 7",
       "placement_rule": "place beside J24 with its channel divider; keep the high-impedance branch short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.748,
       "y_mm": 53.594,
       "dnp": false,
-      "nets": "AI1_ADC; GND"
+      "nets": "ADC1; GND"
     },
     {
       "reference": "C75",
@@ -3767,14 +3750,14 @@
       "functional_block": "analog input 2",
       "channels": "analog input 2",
       "role": "ADC filter capacitor",
-      "associated_ic_or_net": "AI2_ADC / MOD1 pin 22",
+      "associated_ic_or_net": "ADC2 / MOD1 pin 22",
       "placement_rule": "place beside J24 with its channel divider; keep the high-impedance branch short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.748,
       "y_mm": 48.768,
       "dnp": false,
-      "nets": "AI2_ADC; GND"
+      "nets": "ADC2; GND"
     },
     {
       "reference": "C92",
@@ -3790,7 +3773,7 @@
       "x_mm": 136.609,
       "y_mm": 41.691,
       "dnp": false,
-      "nets": "AOUT0_F1; GND"
+      "nets": "AO0_1; GND"
     },
     {
       "reference": "C93",
@@ -3806,7 +3789,7 @@
       "x_mm": 142.672,
       "y_mm": 39.151,
       "dnp": false,
-      "nets": "AOUT0_F2; GND"
+      "nets": "AO0_2; GND"
     },
     {
       "reference": "C94",
@@ -3822,7 +3805,7 @@
       "x_mm": 135.382,
       "y_mm": 31.496,
       "dnp": false,
-      "nets": "AOUT1_F1; GND"
+      "nets": "AO1_1; GND"
     },
     {
       "reference": "C95",
@@ -3838,7 +3821,7 @@
       "x_mm": 145.272,
       "y_mm": 39.151,
       "dnp": false,
-      "nets": "AOUT1_F2; GND"
+      "nets": "AO1_2; GND"
     },
     {
       "reference": "C96",
@@ -3854,7 +3837,7 @@
       "x_mm": 135.382,
       "y_mm": 29.244,
       "dnp": false,
-      "nets": "AOUT2_F1; GND"
+      "nets": "AO2_1; GND"
     },
     {
       "reference": "C97",
@@ -3870,7 +3853,7 @@
       "x_mm": 145.485,
       "y_mm": 22.387,
       "dnp": false,
-      "nets": "AOUT2_F2; GND"
+      "nets": "AO2_2; GND"
     },
     {
       "reference": "C98",
@@ -3886,7 +3869,7 @@
       "x_mm": 136.834,
       "y_mm": 19.593,
       "dnp": false,
-      "nets": "AOUT3_F1; GND"
+      "nets": "AO3_1; GND"
     },
     {
       "reference": "C99",
@@ -3902,7 +3885,7 @@
       "x_mm": 142.985,
       "y_mm": 22.387,
       "dnp": false,
-      "nets": "AOUT3_F2; GND"
+      "nets": "AO3_2; GND"
     },
     {
       "reference": "C100",
@@ -3918,7 +3901,7 @@
       "x_mm": 147.574,
       "y_mm": 13.709,
       "dnp": false,
-      "nets": "GND; VIN_PROT"
+      "nets": "GND; VIN_P"
     },
     {
       "reference": "C101",
@@ -3934,7 +3917,7 @@
       "x_mm": 147.574,
       "y_mm": 18.034,
       "dnp": false,
-      "nets": "+12V_AO; GND"
+      "nets": "AO_12V; GND"
     },
     {
       "reference": "C102",
@@ -3943,14 +3926,14 @@
       "functional_block": "analog output power",
       "channels": "",
       "role": "decoupling capacitor",
-      "associated_ic_or_net": "U38 +12V_AO",
+      "associated_ic_or_net": "U38 AO_12V",
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 138.176,
       "y_mm": 30.48,
       "dnp": false,
-      "nets": "+12V_AO; GND"
+      "nets": "AO_12V; GND"
     },
     {
       "reference": "C118",
@@ -3959,18 +3942,18 @@
       "functional_block": "analog input 3",
       "channels": "analog input 3",
       "role": "ADC filter capacitor",
-      "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
+      "associated_ic_or_net": "ADC3 / MOD1 pin 21",
       "placement_rule": "place beside J24 with its channel divider; keep the high-impedance branch short",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.748,
       "y_mm": 43.942,
       "dnp": false,
-      "nets": "AI3_ADC; GND"
+      "nets": "ADC3; GND"
     },
     {
       "reference": "J24",
-      "value": "GND/AI0/AI1/AI2/AI3",
+      "value": "1=- 2=AI0 3=AI1 4=AI2 5=AI3",
       "sheet": "Analog I/O",
       "functional_block": "analog inputs connector",
       "channels": "analog input 0; analog input 1; analog input 2; analog input 3",
@@ -3979,14 +3962,14 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 155.837,
-      "y_mm": 57.529,
+      "x_mm": 155.202,
+      "y_mm": 57.49,
       "dnp": false,
       "nets": "AI0; AI1; AI2; AI3; GND"
     },
     {
       "reference": "J25",
-      "value": "0-10 V outputs 0-3; pin 1 = common GND",
+      "value": "1=- 2=AO0 3=AO1 4=AO2 5=AO3",
       "sheet": "Analog I/O",
       "functional_block": "analog outputs connector",
       "channels": "analog output 0; analog output 1; analog output 2; analog output 3",
@@ -3995,10 +3978,10 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 155.702,
+      "x_mm": 155.075,
       "y_mm": 36.83,
       "dnp": false,
-      "nets": "AOUT0; AOUT1; AOUT2; AOUT3; GND"
+      "nets": "AO0; AO1; AO2; AO3; GND"
     },
     {
       "reference": "R61",
@@ -4007,14 +3990,14 @@
       "functional_block": "analog input 0",
       "channels": "analog input 0",
       "role": "divider upper resistor",
-      "associated_ic_or_net": "AI0_ADC / MOD1 pin 8",
+      "associated_ic_or_net": "AI0 to ADC0",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
       "y_mm": 58.42,
       "dnp": false,
-      "nets": "AI0; AI0_ADC"
+      "nets": "ADC0; AI0"
     },
     {
       "reference": "R63",
@@ -4023,14 +4006,14 @@
       "functional_block": "analog input 0",
       "channels": "analog input 0",
       "role": "divider lower resistor",
-      "associated_ic_or_net": "AI0_ADC / MOD1 pin 8",
+      "associated_ic_or_net": "AI0 ADC to GND",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
       "y_mm": 58.42,
       "dnp": false,
-      "nets": "AI0_ADC; GND"
+      "nets": "ADC0; GND"
     },
     {
       "reference": "R64",
@@ -4039,14 +4022,14 @@
       "functional_block": "analog input 1",
       "channels": "analog input 1",
       "role": "divider upper resistor",
-      "associated_ic_or_net": "AI1_ADC / MOD1 pin 7",
+      "associated_ic_or_net": "AI1 to ADC1",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
       "y_mm": 53.594,
       "dnp": false,
-      "nets": "AI1; AI1_ADC"
+      "nets": "ADC1; AI1"
     },
     {
       "reference": "R66",
@@ -4055,14 +4038,14 @@
       "functional_block": "analog input 1",
       "channels": "analog input 1",
       "role": "divider lower resistor",
-      "associated_ic_or_net": "AI1_ADC / MOD1 pin 7",
+      "associated_ic_or_net": "AI1 ADC to GND",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
       "y_mm": 53.594,
       "dnp": false,
-      "nets": "AI1_ADC; GND"
+      "nets": "ADC1; GND"
     },
     {
       "reference": "R67",
@@ -4071,14 +4054,14 @@
       "functional_block": "analog input 2",
       "channels": "analog input 2",
       "role": "divider upper resistor",
-      "associated_ic_or_net": "AI2_ADC / MOD1 pin 22",
+      "associated_ic_or_net": "AI2 to ADC2",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
       "y_mm": 48.768,
       "dnp": false,
-      "nets": "AI2; AI2_ADC"
+      "nets": "ADC2; AI2"
     },
     {
       "reference": "R69",
@@ -4087,14 +4070,14 @@
       "functional_block": "analog input 2",
       "channels": "analog input 2",
       "role": "divider lower resistor",
-      "associated_ic_or_net": "AI2_ADC / MOD1 pin 22",
+      "associated_ic_or_net": "AI2 ADC to GND",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
       "y_mm": 48.768,
       "dnp": false,
-      "nets": "AI2_ADC; GND"
+      "nets": "ADC2; GND"
     },
     {
       "reference": "R92",
@@ -4110,7 +4093,7 @@
       "x_mm": 135.593,
       "y_mm": 38.642,
       "dnp": false,
-      "nets": "AOUT0_F1; AOUT0_PWM"
+      "nets": "AO0_1; PWM0"
     },
     {
       "reference": "R93",
@@ -4126,7 +4109,7 @@
       "x_mm": 135.593,
       "y_mm": 34.833,
       "dnp": false,
-      "nets": "AOUT1_F1; AOUT1_PWM"
+      "nets": "AO1_1; PWM1"
     },
     {
       "reference": "R94",
@@ -4142,7 +4125,7 @@
       "x_mm": 135.593,
       "y_mm": 26.197,
       "dnp": false,
-      "nets": "AOUT2_F1; AOUT2_PWM"
+      "nets": "AO2_1; PWM2"
     },
     {
       "reference": "R95",
@@ -4158,7 +4141,7 @@
       "x_mm": 135.593,
       "y_mm": 22.64,
       "dnp": false,
-      "nets": "AOUT3_F1; AOUT3_PWM"
+      "nets": "AO3_1; PWM3"
     },
     {
       "reference": "R96",
@@ -4174,7 +4157,7 @@
       "x_mm": 137.879,
       "y_mm": 38.642,
       "dnp": false,
-      "nets": "AOUT0_F1; AOUT0_F2"
+      "nets": "AO0_1; AO0_2"
     },
     {
       "reference": "R97",
@@ -4190,7 +4173,7 @@
       "x_mm": 137.879,
       "y_mm": 34.833,
       "dnp": false,
-      "nets": "AOUT1_F1; AOUT1_F2"
+      "nets": "AO1_1; AO1_2"
     },
     {
       "reference": "R98",
@@ -4206,7 +4189,7 @@
       "x_mm": 137.879,
       "y_mm": 26.197,
       "dnp": false,
-      "nets": "AOUT2_F1; AOUT2_F2"
+      "nets": "AO2_1; AO2_2"
     },
     {
       "reference": "R99",
@@ -4222,7 +4205,7 @@
       "x_mm": 137.879,
       "y_mm": 22.64,
       "dnp": false,
-      "nets": "AOUT3_F1; AOUT3_F2"
+      "nets": "AO3_1; AO3_2"
     },
     {
       "reference": "R100",
@@ -4238,7 +4221,7 @@
       "x_mm": 140.927,
       "y_mm": 35.849,
       "dnp": false,
-      "nets": "AOUT0; AOUT0_FB"
+      "nets": "AO0; AO0_FB"
     },
     {
       "reference": "R101",
@@ -4254,7 +4237,7 @@
       "x_mm": 147.277,
       "y_mm": 35.849,
       "dnp": false,
-      "nets": "AOUT1; AOUT1_FB"
+      "nets": "AO1; AO1_FB"
     },
     {
       "reference": "R102",
@@ -4270,7 +4253,7 @@
       "x_mm": 147.023,
       "y_mm": 25.434,
       "dnp": false,
-      "nets": "AOUT2; AOUT2_FB"
+      "nets": "AO2; AO2_FB"
     },
     {
       "reference": "R103",
@@ -4286,7 +4269,7 @@
       "x_mm": 141.181,
       "y_mm": 25.434,
       "dnp": false,
-      "nets": "AOUT3; AOUT3_FB"
+      "nets": "AO3; AO3_FB"
     },
     {
       "reference": "R104",
@@ -4302,7 +4285,7 @@
       "x_mm": 139.972,
       "y_mm": 39.251,
       "dnp": false,
-      "nets": "AOUT0_FB; GND"
+      "nets": "AO0_FB; GND"
     },
     {
       "reference": "R105",
@@ -4318,7 +4301,7 @@
       "x_mm": 147.972,
       "y_mm": 39.151,
       "dnp": false,
-      "nets": "AOUT1_FB; GND"
+      "nets": "AO1_FB; GND"
     },
     {
       "reference": "R106",
@@ -4334,7 +4317,7 @@
       "x_mm": 147.785,
       "y_mm": 22.387,
       "dnp": false,
-      "nets": "AOUT2_FB; GND"
+      "nets": "AO2_FB; GND"
     },
     {
       "reference": "R107",
@@ -4350,7 +4333,7 @@
       "x_mm": 140.585,
       "y_mm": 22.387,
       "dnp": false,
-      "nets": "AOUT3_FB; GND"
+      "nets": "AO3_FB; GND"
     },
     {
       "reference": "R182",
@@ -4359,14 +4342,14 @@
       "functional_block": "analog input 3",
       "channels": "analog input 3",
       "role": "divider upper resistor",
-      "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
+      "associated_ic_or_net": "AI3 to ADC3",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
       "y_mm": 43.942,
       "dnp": false,
-      "nets": "AI3; AI3_ADC"
+      "nets": "ADC3; AI3"
     },
     {
       "reference": "R183",
@@ -4375,14 +4358,14 @@
       "functional_block": "analog input 3",
       "channels": "analog input 3",
       "role": "divider lower resistor",
-      "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
+      "associated_ic_or_net": "AI3 ADC to GND",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
       "y_mm": 43.942,
       "dnp": false,
-      "nets": "AI3_ADC; GND"
+      "nets": "ADC3; GND"
     },
     {
       "reference": "U37",
@@ -4398,7 +4381,7 @@
       "x_mm": 141.199,
       "y_mm": 15.759,
       "dnp": false,
-      "nets": "+12V_AO; GND; VIN_PROT"
+      "nets": "AO_12V; GND; VIN_P"
     },
     {
       "reference": "U38",
@@ -4414,7 +4397,7 @@
       "x_mm": 143.972,
       "y_mm": 30.485,
       "dnp": false,
-      "nets": "+12V_AO; AOUT0; AOUT0_F2; AOUT0_FB; AOUT1; AOUT1_F2; AOUT1_FB; AOUT2; AOUT2_F2; AOUT2_FB; AOUT3; AOUT3_F2; AOUT3_FB; GND"
+      "nets": "AO0; AO0_2; AO0_FB; AO1; AO1_2; AO1_FB; AO2; AO2_2; AO2_FB; AO3; AO3_2; AO3_FB; AO_12V; GND"
     }
   ]
 }

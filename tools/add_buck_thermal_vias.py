@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 REGULATORS = {
     "U1": "GND",
-    "U3": "ISO_GND",
+    "U3": "PLC_0V",
 }
 LOCAL_GROUND_PADS = {
     "U2": "1",
@@ -30,12 +30,12 @@ OFFSETS_MM = (
 
 
 def ensure_isolated_back_plane(board, apply: bool) -> bool:
-    """Mirror the local F.Cu ISO_GND region under the isolated converter."""
-    isolated_net = board.FindNet("ISO_GND")
+    """Mirror the local F.Cu PLC_0V region under the isolated converter."""
+    isolated_net = board.FindNet("PLC_0V")
     if isolated_net is None:
-        raise SystemExit("Board has no ISO_GND net")
+        raise SystemExit("Board has no PLC_0V net")
     if any(
-        zone.GetNetname() == "ISO_GND" and zone.IsOnLayer(pcbnew.B_Cu)
+        zone.GetNetname() == "PLC_0V" and zone.IsOnLayer(pcbnew.B_Cu)
         for zone in board.Zones()
     ):
         return False
@@ -44,12 +44,12 @@ def ensure_isolated_back_plane(board, apply: bool) -> bool:
         (
             zone
             for zone in board.Zones()
-            if zone.GetNetname() == "ISO_GND" and zone.IsOnLayer(pcbnew.F_Cu)
+            if zone.GetNetname() == "PLC_0V" and zone.IsOnLayer(pcbnew.F_Cu)
         ),
         None,
     )
     if source is None:
-        raise SystemExit("Board has no F.Cu ISO_GND source region")
+        raise SystemExit("Board has no F.Cu PLC_0V source region")
 
     if apply:
         zone = pcbnew.ZONE(board)

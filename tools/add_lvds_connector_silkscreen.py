@@ -11,7 +11,7 @@ import pcbnew
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 LABELS = (
-    ("J22 LCD LVDS 2x10", 0.0, 0.0, 1.2),
+    ("J22 LVDS", 0.0, 0.0, 1.2),
     ("1-3: 3V3", 0.0, 1.7, 0.9),
     ("4-6,13-14: GND", 0.0, 3.0, 0.9),
     ("7/8: D0- / D0+", 0.0, 4.3, 0.9),

@@ -1,6 +1,6 @@
 # Mechanical notes
 
-- PCB outline: 200 mm x 150 mm, two copper layers, 1.6 mm nominal thickness.
+- PCB outline: 160 mm x 120 mm, two copper layers, 1.6 mm nominal thickness.
 - Mounting: four M3 clearance holes.
 - Main assembly and J22 are on F.Cu.
 - The WeAct body is 41.402 mm x 41.148 mm and uses 2.54 mm perimeter headers.

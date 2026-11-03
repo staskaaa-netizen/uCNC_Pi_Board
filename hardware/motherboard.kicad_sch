@@ -2,10 +2,11 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "0493c703-387d-412b-9bd3-775613f1e388")
+	(uuid "95d824fa-4bbc-4976-a992-f2bfa28ba661")
 	(paper "A2")
 	(title_block
 		(title "LeanCam NCC RP2350B Motherboard")
+		(rev "PRE-FINAL")
 	)
 	(lib_symbols)
 	(text_box "LeanCam NCC RP2350B motherboard\nThis root sheet instantiates the functional hierarchy. Global net labels are the inter-sheet contract; see documentation/gpio-map.md and io-bit-map.md."
@@ -26,7 +27,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "66718f2e-9085-4d87-867a-be6e101b6ddb")
+		(uuid "7f9d474d-3aa6-4b7e-994e-e94262ca3e92")
 	)
 	(sheet
 		(at 20 20)
@@ -43,8 +44,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "6307b2ab-2d91-4bb6-9275-aae23f53b2f6")
-		(property "Sheetname" "Power and supervision"
+		(uuid "ad616338-6dec-41b8-b79d-f7708fc77190")
+		(property "Sheetname" "Power"
 			(at 20 19.2884 0)
 			(effects
 				(font
@@ -64,7 +65,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "2")
 				)
 			)
@@ -85,8 +86,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "c23e03b0-35f6-4df3-b9c0-6b8df8658701")
-		(property "Sheetname" "MCU, shift chains and safety"
+		(uuid "2af658ad-0c54-4b1e-933d-05859dce7e4c")
+		(property "Sheetname" "MCU / SHIFT"
 			(at 20 114.2884 0)
 			(effects
 				(font
@@ -106,7 +107,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "3")
 				)
 			)
@@ -127,8 +128,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "4f6e32b9-28bd-4550-8199-04ca498b50d3")
-		(property "Sheetname" "16 PLC inputs"
+		(uuid "ae40c9db-d526-46eb-8497-cda0a2712972")
+		(property "Sheetname" "16 PLC IN"
 			(at 215 19.2884 0)
 			(effects
 				(font
@@ -148,7 +149,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "4")
 				)
 			)
@@ -169,8 +170,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "951b714f-a6a2-4d61-aadf-ab8aef57e90c")
-		(property "Sheetname" "24 PLC outputs"
+		(uuid "cb58de03-c204-45a1-8fa3-7391e044a0e4")
+		(property "Sheetname" "PLC OUT"
 			(at 390 19.2884 0)
 			(effects
 				(font
@@ -190,7 +191,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "5")
 				)
 			)
@@ -211,7 +212,7 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "ed954c5b-be20-4421-89e6-b4c2b973f506")
+		(uuid "04a847e3-4f04-43bc-9579-e0964ad5c5c0")
 		(property "Sheetname" "Encoders"
 			(at 215 154.2884 0)
 			(effects
@@ -232,7 +233,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "6")
 				)
 			)
@@ -253,7 +254,7 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "14ebb684-7c66-42d5-b330-c584ce3d092f")
+		(uuid "2faf9c8e-c6fe-4df9-88c8-487d44451cd3")
 		(property "Sheetname" "Display"
 			(at 350 154.2884 0)
 			(effects
@@ -274,7 +275,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "7")
 				)
 			)
@@ -295,8 +296,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "3bc6ae0a-6b9f-42c9-82ac-50e3315f977b")
-		(property "Sheetname" "Storage, Wi-Fi and UI"
+		(uuid "1f9bb932-d504-4470-a3d3-41650032566b")
+		(property "Sheetname" "SD / Wi-Fi"
 			(at 20 229.2884 0)
 			(effects
 				(font
@@ -316,7 +317,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "8")
 				)
 			)
@@ -337,7 +338,7 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "981aacc1-63ec-479a-8ab8-e990ac627980")
+		(uuid "5007e4e5-2ad5-4c1b-a13e-59d7ccef3f96")
 		(property "Sheetname" "Analog I/O"
 			(at 200 254.2884 0)
 			(effects
@@ -358,7 +359,7 @@
 		)
 		(instances
 			(project None
-				(path "/0493c703-387d-412b-9bd3-775613f1e388"
+				(path "/95d824fa-4bbc-4976-a992-f2bfa28ba661"
 					(page "9")
 				)
 			)

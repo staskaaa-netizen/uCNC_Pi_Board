@@ -1,26 +1,47 @@
-# uCNC RP2350B Motherboard
+# uCNC RP2350B Motherboard - PRE-FINAL
 
 KiCad 10 carrier for a socketed WeAct Studio RP2350B Core Board. The board
 provides isolated machine I/O, motion and encoder interfaces, LCD power,
-storage, optional Wi-Fi and analog I/O on a 200 mm x 150 mm two-layer PCB.
+storage, optional Wi-Fi and analog I/O on a 160 mm x 120 mm two-layer PCB.
+
+**Status: PRE-FINAL.** The circuit and pin mapping are complete. Resolve the
+recorded copper-clearance DRC findings before fabrication.
 
 ## Board features
 
-- 16 isolated 24 V PLC inputs with TLP291-4 optocouplers.
+- 16 isolated 24 V PLC inputs, `I01-I16`, with TLP291-4 optocouplers.
 - One dedicated isolated E-stop input on GPIO9, outside the shift-register
   chain.
 - Four cascaded 74HC165 inputs and four cascaded SN74AHCT595 outputs.
-- Seven STEP/DIR axes with grouped 3-axis and 4-axis enables.
+- Seven STEP/DIR axes, A0-A6, with labels `EN3 STPn DIRn`.
 - Seven paired servo ZERO/ERROR inputs with individual 3-pin connectors.
 - Two TC74AC541F 5 V motion buffers.
-- Sixteen general low-side outputs driven by two TBD62083AFG arrays.
-- Sixteen optically isolated general-output channels.
+- Sixteen optically isolated general outputs, `D01-D16`, driven by two
+  TBD62083AFG arrays.
 - Three 5 V encoder interfaces with a 3.3 V logic-side buffer.
 - Four 0-10 V analog inputs and four ground-referenced 0-10 V analog outputs.
 - MicroSD through J36 or the on-board SOFNG TF-15x15 socket J54.
 - Passive HSTX-to-LVDS interface on J22 using 4 x 330 ohm arrays.
-- Optional ESP-01/ESP-01S socket with a dedicated 3.3 V regulator.
+- Optional ESP-01 with a dedicated 3.3 V regulator.
 - Isolated 24 V to 12 V backlight supply.
+
+## I/O map
+
+| Function | Signal | Connector mapping |
+|---|---|---|
+| PLC inputs | `I01-I16` | J7: `I01-I08`; J8: `I09-I16` |
+| General outputs | `D01-D16` | J12: `D01-D08`; J32: `D09-D16` |
+| Motion A0 | `EN3`, `STP0`, `DIR0` | J10; status J40 |
+| Motion A1 | `EN3`, `STP1`, `DIR1` | J11; status J41 |
+| Motion A2 | `EN3`, `STP2`, `DIR2` | J28; status J42 |
+| Motion A3 | `EN4`, `STP3`, `DIR3` | J29; status J43 |
+| Motion A4 | `EN4`, `STP4`, `DIR4` | J47; status J50 |
+| Motion A5 | `EN4`, `STP5`, `DIR5` | J46; status J49 |
+| Motion A6 | `EN4`, `STP6`, `DIR6` | J30; status J48 |
+
+The isolated logic-side input names are `I01_N-I16_N`. Every motion connector
+uses pin 1 for enable, pin 2 for STEP and pin 3 for DIR. Every paired status
+connector uses pin 1 for return, pin 2 for ERROR and pin 3 for ZERO.
 
 ## Open the project
 
@@ -41,9 +62,10 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [GPIO map](documentation/gpio-map.md)
 - [WeAct RP2350B pin allocation](documentation/rp2350-pinout.md)
 - [Input and output bit map](documentation/io-bit-map.md)
+- [Signal naming](documentation/naming.md)
 - [Connector pinouts](documentation/connectors.md)
 - [Power budget](documentation/power-budget.md)
-- [Isolated PLC inputs](documentation/input-wetting.md)
+- [PLC inputs](documentation/plc-inputs.md)
 - [Decoupling map](documentation/decoupling-map.md)
 - [Component placement classes](documentation/component-placement-classes.md)
 - [LCD LVDS interface](documentation/display-population.md)
@@ -68,11 +90,10 @@ placement and routing. Do not run a full PCB regeneration over that file.
 ## Verification status
 
 The current netlist contains 281 schematic components in 320 nets. The PCB has
-275 footprints, 2,262 routed track segments and 189 vias. DRC reports zero
-unconnected items. It still reports 55 error-severity and 183
-warning-severity geometry or documentation findings, primarily clearance,
-starved thermals and silkscreen checks. ERC has no electrical errors and 35
-library-symbol cache warnings.
+275 footprints, 2,276 routed track segments and 187 vias. DRC reports zero
+unconnected items and zero error-severity findings. The remaining 172 warnings
+are silkscreen clearance, mask clipping and text-height checks. ERC has no
+electrical errors and 35 library-symbol cache warnings.
 
 This is a routed prototype. It is not a fabrication release and is not a
 safety-rated controller. Hazardous energy removal must remain an independent

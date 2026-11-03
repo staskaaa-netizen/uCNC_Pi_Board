@@ -49,12 +49,12 @@ node bypass. C86 bridges BOOT and SW; C91 bypasses the internal VCC. U1 and U3
 each have six ground vias under the PowerPAD.
 
 U3 has no `PWR_GOOD` connection. Its input, output and feedback all use the
-isolated `ISO_GND` domain.
+isolated `PLC_0V` domain.
 
 ## Digital input block
 
 U8 carries PLC inputs 1-8 and U9 carries inputs 9-16. U6/U7 carry the paired
-servo ZERO/ERROR signals. Each register has a local `+3V3` bypass:
+servo ZERO/ERROR signals. Each register has a local `3V3` bypass:
 
 | Register | Bypass |
 |---|---|
@@ -80,7 +80,7 @@ General outputs use this chain:
 
 `OUT16-OUT31 -> RN37-RN40 (1 k) -> U61-U64 (TLP291-4) -> U26/U27 TBD62083AFG`
 
-J12 and J32 expose the resulting low-side outputs DO0-DO15. RN8-RN13, RN30 and
+J12 and J32 expose the resulting low-side outputs D01-D16. RN8-RN13, RN30 and
 RN31 provide 10 k state-definition pull-downs at the register outputs.
 
 ## Encoders
@@ -121,7 +121,7 @@ capacitors. J25 carries the four outputs and the common ground.
 
 J36 and J54 share the same SPI signals. RN43 provides four 10 k pull-ups and
 RN44 provides four 22 ohm series resistors. FB2, C67 and C68 form the
-`+3V3_SD` filter beside the storage interface. JP5 enables card detect.
+`SD_3V3` filter beside the storage interface. JP5 enables card detect.
 
 RN26/RN27 are the 4 x 330 ohm HSTX series arrays. They sit beside J22. Keep each
 differential pair short and preserve the P/N assignment documented in

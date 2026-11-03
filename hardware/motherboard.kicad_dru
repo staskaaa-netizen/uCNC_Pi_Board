@@ -10,3 +10,13 @@
     (constraint clearance (min 0.12mm))
     (condition "(A.NetName == 'LVDS_*' && B.memberOfFootprint('J22')) || (B.NetName == 'LVDS_*' && A.memberOfFootprint('J22'))")
 )
+
+(rule "LMR36510 package pad clearance"
+    (constraint clearance (min 0.25mm))
+    (condition "(A.memberOfFootprint('U1') && B.memberOfFootprint('U1')) || (A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
+)
+
+(rule "PLC field clearance"
+    (constraint clearance (min 0.5mm))
+    (condition "(A.NetName == 'PLC_*' || B.NetName == 'PLC_*') && !(A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
+)

@@ -42,13 +42,13 @@ used in this block:
 
 | Channel | RP2350 GPIO | MOD1 pin | J25 pin |
 |---|---:|---:|---:|
-| AOUT0 | GPIO44 | 6 | 2 |
-| AOUT1 | GPIO46 | 5 | 3 |
-| AOUT2 | GPIO45 | 20 | 4 |
-| AOUT3 | GPIO47 | 19 | 5 |
+| AO0 | GPIO44 | 6 | 2 |
+| AO1 | GPIO46 | 5 | 3 |
+| AO2 | GPIO45 | 20 | 4 |
+| AO3 | GPIO47 | 19 | 5 |
 
 J25 pin 1 is the common ground return. These are ground-referenced outputs, not
-isolated outputs. AOUT0, AOUT1 and AOUT3 use MOD1 pins 6, 5 and 19 respectively;
+isolated outputs. AO0, AO1 and AO3 use MOD1 pins 6, 5 and 19 respectively;
 the corresponding GPIO assignments are recorded in the firmware GPIO map.
 
 Use the WeAct module's onboard LED; no separate status LED is connected to the
@@ -56,7 +56,7 @@ analog-output GPIOs.
 
 ## Power
 
-U37 is an L78L12 100 mA linear regulator from `VIN_PROT`. Its expected load is
+U37 is an L78L12 100 mA linear regulator from `VIN_P`. Its expected load is
 the TLV2374 quiescent current plus the feedback dividers and connected
 high-impedance analog loads, typically only a few milliamps. At a 24 V input,
 3 mA total load dissipates approximately 36 mW in U37.

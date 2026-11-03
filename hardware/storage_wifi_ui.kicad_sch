@@ -2,10 +2,10 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "f30e3c77-321a-4714-b79a-6f0a1713eb3a")
+	(uuid "c9d525e7-cb00-4500-a753-cb8c57a852af")
 	(paper "A1")
 	(title_block
-		(title "Storage, Wi-Fi and UI")
+		(title "SD / Wi-Fi")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x05"
@@ -2225,7 +2225,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f0a86421-fa89-434d-9bcb-0454a20154c1")
+		(uuid "bbefb840-619e-4bae-9feb-5f939ec2d656")
 		(property "Reference" "J18"
 			(at 35.56 157.48 0.0000)
 			(effects
@@ -2235,7 +2235,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "I2C0: SDA, SCL, 3.3 V, 5 V, GND"
+		(property "Value" "1=SDA 2=SCL 3=3V3 4=5V 5=-"
 			(at 35.56 142.24 0.0000)
 			(effects
 				(font
@@ -2272,23 +2272,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "c4a9730a-52bc-4260-bc31-a89cbefcd1e7")
+			(uuid "905a5c1c-cc77-4120-b18e-72469383b31f")
 		)
 		(pin "2"
-			(uuid "33ec12a2-be26-496c-a165-535dd309eb78")
+			(uuid "8399730c-f240-4c53-ac11-f8fbb50ff5b3")
 		)
 		(pin "3"
-			(uuid "1436e787-0104-4393-94f5-5fee92ddfc82")
+			(uuid "1bd9a803-61f5-4747-9e21-fd38538a01b7")
 		)
 		(pin "4"
-			(uuid "d950d14b-d99c-477d-b5d6-7bd06f76b759")
+			(uuid "9725ff63-d7df-42a8-96cb-c84ff9b32b13")
 		)
 		(pin "5"
-			(uuid "be7e9aa0-cc8f-4f3e-8e93-fb9ee7388c25")
+			(uuid "787aa1fc-fe02-4c87-bbb8-f82b59cd2013")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "J18")
 					(unit 1)
 				)
@@ -2304,7 +2304,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "30233684-abe7-4e13-8611-56a41989d7f1")
+		(uuid "bf77772c-9bff-4def-9b36-9cb122619d52")
 		(property "Reference" "RN43"
 			(at 106.68 152.4 0.0000)
 			(effects
@@ -2351,32 +2351,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "61c5f373-60b1-43c5-af82-b37e900d4c2f")
+			(uuid "ed3a83bc-51a1-4961-89e6-9024ed0c8aa5")
 		)
 		(pin "2"
-			(uuid "4b062930-0c96-4d22-9fe8-e8bd79b0d035")
+			(uuid "367d0733-3720-4be6-b795-5137d76c7052")
 		)
 		(pin "3"
-			(uuid "bc5d8115-f31f-46f4-8bf6-e5a8a4e4aef7")
+			(uuid "9a858f17-a534-4da7-89a1-3b82679fae26")
 		)
 		(pin "4"
-			(uuid "47dde58d-361d-4db4-8686-627687a3d9f2")
+			(uuid "5831afd9-ee7d-478d-855b-5861272fe8bc")
 		)
 		(pin "5"
-			(uuid "33df1bad-feed-41f8-aa6f-e42e96880c75")
+			(uuid "80d2d082-6932-40b9-af56-9dee00525700")
 		)
 		(pin "6"
-			(uuid "49444f01-ed80-4f52-82b8-e50202c92042")
+			(uuid "033a70bb-0736-46e3-b546-c41989956105")
 		)
 		(pin "7"
-			(uuid "c18779d6-dec0-44b0-93cb-5afa14118331")
+			(uuid "8381d438-f0ec-4bc5-9287-20ccfabbb07a")
 		)
 		(pin "8"
-			(uuid "a28f1ecf-beec-420a-9cdb-2c2b892a8c7d")
+			(uuid "a07d6cf0-b91b-4516-80eb-91f8abca84b9")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "RN43")
 					(unit 1)
 				)
@@ -2392,7 +2392,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "884c5364-170c-4915-8d40-b1f30f83e76b")
+		(uuid "85e3830e-8c60-4933-a9d1-649242ffc75f")
 		(property "Reference" "RN44"
 			(at 201.93 152.4 0.0000)
 			(effects
@@ -2439,32 +2439,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "2f3e9287-990e-46d3-b065-dfc13cdfb923")
+			(uuid "b2003872-db54-4193-8d1c-c8203576f807")
 		)
 		(pin "2"
-			(uuid "cee5e928-34fb-4775-be7a-d9c368ba1020")
+			(uuid "cac8c644-5eec-45dd-8905-9b0913247f32")
 		)
 		(pin "3"
-			(uuid "b7e18681-88d7-4fb9-9214-8f8552fa6b1b")
+			(uuid "36558e5e-8cad-44bc-ace6-17294b87b5b5")
 		)
 		(pin "4"
-			(uuid "b7ea81ab-6d28-4ee1-9e13-350d6bae34b6")
+			(uuid "795df5b1-bf45-4389-98b7-854b25c293c2")
 		)
 		(pin "5"
-			(uuid "af970ede-9546-4c38-b818-2fdc1e94d531")
+			(uuid "08673313-4ed3-4e6c-a557-539d15b78599")
 		)
 		(pin "6"
-			(uuid "393fa9b7-46e8-4993-ad3b-f32f5cbe61ac")
+			(uuid "11ba5069-2860-4095-8769-d86eb078f6c1")
 		)
 		(pin "7"
-			(uuid "1aa330e3-d209-4e48-944d-64b0249a665a")
+			(uuid "c04bfbe5-2dfe-4c29-b60f-df9bf6b60708")
 		)
 		(pin "8"
-			(uuid "72ec5cd6-7098-4cb0-9025-2f9c0b175c9e")
+			(uuid "df404a51-3e82-4953-aa3a-ee64c467ff10")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "RN44")
 					(unit 1)
 				)
@@ -2480,7 +2480,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "90101ffb-93ba-4736-b245-10131184695c")
+		(uuid "f35df1e2-7e55-49fb-bb1a-63544e05b3d5")
 		(property "Reference" "FB2"
 			(at 71.12 170.815 90)
 			(effects
@@ -2527,14 +2527,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "17da91f6-8757-4946-9f93-31146a6f0f21")
+			(uuid "32c4d217-3b00-4f7b-9422-150e4ec47ccc")
 		)
 		(pin "2"
-			(uuid "3373df04-9645-472e-b2cf-92c8a69dc5a3")
+			(uuid "49326579-ae29-4ec1-89c1-1f74f3c1499a")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "FB2")
 					(unit 1)
 				)
@@ -2550,7 +2550,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "37fc2632-f60b-4ea7-8e95-95b749d32043")
+		(uuid "7ed5d21f-ec2c-419c-b60e-503ee1b12ed7")
 		(property "Reference" "C67"
 			(at 90.805 172.72 0.0000)
 			(effects
@@ -2597,14 +2597,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "03344ce0-78fc-4f03-8e8b-9e38cac632cf")
+			(uuid "339b054f-2ef6-43af-928a-969180ebeb57")
 		)
 		(pin "2"
-			(uuid "82b2380b-e8f6-4b92-849c-0511e316f527")
+			(uuid "45fe0d2f-8de0-4eed-99f8-0fd869c4ce25")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "C67")
 					(unit 1)
 				)
@@ -2620,7 +2620,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "2995d5ee-0ab4-4690-af1e-85f365cdbdff")
+		(uuid "d70c0591-4d38-4f00-b65f-aa2e8104c29a")
 		(property "Reference" "C68"
 			(at 102.235 172.72 0.0000)
 			(effects
@@ -2667,14 +2667,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "bae324d2-cf8e-4342-992a-a670caf36b12")
+			(uuid "219c095e-4188-4b51-b9a1-9ef1c050293b")
 		)
 		(pin "2"
-			(uuid "b24771c8-c7d7-49f2-bbcb-6497340b2989")
+			(uuid "2d54bce5-a375-415f-9cd2-ca4a1e78cdb1")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "C68")
 					(unit 1)
 				)
@@ -2690,7 +2690,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "e2cfe7b2-b914-41d3-8ea6-8a07ae6102a9")
+		(uuid "5a1be687-4c5d-4b66-b02d-f8cc4d128064")
 		(property "Reference" "JP5"
 			(at 299.72 167.132 0.0000)
 			(effects
@@ -2737,14 +2737,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f562bc69-2087-4ea5-b460-9b94b9b5c618")
+			(uuid "d32c7dca-df84-4775-a693-ce1735a95c7f")
 		)
 		(pin "2"
-			(uuid "725f43ed-3b23-4c58-bd00-d7a8c48906f6")
+			(uuid "081d8548-b962-4342-8c53-b51244a97262")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "JP5")
 					(unit 1)
 				)
@@ -2760,7 +2760,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "fc934442-b47e-449f-9479-5c8c32afbb39")
+		(uuid "00ce1a3b-dfbd-4283-9ac5-c59d05f8c95b")
 		(property "Reference" "J20"
 			(at 40.64 209.55 0.0000)
 			(effects
@@ -2770,7 +2770,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESP-01/ESP-01S socket"
+		(property "Value" "ESP-01"
 			(at 40.64 196.85 0.0000)
 			(effects
 				(font
@@ -2807,32 +2807,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "43d338b3-358e-456b-8787-1d3244c4d1d6")
+			(uuid "af8457b4-668e-4e19-9059-7f1ae1ce5168")
 		)
 		(pin "2"
-			(uuid "72323f1d-a830-4c71-b72c-0108f02c72fa")
+			(uuid "91630345-067a-4545-9bdc-6674fc6cad1f")
 		)
 		(pin "3"
-			(uuid "3363012a-a339-4173-b830-937a691d9efb")
+			(uuid "acf3cdd2-2952-4c6d-ab7f-c551d898c4fc")
 		)
 		(pin "4"
-			(uuid "61a159d2-2610-458d-91a8-decb795136fa")
+			(uuid "009f8385-c932-4fda-9728-7e37fc9b60ec")
 		)
 		(pin "5"
-			(uuid "3cb7d235-883a-4026-bdea-17f327957698")
+			(uuid "01b4bf40-ffb7-4756-b634-64dd930c4b40")
 		)
 		(pin "6"
-			(uuid "44c50f7f-a66c-44ad-b08f-978dd3e9d0b4")
+			(uuid "173b7525-e2cc-46b0-bb55-d2c72dfd2274")
 		)
 		(pin "7"
-			(uuid "0cb53de6-8d3c-4b6a-aef3-79794830ae36")
+			(uuid "654e27f0-1bbd-4910-9c80-6758ceffc9fd")
 		)
 		(pin "8"
-			(uuid "545577a9-f006-4e85-bb99-cd4e31f49f0d")
+			(uuid "457e69f7-9e45-4e66-989e-2c798543f6fe")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "J20")
 					(unit 1)
 				)
@@ -2848,7 +2848,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c6cc2c2d-33a1-417d-8439-cb2ddee62072")
+		(uuid "117859e6-fc4a-47dc-ba6a-1d0df47807cb")
 		(property "Reference" "C69"
 			(at 106.045 222.25 0.0000)
 			(effects
@@ -2895,14 +2895,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "74551ac7-bf5b-47e3-b5a3-f3f9e26d4bb8")
+			(uuid "010df9a1-e09d-4266-a22d-56872c47304b")
 		)
 		(pin "2"
-			(uuid "1aab5c9b-4a07-4dcf-9c09-6a733a606dea")
+			(uuid "5aa0e1b7-e66a-4363-bfcd-1ae838af1444")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "C69")
 					(unit 1)
 				)
@@ -2918,7 +2918,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "e4e62e52-3375-4e0d-b83c-3e6e56dc4a44")
+		(uuid "9348cdd4-9b24-4a59-81b5-7f1a65a4598a")
 		(property "Reference" "C70"
 			(at 117.475 222.25 0.0000)
 			(effects
@@ -2965,14 +2965,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ca10f55c-128b-4de2-9b0f-90d413fe8bc6")
+			(uuid "2a66d68b-ad5c-456e-a2fe-7b4041dd549a")
 		)
 		(pin "2"
-			(uuid "9bf33afb-285a-42a2-854e-565717db6d36")
+			(uuid "9935a879-63a4-4cdc-8f0a-27cb5a71136d")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "C70")
 					(unit 1)
 				)
@@ -2988,7 +2988,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "9255d1d5-ebea-4703-b509-2799cfa571d9")
+		(uuid "2a33428b-10da-44fa-be57-3a1a75ab7cf9")
 		(property "Reference" "U34"
 			(at 326.39 263.525 0.0000)
 			(effects
@@ -3035,17 +3035,17 @@
 			)
 		)
 		(pin "1"
-			(uuid "30e24ebd-a4f7-4234-9a7f-5003d8ee966e")
+			(uuid "def33495-3919-4301-8832-e158683ca85c")
 		)
 		(pin "2"
-			(uuid "5d5dbd04-386a-43d3-9e44-47fdf2fdd2fb")
+			(uuid "62ef205d-f4ba-437b-91d7-9efb85ac5ab5")
 		)
 		(pin "3"
-			(uuid "aa76110e-dae0-4c48-bebd-6c3cba4cf70f")
+			(uuid "64b41457-d459-440d-9909-b82d29c716f3")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "U34")
 					(unit 1)
 				)
@@ -3061,7 +3061,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "ab3fdda7-32c1-4ae7-ab5b-95e3d11abd65")
+		(uuid "baf80e16-aba2-4792-8d51-a4384ab268d3")
 		(property "Reference" "C88"
 			(at 342.265 262.89 0.0000)
 			(effects
@@ -3108,14 +3108,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3e0484fd-2427-41ad-8683-d9694c518bcc")
+			(uuid "0d158efa-638c-4e6a-be0e-4ca424f06297")
 		)
 		(pin "2"
-			(uuid "33e6cb10-f3b7-47ea-9f6f-3a94de319aae")
+			(uuid "48346a5e-4146-467d-80e4-f901a922ff3e")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "C88")
 					(unit 1)
 				)
@@ -3131,7 +3131,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "7d126e3b-4add-4cdb-a565-0f0c968544e8")
+		(uuid "59f65d9d-dfbb-4f86-b4f4-6b5cabe456c5")
 		(property "Reference" "C89"
 			(at 354.965 262.89 0.0000)
 			(effects
@@ -3178,14 +3178,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5fd9c516-0da2-44c3-96a3-8893c8849e9e")
+			(uuid "b9dd949a-026d-4a14-a857-b59b1a103733")
 		)
 		(pin "2"
-			(uuid "737b8af1-4cb7-4172-8910-faba115c61de")
+			(uuid "53fa6bf9-7760-416d-90c2-5b5f95cadc20")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "C89")
 					(unit 1)
 				)
@@ -3201,7 +3201,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "7d8f996e-c463-4fee-b19b-86823a1bf1bd")
+		(uuid "fd9937ba-fb12-4e7b-be14-82998bd38751")
 		(property "Reference" "RN36"
 			(at 2.54 227.33 0.0000)
 			(effects
@@ -3248,32 +3248,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "ebf504b3-56a2-4b5c-b744-0e51cf6d7164")
+			(uuid "24b4a480-5b25-42b8-9c1d-2a91b98ed955")
 		)
 		(pin "2"
-			(uuid "9ecfbaa0-f928-4cd0-93a8-ff6d6c12823f")
+			(uuid "d713578d-c774-4e4e-9e43-380dc69935af")
 		)
 		(pin "3"
-			(uuid "6a02279c-e846-4df7-bec4-a8a9668086ea")
+			(uuid "e6055f1e-193a-484d-964b-7e90e89e235f")
 		)
 		(pin "4"
-			(uuid "e4c2a88d-043e-40db-abd0-a7eba9d18d59")
+			(uuid "ddea5d4d-af02-438a-b7ee-9d76ea088616")
 		)
 		(pin "5"
-			(uuid "3e0429b1-c9fe-4e9c-9923-84d7230b24f8")
+			(uuid "889fd335-8ec1-4696-86f7-2dcf8046fc08")
 		)
 		(pin "6"
-			(uuid "a0052165-e096-47ea-bef4-94f7df383ca0")
+			(uuid "bc55c7b6-be25-4cb2-b750-0806327c16bc")
 		)
 		(pin "7"
-			(uuid "46f7981e-f635-4c93-8b7c-04aa2524a8ad")
+			(uuid "26c79bb1-d19d-4c77-8765-eb5e80398614")
 		)
 		(pin "8"
-			(uuid "ef79103b-167d-4cd4-85fc-460a7f48bee4")
+			(uuid "f32cc063-a6a7-4b43-a90c-8699b3f1d24e")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "RN36")
 					(unit 1)
 				)
@@ -3289,7 +3289,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c79fb960-5ac2-416e-a348-a296c0d7148d")
+		(uuid "9e95aac0-a0c1-4287-a26a-4a83abfb65bd")
 		(property "Reference" "J36"
 			(at 379.73 177.8 0.0000)
 			(effects
@@ -3299,7 +3299,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Open-Smart TF Card Breakout"
+		(property "Value" "microSD header"
 			(at 379.73 152.4 0.0000)
 			(effects
 				(font
@@ -3317,7 +3317,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Open-Smart TF Card Breakout"
+		(property "MPN" "microSD header"
 			(at 382.27 170.1799 0)
 			(effects
 				(font
@@ -3336,35 +3336,35 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc474322-6884-4d1a-a986-dc066ee67dee")
+			(uuid "608a10c9-e8d8-402f-a0a9-e5c9ed8447c2")
 		)
 		(pin "2"
-			(uuid "bf6f7774-268b-439b-9219-e2c146a1de3c")
+			(uuid "0b47dc3c-3c06-4af6-b7f9-6a88aec674a3")
 		)
 		(pin "3"
-			(uuid "805a2034-d196-4eba-b408-c78adf32512e")
+			(uuid "465e4a48-5863-46bd-9f65-383e9e3db011")
 		)
 		(pin "4"
-			(uuid "b69ee21b-765a-4efb-9fbf-12bee2595951")
+			(uuid "b770e739-bfd3-4eac-a176-ca48896d3316")
 		)
 		(pin "5"
-			(uuid "cb199fa7-e6ae-4e50-a23b-aef68b4fb5a8")
+			(uuid "798a65e9-c261-4029-bdb9-76b1f38e17c5")
 		)
 		(pin "6"
-			(uuid "faf255ef-762f-48b2-b3b9-f5f0953e26b8")
+			(uuid "d3acc9f3-c454-4f98-9074-7459c9bb92a9")
 		)
 		(pin "7"
-			(uuid "ad981e36-5ef2-4f65-a4fb-6e384c4ac018")
+			(uuid "0ef8c7b5-9588-40ae-b779-5e6fbcd7f483")
 		)
 		(pin "8"
-			(uuid "d4be3e0b-aef6-4084-b9dd-434f0e20e272")
+			(uuid "9a1ecbc2-c574-4dd8-9a11-bbe40b1e56ad")
 		)
 		(pin "9"
-			(uuid "118dee59-a0fa-4614-94a3-658a6b68e64c")
+			(uuid "631ddea9-d0a1-4e64-9fd1-32b5a3de12d2")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "J36")
 					(unit 1)
 				)
@@ -3380,7 +3380,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "602a5ce0-4a12-4736-b021-f493d9465381")
+		(uuid "3f95857e-714c-4a46-a1f1-cf81fbe0a15d")
 		(property "Reference" "J54"
 			(at 494.03 182.88 0.0000)
 			(effects
@@ -3390,7 +3390,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SOFNG TF-15x15 microSD socket (C111196)"
+		(property "Value" "microSD TF15"
 			(at 527.05 182.88 0.0000)
 			(effects
 				(font
@@ -3427,38 +3427,38 @@
 			)
 		)
 		(pin "1"
-			(uuid "704e7fec-a13b-488e-a85f-290e43d3bf10")
+			(uuid "045406f3-16e5-4735-81ed-dd9b2c221e5b")
 		)
 		(pin "2"
-			(uuid "877ed06f-8386-483c-af46-d3082fb9303f")
+			(uuid "43d7546d-8821-4b54-8dc9-d48e8f8b8526")
 		)
 		(pin "3"
-			(uuid "d7112272-5436-472b-af71-f14cd761231a")
+			(uuid "9d30f3a9-5e36-4926-9bc8-0a76184c6cda")
 		)
 		(pin "4"
-			(uuid "8e90a8fa-5ecc-4107-bd39-391c1502281e")
+			(uuid "7d09949c-cf24-4853-a0d8-19a6d82bdc77")
 		)
 		(pin "5"
-			(uuid "5a5bbc29-876c-48da-8567-f2c484a866b5")
+			(uuid "1b842995-e442-49d0-80b5-66cd917efd24")
 		)
 		(pin "6"
-			(uuid "bb716ea2-1a7b-4d8a-be4c-7b94164caf8e")
+			(uuid "e3ac83e2-733d-4948-a9e7-e43bf743b307")
 		)
 		(pin "7"
-			(uuid "46336e30-18f4-4700-a0d4-e7e55d64db99")
+			(uuid "2ebffdbd-96ce-4c5f-8a47-6b55cd5a9074")
 		)
 		(pin "8"
-			(uuid "dbbcd03a-d560-4949-8874-b7541d4009ac")
+			(uuid "96b9299a-96ac-4a9e-a108-ed69a71e393b")
 		)
 		(pin "9"
-			(uuid "2a466013-39cb-4002-9f2a-8db0b9295d88")
+			(uuid "cedd6813-9ae9-4aae-b687-0e2d9d65ed18")
 		)
 		(pin "SH"
-			(uuid "ecc71579-4949-4aef-9aed-752289ef53c0")
+			(uuid "9b1906cc-26f9-4d7c-9472-f0338cd736c6")
 		)
 		(instances
-			(project "Storage, Wi-Fi and UI"
-				(path "/f30e3c77-321a-4714-b79a-6f0a1713eb3a"
+			(project "SD / Wi-Fi"
+				(path "/c9d525e7-cb00-4500-a753-cb8c57a852af"
 					(reference "J54")
 					(unit 1)
 				)
@@ -3475,7 +3475,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4bb89773-e584-4a14-b386-f203957fa35c")
+		(uuid "48a20764-cb14-4f07-b996-9bc57c01e2d4")
 	)
 	(global_label "I2C_SCL"
 		(shape passive)
@@ -3487,9 +3487,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "443ffd8b-a0b0-487e-96ea-faccbcec74f9")
+		(uuid "8ed36424-8ecd-4be1-b893-44126f5e477d")
 	)
-	(global_label "+3V3"
+	(global_label "3V3"
 		(shape passive)
 		(at 30.48 149.86 0.0000)
 		(fields_autoplaced yes)
@@ -3499,9 +3499,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "eacc7190-4fe1-4704-ae73-60776603194f")
+		(uuid "9401b4ba-f441-4817-a3c6-c4e5081fddc3")
 	)
-	(global_label "+5V"
+	(global_label "5V"
 		(shape passive)
 		(at 30.48 152.4 0.0000)
 		(fields_autoplaced yes)
@@ -3511,7 +3511,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "07c6aba8-aa9a-4939-bfac-a6fbb3634be9")
+		(uuid "8eb1f9fc-4c7f-4184-9ffa-10db0bfa0cbb")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3523,9 +3523,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a3b2440e-a8f2-4750-b887-2048ca41a392")
+		(uuid "bbdcad07-6cdf-48ca-aa6c-1e9f6367df12")
 	)
-	(global_label "SD_CS_N"
+	(global_label "SD_CS"
 		(shape passive)
 		(at 109.22 140.97 0.0000)
 		(fields_autoplaced yes)
@@ -3535,9 +3535,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3a517a07-cdc3-47ad-b30b-4d71a2cfd84d")
+		(uuid "64fbba20-cab4-42ae-b3e4-61446676fcf5")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 139.7 140.97 0.0000)
 		(fields_autoplaced yes)
@@ -3547,9 +3547,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c3068a69-59af-43d8-9c6e-32ad9b1b9cdb")
+		(uuid "68d98209-e7a4-4ef2-a023-9300da95fc6d")
 	)
-	(global_label "SD_MOSI"
+	(global_label "SD_SI"
 		(shape passive)
 		(at 109.22 143.51 0.0000)
 		(fields_autoplaced yes)
@@ -3559,9 +3559,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "80455ac7-7777-415a-a7b3-4b34196956ce")
+		(uuid "77ea4c19-f6e8-407c-8aaf-15970c47fe7a")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 139.7 143.51 0.0000)
 		(fields_autoplaced yes)
@@ -3571,9 +3571,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d17ec856-7218-4cf8-9980-d71ba0a69003")
+		(uuid "8faf225e-e053-4fbf-ae74-077d547008f7")
 	)
-	(global_label "SD_MISO"
+	(global_label "SD_SO"
 		(shape passive)
 		(at 109.22 146.05 0.0000)
 		(fields_autoplaced yes)
@@ -3583,9 +3583,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bc4fbd6e-976f-4498-9bb6-ec770602dcca")
+		(uuid "3a7b0d4e-ea81-4d5d-97d8-bad4c412483c")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 139.7 146.05 0.0000)
 		(fields_autoplaced yes)
@@ -3595,7 +3595,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7a4e106e-7adf-4c09-846a-91987f307a83")
+		(uuid "5d10436b-d19d-4bd2-9963-e5b541708024")
 	)
 	(global_label "SD_CD"
 		(shape passive)
@@ -3607,9 +3607,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "798e8461-0abf-44a0-b404-96ead9e5003d")
+		(uuid "a068b69e-ee9c-4391-87ec-a4a1a6b9e7b9")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 139.7 148.59 0.0000)
 		(fields_autoplaced yes)
@@ -3619,9 +3619,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "eec72c3c-0509-4b9c-bf98-b728a94c920c")
+		(uuid "0525c40c-e477-44dd-8df0-6cadc8e10d58")
 	)
-	(global_label "SD_CS_MCU"
+	(global_label "SPI_CS"
 		(shape passive)
 		(at 204.47 140.97 0.0000)
 		(fields_autoplaced yes)
@@ -3631,9 +3631,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6f567c92-3565-4900-a366-b0ea7e8a5d36")
+		(uuid "0542f5b7-d57e-4c9b-8d77-31a64a069468")
 	)
-	(global_label "SD_CS_N"
+	(global_label "SD_CS"
 		(shape passive)
 		(at 234.95 140.97 0.0000)
 		(fields_autoplaced yes)
@@ -3643,9 +3643,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f2fbef23-328c-4187-bc46-4198d08c8ce4")
+		(uuid "27ae1738-8de9-43be-81be-089f82428a4a")
 	)
-	(global_label "SD_MOSI_MCU"
+	(global_label "SPI_SI"
 		(shape passive)
 		(at 204.47 143.51 0.0000)
 		(fields_autoplaced yes)
@@ -3655,9 +3655,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "07861891-5677-490d-8acf-f308a3147cc0")
+		(uuid "5eeb6a64-7f79-4a7c-972a-40978896e73b")
 	)
-	(global_label "SD_MOSI"
+	(global_label "SD_SI"
 		(shape passive)
 		(at 234.95 143.51 0.0000)
 		(fields_autoplaced yes)
@@ -3667,9 +3667,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "05ede33b-df23-449e-a969-0b2921a711c6")
+		(uuid "0527d09d-0db5-433a-bee1-b9f8da326094")
 	)
-	(global_label "SD_SCK_MCU"
+	(global_label "SPI_CK"
 		(shape passive)
 		(at 204.47 146.05 0.0000)
 		(fields_autoplaced yes)
@@ -3679,9 +3679,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0076a9f8-f6d1-47fd-8f90-274a660938c7")
+		(uuid "1e1e09cf-e5f7-413a-b532-6725c282bc9d")
 	)
-	(global_label "SD_SCK"
+	(global_label "SD_CK"
 		(shape passive)
 		(at 234.95 146.05 0.0000)
 		(fields_autoplaced yes)
@@ -3691,9 +3691,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "be5ac2d6-879b-4549-817e-93af1d48c7fd")
+		(uuid "9f861db7-ccdb-404f-8be1-d2427cbcbabd")
 	)
-	(global_label "SD_MISO_MCU"
+	(global_label "SPI_SO"
 		(shape passive)
 		(at 204.47 148.59 0.0000)
 		(fields_autoplaced yes)
@@ -3703,9 +3703,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3b68bd71-57ad-4b1e-8ca4-4b8bb23ff304")
+		(uuid "2e12e5a9-b869-4d3b-b664-5fd78550d694")
 	)
-	(global_label "SD_MISO"
+	(global_label "SD_SO"
 		(shape passive)
 		(at 234.95 148.59 0.0000)
 		(fields_autoplaced yes)
@@ -3715,9 +3715,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "aa8c99f4-e1dc-4bc2-9890-92e1abc5ba34")
+		(uuid "d038f677-f55e-46eb-a8c8-2379916fbff3")
 	)
-	(global_label "+3V3"
+	(global_label "3V3"
 		(shape passive)
 		(at 74.93 166.37 0.0000)
 		(fields_autoplaced yes)
@@ -3727,9 +3727,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6f5269ba-20d5-4579-b164-ffb1e8c08252")
+		(uuid "93b419cc-d06a-4557-823e-5845b9a9bf7a")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 74.93 173.99 0.0000)
 		(fields_autoplaced yes)
@@ -3739,9 +3739,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "16ae3c83-2ce5-401e-9f8d-4e43d93877b6")
+		(uuid "63bb21cb-1b51-4b0f-a223-d9163dedb431")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 90.17 166.37 0.0000)
 		(fields_autoplaced yes)
@@ -3751,7 +3751,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "35ee77b5-eb3c-4c81-9cb5-98976b79b898")
+		(uuid "48d0c13a-65ec-4d4b-8241-4234899b9ccf")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3763,9 +3763,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e3cd3f0d-a667-43be-a67c-07152520400f")
+		(uuid "9df5ddc5-3b3d-43d5-8280-269d5947d557")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 101.6 166.37 0.0000)
 		(fields_autoplaced yes)
@@ -3775,7 +3775,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fbd49572-740e-45c3-90c7-b9a9c6028d07")
+		(uuid "8a66f053-eeb8-45b8-9758-8a7518e28e01")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3787,9 +3787,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "00c865d4-c1be-4c78-a0c5-b5217a5c882a")
+		(uuid "e2d6c2af-0d1e-4151-b24d-be0faa48e460")
 	)
-	(global_label "SD_CD_MCU"
+	(global_label "CD"
 		(shape passive)
 		(at 294.64 165.1 0.0000)
 		(fields_autoplaced yes)
@@ -3799,7 +3799,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e090e4c5-dff5-4bfa-8e54-e0094ce195f0")
+		(uuid "b620989f-902b-4297-8f9a-b4fe141eedad")
 	)
 	(global_label "SD_CD"
 		(shape passive)
@@ -3811,7 +3811,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "47af358e-dcd7-49db-a6c6-a7bff74df088")
+		(uuid "8b2f0865-95a7-4fcb-b2c6-009030423317")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3823,9 +3823,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cf140564-08e2-464a-b08d-7ac028aac3be")
+		(uuid "971d3b18-d370-4941-800c-5423de1f8f8b")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 46.99 201.93 0.0000)
 		(fields_autoplaced yes)
@@ -3835,9 +3835,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1d460720-c903-4d2b-ac84-cc90a41908b6")
+		(uuid "5c668a3d-0830-4a67-9a94-1c3a8d9a9dc5")
 	)
-	(global_label "WIFI_GPIO2"
+	(global_label "ESP_IO2"
 		(shape passive)
 		(at 34.29 204.47 0.0000)
 		(fields_autoplaced yes)
@@ -3847,9 +3847,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f93f447f-edc0-4c6c-83b1-e89c52a453c6")
+		(uuid "39bbdd2e-ab5d-4b1d-87dc-ad355352558b")
 	)
-	(global_label "WIFI_GPIO0"
+	(global_label "ESP_IO0"
 		(shape passive)
 		(at 46.99 204.47 0.0000)
 		(fields_autoplaced yes)
@@ -3859,9 +3859,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3b74f4eb-afe0-4ca0-abce-20de73b4a76f")
+		(uuid "c33af2cf-3442-4495-8d10-e00415bd0dfe")
 	)
-	(global_label "WIFI_RX"
+	(global_label "UART_RX"
 		(shape passive)
 		(at 34.29 207.01 0.0000)
 		(fields_autoplaced yes)
@@ -3871,9 +3871,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "53a841a9-0661-43ae-8625-666227fa21b5")
+		(uuid "30592a6c-ba5b-46d3-bf9b-0c1d03bdb440")
 	)
-	(global_label "WIFI_TX"
+	(global_label "UART_TX"
 		(shape passive)
 		(at 46.99 207.01 0.0000)
 		(fields_autoplaced yes)
@@ -3883,9 +3883,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "628cb1e7-e4fc-4837-bea3-6c4d68fececf")
+		(uuid "088946ce-e21d-46d4-b2e7-8f73e4c09853")
 	)
-	(global_label "WIFI_EN"
+	(global_label "ESP_EN"
 		(shape passive)
 		(at 34.29 209.55 0.0000)
 		(fields_autoplaced yes)
@@ -3895,9 +3895,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "306d474c-7c73-44e6-b06a-d60f06c32701")
+		(uuid "f242f9df-cf6d-42cd-8558-c3f97429ae4a")
 	)
-	(global_label "WIFI_RST"
+	(global_label "ESP_RST"
 		(shape passive)
 		(at 46.99 209.55 0.0000)
 		(fields_autoplaced yes)
@@ -3907,9 +3907,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7131d23b-a5f4-4a87-9796-45965c17c7f1")
+		(uuid "258218e3-ddf8-4734-81a5-b75b77e0298c")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 105.41 215.9 0.0000)
 		(fields_autoplaced yes)
@@ -3919,7 +3919,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7b269cf2-2436-4335-b47e-a252dc501c46")
+		(uuid "12e01216-acf2-4828-8bb3-173f0fb1d1a2")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3931,9 +3931,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "afe802ff-3506-4cf5-ae55-8ddcee0d8040")
+		(uuid "09a9709b-1b40-4af9-8011-e2e0b9c9eff9")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 116.84 215.9 0.0000)
 		(fields_autoplaced yes)
@@ -3943,7 +3943,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6b47d964-4db4-4494-9096-ce586bb8f89a")
+		(uuid "9cb3392f-54de-425b-9f2d-0605168af45e")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3955,7 +3955,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8cee0c83-ace4-454f-8794-967cf57c6228")
+		(uuid "93a664eb-bccc-4748-b195-4580f6466d6d")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -3967,9 +3967,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5fb0ebd0-047f-4f15-988b-a8870d71a5fc")
+		(uuid "0051fdba-edbc-4993-a97c-f808666a5ecd")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 337.82 260.35 0.0000)
 		(fields_autoplaced yes)
@@ -3979,9 +3979,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cfc53eb7-a462-4963-ba7c-c4a102edd853")
+		(uuid "202926c6-460b-4fbb-a0c5-bce2add61fe5")
 	)
-	(global_label "+5V"
+	(global_label "5V"
 		(shape passive)
 		(at 322.58 260.35 0.0000)
 		(fields_autoplaced yes)
@@ -3991,9 +3991,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b682a7f3-b179-4eab-925e-5521d438f13b")
+		(uuid "2101e9a6-04f8-443e-b648-0f735fd4dc5e")
 	)
-	(global_label "+5V"
+	(global_label "5V"
 		(shape passive)
 		(at 341.63 256.54 0.0000)
 		(fields_autoplaced yes)
@@ -4003,7 +4003,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "45f6f5ab-5de5-4cef-9878-eed752d60355")
+		(uuid "468daf84-254c-4463-9c1b-0dcb3da17451")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -4015,9 +4015,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ed83952b-e83d-4598-84f7-4d921c86413f")
+		(uuid "27212ecb-5113-412f-8d80-060cb27b4838")
 	)
-	(global_label "+5V"
+	(global_label "5V"
 		(shape passive)
 		(at 354.33 256.54 0.0000)
 		(fields_autoplaced yes)
@@ -4027,7 +4027,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e1337ced-538c-42c1-990f-4957488827ce")
+		(uuid "f6dd8374-1716-486d-a72b-46de751c8849")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -4039,9 +4039,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7f2a264b-d7a8-49f1-b658-ab06730da85b")
+		(uuid "5d176501-1d06-49a9-87f6-d9d34e5e2c8e")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 5.08 215.9 0.0000)
 		(fields_autoplaced yes)
@@ -4051,9 +4051,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "31df1d04-b811-4384-97eb-e9e0cf2aaedb")
+		(uuid "3137f1b5-7e85-4639-a8da-2175496f0ca1")
 	)
-	(global_label "WIFI_EN"
+	(global_label "ESP_EN"
 		(shape passive)
 		(at 35.56 215.9 0.0000)
 		(fields_autoplaced yes)
@@ -4063,9 +4063,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a310beef-1aa5-416e-93d9-061760e6c851")
+		(uuid "42d35c99-9a9e-44e5-bae8-943ac097a7ed")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 5.08 218.44 0.0000)
 		(fields_autoplaced yes)
@@ -4075,9 +4075,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "361194e3-9cbb-4ea0-b60b-fa0f341a9ae2")
+		(uuid "d809b86b-f1fe-46ca-b52c-a6e7e0fb5ab9")
 	)
-	(global_label "WIFI_RST"
+	(global_label "ESP_RST"
 		(shape passive)
 		(at 35.56 218.44 0.0000)
 		(fields_autoplaced yes)
@@ -4087,9 +4087,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9c066cf1-58f9-47c1-ac3a-9557f7b07100")
+		(uuid "f909ca56-3741-4c03-bfc1-1722eec7a975")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 5.08 220.98 0.0000)
 		(fields_autoplaced yes)
@@ -4099,9 +4099,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "21cf75ea-329d-4b9e-984d-557732bf38fc")
+		(uuid "85f360a6-09a1-4939-8e1a-ffb6c2466c42")
 	)
-	(global_label "WIFI_GPIO0"
+	(global_label "ESP_IO0"
 		(shape passive)
 		(at 35.56 220.98 0.0000)
 		(fields_autoplaced yes)
@@ -4111,9 +4111,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "feb6e75a-b4e5-414f-9f4c-15170394f7f5")
+		(uuid "b4ee98f3-11df-400b-9d2a-20d7343ca065")
 	)
-	(global_label "+3V3_WIFI"
+	(global_label "WIFI_3V3"
 		(shape passive)
 		(at 5.08 223.52 0.0000)
 		(fields_autoplaced yes)
@@ -4123,9 +4123,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "65919c21-da80-45bf-aa57-19379fe17397")
+		(uuid "abc0b167-3cb2-47e8-b711-aba7a4eec13b")
 	)
-	(global_label "WIFI_GPIO2"
+	(global_label "ESP_IO2"
 		(shape passive)
 		(at 35.56 223.52 0.0000)
 		(fields_autoplaced yes)
@@ -4135,7 +4135,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e97fa983-650c-4200-b075-e46c29a7a1b7")
+		(uuid "c32acce4-405c-4ef6-8a62-bfa3d178eb69")
 	)
 	(global_label "SD_CD"
 		(shape passive)
@@ -4147,7 +4147,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6b04db6c-f0c9-4096-9129-97ded364d1ee")
+		(uuid "7ea57243-3736-4a91-8d6a-088d5d325934")
 	)
 	(global_label "SD_DAT1"
 		(shape passive)
@@ -4159,9 +4159,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "61e1337c-2404-4139-a6e5-425c6f48de22")
+		(uuid "c3058471-e89d-4c3e-a536-5d84753b7feb")
 	)
-	(global_label "SD_MISO"
+	(global_label "SD_SO"
 		(shape passive)
 		(at 374.65 160.02 0.0000)
 		(fields_autoplaced yes)
@@ -4171,7 +4171,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "632d88f9-8100-42fe-b212-b5c1031a5b30")
+		(uuid "c1a71b99-3c08-4fd8-b88e-fbc80338390f")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -4183,9 +4183,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "17de2bb0-7f0e-4346-be81-2aba4b16b0cd")
+		(uuid "555f6f87-9cd3-4664-aa42-0b15f330df17")
 	)
-	(global_label "SD_SCK"
+	(global_label "SD_CK"
 		(shape passive)
 		(at 374.65 165.1 0.0000)
 		(fields_autoplaced yes)
@@ -4195,9 +4195,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d07646e1-fb02-4338-887d-c8bc5e99a1ce")
+		(uuid "45a8f61e-23aa-4bea-8885-ef67fae7787b")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 374.65 167.64 0.0000)
 		(fields_autoplaced yes)
@@ -4207,9 +4207,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "434b6cd0-837b-4c90-98e2-fa94481985e6")
+		(uuid "a413f9e0-7800-4713-a0d5-ca4ef4a38263")
 	)
-	(global_label "SD_MOSI"
+	(global_label "SD_SI"
 		(shape passive)
 		(at 374.65 170.18 0.0000)
 		(fields_autoplaced yes)
@@ -4219,9 +4219,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a8554f38-dfcb-4eb3-bdea-2bcf115f6b28")
+		(uuid "610f72c1-cfdb-47f3-a57f-9b49ad19eaa6")
 	)
-	(global_label "SD_CS_N"
+	(global_label "SD_CS"
 		(shape passive)
 		(at 374.65 172.72 0.0000)
 		(fields_autoplaced yes)
@@ -4231,7 +4231,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c90fe4ab-c82b-4125-ad1d-7254704ee69e")
+		(uuid "fc337231-9997-46b7-b8d8-ea4b7794c8df")
 	)
 	(global_label "SD_DAT2"
 		(shape passive)
@@ -4243,7 +4243,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c5efa4b5-f958-4d19-856c-f9831a2d54f5")
+		(uuid "4829eb5f-2193-4015-ab0a-0697a81ab266")
 	)
 	(global_label "SD_DAT2"
 		(shape passive)
@@ -4255,9 +4255,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "94dcc16a-a792-46e8-855e-3338ccec2e7f")
+		(uuid "0f1e18f3-c7a6-4c9c-8835-b32f564f3b87")
 	)
-	(global_label "SD_CS_N"
+	(global_label "SD_CS"
 		(shape passive)
 		(at 487.68 157.48 0.0000)
 		(fields_autoplaced yes)
@@ -4267,9 +4267,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "396ab2ff-b874-4ece-9c8e-ab19bf142196")
+		(uuid "bda4188a-c296-4957-a04d-13e25204f825")
 	)
-	(global_label "SD_MOSI"
+	(global_label "SD_SI"
 		(shape passive)
 		(at 487.68 160.02 0.0000)
 		(fields_autoplaced yes)
@@ -4279,9 +4279,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "53d673bd-071d-4c2c-9f9d-10723fdb2b2d")
+		(uuid "e37364f2-e13d-47d0-8d10-98a22d77bff5")
 	)
-	(global_label "+3V3_SD"
+	(global_label "SD_3V3"
 		(shape passive)
 		(at 487.68 162.56 0.0000)
 		(fields_autoplaced yes)
@@ -4291,9 +4291,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "dc015377-d9a0-4420-b5d9-8f71410d244d")
+		(uuid "84136bb5-1990-482a-9853-c274463a232d")
 	)
-	(global_label "SD_SCK"
+	(global_label "SD_CK"
 		(shape passive)
 		(at 487.68 165.1 0.0000)
 		(fields_autoplaced yes)
@@ -4303,7 +4303,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e1f5658d-0385-4841-add7-0b8fc5a9b1e9")
+		(uuid "5ebdc8bd-38e7-48b5-a4c0-24461372f847")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -4315,9 +4315,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "05031376-0cb9-40ba-b80b-b8a09924642e")
+		(uuid "0a06bc16-a51a-4449-9ef9-1dfad34a9071")
 	)
-	(global_label "SD_MISO"
+	(global_label "SD_SO"
 		(shape passive)
 		(at 487.68 170.18 0.0000)
 		(fields_autoplaced yes)
@@ -4327,7 +4327,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b73e7277-d472-490b-8aeb-e1f6cd8d6cc6")
+		(uuid "6230b7be-0eb4-46de-a0dc-242f72747748")
 	)
 	(global_label "SD_DAT1"
 		(shape passive)
@@ -4339,7 +4339,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ba3b2cd3-a334-44f5-8caf-5559c4a51e73")
+		(uuid "6ee5eb8c-1f04-46ec-b767-d84886378336")
 	)
 	(global_label "SD_CD"
 		(shape passive)
@@ -4351,7 +4351,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a445b646-e73b-4445-be00-4f200f3819ec")
+		(uuid "67869769-ac5f-4c28-bde8-2925ea0b7799")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -4363,9 +4363,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "afe33a5c-8edc-4df2-8bb5-62ecb319ac38")
+		(uuid "4b2c25ca-f526-47be-987d-b2733e39b97b")
 	)
-	(text_box "MicroSD card and ESP-01/ESP-01S socket. The former keyboard scan interface is removed together with the former 2x10 expansion input connector."
+	(text_box "MicroSD card and ESP-01. The former keyboard scan interface is removed together with the former 2x10 expansion input connector."
 		(exclude_from_sim no)
 		(at 15 15 0.0000)
 		(size 190 35)
@@ -4383,7 +4383,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "6f02096f-eed3-4dd0-8381-1feac60b4225")
+		(uuid "48f3a25c-f202-4619-8316-0a8d72886351")
 	)
 	(sheet_instances
 		(path "/"

@@ -8,32 +8,36 @@ bypass on the fused node.
 
 | Rail | Source | Input | Output | Intended load |
 |---|---|---|---|---|
-| `+5V` | U1 LMR36510, 1 A | `VIN_PROT` | 22 uH, 2 x 22 uF plus 100 nF | MOD1, U2, U34, U28, encoders |
-| `+3V3` | U2 AMS1117-3.3 | `+5V` | 22 uF plus 100 nF each side | Input logic, 74AHCT595 control, SD, LCD |
-| `+3V3_WIFI` | U34 AMS1117-3.3 | `+5V` | 22 uF plus 100 nF each side | ESP-01/ESP-01S |
-| `+12V_AO` | U37 L78L12 | `VIN_PROT` | 22 uF plus 100 nF | U38 and 0-10 V outputs |
-| `+12V_BL` | U3 isolated LMR36510, 1 A | isolated `+24V_FIELD` | 47 uH, 3 x 22 uF plus 100 nF | Backlight/CCFL input |
+| `5V` | U1 LMR36510, 1 A | `VIN_P` | 22 uH, 2 x 22 uF plus 100 nF | MOD1, U2, U34, U28, encoders |
+| `3V3` | U2 AMS1117-3.3 | `5V` | 22 uF plus 100 nF each side | Input logic, 74AHCT595 control, SD, LCD |
+| `WIFI_3V3` | U34 AMS1117-3.3 | `5V` | 22 uF plus 100 nF each side | ESP-01/ESP-01S |
+| `AO_12V` | U37 L78L12 | `VIN_P` | 22 uF plus 100 nF | U38 and 0-10 V outputs |
+| `BL_12V` | U3 isolated LMR36510, 1 A | isolated `PLC_24V` | 47 uH, 3 x 22 uF plus 100 nF | Backlight/CCFL input |
 
 U1 feedback uses R70 and R71 in the upper leg and R72 in the lower leg. U3
 feedback uses R126 in the upper leg and R127/R128 in the lower leg. U1 and U3
 each have six 0.3 mm thermal vias in their PowerPAD land; U3's array is tied to
-`ISO_GND`.
+`PLC_0V`.
 
-The WeAct module receives `+5V` and uses its own onboard 3.3 V regulator.
-Do not connect that regulator output to the motherboard `+3V3` rail.
+Thermal-relief zone connections are intentionally limited to the two switching
+regulators. Other `GND` and `PLC_0V` pads use solid zone connections so the
+two-spoke rule does not create unrelated starved-thermal warnings.
+
+The WeAct module receives `5V` and uses its own onboard 3.3 V regulator.
+Do not connect that regulator output to the motherboard `3V3` rail.
 
 ## Estimated loads
 
 | Load | Typical | Peak | Source |
 |---|---:|---:|---|
-| WeAct RP2350B module | 90 mA | 150 mA | `+5V` |
-| 74HC logic and indicators | 60 mA | 130 mA | `+3V3` / `+5V` |
-| MicroSD | 30 mA | 120 mA | `+3V3_SD` |
-| ESP-01/ESP-01S | 80 mA | 500 mA | `+3V3_WIFI` |
-| Encoders | 30 mA | 150 mA | `+5V_ENC` |
-| Four analog outputs | 3 mA | 12 mA | `+12V_AO` |
-| Isolated field wetting | 110 mA | 167 mA | external `+24V_FIELD` |
-| Backlight input | load dependent | 1 A | `+12V_BL` |
+| WeAct RP2350B module | 90 mA | 150 mA | `5V` |
+| 74HC logic and indicators | 60 mA | 130 mA | `3V3` / `5V` |
+| MicroSD | 30 mA | 120 mA | `SD_3V3` |
+| ESP-01/ESP-01S | 80 mA | 500 mA | `WIFI_3V3` |
+| Encoders | 30 mA | 150 mA | `ENC_5V` |
+| Four analog outputs | 3 mA | 12 mA | `AO_12V` |
+| PLC contact current | 110 mA | 167 mA | external `PLC_24V` |
+| Backlight input | load dependent | 1 A | `BL_12V` |
 
 U1 is sized for the expected 100-200 mA motherboard load with substantial
 margin. The ESP peak current is the reason for its dedicated U34 regulator and
@@ -49,8 +53,7 @@ branch is not part of the main field-isolated domain.
 
 ## Field power
 
-J33 and J45 are parallel two-pin inputs for `+24V_FIELD` and `ISO_GND`.
-The field domain supplies:
+J33 and J45 are parallel 1=PLC24+ 2=PLC- inputs. The PLC domain supplies:
 
 - PLC contact loops through U18-U21.
 - The E-stop loop through U35.
@@ -69,10 +72,10 @@ the TBD62083AFG channel, package and temperature limits.
 
 ## Analog-output rail
 
-U37 is a 100 mA linear regulator from `VIN_PROT`. Its expected load is the
+U37 is a 100 mA linear regulator from `VIN_P`. Its expected load is the
 TLV2374 quiescent current, feedback dividers and high-impedance analog inputs.
 At 24 V input and a few milliamps, the regulator dissipation is small. Do not
-use `+12V_AO` for solenoids, lamps or other high-current field loads.
+use `AO_12V` for solenoids, lamps or other high-current field loads.
 
 The ideal 0-10 V output full scale is about 10.56 V with 3.3 V PWM and the
 3.2x gain stage. Firmware must clamp the calibrated maximum duty below 100%.

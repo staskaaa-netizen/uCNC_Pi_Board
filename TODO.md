@@ -2,8 +2,7 @@
 
 ## Before fabrication
 
-- Resolve the clearance, starved-thermal, courtyard and silkscreen findings in
-  the current DRC report.
+- Review or clean the remaining silkscreen warnings.
 - Recheck the isolated field creepage and clearance against the intended
   enclosure and pollution degree.
 - Confirm the target LCD cable, panel lane polarity and 330 ohm series value.
@@ -22,6 +21,7 @@
   registers.
 - Generalize the RP2350 PIO encoder backend if ENC1 and ENC2 are needed.
 - Preserve active-low E-stop polarity on GPIO9.
+- Implement the non-sequential A4/A6 motion-bit remap.
 - Calibrate all four 0-10 V outputs against J25 after assembly.
 - Remove WeAct module resistor R16 when GPIO23 is used as the shift-register
   input return.

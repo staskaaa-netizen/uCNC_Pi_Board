@@ -10,6 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import pcbnew
+from design_names import canonical_name, shorten_text
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -339,9 +340,11 @@ def main() -> None:
         if not footprint:
             continue
         properties = component_properties(component)
-        nets = all_nets[reference]
+        source_nets = all_nets[reference]
+        nets = {canonical_name(name) for name in source_nets}
         value = (component.findtext("value") or "").strip()
         role, associated, role_rule = role_for(reference, value, footprint, nets)
+        associated = shorten_text(associated)
         block = functional_block(reference, properties.get("Sheetname", ""), nets, role)
         rule = placement_rule(role, block, nets)
         if rule == "mechanical anchor; do not move without approval" and role not in {"module", "mounting hole", "connector"}:
@@ -398,7 +401,7 @@ def main() -> None:
                 "x_mm": x,
                 "y_mm": y,
                 "dnp": properties.get("Assembly") == "DNP",
-                "nets": "; ".join(sorted(nets)),
+                "nets": "; ".join(sorted(source_nets)),
             }
         )
 

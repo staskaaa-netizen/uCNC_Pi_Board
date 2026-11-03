@@ -21,9 +21,9 @@ divider resistors are 1% 1206 parts.
 Use the module's filtered `REFP`/ADC reference and calibrate each channel at two
 points, for example 1 V and 9 V. Store gain and offset per channel.
 
-## Outputs AOUT0-AOUT3
+## Outputs AO0-AO3
 
-GPIO44, GPIO46, GPIO45 and GPIO47 generate AOUT0-AOUT3 respectively. Each channel
+GPIO44, GPIO46, GPIO45 and GPIO47 generate AO0-AO3 respectively. Each channel
 uses the requested two-stage low-pass filter:
 
 ```text
@@ -45,7 +45,7 @@ filter time constants; change the carrier only after checking settling time,
 ripple and the target VFD input.
 
 U38 is a TLV2374 rail-to-rail quad op-amp. U37 derives its local 100 mA,
-`+12V_AO` rail from `VIN_PROT`; 24 V board input is required for guaranteed
+`AO_12V` rail from `VIN_P`; 24 V board input is required for guaranteed
 0-10 V output range. C100 is the regulator input bypass, C101 is the 12 V rail
 reservoir and C102 is the op-amp bypass. J25 pin 1 is the common ground return;
-pins 2-5 are AOUT0-AOUT3.
+pins 2-5 are AO0-AO3.

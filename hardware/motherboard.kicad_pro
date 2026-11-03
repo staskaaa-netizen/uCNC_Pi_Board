@@ -498,21 +498,40 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.25,
+        "clearance": 0.3,
         "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "Analog",
+        "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 0.8,
         "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.5,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "FieldPower",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.8,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
         "wire_width": 6
       },
       {
@@ -543,25 +562,6 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "DigitalDiffPair",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.2,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
         "name": "EncoderPower",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
@@ -570,25 +570,6 @@
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.5,
-        "diff_pair_gap": 0.2,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "FieldPower",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.8,
-        "tuning_profile": "",
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
         "wire_width": 6
       },
       {
@@ -605,6 +586,25 @@
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "DigitalDiffPair",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -631,21 +631,21 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.3,
+        "clearance": 0.25,
         "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "Power",
+        "name": "Analog",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.8,
+        "track_width": 0.25,
         "tuning_profile": "",
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -657,23 +657,19 @@
     "netclass_patterns": [
       {
         "netclass": "FieldPower",
-        "pattern": "ISO_GND"
+        "pattern": "PLC_0V"
       },
       {
         "netclass": "FieldPower",
-        "pattern": "+24V_FIELD"
+        "pattern": "PLC_24V"
       },
       {
         "netclass": "AnalogPower",
-        "pattern": "+12V_AO"
-      },
-      {
-        "netclass": "AnalogPower",
-        "pattern": "+12V_RAW"
+        "pattern": "AO_12V"
       },
       {
         "netclass": "EncoderPower",
-        "pattern": "+5V_ENC"
+        "pattern": "ENC_5V"
       },
       {
         "netclass": "Ground",
@@ -685,19 +681,39 @@
       },
       {
         "netclass": "Power",
-        "pattern": "+5V"
+        "pattern": "5V"
       },
       {
         "netclass": "Power",
-        "pattern": "+5V_*"
+        "pattern": "5V_*"
       },
       {
         "netclass": "Power",
-        "pattern": "+3V3*"
+        "pattern": "3V3"
       },
       {
         "netclass": "Power",
-        "pattern": "+12V_*"
+        "pattern": "3V3_*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "WIFI_3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "SD_3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "ADC_3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "12V_*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "BL_12V"
       },
       {
         "netclass": "DigitalDiffPair",
@@ -713,7 +729,15 @@
       },
       {
         "netclass": "Analog",
-        "pattern": "AOUT*"
+        "pattern": "ADC*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "AO*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "PWM*"
       }
     ]
   },

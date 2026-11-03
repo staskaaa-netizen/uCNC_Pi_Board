@@ -67,7 +67,7 @@ and program offsets deliberately.
 
 | uCNC function | Signal | GPIO | MOD1 pin | Polarity |
 |---|---|---|---:|---|
-| `ESTOP` | `ESTOP_N` | GPIO9 | 53 | Active low |
+| `ESTOP` | `ESTOP` | GPIO9 | 53 | Active low |
 
 E-stop is a direct input outside the shift-register chain. Configure the
 LeanCam board map for active-low E-stop and keep the machine's hard-wired
@@ -77,8 +77,12 @@ safety energy removal independent of firmware.
 
 The physical chain assignments are in
 [Input and output bit map](io-bit-map.md). The LeanCam board map must preserve
-the U6-U9 input order, U10-U13 output order, paired motion outputs and the three
+the U6-U9 input order, U10-U13 output order, paired motion outputs and the
 servo status connectors per axis.
+
+Axis IDs follow the top-to-bottom connector order: A0-A3 use J10/J11/J28/J29,
+A4 uses J47/J50, A5 uses J46/J49 and A6 uses J30/J48. The STEP/DIR bits for A4
+and A6 are therefore not sequential; use the bit table directly.
 
 ## WeAct preparation
 

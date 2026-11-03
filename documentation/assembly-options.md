@@ -2,7 +2,7 @@
 
 ## PCB
 
-- Two-layer, 200 mm x 150 mm FR-4 board, 1.6 mm nominal thickness.
+- Two-layer, 160 mm x 120 mm FR-4 board, 1.6 mm nominal thickness.
 - Four M3 mounting holes.
 - Main assembly and J22 are on F.Cu.
 - MOD1 uses four 1 x 15, 2.54 mm female sockets on the carrier and matching male
@@ -32,10 +32,10 @@ supervisor.
 
 ## Logic population
 
-- U6-U9 are 74HC165D input registers at `+3V3`.
-- U10-U13 are SN74AHCT595DR output registers at `+5V`.
-- U28 is an SN74AHCT541DW encoder receiver at `+3V3`.
-- U42/U43 are TC74AC541F motion buffers at `+5V`.
+- U6-U9 are 74HC165D input registers at `3V3`.
+- U10-U13 are SN74AHCT595DR output registers at `5V`.
+- U28 is an SN74AHCT541DW encoder receiver at `3V3`.
+- U42/U43 are TC74AC541F motion buffers at `5V`.
 - U26/U27 are TBD62083AFG low-side output arrays.
 - U18-U21 are TLP291-4 PLC input optocouplers.
 - U35 is the dedicated E-stop TLP291.
@@ -94,7 +94,7 @@ The module's USB connector is oriented toward the accessible board edge.
 
 J20 accepts the original ESP-01 or ESP-01S. The module is optional; the
 motherboard operates without it. GPIO2, GPIO0, EN and RST have 10 k pull-ups in
-the `+3V3_WIFI` domain.
+the `WIFI_3V3` domain.
 
 For UART programming, ground ESP GPIO0 externally, reset the module, release
 GPIO0 and program it through the socket. Keep the antenna end toward the board
@@ -102,9 +102,9 @@ perimeter with at least 15 mm of copper- and component-free clearance.
 
 ## First power-up
 
-1. Inspect the isolated input side and confirm that `ISO_GND` is not connected
+1. Inspect the isolated input side and confirm that `PLC_0V` is not connected
    to logic GND.
-2. Verify the +5 V, +3.3 V, +12V_AO and isolated +12V_BL rails on current-limited
+2. Verify the +5 V, +3.3 V, AO_12V and isolated BL_12V rails on current-limited
    bench supplies before fitting MOD1, an ESP module or a card.
 3. Set the machine input to 24 V after the low-voltage rails are verified.
 4. Confirm the main converter and analog regulator temperatures under load.
