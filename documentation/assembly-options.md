@@ -57,6 +57,7 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 - PLC pull-ups: RN32-RN35, 4 x 10 k, 4 x 0603.
 - Output-register pull-downs: RN8-RN13, RN30 and RN31, 4 x 10 k.
 - Output-opto drive networks: RN37-RN40, 4 x 1 k, 4 x 1206.
+- All indicators: Lite-On `LTST-C150KGKT`, green 1206 LED.
 - SD pull-ups: RN43, 4 x 10 k.
 - SD series resistors: RN44, 4 x 22 ohm.
 - LVDS series resistors: RN26/RN27, 4 x 330 ohm, 4 x 1206.

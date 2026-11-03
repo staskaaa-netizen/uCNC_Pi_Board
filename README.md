@@ -15,6 +15,7 @@ recorded copper-clearance DRC findings before fabrication.
 - Four cascaded 74HC165 inputs and four cascaded SN74AHCT595 outputs.
 - Seven STEP/DIR axes, A0-A6, with labels `EN3 STPn DIRn`.
 - Seven paired servo ZERO/ERROR inputs with individual 3-pin connectors.
+- All 35 indicator LEDs are green Lite-On `LTST-C150KGKT` 1206 parts.
 - Two TC74AC541F 5 V motion buffers.
 - Sixteen optically isolated general outputs, `D01-D16`, driven by two
   TBD62083AFG arrays.
@@ -53,7 +54,7 @@ Open `hardware/motherboard.kicad_pro` in KiCad 10.0 or newer.
 - Root schematic: `hardware/motherboard.kicad_sch`
 - PCB: `hardware/motherboard.kicad_pcb`
 - Local symbols, footprints and 3D models: `hardware/libraries/`
-- Manufacturing data: `manufacturing/`
+- Manufacturing data: `manufacturing/` (see `manufacturing/README.md`)
 - Design notes: `documentation/`
 
 The checked-in KiCad board is authoritative. It contains the approved manual
@@ -89,7 +90,11 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Current top 3D render](manufacturing/board-3d-top-current.png)
 - [Current bottom 3D render](manufacturing/board-3d-bottom-current.png)
 - [Connector label orientation check](manufacturing/connector-label-check.png)
-- [Grouped BOM](manufacturing/bom.csv)
+- [Complete grouped BOM](manufacturing/bom.csv)
+- [SMT-only grouped BOM](manufacturing/bom-smt.csv)
+- [SMT-only reference BOM](manufacturing/bom-smt-refs.csv)
+- [PCB fabrication ZIP](manufacturing/uCNC_Pi_Board_PCB_Fabrication.zip)
+- [PCB fabrication + SMT assembly ZIP](manufacturing/uCNC_Pi_Board_SMT_Assembly.zip)
 
 ## Verification status
 

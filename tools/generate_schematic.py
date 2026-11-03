@@ -103,7 +103,7 @@ MPN = {
     "C1206": ("Samsung Electro-Mechanics", "CL31 series 1206 X7R"),
     "C1210": ("Samsung Electro-Mechanics", "CL32 series 1210 X7R"),
     "C1206_100V": ("Murata", "GRM31 series 1206 C0G/X7R"),
-    "LED1206": ("Lite-On", "LTST-C150 series"),
+    "LED1206": ("Lite-On", "LTST-C150KGKT"),
     "D_SOD323": ("Diodes Incorporated", "1N4148WS"),
     "D_SMA": ("Diodes Incorporated", "SS54"),
     "D_SMB": ("Bourns", "SMBJ24CA"),

@@ -158,7 +158,7 @@ Current KiCad 10 checks:
 
 - Schematic: 281 components and 320 nets, with no connectivity failures.
 - PCB: 275 footprints, 2,276 routed track segments and 187 vias.
-- DRC: zero errors and zero unconnected items; 170 silkscreen warnings remain.
+- DRC: zero errors and zero unconnected items; 179 silkscreen warnings remain.
 - Warning classes: silkscreen over mask, silkscreen clearance, text height and
   board-edge clipping.
 - ERC: no electrical errors; 35 library-symbol cache warnings.

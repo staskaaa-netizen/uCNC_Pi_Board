@@ -1029,6 +1029,7 @@ def build_board() -> None:
     add_lvds_connector_silkscreen(board)
     update_field_connector_silkscreen(board)
     set_visible_connector_values(board)
+    promote_connector_labels(board)
     fix_component_3d_models(board)
     board.BuildConnectivity()
 
@@ -1179,6 +1180,23 @@ def set_visible_connector_values(board) -> None:
         footprint.Value().SetTextAngleDegrees(text_angles[reference])
 
 
+def promote_connector_labels(board) -> None:
+    """Move connector designators and values onto the physical silkscreen."""
+    for footprint in board.GetFootprints():
+        reference = footprint.GetReference()
+        if not reference.startswith("J") or reference == "J22":
+            continue
+        layer = pcbnew.B_SilkS if footprint.GetLayer() == pcbnew.B_Cu else pcbnew.F_SilkS
+        footprint.Reference().SetLayer(layer)
+        footprint.Reference().SetVisible(True)
+        footprint.Reference().SetMirrored(layer == pcbnew.B_SilkS)
+        footprint.Value().SetLayer(layer)
+        footprint.Value().SetVisible(True)
+        footprint.Value().SetMirrored(layer == pcbnew.B_SilkS)
+        footprint.Value().SetTextSize(pcbnew.VECTOR2I_MM(0.8, 0.8))
+        footprint.Value().SetTextThickness(pcbnew.FromMM(0.12))
+
+
 def fix_component_3d_models(board) -> None:
     """Map package footprints whose stock STEP model names are unavailable."""
     replacements = {
@@ -1226,13 +1244,28 @@ def export_bom() -> None:
     root = ET.parse(NETLIST).getroot()
     by_ref = {item.get("ref"): item for item in root.findall("./components/comp")}
     output = ROOT / "manufacturing" / "bom.csv"
+    smt_output = ROOT / "manufacturing" / "bom-smt.csv"
+    smt_ref_output = ROOT / "manufacturing" / "bom-smt-refs.csv"
+    report_output = ROOT / "manufacturing" / "bom-report.json"
     output.parent.mkdir(parents=True, exist_ok=True)
+    board = pcbnew.LoadBoard(str(PCB_PATH))
+    footprints = {
+        footprint.GetReference(): footprint for footprint in board.GetFootprints()
+    }
     grouped: dict[
         tuple[str, str, str, str],
         dict[str, set[str] | list[str]],
     ] = {}
+    smt_grouped: dict[
+        tuple[str, str, str, str, str],
+        dict[str, set[str] | list[str]],
+    ] = {}
+    smt_rows = []
+    smt_excluded = []
+    solder_jumpers_omitted = []
     for component in components:
         if "SolderJumper" in component.footprint:
+            solder_jumpers_omitted.append(component.reference)
             continue
         node = by_ref[component.reference]
         mpn = parse_property(node, "MPN")
@@ -1242,6 +1275,42 @@ def export_bom() -> None:
         group = grouped.setdefault(key, {"values": set(), "references": []})
         group["values"].add(component.value)
         group["references"].append(component.reference)
+
+        footprint = footprints.get(component.reference)
+        if footprint is None:
+            smt_excluded.append((component.reference, "missing footprint"))
+            continue
+        pads = list(footprint.Pads())
+        if not pads:
+            smt_excluded.append((component.reference, "no pads"))
+            continue
+        if all(pad.GetAttribute() == pcbnew.PAD_ATTRIB_SMD for pad in pads):
+            mount = "SMD"
+        elif all(pad.GetAttribute() == pcbnew.PAD_ATTRIB_PTH for pad in pads):
+            mount = "PTH"
+        else:
+            mount = "MIXED"
+        side = "F" if footprint.GetLayer() == pcbnew.F_Cu else "B"
+        if mount != "SMD":
+            smt_excluded.append((component.reference, mount))
+            continue
+        smt_key = (component.footprint, manufacturer, mpn, assembly, side)
+        smt_group = smt_grouped.setdefault(
+            smt_key, {"values": set(), "references": []}
+        )
+        smt_group["values"].add(component.value)
+        smt_group["references"].append(component.reference)
+        smt_rows.append(
+            {
+                "Reference": component.reference,
+                "Value": component.value,
+                "Footprint": component.footprint,
+                "Manufacturer": manufacturer,
+                "MPN": mpn,
+                "Side": side,
+                "Assembly": assembly,
+            }
+        )
 
     def natural_key(value: str) -> list[str | int]:
         return [
@@ -1284,7 +1353,86 @@ def export_bom() -> None:
                     " ".join(references),
                 ]
             )
-    print(f"BOM: {output}")
+
+    with smt_output.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(
+            [
+                "Quantity",
+                "Design Values",
+                "Footprint",
+                "Manufacturer",
+                "MPN",
+                "Side",
+                "Assembly",
+                "References",
+            ]
+        )
+        for key, group in sorted(
+            smt_grouped.items(),
+            key=lambda item: (
+                item[0][0],
+                item[0][1],
+                item[0][2],
+                item[0][3],
+                item[0][4],
+            ),
+        ):
+            footprint, manufacturer, mpn, assembly, side = key
+            values = sorted(group["values"], key=natural_key)
+            references = sorted(group["references"], key=natural_key)
+            writer.writerow(
+                [
+                    len(references),
+                    " | ".join(values),
+                    footprint,
+                    manufacturer,
+                    mpn,
+                    side,
+                    assembly,
+                    " ".join(references),
+                ]
+            )
+
+    with smt_ref_output.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Reference",
+                "Value",
+                "Footprint",
+                "Manufacturer",
+                "MPN",
+                "Side",
+                "Assembly",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(
+            sorted(smt_rows, key=lambda row: natural_key(row["Reference"]))
+        )
+
+    report = {
+        "bom": str(output),
+        "full_physical_parts": sum(
+            len(group["references"]) for group in grouped.values()
+        ),
+        "full_bom_groups": len(grouped),
+        "smt_bom": str(smt_output),
+        "smt_reference_bom": str(smt_ref_output),
+        "smt_parts": len(smt_rows),
+        "smt_bom_groups": len(smt_grouped),
+        "excluded_non_smd": len(smt_excluded),
+        "excluded_references": smt_excluded,
+        "solder_jumpers_omitted": sorted(
+            solder_jumpers_omitted, key=natural_key
+        ),
+        "lcsc_part_numbers_present": False,
+    }
+    report_output.write_text(
+        json.dumps(report, indent=2) + "\n", encoding="utf-8"
+    )
+    print(json.dumps(report, indent=2))
 
 
 if __name__ == "__main__":
