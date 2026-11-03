@@ -3,7 +3,7 @@
   "parts": [
     {
       "ref": "C67",
-      "value": "10uF",
+      "value": "10uF 25V",
       "footprint": "Capacitor_SMD:C_1206_3216Metric",
       "lib": "Device",
       "part": "C",
@@ -45,8 +45,8 @@
     },
     {
       "ref": "C69",
-      "value": "10uF",
-      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "value": "22uF 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
       "lib": "Device",
       "part": "C",
       "description": "Unpolarized capacitor",
@@ -87,8 +87,8 @@
     },
     {
       "ref": "C88",
-      "value": "10uF",
-      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "value": "22uF 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
       "lib": "Device",
       "part": "C",
       "description": "Unpolarized capacitor",
@@ -149,12 +149,12 @@
       ]
     },
     {
-      "ref": "J16",
-      "value": "Keyboard KIN0-7 / KOUT0-7",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical",
+      "ref": "J18",
+      "value": "SDA SCL 3V3 5V GND",
+      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
       "lib": "Connector_Generic",
-      "part": "Conn_02x08_Odd_Even",
-      "description": "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "part": "Conn_01x05",
+      "description": "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",
       "datasheet": "",
       "pins": [
         {
@@ -181,195 +181,12 @@
           "number": "5",
           "name": "Pin_5",
           "type": "passive"
-        },
-        {
-          "number": "6",
-          "name": "Pin_6",
-          "type": "passive"
-        },
-        {
-          "number": "7",
-          "name": "Pin_7",
-          "type": "passive"
-        },
-        {
-          "number": "8",
-          "name": "Pin_8",
-          "type": "passive"
-        },
-        {
-          "number": "9",
-          "name": "Pin_9",
-          "type": "passive"
-        },
-        {
-          "number": "10",
-          "name": "Pin_10",
-          "type": "passive"
-        },
-        {
-          "number": "11",
-          "name": "Pin_11",
-          "type": "passive"
-        },
-        {
-          "number": "12",
-          "name": "Pin_12",
-          "type": "passive"
-        },
-        {
-          "number": "13",
-          "name": "Pin_13",
-          "type": "passive"
-        },
-        {
-          "number": "14",
-          "name": "Pin_14",
-          "type": "passive"
-        },
-        {
-          "number": "15",
-          "name": "Pin_15",
-          "type": "passive"
-        },
-        {
-          "number": "16",
-          "name": "Pin_16",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J17",
-      "value": "Keyboard power/reference",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x03",
-      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J18",
-      "value": "I2C0",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x04",
-      "description": "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "Pin_4",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J19",
-      "value": "Full-size SD, SPI",
-      "footprint": "Connector_Card:SD_TE_2041021",
-      "lib": "Connector",
-      "part": "SD_Card_Receptacle",
-      "description": "SD card receptacle",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "CD/DAT3",
-          "type": "bidirectional"
-        },
-        {
-          "number": "2",
-          "name": "CMD",
-          "type": "bidirectional"
-        },
-        {
-          "number": "3",
-          "name": "VSS",
-          "type": "power_in"
-        },
-        {
-          "number": "4",
-          "name": "VDD",
-          "type": "power_in"
-        },
-        {
-          "number": "5",
-          "name": "CLK",
-          "type": "input"
-        },
-        {
-          "number": "6",
-          "name": "VSS",
-          "type": "passive"
-        },
-        {
-          "number": "7",
-          "name": "DAT0",
-          "type": "bidirectional"
-        },
-        {
-          "number": "8",
-          "name": "DAT1",
-          "type": "bidirectional"
-        },
-        {
-          "number": "9",
-          "name": "DAT2",
-          "type": "bidirectional"
-        },
-        {
-          "number": "10",
-          "name": "CARD_DETECT",
-          "type": "output"
-        },
-        {
-          "number": "11",
-          "name": "WRITE_PROTECT",
-          "type": "output"
-        },
-        {
-          "number": "SH",
-          "name": "SHELL",
-          "type": "passive"
         }
       ]
     },
     {
       "ref": "J20",
-      "value": "ESP-01/ESP-01S socket",
+      "value": "ESP-01",
       "footprint": "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_02x04_Odd_Even",
@@ -419,323 +236,146 @@
       ]
     },
     {
-      "ref": "R44",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
+      "ref": "J36",
+      "value": "microSD header",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+      "lib": "Connector_Generic",
+      "part": "Conn_01x09",
+      "description": "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)",
       "datasheet": "",
       "pins": [
         {
           "number": "1",
-          "name": "~",
+          "name": "Pin_1",
           "type": "passive"
         },
         {
           "number": "2",
-          "name": "~",
+          "name": "Pin_2",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "Pin_3",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "Pin_4",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "Pin_8",
+          "type": "passive"
+        },
+        {
+          "number": "9",
+          "name": "Pin_9",
           "type": "passive"
         }
       ]
     },
     {
-      "ref": "R45",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
+      "ref": "J54",
+      "value": "microSD TF15",
+      "footprint": "LeanCam:TF-SMD_TF-15-15",
+      "lib": "Connector",
+      "part": "Micro_SD_Card_Det1",
+      "description": "Micro SD Card Socket with one card detection pin",
       "datasheet": "",
       "pins": [
         {
           "number": "1",
-          "name": "~",
-          "type": "passive"
+          "name": "DAT2",
+          "type": "bidirectional"
         },
         {
           "number": "2",
-          "name": "~",
+          "name": "DAT3/CD",
+          "type": "bidirectional"
+        },
+        {
+          "number": "3",
+          "name": "CMD",
+          "type": "input"
+        },
+        {
+          "number": "4",
+          "name": "VDD",
+          "type": "power_in"
+        },
+        {
+          "number": "5",
+          "name": "CLK",
+          "type": "input"
+        },
+        {
+          "number": "6",
+          "name": "VSS",
+          "type": "power_in"
+        },
+        {
+          "number": "7",
+          "name": "DAT0",
+          "type": "bidirectional"
+        },
+        {
+          "number": "8",
+          "name": "DAT1",
+          "type": "bidirectional"
+        },
+        {
+          "number": "9",
+          "name": "DET",
+          "type": "passive"
+        },
+        {
+          "number": "SH",
+          "name": "SHIELD",
           "type": "passive"
         }
       ]
     },
     {
-      "ref": "R46",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
+      "ref": "JP5",
+      "value": "SD_CD_EN",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "lib": "Jumper",
+      "part": "SolderJumper_2_Open",
+      "description": "Solder Jumper, 2-pole, open",
       "datasheet": "",
       "pins": [
         {
           "number": "1",
-          "name": "~",
+          "name": "A",
           "type": "passive"
         },
         {
           "number": "2",
-          "name": "~",
+          "name": "B",
           "type": "passive"
         }
       ]
     },
     {
-      "ref": "R47",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R48",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R49",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R50",
-      "value": "22R",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R51",
-      "value": "22R",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R52",
-      "value": "22R",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R53",
-      "value": "22R",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R54",
-      "value": "0R",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R55",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R56",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R57",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R58",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "RN22",
-      "value": "4x1k",
+      "ref": "RN36",
+      "value": "4x10k",
       "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
       "lib": "LeanCam",
       "part": "ResistorPack04",
@@ -785,8 +425,8 @@
       ]
     },
     {
-      "ref": "RN24",
-      "value": "4x1k",
+      "ref": "RN43",
+      "value": "4x10k",
       "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
       "lib": "LeanCam",
       "part": "ResistorPack04",
@@ -836,22 +476,52 @@
       ]
     },
     {
-      "ref": "SW2",
-      "value": "ESP_PROG",
-      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
-      "lib": "Switch",
-      "part": "SW_Push",
-      "description": "Push button switch, generic, two pins",
+      "ref": "RN44",
+      "value": "4x22R",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
       "datasheet": "",
       "pins": [
         {
           "number": "1",
-          "name": "1",
+          "name": "R1A",
           "type": "passive"
         },
         {
           "number": "2",
-          "name": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
           "type": "passive"
         }
       ]
@@ -885,7 +555,7 @@
   ],
   "nets": [
     {
-      "name": "+3V3",
+      "name": "3V3",
       "is_power": true,
       "connections": [
         [
@@ -895,95 +565,11 @@
         [
           "J18",
           "3"
-        ],
-        [
-          "R55",
-          "1"
-        ],
-        [
-          "R56",
-          "1"
-        ],
-        [
-          "R57",
-          "1"
-        ],
-        [
-          "R58",
-          "1"
         ]
       ]
     },
     {
-      "name": "+3V3_SD",
-      "is_power": false,
-      "connections": [
-        [
-          "C67",
-          "1"
-        ],
-        [
-          "C68",
-          "1"
-        ],
-        [
-          "FB2",
-          "2"
-        ],
-        [
-          "J19",
-          "4"
-        ],
-        [
-          "R44",
-          "1"
-        ],
-        [
-          "R45",
-          "1"
-        ],
-        [
-          "R46",
-          "1"
-        ],
-        [
-          "R47",
-          "1"
-        ],
-        [
-          "R48",
-          "1"
-        ],
-        [
-          "R49",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "+3V3_WIFI",
-      "is_power": false,
-      "connections": [
-        [
-          "C69",
-          "1"
-        ],
-        [
-          "C70",
-          "1"
-        ],
-        [
-          "J20",
-          "2"
-        ],
-        [
-          "U34",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "+5V",
+      "name": "5V",
       "is_power": true,
       "connections": [
         [
@@ -995,12 +581,78 @@
           "1"
         ],
         [
-          "J17",
-          "1"
+          "J18",
+          "4"
         ],
         [
           "U34",
           "3"
+        ]
+      ]
+    },
+    {
+      "name": "CD",
+      "is_power": false,
+      "connections": [
+        [
+          "JP5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ESP_EN",
+      "is_power": false,
+      "connections": [
+        [
+          "J20",
+          "7"
+        ],
+        [
+          "RN36",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "ESP_IO0",
+      "is_power": false,
+      "connections": [
+        [
+          "J20",
+          "4"
+        ],
+        [
+          "RN36",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "ESP_IO2",
+      "is_power": false,
+      "connections": [
+        [
+          "J20",
+          "3"
+        ],
+        [
+          "RN36",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "ESP_RST",
+      "is_power": false,
+      "connections": [
+        [
+          "J20",
+          "8"
+        ],
+        [
+          "RN36",
+          "7"
         ]
       ]
     },
@@ -1033,36 +685,24 @@
           "2"
         ],
         [
-          "J17",
-          "2"
-        ],
-        [
-          "J17",
-          "3"
-        ],
-        [
           "J18",
-          "4"
-        ],
-        [
-          "J19",
-          "3"
-        ],
-        [
-          "J19",
-          "6"
-        ],
-        [
-          "J19",
-          "SH"
+          "5"
         ],
         [
           "J20",
           "1"
         ],
         [
-          "SW2",
-          "2"
+          "J36",
+          "4"
+        ],
+        [
+          "J54",
+          "6"
+        ],
+        [
+          "J54",
+          "SH"
         ],
         [
           "U34",
@@ -1091,274 +731,44 @@
       ]
     },
     {
-      "name": "KIN0",
+      "name": "SD_3V3",
       "is_power": false,
       "connections": [
         [
-          "J16",
+          "C67",
           "1"
         ],
         [
-          "RN22",
-          "8"
-        ]
-      ]
-    },
-    {
-      "name": "KIN0_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN22",
+          "C68",
           "1"
-        ]
-      ]
-    },
-    {
-      "name": "KIN1",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "3"
         ],
         [
-          "RN22",
-          "7"
-        ]
-      ]
-    },
-    {
-      "name": "KIN1_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN22",
+          "FB2",
           "2"
-        ]
-      ]
-    },
-    {
-      "name": "KIN2",
-      "is_power": false,
-      "connections": [
+        ],
         [
-          "J16",
+          "J36",
+          "6"
+        ],
+        [
+          "J54",
+          "4"
+        ],
+        [
+          "RN43",
           "5"
         ],
         [
-          "RN22",
+          "RN43",
           "6"
-        ]
-      ]
-    },
-    {
-      "name": "KIN2_FILT",
-      "is_power": false,
-      "connections": [
+        ],
         [
-          "RN22",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "KIN3",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
+          "RN43",
           "7"
         ],
         [
-          "RN22",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "KIN3_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN22",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "KIN4",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "9"
-        ],
-        [
-          "RN24",
+          "RN43",
           "8"
-        ]
-      ]
-    },
-    {
-      "name": "KIN4_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN24",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "KIN5",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "11"
-        ],
-        [
-          "RN24",
-          "7"
-        ]
-      ]
-    },
-    {
-      "name": "KIN5_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN24",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "KIN6",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "13"
-        ],
-        [
-          "RN24",
-          "6"
-        ]
-      ]
-    },
-    {
-      "name": "KIN6_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN24",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "KIN7",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "15"
-        ],
-        [
-          "RN24",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "KIN7_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "RN24",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT0",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT1",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT2",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "6"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT3",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "8"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT4",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT5",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT6",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "KOUT7",
-      "is_power": false,
-      "connections": [
-        [
-          "J16",
-          "16"
         ]
       ]
     },
@@ -1367,54 +777,60 @@
       "is_power": false,
       "connections": [
         [
-          "J19",
-          "10"
+          "J36",
+          "1"
         ],
         [
-          "R47",
+          "J54",
+          "9"
+        ],
+        [
+          "JP5",
           "2"
         ],
         [
-          "R54",
-          "2"
+          "RN43",
+          "4"
         ]
       ]
     },
     {
-      "name": "SD_CD_MCU",
+      "name": "SD_CK",
       "is_power": false,
       "connections": [
         [
-          "R54",
-          "1"
+          "J36",
+          "5"
+        ],
+        [
+          "J54",
+          "5"
+        ],
+        [
+          "RN44",
+          "6"
         ]
       ]
     },
     {
-      "name": "SD_CS_MCU",
+      "name": "SD_CS",
       "is_power": false,
       "connections": [
         [
-          "R53",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "SD_CS_N",
-      "is_power": false,
-      "connections": [
-        [
-          "J19",
-          "1"
+          "J36",
+          "8"
         ],
         [
-          "R44",
+          "J54",
           "2"
         ],
         [
-          "R53",
-          "2"
+          "RN43",
+          "1"
+        ],
+        [
+          "RN44",
+          "8"
         ]
       ]
     },
@@ -1423,12 +839,12 @@
       "is_power": false,
       "connections": [
         [
-          "J19",
-          "8"
+          "J36",
+          "2"
         ],
         [
-          "R48",
-          "2"
+          "J54",
+          "8"
         ]
       ]
     },
@@ -1437,157 +853,101 @@
       "is_power": false,
       "connections": [
         [
-          "J19",
+          "J36",
           "9"
         ],
         [
-          "R49",
-          "2"
+          "J54",
+          "1"
         ]
       ]
     },
     {
-      "name": "SD_MISO",
+      "name": "SD_SI",
       "is_power": false,
       "connections": [
         [
-          "J19",
+          "J36",
           "7"
         ],
         [
-          "R46",
-          "2"
-        ],
-        [
-          "R52",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "SD_MISO_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "R52",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "SD_MOSI",
-      "is_power": false,
-      "connections": [
-        [
-          "J19",
-          "2"
-        ],
-        [
-          "R45",
-          "2"
-        ],
-        [
-          "R51",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "SD_MOSI_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "R51",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "SD_SCK",
-      "is_power": false,
-      "connections": [
-        [
-          "J19",
-          "5"
-        ],
-        [
-          "R50",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "SD_SCK_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "R50",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "WIFI_EN",
-      "is_power": false,
-      "connections": [
-        [
-          "J20",
-          "7"
-        ],
-        [
-          "R55",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "WIFI_GPIO0",
-      "is_power": false,
-      "connections": [
-        [
-          "J20",
-          "4"
-        ],
-        [
-          "R57",
-          "2"
-        ],
-        [
-          "SW2",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "WIFI_GPIO2",
-      "is_power": false,
-      "connections": [
-        [
-          "J20",
+          "J54",
           "3"
         ],
         [
-          "R58",
+          "RN43",
           "2"
+        ],
+        [
+          "RN44",
+          "7"
         ]
       ]
     },
     {
-      "name": "WIFI_RST",
+      "name": "SD_SO",
       "is_power": false,
       "connections": [
         [
-          "J20",
-          "8"
+          "J36",
+          "3"
         ],
         [
-          "R56",
+          "J54",
+          "7"
+        ],
+        [
+          "RN43",
+          "3"
+        ],
+        [
+          "RN44",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_CK",
+      "is_power": false,
+      "connections": [
+        [
+          "RN44",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_CS",
+      "is_power": false,
+      "connections": [
+        [
+          "RN44",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_SI",
+      "is_power": false,
+      "connections": [
+        [
+          "RN44",
           "2"
         ]
       ]
     },
     {
-      "name": "WIFI_RX",
+      "name": "SPI_SO",
+      "is_power": false,
+      "connections": [
+        [
+          "RN44",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "UART_RX",
       "is_power": false,
       "connections": [
         [
@@ -1597,12 +957,50 @@
       ]
     },
     {
-      "name": "WIFI_TX",
+      "name": "UART_TX",
       "is_power": false,
       "connections": [
         [
           "J20",
           "6"
+        ]
+      ]
+    },
+    {
+      "name": "WIFI_3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "C69",
+          "1"
+        ],
+        [
+          "C70",
+          "1"
+        ],
+        [
+          "J20",
+          "2"
+        ],
+        [
+          "RN36",
+          "1"
+        ],
+        [
+          "RN36",
+          "2"
+        ],
+        [
+          "RN36",
+          "3"
+        ],
+        [
+          "RN36",
+          "4"
+        ],
+        [
+          "U34",
+          "2"
         ]
       ]
     }

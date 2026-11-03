@@ -2,17 +2,17 @@
 	(version "E")
 	(design
 		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\method-a\\lean-power-a.kicad_sch")
-		(date "2026-10-29T17:19:11")
+		(date "2026-11-03T20:43:01")
 		(tool "Eeschema 10.0.1")
 		(sheet
 			(number "1")
 			(name "/")
 			(tstamps "/")
 			(title_block
-				(title "LeanCam NCC RP2350B - Power and Supervision")
-				(company "LeanCam NCC RP2350B - Power and Supervision")
+				(title "LeanCam NCC RP2350B - power")
+				(company "LeanCam NCC RP2350B - power")
 				(rev)
-				(date "2026-08-10")
+				(date "2026-11-03")
 				(source "lean-power-a.kicad_sch")
 				(comment
 					(number "1")
@@ -55,52 +55,6 @@
 	)
 	(components
 		(comp
-			(ref "C1")
-			(value "10uF 50V")
-			(footprint "Capacitor_SMD:C_1206_3216Metric")
-			(fields
-				(field
-					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "schemagen")
-				(part "C1")
-				(description "")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "92d73e09-dd49-4fe1-baaa-67b3082be8ad")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
 			(ref "C2")
 			(value "100nF 100V")
 			(footprint "Capacitor_SMD:C_1206_3216Metric")
@@ -131,7 +85,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "289aeaef-99cb-46ce-8c42-92cf6977c877")
+			(tstamps "f73f982a-14c1-4bbb-a023-7834ab55aa58")
 			(units
 				(unit
 					(name "A")
@@ -148,11 +102,11 @@
 		)
 		(comp
 			(ref "C3")
-			(value "10uF 50V")
-			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
 				(field
 					(name "Datasheet")
 				)
@@ -177,7 +131,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "6a16e0f5-9798-470a-8263-b920318299dc")
+			(tstamps "7aea0671-b58a-47ff-8829-030cc1d56760")
 			(units
 				(unit
 					(name "A")
@@ -223,7 +177,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "5cef10f0-abf2-4ee9-a9d2-2571e2e7303b")
+			(tstamps "e5444a2c-d60d-4b47-94c6-d9217af9f279")
 			(units
 				(unit
 					(name "A")
@@ -269,7 +223,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "cbd2c016-ffb7-4f43-b88e-393433c596a7")
+			(tstamps "7a75c89d-ab8f-4eb8-9e00-bb705135faea")
 			(units
 				(unit
 					(name "A")
@@ -286,7 +240,7 @@
 		)
 		(comp
 			(ref "C6")
-			(value "22uF 10V")
+			(value "22uF 50V")
 			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
@@ -315,7 +269,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "feaa4902-0587-4f98-b079-dbcf149c8fcc")
+			(tstamps "4aa78da3-bfea-48d9-8720-dbee269f8b06")
 			(units
 				(unit
 					(name "A")
@@ -361,7 +315,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "3b240546-e68d-4685-b4f8-e4f771b56f63")
+			(tstamps "30f7a5c6-1171-401a-b4c4-3db1a4b5abac")
 			(units
 				(unit
 					(name "A")
@@ -378,11 +332,11 @@
 		)
 		(comp
 			(ref "C10")
-			(value "10uF")
-			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
 				(field
 					(name "Datasheet")
 				)
@@ -407,7 +361,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "44d54a2b-2881-41b9-b5f0-0059c3a38d9e")
+			(tstamps "17dd775e-0184-41d2-a87b-1c7301555b6b")
 			(units
 				(unit
 					(name "A")
@@ -424,7 +378,7 @@
 		)
 		(comp
 			(ref "C11")
-			(value "22uF 10V")
+			(value "22uF 50V")
 			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
@@ -453,7 +407,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1783fa6f-e832-47d7-a62a-6617eed2be03")
+			(tstamps "dddb2bcd-85eb-400c-aad7-5b92c7996a92")
 			(units
 				(unit
 					(name "A")
@@ -499,7 +453,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "37fb6c5b-4887-44c3-adb0-b23e9690eae0")
+			(tstamps "13487376-a0ec-4c3d-be9c-6a67755bc6c6")
 			(units
 				(unit
 					(name "A")
@@ -545,7 +499,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "b8a42528-0f56-4a62-b9fa-faeaf8571752")
+			(tstamps "9b8ec08c-8df1-4f7b-be19-9f5205dbe990")
 			(units
 				(unit
 					(name "A")
@@ -591,7 +545,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "6a0063b1-0e11-485d-82ba-0a9c0469d5df")
+			(tstamps "ae0ef34a-2a33-4ea4-901d-fc7f31b07368")
 			(units
 				(unit
 					(name "A")
@@ -637,7 +591,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1bb19a72-30ed-4b93-921f-d6e5999d13d2")
+			(tstamps "4beca29c-d046-4f93-99df-f7ee822d1fa2")
 			(units
 				(unit
 					(name "A")
@@ -654,7 +608,7 @@
 		)
 		(comp
 			(ref "C90")
-			(value "22uF")
+			(value "22uF 50V")
 			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
@@ -683,7 +637,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "38b7747d-8669-41da-80a9-83859c0b3d9c")
+			(tstamps "54091744-7960-4b8e-9a4e-c544b230cf3a")
 			(units
 				(unit
 					(name "A")
@@ -729,7 +683,375 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "ec9c1e63-63a3-4acd-a427-7c79ba6c0026")
+			(tstamps "2ccfc815-813e-473f-b31e-cbb6b1d18ef3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C107")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C107")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b3280a1e-3b2e-4c36-82ec-18c43d4a8e5c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C108")
+			(value "100nF 100V")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C108")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a9add74c-bf09-4790-8311-510405bf4e36")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C109")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C109")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "43a818ca-ba69-4bef-a906-723c55ce171e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C110")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C110")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "438790ef-f7a1-4444-988f-aa049d6d5ab5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C111")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C111")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "40a7f55e-570e-48ea-b689-10c2776264e3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C112")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C112")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d8e4b13c-acf9-4f8f-b27d-c16c67f6fb2c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C113")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C113")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "aea16650-ee0f-4c52-8a4b-5ebe63f4385c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C114")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "C114")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "061ec9db-b553-4ecc-9802-c8da5c613d80")
 			(units
 				(unit
 					(name "A")
@@ -775,7 +1097,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "04d33614-7b95-4f67-8b26-72a809746216")
+			(tstamps "ff370902-c552-42de-98d2-ee5278265a5e")
 			(units
 				(unit
 					(name "A")
@@ -792,11 +1114,11 @@
 		)
 		(comp
 			(ref "D2")
-			(value "MMSZ5242B")
-			(footprint "Diode_SMD:D_SOD-323")
+			(value "SS16")
+			(footprint "Diode_SMD:D_SMA")
 			(fields
 				(field
-					(name "Footprint") "Diode_SMD:D_SOD-323")
+					(name "Footprint") "Diode_SMD:D_SMA")
 				(field
 					(name "Datasheet")
 				)
@@ -821,7 +1143,53 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0897d56a-9e5a-452e-a290-423c59de3b37")
+			(tstamps "7e00900f-95a3-4c8b-9d35-f70ab0843c18")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D3")
+			(value "SS16")
+			(footprint "Diode_SMD:D_SMA")
+			(fields
+				(field
+					(name "Footprint") "Diode_SMD:D_SMA")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "D3")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8827b1be-c2f4-4e62-8519-a254b0b16ce6")
 			(units
 				(unit
 					(name "A")
@@ -838,7 +1206,7 @@
 		)
 		(comp
 			(ref "D4")
-			(value "5V_PWR")
+			(value "5V LED")
 			(footprint "LED_SMD:LED_1206_3216Metric")
 			(fields
 				(field
@@ -867,7 +1235,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1b28ff09-9801-4fa7-ae0d-a021aa1f6f3b")
+			(tstamps "2e92f623-f85d-4946-a974-368c1315a083")
 			(units
 				(unit
 					(name "A")
@@ -884,7 +1252,7 @@
 		)
 		(comp
 			(ref "D5")
-			(value "3V3_PWR")
+			(value "3V3 LED")
 			(footprint "LED_SMD:LED_1206_3216Metric")
 			(fields
 				(field
@@ -913,7 +1281,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f270f76a-8ea4-418f-a783-5fc1040bd781")
+			(tstamps "84b6446a-bcbe-4dcc-9a40-809663fe19cd")
 			(units
 				(unit
 					(name "A")
@@ -959,7 +1327,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "5776dece-0c10-478c-b35e-bec9808ffdae")
+			(tstamps "a6b2d53f-a348-4110-a357-5da92dba354d")
 			(units
 				(unit
 					(name "A")
@@ -1005,7 +1373,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "29696203-01c7-406c-b484-95ca5b14029f")
+			(tstamps "d2694778-dc5d-48c4-a811-8373a33c741c")
 			(units
 				(unit
 					(name "A")
@@ -1051,7 +1419,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "2cf3c14f-84b7-425f-bd2c-37b80c32262c")
+			(tstamps "5fbd9eb0-22c5-418e-8609-263a65c5b06a")
 			(units
 				(unit
 					(name "A")
@@ -1065,7 +1433,7 @@
 		)
 		(comp
 			(ref "FLG2")
-			(value "+5V")
+			(value "5V")
 			(fields
 				(field
 					(name "Footprint")
@@ -1094,7 +1462,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "71bd19a0-8fca-4795-85f4-80fa01571f74")
+			(tstamps "ef2b16b2-aaf2-4ef6-a142-2a76ee3ba34d")
 			(units
 				(unit
 					(name "A")
@@ -1108,7 +1476,7 @@
 		)
 		(comp
 			(ref "FLG3")
-			(value "+3V3_A")
+			(value "ADC_3V3")
 			(fields
 				(field
 					(name "Footprint")
@@ -1137,7 +1505,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8f8f8f03-7bd9-416d-804d-75f419ec9b8f")
+			(tstamps "fae09da2-ef19-4560-bb9e-f56eb7f6b011")
 			(units
 				(unit
 					(name "A")
@@ -1151,7 +1519,7 @@
 		)
 		(comp
 			(ref "FLG4")
-			(value "VIN_PROT")
+			(value "VIN_P")
 			(fields
 				(field
 					(name "Footprint")
@@ -1180,7 +1548,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "c230c4cf-94c7-4546-a50b-95eca90f3209")
+			(tstamps "51e34f50-6445-42b8-8db3-9bd392ef9065")
 			(units
 				(unit
 					(name "A")
@@ -1194,7 +1562,7 @@
 		)
 		(comp
 			(ref "FLG5")
-			(value "+5V_ENC")
+			(value "ENC_5V")
 			(fields
 				(field
 					(name "Footprint")
@@ -1223,7 +1591,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "97d18b0f-bb25-4b69-94fc-6805badd4298")
+			(tstamps "acdaf438-0735-420f-9ce5-80d0f1e6b58b")
 			(units
 				(unit
 					(name "A")
@@ -1237,7 +1605,7 @@
 		)
 		(comp
 			(ref "FLG6")
-			(value "+3V3_SD")
+			(value "SD_3V3")
 			(fields
 				(field
 					(name "Footprint")
@@ -1266,7 +1634,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0e15ae34-45f3-467c-b3f3-5926811678bf")
+			(tstamps "e4784e03-0195-4024-9694-fdd3e8381c91")
 			(units
 				(unit
 					(name "A")
@@ -1280,7 +1648,7 @@
 		)
 		(comp
 			(ref "FLG7")
-			(value "+5V_ISO_IN")
+			(value "PLC_24V")
 			(fields
 				(field
 					(name "Footprint")
@@ -1309,7 +1677,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "685e5fd7-01cd-4dca-9cc4-78279143ee3a")
+			(tstamps "1f0d5917-e706-40ee-bf30-454db88f58c6")
 			(units
 				(unit
 					(name "A")
@@ -1323,7 +1691,7 @@
 		)
 		(comp
 			(ref "FLG8")
-			(value "+12V_FIELD")
+			(value "PLC_0V")
 			(fields
 				(field
 					(name "Footprint")
@@ -1352,7 +1720,93 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "d873eeb6-dc91-468d-875e-1e8ba4353e87")
+			(tstamps "9aa70bbd-5790-4156-a752-32ca582bb759")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG9")
+			(value "BL_VIN")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "FLG9")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "84d9b622-795b-42db-aa24-4aa2e8822c30")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG10")
+			(value "BL_12V")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "FLG10")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "187ff7bd-4446-4e25-80c2-7a7cdacec57e")
 			(units
 				(unit
 					(name "A")
@@ -1366,7 +1820,7 @@
 		)
 		(comp
 			(ref "J1")
-			(value "24 V DC input")
+			(value "24+ GND")
 			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
 			(fields
 				(field
@@ -1395,7 +1849,53 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "cc334128-2b7a-4680-8bf8-fb61d0de9710")
+			(tstamps "d9a93a76-2967-4f94-981b-6b4a61917985")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "BL12+ PLC_0V")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "J2")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d04097ea-ebce-4812-bd3c-11caf06ef879")
 			(units
 				(unit
 					(name "A")
@@ -1441,7 +1941,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "bed81a10-0b57-4e08-b294-253fd2641bc9")
+			(tstamps "96b9697f-81eb-459c-9701-aedfcb31cfeb")
 			(units
 				(unit
 					(name "A")
@@ -1457,12 +1957,12 @@
 			)
 		)
 		(comp
-			(ref "Q1")
-			(value "IRF7240PBF")
-			(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+			(ref "L2")
+			(value "47uH 1.5A")
+			(footprint "Inductor_SMD:L_Bourns_SRN6045TA")
 			(fields
 				(field
-					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+					(name "Footprint") "Inductor_SMD:L_Bourns_SRN6045TA")
 				(field
 					(name "Datasheet")
 				)
@@ -1472,7 +1972,7 @@
 			)
 			(libsource
 				(lib "schemagen")
-				(part "Q1")
+				(part "L2")
 				(description "")
 			)
 			(property
@@ -1487,71 +1987,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f00ad2a6-7514-4acc-ac70-481c771b0c4e")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "4")
-						)
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "3")
-						)
-						(pin
-							(num "5")
-						)
-						(pin
-							(num "6")
-						)
-						(pin
-							(num "7")
-						)
-						(pin
-							(num "8")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R1")
-			(value "100k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "schemagen")
-				(part "R1")
-				(description "")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "a4c9eecc-d47b-498c-a8cb-16f9826edf32")
+			(tstamps "6003f2da-f92e-4ca0-87f4-917cfd17e921")
 			(units
 				(unit
 					(name "A")
@@ -1597,7 +2033,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "93b684ed-19cb-4dfd-84a0-1c2fc078117a")
+			(tstamps "db574744-6ac3-43a0-8589-cf9f4a30f756")
 			(units
 				(unit
 					(name "A")
@@ -1643,7 +2079,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "cd721c27-9c01-479d-a116-768683fcb2e9")
+			(tstamps "730f4617-8610-4599-b48c-3450251c3357")
 			(units
 				(unit
 					(name "A")
@@ -1660,7 +2096,7 @@
 		)
 		(comp
 			(ref "R70")
-			(value "34k")
+			(value "33k")
 			(footprint "Resistor_SMD:R_1206_3216Metric")
 			(fields
 				(field
@@ -1689,7 +2125,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1ae15a77-c84b-4b03-b1d5-af402dd29bcc")
+			(tstamps "ad2b0c94-0b0a-4826-8e66-739f945768c7")
 			(units
 				(unit
 					(name "A")
@@ -1706,7 +2142,7 @@
 		)
 		(comp
 			(ref "R71")
-			(value "46.4k")
+			(value "100k")
 			(footprint "Resistor_SMD:R_1206_3216Metric")
 			(fields
 				(field
@@ -1735,7 +2171,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "81c2bfab-3cc3-4a22-b567-c59d70f38a2a")
+			(tstamps "8990a0e7-9e7d-4809-bf93-d7fbb971098b")
 			(units
 				(unit
 					(name "A")
@@ -1752,7 +2188,7 @@
 		)
 		(comp
 			(ref "R72")
-			(value "20k")
+			(value "33k")
 			(footprint "Resistor_SMD:R_1206_3216Metric")
 			(fields
 				(field
@@ -1781,7 +2217,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1b4f9b96-8d7d-4eb3-a3ca-b70fcf902822")
+			(tstamps "4e9ddf4e-85a1-42c5-9d8e-6977e49bc433")
 			(units
 				(unit
 					(name "A")
@@ -1827,7 +2263,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "62a9e2c1-7751-4937-adb1-00c61df48375")
+			(tstamps "4d33927a-752b-44e4-8af5-fc241f161652")
 			(units
 				(unit
 					(name "A")
@@ -1837,6 +2273,144 @@
 						)
 						(pin
 							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R126")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "R126")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5aa007db-2af8-4ebf-acdb-99dfb740f46b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R127")
+			(value "10k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "R127")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "71bcb8c1-5c81-4d29-a298-66631028eb0c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R128")
+			(value "100k")
+			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "R128")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6ff3746c-2686-432b-8329-d5ce0d91fe43")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
 						)
 					)
 				)
@@ -1873,7 +2447,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "9546903d-5de1-4c68-aaa6-94da8024f1ee")
+			(tstamps "34b1046c-d6e4-4f3f-987f-3f067f7230d5")
 			(units
 				(unit
 					(name "A")
@@ -1897,13 +2471,13 @@
 							(num "9")
 						)
 						(pin
-							(num "6")
-						)
-						(pin
 							(num "4")
 						)
 						(pin
 							(num "8")
+						)
+						(pin
+							(num "6")
 						)
 					)
 				)
@@ -1940,7 +2514,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "84a5b425-30bc-450f-947f-67029acbd97c")
+			(tstamps "85290cbb-443d-4985-b439-33291abe9671")
 			(units
 				(unit
 					(name "A")
@@ -1958,18 +2532,85 @@
 				)
 			)
 		)
+		(comp
+			(ref "U3")
+			(value "LMR36510ADDAR")
+			(footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "schemagen")
+				(part "U3")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/method-a/lean-power-a.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3e1ffc75-72ec-4595-8df3-e2fa9f5ed6b9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
 	)
 	(groups)
 	(variants)
 	(libparts
 		(libpart
 			(lib "schemagen")
-			(part "C1")
+			(part "C10")
 			(fields
 				(field
 					(name "Reference") "C")
 				(field
-					(name "Value") "10uF 50V")
+					(name "Value") "22uF 50V")
 				(field
 					(name "Footprint")
 				)
@@ -1995,12 +2636,74 @@
 		)
 		(libpart
 			(lib "schemagen")
-			(part "C10")
+			(part "C107")
 			(fields
 				(field
 					(name "Reference") "C")
 				(field
-					(name "Value") "10uF")
+					(name "Value") "22uF 50V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C108")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF 100V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C109")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "22uF 50V")
 				(field
 					(name "Footprint")
 				)
@@ -2031,7 +2734,162 @@
 				(field
 					(name "Reference") "C")
 				(field
-					(name "Value") "22uF 10V")
+					(name "Value") "22uF 50V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C110")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "22uF 50V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C111")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "22uF 50V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C112")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C113")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "C114")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "1uF")
 				(field
 					(name "Footprint")
 				)
@@ -2155,7 +3013,7 @@
 				(field
 					(name "Reference") "C")
 				(field
-					(name "Value") "10uF 50V")
+					(name "Value") "22uF 50V")
 				(field
 					(name "Footprint")
 				)
@@ -2248,7 +3106,7 @@
 				(field
 					(name "Reference") "C")
 				(field
-					(name "Value") "22uF 10V")
+					(name "Value") "22uF 50V")
 				(field
 					(name "Footprint")
 				)
@@ -2372,7 +3230,7 @@
 				(field
 					(name "Reference") "C")
 				(field
-					(name "Value") "22uF")
+					(name "Value") "22uF 50V")
 				(field
 					(name "Footprint")
 				)
@@ -2465,7 +3323,38 @@
 				(field
 					(name "Reference") "D")
 				(field
-					(name "Value") "MMSZ5242B")
+					(name "Value") "SS16")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "D3")
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "SS16")
 				(field
 					(name "Footprint")
 				)
@@ -2496,7 +3385,7 @@
 				(field
 					(name "Reference") "D")
 				(field
-					(name "Value") "5V_PWR")
+					(name "Value") "5V LED")
 				(field
 					(name "Footprint")
 				)
@@ -2527,7 +3416,7 @@
 				(field
 					(name "Reference") "D")
 				(field
-					(name "Value") "3V3_PWR")
+					(name "Value") "3V3 LED")
 				(field
 					(name "Footprint")
 				)
@@ -2641,12 +3530,38 @@
 		)
 		(libpart
 			(lib "schemagen")
+			(part "FLG10")
+			(fields
+				(field
+					(name "Reference") "F")
+				(field
+					(name "Value") "BL_12V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
 			(part "FLG2")
 			(fields
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "+5V")
+					(name "Value") "5V")
 				(field
 					(name "Footprint")
 				)
@@ -2672,7 +3587,7 @@
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "+3V3_A")
+					(name "Value") "ADC_3V3")
 				(field
 					(name "Footprint")
 				)
@@ -2698,7 +3613,7 @@
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "VIN_PROT")
+					(name "Value") "VIN_P")
 				(field
 					(name "Footprint")
 				)
@@ -2724,7 +3639,7 @@
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "+5V_ENC")
+					(name "Value") "ENC_5V")
 				(field
 					(name "Footprint")
 				)
@@ -2750,7 +3665,7 @@
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "+3V3_SD")
+					(name "Value") "SD_3V3")
 				(field
 					(name "Footprint")
 				)
@@ -2776,7 +3691,7 @@
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "+5V_ISO_IN")
+					(name "Value") "PLC_24V")
 				(field
 					(name "Footprint")
 				)
@@ -2802,7 +3717,33 @@
 				(field
 					(name "Reference") "F")
 				(field
-					(name "Value") "+12V_FIELD")
+					(name "Value") "PLC_0V")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "FLG9")
+			(fields
+				(field
+					(name "Reference") "F")
+				(field
+					(name "Value") "BL_VIN")
 				(field
 					(name "Footprint")
 				)
@@ -2828,7 +3769,38 @@
 				(field
 					(name "Reference") "J")
 				(field
-					(name "Value") "24 V DC input")
+					(name "Value") "24+ GND")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "J2")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "BL12+ PLC_0V")
 				(field
 					(name "Footprint")
 				)
@@ -2885,12 +3857,12 @@
 		)
 		(libpart
 			(lib "schemagen")
-			(part "Q1")
+			(part "L2")
 			(fields
 				(field
-					(name "Reference") "Q")
+					(name "Reference") "L")
 				(field
-					(name "Value") "IRF7240PBF")
+					(name "Value") "47uH 1.5A")
 				(field
 					(name "Footprint")
 				)
@@ -2904,49 +3876,81 @@
 			(pins
 				(pin
 					(num "1")
-					(name "S1")
+					(name "1")
 					(type "passive")
 				)
 				(pin
 					(num "2")
-					(name "S2")
-					(type "passive")
-				)
-				(pin
-					(num "3")
-					(name "S3")
-					(type "passive")
-				)
-				(pin
-					(num "4")
-					(name "G")
-					(type "input")
-				)
-				(pin
-					(num "5")
-					(name "D1")
-					(type "passive")
-				)
-				(pin
-					(num "6")
-					(name "D2")
-					(type "passive")
-				)
-				(pin
-					(num "7")
-					(name "D3")
-					(type "passive")
-				)
-				(pin
-					(num "8")
-					(name "D4")
+					(name "2")
 					(type "passive")
 				)
 			)
 		)
 		(libpart
 			(lib "schemagen")
-			(part "R1")
+			(part "R126")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "100k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "R127")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "schemagen")
+			(part "R128")
 			(fields
 				(field
 					(name "Reference") "R")
@@ -3044,7 +4048,7 @@
 				(field
 					(name "Reference") "R")
 				(field
-					(name "Value") "34k")
+					(name "Value") "33k")
 				(field
 					(name "Footprint")
 				)
@@ -3075,7 +4079,7 @@
 				(field
 					(name "Reference") "R")
 				(field
-					(name "Value") "46.4k")
+					(name "Value") "100k")
 				(field
 					(name "Footprint")
 				)
@@ -3106,7 +4110,7 @@
 				(field
 					(name "Reference") "R")
 				(field
-					(name "Value") "20k")
+					(name "Value") "33k")
 				(field
 					(name "Footprint")
 				)
@@ -3263,12 +4267,78 @@
 				)
 			)
 		)
+		(libpart
+			(lib "schemagen")
+			(part "U3")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "LMR36510ADDAR")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "PGND")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "VIN")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "EN")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "PG")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "FB")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "VCC")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "BOOT")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "SW")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "PAD")
+					(type "passive")
+				)
+			)
+		)
 	)
 	(libraries)
 	(nets
 		(net
 			(code "1")
-			(name "+3V3")
+			(name "3V3")
 			(class "Default")
 			(node
 				(ref "C13")
@@ -3304,37 +4374,7 @@
 		)
 		(net
 			(code "2")
-			(name "+3V3_A")
-			(class "Default")
-			(node
-				(ref "C15")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "FB1")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "FLG3")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "3")
-			(name "+3V3_SD")
-			(class "Default")
-			(node
-				(ref "FLG6")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "4")
-			(name "+5V")
+			(name "5V")
 			(class "Default")
 			(node
 				(ref "C10")
@@ -3390,38 +4430,28 @@
 			)
 		)
 		(net
-			(code "5")
-			(name "+5V_ENC")
+			(code "3")
+			(name "ADC_3V3")
 			(class "Default")
 			(node
-				(ref "FLG5")
+				(ref "C15")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG3")
 				(pin "1")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "6")
-			(name "+5V_ISO_IN")
-			(class "Default")
-			(node
-				(ref "FLG7")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "7")
-			(name "+12V_FIELD")
-			(class "Default")
-			(node
-				(ref "FLG8")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "8")
-			(name "BUCK5_BST")
+			(code "4")
+			(name "B5_BST")
 			(class "Default")
 			(node
 				(ref "C86")
@@ -3436,8 +4466,8 @@
 			)
 		)
 		(net
-			(code "9")
-			(name "BUCK5_SW")
+			(code "5")
+			(name "B5_SW")
 			(class "Default")
 			(node
 				(ref "C86")
@@ -3458,7 +4488,172 @@
 			)
 		)
 		(net
+			(code "6")
+			(name "B5_VCC")
+			(class "Default")
+			(node
+				(ref "C91")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "VCC_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "B12_BST")
+			(class "Default")
+			(node
+				(ref "C113")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "7")
+				(pinfunction "BOOT_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "8")
+			(name "B12_SW")
+			(class "Default")
+			(node
+				(ref "C113")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "L2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "8")
+				(pinfunction "SW_8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "9")
+			(name "B12_VCC")
+			(class "Default")
+			(node
+				(ref "C114")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "6")
+				(pinfunction "VCC_6")
+				(pintype "passive")
+			)
+		)
+		(net
 			(code "10")
+			(name "BL_12V")
+			(class "Default")
+			(node
+				(ref "C109")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C110")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C111")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C112")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R126")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "BL_VIN")
+			(class "Default")
+			(node
+				(ref "C107")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C108")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D3")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "2")
+				(pinfunction "VIN_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "3")
+				(pinfunction "EN_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "12")
+			(name "ENC_5V")
+			(class "Default")
+			(node
+				(ref "FLG5")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
 			(name "FB5")
 			(class "Default")
 			(node
@@ -3479,8 +4674,8 @@
 			)
 		)
 		(net
-			(code "11")
-			(name "FB5_TOP")
+			(code "14")
+			(name "FB5_T")
 			(class "Default")
 			(node
 				(ref "R70")
@@ -3494,14 +4689,35 @@
 			)
 		)
 		(net
-			(code "12")
-			(name "GND")
+			(code "15")
+			(name "FB12")
 			(class "Default")
 			(node
-				(ref "C1")
+				(ref "R126")
 				(pin "2")
 				(pintype "passive")
 			)
+			(node
+				(ref "R127")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R128")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "5")
+				(pinfunction "FB_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "16")
+			(name "GND")
+			(class "Default")
 			(node
 				(ref "C10")
 				(pin "2")
@@ -3597,11 +4813,6 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "R1")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
 				(ref "R72")
 				(pin "2")
 				(pintype "passive")
@@ -3626,8 +4837,8 @@
 			)
 		)
 		(net
-			(code "13")
-			(name "PWR3_LEDA")
+			(code "17")
+			(name "P3V3_LED")
 			(class "Default")
 			(node
 				(ref "D5")
@@ -3642,8 +4853,8 @@
 			)
 		)
 		(net
-			(code "14")
-			(name "PWR5_LEDA")
+			(code "18")
+			(name "P5V_LED")
 			(class "Default")
 			(node
 				(ref "D4")
@@ -3658,8 +4869,8 @@
 			)
 		)
 		(net
-			(code "15")
-			(name "PWR_GOOD_N")
+			(code "19")
+			(name "PG_N")
 			(class "Default")
 			(node
 				(ref "R73")
@@ -3674,52 +4885,124 @@
 			)
 		)
 		(net
-			(code "16")
-			(name "Q1_GATE")
+			(code "20")
+			(name "PLC_0V")
 			(class "Default")
 			(node
-				(ref "D2")
+				(ref "C107")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C108")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C109")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C110")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C111")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C112")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C114")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG8")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R127")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R128")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "1")
+				(pinfunction "PGND_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "9")
+				(pinfunction "PAD_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "PLC_24V")
+			(class "Default")
+			(node
+				(ref "D3")
 				(pin "2")
 				(pinfunction "A_2")
 				(pintype "passive")
 			)
 			(node
-				(ref "Q1")
-				(pin "4")
-				(pinfunction "G_4")
-				(pintype "input")
-			)
-			(node
-				(ref "R1")
+				(ref "FLG7")
 				(pin "1")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "17")
-			(name "VCC5")
+			(code "22")
+			(name "SD_3V3")
 			(class "Default")
 			(node
-				(ref "C91")
+				(ref "FLG6")
 				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "U1")
-				(pin "6")
-				(pinfunction "VCC_6")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "18")
-			(name "VIN_FUSED")
+			(code "23")
+			(name "VIN")
 			(class "Default")
 			(node
-				(ref "C1")
+				(ref "F1")
 				(pin "1")
 				(pintype "passive")
 			)
+			(node
+				(ref "J1")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "24")
+			(name "VIN_F")
+			(class "Default")
 			(node
 				(ref "C2")
 				(pin "1")
@@ -3733,8 +5016,8 @@
 			)
 			(node
 				(ref "D2")
-				(pin "1")
-				(pinfunction "K_1")
+				(pin "2")
+				(pinfunction "A_2")
 				(pintype "passive")
 			)
 			(node
@@ -3742,34 +5025,10 @@
 				(pin "2")
 				(pintype "passive")
 			)
-			(node
-				(ref "Q1")
-				(pin "5")
-				(pinfunction "D1_5")
-				(pintype "passive")
-			)
-			(node
-				(ref "Q1")
-				(pin "6")
-				(pinfunction "D2_6")
-				(pintype "passive")
-			)
-			(node
-				(ref "Q1")
-				(pin "7")
-				(pinfunction "D3_7")
-				(pintype "passive")
-			)
-			(node
-				(ref "Q1")
-				(pin "8")
-				(pinfunction "D4_8")
-				(pintype "passive")
-			)
 		)
 		(net
-			(code "19")
-			(name "VIN_PROT")
+			(code "25")
+			(name "VIN_P")
 			(class "Default")
 			(node
 				(ref "C3")
@@ -3787,26 +5046,14 @@
 				(pintype "passive")
 			)
 			(node
+				(ref "D2")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
 				(ref "FLG4")
 				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "Q1")
-				(pin "1")
-				(pinfunction "S1_1")
-				(pintype "passive")
-			)
-			(node
-				(ref "Q1")
-				(pin "2")
-				(pinfunction "S2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "Q1")
-				(pin "3")
-				(pinfunction "S3_3")
 				(pintype "passive")
 			)
 			(node
@@ -3823,19 +5070,14 @@
 			)
 		)
 		(net
-			(code "20")
-			(name "VIN_RAW")
+			(code "26")
+			(name "unconnected-(U3-PG-Pad4)")
 			(class "Default")
 			(node
-				(ref "F1")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "J1")
-				(pin "1")
-				(pinfunction "Pin_1_1")
-				(pintype "passive")
+				(ref "U3")
+				(pin "4")
+				(pinfunction "PG_4")
+				(pintype "passive+no_connect")
 			)
 		)
 	)

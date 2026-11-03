@@ -2,91 +2,7 @@
   "title": "LeanCam NCC RP2350B - field_inputs",
   "parts": [
     {
-      "ref": "C103",
-      "value": "10uF",
-      "footprint": "Capacitor_SMD:C_1206_3216Metric",
-      "lib": "Device",
-      "part": "C",
-      "description": "Unpolarized capacitor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "C105",
-      "value": "10uF",
-      "footprint": "Capacitor_SMD:C_1206_3216Metric",
-      "lib": "Device",
-      "part": "C",
-      "description": "Unpolarized capacitor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
       "ref": "D10",
-      "value": "1N4148WS",
-      "footprint": "Diode_SMD:D_SOD-323",
-      "lib": "Device",
-      "part": "D",
-      "description": "Diode",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "K",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "A",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "D11",
-      "value": "indicator",
-      "footprint": "LED_SMD:LED_1206_3216Metric",
-      "lib": "Device",
-      "part": "LED",
-      "description": "Light emitting diode",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "K",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "A",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "D12",
       "value": "1N4148WS",
       "footprint": "Diode_SMD:D_SOD-323",
       "lib": "Device",
@@ -779,69 +695,6 @@
       ]
     },
     {
-      "ref": "D54",
-      "value": "indicator",
-      "footprint": "LED_SMD:LED_1206_3216Metric",
-      "lib": "Device",
-      "part": "LED",
-      "description": "Light emitting diode",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "K",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "A",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "D55",
-      "value": "1N4148WS",
-      "footprint": "Diode_SMD:D_SOD-323",
-      "lib": "Device",
-      "part": "D",
-      "description": "Diode",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "K",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "A",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "D56",
-      "value": "SS54",
-      "footprint": "Diode_SMD:D_SMA",
-      "lib": "Device",
-      "part": "D",
-      "description": "Diode",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "K",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "A",
-          "type": "passive"
-        }
-      ]
-    },
-    {
       "ref": "D9",
       "value": "indicator",
       "footprint": "LED_SMD:LED_1206_3216Metric",
@@ -863,214 +716,8 @@
       ]
     },
     {
-      "ref": "F4",
-      "value": "750mA",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "Fuse",
-      "description": "Fuse",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J26",
-      "value": "Dedicated START button input",
-      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x02",
-      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J27",
-      "value": "Expansion inputs 4-7; 1=GND, 2=3.3 V",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x06",
-      "description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "Pin_4",
-          "type": "passive"
-        },
-        {
-          "number": "5",
-          "name": "Pin_5",
-          "type": "passive"
-        },
-        {
-          "number": "6",
-          "name": "Pin_6",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J34",
-      "value": "PLC positions 5-8 of J7 bank; software-mapped isolated inputs",
-      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x08",
-      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "Pin_4",
-          "type": "passive"
-        },
-        {
-          "number": "5",
-          "name": "Pin_5",
-          "type": "passive"
-        },
-        {
-          "number": "6",
-          "name": "Pin_6",
-          "type": "passive"
-        },
-        {
-          "number": "7",
-          "name": "Pin_7",
-          "type": "passive"
-        },
-        {
-          "number": "8",
-          "name": "Pin_8",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J35",
-      "value": "PLC positions 5-8 of J8 bank; software-mapped isolated inputs",
-      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x08",
-      "description": "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "Pin_4",
-          "type": "passive"
-        },
-        {
-          "number": "5",
-          "name": "Pin_5",
-          "type": "passive"
-        },
-        {
-          "number": "6",
-          "name": "Pin_6",
-          "type": "passive"
-        },
-        {
-          "number": "7",
-          "name": "Pin_7",
-          "type": "passive"
-        },
-        {
-          "number": "8",
-          "name": "Pin_8",
-          "type": "passive"
-        }
-      ]
-    },
-    {
       "ref": "J5",
-      "value": "Dedicated E-stop loop",
-      "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x02",
-      "description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "J6",
-      "value": "Dedicated HOLD button input",
+      "value": "ESTOP PLC_0V",
       "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_01x02",
@@ -1091,7 +738,7 @@
     },
     {
       "ref": "J7",
-      "value": "PLC positions 1-4; software-mapped isolated inputs",
+      "value": "I01 I02 I03 I04 I05 I06 I07 I08",
       "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_01x08",
@@ -1142,7 +789,7 @@
     },
     {
       "ref": "J8",
-      "value": "PLC positions 9-12; software-mapped isolated inputs",
+      "value": "I09 I10 I11 I12 I13 I14 I15 I16",
       "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_01x08",
@@ -1192,189 +839,7 @@
       ]
     },
     {
-      "ref": "J9",
-      "value": "Expansion inputs 0-3; 1=GND, 2=3.3 V",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x06",
-      "description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "Pin_4",
-          "type": "passive"
-        },
-        {
-          "number": "5",
-          "name": "Pin_5",
-          "type": "passive"
-        },
-        {
-          "number": "6",
-          "name": "Pin_6",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "JP2",
-      "value": "J7 24V/CONTACT",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x03",
-      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "JP3",
-      "value": "J8 24V/CONTACT",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x03",
-      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "JP4",
-      "value": "SAFETY 24V/CONTACT",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
-      "lib": "Connector_Generic",
-      "part": "Conn_01x03",
-      "description": "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "Pin_1",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "Pin_2",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "Pin_3",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R108",
-      "value": "2.2k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R109",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
       "ref": "R16",
-      "value": "2.2k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R17",
       "value": "2.2k",
       "footprint": "Resistor_SMD:R_1206_3216Metric",
       "lib": "Device",
@@ -1752,364 +1217,7 @@
       ]
     },
     {
-      "ref": "R75",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R76",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R77",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R78",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R79",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R80",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R81",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R82",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R83",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R84",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R85",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R86",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R87",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R88",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R89",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R90",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R91",
-      "value": "4.7k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "RN6",
+      "ref": "RN32",
       "value": "4x10k",
       "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
       "lib": "LeanCam",
@@ -2160,7 +1268,109 @@
       ]
     },
     {
-      "ref": "RN7",
+      "ref": "RN33",
+      "value": "4x10k",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "R1A",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "RN34",
+      "value": "4x10k",
+      "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
+      "lib": "LeanCam",
+      "part": "ResistorPack04",
+      "description": "Four isolated resistors in one SMD array",
+      "datasheet": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "R1A",
+          "type": "passive"
+        },
+        {
+          "number": "2",
+          "name": "R2A",
+          "type": "passive"
+        },
+        {
+          "number": "3",
+          "name": "R3A",
+          "type": "passive"
+        },
+        {
+          "number": "4",
+          "name": "R4A",
+          "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "R4B",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "R3B",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "R2B",
+          "type": "passive"
+        },
+        {
+          "number": "8",
+          "name": "R1B",
+          "type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "RN35",
       "value": "4x10k",
       "footprint": "Resistor_SMD:R_Array_Convex_4x0603",
       "lib": "LeanCam",
@@ -2212,8 +1422,8 @@
     },
     {
       "ref": "U18",
-      "value": "LTV-847S",
-      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "value": "TLP291-4",
+      "footprint": "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm",
       "lib": "LeanCam",
       "part": "QuadOpto",
       "description": "Four-channel optocoupler, LTV-847S pinout",
@@ -2303,8 +1513,8 @@
     },
     {
       "ref": "U19",
-      "value": "LTV-847S",
-      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "value": "TLP291-4",
+      "footprint": "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm",
       "lib": "LeanCam",
       "part": "QuadOpto",
       "description": "Four-channel optocoupler, LTV-847S pinout",
@@ -2394,8 +1604,8 @@
     },
     {
       "ref": "U20",
-      "value": "LTV-847S",
-      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "value": "TLP291-4",
+      "footprint": "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm",
       "lib": "LeanCam",
       "part": "QuadOpto",
       "description": "Four-channel optocoupler, LTV-847S pinout",
@@ -2485,8 +1695,8 @@
     },
     {
       "ref": "U21",
-      "value": "LTV-847S",
-      "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+      "value": "TLP291-4",
+      "footprint": "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm",
       "lib": "LeanCam",
       "part": "QuadOpto",
       "description": "Four-channel optocoupler, LTV-847S pinout",
@@ -2576,304 +1786,141 @@
     },
     {
       "ref": "U35",
-      "value": "EL3H7",
-      "footprint": "Package_DIP:DIP-4_W7.62mm",
-      "lib": "LeanCam",
-      "part": "EL3H7",
-      "description": "Everlight EL3H7 single-channel phototransistor optocoupler, DIP-4",
+      "value": "TLP291",
+      "footprint": "Package_SO:SOIC-4_4.55x2.6mm_P1.27mm",
+      "lib": "Isolator",
+      "part": "TLP291",
+      "description": "DC Optocoupler, Vce 80V, CTR 50-100%, SOP4",
       "datasheet": "",
       "pins": [
         {
           "number": "1",
-          "name": "ANODE",
+          "name": "~",
           "type": "passive"
         },
         {
           "number": "2",
-          "name": "CATHODE",
+          "name": "~",
           "type": "passive"
         },
         {
           "number": "3",
-          "name": "EMITTER",
+          "name": "~",
           "type": "passive"
         },
         {
           "number": "4",
-          "name": "COLLECTOR",
+          "name": "~",
           "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "U36",
-      "value": "EL3H7",
-      "footprint": "Package_DIP:DIP-4_W7.62mm",
-      "lib": "LeanCam",
-      "part": "EL3H7",
-      "description": "Everlight EL3H7 single-channel phototransistor optocoupler, DIP-4",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "ANODE",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "CATHODE",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "EMITTER",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "COLLECTOR",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "U39",
-      "value": "EL3H7",
-      "footprint": "Package_DIP:DIP-4_W7.62mm",
-      "lib": "LeanCam",
-      "part": "EL3H7",
-      "description": "Everlight EL3H7 single-channel phototransistor optocoupler, DIP-4",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "ANODE",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "CATHODE",
-          "type": "passive"
-        },
-        {
-          "number": "3",
-          "name": "EMITTER",
-          "type": "passive"
-        },
-        {
-          "number": "4",
-          "name": "COLLECTOR",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "U40",
-      "value": "TBA2-0512",
-      "footprint": "Converter_DCDC:Converter_DCDC_TRACO_TBA2-xxxx_Single_THT",
-      "lib": "Converter_DCDC",
-      "part": "TBA2-0512",
-      "description": "2W DC/DC converter unregulated, 4.5-5.5V input, 12V output voltage, 165mA output, 1.5kVDC isolation, SIP-7",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "+Vin",
-          "type": "power_in"
-        },
-        {
-          "number": "2",
-          "name": "-Vin",
-          "type": "power_in"
-        },
-        {
-          "number": "4",
-          "name": "-Vout",
-          "type": "power_out"
-        },
-        {
-          "number": "6",
-          "name": "+Vout",
-          "type": "power_out"
         }
       ]
     }
   ],
   "nets": [
     {
-      "name": "+3V3",
+      "name": "3V3",
       "is_power": true,
       "connections": [
-        [
-          "J27",
-          "2"
-        ],
-        [
-          "J9",
-          "2"
-        ],
-        [
-          "R109",
-          "2"
-        ],
         [
           "R74",
           "2"
         ],
         [
-          "R75",
-          "2"
+          "RN32",
+          "5"
         ],
         [
-          "R76",
-          "2"
-        ],
-        [
-          "R77",
-          "2"
-        ],
-        [
-          "R78",
-          "2"
-        ],
-        [
-          "R79",
-          "2"
-        ],
-        [
-          "R80",
-          "2"
-        ],
-        [
-          "R81",
-          "2"
-        ],
-        [
-          "R82",
-          "2"
-        ],
-        [
-          "R83",
-          "2"
-        ],
-        [
-          "R84",
-          "2"
-        ],
-        [
-          "R85",
-          "2"
-        ],
-        [
-          "R86",
-          "2"
-        ],
-        [
-          "R87",
-          "2"
-        ],
-        [
-          "R88",
-          "2"
-        ],
-        [
-          "R89",
-          "2"
-        ],
-        [
-          "R90",
-          "2"
-        ],
-        [
-          "R91",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "+5V",
-      "is_power": true,
-      "connections": [
-        [
-          "F4",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "+5V_ISO_IN",
-      "is_power": false,
-      "connections": [
-        [
-          "C103",
-          "1"
-        ],
-        [
-          "F4",
-          "2"
-        ],
-        [
-          "U40",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "+12V_FIELD",
-      "is_power": false,
-      "connections": [
-        [
-          "C105",
-          "1"
-        ],
-        [
-          "D56",
-          "1"
-        ],
-        [
-          "JP2",
-          "3"
-        ],
-        [
-          "JP3",
-          "3"
-        ],
-        [
-          "JP4",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "+12V_RAW",
-      "is_power": false,
-      "connections": [
-        [
-          "D56",
-          "2"
-        ],
-        [
-          "U40",
+          "RN32",
           "6"
+        ],
+        [
+          "RN32",
+          "7"
+        ],
+        [
+          "RN32",
+          "8"
+        ],
+        [
+          "RN33",
+          "5"
+        ],
+        [
+          "RN33",
+          "6"
+        ],
+        [
+          "RN33",
+          "7"
+        ],
+        [
+          "RN33",
+          "8"
+        ],
+        [
+          "RN34",
+          "5"
+        ],
+        [
+          "RN34",
+          "6"
+        ],
+        [
+          "RN34",
+          "7"
+        ],
+        [
+          "RN34",
+          "8"
+        ],
+        [
+          "RN35",
+          "5"
+        ],
+        [
+          "RN35",
+          "6"
+        ],
+        [
+          "RN35",
+          "7"
+        ],
+        [
+          "RN35",
+          "8"
         ]
       ]
     },
     {
-      "name": "ESTOP_FIELD",
+      "name": "ESTOP",
       "is_power": false,
       "connections": [
+        [
+          "R74",
+          "1"
+        ],
+        [
+          "U35",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_IN",
+      "is_power": false,
+      "connections": [
+        [
+          "D9",
+          "2"
+        ],
         [
           "J5",
           "1"
-        ],
-        [
-          "R16",
-          "1"
         ]
       ]
     },
     {
-      "name": "ESTOP_LED_A",
+      "name": "ESTOP_L",
       "is_power": false,
       "connections": [
         [
@@ -2882,993 +1929,25 @@
         ],
         [
           "D9",
-          "2"
+          "1"
         ],
         [
           "R16",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP_O",
+      "is_power": false,
+      "connections": [
+        [
+          "R16",
           "2"
-        ]
-      ]
-    },
-    {
-      "name": "ESTOP_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R74",
-          "1"
-        ],
-        [
-          "U35",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "ESTOP_OPTO_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D9",
-          "1"
         ],
         [
           "U35",
           "1"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN0",
-      "is_power": false,
-      "connections": [
-        [
-          "J9",
-          "3"
-        ],
-        [
-          "RN6",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN1",
-      "is_power": false,
-      "connections": [
-        [
-          "J9",
-          "4"
-        ],
-        [
-          "RN6",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN2",
-      "is_power": false,
-      "connections": [
-        [
-          "J9",
-          "5"
-        ],
-        [
-          "RN6",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN3",
-      "is_power": false,
-      "connections": [
-        [
-          "J9",
-          "6"
-        ],
-        [
-          "RN6",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN4",
-      "is_power": false,
-      "connections": [
-        [
-          "J27",
-          "3"
-        ],
-        [
-          "RN7",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN5",
-      "is_power": false,
-      "connections": [
-        [
-          "J27",
-          "4"
-        ],
-        [
-          "RN7",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN6",
-      "is_power": false,
-      "connections": [
-        [
-          "J27",
-          "5"
-        ],
-        [
-          "RN7",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN7",
-      "is_power": false,
-      "connections": [
-        [
-          "J27",
-          "6"
-        ],
-        [
-          "RN7",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_COM0",
-      "is_power": false,
-      "connections": [
-        [
-          "J34",
-          "2"
-        ],
-        [
-          "J34",
-          "4"
-        ],
-        [
-          "J34",
-          "6"
-        ],
-        [
-          "J34",
-          "8"
-        ],
-        [
-          "J7",
-          "2"
-        ],
-        [
-          "J7",
-          "4"
-        ],
-        [
-          "J7",
-          "6"
-        ],
-        [
-          "J7",
-          "8"
-        ],
-        [
-          "JP2",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_COM1",
-      "is_power": false,
-      "connections": [
-        [
-          "J35",
-          "2"
-        ],
-        [
-          "J35",
-          "4"
-        ],
-        [
-          "J35",
-          "6"
-        ],
-        [
-          "J35",
-          "8"
-        ],
-        [
-          "J8",
-          "2"
-        ],
-        [
-          "J8",
-          "4"
-        ],
-        [
-          "J8",
-          "6"
-        ],
-        [
-          "J8",
-          "8"
-        ],
-        [
-          "JP3",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN1",
-      "is_power": false,
-      "connections": [
-        [
-          "J8",
-          "1"
-        ],
-        [
-          "R18",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN2",
-      "is_power": false,
-      "connections": [
-        [
-          "J8",
-          "3"
-        ],
-        [
-          "R19",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN3",
-      "is_power": false,
-      "connections": [
-        [
-          "J8",
-          "5"
-        ],
-        [
-          "R20",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN4",
-      "is_power": false,
-      "connections": [
-        [
-          "J8",
-          "7"
-        ],
-        [
-          "R21",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN5",
-      "is_power": false,
-      "connections": [
-        [
-          "J35",
-          "1"
-        ],
-        [
-          "R22",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN6",
-      "is_power": false,
-      "connections": [
-        [
-          "J35",
-          "3"
-        ],
-        [
-          "R23",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN7",
-      "is_power": false,
-      "connections": [
-        [
-          "J35",
-          "5"
-        ],
-        [
-          "R24",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN8",
-      "is_power": false,
-      "connections": [
-        [
-          "J35",
-          "7"
-        ],
-        [
-          "R25",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN9",
-      "is_power": false,
-      "connections": [
-        [
-          "J7",
-          "1"
-        ],
-        [
-          "R26",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN10",
-      "is_power": false,
-      "connections": [
-        [
-          "J7",
-          "3"
-        ],
-        [
-          "R27",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN11",
-      "is_power": false,
-      "connections": [
-        [
-          "J7",
-          "5"
-        ],
-        [
-          "R28",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN12",
-      "is_power": false,
-      "connections": [
-        [
-          "J7",
-          "7"
-        ],
-        [
-          "R29",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN13",
-      "is_power": false,
-      "connections": [
-        [
-          "J34",
-          "1"
-        ],
-        [
-          "R30",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN14",
-      "is_power": false,
-      "connections": [
-        [
-          "J34",
-          "3"
-        ],
-        [
-          "R31",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN15",
-      "is_power": false,
-      "connections": [
-        [
-          "J34",
-          "5"
-        ],
-        [
-          "R32",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_IN16",
-      "is_power": false,
-      "connections": [
-        [
-          "J34",
-          "7"
-        ],
-        [
-          "R33",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FIELD_SAFETY_COM",
-      "is_power": false,
-      "connections": [
-        [
-          "J26",
-          "2"
-        ],
-        [
-          "J5",
-          "2"
-        ],
-        [
-          "J6",
-          "2"
-        ],
-        [
-          "JP4",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED1_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D13",
-          "2"
-        ],
-        [
-          "D14",
-          "1"
-        ],
-        [
-          "R18",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED2_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D15",
-          "2"
-        ],
-        [
-          "D16",
-          "1"
-        ],
-        [
-          "R19",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED3_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D17",
-          "2"
-        ],
-        [
-          "D18",
-          "1"
-        ],
-        [
-          "R20",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED4_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D19",
-          "2"
-        ],
-        [
-          "D20",
-          "1"
-        ],
-        [
-          "R21",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED5_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D21",
-          "2"
-        ],
-        [
-          "D22",
-          "1"
-        ],
-        [
-          "R22",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED6_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D23",
-          "2"
-        ],
-        [
-          "D24",
-          "1"
-        ],
-        [
-          "R23",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED7_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D25",
-          "2"
-        ],
-        [
-          "D26",
-          "1"
-        ],
-        [
-          "R24",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED8_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D27",
-          "2"
-        ],
-        [
-          "D28",
-          "1"
-        ],
-        [
-          "R25",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED9_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D29",
-          "2"
-        ],
-        [
-          "D30",
-          "1"
-        ],
-        [
-          "R26",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED10_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D31",
-          "2"
-        ],
-        [
-          "D32",
-          "1"
-        ],
-        [
-          "R27",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED11_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D33",
-          "2"
-        ],
-        [
-          "D34",
-          "1"
-        ],
-        [
-          "R28",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED12_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D35",
-          "2"
-        ],
-        [
-          "D36",
-          "1"
-        ],
-        [
-          "R29",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED13_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D37",
-          "2"
-        ],
-        [
-          "D38",
-          "1"
-        ],
-        [
-          "R30",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED14_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D39",
-          "2"
-        ],
-        [
-          "D40",
-          "1"
-        ],
-        [
-          "R31",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED15_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D41",
-          "2"
-        ],
-        [
-          "D42",
-          "1"
-        ],
-        [
-          "R32",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_LED16_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D43",
-          "2"
-        ],
-        [
-          "D44",
-          "1"
-        ],
-        [
-          "R33",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO1_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D13",
-          "1"
-        ],
-        [
-          "U18",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO2_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D15",
-          "1"
-        ],
-        [
-          "U18",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO3_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D17",
-          "1"
-        ],
-        [
-          "U18",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO4_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D19",
-          "1"
-        ],
-        [
-          "U18",
-          "7"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO5_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D21",
-          "1"
-        ],
-        [
-          "U19",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO6_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D23",
-          "1"
-        ],
-        [
-          "U19",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO7_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D25",
-          "1"
-        ],
-        [
-          "U19",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO8_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D27",
-          "1"
-        ],
-        [
-          "U19",
-          "7"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO9_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D29",
-          "1"
-        ],
-        [
-          "U20",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO10_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D31",
-          "1"
-        ],
-        [
-          "U20",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO11_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D33",
-          "1"
-        ],
-        [
-          "U20",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO12_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D35",
-          "1"
-        ],
-        [
-          "U20",
-          "7"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO13_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D37",
-          "1"
-        ],
-        [
-          "U21",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO14_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D39",
-          "1"
-        ],
-        [
-          "U21",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO15_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D41",
-          "1"
-        ],
-        [
-          "U21",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "FLD_OPTO16_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D43",
-          "1"
-        ],
-        [
-          "U21",
-          "7"
         ]
       ]
     },
@@ -3877,50 +1956,6 @@
       "is_power": true,
       "connections": [
         [
-          "C103",
-          "2"
-        ],
-        [
-          "J27",
-          "1"
-        ],
-        [
-          "J9",
-          "1"
-        ],
-        [
-          "RN6",
-          "5"
-        ],
-        [
-          "RN6",
-          "6"
-        ],
-        [
-          "RN6",
-          "7"
-        ],
-        [
-          "RN6",
-          "8"
-        ],
-        [
-          "RN7",
-          "5"
-        ],
-        [
-          "RN7",
-          "6"
-        ],
-        [
-          "RN7",
-          "7"
-        ],
-        [
-          "RN7",
-          "8"
-        ],
-        [
           "U18",
           "11"
         ],
@@ -3987,95 +2022,975 @@
         [
           "U35",
           "3"
+        ]
+      ]
+    },
+    {
+      "name": "I01",
+      "is_power": false,
+      "connections": [
+        [
+          "D13",
+          "2"
         ],
         [
-          "U36",
+          "J7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "I01_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN35",
+          "4"
+        ],
+        [
+          "U21",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "I02",
+      "is_power": false,
+      "connections": [
+        [
+          "D15",
+          "2"
+        ],
+        [
+          "J7",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "I02_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN35",
           "3"
         ],
         [
-          "U39",
+          "U21",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "I03",
+      "is_power": false,
+      "connections": [
+        [
+          "D17",
+          "2"
+        ],
+        [
+          "J7",
           "3"
-        ],
-        [
-          "U40",
-          "2"
         ]
       ]
     },
     {
-      "name": "HOLD_FIELD",
+      "name": "I03_N",
       "is_power": false,
       "connections": [
         [
-          "J6",
-          "1"
+          "RN35",
+          "2"
         ],
         [
-          "R17",
-          "1"
+          "U21",
+          "12"
         ]
       ]
     },
     {
-      "name": "HOLD_LED_A",
+      "name": "I04",
       "is_power": false,
       "connections": [
         [
-          "D11",
+          "D19",
           "2"
         ],
         [
-          "D12",
-          "1"
-        ],
-        [
-          "R17",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "HOLD_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R75",
-          "1"
-        ],
-        [
-          "U36",
+          "J7",
           "4"
         ]
       ]
     },
     {
-      "name": "HOLD_OPTO_A",
+      "name": "I04_N",
       "is_power": false,
       "connections": [
         [
-          "D11",
+          "RN35",
           "1"
         ],
         [
-          "U36",
+          "U21",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "I05",
+      "is_power": false,
+      "connections": [
+        [
+          "D21",
+          "2"
+        ],
+        [
+          "J7",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "I05_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN34",
+          "4"
+        ],
+        [
+          "U20",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "I06",
+      "is_power": false,
+      "connections": [
+        [
+          "D23",
+          "2"
+        ],
+        [
+          "J7",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "I06_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN34",
+          "3"
+        ],
+        [
+          "U20",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "I07",
+      "is_power": false,
+      "connections": [
+        [
+          "D25",
+          "2"
+        ],
+        [
+          "J7",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "I07_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN34",
+          "2"
+        ],
+        [
+          "U20",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "I08",
+      "is_power": false,
+      "connections": [
+        [
+          "D27",
+          "2"
+        ],
+        [
+          "J7",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "I08_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN34",
+          "1"
+        ],
+        [
+          "U20",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "I09",
+      "is_power": false,
+      "connections": [
+        [
+          "D29",
+          "2"
+        ],
+        [
+          "J8",
           "1"
         ]
       ]
     },
     {
-      "name": "ISO_GND",
+      "name": "I09_N",
       "is_power": false,
       "connections": [
         [
-          "C105",
+          "RN33",
+          "4"
+        ],
+        [
+          "U19",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "I10",
+      "is_power": false,
+      "connections": [
+        [
+          "D31",
           "2"
         ],
+        [
+          "J8",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "I10_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN33",
+          "3"
+        ],
+        [
+          "U19",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "I11",
+      "is_power": false,
+      "connections": [
+        [
+          "D33",
+          "2"
+        ],
+        [
+          "J8",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "I11_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN33",
+          "2"
+        ],
+        [
+          "U19",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "I12",
+      "is_power": false,
+      "connections": [
+        [
+          "D35",
+          "2"
+        ],
+        [
+          "J8",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "I12_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN33",
+          "1"
+        ],
+        [
+          "U19",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "I13",
+      "is_power": false,
+      "connections": [
+        [
+          "D37",
+          "2"
+        ],
+        [
+          "J8",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "I13_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN32",
+          "4"
+        ],
+        [
+          "U18",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "I14",
+      "is_power": false,
+      "connections": [
+        [
+          "D39",
+          "2"
+        ],
+        [
+          "J8",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "I14_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN32",
+          "3"
+        ],
+        [
+          "U18",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "I15",
+      "is_power": false,
+      "connections": [
+        [
+          "D41",
+          "2"
+        ],
+        [
+          "J8",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "I15_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN32",
+          "2"
+        ],
+        [
+          "U18",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "I16",
+      "is_power": false,
+      "connections": [
+        [
+          "D43",
+          "2"
+        ],
+        [
+          "J8",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "I16_N",
+      "is_power": false,
+      "connections": [
+        [
+          "RN32",
+          "1"
+        ],
+        [
+          "U18",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "LI01",
+      "is_power": false,
+      "connections": [
+        [
+          "D13",
+          "1"
+        ],
+        [
+          "D14",
+          "1"
+        ],
+        [
+          "R18",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI02",
+      "is_power": false,
+      "connections": [
+        [
+          "D15",
+          "1"
+        ],
+        [
+          "D16",
+          "1"
+        ],
+        [
+          "R19",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI03",
+      "is_power": false,
+      "connections": [
+        [
+          "D17",
+          "1"
+        ],
+        [
+          "D18",
+          "1"
+        ],
+        [
+          "R20",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI04",
+      "is_power": false,
+      "connections": [
+        [
+          "D19",
+          "1"
+        ],
+        [
+          "D20",
+          "1"
+        ],
+        [
+          "R21",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI05",
+      "is_power": false,
+      "connections": [
+        [
+          "D21",
+          "1"
+        ],
+        [
+          "D22",
+          "1"
+        ],
+        [
+          "R22",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI06",
+      "is_power": false,
+      "connections": [
+        [
+          "D23",
+          "1"
+        ],
+        [
+          "D24",
+          "1"
+        ],
+        [
+          "R23",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI07",
+      "is_power": false,
+      "connections": [
+        [
+          "D25",
+          "1"
+        ],
+        [
+          "D26",
+          "1"
+        ],
+        [
+          "R24",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI08",
+      "is_power": false,
+      "connections": [
+        [
+          "D27",
+          "1"
+        ],
+        [
+          "D28",
+          "1"
+        ],
+        [
+          "R25",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI09",
+      "is_power": false,
+      "connections": [
+        [
+          "D29",
+          "1"
+        ],
+        [
+          "D30",
+          "1"
+        ],
+        [
+          "R26",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI10",
+      "is_power": false,
+      "connections": [
+        [
+          "D31",
+          "1"
+        ],
+        [
+          "D32",
+          "1"
+        ],
+        [
+          "R27",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI11",
+      "is_power": false,
+      "connections": [
+        [
+          "D33",
+          "1"
+        ],
+        [
+          "D34",
+          "1"
+        ],
+        [
+          "R28",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI12",
+      "is_power": false,
+      "connections": [
+        [
+          "D35",
+          "1"
+        ],
+        [
+          "D36",
+          "1"
+        ],
+        [
+          "R29",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI13",
+      "is_power": false,
+      "connections": [
+        [
+          "D37",
+          "1"
+        ],
+        [
+          "D38",
+          "1"
+        ],
+        [
+          "R30",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI14",
+      "is_power": false,
+      "connections": [
+        [
+          "D39",
+          "1"
+        ],
+        [
+          "D40",
+          "1"
+        ],
+        [
+          "R31",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI15",
+      "is_power": false,
+      "connections": [
+        [
+          "D41",
+          "1"
+        ],
+        [
+          "D42",
+          "1"
+        ],
+        [
+          "R32",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "LI16",
+      "is_power": false,
+      "connections": [
+        [
+          "D43",
+          "1"
+        ],
+        [
+          "D44",
+          "1"
+        ],
+        [
+          "R33",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OI01",
+      "is_power": false,
+      "connections": [
+        [
+          "R18",
+          "2"
+        ],
+        [
+          "U21",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OI02",
+      "is_power": false,
+      "connections": [
+        [
+          "R19",
+          "2"
+        ],
+        [
+          "U21",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OI03",
+      "is_power": false,
+      "connections": [
+        [
+          "R20",
+          "2"
+        ],
+        [
+          "U21",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OI04",
+      "is_power": false,
+      "connections": [
+        [
+          "R21",
+          "2"
+        ],
+        [
+          "U21",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "OI05",
+      "is_power": false,
+      "connections": [
+        [
+          "R22",
+          "2"
+        ],
+        [
+          "U20",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OI06",
+      "is_power": false,
+      "connections": [
+        [
+          "R23",
+          "2"
+        ],
+        [
+          "U20",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OI07",
+      "is_power": false,
+      "connections": [
+        [
+          "R24",
+          "2"
+        ],
+        [
+          "U20",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OI08",
+      "is_power": false,
+      "connections": [
+        [
+          "R25",
+          "2"
+        ],
+        [
+          "U20",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "OI09",
+      "is_power": false,
+      "connections": [
+        [
+          "R26",
+          "2"
+        ],
+        [
+          "U19",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OI10",
+      "is_power": false,
+      "connections": [
+        [
+          "R27",
+          "2"
+        ],
+        [
+          "U19",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OI11",
+      "is_power": false,
+      "connections": [
+        [
+          "R28",
+          "2"
+        ],
+        [
+          "U19",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OI12",
+      "is_power": false,
+      "connections": [
+        [
+          "R29",
+          "2"
+        ],
+        [
+          "U19",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "OI13",
+      "is_power": false,
+      "connections": [
+        [
+          "R30",
+          "2"
+        ],
+        [
+          "U18",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "OI14",
+      "is_power": false,
+      "connections": [
+        [
+          "R31",
+          "2"
+        ],
+        [
+          "U18",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "OI15",
+      "is_power": false,
+      "connections": [
+        [
+          "R32",
+          "2"
+        ],
+        [
+          "U18",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "OI16",
+      "is_power": false,
+      "connections": [
+        [
+          "R33",
+          "2"
+        ],
+        [
+          "U18",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "PLC_0V",
+      "is_power": false,
+      "connections": [
         [
           "D10",
-          "2"
-        ],
-        [
-          "D12",
           "2"
         ],
         [
@@ -4143,20 +3058,8 @@
           "2"
         ],
         [
-          "D55",
+          "J5",
           "2"
-        ],
-        [
-          "JP2",
-          "1"
-        ],
-        [
-          "JP3",
-          "1"
-        ],
-        [
-          "JP4",
-          "1"
         ],
         [
           "U18",
@@ -4225,302 +3128,6 @@
         [
           "U35",
           "2"
-        ],
-        [
-          "U36",
-          "2"
-        ],
-        [
-          "U39",
-          "2"
-        ],
-        [
-          "U40",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN1_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R76",
-          "1"
-        ],
-        [
-          "U18",
-          "16"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN2_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R77",
-          "1"
-        ],
-        [
-          "U18",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN3_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R78",
-          "1"
-        ],
-        [
-          "U18",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN4_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R79",
-          "1"
-        ],
-        [
-          "U18",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN5_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R80",
-          "1"
-        ],
-        [
-          "U19",
-          "16"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN6_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R81",
-          "1"
-        ],
-        [
-          "U19",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN7_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R82",
-          "1"
-        ],
-        [
-          "U19",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN8_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R83",
-          "1"
-        ],
-        [
-          "U19",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN9_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R84",
-          "1"
-        ],
-        [
-          "U20",
-          "16"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN10_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R85",
-          "1"
-        ],
-        [
-          "U20",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN11_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R86",
-          "1"
-        ],
-        [
-          "U20",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN12_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R87",
-          "1"
-        ],
-        [
-          "U20",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN13_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R88",
-          "1"
-        ],
-        [
-          "U21",
-          "16"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN14_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R89",
-          "1"
-        ],
-        [
-          "U21",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN15_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R90",
-          "1"
-        ],
-        [
-          "U21",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN16_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R91",
-          "1"
-        ],
-        [
-          "U21",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "START_FIELD",
-      "is_power": false,
-      "connections": [
-        [
-          "J26",
-          "1"
-        ],
-        [
-          "R108",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "START_LED_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D54",
-          "2"
-        ],
-        [
-          "D55",
-          "1"
-        ],
-        [
-          "R108",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "START_N",
-      "is_power": false,
-      "connections": [
-        [
-          "R109",
-          "1"
-        ],
-        [
-          "U39",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "START_OPTO_A",
-      "is_power": false,
-      "connections": [
-        [
-          "D54",
-          "1"
-        ],
-        [
-          "U39",
-          "1"
         ]
       ]
     }

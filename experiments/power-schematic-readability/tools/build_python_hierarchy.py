@@ -14,10 +14,9 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from build_python_power_schematic import (
+from python_emit import (
     emit_instance,
     load_source,
-    property_block,
     stable_uuid,
     world_pin,
 )
@@ -30,6 +29,7 @@ INPUTS = EXPERIMENT / "inputs"
 HARDWARE = ROOT / "hardware"
 OUTPUT = EXPERIMENT / "other-sheets"
 GRID = 1.27
+DATE = "2026-11-03"
 
 PAPERS = {
     "A3": (420.0, 297.0),
@@ -63,60 +63,40 @@ SHEETS = {
     "display": Sheet(
         stem="display",
         source="display.kicad_sch",
-        title="LVDS display interface",
+        title="LVDS transmitter, termination and connector",
         paper="A3",
         blocks=(
-            Block(
-                "LVDS TRANSMITTER AND CONNECTOR",
-                ("U41", "RN26", "RN27", "J22", "C106"),
-                columns=5,
-            ),
+            Block("LVDS OUTPUT", ("J22", "RN26", "RN27"), columns=3),
         ),
     ),
     "encoders": Sheet(
         stem="encoders",
         source="encoders.kicad_sch",
-        title="Encoder receiver and 5 V protection",
+        title="Encoder inputs and 5 V interface",
         paper="A3",
         blocks=(
             Block(
-                "ENCODER INPUTS 0-2",
-                ("F2", "D53", "C57", "U28", "J13", "J14", "J15", "R110", "R111"),
-                columns=5,
+                "ENCODER POWER AND SIGNAL INTERFACE",
+                ("F2", "D53", "C119", "U28", "J13", "J14", "J15", "R110", "R111"),
+                columns=6,
             ),
         ),
     ),
     "storage_wifi_ui": Sheet(
         stem="storage_wifi_ui",
         source="storage_wifi_ui.kicad_sch",
-        title="Storage, Wi-Fi, keyboard and service interfaces",
+        title="microSD, Wi-Fi and I2C interfaces",
         paper="A2",
         blocks=(
-            Block("KEYBOARD MATRIX INTERFACE", ("J16", "J17", "RN22", "RN24"), columns=4),
             Block(
-                "MICRO SD INTERFACE",
-                (
-                    "J19",
-                    *rng(44, 54),
-                    "C67",
-                    "C68",
-                    "FB2",
-                ),
+                "MICROSD SOCKETS AND SERIES TERMINATION",
+                ("J36", "J54", "JP5", "RN43", "RN44", "FB2", "C67", "C68"),
                 columns=8,
             ),
             Block(
-                "ESP-01 / ESP-01S SOCKET",
-                (
-                    "U34",
-                    "J20",
-                    "SW2",
-                    *rng(55, 58),
-                    "C69",
-                    "C70",
-                    "C88",
-                    "C89",
-                ),
-                columns=8,
+                "ESP-01 / ESP-01S SOCKET AND LOCAL REGULATOR",
+                ("J20", "U34", "RN36", "C69", "C70", "C88", "C89"),
+                columns=7,
             ),
             Block("I2C SERVICE PORT", ("J18",), columns=1),
         ),
@@ -124,46 +104,32 @@ SHEETS = {
     "analog_io": Sheet(
         stem="analog_io",
         source="analog_io.kicad_sch",
-        title="Analog inputs and filtered 0-10 V outputs",
+        title="Analog inputs, 0-10 V outputs and 12 V rail",
         paper="A1",
         blocks=(
             Block(
-                "ANALOG INPUTS AI0-AI2",
+                "ANALOG INPUTS AI0-AI3",
                 (
                     "J24",
-                    "R61",
-                    "C73",
-                    "R63",
-                    "R64",
-                    "C74",
-                    "R66",
-                    "R67",
-                    "C75",
-                    "R69",
+                    "R61", "R63", "C73",
+                    "R64", "R66", "C74",
+                    "R67", "R69", "C75",
+                    "R182", "R183", "C118",
                 ),
-                columns=4,
+                columns=7,
             ),
             Block(
-                "ANALOG OUTPUTS AO0-AO3",
+                "ANALOG OUTPUTS D01-D04",
                 (
                     "U38",
                     "J25",
-                    *tuple(
-                        ref
-                        for index in range(4)
-                        for ref in (
-                            f"R{100 + index}",
-                            f"R{92 + index}",
-                            f"R{96 + index}",
-                            f"C{92 + 2 * index}",
-                            f"C{93 + 2 * index}",
-                            f"R{104 + index}",
-                        )
-                    ),
+                    *rng(92, 107),
+                    *rng(92, 99, "C"),
+                    "C102",
                 ),
-                columns=6,
+                columns=9,
             ),
-            Block("ANALOG 12 V SUPPLY", ("U37", "C100", "C101", "C102"), columns=4),
+            Block("ANALOG 12 V SUPPLY", ("U37", "C100", "C101"), columns=3),
         ),
     ),
     "mcu_io": Sheet(
@@ -173,168 +139,98 @@ SHEETS = {
         paper="A2",
         blocks=(
             Block(
-                "WeAct RP2350B AND DECOUPLING",
-                ("MOD1", "J4", *rng(22, 29, "C")),
-                columns=5,
+                "WeAct RP2350B AND EXPANSION HEADER",
+                ("MOD1", "J51", "R9"),
+                columns=3,
             ),
             Block(
-                "74HC165 / 74HC595 CHAINS",
-                (*rng(6, 9, "U"), *rng(10, 13, "U"), *rng(9, 13)),
-                columns=9,
+                "74HC165 INPUT SHIFT CHAIN",
+                (*rng(6, 9, "U"), *rng(22, 25, "C")),
+                columns=8,
+            ),
+            Block(
+                "SN74AHCT595 OUTPUT SHIFT CHAIN",
+                (*rng(10, 13, "U"), *rng(26, 29, "C")),
+                columns=8,
             ),
         ),
     ),
     "field_outputs": Sheet(
         stem="field_outputs",
         source="field_outputs.kicad_sch",
-        title="PLC outputs, motion outputs and auxiliary drivers",
-        paper="A1",
+        title="PLC outputs, motion interfaces and servo feedback",
+        paper="A0",
         blocks=(
             Block(
-                "5 V OUTPUT BUFFERS",
-                (
-                    "U24",
-                    "U25",
-                    "RN8",
-                    "RN9",
-                    "RN10",
-                    "RN11",
-                    "C53",
-                    "C54",
-                ),
-                columns=8,
+                "5 V OUTPUT BUFFERS AND SERIES RESISTORS",
+                ("U42", "U43", "C115", "C116", *rng(37, 40, "RN")),
+                columns=6,
             ),
             Block(
-                "GENERAL AND MOTION OUTPUTS",
-                (
-                    "U26",
-                    "U27",
-                    "RN12",
-                    "RN13",
-                    "RN16",
-                    "RN17",
-                    "RN18",
-                    "RN19",
-                    "J10",
-                    "J11",
-                    "J12",
-                    "J28",
-                    "J29",
-                    "J30",
-                    "J32",
-                    "J33",
-                    "C55",
-                    "C56",
-                    *tuple(
-                        ref
-                        for index in range(8)
-                        for ref in (f"D{45 + index}", f"R{34 + index}")
-                    ),
-                    *tuple(
-                        ref
-                        for index in range(6)
-                        for ref in (f"D{57 + index}", f"R{118 + index}")
-                    ),
-                    "D63",
-                    "R124",
-                    "D64",
-                    "R125",
-                ),
-                columns=10,
+                "16-CHANNEL OUTPUT OPTOISOLATION",
+                rng(61, 64, "U"),
+                columns=4,
             ),
             Block(
-                "AUXILIARY AND HIGH-CURRENT OUTPUTS",
+                "GENERAL OUTPUT DRIVERS AND CONNECTORS",
                 (
-                    "Q5",
-                    "Q6",
-                    "Q7",
-                    "R113",
-                    "R114",
-                    "R115",
-                    "R116",
-                    "R117",
-                    "RN20",
-                    "RN21",
-                    "RN30",
-                    "RN31",
-                    "J31",
+                    "U26", "U27",
+                    "J12", "J32", "J33", "J45",
+                    *rng(45, 52, "D"),
+                    *rng(57, 64, "D"),
+                    *rng(34, 41),
+                    *rng(118, 125),
+                    "RN30", "RN31",
                 ),
-                columns=8,
+                columns=12,
             ),
+            Block(
+                "MOTION STEP / DIRECTION / ENABLE CONNECTORS",
+                ("J10", "J11", "J28", "J29", "J30", "J46", "J47"),
+                columns=7,
+            ),
+            Block(
+                "SERVO ERROR AND ZERO INPUT CONNECTORS",
+                ("J40", "J41", "J42", "J43", "J48", "J49", "J50"),
+                columns=7,
+            ),
+            Block("OUTPUT PULL-UP NETWORKS", rng(8, 13, "RN"), columns=6),
         ),
     ),
 }
 
 
-FIELD_INPUT_BANK_1 = (
-    "J8",
-    "J35",
-    "JP2",
-    "U18",
-    "U19",
-    *tuple(
-        ref
-        for index in range(1, 9)
-        for ref in (
-            f"R{17 + index}",
-            f"D{11 + 2 * index}",
-            f"D{12 + 2 * index}",
-            f"R{75 + index}",
-        )
-    ),
-)
-FIELD_INPUT_BANK_2 = (
-    "J7",
-    "J34",
-    "JP3",
-    "U20",
-    "U21",
-    *tuple(
-        ref
-        for index in range(9, 17)
-        for ref in (
-            f"R{17 + index}",
-            f"D{11 + 2 * index}",
-            f"D{12 + 2 * index}",
-            f"R{75 + index}",
-        )
-    ),
-)
 SHEETS["field_inputs"] = Sheet(
     stem="field_inputs",
     source="field_inputs.kicad_sch",
-    title="Isolated PLC inputs and safety inputs",
+    title="Isolated PLC inputs and E-stop",
     paper="A0",
     blocks=(
-        Block("ISOLATED 5 V-TO-12 V SUPPLY", ("F4", "U40", "C103", "C105", "D56"), columns=5),
-        Block("EXPANSION INPUTS 0-7", ("J9", "J27", "RN6", "RN7"), columns=4),
         Block(
-            "SAFETY INPUTS",
+            "PLC INPUTS I01-I08",
             (
-                "J5",
-                "J6",
-                "J26",
-                "JP4",
-                "U35",
-                "U36",
-                "U39",
-                "D9",
-                "D10",
-                "D11",
-                "D12",
-                "D54",
-                "D55",
-                "R16",
-                "R17",
-                "R74",
-                "R75",
-                "R108",
-                "R109",
+                "J7", "U20", "U21",
+                *rng(18, 25),
+                *rng(13, 28, "D"),
+                "RN34", "RN35",
             ),
-            columns=8,
+            columns=12,
         ),
-        Block("ISOLATED PLC INPUTS 1-8", FIELD_INPUT_BANK_1, columns=12),
-        Block("ISOLATED PLC INPUTS 9-16", FIELD_INPUT_BANK_2, columns=12),
+        Block(
+            "PLC INPUTS I09-I16",
+            (
+                "J8", "U18", "U19",
+                *rng(26, 33),
+                *rng(29, 44, "D"),
+                "RN32", "RN33",
+            ),
+            columns=12,
+        ),
+        Block(
+            "E-STOP INPUT AND INDICATION",
+            ("J5", "U35", "R16", "R74", "D9", "D10"),
+            columns=6,
+        ),
     ),
 )
 
@@ -747,11 +643,23 @@ def emit_text(title: str, x: float, y: float, size: float, key: str) -> list[str
     ]
 
 
-def build_sheet(sheet: Sheet, force: bool = False) -> dict:
+def build_sheet(
+    sheet: Sheet,
+    force: bool = False,
+    *,
+    output_dir: Path | None = None,
+    output_name: str | None = None,
+    date: str = DATE,
+    company: str = "LeanCam / uCNC Python hierarchy experiment",
+    comment: str = "Existing symbols grouped by function; local nets routed where practical",
+    labels_global: bool = True,
+) -> dict:
     source_path = HARDWARE / sheet.source
     design_path = INPUTS / f"source-{sheet.stem}.json"
     contract_path = INPUTS / f"source-{sheet.stem}-pin-contract.json"
-    output_path = OUTPUT / f"{sheet.stem}-python.kicad_sch"
+    output_dir = output_dir or OUTPUT
+    output_name = output_name or f"{sheet.stem}-python.kicad_sch"
+    output_path = output_dir / output_name
     source_text, pin_sets, instances = load_source(source_path)
     source_root = __import__("kicad_sexpr").parse_file(source_path)
     bboxes = symbol_bboxes(source_root)
@@ -802,7 +710,8 @@ def build_sheet(sheet: Sheet, force: bool = False) -> dict:
             x, y = pin_points[(str(ref), str(pin))]
             router.labels.setdefault(net["name"], []).append((x, y, 0))
 
-    root_uuid = stable_uuid(f"hierarchy/{sheet.stem}/root")
+    source_uuid = child(source_root, "uuid")
+    root_uuid = str(source_uuid[1]) if source_uuid else stable_uuid(f"hierarchy/{sheet.stem}/root")
     library = extract_block(source_text, "lib_symbols")
     output = [
         "(kicad_sch",
@@ -813,9 +722,9 @@ def build_sheet(sheet: Sheet, force: bool = False) -> dict:
         f'\t(paper "{sheet.paper}")',
         "\t(title_block",
         f"\t\t(title {quote(sheet.title)})",
-        '\t\t(date "2026-10-29")',
-        '\t\t(company "LeanCam / uCNC Python hierarchy experiment")',
-        '\t\t(comment 1 "Existing symbols grouped by function; local nets routed where practical")',
+        f'\t\t(date {quote(date)})',
+        f'\t\t(company {quote(company)})',
+        f'\t\t(comment 1 {quote(comment)})',
         "\t)",
         library,
     ]
@@ -872,18 +781,34 @@ def build_sheet(sheet: Sheet, force: bool = False) -> dict:
         )
     for net, positions in sorted(router.labels.items()):
         for index, (x, y, angle) in enumerate(positions):
-            output.extend(
-                [
-                    f"\t(label {quote(net)}",
-                    f"\t\t(at {fmt(x)} {fmt(y)} {angle})",
-                    "\t\t(effects",
-                    "\t\t\t(font (size 1.27 1.27))",
-                    "\t\t\t(justify left)",
-                    "\t\t)",
-                    f'\t\t(uuid "{stable_uuid("hierarchy-label/" + sheet.stem + "/" + net + "/" + str(index))}")',
-                    "\t)",
-                ]
-            )
+            if labels_global:
+                output.extend(
+                    [
+                        f"\t(global_label {quote(net)}",
+                        "\t\t(shape passive)",
+                        f"\t\t(at {fmt(x)} {fmt(y)} {angle})",
+                        "\t\t(fields_autoplaced yes)",
+                        "\t\t(effects",
+                        "\t\t\t(font (size 1.27 1.27))",
+                        "\t\t\t(justify left bottom)",
+                        "\t\t)",
+                        f'\t\t(uuid "{stable_uuid("hierarchy-global-label/" + sheet.stem + "/" + net + "/" + str(index))}")',
+                        "\t)",
+                    ]
+                )
+            else:
+                output.extend(
+                    [
+                        f"\t(label {quote(net)}",
+                        f"\t\t(at {fmt(x)} {fmt(y)} {angle})",
+                        "\t\t(effects",
+                        "\t\t\t(font (size 1.27 1.27))",
+                        "\t\t\t(justify left)",
+                        "\t\t)",
+                        f'\t\t(uuid "{stable_uuid("hierarchy-label/" + sheet.stem + "/" + net + "/" + str(index))}")',
+                        "\t)",
+                    ]
+                )
 
     unconnected = []
     for ref, metadata in instances.items():
@@ -904,6 +829,7 @@ def build_sheet(sheet: Sheet, force: bool = False) -> dict:
                 placements[ref],
                 pin_sets[instances[ref]["lib_id"]],
                 root_uuid,
+                sheet.title,
             )
         )
     output.extend(

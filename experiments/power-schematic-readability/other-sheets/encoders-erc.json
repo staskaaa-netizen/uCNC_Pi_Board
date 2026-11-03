@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-29T17:49:26",
+    "date": "2026-11-03T20:43:15",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -29,18 +29,18 @@
     "sheets": [
         {
             "path": "/",
-            "uuid_path": "/f4e2c8d1-c339-57ca-a04c-3cbd54507b15",
+            "uuid_path": "/efb9ae2b-4ba7-4d77-a30a-a79a21cca7eb",
             "violations": [
                 {
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label '+5V'",
+                            "description": "Global Label '5V'",
                             "pos": {
-                                "x": 1.4224,
+                                "x": 1.27,
                                 "y": 0.4953
                             },
-                            "uuid": "d16523b4-b6b3-51f3-bbc5-100fd9288a55"
+                            "uuid": "a658772e-fd1d-5407-a9c6-efb8d732adad"
                         }
                     ],
                     "severity": "warning",
@@ -52,7 +52,7 @@
                         {
                             "description": "Symbol U28 [OctalBufferAHCT]",
                             "pos": {
-                                "x": 2.4638,
+                                "x": 2.3114,
                                 "y": 0.6096
                             },
                             "uuid": "e8ea89e5-ac4c-5445-8b3d-cfb59e0186a6"
@@ -65,12 +65,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC0_A_3V3'",
+                            "description": "Global Label 'E0_A3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.5461
                             },
-                            "uuid": "475b928a-6988-58e1-8a8e-64035347f312"
+                            "uuid": "d19ceb8d-0998-5702-a879-4f0ee55e1dfe"
                         }
                     ],
                     "severity": "warning",
@@ -80,12 +80,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC0_B_3V3'",
+                            "description": "Global Label 'E0_B3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.5715
                             },
-                            "uuid": "d0670b2d-d6b1-545e-b7d9-68e7770f6887"
+                            "uuid": "4c04d5b7-5dcb-5b56-9720-020890f16994"
                         }
                     ],
                     "severity": "warning",
@@ -95,12 +95,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC0_Z_3V3'",
+                            "description": "Global Label 'E0_Z3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.5969
                             },
-                            "uuid": "2febbebc-e335-5b3d-84f4-96d374f95714"
+                            "uuid": "f9e50c04-d251-5987-a2fc-c467b74e78dd"
                         }
                     ],
                     "severity": "warning",
@@ -110,12 +110,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC1_A_3V3'",
+                            "description": "Global Label 'E1_A3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.6223
                             },
-                            "uuid": "283da7ec-2fff-5656-8448-4c3b16878152"
+                            "uuid": "519cffa0-8d09-53a5-b197-492356e5ec77"
                         }
                     ],
                     "severity": "warning",
@@ -125,12 +125,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC1_B_3V3'",
+                            "description": "Global Label 'E1_B3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.6477
                             },
-                            "uuid": "28673258-13c0-5fb6-a52f-cb49878b6a7e"
+                            "uuid": "25e4284b-28fd-5798-8858-5fb8a276bf88"
                         }
                     ],
                     "severity": "warning",
@@ -140,12 +140,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC1_Z_3V3'",
+                            "description": "Global Label 'E1_Z3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.6731
                             },
-                            "uuid": "55ce1b40-803e-5ae8-a6f3-65eed71adcf5"
+                            "uuid": "6580cd07-7641-53a6-8905-3ec96b2800bd"
                         }
                     ],
                     "severity": "warning",
@@ -155,12 +155,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC2_A_3V3'",
+                            "description": "Global Label 'E2_A3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.6985
                             },
-                            "uuid": "1afb6d18-42a6-5d6e-b561-f84d3c5bbfc8"
+                            "uuid": "6d25ec2c-c0e3-56f3-ac24-386c162fb723"
                         }
                     ],
                     "severity": "warning",
@@ -170,12 +170,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'ENC2_B_3V3'",
+                            "description": "Global Label 'E2_B3V3'",
                             "pos": {
-                                "x": 2.6162,
+                                "x": 2.4638,
                                 "y": 0.7239
                             },
-                            "uuid": "1ce3d5f1-d688-5699-ac3b-d6ee48385d84"
+                            "uuid": "3ca32483-e522-5994-87ea-acb2d97587e6"
                         }
                     ],
                     "severity": "warning",

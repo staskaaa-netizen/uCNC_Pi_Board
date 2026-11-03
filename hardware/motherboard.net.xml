@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\acc\rp2350\LeanCam-NCC-RP2350B\hardware\motherboard.kicad_sch</source>
-    <date>2026-11-03T19:35:46</date>
+    <date>2026-11-03T20:42:47</date>
     <tool>Eeschema 10.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1231,7 +1231,7 @@
       </units>
     </comp>
     <comp ref="J1">
-      <value>1=24+ 2=-</value>
+      <value>24+ GND</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/2-G-3.5</field>
@@ -1259,7 +1259,7 @@
       </units>
     </comp>
     <comp ref="J2">
-      <value>1=BL12+ 2=PLC-</value>
+      <value>BL12+ PLC_0V</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/2-G-3.5</field>
@@ -1918,17 +1918,17 @@
       </units>
     </comp>
     <comp ref="J51">
-      <value>1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8</value>
+      <value>3V3 GND IO4 IO5 IO6 IO7 IO8</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</footprint>
       <fields>
-        <field name="MPN">1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8</field>
+        <field name="MPN">3V3 GND IO4 IO5 IO6 IO7 IO8</field>
         <field name="Manufacturer">generic</field>
         <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="MPN" value="1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8"/>
+      <property name="MPN" value="3V3 GND IO4 IO5 IO6 IO7 IO8"/>
       <property name="Manufacturer" value="generic"/>
       <property name="Sheetname" value="MCU / SHIFT"/>
       <property name="Sheetfile" value="mcu_io.kicad_sch"/>
@@ -3356,7 +3356,7 @@
       </units>
     </comp>
     <comp ref="J5">
-      <value>1=ESTOP 2=PLC-</value>
+      <value>ESTOP PLC_0V</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/2-G-3.5</field>
@@ -3384,7 +3384,7 @@
       </units>
     </comp>
     <comp ref="J7">
-      <value>1=I01 2=I02 3=I03 4=I04 5=I05 6=I06 7=I07 8=I08</value>
+      <value>I01 I02 I03 I04 I05 I06 I07 I08</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/8-G-3.5</field>
@@ -3418,7 +3418,7 @@
       </units>
     </comp>
     <comp ref="J8">
-      <value>1=I09 2=I10 3=I11 4=I12 5=I13 6=I14 7=I15 8=I16</value>
+      <value>I09 I10 I11 I12 I13 I14 I15 I16</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/8-G-3.5</field>
@@ -4844,7 +4844,7 @@
       </units>
     </comp>
     <comp ref="J12">
-      <value>1=D01 2=D02 3=D03 4=D04 5=D05 6=D06 7=D07 8=D08</value>
+      <value>D01 D02 D03 D04 D05 D06 D07 D08</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/8-G-3.5</field>
@@ -4965,7 +4965,7 @@
       </units>
     </comp>
     <comp ref="J32">
-      <value>1=D09 2=D10 3=D11 4=D12 5=D13 6=D14 7=D15 8=D16</value>
+      <value>D09 D10 D11 D12 D13 D14 D15 D16</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/8-G-3.5</field>
@@ -4999,7 +4999,7 @@
       </units>
     </comp>
     <comp ref="J33">
-      <value>1=PLC24+ 2=PLC-</value>
+      <value>PLC24+ PLC_0V</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/2-G-3.5</field>
@@ -5027,7 +5027,7 @@
       </units>
     </comp>
     <comp ref="J40">
-      <value>- ERR0 Z0</value>
+      <value>GND ERR0 Z0</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -5056,7 +5056,7 @@
       </units>
     </comp>
     <comp ref="J41">
-      <value>- ERR1 Z1</value>
+      <value>GND ERR1 Z1</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -5085,7 +5085,7 @@
       </units>
     </comp>
     <comp ref="J42">
-      <value>- ERR2 Z2</value>
+      <value>GND ERR2 Z2</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -5114,7 +5114,7 @@
       </units>
     </comp>
     <comp ref="J43">
-      <value>- ERR3 Z3</value>
+      <value>GND ERR3 Z3</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -5143,7 +5143,7 @@
       </units>
     </comp>
     <comp ref="J45">
-      <value>1=PLC24+ 2=PLC-</value>
+      <value>PLC24+ PLC_0V</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/2-G-3.5</field>
@@ -5229,7 +5229,7 @@
       </units>
     </comp>
     <comp ref="J48">
-      <value>- ERR6 Z6</value>
+      <value>GND ERR6 Z6</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -5258,7 +5258,7 @@
       </units>
     </comp>
     <comp ref="J49">
-      <value>- ERR5 Z5</value>
+      <value>GND ERR5 Z5</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -5287,7 +5287,7 @@
       </units>
     </comp>
     <comp ref="J50">
-      <value>- ERR4 Z4</value>
+      <value>GND ERR4 Z4</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/3-G-3.5</field>
@@ -6586,7 +6586,7 @@
       </units>
     </comp>
     <comp ref="J13">
-      <value>1=5V 2=A 3=B 4=Z 5=-</value>
+      <value>+5V A0 B0 Z0 GND</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/5-G-3.5</field>
@@ -6617,7 +6617,7 @@
       </units>
     </comp>
     <comp ref="J14">
-      <value>1=5V 2=A 3=B 4=Z 5=-</value>
+      <value>+5V A1 B1 Z1 GND</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/5-G-3.5</field>
@@ -6648,7 +6648,7 @@
       </units>
     </comp>
     <comp ref="J15">
-      <value>1=5V 2=A 3=B 4=Z 5=-</value>
+      <value>+5V A2 B2 Z2 GND</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/5-G-3.5</field>
@@ -7088,7 +7088,7 @@
       </units>
     </comp>
     <comp ref="J18">
-      <value>1=SDA 2=SCL 3=3V3 4=5V 5=-</value>
+      <value>SDA SCL 3V3 5V GND</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/5-G-3.5</field>
@@ -7800,7 +7800,7 @@
       </units>
     </comp>
     <comp ref="J24">
-      <value>1=- 2=AI0 3=AI1 4=AI2 5=AI3</value>
+      <value>GND AI0 AI1 AI2 AI3</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/5-G-3.5</field>
@@ -7831,7 +7831,7 @@
       </units>
     </comp>
     <comp ref="J25">
-      <value>1=- 2=AO0 3=AO1 4=AO2 5=AO3</value>
+      <value>GND AO0 AO1 AO2 AO3</value>
       <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical</footprint>
       <fields>
         <field name="MPN">Phoenix Contact MCV 1,5/5-G-3.5</field>

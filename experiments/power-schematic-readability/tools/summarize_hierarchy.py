@@ -125,13 +125,17 @@ def main() -> None:
             "nets are wired where a short orthogonal tree can be placed; cross-sheet",
             "signals and high-fanout rails retain labels.",
             "",
-            "ERC violations are unchanged in count and type from the corresponding",
-            "standalone source sheet. Most are expected because power sources and",
-            "signal drivers live on other sheets.",
+        "Six of the seven generated sheets reproduce the source ERC violation",
+        "counts and types exactly. The MCU sheet is electrically identical, but",
+        "KiCad 10 reports two fewer violations after `Z4` is moved to its new",
+        "location: one `isolated_pin_label` and one `pin_not_driven` are no",
+        "longer emitted. This is an ERC presentation difference, not a changed",
+        "connection; no node or net differs in the exported netlist.",
             "",
             "Combined PDF: `all-other-sheets.pdf`",
         ]
     )
+    lines = [line.replace("Â·", "/").replace("·", "/") for line in lines]
     (OUT / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 

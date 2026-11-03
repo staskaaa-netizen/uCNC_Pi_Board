@@ -2,17 +2,17 @@
 	(version "E")
 	(design
 		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\storage_wifi_ui-python.kicad_sch")
-		(date "2026-10-29T17:48:44")
+		(date "2026-11-03T20:43:31")
 		(tool "Eeschema 10.0.1")
 		(sheet
 			(number "1")
 			(name "/")
 			(tstamps "/")
 			(title_block
-				(title "Storage, Wi-Fi, keyboard and service interfaces")
+				(title "microSD, Wi-Fi and I2C interfaces")
 				(company "LeanCam / uCNC Python hierarchy experiment")
 				(rev)
-				(date "2026-10-29")
+				(date "2026-11-03")
 				(source "storage_wifi_ui-python.kicad_sch")
 				(comment
 					(number "1")
@@ -56,11 +56,11 @@
 	(components
 		(comp
 			(ref "C67")
-			(value "10uF")
+			(value "10uF 25V")
 			(footprint "Capacitor_SMD:C_1206_3216Metric")
 			(fields
 				(field
-					(name "MPN") "CL31 series 1206 X7R 10uF")
+					(name "MPN") "CL31 series 1206 X7R 10uF 25V")
 				(field
 					(name "Manufacturer") "Samsung Electro-Mechanics")
 				(field
@@ -79,7 +79,7 @@
 			)
 			(property
 				(name "MPN")
-				(value "CL31 series 1206 X7R 10uF")
+				(value "CL31 series 1206 X7R 10uF 25V")
 			)
 			(property
 				(name "Manufacturer")
@@ -188,15 +188,15 @@
 		)
 		(comp
 			(ref "C69")
-			(value "10uF")
-			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
-					(name "MPN") "CL31 series 1206 X7R 10uF")
+					(name "MPN") "CL32 series 1210 X7R 22uF 50V")
 				(field
 					(name "Manufacturer") "Samsung Electro-Mechanics")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
 				(field
 					(name "Datasheet")
 				)
@@ -211,7 +211,7 @@
 			)
 			(property
 				(name "MPN")
-				(value "CL31 series 1206 X7R 10uF")
+				(value "CL32 series 1210 X7R 22uF 50V")
 			)
 			(property
 				(name "Manufacturer")
@@ -320,15 +320,15 @@
 		)
 		(comp
 			(ref "C88")
-			(value "10uF")
-			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(value "22uF 50V")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
 			(fields
 				(field
-					(name "MPN") "CL31 series 1206 X7R 10uF")
+					(name "MPN") "CL32 series 1210 X7R 22uF 50V")
 				(field
 					(name "Manufacturer") "Samsung Electro-Mechanics")
 				(field
-					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
 				(field
 					(name "Datasheet")
 				)
@@ -343,7 +343,7 @@
 			)
 			(property
 				(name "MPN")
-				(value "CL31 series 1206 X7R 10uF")
+				(value "CL32 series 1210 X7R 22uF 50V")
 			)
 			(property
 				(name "Manufacturer")
@@ -517,193 +517,16 @@
 			)
 		)
 		(comp
-			(ref "J16")
-			(value "Keyboard KIN0-7 / KOUT0-7")
-			(footprint "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical")
-			(fields
-				(field
-					(name "MPN") "Keyboard KIN0-7 / KOUT0-7")
-				(field
-					(name "Manufacturer") "generic")
-				(field
-					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Connector_Generic")
-				(part "Conn_02x08_Odd_Even")
-				(description "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
-			)
-			(property
-				(name "MPN")
-				(value "Keyboard KIN0-7 / KOUT0-7")
-			)
-			(property
-				(name "Manufacturer")
-				(value "generic")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "connector")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "Connector*:*_2x??_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "93365d3a-67ce-5fc0-bbf9-92ac0e40ad54")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "3")
-						)
-						(pin
-							(num "5")
-						)
-						(pin
-							(num "7")
-						)
-						(pin
-							(num "9")
-						)
-						(pin
-							(num "11")
-						)
-						(pin
-							(num "13")
-						)
-						(pin
-							(num "15")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "4")
-						)
-						(pin
-							(num "6")
-						)
-						(pin
-							(num "8")
-						)
-						(pin
-							(num "10")
-						)
-						(pin
-							(num "12")
-						)
-						(pin
-							(num "14")
-						)
-						(pin
-							(num "16")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "J17")
-			(value "Keyboard power/reference")
-			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-			(fields
-				(field
-					(name "MPN") "Keyboard power/reference")
-				(field
-					(name "Manufacturer") "generic")
-				(field
-					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Connector_Generic")
-				(part "Conn_01x03")
-				(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-			)
-			(property
-				(name "MPN")
-				(value "Keyboard power/reference")
-			)
-			(property
-				(name "Manufacturer")
-				(value "generic")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "connector")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "Connector*:*_1x??_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "2afb5a73-b3f8-5263-83e2-a1d06c2933a6")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "3")
-						)
-					)
-				)
-			)
-		)
-		(comp
 			(ref "J18")
-			(value "I2C0")
-			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(value "SDA SCL 3V3 5V GND")
+			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
 			(fields
 				(field
-					(name "MPN") "I2C0")
+					(name "MPN") "Phoenix Contact MCV 1,5/5-G-3.5")
 				(field
-					(name "Manufacturer") "generic")
+					(name "Manufacturer") "Phoenix Contact")
 				(field
-					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+					(name "Footprint") "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
 				(field
 					(name "Datasheet")
 				)
@@ -713,16 +536,16 @@
 			)
 			(libsource
 				(lib "Connector_Generic")
-				(part "Conn_01x04")
-				(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+				(part "Conn_01x05")
+				(description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "MPN")
-				(value "I2C0")
+				(value "Phoenix Contact MCV 1,5/5-G-3.5")
 			)
 			(property
 				(name "Manufacturer")
-				(value "generic")
+				(value "Phoenix Contact")
 			)
 			(property
 				(name "Sheetname")
@@ -761,101 +584,8 @@
 						(pin
 							(num "4")
 						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "J19")
-			(value "Full-size SD, SPI")
-			(footprint "Connector_Card:SD_TE_2041021")
-			(fields
-				(field
-					(name "MPN") "2041021-4")
-				(field
-					(name "Manufacturer") "TE Connectivity")
-				(field
-					(name "Footprint") "Connector_Card:SD_TE_2041021")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Connector")
-				(part "SD_Card_Receptacle")
-				(description "SD card receptacle")
-			)
-			(property
-				(name "MPN")
-				(value "2041021-4")
-			)
-			(property
-				(name "Manufacturer")
-				(value "TE Connectivity")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "connector SD")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "SD*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "53b693b0-004c-5f09-94b8-022f9931be3d")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "7")
-						)
-						(pin
-							(num "8")
-						)
-						(pin
-							(num "9")
-						)
-						(pin
-							(num "1")
-						)
 						(pin
 							(num "5")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "SH")
-						)
-						(pin
-							(num "4")
-						)
-						(pin
-							(num "3")
-						)
-						(pin
-							(num "6")
-						)
-						(pin
-							(num "10")
-						)
-						(pin
-							(num "11")
 						)
 					)
 				)
@@ -863,7 +593,7 @@
 		)
 		(comp
 			(ref "J20")
-			(value "ESP-01/ESP-01S socket")
+			(value "ESP-01")
 			(footprint "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical")
 			(fields
 				(field
@@ -946,16 +676,16 @@
 			)
 		)
 		(comp
-			(ref "R44")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
+			(ref "J36")
+			(value "microSD header")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical")
 			(fields
 				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
+					(name "MPN") "microSD header")
 				(field
-					(name "Manufacturer") "Yageo")
+					(name "Manufacturer") "generic")
 				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical")
 				(field
 					(name "Datasheet")
 				)
@@ -964,17 +694,17 @@
 				)
 			)
 			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
+				(lib "Connector_Generic")
+				(part "Conn_01x09")
+				(description "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
+				(value "microSD header")
 			)
 			(property
 				(name "Manufacturer")
-				(value "Yageo")
+				(value "generic")
 			)
 			(property
 				(name "Sheetname")
@@ -986,17 +716,194 @@
 			)
 			(property
 				(name "ki_keywords")
-				(value "R res resistor")
+				(value "connector")
 			)
 			(property
 				(name "ki_fp_filters")
-				(value "R_*")
+				(value "Connector*:*_1x??_*")
 			)
 			(sheetpath
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "53f45320-6645-555e-bbfc-4f5a4012566e")
+			(tstamps "bd8c9c7f-5519-540e-a45a-75b297bd8433")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J54")
+			(value "microSD TF15")
+			(footprint "LeanCam:TF-SMD_TF-15-15")
+			(fields
+				(field
+					(name "MPN") "TF-15x15")
+				(field
+					(name "Manufacturer") "SOFNG")
+				(field
+					(name "Footprint") "LeanCam:TF-SMD_TF-15-15")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "Micro_SD_Card_Det1")
+				(description "Micro SD Card Socket with one card detection pin")
+			)
+			(property
+				(name "MPN")
+				(value "TF-15x15")
+			)
+			(property
+				(name "Manufacturer")
+				(value "SOFNG")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector SD microsd")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "microSD*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0cc6fcbc-190b-51ee-9629-a9a24b074db0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "SH")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP5")
+			(value "SD_CD_EN")
+			(footprint "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm")
+			(fields
+				(field
+					(name "MPN") "SD_CD_EN")
+				(field
+					(name "Manufacturer") "PCB fabrication")
+				(field
+					(name "Footprint") "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Jumper")
+				(part "SolderJumper_2_Open")
+				(description "Solder Jumper, 2-pole, open")
+			)
+			(property
+				(name "MPN")
+				(value "SD_CD_EN")
+			)
+			(property
+				(name "Manufacturer")
+				(value "PCB fabrication")
+			)
+			(property
+				(name "Sheetname")
+				(value "")
+			)
+			(property
+				(name "Sheetfile")
+				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "solder jumper SPST")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SolderJumper*Open*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c1f9e947-bb0f-5108-8bba-c49f4b18dff2")
 			(units
 				(unit
 					(name "A")
@@ -1012,936 +919,12 @@
 			)
 		)
 		(comp
-			(ref "R45")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "da559d01-2131-5462-9252-f0d37cf5f914")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R46")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "aec622d8-242e-58cf-809a-7ff509cb7cf2")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R47")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "e83c5afd-bd78-5014-b5af-8b1ae15269c5")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R48")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "65785cf5-0618-510e-8d5c-12192db35c94")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R49")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "a4cda56c-927d-552d-ba02-aeaa03e96844")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R50")
-			(value "22R")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 22R")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 22R")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "6b52603e-1526-5d9d-9f93-7a02d2011478")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R51")
-			(value "22R")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 22R")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 22R")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "8313bc50-42aa-5a25-83b6-1a75034bd58c")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R52")
-			(value "22R")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 22R")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 22R")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "d950941e-26e1-593b-9cef-0b7df7b7c914")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R53")
-			(value "22R")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 22R")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 22R")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "04a85d55-42ed-504a-8b6b-5632a89b2a85")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R54")
-			(value "0R")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 0R")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 0R")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "d12cd130-766d-576a-a700-35d7ffe0fb1c")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R55")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "b8681f4b-a926-5a06-afef-06cc2b330734")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R56")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "87e2029c-5603-502d-8195-a83d77e3e0ab")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R57")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "91890dc9-79d4-591e-b7c9-3dd18cbcfc98")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "R58")
-			(value "10k")
-			(footprint "Resistor_SMD:R_1206_3216Metric")
-			(fields
-				(field
-					(name "MPN") "RC1206FR-07 1% 10k")
-				(field
-					(name "Manufacturer") "Yageo")
-				(field
-					(name "Footprint") "Resistor_SMD:R_1206_3216Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description")
-				)
-			)
-			(libsource
-				(lib "Device")
-				(part "R")
-				(description "Resistor")
-			)
-			(property
-				(name "MPN")
-				(value "RC1206FR-07 1% 10k")
-			)
-			(property
-				(name "Manufacturer")
-				(value "Yageo")
-			)
-			(property
-				(name "Sheetname")
-				(value "")
-			)
-			(property
-				(name "Sheetfile")
-				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "R res resistor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "R_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "17cc4fe6-6acf-5423-b622-bc5bad4f39b9")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "RN22")
-			(value "4x1k")
+			(ref "RN36")
+			(value "4x10k")
 			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
 			(fields
 				(field
-					(name "MPN") "YC164-FR-071KL")
+					(name "MPN") "YC164-FR-0710KL")
 				(field
 					(name "Manufacturer") "Yageo")
 				(field
@@ -1960,7 +943,7 @@
 			)
 			(property
 				(name "MPN")
-				(value "YC164-FR-071KL")
+				(value "YC164-FR-0710KL")
 			)
 			(property
 				(name "Manufacturer")
@@ -1982,7 +965,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "3bb1ed96-37ed-5eb3-993c-499bc497b6c2")
+			(tstamps "7fe732ee-aa8f-5430-984e-f261e2b62b0f")
 			(units
 				(unit
 					(name "A")
@@ -2016,12 +999,12 @@
 			)
 		)
 		(comp
-			(ref "RN24")
-			(value "4x1k")
+			(ref "RN43")
+			(value "4x10k")
 			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
 			(fields
 				(field
-					(name "MPN") "YC164-FR-071KL")
+					(name "MPN") "YC164-FR-0710KL")
 				(field
 					(name "Manufacturer") "Yageo")
 				(field
@@ -2040,7 +1023,7 @@
 			)
 			(property
 				(name "MPN")
-				(value "YC164-FR-071KL")
+				(value "YC164-FR-0710KL")
 			)
 			(property
 				(name "Manufacturer")
@@ -2062,7 +1045,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "214bbdf6-204e-5769-bd8b-e83037bde34d")
+			(tstamps "1644ffa1-dd98-5d19-a7b7-2ecc7ae222c7")
 			(units
 				(unit
 					(name "A")
@@ -2096,16 +1079,16 @@
 			)
 		)
 		(comp
-			(ref "SW2")
-			(value "ESP_PROG")
-			(footprint "Button_Switch_THT:SW_PUSH_6mm")
+			(ref "RN44")
+			(value "4x22R")
+			(footprint "Resistor_SMD:R_Array_Convex_4x0603")
 			(fields
 				(field
-					(name "MPN") "PTS645SM43SMTR92LFS")
+					(name "MPN") "YC164-FR-07 series 1%")
 				(field
-					(name "Manufacturer") "C&K")
+					(name "Manufacturer") "Yageo")
 				(field
-					(name "Footprint") "Button_Switch_THT:SW_PUSH_6mm")
+					(name "Footprint") "Resistor_SMD:R_Array_Convex_4x0603")
 				(field
 					(name "Datasheet")
 				)
@@ -2114,17 +1097,17 @@
 				)
 			)
 			(libsource
-				(lib "Switch")
-				(part "SW_Push")
-				(description "Push button switch, generic, two pins")
+				(lib "LeanCam")
+				(part "ResistorPack04")
+				(description "Four isolated resistors in one SMD array")
 			)
 			(property
 				(name "MPN")
-				(value "PTS645SM43SMTR92LFS")
+				(value "YC164-FR-07 series 1%")
 			)
 			(property
 				(name "Manufacturer")
-				(value "C&K")
+				(value "Yageo")
 			)
 			(property
 				(name "Sheetname")
@@ -2135,14 +1118,14 @@
 				(value "experiments/power-schematic-readability/other-sheets/storage_wifi_ui-python.kicad_sch")
 			)
 			(property
-				(name "ki_keywords")
-				(value "switch normally-open pushbutton push-button")
+				(name "ki_fp_filters")
+				(value "R_Array_*4x*")
 			)
 			(sheetpath
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "6432df6e-fe18-5afa-94ae-fcbc653d6c84")
+			(tstamps "90c687ac-fb35-52cf-a2a6-1a893e51bac3")
 			(units
 				(unit
 					(name "A")
@@ -2152,6 +1135,24 @@
 						)
 						(pin
 							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
 						)
 					)
 				)
@@ -2232,40 +1233,40 @@
 	(libparts
 		(libpart
 			(lib "Connector")
-			(part "SD_Card_Receptacle")
-			(description "SD card receptacle")
-			(docs "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf")
+			(part "Micro_SD_Card_Det1")
+			(description "Micro SD Card Socket with one card detection pin")
+			(docs "https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf")
 			(footprints
-				(fp "SD*")
+				(fp "microSD*")
 			)
 			(fields
 				(field
 					(name "Reference") "J")
 				(field
-					(name "Value") "SD_Card_Receptacle")
+					(name "Value") "Micro_SD_Card_Det1")
 				(field
 					(name "Footprint")
 				)
 				(field
-					(name "Datasheet") "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf")
+					(name "Datasheet") "https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf")
 				(field
-					(name "Description") "SD card receptacle")
+					(name "Description") "Micro SD Card Socket with one card detection pin")
 			)
 			(pins
 				(pin
 					(num "1")
-					(name "CD/DAT3")
+					(name "DAT2")
 					(type "bidirectional")
 				)
 				(pin
 					(num "2")
-					(name "CMD")
+					(name "DAT3/CD")
 					(type "bidirectional")
 				)
 				(pin
 					(num "3")
-					(name "VSS")
-					(type "power_in")
+					(name "CMD")
+					(type "input")
 				)
 				(pin
 					(num "4")
@@ -2280,7 +1281,7 @@
 				(pin
 					(num "6")
 					(name "VSS")
-					(type "passive")
+					(type "power_in")
 				)
 				(pin
 					(num "7")
@@ -2294,30 +1295,20 @@
 				)
 				(pin
 					(num "9")
-					(name "DAT2")
-					(type "bidirectional")
-				)
-				(pin
-					(num "10")
-					(name "CARD_DETECT")
-					(type "output")
-				)
-				(pin
-					(num "11")
-					(name "WRITE_PROTECT")
-					(type "output")
+					(name "DET")
+					(type "passive")
 				)
 				(pin
 					(num "SH")
-					(name "SHELL")
+					(name "SHIELD")
 					(type "passive")
 				)
 			)
 		)
 		(libpart
 			(lib "Connector_Generic")
-			(part "Conn_01x03")
-			(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(part "Conn_01x05")
+			(description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			(footprints
 				(fp "Connector*:*_1x??_*")
 			)
@@ -2325,7 +1316,7 @@
 				(field
 					(name "Reference") "J")
 				(field
-					(name "Value") "Conn_01x03")
+					(name "Value") "Conn_01x05")
 				(field
 					(name "Footprint")
 				)
@@ -2333,46 +1324,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "Pin_1")
-					(type "passive")
-				)
-				(pin
-					(num "2")
-					(name "Pin_2")
-					(type "passive")
-				)
-				(pin
-					(num "3")
-					(name "Pin_3")
-					(type "passive")
-				)
-			)
-		)
-		(libpart
-			(lib "Connector_Generic")
-			(part "Conn_01x04")
-			(description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
-			(footprints
-				(fp "Connector*:*_1x??_*")
-			)
-			(fields
-				(field
-					(name "Reference") "J")
-				(field
-					(name "Value") "Conn_01x04")
-				(field
-					(name "Footprint")
-				)
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+					(name "Description") "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(pins
 				(pin
@@ -2393,6 +1345,80 @@
 				(pin
 					(num "4")
 					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_01x09")
+			(description "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x09")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "Pin_6")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "Pin_7")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "Pin_8")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "Pin_9")
 					(type "passive")
 				)
 			)
@@ -2457,110 +1483,6 @@
 				(pin
 					(num "8")
 					(name "Pin_8")
-					(type "passive")
-				)
-			)
-		)
-		(libpart
-			(lib "Connector_Generic")
-			(part "Conn_02x08_Odd_Even")
-			(description "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
-			(footprints
-				(fp "Connector*:*_2x??_*")
-			)
-			(fields
-				(field
-					(name "Reference") "J")
-				(field
-					(name "Value") "Conn_02x08_Odd_Even")
-				(field
-					(name "Footprint")
-				)
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "Pin_1")
-					(type "passive")
-				)
-				(pin
-					(num "2")
-					(name "Pin_2")
-					(type "passive")
-				)
-				(pin
-					(num "3")
-					(name "Pin_3")
-					(type "passive")
-				)
-				(pin
-					(num "4")
-					(name "Pin_4")
-					(type "passive")
-				)
-				(pin
-					(num "5")
-					(name "Pin_5")
-					(type "passive")
-				)
-				(pin
-					(num "6")
-					(name "Pin_6")
-					(type "passive")
-				)
-				(pin
-					(num "7")
-					(name "Pin_7")
-					(type "passive")
-				)
-				(pin
-					(num "8")
-					(name "Pin_8")
-					(type "passive")
-				)
-				(pin
-					(num "9")
-					(name "Pin_9")
-					(type "passive")
-				)
-				(pin
-					(num "10")
-					(name "Pin_10")
-					(type "passive")
-				)
-				(pin
-					(num "11")
-					(name "Pin_11")
-					(type "passive")
-				)
-				(pin
-					(num "12")
-					(name "Pin_12")
-					(type "passive")
-				)
-				(pin
-					(num "13")
-					(name "Pin_13")
-					(type "passive")
-				)
-				(pin
-					(num "14")
-					(name "Pin_14")
-					(type "passive")
-				)
-				(pin
-					(num "15")
-					(name "Pin_15")
-					(type "passive")
-				)
-				(pin
-					(num "16")
-					(name "Pin_16")
 					(type "passive")
 				)
 			)
@@ -2636,17 +1558,17 @@
 			)
 		)
 		(libpart
-			(lib "Device")
-			(part "R")
-			(description "Resistor")
+			(lib "Jumper")
+			(part "SolderJumper_2_Open")
+			(description "Solder Jumper, 2-pole, open")
 			(footprints
-				(fp "R_*")
+				(fp "SolderJumper*Open*")
 			)
 			(fields
 				(field
-					(name "Reference") "R")
+					(name "Reference") "JP")
 				(field
-					(name "Value") "R")
+					(name "Value") "SolderJumper_2_Open")
 				(field
 					(name "Footprint")
 				)
@@ -2654,17 +1576,17 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Resistor")
+					(name "Description") "Solder Jumper, 2-pole, open")
 			)
 			(pins
 				(pin
 					(num "1")
-					(name "")
+					(name "A")
 					(type "passive")
 				)
 				(pin
 					(num "2")
-					(name "")
+					(name "B")
 					(type "passive")
 				)
 			)
@@ -2771,37 +1693,6 @@
 				)
 			)
 		)
-		(libpart
-			(lib "Switch")
-			(part "SW_Push")
-			(description "Push button switch, generic, two pins")
-			(fields
-				(field
-					(name "Reference") "SW")
-				(field
-					(name "Value") "SW_Push")
-				(field
-					(name "Footprint")
-				)
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "Push button switch, generic, two pins")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "1")
-					(type "passive")
-				)
-				(pin
-					(num "2")
-					(name "2")
-					(type "passive")
-				)
-			)
-		)
 	)
 	(libraries
 		(library
@@ -2817,18 +1708,18 @@
 			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
 		)
 		(library
-			(logical "Regulator_Linear")
-			(uri "${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym")
+			(logical "Jumper")
+			(uri "${KICAD10_SYMBOL_DIR}/Jumper.kicad_sym")
 		)
 		(library
-			(logical "Switch")
-			(uri "${KICAD10_SYMBOL_DIR}/Switch.kicad_sym")
+			(logical "Regulator_Linear")
+			(uri "${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym")
 		)
 	)
 	(nets
 		(net
 			(code "1")
-			(name "/+3V3")
+			(name "3V3")
 			(class "Default")
 			(node
 				(ref "FB2")
@@ -2841,113 +1732,10 @@
 				(pinfunction "Pin_3_3")
 				(pintype "passive")
 			)
-			(node
-				(ref "R55")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R56")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R57")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R58")
-				(pin "1")
-				(pintype "passive")
-			)
 		)
 		(net
 			(code "2")
-			(name "/+3V3_SD")
-			(class "Default")
-			(node
-				(ref "C67")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "C68")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "FB2")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "J19")
-				(pin "4")
-				(pinfunction "VDD_4")
-				(pintype "power_in")
-			)
-			(node
-				(ref "R44")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R45")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R46")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R47")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R48")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R49")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "3")
-			(name "/+3V3_WIFI")
-			(class "Default")
-			(node
-				(ref "C69")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "C70")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "J20")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "U34")
-				(pin "2")
-				(pinfunction "VO_2")
-				(pintype "power_out")
-			)
-		)
-		(net
-			(code "4")
-			(name "/+5V")
+			(name "5V")
 			(class "Default")
 			(node
 				(ref "C88")
@@ -2960,9 +1748,9 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "J17")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(ref "J18")
+				(pin "4")
+				(pinfunction "Pin_4_4")
 				(pintype "passive")
 			)
 			(node
@@ -2973,8 +1761,87 @@
 			)
 		)
 		(net
+			(code "3")
+			(name "CD")
+			(class "Default")
+			(node
+				(ref "JP5")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "ESP_EN")
+			(class "Default")
+			(node
+				(ref "J20")
+				(pin "7")
+				(pinfunction "Pin_7_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "8")
+				(pinfunction "R1B_8")
+				(pintype "passive")
+			)
+		)
+		(net
 			(code "5")
-			(name "/GND")
+			(name "ESP_IO0")
+			(class "Default")
+			(node
+				(ref "J20")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "6")
+				(pinfunction "R3B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "ESP_IO2")
+			(class "Default")
+			(node
+				(ref "J20")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "ESP_RST")
+			(class "Default")
+			(node
+				(ref "J20")
+				(pin "8")
+				(pinfunction "Pin_8_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "GND")
 			(class "Default")
 			(node
 				(ref "C67")
@@ -3007,39 +1874,9 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "J17")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "J17")
-				(pin "3")
-				(pinfunction "Pin_3_3")
-				(pintype "passive")
-			)
-			(node
 				(ref "J18")
-				(pin "4")
-				(pinfunction "Pin_4_4")
-				(pintype "passive")
-			)
-			(node
-				(ref "J19")
-				(pin "3")
-				(pinfunction "VSS_3")
-				(pintype "power_in")
-			)
-			(node
-				(ref "J19")
-				(pin "6")
-				(pinfunction "VSS_6")
-				(pintype "passive")
-			)
-			(node
-				(ref "J19")
-				(pin "SH")
-				(pinfunction "SHELL_SH")
+				(pin "5")
+				(pinfunction "Pin_5_5")
 				(pintype "passive")
 			)
 			(node
@@ -3049,9 +1886,21 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "SW2")
-				(pin "2")
-				(pinfunction "2_2")
+				(ref "J36")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J54")
+				(pin "6")
+				(pinfunction "VSS_6")
+				(pintype "power_in")
+			)
+			(node
+				(ref "J54")
+				(pin "SH")
+				(pinfunction "SHIELD_SH")
 				(pintype "passive")
 			)
 			(node
@@ -3062,594 +1911,303 @@
 			)
 		)
 		(net
-			(code "6")
-			(name "/I2C_SCL")
+			(code "9")
+			(name "I2C_SCL")
 			(class "Default")
 			(node
 				(ref "J18")
 				(pin "2")
 				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "7")
-			(name "/I2C_SDA")
-			(class "Default")
-			(node
-				(ref "J18")
-				(pin "1")
-				(pinfunction "Pin_1_1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "8")
-			(name "/KIN0")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "1")
-				(pinfunction "Pin_1_1")
-				(pintype "passive")
-			)
-			(node
-				(ref "RN22")
-				(pin "8")
-				(pinfunction "R1B_8")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "9")
-			(name "/KIN0_FILT")
-			(class "Default")
-			(node
-				(ref "RN22")
-				(pin "1")
-				(pinfunction "R1A_1")
 				(pintype "passive")
 			)
 		)
 		(net
 			(code "10")
-			(name "/KIN1")
+			(name "I2C_SDA")
 			(class "Default")
 			(node
-				(ref "J16")
-				(pin "3")
-				(pinfunction "Pin_3_3")
-				(pintype "passive")
-			)
-			(node
-				(ref "RN22")
-				(pin "7")
-				(pinfunction "R2B_7")
+				(ref "J18")
+				(pin "1")
+				(pinfunction "Pin_1_1")
 				(pintype "passive")
 			)
 		)
 		(net
 			(code "11")
-			(name "/KIN1_FILT")
+			(name "SD_3V3")
 			(class "Default")
 			(node
-				(ref "RN22")
+				(ref "C67")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C68")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB2")
 				(pin "2")
-				(pinfunction "R2A_2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "12")
-			(name "/KIN2")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "5")
-				(pinfunction "Pin_5_5")
 				(pintype "passive")
 			)
 			(node
-				(ref "RN22")
+				(ref "J36")
 				(pin "6")
-				(pinfunction "R3B_6")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "13")
-			(name "/KIN2_FILT")
-			(class "Default")
-			(node
-				(ref "RN22")
-				(pin "3")
-				(pinfunction "R3A_3")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "14")
-			(name "/KIN3")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "7")
-				(pinfunction "Pin_7_7")
+				(pinfunction "Pin_6_6")
 				(pintype "passive")
 			)
 			(node
-				(ref "RN22")
+				(ref "J54")
+				(pin "4")
+				(pinfunction "VDD_4")
+				(pintype "power_in")
+			)
+			(node
+				(ref "RN43")
 				(pin "5")
 				(pinfunction "R4B_5")
 				(pintype "passive")
 			)
-		)
-		(net
-			(code "15")
-			(name "/KIN3_FILT")
-			(class "Default")
 			(node
-				(ref "RN22")
-				(pin "4")
-				(pinfunction "R4A_4")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "16")
-			(name "/KIN4")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "9")
-				(pinfunction "Pin_9_9")
+				(ref "RN43")
+				(pin "6")
+				(pinfunction "R3B_6")
 				(pintype "passive")
 			)
 			(node
-				(ref "RN24")
+				(ref "RN43")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN43")
 				(pin "8")
 				(pinfunction "R1B_8")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "17")
-			(name "/KIN4_FILT")
+			(code "12")
+			(name "SD_CD")
 			(class "Default")
 			(node
-				(ref "RN24")
+				(ref "J36")
 				(pin "1")
-				(pinfunction "R1A_1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "18")
-			(name "/KIN5")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "11")
-				(pinfunction "Pin_11_11")
+				(pinfunction "Pin_1_1")
 				(pintype "passive")
 			)
 			(node
-				(ref "RN24")
-				(pin "7")
-				(pinfunction "R2B_7")
+				(ref "J54")
+				(pin "9")
+				(pinfunction "DET_9")
 				(pintype "passive")
 			)
-		)
-		(net
-			(code "19")
-			(name "/KIN5_FILT")
-			(class "Default")
 			(node
-				(ref "RN24")
+				(ref "JP5")
 				(pin "2")
-				(pinfunction "R2A_2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "20")
-			(name "/KIN6")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "13")
-				(pinfunction "Pin_13_13")
+				(pinfunction "B_2")
 				(pintype "passive")
 			)
 			(node
-				(ref "RN24")
-				(pin "6")
-				(pinfunction "R3B_6")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "21")
-			(name "/KIN6_FILT")
-			(class "Default")
-			(node
-				(ref "RN24")
-				(pin "3")
-				(pinfunction "R3A_3")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "22")
-			(name "/KIN7")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "15")
-				(pinfunction "Pin_15_15")
-				(pintype "passive")
-			)
-			(node
-				(ref "RN24")
-				(pin "5")
-				(pinfunction "R4B_5")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "23")
-			(name "/KIN7_FILT")
-			(class "Default")
-			(node
-				(ref "RN24")
+				(ref "RN43")
 				(pin "4")
 				(pinfunction "R4A_4")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "24")
-			(name "/KOUT0")
+			(code "13")
+			(name "SD_CK")
 			(class "Default")
 			(node
-				(ref "J16")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "25")
-			(name "/KOUT1")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "4")
-				(pinfunction "Pin_4_4")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "26")
-			(name "/KOUT2")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "6")
-				(pinfunction "Pin_6_6")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "27")
-			(name "/KOUT3")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "8")
-				(pinfunction "Pin_8_8")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "28")
-			(name "/KOUT4")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "10")
-				(pinfunction "Pin_10_10")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "29")
-			(name "/KOUT5")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "12")
-				(pinfunction "Pin_12_12")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "30")
-			(name "/KOUT6")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "14")
-				(pinfunction "Pin_14_14")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "31")
-			(name "/KOUT7")
-			(class "Default")
-			(node
-				(ref "J16")
-				(pin "16")
-				(pinfunction "Pin_16_16")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "32")
-			(name "/SD_CD")
-			(class "Default")
-			(node
-				(ref "J19")
-				(pin "10")
-				(pinfunction "CARD_DETECT_10")
-				(pintype "output")
-			)
-			(node
-				(ref "R47")
-				(pin "2")
+				(ref "J36")
+				(pin "5")
+				(pinfunction "Pin_5_5")
 				(pintype "passive")
 			)
 			(node
-				(ref "R54")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "33")
-			(name "/SD_CD_MCU")
-			(class "Default")
-			(node
-				(ref "R54")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "34")
-			(name "/SD_CS_MCU")
-			(class "Default")
-			(node
-				(ref "R53")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "35")
-			(name "/SD_CS_N")
-			(class "Default")
-			(node
-				(ref "J19")
-				(pin "1")
-				(pinfunction "CD/DAT3_1")
-				(pintype "bidirectional")
-			)
-			(node
-				(ref "R44")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R53")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "36")
-			(name "/SD_DAT1")
-			(class "Default")
-			(node
-				(ref "J19")
-				(pin "8")
-				(pinfunction "DAT1_8")
-				(pintype "bidirectional")
-			)
-			(node
-				(ref "R48")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "37")
-			(name "/SD_DAT2")
-			(class "Default")
-			(node
-				(ref "J19")
-				(pin "9")
-				(pinfunction "DAT2_9")
-				(pintype "bidirectional")
-			)
-			(node
-				(ref "R49")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "38")
-			(name "/SD_MISO")
-			(class "Default")
-			(node
-				(ref "J19")
-				(pin "7")
-				(pinfunction "DAT0_7")
-				(pintype "bidirectional")
-			)
-			(node
-				(ref "R46")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R52")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "39")
-			(name "/SD_MISO_MCU")
-			(class "Default")
-			(node
-				(ref "R52")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "40")
-			(name "/SD_MOSI")
-			(class "Default")
-			(node
-				(ref "J19")
-				(pin "2")
-				(pinfunction "CMD_2")
-				(pintype "bidirectional")
-			)
-			(node
-				(ref "R45")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R51")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "41")
-			(name "/SD_MOSI_MCU")
-			(class "Default")
-			(node
-				(ref "R51")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "42")
-			(name "/SD_SCK")
-			(class "Default")
-			(node
-				(ref "J19")
+				(ref "J54")
 				(pin "5")
 				(pinfunction "CLK_5")
 				(pintype "input")
 			)
 			(node
-				(ref "R50")
-				(pin "2")
+				(ref "RN44")
+				(pin "6")
+				(pinfunction "R3B_6")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "43")
-			(name "/SD_SCK_MCU")
+			(code "14")
+			(name "SD_CS")
 			(class "Default")
 			(node
-				(ref "R50")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "44")
-			(name "/WIFI_EN")
-			(class "Default")
-			(node
-				(ref "J20")
-				(pin "7")
-				(pinfunction "Pin_7_7")
-				(pintype "passive")
-			)
-			(node
-				(ref "R55")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "45")
-			(name "/WIFI_GPIO0")
-			(class "Default")
-			(node
-				(ref "J20")
-				(pin "4")
-				(pinfunction "Pin_4_4")
-				(pintype "passive")
-			)
-			(node
-				(ref "R57")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "SW2")
-				(pin "1")
-				(pinfunction "1_1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "46")
-			(name "/WIFI_GPIO2")
-			(class "Default")
-			(node
-				(ref "J20")
-				(pin "3")
-				(pinfunction "Pin_3_3")
-				(pintype "passive")
-			)
-			(node
-				(ref "R58")
-				(pin "2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "47")
-			(name "/WIFI_RST")
-			(class "Default")
-			(node
-				(ref "J20")
+				(ref "J36")
 				(pin "8")
 				(pinfunction "Pin_8_8")
 				(pintype "passive")
 			)
 			(node
-				(ref "R56")
+				(ref "J54")
 				(pin "2")
+				(pinfunction "DAT3/CD_2")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "RN43")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN44")
+				(pin "8")
+				(pinfunction "R1B_8")
 				(pintype "passive")
 			)
 		)
 		(net
-			(code "48")
-			(name "/WIFI_RX")
+			(code "15")
+			(name "SD_DAT1")
+			(class "Default")
+			(node
+				(ref "J36")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J54")
+				(pin "8")
+				(pinfunction "DAT1_8")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "16")
+			(name "SD_DAT2")
+			(class "Default")
+			(node
+				(ref "J36")
+				(pin "9")
+				(pinfunction "Pin_9_9")
+				(pintype "passive")
+			)
+			(node
+				(ref "J54")
+				(pin "1")
+				(pinfunction "DAT2_1")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "17")
+			(name "SD_SI")
+			(class "Default")
+			(node
+				(ref "J36")
+				(pin "7")
+				(pinfunction "Pin_7_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "J54")
+				(pin "3")
+				(pinfunction "CMD_3")
+				(pintype "input")
+			)
+			(node
+				(ref "RN43")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN44")
+				(pin "7")
+				(pinfunction "R2B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "SD_SO")
+			(class "Default")
+			(node
+				(ref "J36")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J54")
+				(pin "7")
+				(pinfunction "DAT0_7")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "RN43")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN44")
+				(pin "5")
+				(pinfunction "R4B_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "SPI_CK")
+			(class "Default")
+			(node
+				(ref "RN44")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "SPI_CS")
+			(class "Default")
+			(node
+				(ref "RN44")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "SPI_SI")
+			(class "Default")
+			(node
+				(ref "RN44")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "SPI_SO")
+			(class "Default")
+			(node
+				(ref "RN44")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
+			(name "UART_RX")
 			(class "Default")
 			(node
 				(ref "J20")
@@ -3659,8 +2217,8 @@
 			)
 		)
 		(net
-			(code "49")
-			(name "/WIFI_TX")
+			(code "24")
+			(name "UART_TX")
 			(class "Default")
 			(node
 				(ref "J20")
@@ -3670,14 +2228,54 @@
 			)
 		)
 		(net
-			(code "50")
-			(name "unconnected-(J19-WRITE_PROTECT-Pad11)")
+			(code "25")
+			(name "WIFI_3V3")
 			(class "Default")
 			(node
-				(ref "J19")
-				(pin "11")
-				(pinfunction "WRITE_PROTECT_11")
-				(pintype "output+no_connect")
+				(ref "C69")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C70")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J20")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "1")
+				(pinfunction "R1A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "2")
+				(pinfunction "R2A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "3")
+				(pinfunction "R3A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "RN36")
+				(pin "4")
+				(pinfunction "R4A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U34")
+				(pin "2")
+				(pinfunction "VO_2")
+				(pintype "power_out")
 			)
 		)
 	)

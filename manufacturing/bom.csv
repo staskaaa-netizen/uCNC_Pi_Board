@@ -4,13 +4,13 @@ Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 3,100nF 100V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 100nF 100V,FIT,C2 C4 C108
 1,10uF 25V,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF 25V,FIT,C67
 14,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,FIT,C3 C5 C6 C10 C11 C69 C88 C90 C100 C101 C107 C109 C110 C111
-5,1=24+ 2=- | 1=BL12+ 2=PLC- | 1=ESTOP 2=PLC- | 1=PLC24+ 2=PLC-,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
-14,- ERR0 Z0 | - ERR1 Z1 | - ERR2 Z2 | - ERR3 Z3 | - ERR4 Z4 | - ERR5 Z5 | - ERR6 Z6 | EN3 STP0 DIR0 | EN3 STP1 DIR1 | EN3 STP2 DIR2 | EN4 STP3 DIR3 | EN4 STP4 DIR4 | EN4 STP5 DIR5 | EN4 STP6 DIR6,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
-6,1=5V 2=A 3=B 4=Z 5=- | 1=- 2=AI0 3=AI1 4=AI2 5=AI3 | 1=- 2=AO0 3=AO1 4=AO2 5=AO3 | 1=SDA 2=SCL 3=3V3 4=5V 5=-,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
-4,1=D01 2=D02 3=D03 4=D04 5=D05 6=D06 7=D07 8=D08 | 1=D09 2=D10 3=D11 4=D12 5=D13 6=D14 7=D15 8=D16 | 1=I01 2=I02 3=I03 4=I04 5=I05 6=I06 7=I07 8=I08 | 1=I09 2=I10 3=I11 4=I12 5=I13 6=I14 7=I15 8=I16,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
+5,24+ GND | BL12+ PLC_0V | ESTOP PLC_0V | PLC24+ PLC_0V,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
+14,EN3 STP0 DIR0 | EN3 STP1 DIR1 | EN3 STP2 DIR2 | EN4 STP3 DIR3 | EN4 STP4 DIR4 | EN4 STP5 DIR5 | EN4 STP6 DIR6 | GND ERR0 Z0 | GND ERR1 Z1 | GND ERR2 Z2 | GND ERR3 Z3 | GND ERR4 Z4 | GND ERR5 Z5 | GND ERR6 Z6,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
+6,+5V A0 B0 Z0 GND | +5V A1 B1 Z1 GND | +5V A2 B2 Z2 GND | GND AI0 AI1 AI2 AI3 | GND AO0 AO1 AO2 AO3 | SDA SCL 3V3 5V GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
+4,D01 D02 D03 D04 D05 D06 D07 D08 | D09 D10 D11 D12 D13 D14 D15 D16 | I01 I02 I03 I04 I05 I06 I07 I08 | I09 I10 I11 I12 I13 I14 I15 I16,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
 1,LVDS 2x10,Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,LVDS 2x10,FIT,J22
 1,microSD header,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,generic,microSD header,FIT,J36
-1,1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8,Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical,generic,1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8,FIT,J51
+1,3V3 GND IO4 IO5 IO6 IO7 IO8,Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical,generic,3V3 GND IO4 IO5 IO6 IO7 IO8,FIT,J51
 1,ESP-01,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,Wurth Elektronik,61300821121,FIT,J20
 1,SMAJ5.0A,Diode_SMD:D_SMA,Bourns,SMAJ5.0A,FIT,D53
 2,SS16,Diode_SMD:D_SMA,Diodes Incorporated,SS16,FIT,D2 D3

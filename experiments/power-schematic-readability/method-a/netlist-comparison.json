@@ -1,10 +1,10 @@
 {
   "source_netlist": "experiments\\power-schematic-readability\\inputs\\source-power.json",
   "generated_netlist": "experiments\\power-schematic-readability\\method-a\\lean-power-a.net",
-  "source_component_count": 41,
-  "generated_component_count": 41,
-  "source_net_count": 20,
-  "generated_net_count": 20,
+  "source_component_count": 55,
+  "generated_component_count": 55,
+  "source_net_count": 25,
+  "generated_net_count": 26,
   "root_local_label_prefix_normalized": false,
   "missing_components": [],
   "extra_components": [],
@@ -16,10 +16,7 @@
   "source_nodes_missing_from_generated": [],
   "generated_nodes_not_in_source": [],
   "generated_connection_groups": {
-    "+12V_FIELD": [
-      "FLG8.1"
-    ],
-    "+3V3": [
+    "3V3": [
       "C13.1",
       "C90.1",
       "FB1.1",
@@ -27,15 +24,7 @@
       "R73.2",
       "U2.2"
     ],
-    "+3V3_A": [
-      "C15.1",
-      "FB1.2",
-      "FLG3.1"
-    ],
-    "+3V3_SD": [
-      "FLG6.1"
-    ],
-    "+5V": [
+    "5V": [
       "C10.1",
       "C11.1",
       "C6.1",
@@ -47,32 +36,74 @@
       "R70.1",
       "U2.3"
     ],
-    "+5V_ENC": [
-      "FLG5.1"
+    "ADC_3V3": [
+      "C15.1",
+      "FB1.2",
+      "FLG3.1"
     ],
-    "+5V_ISO_IN": [
-      "FLG7.1"
+    "B12_BST": [
+      "C113.1",
+      "U3.7"
     ],
-    "BUCK5_BST": [
+    "B12_SW": [
+      "C113.2",
+      "L2.1",
+      "U3.8"
+    ],
+    "B12_VCC": [
+      "C114.1",
+      "U3.6"
+    ],
+    "B5_BST": [
       "C86.1",
       "U1.7"
     ],
-    "BUCK5_SW": [
+    "B5_SW": [
       "C86.2",
       "L1.1",
       "U1.8"
+    ],
+    "B5_VCC": [
+      "C91.1",
+      "U1.6"
+    ],
+    "BL_12V": [
+      "C109.1",
+      "C110.1",
+      "C111.1",
+      "C112.1",
+      "FLG10.1",
+      "J2.1",
+      "L2.2",
+      "R126.1"
+    ],
+    "BL_VIN": [
+      "C107.1",
+      "C108.1",
+      "D3.1",
+      "FLG9.1",
+      "U3.2",
+      "U3.3"
+    ],
+    "ENC_5V": [
+      "FLG5.1"
+    ],
+    "FB12": [
+      "R126.2",
+      "R127.1",
+      "R128.1",
+      "U3.5"
     ],
     "FB5": [
       "R71.2",
       "R72.1",
       "U1.5"
     ],
-    "FB5_TOP": [
+    "FB5_T": [
       "R70.2",
       "R71.1"
     ],
     "GND": [
-      "C1.2",
       "C10.2",
       "C11.2",
       "C13.2",
@@ -91,58 +122,66 @@
       "D5.1",
       "FLG1.1",
       "J1.2",
-      "R1.2",
       "R72.2",
       "U1.1",
       "U1.9",
       "U2.1"
     ],
-    "PWR3_LEDA": [
+    "P3V3_LED": [
       "D5.2",
       "R5.2"
     ],
-    "PWR5_LEDA": [
+    "P5V_LED": [
       "D4.2",
       "R4.2"
     ],
-    "PWR_GOOD_N": [
+    "PG_N": [
       "R73.1",
       "U1.4"
     ],
-    "Q1_GATE": [
-      "D2.2",
-      "Q1.4",
-      "R1.1"
+    "PLC_0V": [
+      "C107.2",
+      "C108.2",
+      "C109.2",
+      "C110.2",
+      "C111.2",
+      "C112.2",
+      "C114.2",
+      "FLG8.1",
+      "J2.2",
+      "R127.2",
+      "R128.2",
+      "U3.1",
+      "U3.9"
     ],
-    "VCC5": [
-      "C91.1",
-      "U1.6"
+    "PLC_24V": [
+      "D3.2",
+      "FLG7.1"
     ],
-    "VIN_FUSED": [
-      "C1.1",
+    "SD_3V3": [
+      "FLG6.1"
+    ],
+    "VIN": [
+      "F1.1",
+      "J1.1"
+    ],
+    "VIN_F": [
       "C2.1",
       "D1.1",
-      "D2.1",
-      "F1.2",
-      "Q1.5",
-      "Q1.6",
-      "Q1.7",
-      "Q1.8"
+      "D2.2",
+      "F1.2"
     ],
-    "VIN_PROT": [
+    "VIN_P": [
       "C3.1",
       "C4.1",
       "C5.1",
+      "D2.1",
       "FLG4.1",
-      "Q1.1",
-      "Q1.2",
-      "Q1.3",
       "U1.2",
       "U1.3"
     ],
-    "VIN_RAW": [
-      "F1.1",
-      "J1.1"
+    "unconnected-(U3-PG-Pad4)": [
+      "U3.4"
     ]
   },
   "netlist_partition_identical": true,

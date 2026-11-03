@@ -120,7 +120,11 @@ def main() -> None:
     source_partition = canonical(source_nets)
     generated_partition = canonical(normalized_generated_nets)
     source_nodes = set().union(*source_nets.values()) if source_nets else set()
-    generated_nodes = set().union(*generated_nets.values()) if generated_nets else set()
+    generated_nodes = (
+        set().union(*normalized_generated_nets.values())
+        if normalized_generated_nets
+        else set()
+    )
     report = {
         "source_netlist": str(args.source),
         "generated_netlist": str(args.generated),

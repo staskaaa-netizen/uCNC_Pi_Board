@@ -15,16 +15,26 @@ resistor arrays:
 
 | Row | Left pin | Right pin | Required |
 |---|---|---|---|
-| 1 | 1=`3V3` | 2=`3V3` | Yes |
-| 2 | 3=`3V3` | 4=`GND` | Yes |
-| 3 | 5=`GND` | 6=`GND` | Yes |
-| 4 | 7=D0- | 8=D0+ | Yes |
-| 5 | 9=D1- | 10=D1+ | Yes |
-| 6 | 11=D2- | 12=D2+ | Yes |
-| 7 | 13=`GND` | 14=`GND` | Yes |
-| 8 | 15=CLK- | 16=CLK+ | Yes |
-| 9 | 17=NC | 18=NC | No |
-| 10 | 19=NC | 20=NC | No |
+| 1 | `3V3` | `3V3` | Yes |
+| 2 | `3V3` | `GND` | Yes |
+| 3 | `GND` | `GND` | Yes |
+| 4 | D0- | D0+ | Yes |
+| 5 | D1- | D1+ | Yes |
+| 6 | D2- | D2+ | Yes |
+| 7 | `GND` | `GND` | Yes |
+| 8 | CLK- | CLK+ | Yes |
+| 9 | NC | NC | No |
+| 10 | NC | NC | No |
+
+The two front-silkscreen legends at J22 follow the physical pad order:
+
+- P side: `NC NC CLK_P GND D2_P D1_P D0_P GND GND 3V3`
+- N side: `NC NC CLK_N GND D2_N D1_N D0_N GND 3V3 3V3`
+
+The differing supply suffix reflects the actual pad sequence: the P row has
+two `GND` pads followed by `3V3`, while the N row has `GND` followed by two
+`3V3` pads. Differential signal polarity follows the net names; neither row
+is relabeled from P to N.
 
 ## Series arrays
 

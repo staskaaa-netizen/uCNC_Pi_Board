@@ -1,41 +1,40 @@
 Reference,Value,LibId,PinCount
-C53,100nF,Device:C,2
-C54,100nF,Device:C,2
-C55,100nF,Device:C,2
-C56,100nF,Device:C,2
-D45,DO0,Device:LED,2
-D46,DO1,Device:LED,2
-D47,DO2,Device:LED,2
-D48,DO3,Device:LED,2
-D49,DO4,Device:LED,2
-D50,DO5,Device:LED,2
-D51,DO6,Device:LED,2
-D52,DO7,Device:LED,2
-D57,DO8,Device:LED,2
-D58,DO9,Device:LED,2
-D59,DO10,Device:LED,2
-D60,DO11,Device:LED,2
-D61,DO12,Device:LED,2
-D62,DO13,Device:LED,2
-D63,DO14,Device:LED,2
-D64,DO15,Device:LED,2
-J10,"AX0: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
-J11,"AX1: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
-J12,General outputs 0-7,Connector_Generic:Conn_01x08,8
-J28,"AX2: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
-J29,"AX3: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
-J30,"AX4: EN, STEP, DIR, GND",Connector_Generic:Conn_01x04,4
-J31,AUX open-drain output and GND,Connector_Generic:Conn_01x02,2
-J32,General outputs 8-15; DO_COM and GND are shared through J12,Connector_Generic:Conn_01x08,8
-J33,General outputs field +V and GND,Connector_Generic:Conn_01x02,2
-Q5,BSS138,Transistor_FET:Q_NMOS_GSD,3
-Q6,BSS138,Transistor_FET:Q_NMOS_GSD,3
-Q7,BSS138,Transistor_FET:Q_NMOS_GSD,3
-R113,100k,Device:R,2
-R114,100R,Device:R,2
-R115,100k,Device:R,2
-R116,100R,Device:R,2
-R117,100k,Device:R,2
+C115,100nF,Device:C,2
+C116,100nF,Device:C,2
+D45,D01,Device:LED,2
+D46,D02,Device:LED,2
+D47,D03,Device:LED,2
+D48,D04,Device:LED,2
+D49,D05,Device:LED,2
+D50,D06,Device:LED,2
+D51,D07,Device:LED,2
+D52,D08,Device:LED,2
+D57,D09,Device:LED,2
+D58,D10,Device:LED,2
+D59,D11,Device:LED,2
+D60,D12,Device:LED,2
+D61,D13,Device:LED,2
+D62,D14,Device:LED,2
+D63,D15,Device:LED,2
+D64,D16,Device:LED,2
+J10,EN3 STP0 DIR0,Connector_Generic:Conn_01x03,3
+J11,EN3 STP1 DIR1,Connector_Generic:Conn_01x03,3
+J12,D01 D02 D03 D04 D05 D06 D07 D08,Connector_Generic:Conn_01x08,8
+J28,EN3 STP2 DIR2,Connector_Generic:Conn_01x03,3
+J29,EN4 STP3 DIR3,Connector_Generic:Conn_01x03,3
+J30,EN4 STP6 DIR6,Connector_Generic:Conn_01x03,3
+J32,D09 D10 D11 D12 D13 D14 D15 D16,Connector_Generic:Conn_01x08,8
+J33,PLC24+ PLC_0V,Connector_Generic:Conn_01x02,2
+J40,GND ERR0 Z0,Connector_Generic:Conn_01x03,3
+J41,GND ERR1 Z1,Connector_Generic:Conn_01x03,3
+J42,GND ERR2 Z2,Connector_Generic:Conn_01x03,3
+J43,GND ERR3 Z3,Connector_Generic:Conn_01x03,3
+J45,PLC24+ PLC_0V,Connector_Generic:Conn_01x02,2
+J46,EN4 STP5 DIR5,Connector_Generic:Conn_01x03,3
+J47,EN4 STP4 DIR4,Connector_Generic:Conn_01x03,3
+J48,GND ERR6 Z6,Connector_Generic:Conn_01x03,3
+J49,GND ERR5 Z5,Connector_Generic:Conn_01x03,3
+J50,GND ERR4 Z4,Connector_Generic:Conn_01x03,3
 R118,2.2k,Device:R,2
 R119,2.2k,Device:R,2
 R120,2.2k,Device:R,2
@@ -56,17 +55,19 @@ RN10,4x10k,LeanCam:ResistorPack04,8
 RN11,4x10k,LeanCam:ResistorPack04,8
 RN12,4x10k,LeanCam:ResistorPack04,8
 RN13,4x10k,LeanCam:ResistorPack04,8
-RN16,4x100R,LeanCam:ResistorPack04,8
-RN17,4x100R,LeanCam:ResistorPack04,8
-RN18,4x100R,LeanCam:ResistorPack04,8
-RN19,4x100R,LeanCam:ResistorPack04,8
-RN20,4x100R,LeanCam:ResistorPack04,8
-RN21,4x100R,LeanCam:ResistorPack04,8
 RN30,4x10k,LeanCam:ResistorPack04,8
 RN31,4x10k,LeanCam:ResistorPack04,8
+RN37,4x1k,LeanCam:ResistorPack04,8
+RN38,4x1k,LeanCam:ResistorPack04,8
+RN39,4x1k,LeanCam:ResistorPack04,8
+RN40,4x1k,LeanCam:ResistorPack04,8
 RN8,4x10k,LeanCam:ResistorPack04,8
 RN9,4x10k,LeanCam:ResistorPack04,8
-U24,SN74AHCT541DW,LeanCam:OctalBuffer5V,20
-U25,SN74AHCT541DW,LeanCam:OctalBuffer5V,20
-U26,ULN2003ADR,Transistor_Array:ULN2003A,16
-U27,ULN2003ADR,Transistor_Array:ULN2003A,16
+U26,TBD62083AFG,Transistor_Array:ULN2803A,18
+U27,TBD62083AFG,Transistor_Array:ULN2803A,18
+U42,TC74AC541F,LeanCam:OctalBuffer5V,20
+U43,TC74AC541F,LeanCam:OctalBuffer5V,20
+U61,TLP291-4,LeanCam:QuadOpto,16
+U62,TLP291-4,LeanCam:QuadOpto,16
+U63,TLP291-4,LeanCam:QuadOpto,16
+U64,TLP291-4,LeanCam:QuadOpto,16

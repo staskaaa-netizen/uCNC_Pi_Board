@@ -386,7 +386,7 @@ def main() -> None:
                 f"{expected_net} is not on MOD1 expansion pin {module_pin}"
             )
     connector_values = set(component_values.values())
-    for required in ("1=ESTOP 2=PLC-",):
+    for required in ("ESTOP PLC_0V",):
         if required not in connector_values:
             failures.append(f"Missing dedicated connector: {required}")
     for retired in (

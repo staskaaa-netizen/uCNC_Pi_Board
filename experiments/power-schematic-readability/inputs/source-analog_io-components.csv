@@ -1,7 +1,8 @@
 Reference,Value,LibId,PinCount
-C100,1uF 50V,Device:C,2
-C101,10uF 25V,Device:C,2
+C100,22uF 50V,Device:C,2
+C101,22uF 50V,Device:C,2
 C102,100nF,Device:C,2
+C118,100nF,Device:C,2
 C73,100nF,Device:C,2
 C74,100nF,Device:C,2
 C75,100nF,Device:C,2
@@ -13,8 +14,8 @@ C96,1uF,Device:C,2
 C97,100nF,Device:C,2
 C98,1uF,Device:C,2
 C99,100nF,Device:C,2
-J24,AI0/GND/AI1/GND/AI2,Connector_Generic:Conn_01x05,5
-J25,0-10 V outputs 0-3; pin 1 = common GND,Connector_Generic:Conn_01x05,5
+J24,GND AI0 AI1 AI2 AI3,Connector_Generic:Conn_01x05,5
+J25,GND AO0 AO1 AO2 AO3,Connector_Generic:Conn_01x05,5
 R100,22k,Device:R,2
 R101,22k,Device:R,2
 R102,22k,Device:R,2
@@ -23,6 +24,8 @@ R104,10k,Device:R,2
 R105,10k,Device:R,2
 R106,10k,Device:R,2
 R107,10k,Device:R,2
+R182,100k,Device:R,2
+R183,33k,Device:R,2
 R61,100k,Device:R,2
 R63,33k,Device:R,2
 R64,100k,Device:R,2

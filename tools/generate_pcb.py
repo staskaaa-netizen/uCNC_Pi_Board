@@ -1028,6 +1028,7 @@ def build_board() -> None:
     add_zones(board, net_map)
     add_lvds_connector_silkscreen(board)
     update_field_connector_silkscreen(board)
+    set_visible_connector_values(board)
     fix_component_3d_models(board)
     board.BuildConnectivity()
 
@@ -1040,7 +1041,7 @@ def build_board() -> None:
 
 
 def add_lvds_connector_silkscreen(board) -> None:
-    """Place the compact J22 pin-group legend on the rear silkscreen."""
+    """Place the physical J22 row labels on the front silkscreen."""
     connector = next(
         (
             footprint
@@ -1051,26 +1052,26 @@ def add_lvds_connector_silkscreen(board) -> None:
     )
     if connector is None:
         return
-    bbox = connector.GetBoundingBox(False, False)
-    origin_x = pcbnew.ToMM(bbox.GetX()) + 0.6
-    origin_y = pcbnew.ToMM(bbox.GetY()) + 0.5
+    position = connector.GetPosition()
+    origin_x = pcbnew.ToMM(position.x)
+    origin_y = pcbnew.ToMM(position.y)
     labels = (
-        ("J22 LVDS", 0.0, 0.0, 0.8),
-        ("PWR 1-3   GND 4-6,13-14", 0.0, 0.9, 0.62),
-        ("D0- 7  D0+ 8   D1- 9  D1+ 10", 0.0, 1.9, 0.62),
-        ("D2- 11 D2+ 12  CLK- 15 CLK+ 16", 0.0, 2.9, 0.62),
-        ("NC 17-20", 0.0, 3.9, 0.62),
+        ("J22 LVDS", -13.593, -2.034, 0.8),
+        ("NC NC CLK_P GND D2_P D1_P D0_P GND GND 3V3", -21.721, 4.443, 0.62),
+        ("NC NC CLK_N GND D2_N D1_N D0_N GND 3V3 3V3", -21.594, 6.221, 0.62),
     )
     legacy_texts = {
-        "J22 LVDS", "1-3: 3V3", "4-6,13-14: GND",
-        "7/8: D0- / D0+", "9/10: D1- / D1+", "11/12: D2- / D2+",
-        "15/16: CLK- / CLK+", "17-20: NC",
+        "J22 LVDS", "PWR 1-3   GND 4-6,13-14",
+        "D0- 7  D0+ 8   D1- 9  D1+ 10",
+        "D2- 11 D2+ 12  CLK- 15 CLK+ 16", "NC 17-20",
+        "NC NC CLK_N GND D2_N D1_N D0_N GND GND 3V3",
+        "NC NC CLK_P GND D2_P D1_P D0_P GND GND 3V3",
     }
     existing = [
         item
         for item in board.GetDrawings()
         if isinstance(item, pcbnew.PCB_TEXT)
-        and item.GetLayer() == pcbnew.B_SilkS
+        and item.GetLayer() in {pcbnew.B_SilkS, pcbnew.F_SilkS}
         and item.GetText() in legacy_texts
     ]
     for index, (text, dx, dy, size) in enumerate(labels):
@@ -1080,11 +1081,11 @@ def add_lvds_connector_silkscreen(board) -> None:
             item = pcbnew.PCB_TEXT(board)
             board.Add(item)
         item.SetText(text)
-        item.SetLayer(pcbnew.B_SilkS)
+        item.SetLayer(pcbnew.F_SilkS)
         item.SetTextSize(pcbnew.VECTOR2I_MM(size, size))
         item.SetTextThickness(pcbnew.FromMM(0.16))
         item.SetTextPos(pcbnew.VECTOR2I_MM(origin_x + dx, origin_y + dy))
-        item.SetMirrored(True)
+        item.SetMirrored(False)
         item.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
     for item in existing[len(labels):]:
         board.Remove(item)
@@ -1143,6 +1144,39 @@ def update_field_connector_silkscreen(board) -> None:
         ))
         item.SetMirrored(True)
         item.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
+
+
+def set_visible_connector_values(board) -> None:
+    """Apply board-label order where footprint rotation would mislead assembly."""
+    value_overrides = {
+        "J1": "GND 24+",
+        "J2": "PLC_0V BL12+",
+        "J45": "PLC_0V PLC24+",
+        "J10": "DIR0 STP0 EN3",
+        "J11": "DIR1 STP1 EN3",
+        "J28": "DIR2 STP2 EN3",
+        "J29": "DIR3 STP3 EN4",
+        "J47": "DIR4 STP4 EN4",
+        "J46": "DIR5 STP5 EN4",
+        "J30": "DIR6 STP6 EN4",
+    }
+    text_angles = {
+        "J1": 0.0, "J2": 0.0, "J5": 0.0, "J7": 0.0, "J8": 0.0,
+        "J10": 270.0, "J11": 270.0, "J12": 180.0,
+        "J13": 0.0, "J14": 0.0, "J15": 0.0,
+        "J18": 90.0, "J24": 90.0, "J25": 90.0,
+        "J28": 270.0, "J29": 270.0, "J30": 270.0, "J32": 180.0,
+        "J33": 0.0, "J40": 90.0, "J41": 90.0, "J42": 90.0,
+        "J43": 90.0, "J45": 0.0, "J46": 270.0, "J47": 270.0,
+        "J48": 90.0, "J49": 90.0, "J50": 90.0, "J51": 270.0,
+    }
+    for footprint in board.GetFootprints():
+        reference = footprint.GetReference()
+        if reference not in text_angles:
+            continue
+        if reference in value_overrides:
+            footprint.SetValue(value_overrides[reference])
+        footprint.Value().SetTextAngleDegrees(text_angles[reference])
 
 
 def fix_component_3d_models(board) -> None:

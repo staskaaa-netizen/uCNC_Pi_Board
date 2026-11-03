@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-29T17:49:59",
+    "date": "2026-11-03T20:13:57",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -29,7 +29,7 @@
     "sheets": [
         {
             "path": "/",
-            "uuid_path": "/75c4b43e-1edc-48d3-8217-1213416fdce8",
+            "uuid_path": "/de278a96-6995-4d49-a317-6b05502a72c8",
             "violations": [
                 {
                     "description": "Input Power pin not driven by any Output Power pins",
@@ -40,7 +40,7 @@
                                 "x": 0.6985,
                                 "y": 1.7272
                             },
-                            "uuid": "4a135748-40d6-4d99-8e56-6c3234d262b7"
+                            "uuid": "ff5b2798-6a21-4d35-be70-648cf7558497"
                         }
                     ],
                     "severity": "error",
@@ -55,7 +55,7 @@
                                 "x": 0.5715,
                                 "y": 1.8288
                             },
-                            "uuid": "6275be9a-df78-4ab9-9dda-af3be8d725b6"
+                            "uuid": "d774d8c7-c7e2-4eca-a389-c784cd71f7c4"
                         }
                     ],
                     "severity": "error",
@@ -70,7 +70,7 @@
                                 "x": 0.5715,
                                 "y": 1.8542
                             },
-                            "uuid": "94d9db51-549d-43a0-9c68-06da9e0bb03d"
+                            "uuid": "1d0a5489-0e9d-472d-9258-565cdc50845d"
                         }
                     ],
                     "severity": "error",
@@ -85,7 +85,7 @@
                                 "x": 0.5715,
                                 "y": 1.8796
                             },
-                            "uuid": "a455268e-807c-4347-b6ee-2c3e60114c3f"
+                            "uuid": "e41a8acd-e4a8-4adf-ab83-7ab281dbecb7"
                         }
                     ],
                     "severity": "error",
@@ -100,7 +100,7 @@
                                 "x": 0.5715,
                                 "y": 1.905
                             },
-                            "uuid": "cff841dd-598b-4d7b-b645-4779db1414e7"
+                            "uuid": "95c2aac8-6862-456e-bc67-78b4cb7d6012"
                         }
                     ],
                     "severity": "error",
@@ -115,7 +115,7 @@
                                 "x": 0.5715,
                                 "y": 1.9304
                             },
-                            "uuid": "d4321248-68a3-4a76-913d-03c0420126dd"
+                            "uuid": "a37f9e89-4623-47c3-8929-0cac670f59ec"
                         }
                     ],
                     "severity": "error",
@@ -130,7 +130,7 @@
                                 "x": 0.8763,
                                 "y": 1.8288
                             },
-                            "uuid": "7509e48f-34e9-4b41-9d20-0e2230fe8ca1"
+                            "uuid": "2f102df0-17dc-4bea-9b72-c11666fa8b24"
                         }
                     ],
                     "severity": "error",
@@ -145,7 +145,7 @@
                                 "x": 0.5715,
                                 "y": 1.9558
                             },
-                            "uuid": "18a447e0-9930-426b-986e-49209e27a1af"
+                            "uuid": "8c4ad23c-565f-46db-828f-80a947417e23"
                         }
                     ],
                     "severity": "error",
@@ -160,7 +160,7 @@
                                 "x": 0.8763,
                                 "y": 1.8542
                             },
-                            "uuid": "4ee959ad-c186-49e6-af70-91aec5c28caa"
+                            "uuid": "05ebe7d3-d966-4f76-af5e-60b32d23c147"
                         }
                     ],
                     "severity": "error",
@@ -175,22 +175,7 @@
                                 "x": 0.5715,
                                 "y": 1.9812
                             },
-                            "uuid": "3d5fa0c8-922b-430f-aaa5-ae34f19b224a"
-                        }
-                    ],
-                    "severity": "error",
-                    "type": "pin_not_driven"
-                },
-                {
-                    "description": "Input pin not driven by any Output pins",
-                    "items": [
-                        {
-                            "description": "Symbol U7 Pin 13 [D2, Input, Line]",
-                            "pos": {
-                                "x": 0.8763,
-                                "y": 1.8796
-                            },
-                            "uuid": "20b4d7c9-feac-4207-a61b-e46463260bc8"
+                            "uuid": "2686e8ab-ce58-4657-a7e1-e75820e6ecf2"
                         }
                     ],
                     "severity": "error",
@@ -205,22 +190,7 @@
                                 "x": 0.5715,
                                 "y": 2.0066
                             },
-                            "uuid": "f554e45c-4054-47de-91c3-7570a49f7d88"
-                        }
-                    ],
-                    "severity": "error",
-                    "type": "pin_not_driven"
-                },
-                {
-                    "description": "Input pin not driven by any Output pins",
-                    "items": [
-                        {
-                            "description": "Symbol U7 Pin 14 [D3, Input, Line]",
-                            "pos": {
-                                "x": 0.8763,
-                                "y": 1.905
-                            },
-                            "uuid": "518004bb-80d6-434d-a475-d4d7903494b3"
+                            "uuid": "e0c15eae-6f54-4293-bc3c-d1a8d9fe7abd"
                         }
                     ],
                     "severity": "error",
@@ -235,7 +205,7 @@
                                 "x": 0.8763,
                                 "y": 1.9304
                             },
-                            "uuid": "5995b479-e2bf-477a-bd03-fb036b84300a"
+                            "uuid": "fb138e0d-0117-4a92-978e-3c76dd4c34d8"
                         }
                     ],
                     "severity": "error",
@@ -250,7 +220,7 @@
                                 "x": 0.8763,
                                 "y": 1.9558
                             },
-                            "uuid": "a2af0e40-e2cf-4e9d-9364-84c0b27b950d"
+                            "uuid": "f8f254d3-81dc-49a8-8478-3fedbd9cef69"
                         }
                     ],
                     "severity": "error",
@@ -265,7 +235,7 @@
                                 "x": 0.8763,
                                 "y": 1.9812
                             },
-                            "uuid": "94b1d10d-d28e-462f-9e22-ce00d33c1649"
+                            "uuid": "c0e67c7f-a113-4f82-bde7-b13591558aca"
                         }
                     ],
                     "severity": "error",
@@ -280,7 +250,7 @@
                                 "x": 1.1684,
                                 "y": 1.8288
                             },
-                            "uuid": "610e301e-c117-4690-9f50-f9daf0dda28a"
+                            "uuid": "43ff391f-bd8c-41c9-b947-dfde2bc3e0a0"
                         }
                     ],
                     "severity": "error",
@@ -295,7 +265,7 @@
                                 "x": 0.8763,
                                 "y": 2.0066
                             },
-                            "uuid": "7afe142a-d8f3-456c-9773-5fb2e87b1863"
+                            "uuid": "ad6c330b-630f-49ca-bbe6-4bb3ce7ccc9a"
                         }
                     ],
                     "severity": "error",
@@ -310,7 +280,7 @@
                                 "x": 1.1684,
                                 "y": 1.8542
                             },
-                            "uuid": "2affc7ba-e35a-4ad4-a4c5-10e28e86a984"
+                            "uuid": "9818f13c-689c-452d-87ee-b64f3d835d8a"
                         }
                     ],
                     "severity": "error",
@@ -325,7 +295,7 @@
                                 "x": 1.1684,
                                 "y": 1.8796
                             },
-                            "uuid": "6529ec68-a4cb-432a-9d74-8d981c4090a7"
+                            "uuid": "6dad88f8-c872-46d0-bca0-0da6c5f2bbb2"
                         }
                     ],
                     "severity": "error",
@@ -340,7 +310,7 @@
                                 "x": 1.1684,
                                 "y": 1.905
                             },
-                            "uuid": "87cb48fb-f5e5-4ee0-a392-5d67d7ae5c02"
+                            "uuid": "ebd1bb52-3383-44d7-a63f-192b0bd689e4"
                         }
                     ],
                     "severity": "error",
@@ -355,7 +325,7 @@
                                 "x": 1.1684,
                                 "y": 1.9304
                             },
-                            "uuid": "6c798491-faa8-423a-8507-1c5906dd4120"
+                            "uuid": "77b4427f-295e-49f7-a930-7c087ee3c9d8"
                         }
                     ],
                     "severity": "error",
@@ -370,7 +340,7 @@
                                 "x": 1.1684,
                                 "y": 1.9558
                             },
-                            "uuid": "2e8fda00-febe-4903-8ba9-54d68434fbad"
+                            "uuid": "27d3396a-3775-4d56-9935-a8fed0b228a5"
                         }
                     ],
                     "severity": "error",
@@ -385,7 +355,7 @@
                                 "x": 1.1684,
                                 "y": 1.9812
                             },
-                            "uuid": "731491a0-7b8c-4d83-aa75-6ead1f6281c3"
+                            "uuid": "575fda8a-0d2f-45af-b78e-f9c809e618ea"
                         }
                     ],
                     "severity": "error",
@@ -400,7 +370,7 @@
                                 "x": 0.6985,
                                 "y": 2.2098
                             },
-                            "uuid": "6b8e5730-c1d9-4c96-819d-440091cd121f"
+                            "uuid": "1a5a5877-fc08-4271-b510-8b041403cceb"
                         }
                     ],
                     "severity": "error",
@@ -415,7 +385,7 @@
                                 "x": 1.1684,
                                 "y": 2.0066
                             },
-                            "uuid": "dce66e2c-9ca9-4aca-85b7-30f9f3c4bd61"
+                            "uuid": "2b648e19-3500-49e0-8320-822adc55fe27"
                         }
                     ],
                     "severity": "error",
@@ -430,7 +400,7 @@
                                 "x": 1.4732,
                                 "y": 1.8288
                             },
-                            "uuid": "55e38a08-f09b-4f2d-adcb-62c669f01b82"
+                            "uuid": "1760f8ba-a09f-40c0-b8a1-9b7b9f58d561"
                         }
                     ],
                     "severity": "error",
@@ -445,7 +415,7 @@
                                 "x": 1.4732,
                                 "y": 1.8542
                             },
-                            "uuid": "931825fe-bf9f-41d1-9ead-d6667923b9c4"
+                            "uuid": "20a1353e-c614-4caa-941e-b8d053c26136"
                         }
                     ],
                     "severity": "error",
@@ -460,7 +430,7 @@
                                 "x": 1.4732,
                                 "y": 1.8796
                             },
-                            "uuid": "b575f235-6efe-45e4-a570-46f9a4b044a8"
+                            "uuid": "7e2fe94a-33e0-49f7-b8dd-ac7cbca293f7"
                         }
                     ],
                     "severity": "error",
@@ -475,7 +445,7 @@
                                 "x": 1.4732,
                                 "y": 1.905
                             },
-                            "uuid": "f3b33c83-7ebf-451e-893d-b388e03b2958"
+                            "uuid": "2db11d1c-e18f-4a78-a5e4-90ab463f0484"
                         }
                     ],
                     "severity": "error",
@@ -490,7 +460,7 @@
                                 "x": 1.4732,
                                 "y": 1.9304
                             },
-                            "uuid": "c36cc8ee-003a-4f0a-8a2a-3b738d2fb76a"
+                            "uuid": "155594b4-3727-4528-a38e-a02806fd58d4"
                         }
                     ],
                     "severity": "error",
@@ -505,7 +475,7 @@
                                 "x": 1.4732,
                                 "y": 1.9558
                             },
-                            "uuid": "57245ec8-11aa-4b9e-8996-f07546c34fd5"
+                            "uuid": "388470ea-75fb-4a06-8946-c45d7911934f"
                         }
                     ],
                     "severity": "error",
@@ -520,7 +490,7 @@
                                 "x": 1.4732,
                                 "y": 1.9812
                             },
-                            "uuid": "9fb9a2b5-99a6-4812-b8bc-1f5c3b3e1806"
+                            "uuid": "a9b994b5-5d93-470c-b4ac-245b4d6aeb1e"
                         }
                     ],
                     "severity": "error",
@@ -535,22 +505,37 @@
                                 "x": 1.4732,
                                 "y": 2.0066
                             },
-                            "uuid": "85052a67-8e47-4d4c-971e-aeeb8bbf254b"
+                            "uuid": "51659ec5-4d16-4880-a957-9a372ccdecd9"
                         }
                     ],
                     "severity": "error",
                     "type": "pin_not_driven"
                 },
                 {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U10 Pin 10 [~{SRCLR}, Input, Line]",
+                            "pos": {
+                                "x": 0.5969,
+                                "y": 2.4257
+                            },
+                            "uuid": "c17ed309-970e-460b-b96f-f32323e51080"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AOUT3_PWM'",
+                            "description": "Global Label 'PWM0'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.6604
                             },
-                            "uuid": "8ddf7388-1bdb-40d1-8837-f143d50fef60"
+                            "uuid": "cb216d00-fd56-45ed-bb21-90093c3b87eb"
                         }
                     ],
                     "severity": "warning",
@@ -560,12 +545,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AOUT1_PWM'",
+                            "description": "Global Label 'PWM1'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.6858
                             },
-                            "uuid": "b7248d2f-497c-487d-84cc-3494e4c5c9be"
+                            "uuid": "7415cf64-8b4b-41bd-b47a-3348f26e820d"
                         }
                     ],
                     "severity": "warning",
@@ -575,12 +560,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AI2_ADC'",
+                            "description": "Global Label 'ADC1'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.7112
                             },
-                            "uuid": "b48bb85b-c456-4487-b12e-a87502201964"
+                            "uuid": "7319e677-6cb8-4e07-b3aa-4da77ee2473b"
                         }
                     ],
                     "severity": "warning",
@@ -590,12 +575,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AI0_ADC'",
+                            "description": "Global Label 'ADC0'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.7366
                             },
-                            "uuid": "adde0af9-cef3-4367-a56b-c54aa71ff2d6"
+                            "uuid": "95075de4-f6bd-48dd-b562-a8bf3205a722"
                         }
                     ],
                     "severity": "warning",
@@ -605,12 +590,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'HOLD_N'",
+                            "description": "Global Label 'I2C_SDA'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.762
                             },
-                            "uuid": "f37e7870-858c-4c40-b501-69f4d3a51e60"
+                            "uuid": "6a9ddcdf-f675-4ddb-bd00-3c65342a10eb"
                         }
                     ],
                     "severity": "warning",
@@ -620,12 +605,27 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC2_Z_3V3'",
+                            "description": "Global Label 'SPI_SO'",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.7874
+                            },
+                            "uuid": "b845bc1e-80ee-4795-be32-7f8b3fd436a9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SPI_CK'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.8128
                             },
-                            "uuid": "367b58d3-5e28-4be0-97f1-37b06ef1467f"
+                            "uuid": "bc5e7252-b514-4145-a448-8a3c6193c490"
                         }
                     ],
                     "severity": "warning",
@@ -635,12 +635,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC2_A_3V3'",
+                            "description": "Global Label 'E0_B3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.8382
                             },
-                            "uuid": "0cff24f8-44af-4158-b776-e04f125e889d"
+                            "uuid": "4f60296c-73f0-441c-a087-64b4ef42e13c"
                         }
                     ],
                     "severity": "warning",
@@ -650,12 +650,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC1_B_3V3'",
+                            "description": "Global Label 'E1_A3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.8636
                             },
-                            "uuid": "e6c62a23-83b8-414b-952d-a8d3a7846eb0"
+                            "uuid": "4804952c-c9f5-4164-9b93-7bc8cd98240e"
                         }
                     ],
                     "severity": "warning",
@@ -665,12 +665,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC0_Z_3V3'",
+                            "description": "Global Label 'E1_Z3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.889
                             },
-                            "uuid": "8cb4acd9-e568-4d3a-b853-fa6e796927ec"
+                            "uuid": "6d026f48-dc48-4dc5-b141-7d93b8302af4"
                         }
                     ],
                     "severity": "warning",
@@ -680,12 +680,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC0_A_3V3'",
+                            "description": "Global Label 'E2_B3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 0.9144
                             },
-                            "uuid": "143f4c30-3db0-44a8-80cf-d36b3a92e518"
+                            "uuid": "469020e2-8884-46da-8026-4d1924838da4"
                         }
                     ],
                     "severity": "warning",
@@ -695,12 +695,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AOUT0_PWM'",
+                            "description": "Global Label 'PWM3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.016
                             },
-                            "uuid": "b23d8d72-0fc7-4a98-bdde-9acd50f77b34"
+                            "uuid": "57e14433-f2ac-4cdd-ac11-f3d03b75c3b3"
                         }
                     ],
                     "severity": "warning",
@@ -710,12 +710,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AOUT2_PWM'",
+                            "description": "Global Label 'PWM2'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.0414
                             },
-                            "uuid": "14b37ac3-049f-41a9-b5c7-2636349290e0"
+                            "uuid": "a06b2191-1665-40e7-bd9f-89ac66aaa675"
                         }
                     ],
                     "severity": "warning",
@@ -725,12 +725,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PWR_GOOD_N'",
+                            "description": "Global Label 'ADC3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.0668
                             },
-                            "uuid": "b9fea16a-17c1-4da5-9326-9aa78954e136"
+                            "uuid": "ff83821c-8cdf-4932-8735-8daa4bf364ff"
                         }
                     ],
                     "severity": "warning",
@@ -740,12 +740,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'AI1_ADC'",
+                            "description": "Global Label 'ADC2'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.0922
                             },
-                            "uuid": "6508bbba-f48e-47f7-851d-f1f7361bda74"
+                            "uuid": "d5c443b2-339c-4438-818d-ce7453594fc4"
                         }
                     ],
                     "severity": "warning",
@@ -755,12 +755,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'START_N'",
+                            "description": "Global Label 'I2C_SCL'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.1176
                             },
-                            "uuid": "b37ca221-039b-4ed6-bb59-4833c23923b7"
+                            "uuid": "a782f94d-0e3a-4a95-a807-3f6138a30120"
                         }
                     ],
                     "severity": "warning",
@@ -770,12 +770,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ESTOP_N'",
+                            "description": "Global Label 'SPI_CS'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.143
                             },
-                            "uuid": "c99616f3-f51a-47f4-bdfa-bf99f9724445"
+                            "uuid": "30bf9642-1ed2-452c-b7c1-df18f5f81c23"
                         }
                     ],
                     "severity": "warning",
@@ -785,12 +785,27 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC2_B_3V3'",
+                            "description": "Global Label 'SPI_SI'",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 1.1684
+                            },
+                            "uuid": "5d998266-a65b-4582-90a1-c4191de3e23b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'E0_A3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.1938
                             },
-                            "uuid": "3818749c-43a4-4a60-a3c4-24e2aa9172ab"
+                            "uuid": "3565bcee-3cff-4f29-8c39-3f1cb752003b"
                         }
                     ],
                     "severity": "warning",
@@ -800,12 +815,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC1_Z_3V3'",
+                            "description": "Global Label 'E0_Z3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.2192
                             },
-                            "uuid": "458466bb-c0fd-415c-9263-030dd15c5acf"
+                            "uuid": "35939dac-695c-49a7-ae7b-4b8e8ea40032"
                         }
                     ],
                     "severity": "warning",
@@ -820,7 +835,7 @@
                                 "x": 1.4986,
                                 "y": 0.9525
                             },
-                            "uuid": "303358a3-aacc-4718-9b72-5cb91e3ba728"
+                            "uuid": "d0d126b8-2eda-41d8-8dc6-ce2fbe9a265f"
                         }
                     ],
                     "severity": "warning",
@@ -835,7 +850,7 @@
                                 "x": 1.4986,
                                 "y": 0.9525
                             },
-                            "uuid": "303358a3-aacc-4718-9b72-5cb91e3ba728"
+                            "uuid": "d0d126b8-2eda-41d8-8dc6-ce2fbe9a265f"
                         }
                     ],
                     "severity": "warning",
@@ -845,12 +860,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC1_A_3V3'",
+                            "description": "Global Label 'E1_B3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.2446
                             },
-                            "uuid": "3c6fe141-aac0-4336-8297-edc7d380083f"
+                            "uuid": "d6423a1e-eedf-4479-bed0-c6f791e39e6a"
                         }
                     ],
                     "severity": "warning",
@@ -860,12 +875,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'ENC0_B_3V3'",
+                            "description": "Global Label 'E2_A3V3'",
                             "pos": {
                                 "x": 1.27,
                                 "y": 1.27
                             },
-                            "uuid": "b0e44cc1-8fa5-40dc-9ca9-a98ad54beff4"
+                            "uuid": "1031e447-2860-4065-bd9e-d0821ccafd44"
                         }
                     ],
                     "severity": "warning",
@@ -875,12 +890,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label '+5V'",
+                            "description": "Global Label 'E2_Z3V3'",
                             "pos": {
                                 "x": 1.27,
-                                "y": 1.3208
+                                "y": 1.2954
                             },
-                            "uuid": "ef6f3135-9866-4280-97ab-4532f60d0c11"
+                            "uuid": "e2030a12-a9b0-4fde-9b13-c49724ca1239"
                         }
                     ],
                     "severity": "warning",
@@ -895,7 +910,7 @@
                                 "x": 1.7272,
                                 "y": 0.7112
                             },
-                            "uuid": "f0dc66fb-f35c-4ea0-ba1d-a5554385ef32"
+                            "uuid": "baf3083b-08dc-4878-8b57-5205eb84e712"
                         }
                     ],
                     "severity": "warning",
@@ -910,7 +925,7 @@
                                 "x": 1.7272,
                                 "y": 0.7366
                             },
-                            "uuid": "ad0dd323-5de0-4fa3-945b-960c3a161757"
+                            "uuid": "32ab6d1c-6fd0-48dd-91f9-752ac955737a"
                         }
                     ],
                     "severity": "warning",
@@ -925,7 +940,7 @@
                                 "x": 1.7272,
                                 "y": 0.762
                             },
-                            "uuid": "f55e1519-6e04-4c22-805c-124affa24222"
+                            "uuid": "10c91ac4-0d89-422f-b787-d12cb1aeacec"
                         }
                     ],
                     "severity": "warning",
@@ -940,7 +955,7 @@
                                 "x": 1.7272,
                                 "y": 0.7874
                             },
-                            "uuid": "d2a0b73f-839e-4f44-8533-08bfaff2a081"
+                            "uuid": "c63f0518-d12c-499c-b308-734cf3558505"
                         }
                     ],
                     "severity": "warning",
@@ -950,12 +965,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'WIFI_RX'",
+                            "description": "Global Label 'UART_RX'",
                             "pos": {
                                 "x": 1.7272,
                                 "y": 0.8128
                             },
-                            "uuid": "25a9b4dd-a1a5-4c32-b118-b6f948e6abf9"
+                            "uuid": "f516a361-377f-4294-9913-fca55c3b7194"
                         }
                     ],
                     "severity": "warning",
@@ -965,12 +980,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN0_FILT'",
+                            "description": "Global Label 'Z0'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.8288
                             },
-                            "uuid": "67711c2a-ff8d-4347-86b6-24338360d512"
+                            "uuid": "ddfd73e6-8502-4c1b-83ed-6066376fcd8e"
                         }
                     ],
                     "severity": "warning",
@@ -980,12 +995,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'I2C_SCL'",
+                            "description": "Global Label 'ESTOP'",
                             "pos": {
                                 "x": 1.7272,
                                 "y": 0.8382
                             },
-                            "uuid": "8bf95f4a-9bd6-459d-8ee1-fb7b7d8d8892"
+                            "uuid": "3d3363ba-7375-42b2-a3ef-dd70f548464a"
                         }
                     ],
                     "severity": "warning",
@@ -995,27 +1010,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'SD_MOSI_MCU'",
-                            "pos": {
-                                "x": 1.7272,
-                                "y": 0.8636
-                            },
-                            "uuid": "064df628-0070-483a-9796-39fd43077399"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'KIN1_FILT'",
+                            "description": "Global Label 'ERR0'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.8542
                             },
-                            "uuid": "4fa24691-f25a-41e7-a184-9271ed27ca55"
+                            "uuid": "2d392cfa-1ca6-40a7-9b76-993ad1036e2f"
                         }
                     ],
                     "severity": "warning",
@@ -1025,12 +1025,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'SD_CS_MCU'",
+                            "description": "Global Label 'PG_N'",
                             "pos": {
                                 "x": 1.7272,
-                                "y": 0.889
+                                "y": 0.9144
                             },
-                            "uuid": "cc653952-bc56-4fca-a5f8-74798a551be4"
+                            "uuid": "da07c162-c7b3-465d-9cbd-fbe2a9c6cb4a"
                         }
                     ],
                     "severity": "warning",
@@ -1040,12 +1040,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN2_FILT'",
+                            "description": "Global Label 'Z4'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.8796
                             },
-                            "uuid": "de71a46b-990d-41ee-8b4e-6fae3bd19a49"
+                            "uuid": "58061287-706b-4547-bce1-e7dab8259355"
                         }
                     ],
                     "severity": "warning",
@@ -1055,12 +1055,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label '+3V3_A'",
+                            "description": "Global Label 'ADC_3V3'",
                             "pos": {
                                 "x": 1.7272,
                                 "y": 0.9652
                             },
-                            "uuid": "08ea03aa-218a-4d52-96d0-c79f8f3b157d"
+                            "uuid": "71e75821-6177-4e82-89f0-31befc4dd0a8"
                         }
                     ],
                     "severity": "warning",
@@ -1070,12 +1070,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN3_FILT'",
+                            "description": "Global Label 'ERR4'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.905
                             },
-                            "uuid": "a58d4a29-9638-4a9e-9ecb-db713700dff8"
+                            "uuid": "84bc6790-d2b7-4d47-a35c-9db1bb2d7e46"
                         }
                     ],
                     "severity": "warning",
@@ -1085,12 +1085,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN4_FILT'",
+                            "description": "Global Label 'ERR6'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.9304
                             },
-                            "uuid": "2304d8b9-24e5-4413-80d4-8ac98afa56b2"
+                            "uuid": "93859620-127b-41a5-a444-b4ff9986f165"
                         }
                     ],
                     "severity": "warning",
@@ -1100,12 +1100,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'EXP_IN0'",
+                            "description": "Global Label 'Z3'",
                             "pos": {
                                 "x": 0.8763,
                                 "y": 1.8288
                             },
-                            "uuid": "4beedd3c-d8ad-442a-a444-37584d0ce433"
+                            "uuid": "d3f77499-cf20-426e-a79e-b46995d84d66"
                         }
                     ],
                     "severity": "warning",
@@ -1115,12 +1115,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN5_FILT'",
+                            "description": "Global Label 'Z6'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.9558
                             },
-                            "uuid": "3f70b574-5e9d-400a-8269-0bde8d32c4e7"
+                            "uuid": "08168a23-afb4-4c80-bfa9-0893298258db"
                         }
                     ],
                     "severity": "warning",
@@ -1130,12 +1130,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'EXP_IN1'",
+                            "description": "Global Label 'ERR3'",
                             "pos": {
                                 "x": 0.8763,
                                 "y": 1.8542
                             },
-                            "uuid": "b7bdd05b-f9e2-40b6-9a1a-30d5682eb308"
+                            "uuid": "54bc37e6-4a9e-458e-8e0f-638664b8a801"
                         }
                     ],
                     "severity": "warning",
@@ -1150,7 +1150,7 @@
                                 "x": 1.7272,
                                 "y": 1.1176
                             },
-                            "uuid": "a10f60de-a6b5-4d21-9fa3-2c5ca077e097"
+                            "uuid": "aa971235-2775-4fe6-b16b-fa0700e37156"
                         }
                     ],
                     "severity": "warning",
@@ -1160,12 +1160,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN6_FILT'",
+                            "description": "Global Label 'ERR5'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 1.9812
                             },
-                            "uuid": "175e88c6-359f-4969-9138-102207f83fc6"
+                            "uuid": "e0114cbd-b474-41e0-9733-44883166dd51"
                         }
                     ],
                     "severity": "warning",
@@ -1180,22 +1180,7 @@
                                 "x": 1.7272,
                                 "y": 1.143
                             },
-                            "uuid": "752dd82a-db39-482c-ab07-d7898e5073a2"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'EXP_IN2'",
-                            "pos": {
-                                "x": 0.8763,
-                                "y": 1.8796
-                            },
-                            "uuid": "ca2aed49-0af0-48db-a48f-d4e0bcac706b"
+                            "uuid": "b3cbf883-8fd3-415b-9ea2-9fcbc850dba9"
                         }
                     ],
                     "severity": "warning",
@@ -1210,7 +1195,7 @@
                                 "x": 1.7272,
                                 "y": 1.1684
                             },
-                            "uuid": "c64df94d-0cbc-482a-8af7-5cff70571ba5"
+                            "uuid": "0e9c455c-6d7f-424a-9961-4328b263542d"
                         }
                     ],
                     "severity": "warning",
@@ -1220,27 +1205,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'KIN7_FILT'",
+                            "description": "Global Label 'Z5'",
                             "pos": {
                                 "x": 0.5715,
                                 "y": 2.0066
                             },
-                            "uuid": "345e2415-3e88-427d-8935-8766d1fd9eee"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'EXP_IN3'",
-                            "pos": {
-                                "x": 0.8763,
-                                "y": 1.905
-                            },
-                            "uuid": "430c51be-a38a-4101-90fe-9ee87bc97238"
+                            "uuid": "ca53acbb-0c39-4f36-a201-7d8f380d6bba"
                         }
                     ],
                     "severity": "warning",
@@ -1255,7 +1225,7 @@
                                 "x": 1.7272,
                                 "y": 1.1938
                             },
-                            "uuid": "82a354ed-935a-4364-bcdb-acc07ce0c22f"
+                            "uuid": "ae0f104a-445f-4e95-ab81-4f9e18d51fd1"
                         }
                     ],
                     "severity": "warning",
@@ -1265,12 +1235,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'WIFI_TX'",
+                            "description": "Global Label 'UART_TX'",
                             "pos": {
                                 "x": 1.7272,
                                 "y": 1.2192
                             },
-                            "uuid": "e956f9ca-4b79-4ae3-bde7-df6dec72f8c3"
+                            "uuid": "cddfc0d7-f52b-4609-ae88-eaa1cc9aafc7"
                         }
                     ],
                     "severity": "warning",
@@ -1280,12 +1250,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'EXP_IN4'",
+                            "description": "Global Label 'Z1'",
                             "pos": {
                                 "x": 0.8763,
                                 "y": 1.9304
                             },
-                            "uuid": "cf3c481c-a169-4196-b90c-a971de104786"
+                            "uuid": "0044009b-08c5-4b2d-9b92-b13888890fe8"
                         }
                     ],
                     "severity": "warning",
@@ -1295,27 +1265,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'I2C_SDA'",
-                            "pos": {
-                                "x": 1.7272,
-                                "y": 1.2446
-                            },
-                            "uuid": "d47c0d38-ab97-481f-b3c7-0488106e66d5"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'EXP_IN5'",
+                            "description": "Global Label 'ERR1'",
                             "pos": {
                                 "x": 0.8763,
                                 "y": 1.9558
                             },
-                            "uuid": "a48985bb-e329-495d-977d-f5b234810911"
+                            "uuid": "a4e60f8c-a61f-4ee2-8495-19bb6d05dadc"
                         }
                     ],
                     "severity": "warning",
@@ -1325,42 +1280,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'SD_SCK_MCU'",
-                            "pos": {
-                                "x": 1.7272,
-                                "y": 1.27
-                            },
-                            "uuid": "7000634c-a08d-4a36-b4dc-95fb56725a34"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'SD_MISO_MCU'",
-                            "pos": {
-                                "x": 1.7272,
-                                "y": 1.2954
-                            },
-                            "uuid": "a0bf632e-8663-417d-b2f2-d33f059cd872"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'EXP_IN6'",
+                            "description": "Global Label 'Z2'",
                             "pos": {
                                 "x": 0.8763,
                                 "y": 1.9812
                             },
-                            "uuid": "728e5219-b4f4-432f-a198-54925b33a9ed"
+                            "uuid": "c34ff69d-e143-491c-89ab-a4e7ad891573"
                         }
                     ],
                     "severity": "warning",
@@ -1370,12 +1295,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN13_N'",
+                            "description": "Global Label 'I01_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.8288
                             },
-                            "uuid": "928c877d-2718-43ff-b32c-2498e7575e4c"
+                            "uuid": "567d58b9-9b64-4099-ae47-37bc479406a5"
                         }
                     ],
                     "severity": "warning",
@@ -1385,12 +1310,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'SD_CD_MCU'",
+                            "description": "Global Label 'CD'",
                             "pos": {
                                 "x": 1.7272,
                                 "y": 1.3208
                             },
-                            "uuid": "fcf934b5-23bb-4d8f-b2ea-9d23fde79881"
+                            "uuid": "9155ec7b-b2d1-4b09-9d38-0e0ffcb1afae"
                         }
                     ],
                     "severity": "warning",
@@ -1400,12 +1325,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'EXP_IN7'",
+                            "description": "Global Label 'ERR2'",
                             "pos": {
                                 "x": 0.8763,
                                 "y": 2.0066
                             },
-                            "uuid": "f7dc7dc8-4eb4-4484-a456-24b70de6f7ca"
+                            "uuid": "d3a40081-465e-4363-a69b-f386338e0cc5"
                         }
                     ],
                     "severity": "warning",
@@ -1415,12 +1340,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN14_N'",
+                            "description": "Global Label 'I02_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.8542
                             },
-                            "uuid": "5bac88f8-8d41-40ea-ad1e-1637075e5865"
+                            "uuid": "41b50cac-d4bb-4d73-b45c-4f05687bfcb5"
                         }
                     ],
                     "severity": "warning",
@@ -1430,12 +1355,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN15_N'",
+                            "description": "Global Label 'I03_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.8796
                             },
-                            "uuid": "f3467cff-2423-430a-a3f9-9c4bab42c922"
+                            "uuid": "d89b20da-1eb2-4c63-b735-9cc7a4671dcb"
                         }
                     ],
                     "severity": "warning",
@@ -1445,12 +1370,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN16_N'",
+                            "description": "Global Label 'I04_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.905
                             },
-                            "uuid": "5732c4c0-1d68-430f-980d-5ceabe93513e"
+                            "uuid": "c7a43d8e-9799-43d1-8a37-de92843d5005"
                         }
                     ],
                     "severity": "warning",
@@ -1460,12 +1385,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN12_N'",
+                            "description": "Global Label 'I05_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.9304
                             },
-                            "uuid": "2c12d941-0acf-4e92-a298-971a959e1af9"
+                            "uuid": "b937fe7e-0d51-44c6-89d6-895a9b8515e4"
                         }
                     ],
                     "severity": "warning",
@@ -1475,12 +1400,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN11_N'",
+                            "description": "Global Label 'I06_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.9558
                             },
-                            "uuid": "2f1e9ae8-5fce-4e52-9251-a987331d5f62"
+                            "uuid": "09eb4466-1b5a-4e71-b20d-9a043714b120"
                         }
                     ],
                     "severity": "warning",
@@ -1490,12 +1415,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN10_N'",
+                            "description": "Global Label 'I07_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 1.9812
                             },
-                            "uuid": "3ea9fc14-7155-425d-bff7-5ca4f9a9af5e"
+                            "uuid": "041cf2ec-a4ff-4622-a498-7a56e1e1a7e8"
                         }
                     ],
                     "severity": "warning",
@@ -1505,12 +1430,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN9_N'",
+                            "description": "Global Label 'I08_N'",
                             "pos": {
                                 "x": 1.1684,
                                 "y": 2.0066
                             },
-                            "uuid": "ca0ef2e7-feb3-4066-956b-07699873be3e"
+                            "uuid": "d9c11d45-f0a7-437f-aabb-acb7c13ae93e"
                         }
                     ],
                     "severity": "warning",
@@ -1520,12 +1445,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN5_N'",
+                            "description": "Global Label 'I09_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.8288
                             },
-                            "uuid": "928bce2b-619a-411a-b4a0-6a512dc6c310"
+                            "uuid": "4c416d9a-0270-475e-a0e2-3f4fa1803fbc"
                         }
                     ],
                     "severity": "warning",
@@ -1535,12 +1460,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN6_N'",
+                            "description": "Global Label 'I10_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.8542
                             },
-                            "uuid": "cec4e63c-3f0e-4527-92a1-178e861950a4"
+                            "uuid": "b8d3824b-19b4-47a4-9c6a-11298e1be105"
                         }
                     ],
                     "severity": "warning",
@@ -1550,12 +1475,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN7_N'",
+                            "description": "Global Label 'I11_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.8796
                             },
-                            "uuid": "78795926-15fe-4e23-8977-1ccff91128e3"
+                            "uuid": "45ded378-7484-4280-87fc-7c458b240455"
                         }
                     ],
                     "severity": "warning",
@@ -1565,12 +1490,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN8_N'",
+                            "description": "Global Label 'I12_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.905
                             },
-                            "uuid": "0ee57b55-0251-426b-b76b-3a2ba8e2ce83"
+                            "uuid": "41c53197-9a56-4779-94d4-5a22b0e87bb0"
                         }
                     ],
                     "severity": "warning",
@@ -1580,12 +1505,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN4_N'",
+                            "description": "Global Label 'I13_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.9304
                             },
-                            "uuid": "56a9cca3-1e57-4745-9322-4a81e83735fd"
+                            "uuid": "13f7320f-62e8-4b6c-b08e-3dde9be1c02d"
                         }
                     ],
                     "severity": "warning",
@@ -1595,12 +1520,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN3_N'",
+                            "description": "Global Label 'I14_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.9558
                             },
-                            "uuid": "405291a6-2d97-4c18-9e9d-effb9f8e49b5"
+                            "uuid": "115663b7-0d53-4e11-9fbe-a6ebe76639f2"
                         }
                     ],
                     "severity": "warning",
@@ -1610,12 +1535,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN2_N'",
+                            "description": "Global Label 'I15_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 1.9812
                             },
-                            "uuid": "75b05e39-23a2-4b06-a336-00a085abe282"
+                            "uuid": "2822d7ed-a76d-4e8c-a6f5-fbdc27864fb1"
                         }
                     ],
                     "severity": "warning",
@@ -1625,12 +1550,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'OUT1'",
+                            "description": "Global Label 'OUT7'",
                             "pos": {
                                 "x": 0.8001,
                                 "y": 2.3495
                             },
-                            "uuid": "d64771ff-c656-4a44-9513-ba594d52ccaf"
+                            "uuid": "db02c4d6-6d83-41c6-87a5-3efe132410aa"
                         }
                     ],
                     "severity": "warning",
@@ -1640,12 +1565,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'PLC_IN1_N'",
+                            "description": "Global Label 'I16_N'",
                             "pos": {
                                 "x": 1.4732,
                                 "y": 2.0066
                             },
-                            "uuid": "8de1087e-b91f-425f-bda2-bf1edca19a12"
+                            "uuid": "778f71c3-9dac-4906-be36-89d50d419fcd"
                         }
                     ],
                     "severity": "warning",
@@ -1660,7 +1585,7 @@
                                 "x": 0.8001,
                                 "y": 2.3749
                             },
-                            "uuid": "461db67a-0882-46ff-918f-06bbaa645779"
+                            "uuid": "d8f87dc7-5b78-46bd-b418-527446ce4a85"
                         }
                     ],
                     "severity": "warning",
@@ -1670,12 +1595,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'OUT3'",
+                            "description": "Global Label 'OUT1'",
                             "pos": {
                                 "x": 0.8001,
                                 "y": 2.4003
                             },
-                            "uuid": "ac65a043-6738-4a30-8095-ce8655808e7b"
+                            "uuid": "999cae52-3d77-47aa-abb0-fd17297506c3"
                         }
                     ],
                     "severity": "warning",
@@ -1690,7 +1615,7 @@
                                 "x": 0.8001,
                                 "y": 2.4257
                             },
-                            "uuid": "8d2f51c8-4ffe-4792-a45e-6eed5e9da3c6"
+                            "uuid": "41827afc-a0b4-4345-bb13-a64f50736482"
                         }
                     ],
                     "severity": "warning",
@@ -1700,12 +1625,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'OUT5'",
+                            "description": "Global Label 'OUT3'",
                             "pos": {
                                 "x": 0.8001,
                                 "y": 2.4511
                             },
-                            "uuid": "5e8804cc-006a-4b61-999c-9ccd03e89644"
+                            "uuid": "d9e5971f-dd65-494d-9262-dc185a31bc74"
                         }
                     ],
                     "severity": "warning",
@@ -1715,12 +1640,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'OUT10'",
+                            "description": "Global Label 'OUT15'",
                             "pos": {
                                 "x": 1.1049,
                                 "y": 2.3495
                             },
-                            "uuid": "f6114036-3037-49f3-8de9-0ca6f0b08602"
+                            "uuid": "352005d1-4ced-4aa0-8545-94ba57db6df0"
                         }
                     ],
                     "severity": "warning",
@@ -1735,37 +1660,7 @@
                                 "x": 0.8001,
                                 "y": 2.4765
                             },
-                            "uuid": "41d31371-8efe-4761-aa47-416ac64b6ac4"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT9'",
-                            "pos": {
-                                "x": 1.1049,
-                                "y": 2.3749
-                            },
-                            "uuid": "51e650eb-8d07-4bbe-88e5-f1ef02df4b49"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT7'",
-                            "pos": {
-                                "x": 0.8001,
-                                "y": 2.5019
-                            },
-                            "uuid": "c5cea497-6c37-410d-9639-a26b3d973e47"
+                            "uuid": "5bda3407-3deb-43d7-80e8-1bcd4bfbcfc8"
                         }
                     ],
                     "severity": "warning",
@@ -1778,9 +1673,39 @@
                             "description": "Global Label 'OUT8'",
                             "pos": {
                                 "x": 1.1049,
+                                "y": 2.3749
+                            },
+                            "uuid": "e9abc60e-bd15-4792-ba2c-f0e5ab0199e9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT5'",
+                            "pos": {
+                                "x": 0.8001,
+                                "y": 2.5019
+                            },
+                            "uuid": "91d606f5-8b3e-404f-969d-21a550b93dce"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT9'",
+                            "pos": {
+                                "x": 1.1049,
                                 "y": 2.4003
                             },
-                            "uuid": "ed3c033b-e468-4c69-8de3-c6bb31226a74"
+                            "uuid": "7618fc85-3b4b-499d-b86a-c0fe30c889a1"
                         }
                     ],
                     "severity": "warning",
@@ -1795,7 +1720,22 @@
                                 "x": 0.8001,
                                 "y": 2.5273
                             },
-                            "uuid": "f94995e6-0aa7-4d81-9c71-e3f26bae8cc3"
+                            "uuid": "ae0d16ac-7286-4a66-8fc6-14e3cf249194"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT10'",
+                            "pos": {
+                                "x": 1.1049,
+                                "y": 2.4257
+                            },
+                            "uuid": "ab89d736-718e-4cdd-8bf6-85bae19d410f"
                         }
                     ],
                     "severity": "warning",
@@ -1808,9 +1748,9 @@
                             "description": "Global Label 'OUT11'",
                             "pos": {
                                 "x": 1.1049,
-                                "y": 2.4257
+                                "y": 2.4511
                             },
-                            "uuid": "ab207db0-92f9-4fbf-9f01-1cd087649696"
+                            "uuid": "e7c6e293-1ae5-42a9-afba-17dcab501937"
                         }
                     ],
                     "severity": "warning",
@@ -1823,24 +1763,9 @@
                             "description": "Global Label 'OUT12'",
                             "pos": {
                                 "x": 1.1049,
-                                "y": 2.4511
-                            },
-                            "uuid": "50208ce0-4119-4753-ab90-72f057767aba"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT13'",
-                            "pos": {
-                                "x": 1.1049,
                                 "y": 2.4765
                             },
-                            "uuid": "19d20617-445d-4ffc-968d-94f04328ff45"
+                            "uuid": "08b8f1e9-5a54-4d85-979a-a361f5009f7c"
                         }
                     ],
                     "severity": "warning",
@@ -1855,7 +1780,7 @@
                                 "x": 1.397,
                                 "y": 2.3495
                             },
-                            "uuid": "eec94b21-6d0f-41b7-918b-8eeb9e53667a"
+                            "uuid": "5666eb19-c5e6-41ad-8efa-4af2d8374dc0"
                         }
                     ],
                     "severity": "warning",
@@ -1865,12 +1790,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'OUT14'",
+                            "description": "Global Label 'OUT13'",
                             "pos": {
                                 "x": 1.1049,
                                 "y": 2.5019
                             },
-                            "uuid": "fef534e0-cdfd-4651-b775-a0ad9c7c4bdb"
+                            "uuid": "88e4ea6d-6c1a-44f9-840d-da8fb7dd8d13"
                         }
                     ],
                     "severity": "warning",
@@ -1885,7 +1810,7 @@
                                 "x": 1.397,
                                 "y": 2.3749
                             },
-                            "uuid": "8616c0c7-ad6a-4edb-ac1e-1008573fa9da"
+                            "uuid": "b7556c5d-2f17-4da0-bb9a-7d0a05ee8c36"
                         }
                     ],
                     "severity": "warning",
@@ -1895,12 +1820,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label 'OUT15'",
+                            "description": "Global Label 'OUT14'",
                             "pos": {
                                 "x": 1.1049,
                                 "y": 2.5273
                             },
-                            "uuid": "5d5ab0ae-6cd7-42f0-b751-114dc215d9ae"
+                            "uuid": "fd009cbe-7cd4-4004-a317-60c07c42e7ae"
                         }
                     ],
                     "severity": "warning",
@@ -1915,7 +1840,7 @@
                                 "x": 1.397,
                                 "y": 2.4003
                             },
-                            "uuid": "38af5bfb-dfb1-43f6-b225-9cb821a86d82"
+                            "uuid": "10997b03-8ba7-4f71-a8c0-27645e509579"
                         }
                     ],
                     "severity": "warning",
@@ -1930,7 +1855,7 @@
                                 "x": 1.397,
                                 "y": 2.4257
                             },
-                            "uuid": "243b9fc5-37c4-4501-af15-9fb97622496c"
+                            "uuid": "72cf8b5e-6194-46c2-9608-4a3fb52c1d1c"
                         }
                     ],
                     "severity": "warning",
@@ -1945,7 +1870,7 @@
                                 "x": 1.397,
                                 "y": 2.4511
                             },
-                            "uuid": "c16553a4-0d24-481a-b0e1-b8bf20b43c79"
+                            "uuid": "99fe7918-56b0-40aa-96ac-b55b642b3e69"
                         }
                     ],
                     "severity": "warning",
@@ -1960,7 +1885,7 @@
                                 "x": 1.397,
                                 "y": 2.4765
                             },
-                            "uuid": "272929eb-9e5d-4ac4-afa5-3827413a93d1"
+                            "uuid": "87919076-45ad-47fb-8e2c-a92c85db8383"
                         }
                     ],
                     "severity": "warning",
@@ -1975,7 +1900,7 @@
                                 "x": 1.397,
                                 "y": 2.5019
                             },
-                            "uuid": "451b867d-4119-47ab-a63d-a60f180a20e1"
+                            "uuid": "75823683-af6a-4818-9af4-99a8b951da49"
                         }
                     ],
                     "severity": "warning",
@@ -1990,112 +1915,7 @@
                                 "x": 1.397,
                                 "y": 2.5273
                             },
-                            "uuid": "627603f9-2802-4ea6-ad02-a6b98904ad16"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT24'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.3495
-                            },
-                            "uuid": "8b055d02-bfbf-41de-bd78-5ce7aaf474bb"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT25'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.3749
-                            },
-                            "uuid": "a9501d63-a363-4bc6-a468-6b5f525dc0e2"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT26'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.4003
-                            },
-                            "uuid": "d5a0cb51-cb02-4ab5-a48e-09f3523f3553"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT27'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.4257
-                            },
-                            "uuid": "7e28c63b-f315-4030-8ed3-93d152efe954"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT28'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.4511
-                            },
-                            "uuid": "d3e24ab1-ce75-496e-b060-35418cc6e315"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT29'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.4765
-                            },
-                            "uuid": "05b7dcb9-7ce2-458a-a49b-cfe15f973ff2"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label 'OUT30'",
-                            "pos": {
-                                "x": 1.7018,
-                                "y": 2.5019
-                            },
-                            "uuid": "e95cecb2-3c6f-4274-ba8c-403fb215c0e0"
+                            "uuid": "9b2922ed-996f-4cef-a571-9bc80f9ef6c3"
                         }
                     ],
                     "severity": "warning",
@@ -2108,9 +1928,114 @@
                             "description": "Global Label 'OUT31'",
                             "pos": {
                                 "x": 1.7018,
+                                "y": 2.3495
+                            },
+                            "uuid": "a5f5ad44-c523-4d69-910d-407b8d2903fe"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT24'",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.3749
+                            },
+                            "uuid": "31aaae6b-c7a7-4040-8ff9-89ac113ced3f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT25'",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.4003
+                            },
+                            "uuid": "87b6b10a-c383-4fe6-96b1-130c3e604f06"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT26'",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.4257
+                            },
+                            "uuid": "f0225bac-7030-497f-9b73-f92dc9bba6f6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT27'",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.4511
+                            },
+                            "uuid": "8436575a-84a6-41f1-abc3-d226f9ab94f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT28'",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.4765
+                            },
+                            "uuid": "f420f079-a68a-4330-ba6c-5e2056fced3f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT29'",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.5019
+                            },
+                            "uuid": "6c693fbf-9fd9-47fb-9b18-c71e2369b58a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'OUT30'",
+                            "pos": {
+                                "x": 1.7018,
                                 "y": 2.5273
                             },
-                            "uuid": "a3cc5bb6-cb07-41df-8e6b-029065ae28b2"
+                            "uuid": "a861824a-4062-4a4b-8623-5cffe6d309a9"
                         }
                     ],
                     "severity": "warning",

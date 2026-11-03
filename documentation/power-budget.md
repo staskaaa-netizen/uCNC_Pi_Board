@@ -53,7 +53,7 @@ branch is not part of the main field-isolated domain.
 
 ## Field power
 
-J33 and J45 are parallel 1=PLC24+ 2=PLC- inputs. The PLC domain supplies:
+J33 and J45 are parallel PLC24+ PLC- inputs. The PLC domain supplies:
 
 - PLC contact loops through U18-U21.
 - The E-stop loop through U35.

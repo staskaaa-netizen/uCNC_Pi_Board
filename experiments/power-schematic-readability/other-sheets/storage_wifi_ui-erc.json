@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-29T17:49:39",
+    "date": "2026-11-03T20:43:34",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -29,18 +29,18 @@
     "sheets": [
         {
             "path": "/",
-            "uuid_path": "/b057a0bf-b650-5fb9-a907-ce660ef35d07",
+            "uuid_path": "/c9d525e7-cb00-4500-a753-cb8c57a852af",
             "violations": [
                 {
                     "description": "Input Power pin not driven by any Output Power pins",
                     "items": [
                         {
-                            "description": "Symbol J19 Pin 4 [VDD, Power input, Line]",
+                            "description": "Symbol J54 Pin 4 [VDD, Power input, Line]",
                             "pos": {
-                                "x": 1.8923,
-                                "y": 1.1557
+                                "x": 1.8415,
+                                "y": 0.6096
                             },
-                            "uuid": "05aaf83d-756c-5c9a-8ca8-1d2f37050796"
+                            "uuid": "e4d9aed2-adca-5b02-b8ee-d366ebb043f1"
                         }
                     ],
                     "severity": "error",
@@ -50,12 +50,12 @@
                     "description": "Input Power pin not driven by any Output Power pins",
                     "items": [
                         {
-                            "description": "Symbol J19 Pin 3 [VSS, Power input, Line]",
+                            "description": "Symbol J54 Pin 6 [VSS, Power input, Line]",
                             "pos": {
-                                "x": 1.8923,
-                                "y": 1.5621
+                                "x": 1.8415,
+                                "y": 0.6604
                             },
-                            "uuid": "22f1f192-75c1-57cf-91f3-86fb9e1de0e9"
+                            "uuid": "cf143b6a-7c22-5f9a-9e93-1566fa444e9f"
                         }
                     ],
                     "severity": "error",
@@ -67,8 +67,8 @@
                         {
                             "description": "Symbol U34 Pin 3 [VI, Power input, Line]",
                             "pos": {
-                                "x": 1.8161,
-                                "y": 2.4892
+                                "x": 2.2352,
+                                "y": 1.3462
                             },
                             "uuid": "1e3b05e2-e9d6-5e79-b1b7-825219e883fe"
                         }
@@ -77,15 +77,30 @@
                     "type": "power_pin_not_driven"
                 },
                 {
+                    "description": "The current configuration does not include the footprint library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol J54 [Micro_SD_Card_Det1]",
+                            "pos": {
+                                "x": 2.0701,
+                                "y": 0.635
+                            },
+                            "uuid": "0cc6fcbc-190b-51ee-9629-a9a24b074db0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'KOUT0'",
+                            "description": "Global Label 'UART_RX'",
                             "pos": {
-                                "x": 2.4511,
-                                "y": 0.4953
+                                "x": 1.9304,
+                                "y": 1.3716
                             },
-                            "uuid": "75e9c9e7-4e1e-5409-9c46-3f7074884d36"
+                            "uuid": "9eff8bfa-4565-5969-913f-448941daa616"
                         }
                     ],
                     "severity": "warning",
@@ -95,12 +110,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'KOUT1'",
+                            "description": "Global Label 'UART_TX'",
                             "pos": {
-                                "x": 2.4511,
-                                "y": 0.5207
+                                "x": 2.0574,
+                                "y": 1.3716
                             },
-                            "uuid": "19879ecc-5b9e-57fd-a6ab-650807853279"
+                            "uuid": "35a06763-5f29-5f26-9d75-9031efe7f1c6"
                         }
                     ],
                     "severity": "warning",
@@ -110,192 +125,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'KOUT2'",
+                            "description": "Global Label 'CD'",
                             "pos": {
-                                "x": 2.4511,
-                                "y": 0.5461
+                                "x": 2.4765,
+                                "y": 0.5334
                             },
-                            "uuid": "08493de3-5c86-5d27-82c9-76a3f34bd640"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KOUT3'",
-                            "pos": {
-                                "x": 2.4511,
-                                "y": 0.5715
-                            },
-                            "uuid": "e9da0ffd-14f7-5eaa-af01-dbdf78252ed8"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KOUT4'",
-                            "pos": {
-                                "x": 2.4511,
-                                "y": 0.5969
-                            },
-                            "uuid": "b3f18077-b5f8-507f-9b99-c4386631ee86"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KOUT5'",
-                            "pos": {
-                                "x": 2.4511,
-                                "y": 0.6223
-                            },
-                            "uuid": "87d78c5a-fd95-5e8d-b41f-6088b9266933"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KOUT6'",
-                            "pos": {
-                                "x": 2.4511,
-                                "y": 0.6477
-                            },
-                            "uuid": "95e9445a-ec06-5a7d-b89c-1e40b076e425"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KOUT7'",
-                            "pos": {
-                                "x": 2.4511,
-                                "y": 0.6731
-                            },
-                            "uuid": "63ea1fbb-8ce3-5bd6-a3ca-73e3886ab7b6"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'SD_MOSI_MCU'",
-                            "pos": {
-                                "x": 1.8161,
-                                "y": 1.8669
-                            },
-                            "uuid": "be87c181-4615-50e6-9394-3b88a4bd1953"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'SD_MISO_MCU'",
-                            "pos": {
-                                "x": 2.1336,
-                                "y": 1.9431
-                            },
-                            "uuid": "46f00da0-be3b-5ee8-9e12-40101a82922d"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KIN0_FILT'",
-                            "pos": {
-                                "x": 2.9464,
-                                "y": 0.4953
-                            },
-                            "uuid": "f906f871-2933-5cfe-9379-1b8876f6249d"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KIN1_FILT'",
-                            "pos": {
-                                "x": 2.9464,
-                                "y": 0.5207
-                            },
-                            "uuid": "ae65708a-e413-5c39-87e2-ce4cee81e9a8"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KIN2_FILT'",
-                            "pos": {
-                                "x": 2.9464,
-                                "y": 0.5461
-                            },
-                            "uuid": "0338c19f-fa3c-5082-b2ef-a309d2d65b4b"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KIN3_FILT'",
-                            "pos": {
-                                "x": 2.9464,
-                                "y": 0.5715
-                            },
-                            "uuid": "4f66ceed-3dde-5788-b216-ad28faaf5a30"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'SD_CS_MCU'",
-                            "pos": {
-                                "x": 2.4638,
-                                "y": 1.8669
-                            },
-                            "uuid": "24cf6e7c-fdeb-5728-87b7-5ddb9ab7d215"
+                            "uuid": "0e578435-9862-59b0-b5c8-16a7d2b47e56"
                         }
                     ],
                     "severity": "warning",
@@ -305,12 +140,27 @@
                     "description": "The current configuration does not include the symbol library 'LeanCam'",
                     "items": [
                         {
-                            "description": "Symbol RN22 [ResistorPack04]",
+                            "description": "Symbol RN43 [ResistorPack04]",
                             "pos": {
-                                "x": 3.0988,
+                                "x": 2.921,
                                 "y": 0.5334
                             },
-                            "uuid": "3bb1ed96-37ed-5eb3-993c-499bc497b6c2"
+                            "uuid": "1644ffa1-dd98-5d19-a7b7-2ecc7ae222c7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'LeanCam'",
+                    "items": [
+                        {
+                            "description": "Symbol RN36 [ResistorPack04]",
+                            "pos": {
+                                "x": 2.7051,
+                                "y": 1.3462
+                            },
+                            "uuid": "7fe732ee-aa8f-5430-984e-f261e2b62b0f"
                         }
                     ],
                     "severity": "warning",
@@ -320,57 +170,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'WIFI_RX'",
+                            "description": "Global Label 'SPI_CS'",
                             "pos": {
-                                "x": 2.1717,
-                                "y": 2.5146
-                            },
-                            "uuid": "6e344b21-202c-5cbe-9896-fe54f1807132"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'SD_CD_MCU'",
-                            "pos": {
-                                "x": 2.7813,
-                                "y": 1.8669
-                            },
-                            "uuid": "1495b61e-600d-5f81-a679-fa4c5b29e824"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'WIFI_TX'",
-                            "pos": {
-                                "x": 2.2987,
-                                "y": 2.5146
-                            },
-                            "uuid": "63f043c3-9faa-5452-9861-0da176baa6a8"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'KIN4_FILT'",
-                            "pos": {
-                                "x": 3.4163,
+                                "x": 3.2512,
                                 "y": 0.4953
                             },
-                            "uuid": "1a614df6-c2ba-5d80-9cf2-c986c3b13198"
+                            "uuid": "bf81306d-fe11-5e11-bc13-5eb5f57d0848"
                         }
                     ],
                     "severity": "warning",
@@ -380,12 +185,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'KIN5_FILT'",
+                            "description": "Global Label 'SPI_SI'",
                             "pos": {
-                                "x": 3.4163,
+                                "x": 3.2512,
                                 "y": 0.5207
                             },
-                            "uuid": "4e09d177-b4c9-58ec-86ee-d991d28aab61"
+                            "uuid": "ad4c8e1a-978f-5790-8384-1fd68619e39f"
                         }
                     ],
                     "severity": "warning",
@@ -395,12 +200,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'KIN6_FILT'",
+                            "description": "Global Label 'SPI_CK'",
                             "pos": {
-                                "x": 3.4163,
+                                "x": 3.2512,
                                 "y": 0.5461
                             },
-                            "uuid": "e4e88707-7b7c-5443-9b47-58e684d9529a"
+                            "uuid": "06b5125b-5b6f-5051-bcc6-8ed660878733"
                         }
                     ],
                     "severity": "warning",
@@ -410,12 +215,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'KIN7_FILT'",
+                            "description": "Global Label 'SPI_SO'",
                             "pos": {
-                                "x": 3.4163,
+                                "x": 3.2512,
                                 "y": 0.5715
                             },
-                            "uuid": "0d756d15-d4fe-53ba-87f1-af232ce4bda7"
+                            "uuid": "cf41d930-5f4a-57da-bdc1-d655d88fc233"
                         }
                     ],
                     "severity": "warning",
@@ -425,12 +230,12 @@
                     "description": "The current configuration does not include the symbol library 'LeanCam'",
                     "items": [
                         {
-                            "description": "Symbol RN24 [ResistorPack04]",
+                            "description": "Symbol RN44 [ResistorPack04]",
                             "pos": {
-                                "x": 3.5687,
+                                "x": 3.4036,
                                 "y": 0.5334
                             },
-                            "uuid": "214bbdf6-204e-5769-bd8b-e83037bde34d"
+                            "uuid": "90c687ac-fb35-52cf-a2a6-1a893e51bac3"
                         }
                     ],
                     "severity": "warning",
@@ -440,12 +245,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'SD_SCK_MCU'",
+                            "description": "Global Label 'I2C_SDA'",
                             "pos": {
-                                "x": 4.2164,
-                                "y": 1.1811
+                                "x": 2.9718,
+                                "y": 1.905
                             },
-                            "uuid": "2ec74dcc-1ed5-53bb-8d82-4dbdc5092faf"
+                            "uuid": "bf5a17c2-8ab6-53d3-ab91-da9a8a33bc82"
                         }
                     ],
                     "severity": "warning",
@@ -455,27 +260,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'I2C_SDA'",
+                            "description": "Global Label 'I2C_SCL'",
                             "pos": {
                                 "x": 2.9718,
-                                "y": 3.4417
+                                "y": 1.9304
                             },
-                            "uuid": "f4ac483a-39b3-57e6-84f8-4b7b57562b4d"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Label 'I2C_SCL'",
-                            "pos": {
-                                "x": 2.9718,
-                                "y": 3.4671
-                            },
-                            "uuid": "eb9e2a45-4277-5c75-93a5-94d92de78c34"
+                            "uuid": "30ad74c8-747c-5f86-aa81-9b500c6c4fe7"
                         }
                     ],
                     "severity": "warning",

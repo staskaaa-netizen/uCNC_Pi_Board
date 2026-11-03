@@ -55,13 +55,13 @@ must use this table rather than assume A0-A6 are consecutive.
 
 | Axis | Output connector | Input connector |
 |---|---|---|
-| A0 | J10: EN3 STP0 DIR0 | J40: - ERR0 Z0 |
-| A1 | J11: EN3 STP1 DIR1 | J41: - ERR1 Z1 |
-| A2 | J28: EN3 STP2 DIR2 | J42: - ERR2 Z2 |
-| A3 | J29: EN4 STP3 DIR3 | J43: - ERR3 Z3 |
-| A4 | J47: EN4 STP4 DIR4 | J50: - ERR4 Z4 |
-| A5 | J46: EN4 STP5 DIR5 | J49: - ERR5 Z5 |
-| A6 | J30: EN4 STP6 DIR6 | J48: - ERR6 Z6 |
+| A0 | J10: EN3 STP0 DIR0 | J40: GND ERR0 Z0 |
+| A1 | J11: EN3 STP1 DIR1 | J41: GND ERR1 Z1 |
+| A2 | J28: EN3 STP2 DIR2 | J42: GND ERR2 Z2 |
+| A3 | J29: EN4 STP3 DIR3 | J43: GND ERR3 Z3 |
+| A4 | J47: EN4 STP4 DIR4 | J50: GND ERR4 Z4 |
+| A5 | J46: EN4 STP5 DIR5 | J49: GND ERR5 Z5 |
+| A6 | J30: EN4 STP6 DIR6 | J48: GND ERR6 Z6 |
 
 Axis numbers follow the physical top-to-bottom connector order. A4 is
 J47/J50 and A6 is J30/J48; they are not sequential with the output bit order.

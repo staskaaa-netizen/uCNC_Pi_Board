@@ -8,39 +8,52 @@ different supplier.
 
 | Ref | Size | Pinout / function |
 |---|---|---|
-| J1 | 2-pin 3.5 mm | 1=24V +, 2=24V - |
-| J2 | 2-pin 3.5 mm | 1=BL 12+, 2=PLC - |
-| J5 | 2-pin 3.5 mm | 1=ESTOP, 2=PLC - |
-| J7 | 1 x 8, 3.5 mm | 1=I01, 2=I02, 3=I03, 4=I04, 5=I05, 6=I06, 7=I07, 8=I08 |
-| J8 | 1 x 8, 3.5 mm | 1=I09, 2=I10, 3=I11, 4=I12, 5=I13, 6=I14, 7=I15, 8=I16 |
-| J10 | 1 x 3, 3.5 mm | 1=`EN3`, 2=STP0, 3=DIR0 |
-| J11 | 1 x 3, 3.5 mm | 1=`EN3`, 2=STP1, 3=DIR1 |
-| J12 | 1 x 8, 3.5 mm | 1=D01, 2=D02, 3=D03, 4=D04, 5=D05, 6=D06, 7=D07, 8=D08 |
-| J13 | 1 x 5, 3.5 mm | 1=5V, 2=A, 3=B, 4=Z, 5=- |
-| J14 | 1 x 5, 3.5 mm | 1=5V, 2=A, 3=B, 4=Z, 5=- |
-| J15 | 1 x 5, 3.5 mm | 1=5V, 2=A, 3=B, 4=Z, 5=- |
-| J28 | 1 x 3, 3.5 mm | 1=`EN3`, 2=STP2, 3=DIR2 |
-| J29 | 1 x 3, 3.5 mm | 1=`EN4`, 2=STP3, 3=DIR3 |
-| J30 | 1 x 3, 3.5 mm | 1=`EN4`, 2=STP6, 3=DIR6 |
-| J32 | 1 x 8, 3.5 mm | 1=D09, 2=D10, 3=D11, 4=D12, 5=D13, 6=D14, 7=D15, 8=D16 |
-| J33 | 2-pin 3.5 mm | 1=PLC 24+, 2=PLC - |
-| J40 | 1 x 3, 3.5 mm | 1=-, 2=A0 ERR, 3=A0 Z |
-| J41 | 1 x 3, 3.5 mm | 1=-, 2=A1 ERR, 3=A1 Z |
-| J42 | 1 x 3, 3.5 mm | 1=-, 2=A2 ERR, 3=A2 Z |
-| J43 | 1 x 3, 3.5 mm | 1=-, 2=A3 ERR, 3=A3 Z |
-| J45 | 2-pin 3.5 mm | 1=PLC 24+, 2=PLC - |
-| J46 | 1 x 3, 3.5 mm | 1=`EN4`, 2=STP5, 3=DIR5 |
-| J47 | 1 x 3, 3.5 mm | 1=`EN4`, 2=STP4, 3=DIR4 |
-| J48 | 1 x 3, 3.5 mm | 1=-, 2=A6 ERR, 3=A6 Z |
-| J49 | 1 x 3, 3.5 mm | 1=-, 2=A5 ERR, 3=A5 Z |
-| J50 | 1 x 3, 3.5 mm | 1=-, 2=A4 ERR, 3=A4 Z |
+| J1 | 2-pin 3.5 mm | GND, 24+ (PCB label order) |
+| J2 | 2-pin 3.5 mm | PLC_0V, BL12+ (PCB label order) |
+| J5 | 2-pin 3.5 mm | ESTOP, PLC - |
+| J7 | 1 x 8, 3.5 mm | I01, I02, I03, I04, I05, I06, I07, I08 |
+| J8 | 1 x 8, 3.5 mm | I09, I10, I11, I12, I13, I14, I15, I16 |
+| J10 | 1 x 3, 3.5 mm | `EN3`, STP0, DIR0 |
+| J11 | 1 x 3, 3.5 mm | `EN3`, STP1, DIR1 |
+| J12 | 1 x 8, 3.5 mm | D01, D02, D03, D04, D05, D06, D07, D08 |
+| J13 | 1 x 5, 3.5 mm | +5V, A0, B0, Z0, GND |
+| J14 | 1 x 5, 3.5 mm | +5V, A1, B1, Z1, GND |
+| J15 | 1 x 5, 3.5 mm | +5V, A2, B2, Z2, GND |
+| J28 | 1 x 3, 3.5 mm | `EN3`, STP2, DIR2 |
+| J29 | 1 x 3, 3.5 mm | `EN4`, STP3, DIR3 |
+| J30 | 1 x 3, 3.5 mm | `EN4`, STP6, DIR6 |
+| J32 | 1 x 8, 3.5 mm | D09, D10, D11, D12, D13, D14, D15, D16 |
+| J33 | 2-pin 3.5 mm | PLC24+, PLC_0V |
+| J40 | 1 x 3, 3.5 mm | GND, ERR0, Z0 |
+| J41 | 1 x 3, 3.5 mm | GND, ERR1, Z1 |
+| J42 | 1 x 3, 3.5 mm | GND, ERR2, Z2 |
+| J43 | 1 x 3, 3.5 mm | GND, ERR3, Z3 |
+| J45 | 2-pin 3.5 mm | PLC_0V, PLC24+ (PCB label order) |
+| J46 | 1 x 3, 3.5 mm | `EN4`, STP5, DIR5 |
+| J47 | 1 x 3, 3.5 mm | `EN4`, STP4, DIR4 |
+| J48 | 1 x 3, 3.5 mm | GND, ERR6, Z6 |
+| J49 | 1 x 3, 3.5 mm | GND, ERR5, Z5 |
+| J50 | 1 x 3, 3.5 mm | GND, ERR4, Z4 |
 
 Verified main-input polarity: J1 pin 1 is `VIN` and pin 2 is `GND`.
 The fuse and D1/D2 protection are on the pin-1 branch.
 
+J1, J2 and J45 are rotated 180 degrees on the PCB. Their visible labels are
+deliberately written in physical left-to-right order:
+
+- J1: `GND 24+`, while pad 1 is still `24+` and pad 2 is `GND`.
+- J2: `PLC_0V BL12+`, while pad 1 is still `BL12+` and pad 2 is `PLC_0V`.
+- J45: `PLC_0V PLC24+`, while pad 1 is still `PLC24+` and pad 2 is `PLC_0V`.
+
+J33 has the opposite footprint orientation and therefore remains visibly
+`PLC24+ PLC_0V`.
+
 The motion output map is physically consistent across all seven connectors:
 pin 1 is the grouped enable, pin 2 is STEP and pin 3 is DIR. The matching
-status connector uses pin 1 for 0 V, pin 2 for ERROR and pin 3 for ZERO.
+status connector uses pin 1 for `GND`, pin 2 for ERROR and pin 3 for ZERO.
+Because the motion connectors face the opposite direction, their PCB value
+labels read `DIRn STPn ENx` from the physical connector edge. This changes
+only the visible word order; the pin-to-net table above remains authoritative.
 
 PLC input numbering is direct: J7 pin `n` is `I0n`, and J8 pin `n` is
 `I(8+n)` using two digits. PLC output numbering is also one-based: J12 pin
@@ -57,11 +70,11 @@ the other side of each dry-contact loop.
 
 | Ref | Type | Pinout / function |
 |---|---|---|
-| J18 | 1 x 5, 3.5 mm | 1=SDA, 2=SCL, 3=3V3, 4=5V, 5=- |
+| J18 | 1 x 5, 3.5 mm | SDA, SCL, 3V3, 5V, - |
 | J20 | 2 x 4, 2.54 mm socket | ESP-01/ESP-01S module socket |
 | J22 | 2 x 10, 2.00 mm | LCD LVDS and logic supply |
-| J24 | 1 x 5, 3.5 mm | 1=-, 2=AI0, 3=AI1, 4=AI2, 5=AI3 |
-| J25 | 1 x 5, 3.5 mm | 1=-, 2=AO0, 3=AO1, 4=AO2, 5=AO3 |
+| J24 | 1 x 5, 3.5 mm | -, AI0, AI1, AI2, AI3 |
+| J25 | 1 x 5, 3.5 mm | -, AO0, AO1, AO2, AO3 |
 | J36 | 1 x 9, 2.54 mm | microSD header |
 | J51 | 1 x 7, 2.54 mm socket | 3V3, -, IO4-IO8 |
 | J54 | SOFNG TF-15x15 | On-board microSD socket, LCSC `C111196` |

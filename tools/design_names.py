@@ -67,50 +67,79 @@ STATIC_NAMES = {
     "WIFI_TX": "UART_TX",
 }
 
+CONNECTOR_LABEL_NAMES = {
+    "24+ -": "24+ GND",
+    "BL12+ PLC-": "BL12+ PLC_0V",
+    "ESTOP PLC-": "ESTOP PLC_0V",
+    "PLC24+ PLC-": "PLC24+ PLC_0V",
+    "5V A B Z -": "5V A B Z GND",
+    "SDA SCL 3V3 5V -": "SDA SCL 3V3 5V GND",
+    "3V3 - IO4 IO5 IO6 IO7 IO8": "3V3 GND IO4 IO5 IO6 IO7 IO8",
+    "- AI0 AI1 AI2 AI3": "GND AI0 AI1 AI2 AI3",
+    "- AO0 AO1 AO2 AO3": "GND AO0 AO1 AO2 AO3",
+    **{f"- ERR{number} Z{number}": f"GND ERR{number} Z{number}" for number in range(7)},
+    "24+ GND": "24+ GND",
+    "BL12+ PLC_0V": "BL12+ PLC_0V",
+    "ESTOP PLC_0V": "ESTOP PLC_0V",
+    "PLC24+ PLC_0V": "PLC24+ PLC_0V",
+    "5V A B Z GND": "5V A B Z GND",
+    "+5V A0 B0 Z0 GND": "+5V A0 B0 Z0 GND",
+    "+5V A1 B1 Z1 GND": "+5V A1 B1 Z1 GND",
+    "+5V A2 B2 Z2 GND": "+5V A2 B2 Z2 GND",
+    "SDA SCL 3V3 5V GND": "SDA SCL 3V3 5V GND",
+    "3V3 GND IO4 IO5 IO6 IO7 IO8": "3V3 GND IO4 IO5 IO6 IO7 IO8",
+    "GND AI0 AI1 AI2 AI3": "GND AI0 AI1 AI2 AI3",
+    "GND AO0 AO1 AO2 AO3": "GND AO0 AO1 AO2 AO3",
+    **{f"GND ERR{number} Z{number}": f"GND ERR{number} Z{number}" for number in range(7)},
+    "GND 24+": "GND 24+",
+    "PLC_0V BL12+": "PLC_0V BL12+",
+    "PLC_0V PLC24+": "PLC_0V PLC24+",
+}
+
 TEXT_RENAMES = {
-    "24 V DC input": "1=24+ 2=-",
-    "Backlight: +12V_BL, ISO_GND": "1=BL12+ 2=PLC-",
-    "Dedicated E-stop loop": "1=ESTOP 2=PLC-",
-    "External isolated field 24 V supply / relay common A": "1=PLC24+ 2=PLC-",
-    "External isolated field 24 V supply / relay common B": "1=PLC24+ 2=PLC-",
-    "External isolated field 24 V supply / relay common": "1=PLC24+ 2=PLC-",
-    "PLC 24V / 0V A": "1=PLC24+ 2=PLC-",
-    "PLC 24V / 0V B": "1=PLC24+ 2=PLC-",
-    "PLC 24V / 0V": "1=PLC24+ 2=PLC-",
-    "24V IN": "1=24+ 2=-",
-    "24V + / -": "1=24+ 2=-",
-    "BL 12V / 0V": "1=BL12+ 2=PLC-",
-    "BL 12+ / PLC -": "1=BL12+ 2=PLC-",
-    "ESTOP / 0V": "1=ESTOP 2=PLC-",
-    "ESTOP / PLC -": "1=ESTOP 2=PLC-",
-    "PLC 24+ / PLC -": "1=PLC24+ 2=PLC-",
-    "PLC positions 1-8 signals": "1=I01 2=I02 3=I03 4=I04 5=I05 6=I06 7=I07 8=I08",
-    "PLC positions 9-16 signals": "1=I09 2=I10 3=I11 4=I12 5=I13 6=I14 7=I15 8=I16",
-    "PLC IN 1-8": "1=I01 2=I02 3=I03 4=I04 5=I05 6=I06 7=I07 8=I08",
-    "PLC IN 9-16": "1=I09 2=I10 3=I11 4=I12 5=I13 6=I14 7=I15 8=I16",
-    "General outputs 0-7": "1=D01 2=D02 3=D03 4=D04 5=D05 6=D06 7=D07 8=D08",
-    "General outputs 8-15": "1=D09 2=D10 3=D11 4=D12 5=D13 6=D14 7=D15 8=D16",
-    "OUT 0-7": "1=D01 2=D02 3=D03 4=D04 5=D05 6=D06 7=D07 8=D08",
-    "OUT 8-15": "1=D09 2=D10 3=D11 4=D12 5=D13 6=D14 7=D15 8=D16",
-    "0-10 V outputs 0-3; pin 1 = common GND": "1=- 2=AO0 3=AO1 4=AO2 5=AO3",
-    "GND/AI0/AI1/AI2/AI3": "1=- 2=AI0 3=AI1 4=AI2 5=AI3",
-    "I2C0: SDA, SCL, 3.3 V, 5 V, GND": "1=SDA 2=SCL 3=3V3 4=5V 5=-",
+    "24 V DC input": "24+ GND",
+    "Backlight: +12V_BL, ISO_GND": "BL12+ PLC_0V",
+    "Dedicated E-stop loop": "ESTOP PLC_0V",
+    "External isolated field 24 V supply / relay common A": "PLC24+ PLC_0V",
+    "External isolated field 24 V supply / relay common B": "PLC24+ PLC_0V",
+    "External isolated field 24 V supply / relay common": "PLC24+ PLC_0V",
+    "PLC 24V / 0V A": "PLC24+ PLC_0V",
+    "PLC 24V / 0V B": "PLC24+ PLC_0V",
+    "PLC 24V / 0V": "PLC24+ PLC_0V",
+    "24V IN": "24+ GND",
+    "24V + / -": "24+ GND",
+    "BL 12V / 0V": "BL12+ PLC_0V",
+    "BL 12+ / PLC -": "BL12+ PLC_0V",
+    "ESTOP / 0V": "ESTOP PLC_0V",
+    "ESTOP / PLC -": "ESTOP PLC_0V",
+    "PLC 24+ / PLC -": "PLC24+ PLC_0V",
+    "PLC positions 1-8 signals": "I01 I02 I03 I04 I05 I06 I07 I08",
+    "PLC positions 9-16 signals": "I09 I10 I11 I12 I13 I14 I15 I16",
+    "PLC IN 1-8": "I01 I02 I03 I04 I05 I06 I07 I08",
+    "PLC IN 9-16": "I09 I10 I11 I12 I13 I14 I15 I16",
+    "General outputs 0-7": "D01 D02 D03 D04 D05 D06 D07 D08",
+    "General outputs 8-15": "D09 D10 D11 D12 D13 D14 D15 D16",
+    "OUT 0-7": "D01 D02 D03 D04 D05 D06 D07 D08",
+    "OUT 8-15": "D09 D10 D11 D12 D13 D14 D15 D16",
+    "0-10 V outputs 0-3; pin 1 = common GND": "GND AO0 AO1 AO2 AO3",
+    "GND/AI0/AI1/AI2/AI3": "GND AI0 AI1 AI2 AI3",
+    "I2C0: SDA, SCL, 3.3 V, 5 V, GND": "SDA SCL 3V3 5V GND",
     "LCD LVDS 2x10, 2.00 mm": "LVDS 2x10",
-    "Expansion socket: +3V3, GND, GPIO4-GPIO8": "1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8",
-    "Expansion: 3V3, GND, GPIO4-GPIO8": "1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8",
+    "Expansion socket: +3V3, GND, GPIO4-GPIO8": "3V3 GND IO4 IO5 IO6 IO7 IO8",
+    "Expansion: 3V3, GND, GPIO4-GPIO8": "3V3 GND IO4 IO5 IO6 IO7 IO8",
     "SOFNG TF-15x15 microSD socket (C111196)": "microSD TF15",
     "Open-Smart TF Card Breakout": "microSD header",
     "ESP-01/ESP-01S socket": "ESP-01",
     "ESP-01S socket": "ESP-01",
     "AI0/GND/AI1/GND/AI2/GND": "AI0-3 / -",
-    "AO 0-3 / 0V": "1=- 2=AO0 3=AO1 4=AO2 5=AO3",
-    "AI0-3 / 0V": "1=- 2=AI0 3=AI1 4=AI2 5=AI3",
-    "I2C / 3V3 / 5V / 0V": "1=SDA 2=SCL 3=3V3 4=5V 5=-",
-    "IO4-8 / 3V3 / 0V": "1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8",
-    "AO0-3 / -": "1=- 2=AO0 3=AO1 4=AO2 5=AO3",
-    "AI0-3 / -": "1=- 2=AI0 3=AI1 4=AI2 5=AI3",
-    "I2C: 3V3 5V -": "1=SDA 2=SCL 3=3V3 4=5V 5=-",
-    "IO4-8: 3V3 -": "1=3V3 2=- 3=IO4 4=IO5 5=IO6 6=IO7 7=IO8",
+    "AO 0-3 / 0V": "GND AO0 AO1 AO2 AO3",
+    "AI0-3 / 0V": "GND AI0 AI1 AI2 AI3",
+    "I2C / 3V3 / 5V / 0V": "SDA SCL 3V3 5V GND",
+    "IO4-8 / 3V3 / 0V": "3V3 GND IO4 IO5 IO6 IO7 IO8",
+    "AO0-3 / -": "GND AO0 AO1 AO2 AO3",
+    "AI0-3 / -": "GND AI0 AI1 AI2 AI3",
+    "I2C: 3V3 5V -": "SDA SCL 3V3 5V GND",
+    "IO4-8: 3V3 -": "3V3 GND IO4 IO5 IO6 IO7 IO8",
     "3V3_PWR": "3V3 LED",
     "5V_PWR": "5V LED",
     "WeAct RP2350B Core Board (socketed)": "WeAct RP2350B",
@@ -187,6 +216,8 @@ def _dynamic_name(name: str) -> str:
 
 def shorten_name(name: str) -> str:
     """Return the current short name for a net or connector value."""
+    if name in CONNECTOR_LABEL_NAMES:
+        return CONNECTOR_LABEL_NAMES[name]
     if name in STATIC_NAMES:
         return STATIC_NAMES[name]
     if name in TEXT_RENAMES:
@@ -194,10 +225,11 @@ def shorten_name(name: str) -> str:
     current_axis_value = re.fullmatch(r"A([0-6]): (?:0V|-), ERR, Z", name)
     if current_axis_value:
         number = current_axis_value.group(1)
-        return f"- ERR{number} Z{number}"
+        return f"GND ERR{number} Z{number}"
     current_encoder_value = re.fullmatch(r"ENC([0-2]) 5V A B Z (?:0V|-)", name)
     if current_encoder_value:
-        return "1=5V 2=A 3=B 4=Z 5=-"
+        number = current_encoder_value.group(1)
+        return f"+5V A{number} B{number} Z{number} GND"
     current_output_axis = re.fullmatch(
         r"A([0-6]): EN(3|4), ST, DIR",
         name,
@@ -220,7 +252,7 @@ def shorten_name(name: str) -> str:
     )
     if current_pin_axis_status:
         number = current_pin_axis_status.group(1)
-        return f"- ERR{number} Z{number}"
+        return f"GND ERR{number} Z{number}"
 
     compact_axis_net = re.fullmatch(r"A([0-6])_(ST|DIR|ERR|Z)", name)
     if compact_axis_net:
@@ -243,7 +275,7 @@ def shorten_name(name: str) -> str:
         ):
             tail = tail.replace(old, new)
         if "ERR" in tail or "ZERO" in tail:
-            return f"- ERR{number} Z{number}"
+            return f"GND ERR{number} Z{number}"
         enable = "EN3" if number <= 2 else "EN4"
         return f"{enable} STP{number} DIR{number}"
 
@@ -252,7 +284,8 @@ def shorten_name(name: str) -> str:
         name,
     )
     if encoder_value:
-        return "1=5V 2=A 3=B 4=Z 5=-"
+        number = encoder_value.group(1)
+        return f"+5V A{number} B{number} Z{number} GND"
     return _dynamic_name(name)
 
 
@@ -325,6 +358,8 @@ _OLD_TOKEN_RE = re.compile(
     + r")(?![A-Za-z0-9_])"
 )
 _QUOTED_RE = re.compile(r'"([^"\r\n]*)"')
+_SIM_PINS_RE = re.compile(r'(\(property "Sim\.Pins" ")([^"]*)(")')
+_PIN_MAPPING_RE = re.compile(r"(?<!\S)[1-9]\d*=")
 
 
 def shorten_text(text: str) -> str:
@@ -332,17 +367,30 @@ def shorten_text(text: str) -> str:
     direct = shorten_name(text)
     if direct != text:
         return direct
+    text = _PIN_MAPPING_RE.sub("", text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
     return shorten_embedded_text(text)
 
 
 def shorten_embedded_text(text: str) -> str:
     """Shorten known net names inside prose or a longer value."""
-    return _OLD_TOKEN_RE.sub(lambda match: _OLD_TO_NEW[match.group(0)], text)
+    text = _OLD_TOKEN_RE.sub(lambda match: _OLD_TO_NEW[match.group(0)], text)
+    return _PIN_MAPPING_RE.sub("", text)
 
 
 def shorten_quoted_tokens(text: str) -> str:
     """Rewrite quoted strings in a KiCad S-expression without touching layout."""
-    return _QUOTED_RE.sub(lambda match: f'"{shorten_text(match.group(1))}"', text)
+    protected: list[str] = []
+
+    def protect_sim_pins(match: re.Match[str]) -> str:
+        protected.append(match.group(2))
+        return f"{match.group(1)}__SIM_PINS_{len(protected) - 1}__{match.group(3)}"
+
+    text = _SIM_PINS_RE.sub(protect_sim_pins, text)
+    text = _QUOTED_RE.sub(lambda match: f'"{shorten_text(match.group(1))}"', text)
+    for index, value in enumerate(protected):
+        text = text.replace(f"__SIM_PINS_{index}__", value)
+    return text
 
 
 def canonical_name(name: str) -> str:

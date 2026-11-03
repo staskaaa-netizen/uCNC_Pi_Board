@@ -2,7 +2,7 @@
   "title": "LeanCam NCC RP2350B - encoders",
   "parts": [
     {
-      "ref": "C57",
+      "ref": "C119",
       "value": "100nF",
       "footprint": "Capacitor_SMD:C_0805_2012Metric",
       "lib": "Device",
@@ -66,7 +66,7 @@
     },
     {
       "ref": "J13",
-      "value": "Encoder 0: +5,A,B,Z,GND",
+      "value": "+5V A0 B0 Z0 GND",
       "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_01x05",
@@ -102,7 +102,7 @@
     },
     {
       "ref": "J14",
-      "value": "Encoder 1: +5,A,B,Z,GND",
+      "value": "+5V A1 B1 Z1 GND",
       "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_01x05",
@@ -138,7 +138,7 @@
     },
     {
       "ref": "J15",
-      "value": "Encoder 2: +5,A,B,Z,GND",
+      "value": "+5V A2 B2 Z2 GND",
       "footprint": "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",
       "lib": "Connector_Generic",
       "part": "Conn_01x05",
@@ -328,11 +328,11 @@
   ],
   "nets": [
     {
-      "name": "+3V3",
+      "name": "3V3",
       "is_power": true,
       "connections": [
         [
-          "C57",
+          "C119",
           "1"
         ],
         [
@@ -342,7 +342,7 @@
       ]
     },
     {
-      "name": "+5V",
+      "name": "5V",
       "is_power": true,
       "connections": [
         [
@@ -352,7 +352,227 @@
       ]
     },
     {
-      "name": "+5V_ENC",
+      "name": "E0_A3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "18"
+        ]
+      ]
+    },
+    {
+      "name": "E0_A5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J13",
+          "2"
+        ],
+        [
+          "U28",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "E0_B3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "17"
+        ]
+      ]
+    },
+    {
+      "name": "E0_B5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J13",
+          "3"
+        ],
+        [
+          "U28",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "E0_Z3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "16"
+        ]
+      ]
+    },
+    {
+      "name": "E0_Z5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J13",
+          "4"
+        ],
+        [
+          "U28",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "E1_A3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "E1_A5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J14",
+          "2"
+        ],
+        [
+          "U28",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "E1_B3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "E1_B5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J14",
+          "3"
+        ],
+        [
+          "U28",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "E1_Z3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "E1_Z5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J14",
+          "4"
+        ],
+        [
+          "U28",
+          "7"
+        ]
+      ]
+    },
+    {
+      "name": "E2_A3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "E2_A5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J15",
+          "2"
+        ],
+        [
+          "U28",
+          "8"
+        ]
+      ]
+    },
+    {
+      "name": "E2_B3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "U28",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "E2_B5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J15",
+          "3"
+        ],
+        [
+          "U28",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "E2_Z3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "R110",
+          "2"
+        ],
+        [
+          "R111",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "E2_Z5V",
+      "is_power": false,
+      "connections": [
+        [
+          "J15",
+          "4"
+        ],
+        [
+          "R110",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "ENC_5V",
       "is_power": false,
       "connections": [
         [
@@ -378,231 +598,11 @@
       ]
     },
     {
-      "name": "ENC0_A_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "18"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_A_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J13",
-          "2"
-        ],
-        [
-          "U28",
-          "2"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_B_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "17"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_B_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J13",
-          "3"
-        ],
-        [
-          "U28",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_Z_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "16"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_Z_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J13",
-          "4"
-        ],
-        [
-          "U28",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_A_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "15"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_A_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J14",
-          "2"
-        ],
-        [
-          "U28",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_B_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_B_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J14",
-          "3"
-        ],
-        [
-          "U28",
-          "6"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_Z_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "13"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_Z_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J14",
-          "4"
-        ],
-        [
-          "U28",
-          "7"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_A_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_A_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J15",
-          "2"
-        ],
-        [
-          "U28",
-          "8"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_B_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "U28",
-          "11"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_B_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J15",
-          "3"
-        ],
-        [
-          "U28",
-          "9"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_Z_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "R110",
-          "2"
-        ],
-        [
-          "R111",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_Z_5V",
-      "is_power": false,
-      "connections": [
-        [
-          "J15",
-          "4"
-        ],
-        [
-          "R110",
-          "1"
-        ]
-      ]
-    },
-    {
       "name": "GND",
       "is_power": true,
       "connections": [
         [
-          "C57",
+          "C119",
           "2"
         ],
         [

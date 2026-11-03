@@ -22,8 +22,9 @@ or circuit side; they do not repeat physical explanations.
 | `BL_12V` | Isolated backlight 12 V output |
 | `AO_12V` | Analog-output regulator rail |
 
-J1 is `1=24+`, `2=-`. J33 and J45 are `1=PLC24+`, `2=PLC-`. These pin
-assignments come from the PCB pad nets, not from connector-body orientation.
+J1 lists `24+ -` in pin order. J33 and J45 list `PLC24+ PLC-` in pin order.
+These assignments come from the PCB pad nets, not from connector-body
+orientation.
 
 ## PLC inputs
 
@@ -57,7 +58,9 @@ and `EN4`. The output shift-register bits are deliberately non-sequential:
 - Bits 12-13 drive A4.
 
 Each motion output connector is `ENx STPx DIRx`. Each status connector is
-`- ERRx Zx`.
+`GND ERRx Zx`.
+The PCB-facing motion labels are presented in physical reading order as
+`DIRx STPx ENx`; the electrical pin order remains `EN/STEP/DIR`.
 
 ## Digital chains
 

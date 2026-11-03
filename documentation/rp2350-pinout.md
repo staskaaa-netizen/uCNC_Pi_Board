@@ -5,7 +5,8 @@ GPIO table is in [GPIO map](gpio-map.md).
 
 The external PLC inputs are `I01-I16`; the isolated logic-side nets are
 `I01_N-I16_N`. General outputs are `D01-D16`. Motion interfaces use
-`EN3 STPn DIRn` and paired inputs use `- ERRn Zn`.
+The PCB motion labels read `DIRn STPn ENx`; electrically, pin 1 remains the
+enable, pin 2 STEP and pin 3 DIR. Paired inputs use `GND ERRn Zn`.
 
 ## Control, storage and safety
 

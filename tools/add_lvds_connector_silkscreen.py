@@ -1,4 +1,4 @@
-"""Add an assembly legend beside J22 on the back silkscreen."""
+"""Add the physical J22 row labels on the front silkscreen."""
 
 from __future__ import annotations
 
@@ -11,16 +11,20 @@ import pcbnew
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 LABELS = (
-    ("J22 LVDS", 0.0, 0.0, 1.2),
-    ("1-3: 3V3", 0.0, 1.7, 0.9),
-    ("4-6,13-14: GND", 0.0, 3.0, 0.9),
-    ("7/8: D0- / D0+", 0.0, 4.3, 0.9),
-    ("9/10: D1- / D1+", 0.0, 5.6, 0.9),
-    ("11/12: D2- / D2+", 0.0, 6.9, 0.9),
-    ("15/16: CLK- / CLK+", 0.0, 8.2, 0.9),
-    ("17-20: NC", 0.0, 9.5, 0.9),
+    ("J22 LVDS", -13.593, -2.034, 0.8),
+    ("NC NC CLK_P GND D2_P D1_P D0_P GND GND 3V3", -21.721, 4.443, 0.62),
+    ("NC NC CLK_N GND D2_N D1_N D0_N GND 3V3 3V3", -21.594, 6.221, 0.62),
 )
-LEGACY_LABELS = {"LCD LVDS 2x10"}
+LEGACY_LABELS = {
+    "LCD LVDS 2x10",
+    "J22 LVDS",
+    "PWR 1-3   GND 4-6,13-14",
+    "D0- 7  D0+ 8   D1- 9  D1+ 10",
+    "D2- 11 D2+ 12  CLK- 15 CLK+ 16",
+    "NC 17-20",
+    "NC NC CLK_N GND D2_N D1_N D0_N GND GND 3V3",
+    "NC NC CLK_P GND D2_P D1_P D0_P GND GND 3V3",
+}
 
 
 def add_text(
@@ -33,12 +37,12 @@ def add_text(
 ) -> None:
     item = pcbnew.PCB_TEXT(board)
     item.SetText(text)
-    item.SetLayer(pcbnew.B_SilkS)
+    item.SetLayer(pcbnew.F_SilkS)
     item.SetTextSize(pcbnew.VECTOR2I_MM(size_mm, size_mm))
     item.SetTextThickness(pcbnew.FromMM(thickness_mm))
     item.SetTextPos(pcbnew.VECTOR2I_MM(x_mm, y_mm))
     item.SetTextAngleDegrees(0)
-    item.SetMirrored(True)
+    item.SetMirrored(False)
     item.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
     board.Add(item)
 
@@ -60,12 +64,13 @@ def main() -> None:
     if connector is None:
         raise SystemExit("J22 not found")
     position = connector.GetPosition()
-    origin_x = pcbnew.ToMM(position.x) - 28.0
-    origin_y = pcbnew.ToMM(position.y) - 16.0
+    origin_x = pcbnew.ToMM(position.x)
+    origin_y = pcbnew.ToMM(position.y)
     existing = {
         item.GetText(): item
         for item in board.GetDrawings()
-        if isinstance(item, pcbnew.PCB_TEXT) and item.GetLayer() == pcbnew.B_SilkS
+        if isinstance(item, pcbnew.PCB_TEXT)
+        and item.GetLayer() in {pcbnew.B_SilkS, pcbnew.F_SilkS}
     }
     for text in LEGACY_LABELS | {entry[0] for entry in LABELS}:
         if text in existing:

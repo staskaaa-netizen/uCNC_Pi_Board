@@ -41,7 +41,10 @@ recorded copper-clearance DRC findings before fabrication.
 
 The isolated logic-side input names are `I01_N-I16_N`. Every motion connector
 uses pin 1 for enable, pin 2 for STEP and pin 3 for DIR. Every paired status
-connector uses pin 1 for return, pin 2 for ERROR and pin 3 for ZERO.
+connector uses pin 1 for `GND`, pin 2 for ERROR and pin 3 for ZERO.
+On the assembled board, motion labels are printed in the opposite physical
+reading direction as `DIRn STPn ENx`; the pad-to-net mapping above remains
+authoritative.
 
 ## Open the project
 
@@ -85,6 +88,7 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
 - [Current top 3D render](manufacturing/board-3d-top-current.png)
 - [Current bottom 3D render](manufacturing/board-3d-bottom-current.png)
+- [Connector label orientation check](manufacturing/connector-label-check.png)
 - [Grouped BOM](manufacturing/bom.csv)
 
 ## Verification status

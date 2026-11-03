@@ -2,17 +2,17 @@
 	(version "E")
 	(design
 		(source "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\encoders-python.kicad_sch")
-		(date "2026-10-29T17:48:38")
+		(date "2026-11-03T20:43:12")
 		(tool "Eeschema 10.0.1")
 		(sheet
 			(number "1")
 			(name "/")
 			(tstamps "/")
 			(title_block
-				(title "Encoder receiver and 5 V protection")
+				(title "Encoder inputs and 5 V interface")
 				(company "LeanCam / uCNC Python hierarchy experiment")
 				(rev)
-				(date "2026-10-29")
+				(date "2026-11-03")
 				(source "encoders-python.kicad_sch")
 				(comment
 					(number "1")
@@ -55,7 +55,7 @@
 	)
 	(components
 		(comp
-			(ref "C57")
+			(ref "C119")
 			(value "100nF")
 			(footprint "Capacitor_SMD:C_0805_2012Metric")
 			(fields
@@ -105,7 +105,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0ec7d639-1b12-5e02-9072-28a6aaa56493")
+			(tstamps "82c53ea9-8371-5839-9eca-2ca99cd250d1")
 			(units
 				(unit
 					(name "A")
@@ -254,7 +254,7 @@
 		)
 		(comp
 			(ref "J13")
-			(value "Encoder 0: +5,A,B,Z,GND")
+			(value "+5V A0 B0 Z0 GND")
 			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
 			(fields
 				(field
@@ -329,7 +329,7 @@
 		)
 		(comp
 			(ref "J14")
-			(value "Encoder 1: +5,A,B,Z,GND")
+			(value "+5V A1 B1 Z1 GND")
 			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
 			(fields
 				(field
@@ -404,7 +404,7 @@
 		)
 		(comp
 			(ref "J15")
-			(value "Encoder 2: +5,A,B,Z,GND")
+			(value "+5V A2 B2 Z2 GND")
 			(footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical")
 			(fields
 				(field
@@ -1055,10 +1055,10 @@
 	(nets
 		(net
 			(code "1")
-			(name "/+3V3")
+			(name "3V3")
 			(class "Default")
 			(node
-				(ref "C57")
+				(ref "C119")
 				(pin "1")
 				(pintype "passive")
 			)
@@ -1071,7 +1071,7 @@
 		)
 		(net
 			(code "2")
-			(name "/+5V")
+			(name "5V")
 			(class "Default")
 			(node
 				(ref "F2")
@@ -1081,7 +1081,262 @@
 		)
 		(net
 			(code "3")
-			(name "/+5V_ENC")
+			(name "E0_A3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "18")
+				(pinfunction "Y7_18")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "E0_A5V")
+			(class "Default")
+			(node
+				(ref "J13")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "2")
+				(pinfunction "A0_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "E0_B3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "17")
+				(pinfunction "A7_17")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "E0_B5V")
+			(class "Default")
+			(node
+				(ref "J13")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "3")
+				(pinfunction "Y0_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "E0_Z3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "16")
+				(pinfunction "Y6_16")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "E0_Z5V")
+			(class "Default")
+			(node
+				(ref "J13")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "4")
+				(pinfunction "A1_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "E1_A3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "15")
+				(pinfunction "A6_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "E1_A5V")
+			(class "Default")
+			(node
+				(ref "J14")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "5")
+				(pinfunction "Y1_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "E1_B3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "14")
+				(pinfunction "Y5_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "E1_B5V")
+			(class "Default")
+			(node
+				(ref "J14")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "6")
+				(pinfunction "A2_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "E1_Z3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "13")
+				(pinfunction "A5_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "E1_Z5V")
+			(class "Default")
+			(node
+				(ref "J14")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "7")
+				(pinfunction "Y2_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "E2_A3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "12")
+				(pinfunction "Y4_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "E2_A5V")
+			(class "Default")
+			(node
+				(ref "J15")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "8")
+				(pinfunction "A3_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "E2_B3V3")
+			(class "Default")
+			(node
+				(ref "U28")
+				(pin "11")
+				(pinfunction "A4_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "E2_B5V")
+			(class "Default")
+			(node
+				(ref "J15")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U28")
+				(pin "9")
+				(pinfunction "Y3_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "E2_Z3V3")
+			(class "Default")
+			(node
+				(ref "R110")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R111")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "E2_Z5V")
+			(class "Default")
+			(node
+				(ref "J15")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R110")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "ENC_5V")
 			(class "Default")
 			(node
 				(ref "D53")
@@ -1114,266 +1369,11 @@
 			)
 		)
 		(net
-			(code "4")
-			(name "/ENC0_A_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "18")
-				(pinfunction "Y7_18")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "5")
-			(name "/ENC0_A_5V")
-			(class "Default")
-			(node
-				(ref "J13")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "2")
-				(pinfunction "A0_2")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "6")
-			(name "/ENC0_B_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "17")
-				(pinfunction "A7_17")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "7")
-			(name "/ENC0_B_5V")
-			(class "Default")
-			(node
-				(ref "J13")
-				(pin "3")
-				(pinfunction "Pin_3_3")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "3")
-				(pinfunction "Y0_3")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "8")
-			(name "/ENC0_Z_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "16")
-				(pinfunction "Y6_16")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "9")
-			(name "/ENC0_Z_5V")
-			(class "Default")
-			(node
-				(ref "J13")
-				(pin "4")
-				(pinfunction "Pin_4_4")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "4")
-				(pinfunction "A1_4")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "10")
-			(name "/ENC1_A_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "15")
-				(pinfunction "A6_15")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "11")
-			(name "/ENC1_A_5V")
-			(class "Default")
-			(node
-				(ref "J14")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "5")
-				(pinfunction "Y1_5")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "12")
-			(name "/ENC1_B_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "14")
-				(pinfunction "Y5_14")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "13")
-			(name "/ENC1_B_5V")
-			(class "Default")
-			(node
-				(ref "J14")
-				(pin "3")
-				(pinfunction "Pin_3_3")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "6")
-				(pinfunction "A2_6")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "14")
-			(name "/ENC1_Z_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "13")
-				(pinfunction "A5_13")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "15")
-			(name "/ENC1_Z_5V")
-			(class "Default")
-			(node
-				(ref "J14")
-				(pin "4")
-				(pinfunction "Pin_4_4")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "7")
-				(pinfunction "Y2_7")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "16")
-			(name "/ENC2_A_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "12")
-				(pinfunction "Y4_12")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "17")
-			(name "/ENC2_A_5V")
-			(class "Default")
-			(node
-				(ref "J15")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "8")
-				(pinfunction "A3_8")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "18")
-			(name "/ENC2_B_3V3")
-			(class "Default")
-			(node
-				(ref "U28")
-				(pin "11")
-				(pinfunction "A4_11")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "19")
-			(name "/ENC2_B_5V")
-			(class "Default")
-			(node
-				(ref "J15")
-				(pin "3")
-				(pinfunction "Pin_3_3")
-				(pintype "passive")
-			)
-			(node
-				(ref "U28")
-				(pin "9")
-				(pinfunction "Y3_9")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "20")
-			(name "/ENC2_Z_3V3")
-			(class "Default")
-			(node
-				(ref "R110")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R111")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "21")
-			(name "/ENC2_Z_5V")
-			(class "Default")
-			(node
-				(ref "J15")
-				(pin "4")
-				(pinfunction "Pin_4_4")
-				(pintype "passive")
-			)
-			(node
-				(ref "R110")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
 			(code "22")
-			(name "/GND")
+			(name "GND")
 			(class "Default")
 			(node
-				(ref "C57")
+				(ref "C119")
 				(pin "2")
 				(pintype "passive")
 			)

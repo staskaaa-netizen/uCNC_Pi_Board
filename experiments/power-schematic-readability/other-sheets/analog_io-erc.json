@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-29T17:49:25",
+    "date": "2026-11-03T20:43:05",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -29,7 +29,7 @@
     "sheets": [
         {
             "path": "/",
-            "uuid_path": "/21227d6a-39f1-59d6-bb50-780cbd4a6efb",
+            "uuid_path": "/3186464c-aaea-4019-922b-f81167e5b09a",
             "violations": [
                 {
                     "description": "The current configuration does not include the symbol library 'LeanCam'",
@@ -37,8 +37,8 @@
                         {
                             "description": "Symbol U38 [TLV2374]",
                             "pos": {
-                                "x": 3.4544,
-                                "y": 1.9685
+                                "x": 2.9718,
+                                "y": 1.5748
                             },
                             "uuid": "e2443029-7a20-5931-8be2-0bafb172ff89"
                         }
@@ -50,12 +50,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'AOUT0_PWM'",
+                            "description": "Global Label 'PWM0'",
                             "pos": {
-                                "x": 4.4958,
-                                "y": 1.8796
+                                "x": 3.6957,
+                                "y": 1.4859
                             },
-                            "uuid": "0cb4c80b-5a26-5f05-a406-326a96d9c4f1"
+                            "uuid": "d4669cb6-b6c4-5e90-81fd-8f2863070948"
                         }
                     ],
                     "severity": "warning",
@@ -65,12 +65,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'AOUT1_PWM'",
+                            "description": "Global Label 'PWM1'",
                             "pos": {
-                                "x": 4.3434,
-                                "y": 2.3622
+                                "x": 4.0132,
+                                "y": 1.4859
                             },
-                            "uuid": "6188d064-036d-517f-a030-8e69e3644138"
+                            "uuid": "b771f349-2ccb-55a8-9d0c-ec487b9acc9e"
                         }
                     ],
                     "severity": "warning",
@@ -80,12 +80,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'AOUT2_PWM'",
+                            "description": "Global Label 'PWM2'",
                             "pos": {
-                                "x": 4.3434,
-                                "y": 2.7559
+                                "x": 4.3307,
+                                "y": 1.4859
                             },
-                            "uuid": "57a052b2-4ff0-5063-983e-53de6356adb1"
+                            "uuid": "d6173365-5975-58da-8955-bb4a29a1231e"
                         }
                     ],
                     "severity": "warning",
@@ -95,12 +95,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Label 'AOUT3_PWM'",
+                            "description": "Global Label 'PWM3'",
                             "pos": {
-                                "x": 4.3434,
-                                "y": 3.1496
+                                "x": 4.6609,
+                                "y": 1.4859
                             },
-                            "uuid": "f80851b6-f5b2-5488-936c-821ee8af00b8"
+                            "uuid": "3772fdb4-aa1e-5a5a-bbdf-8efcd5ba4c4d"
                         }
                     ],
                     "severity": "warning",
@@ -112,8 +112,8 @@
                         {
                             "description": "Symbol U37 [L78L12]",
                             "pos": {
-                                "x": 3.7719,
-                                "y": 4.1656
+                                "x": 3.937,
+                                "y": 2.9972
                             },
                             "uuid": "01365239-eb57-5a65-9605-bb4226b6b8cf"
                         }

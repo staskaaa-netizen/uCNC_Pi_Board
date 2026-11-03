@@ -3,37 +3,37 @@
     "sheet": "analog_io",
     "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\analog_io-python.kicad_sch",
     "paper": "A1",
-    "components": 40,
-    "nets": 29,
+    "components": 43,
+    "nets": 31,
     "blocks": [
-      "ANALOG INPUTS AI0-AI2",
-      "ANALOG OUTPUTS AO0-AO3",
+      "ANALOG INPUTS AI0-AI3",
+      "ANALOG OUTPUTS D01-D04",
       "ANALOG 12 V SUPPLY"
     ],
-    "routed_nets": 16,
-    "label_only_nets": 13,
-    "wire_segments": 62,
-    "junctions": 2,
-    "labels": 71,
+    "routed_nets": 21,
+    "label_only_nets": 10,
+    "wire_segments": 94,
+    "junctions": 8,
+    "labels": 68,
     "no_connects": 0,
-    "content_bottom_mm": 447.18
+    "content_bottom_mm": 330.18
   },
   {
     "sheet": "display",
     "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\display-python.kicad_sch",
     "paper": "A3",
-    "components": 5,
+    "components": 3,
     "nets": 18,
     "blocks": [
-      "LVDS TRANSMITTER AND CONNECTOR"
+      "LVDS OUTPUT"
     ],
-    "routed_nets": 7,
-    "label_only_nets": 11,
-    "wire_segments": 32,
-    "junctions": 4,
-    "labels": 38,
+    "routed_nets": 4,
+    "label_only_nets": 14,
+    "wire_segments": 11,
+    "junctions": 0,
+    "labels": 27,
     "no_connects": 4,
-    "content_bottom_mm": 101.02
+    "content_bottom_mm": 98.48
   },
   {
     "sheet": "encoders",
@@ -42,13 +42,13 @@
     "components": 9,
     "nets": 22,
     "blocks": [
-      "ENCODER INPUTS 0-2"
+      "ENCODER POWER AND SIGNAL INTERFACE"
     ],
-    "routed_nets": 8,
-    "label_only_nets": 14,
-    "wire_segments": 22,
+    "routed_nets": 7,
+    "label_only_nets": 15,
+    "wire_segments": 19,
     "junctions": 0,
-    "labels": 37,
+    "labels": 38,
     "no_connects": 0,
     "content_bottom_mm": 141.8
   },
@@ -56,78 +56,79 @@
     "sheet": "field_inputs",
     "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_inputs-python.kicad_sch",
     "paper": "A0",
-    "components": 102,
-    "nets": 94,
+    "components": 64,
+    "nets": 71,
     "blocks": [
-      "ISOLATED 5 V-TO-12 V SUPPLY",
-      "EXPANSION INPUTS 0-7",
-      "SAFETY INPUTS",
-      "ISOLATED PLC INPUTS 1-8",
-      "ISOLATED PLC INPUTS 9-16"
+      "PLC INPUTS I01-I08",
+      "PLC INPUTS I09-I16",
+      "E-STOP INPUT AND INDICATION"
     ],
-    "routed_nets": 47,
-    "label_only_nets": 47,
-    "wire_segments": 140,
-    "junctions": 5,
-    "labels": 247,
+    "routed_nets": 23,
+    "label_only_nets": 48,
+    "wire_segments": 78,
+    "junctions": 1,
+    "labels": 192,
     "no_connects": 0,
-    "content_bottom_mm": 660.2
+    "content_bottom_mm": 385.44
   },
   {
     "sheet": "field_outputs",
     "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\field_outputs-python.kicad_sch",
-    "paper": "A1",
-    "components": 71,
-    "nets": 110,
+    "paper": "A0",
+    "components": 72,
+    "nets": 130,
     "blocks": [
-      "5 V OUTPUT BUFFERS",
-      "GENERAL AND MOTION OUTPUTS",
-      "AUXILIARY AND HIGH-CURRENT OUTPUTS"
+      "5 V OUTPUT BUFFERS AND SERIES RESISTORS",
+      "16-CHANNEL OUTPUT OPTOISOLATION",
+      "GENERAL OUTPUT DRIVERS AND CONNECTORS",
+      "MOTION STEP / DIRECTION / ENABLE CONNECTORS",
+      "SERVO ERROR AND ZERO INPUT CONNECTORS",
+      "OUTPUT PULL-UP NETWORKS"
     ],
-    "routed_nets": 31,
-    "label_only_nets": 79,
-    "wire_segments": 99,
-    "junctions": 11,
-    "labels": 269,
-    "no_connects": 4,
-    "content_bottom_mm": 442.22
+    "routed_nets": 7,
+    "label_only_nets": 123,
+    "wire_segments": 27,
+    "junctions": 3,
+    "labels": 353,
+    "no_connects": 0,
+    "content_bottom_mm": 586.32
   },
   {
     "sheet": "mcu_io",
     "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\mcu_io-python.kicad_sch",
     "paper": "A2",
-    "components": 23,
+    "components": 19,
     "nets": 119,
     "blocks": [
-      "WeAct RP2350B AND DECOUPLING",
-      "74HC165 / 74HC595 CHAINS"
+      "WeAct RP2350B AND EXPANSION HEADER",
+      "74HC165 INPUT SHIFT CHAIN",
+      "SN74AHCT595 OUTPUT SHIFT CHAIN"
     ],
-    "routed_nets": 9,
-    "label_only_nets": 110,
-    "wire_segments": 20,
+    "routed_nets": 7,
+    "label_only_nets": 112,
+    "wire_segments": 14,
     "junctions": 0,
-    "labels": 196,
-    "no_connects": 17,
-    "content_bottom_mm": 331.24
+    "labels": 194,
+    "no_connects": 16,
+    "content_bottom_mm": 334.34
   },
   {
     "sheet": "storage_wifi_ui",
     "output": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\experiments\\power-schematic-readability\\other-sheets\\storage_wifi_ui-python.kicad_sch",
     "paper": "A2",
-    "components": 31,
-    "nets": 49,
+    "components": 16,
+    "nets": 25,
     "blocks": [
-      "KEYBOARD MATRIX INTERFACE",
-      "MICRO SD INTERFACE",
-      "ESP-01 / ESP-01S SOCKET",
+      "MICROSD SOCKETS AND SERIES TERMINATION",
+      "ESP-01 / ESP-01S SOCKET AND LOCAL REGULATOR",
       "I2C SERVICE PORT"
     ],
-    "routed_nets": 10,
-    "label_only_nets": 39,
-    "wire_segments": 34,
+    "routed_nets": 5,
+    "label_only_nets": 20,
+    "wire_segments": 24,
     "junctions": 2,
-    "labels": 92,
-    "no_connects": 1,
-    "content_bottom_mm": 378.12
+    "labels": 66,
+    "no_connects": 0,
+    "content_bottom_mm": 227.66
   }
 ]

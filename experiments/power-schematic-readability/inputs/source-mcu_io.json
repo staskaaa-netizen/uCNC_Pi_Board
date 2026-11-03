@@ -170,12 +170,12 @@
       ]
     },
     {
-      "ref": "J4",
-      "value": "SWD",
-      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "ref": "J51",
+      "value": "3V3 GND IO4 IO5 IO6 IO7 IO8",
+      "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical",
       "lib": "Connector_Generic",
-      "part": "Conn_01x04",
-      "description": "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "part": "Conn_01x07",
+      "description": "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)",
       "datasheet": "",
       "pins": [
         {
@@ -197,12 +197,27 @@
           "number": "4",
           "name": "Pin_4",
           "type": "passive"
+        },
+        {
+          "number": "5",
+          "name": "Pin_5",
+          "type": "passive"
+        },
+        {
+          "number": "6",
+          "name": "Pin_6",
+          "type": "passive"
+        },
+        {
+          "number": "7",
+          "name": "Pin_7",
+          "type": "passive"
         }
       ]
     },
     {
       "ref": "MOD1",
-      "value": "WeAct RP2350B Core Board (socketed)",
+      "value": "WeAct RP2350B",
       "footprint": "LeanCam:WeAct_RP2350B_Socket",
       "lib": "LeanCam",
       "part": "WeAct_RP2350B",
@@ -532,90 +547,6 @@
       ]
     },
     {
-      "ref": "R10",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R11",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R12",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
-      "ref": "R13",
-      "value": "10k",
-      "footprint": "Resistor_SMD:R_1206_3216Metric",
-      "lib": "Device",
-      "part": "R",
-      "description": "Resistor",
-      "datasheet": "",
-      "pins": [
-        {
-          "number": "1",
-          "name": "~",
-          "type": "passive"
-        },
-        {
-          "number": "2",
-          "name": "~",
-          "type": "passive"
-        }
-      ]
-    },
-    {
       "ref": "R9",
       "value": "10k",
       "footprint": "Resistor_SMD:R_1206_3216Metric",
@@ -638,10 +569,10 @@
     },
     {
       "ref": "U10",
-      "value": "74HC595D",
+      "value": "SN74AHCT595DR",
       "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
       "lib": "74xx",
-      "part": "74HC595",
+      "part": "74AHCT595",
       "description": "8-bit serial in/out Shift Register 3-State Outputs",
       "datasheet": "",
       "pins": [
@@ -729,10 +660,10 @@
     },
     {
       "ref": "U11",
-      "value": "74HC595D",
+      "value": "SN74AHCT595DR",
       "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
       "lib": "74xx",
-      "part": "74HC595",
+      "part": "74AHCT595",
       "description": "8-bit serial in/out Shift Register 3-State Outputs",
       "datasheet": "",
       "pins": [
@@ -820,10 +751,10 @@
     },
     {
       "ref": "U12",
-      "value": "74HC595D",
+      "value": "SN74AHCT595DR",
       "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
       "lib": "74xx",
-      "part": "74HC595",
+      "part": "74AHCT595",
       "description": "8-bit serial in/out Shift Register 3-State Outputs",
       "datasheet": "",
       "pins": [
@@ -911,10 +842,10 @@
     },
     {
       "ref": "U13",
-      "value": "74HC595D",
+      "value": "SN74AHCT595DR",
       "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
       "lib": "74xx",
-      "part": "74HC595",
+      "part": "74AHCT595",
       "description": "8-bit serial in/out Shift Register 3-State Outputs",
       "datasheet": "",
       "pins": [
@@ -1367,7 +1298,7 @@
   ],
   "nets": [
     {
-      "name": "+3V3",
+      "name": "3V3",
       "is_power": true,
       "connections": [
         [
@@ -1387,60 +1318,8 @@
           "1"
         ],
         [
-          "C26",
+          "J51",
           "1"
-        ],
-        [
-          "C27",
-          "1"
-        ],
-        [
-          "C28",
-          "1"
-        ],
-        [
-          "C29",
-          "1"
-        ],
-        [
-          "J4",
-          "1"
-        ],
-        [
-          "R11",
-          "2"
-        ],
-        [
-          "U10",
-          "10"
-        ],
-        [
-          "U10",
-          "16"
-        ],
-        [
-          "U11",
-          "10"
-        ],
-        [
-          "U11",
-          "16"
-        ],
-        [
-          "U12",
-          "10"
-        ],
-        [
-          "U12",
-          "16"
-        ],
-        [
-          "U13",
-          "10"
-        ],
-        [
-          "U13",
-          "16"
         ],
         [
           "U6",
@@ -1461,27 +1340,65 @@
       ]
     },
     {
-      "name": "+3V3_A",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "48"
-        ]
-      ]
-    },
-    {
-      "name": "+5V",
+      "name": "5V",
       "is_power": true,
       "connections": [
         [
+          "C26",
+          "1"
+        ],
+        [
+          "C27",
+          "1"
+        ],
+        [
+          "C28",
+          "1"
+        ],
+        [
+          "C29",
+          "1"
+        ],
+        [
           "MOD1",
           "31"
+        ],
+        [
+          "U10",
+          "10"
+        ],
+        [
+          "U10",
+          "16"
+        ],
+        [
+          "U11",
+          "10"
+        ],
+        [
+          "U11",
+          "16"
+        ],
+        [
+          "U12",
+          "10"
+        ],
+        [
+          "U12",
+          "16"
+        ],
+        [
+          "U13",
+          "10"
+        ],
+        [
+          "U13",
+          "16"
         ]
       ]
     },
     {
-      "name": "AI0_ADC",
+      "name": "ADC0",
       "is_power": false,
       "connections": [
         [
@@ -1491,17 +1408,7 @@
       ]
     },
     {
-      "name": "AI1_ADC",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "22"
-        ]
-      ]
-    },
-    {
-      "name": "AI2_ADC",
+      "name": "ADC1",
       "is_power": false,
       "connections": [
         [
@@ -1511,117 +1418,47 @@
       ]
     },
     {
-      "name": "AOUT0_PWM",
+      "name": "ADC2",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "19"
+          "22"
         ]
       ]
     },
     {
-      "name": "AOUT1_PWM",
+      "name": "ADC3",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "6"
+          "21"
         ]
       ]
     },
     {
-      "name": "AOUT2_PWM",
+      "name": "ADC_3V3",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "20"
+          "48"
         ]
       ]
     },
     {
-      "name": "AOUT3_PWM",
+      "name": "CD",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "5"
+          "34"
         ]
       ]
     },
     {
-      "name": "ENC0_A_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "15"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_B_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "29"
-        ]
-      ]
-    },
-    {
-      "name": "ENC0_Z_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_A_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "28"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_B_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "13"
-        ]
-      ]
-    },
-    {
-      "name": "ENC1_Z_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "27"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_A_3V3",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "ENC2_B_3V3",
+      "name": "E0_A3V3",
       "is_power": false,
       "connections": [
         [
@@ -1631,77 +1468,97 @@
       ]
     },
     {
-      "name": "ENC2_Z_3V3",
+      "name": "E0_B3V3",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "11"
-        ]
-      ]
-    },
-    {
-      "name": "ESTOP_N",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "24"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN0",
-      "is_power": false,
-      "connections": [
-        [
-          "U7",
-          "11"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN1",
-      "is_power": false,
-      "connections": [
-        [
-          "U7",
           "12"
         ]
       ]
     },
     {
-      "name": "EXP_IN2",
+      "name": "E0_Z3V3",
       "is_power": false,
       "connections": [
         [
-          "U7",
+          "MOD1",
+          "27"
+        ]
+      ]
+    },
+    {
+      "name": "E1_A3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
           "13"
         ]
       ]
     },
     {
-      "name": "EXP_IN3",
+      "name": "E1_B3V3",
       "is_power": false,
       "connections": [
         [
-          "U7",
+          "MOD1",
+          "28"
+        ]
+      ]
+    },
+    {
+      "name": "E1_Z3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
           "14"
         ]
       ]
     },
     {
-      "name": "EXP_IN4",
+      "name": "E2_A3V3",
       "is_power": false,
       "connections": [
         [
-          "U7",
-          "3"
+          "MOD1",
+          "29"
         ]
       ]
     },
     {
-      "name": "EXP_IN5",
+      "name": "E2_B3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "15"
+        ]
+      ]
+    },
+    {
+      "name": "E2_Z3V3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "30"
+        ]
+      ]
+    },
+    {
+      "name": "ERR0",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "ERR1",
       "is_power": false,
       "connections": [
         [
@@ -1711,22 +1568,62 @@
       ]
     },
     {
-      "name": "EXP_IN6",
-      "is_power": false,
-      "connections": [
-        [
-          "U7",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "EXP_IN7",
+      "name": "ERR2",
       "is_power": false,
       "connections": [
         [
           "U7",
           "6"
+        ]
+      ]
+    },
+    {
+      "name": "ERR3",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "ERR4",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "ERR5",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "ERR6",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "ESTOP",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "53"
         ]
       ]
     },
@@ -1767,8 +1664,8 @@
           "2"
         ],
         [
-          "J4",
-          "4"
+          "J51",
+          "2"
         ],
         [
           "MOD1",
@@ -1789,22 +1686,6 @@
         [
           "MOD1",
           "47"
-        ],
-        [
-          "MOD1",
-          "61"
-        ],
-        [
-          "R10",
-          "2"
-        ],
-        [
-          "R12",
-          "2"
-        ],
-        [
-          "R13",
-          "2"
         ],
         [
           "R9",
@@ -1852,6 +1733,14 @@
         ],
         [
           "U7",
+          "13"
+        ],
+        [
+          "U7",
+          "14"
+        ],
+        [
+          "U7",
           "15"
         ],
         [
@@ -1873,16 +1762,6 @@
         [
           "U9",
           "8"
-        ]
-      ]
-    },
-    {
-      "name": "HOLD_N",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "9"
         ]
       ]
     },
@@ -1967,12 +1846,22 @@
       ]
     },
     {
+      "name": "I01_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "11"
+        ]
+      ]
+    },
+    {
       "name": "I2C_SCL",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "53"
+          "23"
         ]
       ]
     },
@@ -1982,87 +1871,309 @@
       "connections": [
         [
           "MOD1",
-          "37"
+          "9"
         ]
       ]
     },
     {
-      "name": "KIN0_FILT",
+      "name": "I02_N",
       "is_power": false,
       "connections": [
         [
-          "U6",
-          "11"
-        ]
-      ]
-    },
-    {
-      "name": "KIN1_FILT",
-      "is_power": false,
-      "connections": [
-        [
-          "U6",
+          "U8",
           "12"
         ]
       ]
     },
     {
-      "name": "KIN2_FILT",
+      "name": "I03_N",
       "is_power": false,
       "connections": [
         [
-          "U6",
+          "U8",
           "13"
         ]
       ]
     },
     {
-      "name": "KIN3_FILT",
+      "name": "I04_N",
       "is_power": false,
       "connections": [
         [
-          "U6",
+          "U8",
           "14"
         ]
       ]
     },
     {
-      "name": "KIN4_FILT",
+      "name": "I05_N",
       "is_power": false,
       "connections": [
         [
-          "U6",
+          "U8",
           "3"
         ]
       ]
     },
     {
-      "name": "KIN5_FILT",
+      "name": "I06_N",
       "is_power": false,
       "connections": [
         [
-          "U6",
+          "U8",
           "4"
         ]
       ]
     },
     {
-      "name": "KIN6_FILT",
+      "name": "I07_N",
       "is_power": false,
       "connections": [
         [
-          "U6",
+          "U8",
           "5"
         ]
       ]
     },
     {
-      "name": "KIN7_FILT",
+      "name": "I08_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "I09_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "I10_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "12"
+        ]
+      ]
+    },
+    {
+      "name": "I11_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "I12_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "14"
+        ]
+      ]
+    },
+    {
+      "name": "I13_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "I14_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "4"
+        ]
+      ]
+    },
+    {
+      "name": "I15_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "I16_N",
+      "is_power": false,
+      "connections": [
+        [
+          "U9",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "IN0",
+      "is_power": false,
+      "connections": [
+        [
+          "R9",
+          "1"
+        ],
+        [
+          "U6",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "IN1",
       "is_power": false,
       "connections": [
         [
           "U6",
+          "9"
+        ],
+        [
+          "U7",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "IN2",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "9"
+        ],
+        [
+          "U8",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "IN3",
+      "is_power": false,
+      "connections": [
+        [
+          "U8",
+          "9"
+        ],
+        [
+          "U9",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "IO4",
+      "is_power": false,
+      "connections": [
+        [
+          "J51",
+          "3"
+        ],
+        [
+          "MOD1",
+          "35"
+        ]
+      ]
+    },
+    {
+      "name": "IO5",
+      "is_power": false,
+      "connections": [
+        [
+          "J51",
+          "4"
+        ],
+        [
+          "MOD1",
+          "51"
+        ]
+      ]
+    },
+    {
+      "name": "IO6",
+      "is_power": false,
+      "connections": [
+        [
+          "J51",
+          "5"
+        ],
+        [
+          "MOD1",
+          "36"
+        ]
+      ]
+    },
+    {
+      "name": "IO7",
+      "is_power": false,
+      "connections": [
+        [
+          "J51",
           "6"
+        ],
+        [
+          "MOD1",
+          "52"
+        ]
+      ]
+    },
+    {
+      "name": "IO8",
+      "is_power": false,
+      "connections": [
+        [
+          "J51",
+          "7"
+        ],
+        [
+          "MOD1",
+          "37"
+        ]
+      ]
+    },
+    {
+      "name": "LAT",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "44"
+        ],
+        [
+          "U10",
+          "12"
+        ],
+        [
+          "U11",
+          "12"
+        ],
+        [
+          "U12",
+          "12"
+        ],
+        [
+          "U13",
+          "12"
         ]
       ]
     },
@@ -2082,7 +2193,7 @@
       "connections": [
         [
           "U10",
-          "15"
+          "2"
         ]
       ]
     },
@@ -2102,7 +2213,7 @@
       "connections": [
         [
           "U10",
-          "2"
+          "4"
         ]
       ]
     },
@@ -2122,7 +2233,7 @@
       "connections": [
         [
           "U10",
-          "4"
+          "6"
         ]
       ]
     },
@@ -2142,7 +2253,7 @@
       "connections": [
         [
           "U10",
-          "6"
+          "15"
         ]
       ]
     },
@@ -2152,7 +2263,7 @@
       "connections": [
         [
           "U11",
-          "2"
+          "1"
         ]
       ]
     },
@@ -2162,7 +2273,7 @@
       "connections": [
         [
           "U11",
-          "1"
+          "2"
         ]
       ]
     },
@@ -2172,7 +2283,7 @@
       "connections": [
         [
           "U11",
-          "15"
+          "3"
         ]
       ]
     },
@@ -2182,7 +2293,7 @@
       "connections": [
         [
           "U11",
-          "3"
+          "4"
         ]
       ]
     },
@@ -2192,7 +2303,7 @@
       "connections": [
         [
           "U11",
-          "4"
+          "5"
         ]
       ]
     },
@@ -2202,7 +2313,7 @@
       "connections": [
         [
           "U11",
-          "5"
+          "6"
         ]
       ]
     },
@@ -2212,7 +2323,7 @@
       "connections": [
         [
           "U11",
-          "6"
+          "7"
         ]
       ]
     },
@@ -2222,7 +2333,7 @@
       "connections": [
         [
           "U11",
-          "7"
+          "15"
         ]
       ]
     },
@@ -2312,7 +2423,7 @@
       "connections": [
         [
           "U13",
-          "15"
+          "1"
         ]
       ]
     },
@@ -2322,7 +2433,7 @@
       "connections": [
         [
           "U13",
-          "1"
+          "2"
         ]
       ]
     },
@@ -2332,7 +2443,7 @@
       "connections": [
         [
           "U13",
-          "2"
+          "3"
         ]
       ]
     },
@@ -2342,7 +2453,7 @@
       "connections": [
         [
           "U13",
-          "3"
+          "4"
         ]
       ]
     },
@@ -2352,7 +2463,7 @@
       "connections": [
         [
           "U13",
-          "4"
+          "5"
         ]
       ]
     },
@@ -2362,7 +2473,7 @@
       "connections": [
         [
           "U13",
-          "5"
+          "6"
         ]
       ]
     },
@@ -2372,7 +2483,7 @@
       "connections": [
         [
           "U13",
-          "6"
+          "7"
         ]
       ]
     },
@@ -2382,288 +2493,88 @@
       "connections": [
         [
           "U13",
-          "7"
+          "15"
         ]
       ]
     },
     {
-      "name": "PLC_IN1_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "6"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN2_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN3_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN4_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN5_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "11"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN6_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN7_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "13"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN8_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U9",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN9_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "6"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN10_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "5"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN11_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "4"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN12_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "3"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN13_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "11"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN14_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN15_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "13"
-        ]
-      ]
-    },
-    {
-      "name": "PLC_IN16_N",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "PWR_GOOD_N",
+      "name": "PG_N",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "21"
+          "50"
         ]
       ]
     },
     {
-      "name": "SD_CD_MCU",
+      "name": "PL",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "34"
-        ]
-      ]
-    },
-    {
-      "name": "SD_CS_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "51"
-        ]
-      ]
-    },
-    {
-      "name": "SD_MISO_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "35"
-        ]
-      ]
-    },
-    {
-      "name": "SD_MOSI_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "52"
-        ]
-      ]
-    },
-    {
-      "name": "SD_SCK_MCU",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "36"
-        ]
-      ]
-    },
-    {
-      "name": "SR_IN_CHAIN1",
-      "is_power": false,
-      "connections": [
+          "45"
+        ],
         [
           "U6",
-          "9"
-        ],
-        [
-          "U7",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "SR_IN_CHAIN2",
-      "is_power": false,
-      "connections": [
-        [
-          "U7",
-          "9"
-        ],
-        [
-          "U8",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "SR_IN_CHAIN3",
-      "is_power": false,
-      "connections": [
-        [
-          "U8",
-          "9"
-        ],
-        [
-          "U9",
-          "10"
-        ]
-      ]
-    },
-    {
-      "name": "SR_IN_DS0",
-      "is_power": false,
-      "connections": [
-        [
-          "R9",
           "1"
         ],
         [
-          "U6",
-          "10"
+          "U7",
+          "1"
+        ],
+        [
+          "U8",
+          "1"
+        ],
+        [
+          "U9",
+          "1"
         ]
       ]
     },
     {
-      "name": "SR_IN_Q7",
+      "name": "PWM0",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "PWM1",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "PWM2",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "20"
+        ]
+      ]
+    },
+    {
+      "name": "PWM3",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "19"
+        ]
+      ]
+    },
+    {
+      "name": "Q7",
       "is_power": false,
       "connections": [
         [
@@ -2677,127 +2588,7 @@
       ]
     },
     {
-      "name": "SR_LATCH",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "44"
-        ],
-        [
-          "R13",
-          "1"
-        ],
-        [
-          "U10",
-          "12"
-        ],
-        [
-          "U11",
-          "12"
-        ],
-        [
-          "U12",
-          "12"
-        ],
-        [
-          "U13",
-          "12"
-        ]
-      ]
-    },
-    {
-      "name": "SR_OUT_CHAIN1",
-      "is_power": false,
-      "connections": [
-        [
-          "U10",
-          "9"
-        ],
-        [
-          "U11",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "SR_OUT_CHAIN2",
-      "is_power": false,
-      "connections": [
-        [
-          "U11",
-          "9"
-        ],
-        [
-          "U12",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "SR_OUT_CHAIN3",
-      "is_power": false,
-      "connections": [
-        [
-          "U12",
-          "9"
-        ],
-        [
-          "U13",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "SR_OUT_SER",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "43"
-        ],
-        [
-          "R12",
-          "1"
-        ],
-        [
-          "U10",
-          "14"
-        ]
-      ]
-    },
-    {
-      "name": "SR_PL_N",
-      "is_power": false,
-      "connections": [
-        [
-          "MOD1",
-          "45"
-        ],
-        [
-          "R11",
-          "1"
-        ],
-        [
-          "U6",
-          "1"
-        ],
-        [
-          "U7",
-          "1"
-        ],
-        [
-          "U8",
-          "1"
-        ],
-        [
-          "U9",
-          "1"
-        ]
-      ]
-    },
-    {
-      "name": "SR_SCK",
+      "name": "SCK",
       "is_power": false,
       "connections": [
         [
@@ -2805,10 +2596,6 @@
           "59"
         ],
         [
-          "R10",
-          "1"
-        ],
-        [
           "U10",
           "11"
         ],
@@ -2843,45 +2630,103 @@
       ]
     },
     {
-      "name": "START_N",
+      "name": "SER0",
       "is_power": false,
       "connections": [
         [
           "MOD1",
-          "23"
-        ]
-      ]
-    },
-    {
-      "name": "SWCLK",
-      "is_power": false,
-      "connections": [
-        [
-          "J4",
-          "3"
+          "43"
         ],
         [
-          "MOD1",
-          "62"
+          "U13",
+          "14"
         ]
       ]
     },
     {
-      "name": "SWDIO",
+      "name": "SER1",
       "is_power": false,
       "connections": [
         [
-          "J4",
-          "2"
+          "U12",
+          "14"
         ],
         [
-          "MOD1",
-          "63"
+          "U13",
+          "9"
         ]
       ]
     },
     {
-      "name": "WIFI_RX",
+      "name": "SER2",
+      "is_power": false,
+      "connections": [
+        [
+          "U11",
+          "14"
+        ],
+        [
+          "U12",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "SER3",
+      "is_power": false,
+      "connections": [
+        [
+          "U10",
+          "14"
+        ],
+        [
+          "U11",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_CK",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_CS",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "24"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_SI",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "25"
+        ]
+      ]
+    },
+    {
+      "name": "SPI_SO",
+      "is_power": false,
+      "connections": [
+        [
+          "MOD1",
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "UART_RX",
       "is_power": false,
       "connections": [
         [
@@ -2891,12 +2736,82 @@
       ]
     },
     {
-      "name": "WIFI_TX",
+      "name": "UART_TX",
       "is_power": false,
       "connections": [
         [
           "MOD1",
           "38"
+        ]
+      ]
+    },
+    {
+      "name": "Z0",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "Z1",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "3"
+        ]
+      ]
+    },
+    {
+      "name": "Z2",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "5"
+        ]
+      ]
+    },
+    {
+      "name": "Z3",
+      "is_power": false,
+      "connections": [
+        [
+          "U7",
+          "11"
+        ]
+      ]
+    },
+    {
+      "name": "Z4",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "13"
+        ]
+      ]
+    },
+    {
+      "name": "Z5",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "6"
+        ]
+      ]
+    },
+    {
+      "name": "Z6",
+      "is_power": false,
+      "connections": [
+        [
+          "U6",
+          "4"
         ]
       ]
     }

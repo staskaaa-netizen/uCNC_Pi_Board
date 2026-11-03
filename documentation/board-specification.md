@@ -24,7 +24,7 @@ Generated review documents:
 | Peripheral logic | AMS1117-3.3, `3V3` |
 | Wi-Fi supply | Dedicated AMS1117-3.3, `WIFI_3V3` |
 | Analog-output rail | L78L12, `AO_12V` |
-| PLC supply | 1=PLC24+ 2=PLC- through J33/J45 |
+| PLC supply | PLC24+ PLC- through J33/J45 |
 | Backlight rail | LMR36510 isolated 24 V to `BL_12V` |
 
 The board is a machine-control carrier, not a safety-rated controller.
@@ -81,11 +81,15 @@ connector also carries the applicable grouped enable:
 - `EN3` is shared by A0-A2.
 - `EN4` is shared by A3-A6.
 
+The visible PCB labels follow the rotated connector geometry and read
+`DIRn STPn ENx`; electrically, pin 1 remains the enable, pin 2 STEP and pin 3
+DIR.
+
 The 3.3 V 74AHCT595 outputs drive two TC74AC541F buffers powered from 5 V.
 The buffers provide the 5 V STEP, DIR and enable outputs.
 
 J40, J41, J42, J43, J50, J49 and J48 are the paired inputs for A0-A6. Each is
-3-pin: `-`, `ERR`, `Z`. J13-J15 are 5 V encoder connectors. U28 converts the 5 V A/B/Z
+3-pin: `GND`, `ERR`, `Z`. J13-J15 are 5 V encoder connectors. U28 converts the 5 V A/B/Z
 push-pull signals to 3.3 V logic; open-collector encoders require external
 pull-ups.
 
@@ -127,13 +131,13 @@ plane. `PLC_0V` remains a separate isolated domain.
 
 | Ref | Function |
 |---|---|
-| J1 | 12-1=24+ 2=- |
+| J1 | PCB label order `GND 24+`; pin 1 is `24+`, pin 2 is `GND` |
 | J2 | Isolated backlight `BL_12V` / `PLC_0V` |
 | J5 | Isolated E-stop loop |
 | J7, J8 | PLC input signals 1-16 |
 | J10, J11, J28, J29, J47, J46, J30 | A0-A6 STEP/DIR outputs |
 | J12, J32 | General outputs D01-D16 |
-| J33, J45 | Parallel 1=PLC24+ 2=PLC- |
+| J33, J45 | Parallel PLC24+ PLC- |
 | J13-J15 | Three encoder interfaces |
 | J40, J41, J42, J43, J50, J49, J48 | A0-A6 paired status inputs |
 | J18 | 5-pin I2C interface |
@@ -154,7 +158,7 @@ Current KiCad 10 checks:
 
 - Schematic: 281 components and 320 nets, with no connectivity failures.
 - PCB: 275 footprints, 2,276 routed track segments and 187 vias.
-- DRC: zero errors and zero unconnected items; 172 silkscreen warnings remain.
+- DRC: zero errors and zero unconnected items; 170 silkscreen warnings remain.
 - Warning classes: silkscreen over mask, silkscreen clearance, text height and
   board-edge clipping.
 - ERC: no electrical errors; 35 library-symbol cache warnings.

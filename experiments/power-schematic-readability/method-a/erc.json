@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-29T17:26:37",
+    "date": "2026-11-03T20:43:05",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -29,7 +29,7 @@
     "sheets": [
         {
             "path": "/",
-            "uuid_path": "/7bef7768-0e8d-4ab2-b462-8fc19a98e4fd",
+            "uuid_path": "/e4f7c7f4-123f-4524-98c9-365609a81a78",
             "violations": [
                 {
                     "description": "The current configuration does not include the symbol library 'schemagen'",
@@ -40,157 +40,7 @@
                                 "x": 0.254,
                                 "y": 0.3937
                             },
-                            "uuid": "cc334128-2b7a-4680-8bf8-fb61d0de9710"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C1 [C1]",
-                            "pos": {
-                                "x": 0.254,
-                                "y": 0.762
-                            },
-                            "uuid": "92d73e09-dd49-4fe1-baaa-67b3082be8ad"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol Q1 [Q1]",
-                            "pos": {
-                                "x": 1.0541,
-                                "y": 0.4318
-                            },
-                            "uuid": "f00ad2a6-7514-4acc-ac70-481c771b0c4e"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C2 [C2]",
-                            "pos": {
-                                "x": 0.8382,
-                                "y": 0.8128
-                            },
-                            "uuid": "289aeaef-99cb-46ce-8c42-92cf6977c877"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol D1 [D1]",
-                            "pos": {
-                                "x": 0.9652,
-                                "y": 0.8128
-                            },
-                            "uuid": "04d33614-7b95-4f67-8b26-72a809746216"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol FLG3 [FLG3]",
-                            "pos": {
-                                "x": 0.8382,
-                                "y": 1.0287
-                            },
-                            "uuid": "8f8f8f03-7bd9-416d-804d-75f419ec9b8f"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol D2 [D2]",
-                            "pos": {
-                                "x": 1.1049,
-                                "y": 0.8128
-                            },
-                            "uuid": "0897d56a-9e5a-452e-a290-423c59de3b37"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol FLG4 [FLG4]",
-                            "pos": {
-                                "x": 0.9652,
-                                "y": 1.0287
-                            },
-                            "uuid": "c230c4cf-94c7-4546-a50b-95eca90f3209"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol F1 [F1]",
-                            "pos": {
-                                "x": 1.2319,
-                                "y": 0.8128
-                            },
-                            "uuid": "5776dece-0c10-478c-b35e-bec9808ffdae"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol R1 [R1]",
-                            "pos": {
-                                "x": 1.3716,
-                                "y": 0.8128
-                            },
-                            "uuid": "a4c9eecc-d47b-498c-a8cb-16f9826edf32"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C15 [C15]",
-                            "pos": {
-                                "x": 1.6256,
-                                "y": 0.8128
-                            },
-                            "uuid": "b8a42528-0f56-4a62-b9fa-faeaf8571752"
+                            "uuid": "d9a93a76-2967-4f94-981b-6b4a61917985"
                         }
                     ],
                     "severity": "warning",
@@ -202,10 +52,10 @@
                         {
                             "description": "Symbol U1 [U1]",
                             "pos": {
-                                "x": 1.8288,
+                                "x": 0.9398,
                                 "y": 0.4318
                             },
-                            "uuid": "9546903d-5de1-4c68-aaa6-94da8024f1ee"
+                            "uuid": "34b1046c-d6e4-4f3f-987f-3f067f7230d5"
                         }
                     ],
                     "severity": "warning",
@@ -215,27 +65,12 @@
                     "description": "The current configuration does not include the symbol library 'schemagen'",
                     "items": [
                         {
-                            "description": "Symbol D4 [D4]",
+                            "description": "Symbol C15 [C15]",
                             "pos": {
-                                "x": 1.6256,
-                                "y": 1.0414
-                            },
-                            "uuid": "1b28ff09-9801-4fa7-ae0d-a021aa1f6f3b"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C3 [C3]",
-                            "pos": {
-                                "x": 1.7526,
+                                "x": 0.7366,
                                 "y": 0.8128
                             },
-                            "uuid": "6a16e0f5-9798-470a-8263-b920318299dc"
+                            "uuid": "9b8ec08c-8df1-4f7b-be19-9f5205dbe990"
                         }
                     ],
                     "severity": "warning",
@@ -245,117 +80,12 @@
                     "description": "The current configuration does not include the symbol library 'schemagen'",
                     "items": [
                         {
-                            "description": "Symbol D5 [D5]",
+                            "description": "Symbol C2 [C2]",
                             "pos": {
-                                "x": 1.7526,
-                                "y": 1.0414
-                            },
-                            "uuid": "f270f76a-8ea4-418f-a783-5fc1040bd781"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol FLG1 [FLG1]",
-                            "pos": {
-                                "x": 1.6256,
-                                "y": 1.2573
-                            },
-                            "uuid": "2cf3c14f-84b7-425f-bd2c-37b80c32262c"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C4 [C4]",
-                            "pos": {
-                                "x": 1.8923,
+                                "x": 0.8636,
                                 "y": 0.8128
                             },
-                            "uuid": "5cef10f0-abf2-4ee9-a9d2-2571e2e7303b"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol L1 [L1]",
-                            "pos": {
-                                "x": 1.8923,
-                                "y": 1.0414
-                            },
-                            "uuid": "bed81a10-0b57-4e08-b294-253fd2641bc9"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C5 [C5]",
-                            "pos": {
-                                "x": 2.0193,
-                                "y": 0.8128
-                            },
-                            "uuid": "cbd2c016-ffb7-4f43-b88e-393433c596a7"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol R71 [R71]",
-                            "pos": {
-                                "x": 2.0193,
-                                "y": 1.0414
-                            },
-                            "uuid": "81c2bfab-3cc3-4a22-b567-c59d70f38a2a"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C86 [C86]",
-                            "pos": {
-                                "x": 2.159,
-                                "y": 0.8128
-                            },
-                            "uuid": "1bb19a72-30ed-4b93-921f-d6e5999d13d2"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol R72 [R72]",
-                            "pos": {
-                                "x": 2.159,
-                                "y": 1.0414
-                            },
-                            "uuid": "1b4f9b96-8d7d-4eb3-a3ca-b70fcf902822"
+                            "uuid": "f73f982a-14c1-4bbb-a023-7834ab55aa58"
                         }
                     ],
                     "severity": "warning",
@@ -367,10 +97,190 @@
                         {
                             "description": "Symbol C91 [C91]",
                             "pos": {
-                                "x": 2.286,
+                                "x": 0.7366,
+                                "y": 1.0414
+                            },
+                            "uuid": "2ccfc815-813e-473f-b31e-cbb6b1d18ef3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C3]",
+                            "pos": {
+                                "x": 1.0033,
                                 "y": 0.8128
                             },
-                            "uuid": "ec9c1e63-63a3-4acd-a427-7c79ba6c0026"
+                            "uuid": "7aea0671-b58a-47ff-8829-030cc1d56760"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [D1]",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 1.0414
+                            },
+                            "uuid": "ff370902-c552-42de-98d2-ee5278265a5e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [C4]",
+                            "pos": {
+                                "x": 1.1303,
+                                "y": 0.8128
+                            },
+                            "uuid": "e5444a2c-d60d-4b47-94c6-d9217af9f279"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [D2]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.0414
+                            },
+                            "uuid": "7e00900f-95a3-4c8b-9d35-f70ab0843c18"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol L1 [L1]",
+                            "pos": {
+                                "x": 0.7366,
+                                "y": 1.27
+                            },
+                            "uuid": "96b9697f-81eb-459c-9701-aedfcb31cfeb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C5]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.8128
+                            },
+                            "uuid": "7a75c89d-ab8f-4eb8-9e00-bb705135faea"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol R71 [R71]",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 1.27
+                            },
+                            "uuid": "8990a0e7-9e7d-4809-bf93-d7fbb971098b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol D4 [D4]",
+                            "pos": {
+                                "x": 1.1303,
+                                "y": 1.0414
+                            },
+                            "uuid": "2e92f623-f85d-4946-a974-368c1315a083"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C86 [C86]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.8128
+                            },
+                            "uuid": "4beca29c-d046-4f93-99df-f7ee822d1fa2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol R72 [R72]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.27
+                            },
+                            "uuid": "4e9ddf4e-85a1-42c5-9d8e-6977e49bc433"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol D5 [D5]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 1.0414
+                            },
+                            "uuid": "84b6446a-bcbe-4dcc-9a40-809663fe19cd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol FLG1 [FLG1]",
+                            "pos": {
+                                "x": 0.7366,
+                                "y": 1.4859
+                            },
+                            "uuid": "5fbd9eb0-22c5-418e-8609-263a65c5b06a"
                         }
                     ],
                     "severity": "warning",
@@ -382,10 +292,55 @@
                         {
                             "description": "Symbol R73 [R73]",
                             "pos": {
-                                "x": 2.286,
+                                "x": 1.1303,
+                                "y": 1.27
+                            },
+                            "uuid": "4d33927a-752b-44e4-8af5-fc241f161652"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol FLG3 [FLG3]",
+                            "pos": {
+                                "x": 0.8636,
+                                "y": 1.4859
+                            },
+                            "uuid": "fae09da2-ef19-4560-bb9e-f56eb7f6b011"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [F1]",
+                            "pos": {
+                                "x": 1.397,
                                 "y": 1.0414
                             },
-                            "uuid": "62a9e2c1-7751-4937-adb1-00c61df48375"
+                            "uuid": "a6b2d53f-a348-4110-a357-5da92dba354d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol FLG4 [FLG4]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.4859
+                            },
+                            "uuid": "51e34f50-6445-42b8-8db3-9bd392ef9065"
                         }
                     ],
                     "severity": "warning",
@@ -397,25 +352,10 @@
                         {
                             "description": "Symbol C10 [C10]",
                             "pos": {
-                                "x": 2.5654,
+                                "x": 1.6637,
                                 "y": 0.8128
                             },
-                            "uuid": "44d54a2b-2881-41b9-b5f0-0059c3a38d9e"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol C90 [C90]",
-                            "pos": {
-                                "x": 2.5654,
-                                "y": 1.0414
-                            },
-                            "uuid": "38b7747d-8669-41da-80a9-83859c0b3d9c"
+                            "uuid": "17dd775e-0184-41d2-a87b-1c7301555b6b"
                         }
                     ],
                     "severity": "warning",
@@ -427,10 +367,25 @@
                         {
                             "description": "Symbol U2 [U2]",
                             "pos": {
-                                "x": 2.7686,
+                                "x": 1.8669,
                                 "y": 0.4318
                             },
-                            "uuid": "84a5b425-30bc-450f-947f-67029acbd97c"
+                            "uuid": "85290cbb-443d-4985-b439-33291abe9671"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C90 [C90]",
+                            "pos": {
+                                "x": 1.6637,
+                                "y": 1.0414
+                            },
+                            "uuid": "54091744-7960-4b8e-9a4e-c544b230cf3a"
                         }
                     ],
                     "severity": "warning",
@@ -442,25 +397,10 @@
                         {
                             "description": "Symbol C11 [C11]",
                             "pos": {
-                                "x": 2.6924,
+                                "x": 1.7907,
                                 "y": 0.8128
                             },
-                            "uuid": "1783fa6f-e832-47d7-a62a-6617eed2be03"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "The current configuration does not include the symbol library 'schemagen'",
-                    "items": [
-                        {
-                            "description": "Symbol FLG2 [FLG2]",
-                            "pos": {
-                                "x": 2.5654,
-                                "y": 1.2573
-                            },
-                            "uuid": "71bd19a0-8fca-4795-85f4-80fa01571f74"
+                            "uuid": "dddb2bcd-85eb-400c-aad7-5b92c7996a92"
                         }
                     ],
                     "severity": "warning",
@@ -472,10 +412,25 @@
                         {
                             "description": "Symbol FB1 [FB1]",
                             "pos": {
-                                "x": 2.6924,
+                                "x": 1.7907,
                                 "y": 1.0414
                             },
-                            "uuid": "29696203-01c7-406c-b484-95ca5b14029f"
+                            "uuid": "d2694778-dc5d-48c4-a811-8373a33c741c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol FLG2 [FLG2]",
+                            "pos": {
+                                "x": 1.6637,
+                                "y": 1.2573
+                            },
+                            "uuid": "ef2b16b2-aaf2-4ef6-a142-2a76ee3ba34d"
                         }
                     ],
                     "severity": "warning",
@@ -487,10 +442,10 @@
                         {
                             "description": "Symbol C13 [C13]",
                             "pos": {
-                                "x": 2.8321,
+                                "x": 1.9304,
                                 "y": 0.8128
                             },
-                            "uuid": "37fb6c5b-4887-44c3-adb0-b23e9690eae0"
+                            "uuid": "13487376-a0ec-4c3d-be9c-6a67755bc6c6"
                         }
                     ],
                     "severity": "warning",
@@ -502,10 +457,10 @@
                         {
                             "description": "Symbol R4 [R4]",
                             "pos": {
-                                "x": 2.8321,
+                                "x": 1.9304,
                                 "y": 1.0414
                             },
-                            "uuid": "93b684ed-19cb-4dfd-84a0-1c2fc078117a"
+                            "uuid": "db574744-6ac3-43a0-8589-cf9f4a30f756"
                         }
                     ],
                     "severity": "warning",
@@ -517,10 +472,10 @@
                         {
                             "description": "Symbol C6 [C6]",
                             "pos": {
-                                "x": 2.9591,
+                                "x": 2.0574,
                                 "y": 0.8128
                             },
-                            "uuid": "feaa4902-0587-4f98-b079-dbcf149c8fcc"
+                            "uuid": "4aa78da3-bfea-48d9-8720-dbee269f8b06"
                         }
                     ],
                     "severity": "warning",
@@ -532,10 +487,10 @@
                         {
                             "description": "Symbol R5 [R5]",
                             "pos": {
-                                "x": 2.9591,
+                                "x": 2.0574,
                                 "y": 1.0414
                             },
-                            "uuid": "cd721c27-9c01-479d-a116-768683fcb2e9"
+                            "uuid": "730f4617-8610-4599-b48c-3450251c3357"
                         }
                     ],
                     "severity": "warning",
@@ -547,10 +502,10 @@
                         {
                             "description": "Symbol C7 [C7]",
                             "pos": {
-                                "x": 3.0988,
+                                "x": 2.1971,
                                 "y": 0.8128
                             },
-                            "uuid": "3b240546-e68d-4685-b4f8-e4f771b56f63"
+                            "uuid": "30f7a5c6-1171-401a-b4c4-3db1a4b5abac"
                         }
                     ],
                     "severity": "warning",
@@ -562,10 +517,10 @@
                         {
                             "description": "Symbol R70 [R70]",
                             "pos": {
-                                "x": 3.0988,
+                                "x": 2.1971,
                                 "y": 1.0414
                             },
-                            "uuid": "1ae15a77-c84b-4b03-b1d5-af402dd29bcc"
+                            "uuid": "ad2b0c94-0b0a-4826-8e66-739f945768c7"
                         }
                     ],
                     "severity": "warning",
@@ -577,10 +532,160 @@
                         {
                             "description": "Symbol C76 [C76]",
                             "pos": {
-                                "x": 3.2258,
+                                "x": 2.3241,
                                 "y": 0.8128
                             },
-                            "uuid": "6a0063b1-0e11-485d-82ba-0a9c0469d5df"
+                            "uuid": "ae0ef34a-2a33-4ea4-901d-fc7f31b07368"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C107 [C107]",
+                            "pos": {
+                                "x": 2.5654,
+                                "y": 0.8636
+                            },
+                            "uuid": "b3280a1e-3b2e-4c36-82ec-18c43d4a8e5c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C108 [C108]",
+                            "pos": {
+                                "x": 2.6924,
+                                "y": 0.8636
+                            },
+                            "uuid": "a9add74c-bf09-4790-8311-510405bf4e36"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C109 [C109]",
+                            "pos": {
+                                "x": 2.8194,
+                                "y": 0.8636
+                            },
+                            "uuid": "43a818ca-ba69-4bef-a906-723c55ce171e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C110 [C110]",
+                            "pos": {
+                                "x": 2.9464,
+                                "y": 0.8636
+                            },
+                            "uuid": "438790ef-f7a1-4444-988f-aa049d6d5ab5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C111 [C111]",
+                            "pos": {
+                                "x": 3.0734,
+                                "y": 0.8636
+                            },
+                            "uuid": "40a7f55e-570e-48ea-b689-10c2776264e3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C112 [C112]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 0.8636
+                            },
+                            "uuid": "d8e4b13c-acf9-4f8f-b27d-c16c67f6fb2c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C113 [C113]",
+                            "pos": {
+                                "x": 3.3274,
+                                "y": 0.8636
+                            },
+                            "uuid": "aea16650-ee0f-4c52-8a4b-5ebe63f4385c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol C114 [C114]",
+                            "pos": {
+                                "x": 3.4544,
+                                "y": 0.8636
+                            },
+                            "uuid": "061ec9db-b553-4ecc-9802-c8da5c613d80"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol D3 [D3]",
+                            "pos": {
+                                "x": 3.5814,
+                                "y": 0.8636
+                            },
+                            "uuid": "8827b1be-c2f4-4e62-8519-a254b0b16ce6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol FLG10 [FLG10]",
+                            "pos": {
+                                "x": 3.7084,
+                                "y": 0.8509
+                            },
+                            "uuid": "187ff7bd-4446-4e25-80c2-7a7cdacec57e"
                         }
                     ],
                     "severity": "warning",
@@ -590,12 +695,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label '+5V_ENC'",
+                            "description": "Global Label 'ENC_5V'",
                             "pos": {
-                                "x": 3.4671,
+                                "x": 3.8354,
                                 "y": 0.8128
                             },
-                            "uuid": "11a5ab08-6de2-4550-bc4b-835e939dfdf8"
+                            "uuid": "9356f198-0c52-43da-8751-c2faaceeed30"
                         }
                     ],
                     "severity": "warning",
@@ -607,10 +712,10 @@
                         {
                             "description": "Symbol FLG5 [FLG5]",
                             "pos": {
-                                "x": 3.4671,
+                                "x": 3.8354,
                                 "y": 0.8509
                             },
-                            "uuid": "97d18b0f-bb25-4b69-94fc-6805badd4298"
+                            "uuid": "acdaf438-0735-420f-9ce5-80d0f1e6b58b"
                         }
                     ],
                     "severity": "warning",
@@ -620,12 +725,12 @@
                     "description": "Label connected to only one pin",
                     "items": [
                         {
-                            "description": "Global Label '+3V3_SD'",
+                            "description": "Global Label 'SD_3V3'",
                             "pos": {
-                                "x": 3.5941,
+                                "x": 3.9624,
                                 "y": 0.8128
                             },
-                            "uuid": "b445a249-dbd9-4144-b98f-ce37c46b449a"
+                            "uuid": "30d5cdee-52a0-4068-a6ad-fd92f0e16623"
                         }
                     ],
                     "severity": "warning",
@@ -637,29 +742,14 @@
                         {
                             "description": "Symbol FLG6 [FLG6]",
                             "pos": {
-                                "x": 3.5941,
+                                "x": 3.9624,
                                 "y": 0.8509
                             },
-                            "uuid": "0e15ae34-45f3-467c-b3f3-5926811678bf"
+                            "uuid": "e4784e03-0195-4024-9694-fdd3e8381c91"
                         }
                     ],
                     "severity": "warning",
                     "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label '+5V_ISO_IN'",
-                            "pos": {
-                                "x": 3.7211,
-                                "y": 0.8128
-                            },
-                            "uuid": "1f32c250-4391-43da-8a09-4b09d0d2ccd7"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
                 },
                 {
                     "description": "The current configuration does not include the symbol library 'schemagen'",
@@ -667,29 +757,14 @@
                         {
                             "description": "Symbol FLG7 [FLG7]",
                             "pos": {
-                                "x": 3.7211,
+                                "x": 4.0894,
                                 "y": 0.8509
                             },
-                            "uuid": "685e5fd7-01cd-4dca-9cc4-78279143ee3a"
+                            "uuid": "1f0d5917-e706-40ee-bf30-454db88f58c6"
                         }
                     ],
                     "severity": "warning",
                     "type": "lib_symbol_issues"
-                },
-                {
-                    "description": "Label connected to only one pin",
-                    "items": [
-                        {
-                            "description": "Global Label '+12V_FIELD'",
-                            "pos": {
-                                "x": 3.8481,
-                                "y": 0.8128
-                            },
-                            "uuid": "051f9e94-ab3d-4b70-aa74-22cbba3941c5"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "isolated_pin_label"
                 },
                 {
                     "description": "The current configuration does not include the symbol library 'schemagen'",
@@ -697,10 +772,115 @@
                         {
                             "description": "Symbol FLG8 [FLG8]",
                             "pos": {
-                                "x": 3.8481,
+                                "x": 4.2164,
                                 "y": 0.8509
                             },
-                            "uuid": "d873eeb6-dc91-468d-875e-1e8ba4353e87"
+                            "uuid": "9aa70bbd-5790-4156-a752-32ca582bb759"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol FLG9 [FLG9]",
+                            "pos": {
+                                "x": 4.3434,
+                                "y": 0.8509
+                            },
+                            "uuid": "84d9b622-795b-42db-aa24-4aa2e8822c30"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [J2]",
+                            "pos": {
+                                "x": 4.4704,
+                                "y": 0.8636
+                            },
+                            "uuid": "d04097ea-ebce-4812-bd3c-11caf06ef879"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol L2 [L2]",
+                            "pos": {
+                                "x": 4.5974,
+                                "y": 0.8636
+                            },
+                            "uuid": "6003f2da-f92e-4ca0-87f4-917cfd17e921"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol R126 [R126]",
+                            "pos": {
+                                "x": 4.7244,
+                                "y": 0.8636
+                            },
+                            "uuid": "5aa007db-2af8-4ebf-acdb-99dfb740f46b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol R127 [R127]",
+                            "pos": {
+                                "x": 4.8514,
+                                "y": 0.8636
+                            },
+                            "uuid": "71bcb8c1-5c81-4d29-a298-66631028eb0c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol R128 [R128]",
+                            "pos": {
+                                "x": 4.9784,
+                                "y": 0.8636
+                            },
+                            "uuid": "6ff3746c-2686-432b-8329-d5ce0d91fe43"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'schemagen'",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [U3]",
+                            "pos": {
+                                "x": 5.3721,
+                                "y": 0.9144
+                            },
+                            "uuid": "3e1ffc75-72ec-4595-8df3-e2fa9f5ed6b9"
                         }
                     ],
                     "severity": "warning",
