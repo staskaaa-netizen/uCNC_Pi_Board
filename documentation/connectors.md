@@ -11,7 +11,6 @@ height to the Phoenix footprint.
 |---|---|---|
 | J1 | 2-pin 3.5 mm | 1=VIN 12-24 V, 2=GND |
 | J2 | 2-pin 3.5 mm | 1=`+12V_BL`, 2=`ISO_GND` |
-| J4 | 1x4 2.54 mm | 1=3.3 V, 2/3=NC, 4=GND; module debug pins are not connected |
 | J5 | 2-pin 3.5 mm | 1=dedicated E-stop loop, 2=`ISO_GND` |
 | J7 | 1x8 3.5 mm | `FIELD_IN1`-`FIELD_IN8` |
 | J8 | 1x8 3.5 mm | `FIELD_IN9`-`FIELD_IN16` |
@@ -54,12 +53,6 @@ order from pin 1 is `CDN`, `DAT1`, `DO`, `GND`, `SCLK`, `VCC`, `DI`, `CS`,
 level shifter. The former full-size J19 and motherboard microSD sockets are
 removed.
 
-J4 intentionally omits debugger reset. The WeAct module's onboard reset button
-controls the RP2350. All four 74HC595 `~SRCLR` pins are tied to `+3V3`, so a
-processor reset does not clear their shift registers; firmware must shift and
-latch a safe output word after reset, while machine-safe output blocking remains
-external.
-
 ## Field-connector standardization
 
 The board-side field-connector family uses the existing Phoenix `MCV 1,5`
@@ -83,7 +76,7 @@ The former larger field connectors are converted as follows:
 The former 2x10 expansion-input connector J37 is removed. U8 carries PLC
 inputs 1-8 and U9 carries PLC inputs 9-16. U6/U7 carry paired servo
 ZERO/ERROR inputs.
-SD, LCD, SWD, ESP and other logic-level headers remain purpose-specific
+SD, LCD, ESP and other logic-level headers remain purpose-specific
 and are excluded from the field-terminal inventory.
 
 The encoder A/B/Z inputs require 5 V push-pull outputs. They drive

@@ -82,8 +82,9 @@ provided by the WeAct board.
 The repeated low-power and digital-output resistors use isolated four-element
 arrays:
 
-- RN41: 10 k state definitions for the shared shift-register controls.
-- RN42/RN43: 10 k microSD pull-ups; RN43 has two spare elements.
+- RN41: 10 k state definitions for the shared shift-register controls. It is
+  marked DNP pending a final keep/remove review.
+- RN42/RN43: 10 k microSD pull-ups; RN42 has two spare elements.
 - RN44: four isolated 22 ohm microSD series resistors for CS, MOSI, SCK and
   MISO.
 - RN8-RN13 and RN30/RN31: 10 k pull-downs for output-register states.

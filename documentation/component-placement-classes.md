@@ -43,6 +43,7 @@ passives, connectors and the controller module. Mounting holes remain fixed.
 | Safety input optocoupler | Place the TLP291 SOP-4 close to the J5 field chain and discrete pull-up |
 | PLC pull-up | Place one 4x10 k network per four TLP291-4 collector outputs on the logic side |
 | Shift-register decoupling | C22-C29 sit immediately right of their respective U6-U13 VCC pins; ground via on the outer pad |
+| Shift-control state definitions | RN41 is reserved but marked DNP pending a keep/remove review |
 | Motion output array | Group source and pulldowns; keep U42/U43 between U10-U13 and J10/J11/J28-J30/J46/J47 |
 | ULN output | Group both ULN banks, clamp rail, existing indicator chains, J12 and J32 |
 | Encoder channel | Keep U28 between J13-J15 and the MCU; keep R110/R111 at J15 for the ENC2_Z divider |
@@ -134,7 +135,7 @@ the former storage corridor:
 - RN44 is the isolated four-element 22 ohm series array for the SCK, MOSI,
   MISO and CS pins. JP5 is the open two-pad card-detect solder jumper.
 - RN42 and RN43 provide the six required 10 k pull-ups, with two spare
-  elements on RN43.
+  elements on RN42.
 - FB2, C68 and C67 form the `+3V3` to `+3V3_SD` filter and local reservoir
   beside the connector power pin.
 

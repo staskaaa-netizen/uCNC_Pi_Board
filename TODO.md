@@ -1,5 +1,11 @@
 # LeanCam motherboard follow-up work
 
+## Pending assembly decision
+
+- Recheck RN41, the 4x10k state-definition network on the shared shift-register
+  controls, and decide whether to keep or remove it. It is currently marked DNP;
+  its footprint and connectivity remain reserved.
+
 ## Component placement, one element at a time
 
 - Component classification is complete in

@@ -383,6 +383,17 @@ def main() -> None:
             failures.append(
                 f"RN41 pin {pin} is not connected to {expected_net}"
             )
+    rn41 = components_by_ref.get("RN41")
+    rn41_assembly = next(
+        (
+            prop.get("value", "")
+            for prop in rn41.findall("property")
+            if prop.get("name") == "Assembly"
+        ),
+        "",
+    ) if rn41 is not None else ""
+    if rn41_assembly != "DNP":
+        failures.append("RN41 must remain marked DNP pending review")
     connector_values = set(component_values.values())
     for required in ("Dedicated E-stop loop",):
         if required not in connector_values:
@@ -519,17 +530,17 @@ def main() -> None:
         if reference in references:
             failures.append(f"Discrete SD pull-up {reference} remains")
     sd_pullup_contract = {
-        "1": "SD_CS_N", "8": "+3V3_SD",
-        "2": "SD_MOSI", "7": "+3V3_SD",
-        "3": "SD_MISO", "6": "+3V3_SD",
-        "4": "SD_CD", "5": "+3V3_SD",
+        "1": "SD_DAT1", "8": "+3V3_SD",
+        "2": "SD_CD", "7": "+3V3_SD",
     }
     for pin, expected_net in sd_pullup_contract.items():
         if ("RN42", pin) not in nets.get(expected_net, set()):
             failures.append(f"RN42 pin {pin} is not connected to {expected_net}")
     sd_data_pullup_contract = {
-        "1": "SD_DAT1", "8": "+3V3_SD",
-        "2": "SD_DAT2", "7": "+3V3_SD",
+        "1": "SD_DAT2", "8": "+3V3_SD",
+        "2": "SD_CS_N", "7": "+3V3_SD",
+        "3": "SD_MOSI", "6": "+3V3_SD",
+        "4": "SD_MISO", "5": "+3V3_SD",
     }
     for pin, expected_net in sd_data_pullup_contract.items():
         if ("RN43", pin) not in nets.get(expected_net, set()):
@@ -904,7 +915,7 @@ def main() -> None:
         *(f"R{index}" for index in range(132, 148)),
         *(f"R{index}" for index in range(148, 165)),
         "J6", "J19", "J26", "J31", "J34", "J35", "J37", "J38", "J39",
-        "J44", "J51", "R131",
+        "J4", "J44", "J51", "R131",
         "JP2", "JP3", "JP4",
         "R17", "R50", "R51", "R52", "R53", "R75", "R108", "R109",
         *(f"R{index}" for index in range(44, 50)),

@@ -816,13 +816,7 @@ def add_mcu(builder: SheetBuilder) -> None:
     b.next_ref("SW")  # retired reset button SW1
     b.next_ref("C")   # retired reset capacitor C21
 
-    b.header(
-        1,
-        4,
-        {"1": "+3V3", "2": None, "3": None, "4": "GND"},
-        (65, 155),
-        "SWD",
-    )
+    b.next_ref("J")  # retired SWD connector J4
     # Use the WeAct board's onboard status LED so GPIO46 is available for the
     # fourth 0-10 V output. Reserve the old references to keep numbering stable.
     b.next_ref("D")  # removed external status LED D8
@@ -902,6 +896,7 @@ def add_mcu(builder: SheetBuilder) -> None:
             ("SR_LATCH", "GND"),
         ],
         (40, 225),
+        dnp=True,
         reference="RN41",
     )
 
@@ -1468,10 +1463,10 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
         "10k",
         "R_Array_4x0603",
         [
-            ("SD_CS_N", "+3V3_SD"),
-            ("SD_MOSI", "+3V3_SD"),
-            ("SD_MISO", "+3V3_SD"),
+            ("SD_DAT1", "+3V3_SD"),
             ("SD_CD", "+3V3_SD"),
+            (None, None),
+            (None, None),
         ],
         (100, 145),
         reference="RN42",
@@ -1480,10 +1475,10 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
         "10k",
         "R_Array_4x0603",
         [
-            ("SD_DAT1", "+3V3_SD"),
             ("SD_DAT2", "+3V3_SD"),
-            (None, None),
-            (None, None),
+            ("SD_CS_N", "+3V3_SD"),
+            ("SD_MOSI", "+3V3_SD"),
+            ("SD_MISO", "+3V3_SD"),
         ],
         (125, 145),
         reference="RN43",

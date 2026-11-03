@@ -10,7 +10,6 @@ Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 6,"0-10 V outputs 0-3; pin 1 = common GND | Encoder 0: +5,A,B,Z,GND | Encoder 1: +5,A,B,Z,GND | Encoder 2: +5,A,B,Z,GND | GND/AI0/AI1/AI2/AI3 | I2C0: SDA, SCL, 3.3 V, 5 V, GND","Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
 4,General outputs 0-7 | General outputs 8-15 | PLC positions 1-8 signals | PLC positions 9-16 signals,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
 1,"LCD LVDS 2x10, 2.00 mm",Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,"LCD LVDS 2x10, 2.00 mm",FIT,J22
-1,SWD,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,generic,SWD,FIT,J4
 1,Open-Smart TF Card Breakout,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,generic,Open-Smart TF Card Breakout,FIT,J36
 1,ESP-01/ESP-01S socket,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,Wurth Elektronik,61300821121,FIT,J20
 1,SMAJ5.0A,Diode_SMD:D_SMA,Bourns,SMAJ5.0A,FIT,D53
@@ -45,6 +44,7 @@ Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 6,33k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 1% 33k,FIT,R63 R66 R69 R70 R72 R183
 1,4.7k,Resistor_SMD:R_1206_3216Metric,Yageo,RC1206FR-07 4K7L,FIT,R74
 1,4x22R,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-07 series 1%,FIT,RN44
-16,4x10k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-0710KL,FIT,RN8 RN9 RN10 RN11 RN12 RN13 RN30 RN31 RN32 RN33 RN34 RN35 RN36 RN41 RN42 RN43
+1,4x10k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-0710KL,DNP,RN41
+15,4x10k,Resistor_SMD:R_Array_Convex_4x0603,Yageo,YC164-FR-0710KL,FIT,RN8 RN9 RN10 RN11 RN12 RN13 RN30 RN31 RN32 RN33 RN34 RN35 RN36 RN42 RN43
 4,4x1k,Resistor_SMD:R_Array_Convex_4x1206,Yageo,YC324-FR-07 series 1%,FIT,RN37 RN38 RN39 RN40
 2,4x330R,Resistor_SMD:R_Array_Convex_4x1206,Yageo,YC324-FR-07330RL,FIT,RN26 RN27

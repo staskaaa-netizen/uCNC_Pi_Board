@@ -77,7 +77,6 @@ Firmware must debounce the sampled contact.
 |---|---|
 | J1 | 24 V DC power input |
 | J2 | Backlight/CCFL isolated supply: `+12V_BL`, `ISO_GND` |
-| J4 | Physical 1x4 header; debug data pins unconnected |
 | J5 | Dedicated E-stop loop |
 | J7, J8 | 16 isolated PLC input signals |
 | J10, J11, J28, J29, J30, J46, J47 | Seven 3-pin axis outputs: grouped EN, STEP, DIR |
@@ -131,8 +130,8 @@ supply and the two TBD62083AFG ratings.
 
 | Metric | Value |
 |---|---:|
-| PCB footprints | 276 |
-| Physical BOM components | 271 |
+| PCB footprints | 275 |
+| Physical BOM components | 270 |
 | Routed vias | 112 |
 | Minimum configured track width | 0.12 mm |
 | Minimum drill | 0.30 mm |

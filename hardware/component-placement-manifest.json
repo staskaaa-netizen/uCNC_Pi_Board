@@ -1,6 +1,6 @@
 {
   "summary": {
-    "components": 272,
+    "components": 271,
     "by_role": {
       "ADC filter capacitor": 4,
       "IC": 28,
@@ -10,7 +10,7 @@
       "bulk input capacitor": 5,
       "bulk output capacitor": 8,
       "bulk rail capacitor": 1,
-      "connector": 33,
+      "connector": 32,
       "decoupling capacitor": 22,
       "diode": 21,
       "divider lower resistor": 4,
@@ -34,7 +34,7 @@
       "AHCT595 output chain": 4,
       "ESP-01/ESP-01S interface": 5,
       "LCD LVDS display": 2,
-      "MCU and shift-chain support": 11,
+      "MCU and shift-chain support": 10,
       "SD interface": 5,
       "ULN output connector": 1,
       "analog input 0": 3,
@@ -78,21 +78,7 @@
       "storage/UI support": 6,
       "storage/wireless connector": 1
     },
-    "parked": [
-      "C76",
-      "D1",
-      "J4",
-      "D53",
-      "F2",
-      "C67",
-      "C68",
-      "FB2",
-      "JP5",
-      "SW2",
-      "C118",
-      "R182",
-      "R183"
-    ]
+    "parked": []
   },
   "components": [
     {
@@ -264,10 +250,10 @@
       "role": "decoupling capacitor",
       "associated_ic_or_net": "U2 input",
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 177.292,
-      "y_mm": 54.102,
+      "x_mm": 148.844,
+      "y_mm": 65.024,
       "dnp": false,
       "nets": "+5V; GND"
     },
@@ -456,10 +442,10 @@
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
       "placement_rule": "place in functional block; keep GND return short",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 213.614,
-      "y_mm": 18.288,
+      "x_mm": 114.3,
+      "y_mm": 8.89,
       "dnp": false,
       "nets": "GND; VIN_FUSED"
     },
@@ -538,8 +524,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 117.094,
-      "y_mm": 7.112,
+      "x_mm": 114.554,
+      "y_mm": 3.302,
       "dnp": false,
       "nets": "VIN_FUSED; VIN_RAW"
     },
@@ -570,7 +556,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 109.428,
+      "x_mm": 106.38,
       "y_mm": 6.215,
       "dnp": false,
       "nets": "GND; VIN_RAW"
@@ -714,8 +700,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 127.762,
-      "y_mm": 37.084,
+      "x_mm": 125.476,
+      "y_mm": 35.814,
       "dnp": false,
       "nets": "+3V3; PWR_GOOD_N"
     },
@@ -944,22 +930,6 @@
       "nets": "+5V; GND"
     },
     {
-      "reference": "J4",
-      "value": "SWD",
-      "sheet": "MCU, shift chains and safety",
-      "functional_block": "MCU and shift-chain support",
-      "channels": "",
-      "role": "connector",
-      "associated_ic_or_net": "external or board-level connection",
-      "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "parked",
-      "side": "F.Cu",
-      "x_mm": 207.01,
-      "y_mm": 69.596,
-      "dnp": false,
-      "nets": "+3V3; GND"
-    },
-    {
       "reference": "MOD1",
       "value": "WeAct RP2350B Core Board (socketed)",
       "sheet": "MCU, shift chains and safety",
@@ -1002,9 +972,9 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 92.71,
-      "y_mm": 73.152,
-      "dnp": false,
+      "x_mm": 92.456,
+      "y_mm": 77.47,
+      "dnp": true,
       "nets": "+3V3; GND; SR_LATCH; SR_OUT_SER; SR_PL_N; SR_SCK"
     },
     {
@@ -2698,7 +2668,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 13.328,
+      "x_mm": 14.089,
       "y_mm": 96.085,
       "dnp": false,
       "nets": "AX4_ERROR_N; AX4_ZERO; GND"
@@ -2714,7 +2684,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 13.582,
+      "x_mm": 14.089,
       "y_mm": 82.877,
       "dnp": false,
       "nets": "AX5_ERROR_N; AX5_ZERO; GND"
@@ -2730,7 +2700,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 13.561,
+      "x_mm": 14.089,
       "y_mm": 69.398,
       "dnp": false,
       "nets": "AX6_ERROR_N; AX6_ZERO; GND"
@@ -3320,10 +3290,10 @@
       "role": "diode",
       "associated_ic_or_net": "protection/clamp/rectification",
       "placement_rule": "place between connector and buffer; keep A/B/Z channel grouping",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 172.974,
-      "y_mm": 68.834,
+      "x_mm": 92.71,
+      "y_mm": 105.156,
       "dnp": false,
       "nets": "+5V_ENC; GND"
     },
@@ -3336,10 +3306,10 @@
       "role": "fuse",
       "associated_ic_or_net": "input/load protection",
       "placement_rule": "place between connector and buffer; keep A/B/Z channel grouping",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 164.338,
-      "y_mm": 69.596,
+      "x_mm": 96.266,
+      "y_mm": 105.664,
       "dnp": false,
       "nets": "+5V; +5V_ENC"
     },
@@ -3402,8 +3372,8 @@
       "placement_rule": "place between connector and buffer; keep A/B/Z channel grouping",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 137.16,
-      "y_mm": 104.14,
+      "x_mm": 136.906,
+      "y_mm": 108.204,
       "dnp": false,
       "nets": "ENC2_Z_3V3; ENC2_Z_5V"
     },
@@ -3418,8 +3388,8 @@
       "placement_rule": "place between connector and buffer; keep A/B/Z channel grouping",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 137.16,
-      "y_mm": 101.346,
+      "x_mm": 136.906,
+      "y_mm": 105.41,
       "dnp": false,
       "nets": "ENC2_Z_3V3; GND"
     },
@@ -3496,10 +3466,10 @@
       "role": "bulk rail capacitor",
       "associated_ic_or_net": "SD +3V3_SD",
       "placement_rule": "place at regulator/load entry; preserve short power loop",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 247.396,
-      "y_mm": 38.862,
+      "x_mm": 145.542,
+      "y_mm": 78.994,
       "dnp": false,
       "nets": "+3V3_SD; GND"
     },
@@ -3512,10 +3482,10 @@
       "role": "decoupling capacitor",
       "associated_ic_or_net": "SD +3V3_SD",
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 245.872,
-      "y_mm": 45.466,
+      "x_mm": 145.034,
+      "y_mm": 76.454,
       "dnp": false,
       "nets": "+3V3_SD; GND"
     },
@@ -3592,10 +3562,10 @@
       "role": "ferrite bead",
       "associated_ic_or_net": "rail filtering",
       "placement_rule": "place with functional block; review after placement",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 236.22,
-      "y_mm": 68.834,
+      "x_mm": 144.272,
+      "y_mm": 72.644,
       "dnp": false,
       "nets": "+3V3; +3V3_SD"
     },
@@ -3656,10 +3626,10 @@
       "role": "solder jumper",
       "associated_ic_or_net": "configuration or isolation link",
       "placement_rule": "place with functional block; review after placement",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 236.982,
-      "y_mm": 59.182,
+      "x_mm": 137.16,
+      "y_mm": 101.092,
       "dnp": false,
       "nets": "SD_CD; SD_CD_MCU"
     },
@@ -3675,7 +3645,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 131.318,
-      "y_mm": 7.555,
+      "y_mm": 7.874,
       "dnp": false,
       "nets": "+3V3_WIFI; WIFI_EN; WIFI_GPIO0; WIFI_GPIO2; WIFI_RST"
     },
@@ -3690,10 +3660,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "B.Cu",
-      "x_mm": 137.414,
-      "y_mm": 96.266,
+      "x_mm": 136.906,
+      "y_mm": 97.536,
       "dnp": false,
-      "nets": "+3V3_SD; SD_CD; SD_CS_N; SD_MISO; SD_MOSI"
+      "nets": "+3V3_SD; SD_CD; SD_DAT1"
     },
     {
       "reference": "RN43",
@@ -3706,10 +3676,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "B.Cu",
-      "x_mm": 148.59,
-      "y_mm": 90.17,
+      "x_mm": 136.906,
+      "y_mm": 91.186,
       "dnp": false,
-      "nets": "+3V3_SD; SD_DAT1; SD_DAT2"
+      "nets": "+3V3_SD; SD_CS_N; SD_DAT2; SD_MISO; SD_MOSI"
     },
     {
       "reference": "RN44",
@@ -3721,9 +3691,9 @@
       "associated_ic_or_net": "isolated multi-channel passive network",
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
-      "side": "B.Cu",
-      "x_mm": 126.746,
-      "y_mm": 81.788,
+      "side": "F.Cu",
+      "x_mm": 140.462,
+      "y_mm": 73.406,
       "dnp": false,
       "nets": "SD_CS_MCU; SD_CS_N; SD_MISO; SD_MISO_MCU; SD_MOSI; SD_MOSI_MCU; SD_SCK; SD_SCK_MCU"
     },
@@ -3736,10 +3706,10 @@
       "role": "switch",
       "associated_ic_or_net": "user control",
       "placement_rule": "place in functional block; keep GND return short",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 237.438,
-      "y_mm": 29.682,
+      "x_mm": 119.94,
+      "y_mm": 2.322,
       "dnp": false,
       "nets": "GND; WIFI_GPIO0"
     },
@@ -3771,7 +3741,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.624,
-      "y_mm": 59.062,
+      "y_mm": 58.554,
       "dnp": false,
       "nets": "AI0_ADC; GND"
     },
@@ -3787,7 +3757,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.748,
-      "y_mm": 52.07,
+      "y_mm": 53.594,
       "dnp": false,
       "nets": "AI1_ADC; GND"
     },
@@ -3803,7 +3773,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 142.748,
-      "y_mm": 45.212,
+      "y_mm": 48.768,
       "dnp": false,
       "nets": "AI2_ADC; GND"
     },
@@ -3978,8 +3948,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 149.817,
-      "y_mm": 30.485,
+      "x_mm": 149.606,
+      "y_mm": 30.226,
       "dnp": false,
       "nets": "+12V_AO; GND"
     },
@@ -3992,10 +3962,10 @@
       "role": "ADC filter capacitor",
       "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
       "placement_rule": "place beside J24 with its channel divider; keep the high-impedance branch short",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 236.0,
-      "y_mm": 12.0,
+      "x_mm": 142.748,
+      "y_mm": 43.942,
       "dnp": false,
       "nets": "AI3_ADC; GND"
     },
@@ -4010,7 +3980,7 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 155.583,
+      "x_mm": 155.837,
       "y_mm": 57.529,
       "dnp": false,
       "nets": "AI0; AI1; AI2; AI3; GND"
@@ -4043,7 +4013,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
-      "y_mm": 58.928,
+      "y_mm": 58.42,
       "dnp": false,
       "nets": "AI0; AI0_ADC"
     },
@@ -4059,7 +4029,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
-      "y_mm": 58.928,
+      "y_mm": 58.42,
       "dnp": false,
       "nets": "AI0_ADC; GND"
     },
@@ -4075,7 +4045,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
-      "y_mm": 52.07,
+      "y_mm": 53.594,
       "dnp": false,
       "nets": "AI1; AI1_ADC"
     },
@@ -4091,7 +4061,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
-      "y_mm": 52.07,
+      "y_mm": 53.594,
       "dnp": false,
       "nets": "AI1_ADC; GND"
     },
@@ -4107,7 +4077,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 148.844,
-      "y_mm": 45.212,
+      "y_mm": 48.768,
       "dnp": false,
       "nets": "AI2; AI2_ADC"
     },
@@ -4123,7 +4093,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 145.796,
-      "y_mm": 45.212,
+      "y_mm": 48.768,
       "dnp": false,
       "nets": "AI2_ADC; GND"
     },
@@ -4392,10 +4362,10 @@
       "role": "divider upper resistor",
       "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 220.0,
-      "y_mm": 12.0,
+      "x_mm": 148.844,
+      "y_mm": 43.942,
       "dnp": false,
       "nets": "AI3; AI3_ADC"
     },
@@ -4408,10 +4378,10 @@
       "role": "divider lower resistor",
       "associated_ic_or_net": "AI3_ADC / MOD1 pin 21",
       "placement_rule": "group divider/filter beside J24; keep the ADC branch compact and away from switching nodes",
-      "current_status": "parked",
+      "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 228.0,
-      "y_mm": 12.0,
+      "x_mm": 145.796,
+      "y_mm": 43.942,
       "dnp": false,
       "nets": "AI3_ADC; GND"
     },

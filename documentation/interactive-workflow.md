@@ -1633,3 +1633,25 @@ Checkpoint 105 reverses the level-shifter-to-MCU channel order:
 - `ENC2_Z_3V3` remains on MOD1 pin 30 through R110/R111.
 - Encoder connector pin assignments are intentionally unchanged until their
   final naming pass.
+
+Checkpoint 106 orders the SD pull-up arrays by physical destination position:
+
+- RN43 pins 1-4 carry `DAT2, CS, MOSI, MISO`.
+- RN42 pins 1-2 carry `DAT1, CD`; pins 3-4 are spare.
+- The signal order is globally monotonic across both arrays toward J36, so no
+  RN43 via fan-out crosses the RN42 via fan-out.
+
+Checkpoint 107 removes the debug connector:
+
+- J4 and its four-pad 2.54 mm header are removed from the schematic, netlist,
+  PCB and BOM.
+- The WeAct module's onboard reset button and debug pads remain available.
+- No routed copper was attached to J4; all other placement and routing is
+  preserved.
+
+Checkpoint 108 marks the remaining assembly decision:
+
+- RN41, the 4x10k state-definition network for `SR_SCK`, `SR_PL_N`,
+  `SR_OUT_SER` and `SR_LATCH`, remains placed and connected.
+- RN41 is marked DNP in the schematic, PCB and BOM pending a final keep/remove
+  review.
