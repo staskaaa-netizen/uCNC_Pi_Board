@@ -1,8 +1,23 @@
-# Release checklist
+# Release and validation checklist
 
-## Before fabrication
+## Prototype manufacturing order
 
-- Review or clean the remaining silkscreen warnings.
+The current PCB fabrication and SMT assembly packages are ready to send. The
+remaining six silkscreen warnings are accepted as non-blocking for the
+prototype: two microSD outline/edge conflicts, two microSD outline/pad
+conflicts and two dense LVDS legend text-height warnings.
+
+- [x] Generate the BOM, CPL, Gerbers, drills, PDFs and 3D renders from the
+  current committed board.
+- [x] Confirm 235 SMT BOM and CPL references match.
+- [x] Run final DRC with zero errors and zero unconnected items.
+- [x] Inspect both 3D sides and the manufacturing views.
+
+## Post-build validation and production hardening
+
+These checks apply after the prototype arrives and before production or
+machine integration:
+
 - Recheck the isolated field creepage and clearance against the intended
   enclosure and pollution degree.
 - Confirm the target LCD cable, panel lane polarity and 330 ohm series value.
@@ -28,8 +43,7 @@
 
 ## Manufacturing release
 
-- Run and archive final ERC and DRC after any further copper or placement edit.
-- Regenerate the BOM, placement manifest, layer PDFs and 3D renders.
-- Inspect both 3D sides and the fabrication outputs before placing an order.
+- Rerun and archive ERC and DRC after any further copper or placement edit.
+- Regenerate every dependent manufacturing artifact after any board change.
 - Keep the board marked as a prototype until the external hard-wired safety
   circuit and machine integration have been validated.

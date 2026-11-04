@@ -1,11 +1,12 @@
-# uCNC RP2350B Motherboard - PRE-FINAL
+# uCNC RP2350B Motherboard - MANUFACTURING-READY PROTOTYPE
 
 KiCad 10 carrier for a socketed WeAct Studio RP2350B Core Board. The board
 provides isolated machine I/O, motion and encoder interfaces, LCD power,
 storage, optional Wi-Fi and analog I/O on a 160 mm x 120 mm two-layer PCB.
 
-**Status: PRE-FINAL.** The circuit and pin mapping are complete. Resolve the
-recorded copper-clearance DRC findings before fabrication.
+**Status: MANUFACTURING PACKAGE READY.** The circuit, pin mapping, PCB and
+manufacturing archives are complete. The PCB fabrication and SMT assembly ZIPs
+are generated from the current board and ready to send.
 
 ## Board features
 
@@ -80,6 +81,7 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Mechanical notes](documentation/mechanical.md)
 - [Assembly notes](documentation/assembly-options.md)
 - [Release checklist](TODO.md)
+- [Design-process retrospective and next-time playbook](documentation/design-process-retrospective.md)
 
 ## Manufacturing review files
 
@@ -87,8 +89,8 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
-- [Current top 3D render](manufacturing/board-3d-top-d83b2033.png)
-- [Current bottom 3D render](manufacturing/board-3d-bottom-d83b2033.png)
+- [Current top 3D render](manufacturing/board-3d-top-058f7cbe.png)
+- [Current bottom 3D render](manufacturing/board-3d-bottom-058f7cbe.png)
 - [Connector label orientation check](manufacturing/connector-label-check.png)
 - [Complete grouped BOM](manufacturing/bom.csv)
 - [SMT-only grouped BOM](manufacturing/bom-smt.csv)
@@ -100,10 +102,11 @@ placement and routing. Do not run a full PCB regeneration over that file.
 
 The current netlist contains 281 schematic components in 320 nets. The PCB has
 275 footprints, 2,276 routed track segments and 187 vias. DRC reports zero
-unconnected items and zero error-severity findings. The remaining 172 warnings
-are silkscreen clearance, mask clipping and text-height checks. ERC has no
-electrical errors and 35 library-symbol cache warnings.
+unconnected items and zero error-severity findings. Six non-field silkscreen
+warnings remain: two microSD outline/edge conflicts, two microSD outline/pad
+conflicts and two dense LVDS legend text-height warnings. ERC has no electrical
+errors and 35 library-symbol cache warnings.
 
-This is a routed prototype. It is not a fabrication release and is not a
-safety-rated controller. Hazardous energy removal must remain an independent
-hard-wired safety function.
+This is a routed prototype manufacturing package. It is not a safety-rated
+controller. Hazardous energy removal must remain an independent hard-wired
+safety function and must be validated in the complete machine.
