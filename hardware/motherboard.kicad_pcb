@@ -30561,7 +30561,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C116"
-			(at -1.651 -2.794 0)
+			(at -0.635 -2.794 0)
 			(layer "F.SilkS")
 			(uuid "0ac33b97-5ea2-4970-ae88-5cab155201f8")
 			(effects
@@ -40914,7 +40914,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf)")
 		(tags "SOIC SO")
 		(property "Reference" "U42"
-			(at 0 -7.35 90)
+			(at -6.604 -0.127 180)
 			(layer "F.SilkS")
 			(uuid "7f006bd7-3a5e-4b3b-b0a3-06c226f75b3c")
 			(effects
@@ -42433,6 +42433,7 @@
 		(property "Value" "GND ERR2 Z2"
 			(at -0.5815 11.8035 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1bb08fb1-ab0b-49b5-96dd-d2ecc30c96a8")
 			(effects
 				(font
@@ -51302,7 +51303,7 @@
 			)
 		)
 		(property "Value" "GND ERR3 Z3"
-			(at 0.198 4.073 90)
+			(at 4.318 4.073 90)
 			(layer "F.SilkS")
 			(uuid "555cb710-e59a-4b00-acce-03f2c7de6cf7")
 			(effects
@@ -66996,7 +66997,7 @@
 		(descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf)")
 		(tags "SOIC SO")
 		(property "Reference" "U43"
-			(at -0.254 -5.461 90)
+			(at -6.604 -0.127 180)
 			(layer "F.SilkS")
 			(uuid "3f7345e3-add2-4101-aea8-11759d2aebc9")
 			(effects
@@ -73000,6 +73001,17 @@
 				(thickness 0.16)
 			)
 			(justify left)
+		)
+	)
+	(gr_text "GND ERR2 Z2"
+		(at 19.05 45.466 90)
+		(layer "F.SilkS")
+		(uuid "27028d98-0dd3-4b32-b77a-5b16fc7149b4")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
 		)
 	)
 	(gr_text "J22 LVDS"
