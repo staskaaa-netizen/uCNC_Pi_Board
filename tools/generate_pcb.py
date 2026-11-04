@@ -15,6 +15,11 @@ from pathlib import Path
 import pcbnew
 
 from configure_netclasses import configure_netclasses
+from place_led_references import place_led_references
+from place_silkscreen_fields import (
+    place_silkscreen_fields,
+    promote_fab_references,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -999,8 +1004,8 @@ def build_board() -> None:
         stub.SetNet(net_map["GND"])
         board.Add(stub)
 
-    # Keep silkscreen readable on the dense board by moving small passive and
-    # active references to the fabrication layer.
+    # Start dense references on the fabrication layer while placing the board.
+    # They are promoted to silkscreen and collision-checked after final layout.
     for component in components:
         fp = footprints[component.reference]
         if component.reference.startswith(("R", "C", "D", "L", "Q", "U", "RN", "FB", "J")):
@@ -1030,6 +1035,9 @@ def build_board() -> None:
     update_field_connector_silkscreen(board)
     set_visible_connector_values(board)
     promote_connector_labels(board)
+    place_led_references(board)
+    promote_fab_references(board)
+    place_silkscreen_fields(board)
     fix_component_3d_models(board)
     board.BuildConnectivity()
 

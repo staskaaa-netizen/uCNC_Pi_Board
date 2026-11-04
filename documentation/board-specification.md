@@ -85,6 +85,14 @@ The visible PCB labels follow the rotated connector geometry and read
 `DIRn STPn ENx`; electrically, pin 1 remains the enable, pin 2 STEP and pin 3
 DIR.
 
+All 275 component reference designators are visible on silkscreen and placed
+outside exposed pads, vias and existing silkscreen features. Each reference is
+first attempted at the component center; small passives whose 0.8 mm reference
+cannot fit legally inside the body receive the nearest clear adjacent position.
+All 309 visible footprint reference/value fields use a uniform 0.8 mm text size
+and 0.12 mm stroke. Functional LED values such as `D01-D16` remain
+documentation-only on `F.Fab`.
+
 The 3.3 V 74AHCT595 outputs drive two TC74AC541F buffers powered from 5 V.
 The buffers provide the 5 V STEP, DIR and enable outputs.
 
@@ -158,10 +166,17 @@ Current KiCad 10 checks:
 
 - Schematic: 281 components and 320 nets, with no connectivity failures.
 - PCB: 275 footprints, 2,276 routed track segments and 187 vias.
-- DRC: zero errors and zero unconnected items; 179 silkscreen warnings remain.
-- Warning classes: silkscreen over mask, silkscreen clearance, text height and
-  board-edge clipping.
+- DRC: zero errors and zero unconnected items; six non-field silkscreen
+  warnings remain.
+- The 108 reference/value-field warnings were cleared by moving 57
+  DRC-confirmed fields to nearby clear silkscreen positions.
+- A further 130 references were promoted from `F.Fab`; all 275 component
+  references are now visible without introducing new DRC warnings.
+- Remaining warnings are two small LVDS row legends below the configured text
+  height, two J54 outline segments clipped by the board edge and two J54
+  outline segments over GND pads.
 - ERC: no electrical errors; 35 library-symbol cache warnings.
 
-The board is electrically complete. Review or accept the remaining silkscreen
-warnings before fabrication.
+The board is electrically complete. The remaining warnings concern the
+library-provided microSD outline and the dense LVDS row legends; they do not
+concern component reference/value readability.

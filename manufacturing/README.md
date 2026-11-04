@@ -18,7 +18,12 @@ It includes every footprint whose pads are exclusively SMD and excludes:
 `JP5` is a solder-jumper PCB feature with no part to place and is intentionally
 omitted. Power-flag symbols are logical-only and have no physical footprint.
 Connector designators and function labels are printed on `F.Silkscreen`; the
-J22 LVDS pinout uses its dedicated row legends.
+J22 LVDS pinout uses its dedicated row legends. All visible reference and value
+fields are placed clear of pads, vias and other silkscreen features. All 275
+component references are visible; center placement is preferred, with a nearby
+clear fallback for small passives where a legal 0.8 mm label cannot fit inside
+the body. All 309 visible reference/value fields use 0.8 mm text and a 0.12 mm
+stroke. LED functional channel values remain on `F.Fab`.
 
 All currently eligible SMT parts are on side F. Manufacturer and MPN fields
 are complete, but this repository does not contain LCSC part numbers. A direct
