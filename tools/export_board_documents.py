@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import re
 import shutil
@@ -370,6 +371,7 @@ def main() -> None:
     args = parser.parse_args()
 
     kicad_cli = find_kicad_cli(args.kicad_cli)
+    revision = hashlib.sha256(args.board.read_bytes()).hexdigest()[:8]
     args.output_dir.mkdir(parents=True, exist_ok=True)
     build_root = ROOT / "tmp"
     build_root.mkdir(parents=True, exist_ok=True)
@@ -409,6 +411,8 @@ def main() -> None:
         output_bottom = args.output_dir / "board-3d-bottom.png"
         current_top = args.output_dir / "board-3d-top-current.png"
         current_bottom = args.output_dir / "board-3d-bottom-current.png"
+        revision_top = args.output_dir / f"board-3d-top-{revision}.png"
+        revision_bottom = args.output_dir / f"board-3d-bottom-{revision}.png"
         if args.reuse_3d and cached_top.exists() and cached_bottom.exists():
             top_image = cached_top
             bottom_image = cached_bottom
@@ -424,6 +428,8 @@ def main() -> None:
         if top_image.exists() and bottom_image.exists():
             shutil.copyfile(top_image, current_top)
             shutil.copyfile(bottom_image, current_bottom)
+            shutil.copyfile(top_image, revision_top)
+            shutil.copyfile(bottom_image, revision_bottom)
             create_review_pdf(
                 review_pdf,
                 front_pdf,
@@ -442,6 +448,8 @@ def main() -> None:
             output_bottom,
             current_top,
             current_bottom,
+            revision_top,
+            revision_bottom,
         ):
             if path.exists():
                 print(f"{path.relative_to(ROOT)}: {path.stat().st_size} bytes")

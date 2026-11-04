@@ -5,8 +5,8 @@ Generated review documents:
 - [Combined board review](../manufacturing/board-review.pdf)
 - [Front artwork and assembly layer](../manufacturing/board-front.pdf)
 - [Mirrored rear artwork](../manufacturing/board-back.pdf)
-- [Current top 3D render](../manufacturing/board-3d-top-current.png)
-- [Current bottom 3D render](../manufacturing/board-3d-bottom-current.png)
+- [Current top 3D render](../manufacturing/board-3d-top-08088925.png)
+- [Current bottom 3D render](../manufacturing/board-3d-bottom-08088925.png)
 
 ## Board summary
 
