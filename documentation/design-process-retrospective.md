@@ -163,7 +163,7 @@ that is checked into Git and is ready to send:
 
 - `uCNC_Pi_Board_PCB_Fabrication.zip` for bare PCB fabrication
 - `uCNC_Pi_Board_SMT_Assembly.zip` for PCB fabrication plus SMT assembly
-- 270 physical BOM items in 49 purchasing groups
+- 270 physical BOM items in 51 purchasing groups
 - 235 matched SMT BOM and CPL references
 - 275 visible PCB references
 - two copper layers and a nominal 160 x 120 mm outline

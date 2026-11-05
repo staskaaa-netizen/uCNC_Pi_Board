@@ -95,6 +95,8 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Complete grouped BOM](manufacturing/bom.csv)
 - [SMT-only grouped BOM](manufacturing/bom-smt.csv)
 - [SMT-only reference BOM](manufacturing/bom-smt-refs.csv)
+- [JLCPCB-format grouped BOM](manufacturing/bom-jlcpcb.csv)
+- [Pick-and-place CPL](manufacturing/cpl-jlcpcb.csv)
 - [PCB fabrication ZIP](manufacturing/uCNC_Pi_Board_PCB_Fabrication.zip)
 - [PCB fabrication + SMT assembly ZIP](manufacturing/uCNC_Pi_Board_SMT_Assembly.zip)
 

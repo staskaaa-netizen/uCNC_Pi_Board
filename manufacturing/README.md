@@ -3,10 +3,18 @@
 ## BOMs
 
 - `bom.csv`: complete grouped BOM for the current design, covering all
-  270 physical sourced parts in 49 lines.
-- `bom-smt.csv`: SMT-only grouped BOM, covering 235 SMD footprints in 39
+  270 physical sourced parts in 51 lines.
+- `bom-smt.csv`: SMT-only grouped BOM, covering 235 SMD footprints in 41
   lines. It includes the PCB side for each group.
 - `bom-smt-refs.csv`: the same 235 SMT parts in one-row-per-reference format.
+- `bom-jlcpcb.csv`: grouped SMT BOM using the columns `Comment`, `Designator`,
+  `Footprint` and `JLCPCB Part #`.
+- `cpl.csv`: complete placement list using the assembly house's explicit
+  KiCad field names.
+- `cpl-jlcpcb.csv`: one row per SMT reference using `Designator`, `Mid X`,
+  `Mid Y`, `Layer` and `Rotation`.
+- `jlcpcb-report.json`: BOM/CPL cross-check result, coordinate origin and
+  missing JLCPCB part-number count.
 - `bom-report.json`: generation counts and the complete non-SMT exclusion list.
 
 The SMT BOM was generated from actual PCB pad types, not only footprint names.
@@ -26,9 +34,10 @@ the body. All 309 visible reference/value fields use 0.8 mm text and a 0.12 mm
 stroke. LED functional channel values remain on `F.Fab`.
 
 All currently eligible SMT parts are on side F. Manufacturer and MPN fields
-are complete, but this repository does not contain LCSC part numbers. A direct
-JLCPCB SMT upload therefore requires those LCSC numbers to be populated first;
-an assembly house that sources from MPNs can use these files as generated.
+are complete, but this repository does not contain verified LCSC part numbers.
+The `JLCPCB Part #` column therefore remains blank. A direct JLCPCB SMT upload
+requires those numbers to be populated first; an assembly house that sources
+from manufacturer part numbers can use `bom-smt-refs.csv` as generated.
 All 35 indicators use the green Lite-On `LTST-C150KGKT` 1206 LED.
 
 ## Ready-to-upload packages

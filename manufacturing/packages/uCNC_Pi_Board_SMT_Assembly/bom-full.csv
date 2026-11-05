@@ -3,7 +3,9 @@ Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 6,1uF,Capacitor_SMD:C_0805_2012Metric,Samsung Electro-Mechanics,CL21 series 0805 X7R 1uF,FIT,C91 C92 C94 C96 C98 C114
 3,100nF 100V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31 series 1206 C0G/X7R 100nF 100V,FIT,C2 C4 C108
 1,10uF 25V,Capacitor_SMD:C_1206_3216Metric,Samsung Electro-Mechanics,CL31 series 1206 X7R 10uF 25V,FIT,C67
-14,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,FIT,C3 C5 C6 C10 C11 C69 C88 C90 C100 C101 C107 C109 C110 C111
+6,22uF 10V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 10V,FIT,C6 C10 C11 C69 C88 C90
+4,22uF 25V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 25V,FIT,C101 C109 C110 C111
+4,22uF 50V,Capacitor_SMD:C_1210_3225Metric,Samsung Electro-Mechanics,CL32 series 1210 X7R 22uF 50V,FIT,C3 C5 C100 C107
 5,24+ GND | BL12+ PLC_0V | ESTOP PLC_0V | PLC24+ PLC_0V,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
 14,EN3 STP0 DIR0 | EN3 STP1 DIR1 | EN3 STP2 DIR2 | EN4 STP3 DIR3 | EN4 STP4 DIR4 | EN4 STP5 DIR5 | EN4 STP6 DIR6 | GND ERR0 Z0 | GND ERR1 Z1 | GND ERR2 Z2 | GND ERR3 Z3 | GND ERR4 Z4 | GND ERR5 Z5 | GND ERR6 Z6,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
 6,+5V A0 B0 Z0 GND | +5V A1 B1 Z1 GND | +5V A2 B2 Z2 GND | GND AI0 AI1 AI2 AI3 | GND AO0 AO1 AO2 AO3 | SDA SCL 3V3 5V GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25

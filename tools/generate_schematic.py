@@ -688,7 +688,7 @@ def add_power(builder: SheetBuilder) -> None:
     )
     b.two_pin("L", "Device:L", "22uH 1.5A", "L_SRN6045", "BUCK5_SW", "+5V", (75, 100), mpn="SRN6045TA-220M", manufacturer="Bourns")
     b.capacitor("VIN_PROT", "GND", "22uF 50V", (30, 120), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 50V", (115, 100), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 10V", (115, 100), footprint_key="C1210")
     b.capacitor("+5V", "GND", "100nF", (127, 100))
     b.next_ref("C")  # retired C8: C6/C11 already provide 2x22uF output bulk
 
@@ -711,8 +711,8 @@ def add_power(builder: SheetBuilder) -> None:
     )
     b.next_ref("L")  # reserve L2 for the dedicated backlight buck
     b.next_ref("C")  # retired 3.3 V buck bootstrap C9
-    b.capacitor("+5V", "GND", "22uF 50V", (52, 155), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 50V", (118, 145), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 10V", (52, 155), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 10V", (118, 145), footprint_key="C1210")
     b.next_ref("C")  # retired optional output capacitor C12
     b.capacitor("+3V3", "GND", "100nF", (142, 145))
     # Isolated 3.3 V analog rail.
@@ -1527,7 +1527,7 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
     b.capacitor(
         "+3V3_WIFI",
         "GND",
-        "22uF 50V",
+        "22uF 10V",
         (105, 220),
         footprint_key="C1210",
         reference="C69",
@@ -1765,7 +1765,7 @@ def add_analog(builder: SheetBuilder) -> None:
     b.capacitor(
         "+12V_AO",
         "GND",
-        "22uF 50V",
+        "22uF 25V",
         (385, 295),
         footprint_key="C1210",
         reference="C101",
@@ -1841,7 +1841,7 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     )
     for index, x in enumerate((325, 340, 355)):
         b.capacitor(
-            "+12V_BL", "ISO_GND", "22uF 50V", (x, 310),
+            "+12V_BL", "ISO_GND", "22uF 25V", (x, 310),
             footprint_key="C1210", reference=f"C{109 + index}",
         )
     b.capacitor(
@@ -1963,7 +1963,7 @@ def main() -> None:
     sheets["storage"].capacitor(
         "+5V",
         "GND",
-        "22uF 50V",
+        "22uF 10V",
         (342, 260),
         footprint_key="C1210",
         reference="C88",
@@ -1978,7 +1978,7 @@ def main() -> None:
     sheets["power"].capacitor(
         "+3V3",
         "GND",
-        "22uF 50V",
+        "22uF 10V",
         (417, 240),
         footprint_key="C1210",
         reference="C90",

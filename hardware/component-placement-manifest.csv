@@ -3,21 +3,21 @@ C2,100nF 100V,Power,Power,,input bypass capacitor,VIN_F input filter,place in fu
 C3,22uF 50V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,23.641,False,GND; VIN_P
 C4,100nF 100V,Power,Power,,decoupling capacitor,U1 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,109.316,23.641,False,GND; VIN_P
 C5,22uF 50V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,23.641,False,GND; VIN_P
-C6,22uF 50V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,29.352,False,5V; GND
+C6,22uF 10V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,29.352,False,5V; GND
 C7,100nF,Power,Power,,decoupling capacitor,U1 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,109.316,28.852,False,5V; GND
-C10,22uF 50V,Power,Power,,bulk input capacitor,U2 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,122.936,29.21,False,5V; GND
-C11,22uF 50V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,29.229,False,5V; GND
+C10,22uF 10V,Power,Power,,bulk input capacitor,U2 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,122.936,29.21,False,5V; GND
+C11,22uF 10V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,29.229,False,5V; GND
 C13,100nF,Power,Power,,decoupling capacitor,U2 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,123.286,41.279,False,3V3; GND
 C15,100nF,Power,Power,,decoupling capacitor,ADC_3V3 filter,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,99.06,42.672,False,ADC_3V3; GND
 C76,100nF,Power,Power,,decoupling capacitor,U2 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,149.352,63.5,False,5V; GND
 C86,100nF,Power,Power,,bootstrap capacitor,U1 BOOT to SW,place directly between regulator BOOT and SW pins,inside,F.Cu,98.648,24.403,False,B5_BST; B5_SW
-C90,22uF 50V,Power,Power,,bulk output capacitor,U2 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,125.984,41.279,False,3V3; GND
+C90,22uF 10V,Power,Power,,bulk output capacitor,U2 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,125.984,41.279,False,3V3; GND
 C91,1uF,Power,Power,,IC VCC bypass capacitor,U1 VCC,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,98.648,20.847,False,B5_VCC; GND
 C107,22uF 50V,Power,Power,,bulk input capacitor,U3 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,27.686,21.082,False,BL_VIN; PLC_0V
 C108,100nF 100V,Power,Power,,decoupling capacitor,U3 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,27.686,24.13,False,BL_VIN; PLC_0V
-C109,22uF 50V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,22.098,False,BL_12V; PLC_0V
-C110,22uF 50V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,18.542,False,BL_12V; PLC_0V
-C111,22uF 50V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,14.732,False,BL_12V; PLC_0V
+C109,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,22.098,False,BL_12V; PLC_0V
+C110,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,18.542,False,BL_12V; PLC_0V
+C111,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,14.732,False,BL_12V; PLC_0V
 C112,100nF,Power,Power,,decoupling capacitor,U3 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,34.29,25.146,False,BL_12V; PLC_0V
 C113,100nF,Power,Power,,bootstrap capacitor,U3 BOOT to SW,place directly between regulator BOOT and SW pins,inside,F.Cu,30.734,35.052,False,B12_BST; B12_SW
 C114,1uF,Power,Power,,IC VCC bypass capacitor,U3 VCC,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,26.924,35.052,False,B12_VCC; PLC_0V
@@ -213,9 +213,9 @@ RN26,4x330R,Display,LCD LVDS display,,resistor network,isolated multi-channel pa
 RN27,4x330R,Display,LCD LVDS display,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,104.902,91.44,False,HSTX_CLK_N; HSTX_CLK_P; HSTX_D2_N; HSTX_D2_P; LVDS_CLK_N; LVDS_CLK_P; LVDS_D2_N; LVDS_D2_P
 C67,10uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk rail capacitor,SD SD_3V3,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.955,79.629,False,GND; SD_3V3
 C68,100nF,SD / Wi-Fi,SD / Wi-Fi,,decoupling capacitor,SD SD_3V3,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,138.684,92.456,False,GND; SD_3V3
-C69,22uF 50V,SD / Wi-Fi,SD / Wi-Fi,,bulk output capacitor,U34 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,121.92,21.609,False,GND; WIFI_3V3
+C69,22uF 10V,SD / Wi-Fi,SD / Wi-Fi,,bulk output capacitor,U34 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,121.92,21.609,False,GND; WIFI_3V3
 C70,100nF,SD / Wi-Fi,SD / Wi-Fi,,decoupling capacitor,U34 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,123.19,16.51,False,GND; WIFI_3V3
-C88,22uF 50V,SD / Wi-Fi,SD / Wi-Fi,,bulk input capacitor,U34 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,119.476,29.229,False,5V; GND
+C88,22uF 10V,SD / Wi-Fi,SD / Wi-Fi,,bulk input capacitor,U34 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,119.476,29.229,False,5V; GND
 C89,100nF,SD / Wi-Fi,SD / Wi-Fi,,decoupling capacitor,U34 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,127.762,27.94,False,5V; GND
 FB2,600R@100MHz,SD / Wi-Fi,SD / Wi-Fi,,ferrite bead,rail filtering,place with functional block; review after placement,inside,F.Cu,148.59,72.644,False,3V3; SD_3V3
 J18,SDA SCL 3V3 5V GND,SD / Wi-Fi,SD / Wi-Fi,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,155.194,77.849,False,3V3; 5V; GND; I2C_SCL; I2C_SDA
@@ -239,7 +239,7 @@ C97,100nF,Analog I/O,analog output 2,analog output 2,signal filter capacitor,sig
 C98,1uF,Analog I/O,analog output 3,analog output 3,signal filter capacitor,signal conditioning,place at protected node; keep branch short,inside,F.Cu,136.834,19.593,False,AO3_1; GND
 C99,100nF,Analog I/O,analog output 3,analog output 3,signal filter capacitor,signal conditioning,place at protected node; keep branch short,inside,F.Cu,142.985,22.387,False,AO3_2; GND
 C100,22uF 50V,Analog I/O,analog output power,,decoupling capacitor,U37 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,147.574,13.709,False,GND; VIN_P
-C101,22uF 50V,Analog I/O,analog output power,,bulk output capacitor,U37 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.574,18.034,False,AO_12V; GND
+C101,22uF 25V,Analog I/O,analog output power,,bulk output capacitor,U37 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.574,18.034,False,AO_12V; GND
 C102,100nF,Analog I/O,analog output power,,decoupling capacitor,U38 AO_12V,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,138.176,30.48,False,AO_12V; GND
 C118,100nF,Analog I/O,analog input 3,analog input 3,ADC filter capacitor,ADC3 / MOD1 pin 21,place beside J24 with its channel divider; keep the high-impedance branch short,inside,F.Cu,142.748,43.942,False,ADC3; GND
 J24,GND AI0 AI1 AI2 AI3,Analog I/O,analog inputs connector,analog input 0; analog input 1; analog input 2; analog input 3,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,155.202,57.49,False,AI0; AI1; AI2; AI3; GND

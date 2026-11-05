@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import shutil
 import subprocess
 import zipfile
@@ -218,6 +219,110 @@ def write_assembly_placement(output: Path, raw_position: Path) -> dict:
     }
 
 
+def write_jlcpcb_files(
+    cpl_path: Path,
+    bom_path: Path,
+    output_dir: Path,
+) -> dict:
+    cpl_rows = list(
+        csv.DictReader(cpl_path.open(newline="", encoding="utf-8"))
+    )
+    jlc_cpl_rows = [
+        {
+            "Designator": row["Designator"],
+            "Mid X": row["PosX"],
+            "Mid Y": row["PosY"],
+            "Layer": row["Side"],
+            "Rotation": format_rotation(row["Rot"]),
+        }
+        for row in cpl_rows
+    ]
+
+    bom_rows = list(
+        csv.DictReader(bom_path.open(newline="", encoding="utf-8"))
+    )
+    jlc_bom_rows = []
+    bom_references = []
+    for row in bom_rows:
+        references = [
+            reference
+            for reference in re.split(r"[\s,]+", row["References"].strip())
+            if reference
+        ]
+        bom_references.extend(references)
+        footprint = row["Footprint"].split(":", 1)[-1]
+        jlc_bom_rows.append(
+            {
+                "Comment": row["Design Values"],
+                "Designator": ",".join(references),
+                "Footprint": footprint,
+                "JLCPCB Part #": "",
+            }
+        )
+
+    cpl_references = [row["Designator"] for row in cpl_rows]
+    if len(bom_references) != len(set(bom_references)):
+        raise RuntimeError("Duplicate designators in SMT BOM")
+    if len(cpl_references) != len(set(cpl_references)):
+        raise RuntimeError("Duplicate designators in CPL")
+    if set(bom_references) != set(cpl_references):
+        missing_from_bom = sorted(set(cpl_references) - set(bom_references))
+        missing_from_cpl = sorted(set(bom_references) - set(cpl_references))
+        raise RuntimeError(
+            "SMT BOM/CPL reference mismatch: "
+            f"missing from BOM={missing_from_bom}, "
+            f"missing from CPL={missing_from_cpl}"
+        )
+
+    jlc_cpl_path = output_dir / "cpl-jlcpcb.csv"
+    with jlc_cpl_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["Designator", "Mid X", "Mid Y", "Layer", "Rotation"],
+        )
+        writer.writeheader()
+        writer.writerows(jlc_cpl_rows)
+
+    jlc_bom_path = output_dir / "bom-jlcpcb.csv"
+    with jlc_bom_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Comment",
+                "Designator",
+                "Footprint",
+                "JLCPCB Part #",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(jlc_bom_rows)
+
+    report = {
+        "cpl": str(cpl_path),
+        "bom": str(bom_path),
+        "jlc_cpl": str(jlc_cpl_path),
+        "jlc_bom": str(jlc_bom_path),
+        "smt_references": len(cpl_references),
+        "bom_groups": len(jlc_bom_rows),
+        "references_match": True,
+        "jlcpartnumber_blank_groups": len(jlc_bom_rows),
+        "units": "mm",
+        "coordinate_origin": "board lower-left",
+    }
+    (output_dir / "jlcpcb-report.json").write_text(
+        json.dumps(report, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return report
+
+
+def format_rotation(value: str) -> str:
+    rotation = float(value) % 360.0
+    if rotation.is_integer():
+        return str(int(rotation))
+    return f"{rotation:.6f}"
+
+
 def natural_key(value: str) -> list[str | int]:
     import re
 
@@ -270,11 +375,21 @@ PCB fabrication only.
 
     raw_position = export_smt_layers(args.kicad_cli, assembly)
     placement_report = write_assembly_placement(assembly, raw_position)
+    shutil.copy2(assembly / "cpl.csv", MANUFACTURING / "cpl.csv")
+    jlc_report = write_jlcpcb_files(
+        MANUFACTURING / "cpl.csv",
+        MANUFACTURING / "bom-smt.csv",
+        MANUFACTURING,
+    )
     for source, destination in (
         (MANUFACTURING / "bom-smt.csv", assembly / "bom-smt.csv"),
         (MANUFACTURING / "bom-smt-refs.csv", assembly / "bom-smt-refs.csv"),
         (MANUFACTURING / "bom.csv", assembly / "bom-full.csv"),
         (MANUFACTURING / "bom-report.json", assembly / "bom-report.json"),
+        (MANUFACTURING / "bom-jlcpcb.csv", assembly / "bom-jlcpcb.csv"),
+        (MANUFACTURING / "cpl.csv", assembly / "cpl.csv"),
+        (MANUFACTURING / "cpl-jlcpcb.csv", assembly / "cpl-jlcpcb.csv"),
+        (MANUFACTURING / "jlcpcb-report.json", assembly / "jlcpcb-report.json"),
         (MANUFACTURING / "board-front.pdf", assembly / "assembly-front.pdf"),
         (MANUFACTURING / "board-back.pdf", assembly / "assembly-back.pdf"),
         (
@@ -298,6 +413,9 @@ PCB fabrication plus SMT assembly data.
 
 Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.
 `bom-smt-refs.csv` provides a one-row-per-reference cross-check.
+`bom-jlcpcb.csv` and `cpl-jlcpcb.csv` use the column names commonly requested
+by JLCPCB. The JLCPCB part-number column is present but blank because this
+repository does not contain verified LCSC part numbers.
 
 Mixed-footprint J54 and all through-hole parts are excluded from the SMT BOM
 and CPL. `bom-full.csv` lists the complete assembly for manual or separate
@@ -322,6 +440,8 @@ that sources by manufacturer/MPN; direct JLCPCB upload requires LCSC numbers.
                 "pcb_fabrication_zip": str(fabrication_zip),
                 "smt_assembly_zip": str(assembly_zip),
                 "smt_placements": placement_report["placements"],
+                "jlc_references": jlc_report["smt_references"],
+                "jlc_references_match": jlc_report["references_match"],
                 "cpl_origin": placement_report["origin"],
                 "raw_position_excluded": placement_report[
                     "excluded_from_raw_position"

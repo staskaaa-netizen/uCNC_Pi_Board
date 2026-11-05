@@ -33,8 +33,8 @@ power-rail part; signal filters below are separate.
 
 | Regulator | Conversion | Input side | Output side | Compensation and support |
 |---|---|---|---|---|
-| U1 LMR36510 | `VIN_P` to `5V`, 1 A | C3 22 uF/50 V, C4 100 nF/100 V, C5 22 uF/50 V | C6/C11 22 uF/50 V, C7 100 nF | C86 100 nF BOOT-SW, C91 1 uF VCC-GND, L1 22 uH, R70/R71 upper and R72 lower feedback |
-| U3 LMR36510 | isolated 24 V to `BL_12V`, 1 A | C107 22 uF/50 V, C108 100 nF/100 V | C109-C111 22 uF/50 V, C112 100 nF | C113 100 nF BOOT-SW, C114 1 uF VCC-PLC_0V, L2 47 uH, R126/R127/R128 feedback |
+| U1 LMR36510 | `VIN_P` to `5V`, 1 A | C3 22 uF/50 V, C4 100 nF/100 V, C5 22 uF/50 V | C6/C11 22 uF/10 V, C7 100 nF | C86 100 nF BOOT-SW, C91 1 uF VCC-GND, L1 22 uH, R70/R71 upper and R72 lower feedback |
+| U3 LMR36510 | isolated 24 V to `BL_12V`, 1 A | C107 22 uF/50 V, C108 100 nF/100 V | C109-C111 22 uF/25 V, C112 100 nF | C113 100 nF BOOT-SW, C114 1 uF VCC-PLC_0V, L2 47 uH, R126/R127/R128 feedback |
 
 U1 and U3 each use six 0.3 mm ground vias under the exposed PowerPAD. Keep the
 input capacitors on the VIN/GND side, the inductor at SW and the bootstrap
@@ -44,9 +44,9 @@ capacitor between BOOT and SW.
 
 | Regulator | Conversion | Input capacitors | Output capacitors | Load |
 |---|---|---|---|---|
-| U2 AMS1117-3.3 | `5V` to `3V3` | C10 22 uF, C76 100 nF | C13 100 nF, C90 22 uF | Logic, encoders, SD and LCD logic |
-| U34 AMS1117-3.3 | `5V` to `WIFI_3V3` | C88 22 uF, C89 100 nF | C69 22 uF, C70 100 nF | ESP-01/ESP-01S only |
-| U37 L78L12 | `VIN_P` to `AO_12V` | C100 22 uF | C101 22 uF | U38 and 0-10 V outputs |
+| U2 AMS1117-3.3 | `5V` to `3V3` | C10 22 uF/10 V, C76 100 nF | C13 100 nF, C90 22 uF/10 V | Logic, encoders, SD and LCD logic |
+| U34 AMS1117-3.3 | `5V` to `WIFI_3V3` | C88 22 uF/10 V, C89 100 nF | C69 22 uF/10 V, C70 100 nF | ESP-01/ESP-01S only |
+| U37 L78L12 | `VIN_P` to `AO_12V` | C100 22 uF/50 V | C101 22 uF/25 V | U38 and 0-10 V outputs |
 
 U34 has its own regulator because the ESP8266 transmit pulse is independent of
 the main peripheral 3.3 V load. U37 is a low-current analog rail and must not be

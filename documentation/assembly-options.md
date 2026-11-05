@@ -50,7 +50,8 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 - General 100 nF and 1 uF bypasses: 0805.
 - 10 uF capacitors: 1206, 25 V X7R.
 - 100 nF / 100 V input bypasses: 1206.
-- 22 uF bulk capacitors: 1210, 50 V X7R.
+- 22 uF bulk capacitors: 1210 X7R, 10 V on 5 V/3.3 V rails, 25 V on
+  12 V rails and 50 V on 24 V input rails.
 - Analog divider resistors: 1206, 1%.
 - Analog signal and feedback resistors: 0805, 1%.
 - Field 2.2 k LED/input resistors: 1206.
@@ -62,8 +63,9 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 - SD series resistors: RN44, 4 x 22 ohm.
 - LVDS series resistors: RN26/RN27, 4 x 330 ohm, 4 x 1206.
 
-All low-voltage capacitors may use 25 V or higher parts. The 24 V-side input
-capacitors use 50 V or 100 V ratings as listed in the BOM.
+The 5 V and 3.3 V 22 uF bulk capacitors use 10 V parts, the 12 V rails use
+25 V parts, and the 24 V-side input capacitors use 50 V or 100 V ratings as
+listed in the BOM.
 
 ## SD-card population
 

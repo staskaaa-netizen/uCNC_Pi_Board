@@ -3,13 +3,16 @@ uCNC Pi Board - SMT Assembly Package
 PCB fabrication plus SMT assembly data.
 
 - SMT references: 235
-- SMT BOM groups: 39
+- SMT BOM groups: 41
 - Placement origin: board lower-left
 - Units: millimetres, Y positive upward
 - Gerbers include front/back copper, paste, mask, silkscreen and board edge
 
 Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.
 `bom-smt-refs.csv` provides a one-row-per-reference cross-check.
+`bom-jlcpcb.csv` and `cpl-jlcpcb.csv` use the column names commonly requested
+by JLCPCB. The JLCPCB part-number column is present but blank because this
+repository does not contain verified LCSC part numbers.
 
 Mixed-footprint J54 and all through-hole parts are excluded from the SMT BOM
 and CPL. `bom-full.csv` lists the complete assembly for manual or separate
