@@ -3,9 +3,9 @@
 ## Prototype manufacturing order
 
 The current PCB fabrication and SMT assembly packages are ready to send. The
-remaining six silkscreen warnings are accepted as non-blocking for the
-prototype: two microSD outline/edge conflicts, two microSD outline/pad
-conflicts and two dense LVDS legend text-height warnings.
+remaining four silkscreen warnings are accepted as non-blocking for the
+prototype: two microSD outline/pad conflicts and two dense LVDS legend
+text-height warnings.
 
 - [x] Generate the BOM, CPL, Gerbers, drills, PDFs and 3D renders from the
   current committed board.

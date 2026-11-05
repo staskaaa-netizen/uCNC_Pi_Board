@@ -1292,9 +1292,20 @@ def export_bom() -> None:
         if not pads:
             smt_excluded.append((component.reference, "no pads"))
             continue
-        if all(pad.GetAttribute() == pcbnew.PAD_ATTRIB_SMD for pad in pads):
+        electrical_pads = [
+            pad
+            for pad in pads
+            if pad.GetAttribute() != pcbnew.PAD_ATTRIB_NPTH
+        ]
+        if all(
+            pad.GetAttribute() == pcbnew.PAD_ATTRIB_SMD
+            for pad in electrical_pads
+        ):
             mount = "SMD"
-        elif all(pad.GetAttribute() == pcbnew.PAD_ATTRIB_PTH for pad in pads):
+        elif all(
+            pad.GetAttribute() == pcbnew.PAD_ATTRIB_PTH
+            for pad in electrical_pads
+        ):
             mount = "PTH"
         else:
             mount = "MIXED"

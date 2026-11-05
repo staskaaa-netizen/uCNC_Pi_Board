@@ -89,13 +89,15 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
-- [Current top 3D render](manufacturing/board-3d-top-058f7cbe.png)
-- [Current bottom 3D render](manufacturing/board-3d-bottom-058f7cbe.png)
+- [Current top 3D render](manufacturing/board-3d-top-c9b26a24.png)
+- [Current bottom 3D render](manufacturing/board-3d-bottom-c9b26a24.png)
 - [Connector label orientation check](manufacturing/connector-label-check.png)
 - [Complete grouped BOM](manufacturing/bom.csv)
 - [SMT-only grouped BOM](manufacturing/bom-smt.csv)
 - [SMT-only reference BOM](manufacturing/bom-smt-refs.csv)
 - [JLCPCB-format grouped BOM](manufacturing/bom-jlcpcb.csv)
+- [Non-SMT grouped BOM](manufacturing/bom-non-smt.csv)
+- [Combined SMT and non-SMT BOM](manufacturing/bom-all-jlcpcb.csv)
 - [Pick-and-place CPL](manufacturing/cpl-jlcpcb.csv)
 - [PCB fabrication ZIP](manufacturing/uCNC_Pi_Board_PCB_Fabrication.zip)
 - [PCB fabrication + SMT assembly ZIP](manufacturing/uCNC_Pi_Board_SMT_Assembly.zip)
@@ -103,11 +105,11 @@ placement and routing. Do not run a full PCB regeneration over that file.
 ## Verification status
 
 The current netlist contains 281 schematic components in 320 nets. The PCB has
-275 footprints, 2,276 routed track segments and 187 vias. DRC reports zero
-unconnected items and zero error-severity findings. Six non-field silkscreen
-warnings remain: two microSD outline/edge conflicts, two microSD outline/pad
-conflicts and two dense LVDS legend text-height warnings. ERC has no electrical
-errors and 35 library-symbol cache warnings.
+275 footprints, 2,193 routed track segments and 207 vias. DRC reports zero
+unconnected items and zero error-severity findings. Four non-field silkscreen
+warnings remain: two microSD outline/pad conflicts and two dense LVDS legend
+text-height warnings. ERC has no electrical errors and 35 library-symbol cache
+warnings.
 
 This is a routed prototype manufacturing package. It is not a safety-rated
 controller. Hazardous energy removal must remain an independent hard-wired

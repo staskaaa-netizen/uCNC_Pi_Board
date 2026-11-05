@@ -3,10 +3,14 @@
   "bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-smt.csv",
   "jlc_cpl": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\cpl-jlcpcb.csv",
   "jlc_bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-jlcpcb.csv",
-  "smt_references": 235,
-  "bom_groups": 41,
+  "smt_references": 236,
+  "bom_groups": 42,
   "references_match": true,
-  "jlcpartnumber_blank_groups": 41,
+  "jlcpartnumber_blank_groups": 42,
   "units": "mm",
-  "coordinate_origin": "board lower-left"
+  "coordinate_origin": "board lower-left",
+  "non_smt_groups": 9,
+  "non_smt_references": 34,
+  "all_groups": 51,
+  "all_references": 270
 }

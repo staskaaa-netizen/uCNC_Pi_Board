@@ -170,18 +170,35 @@ def write_assembly_placement(output: Path, raw_position: Path) -> dict:
             raw_position.open(newline="", encoding="utf-8")
         )
     }
-    missing = sorted(bom_refs - set(raw_rows), key=natural_key)
     extra = sorted(set(raw_rows) - bom_refs, key=natural_key)
-    if missing:
-        raise RuntimeError(f"SMT positions missing for: {missing}")
 
     board = pcbnew.LoadBoard(str(BOARD))
     bbox = board.GetBoardEdgesBoundingBox()
     left = pcbnew.ToMM(bbox.GetLeft())
     bottom = pcbnew.ToMM(bbox.GetBottom())
+    footprints = {
+        footprint.GetReference(): footprint
+        for footprint in board.GetFootprints()
+    }
     placements = []
     for reference in sorted(bom_refs, key=natural_key):
-        row = raw_rows[reference]
+        row = raw_rows.get(reference)
+        if row is None:
+            footprint = footprints.get(reference)
+            if footprint is None:
+                raise RuntimeError(
+                    f"SMT position and footprint missing for {reference}"
+                )
+            position = footprint.GetPosition()
+            side = "Top" if footprint.GetLayer() == pcbnew.F_Cu else "Bottom"
+            row = {
+                "Val": footprint.GetValue(),
+                "Package": str(footprint.GetFPID().GetLibItemName()),
+                "PosX": str(pcbnew.ToMM(position.x)),
+                "PosY": str(pcbnew.ToMM(position.y) - bottom),
+                "Rot": f"{footprint.GetOrientationDegrees():.6f}",
+                "Side": side,
+            }
         placements.append(
             {
                 "Designator": reference,
@@ -316,6 +333,141 @@ def write_jlcpcb_files(
     return report
 
 
+def split_references(value: str) -> list[str]:
+    return [
+        reference
+        for reference in re.split(r"[\s,]+", value.strip())
+        if reference
+    ]
+
+
+def write_bom_variants(
+    full_bom_path: Path,
+    smt_reference_bom_path: Path,
+    output_dir: Path,
+) -> dict:
+    full_rows = list(
+        csv.DictReader(full_bom_path.open(newline="", encoding="utf-8"))
+    )
+    smt_rows = list(
+        csv.DictReader(
+            smt_reference_bom_path.open(newline="", encoding="utf-8")
+        )
+    )
+    smt_references = {row["Reference"] for row in smt_rows}
+    all_references = []
+    non_smt_groups = []
+    non_smt_references = []
+
+    for row in full_rows:
+        references = split_references(row["References"])
+        all_references.extend(references)
+        remaining = [
+            reference
+            for reference in references
+            if reference not in smt_references
+        ]
+        if not remaining:
+            continue
+        non_smt_group = dict(row)
+        non_smt_group["Quantity"] = str(len(remaining))
+        non_smt_group["References"] = " ".join(remaining)
+        non_smt_groups.append(non_smt_group)
+        for reference in remaining:
+            non_smt_references.append(
+                {
+                    "Reference": reference,
+                    "Value": row["Design Values"],
+                    "Footprint": row["Footprint"],
+                    "Manufacturer": row["Manufacturer"],
+                    "MPN": row["MPN"],
+                    "Assembly": row["Assembly"],
+                }
+            )
+
+    expected_non_smt = set(all_references) - smt_references
+    if {row["Reference"] for row in non_smt_references} != expected_non_smt:
+        raise RuntimeError("Non-SMT BOM reference split failed")
+
+    grouped_path = output_dir / "bom-non-smt.csv"
+    with grouped_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Quantity",
+                "Design Values",
+                "Footprint",
+                "Manufacturer",
+                "MPN",
+                "Assembly",
+                "References",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(non_smt_groups)
+
+    refs_path = output_dir / "bom-non-smt-refs.csv"
+    with refs_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Reference",
+                "Value",
+                "Footprint",
+                "Manufacturer",
+                "MPN",
+                "Assembly",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(
+            sorted(
+                non_smt_references,
+                key=lambda row: natural_key(row["Reference"]),
+            )
+        )
+
+    non_smt_jlc_path = output_dir / "bom-non-smt-jlcpcb.csv"
+    write_jlc_bom(non_smt_groups, non_smt_jlc_path)
+    all_jlc_path = output_dir / "bom-all-jlcpcb.csv"
+    write_jlc_bom(full_rows, all_jlc_path)
+
+    if len(all_references) != len(set(all_references)):
+        raise RuntimeError("Duplicate reference in full BOM")
+    return {
+        "non_smt_groups": len(non_smt_groups),
+        "non_smt_references": len(non_smt_references),
+        "all_groups": len(full_rows),
+        "all_references": len(all_references),
+        "smt_references": len(smt_references),
+    }
+
+
+def write_jlc_bom(rows: list[dict[str, str]], output_path: Path) -> None:
+    with output_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "Comment",
+                "Designator",
+                "Footprint",
+                "JLCPCB Part #",
+            ],
+        )
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(
+                {
+                    "Comment": row["Design Values"],
+                    "Designator": ",".join(
+                        split_references(row["References"])
+                    ),
+                    "Footprint": row["Footprint"].split(":", 1)[-1],
+                    "JLCPCB Part #": "",
+                }
+            )
+
+
 def format_rotation(value: str) -> str:
     rotation = float(value) % 360.0
     if rotation.is_integer():
@@ -381,12 +533,38 @@ PCB fabrication only.
         MANUFACTURING / "bom-smt.csv",
         MANUFACTURING,
     )
+    bom_variant_report = write_bom_variants(
+        MANUFACTURING / "bom.csv",
+        MANUFACTURING / "bom-smt-refs.csv",
+        MANUFACTURING,
+    )
+    jlc_report.update(bom_variant_report)
+    (MANUFACTURING / "jlcpcb-report.json").write_text(
+        json.dumps(jlc_report, indent=2) + "\n",
+        encoding="utf-8",
+    )
     for source, destination in (
         (MANUFACTURING / "bom-smt.csv", assembly / "bom-smt.csv"),
         (MANUFACTURING / "bom-smt-refs.csv", assembly / "bom-smt-refs.csv"),
         (MANUFACTURING / "bom.csv", assembly / "bom-full.csv"),
         (MANUFACTURING / "bom-report.json", assembly / "bom-report.json"),
         (MANUFACTURING / "bom-jlcpcb.csv", assembly / "bom-jlcpcb.csv"),
+        (
+            MANUFACTURING / "bom-non-smt.csv",
+            assembly / "bom-non-smt.csv",
+        ),
+        (
+            MANUFACTURING / "bom-non-smt-refs.csv",
+            assembly / "bom-non-smt-refs.csv",
+        ),
+        (
+            MANUFACTURING / "bom-non-smt-jlcpcb.csv",
+            assembly / "bom-non-smt-jlcpcb.csv",
+        ),
+        (
+            MANUFACTURING / "bom-all-jlcpcb.csv",
+            assembly / "bom-all-jlcpcb.csv",
+        ),
         (MANUFACTURING / "cpl.csv", assembly / "cpl.csv"),
         (MANUFACTURING / "cpl-jlcpcb.csv", assembly / "cpl-jlcpcb.csv"),
         (MANUFACTURING / "jlcpcb-report.json", assembly / "jlcpcb-report.json"),
@@ -417,9 +595,14 @@ Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.
 by JLCPCB. The JLCPCB part-number column is present but blank because this
 repository does not contain verified LCSC part numbers.
 
-Mixed-footprint J54 and all through-hole parts are excluded from the SMT BOM
-and CPL. `bom-full.csv` lists the complete assembly for manual or separate
-through-hole work.
+Use `bom-non-smt-jlcpcb.csv` for the through-hole and mixed-mount parts, or
+upload `bom-all-jlcpcb.csv` when requesting one combined SMT and through-hole
+assembly quotation.
+
+J54 is included in the SMT BOM and CPL because all of its electrical pads are
+SMD; its two unnumbered locating holes are NPTH. All through-hole connectors
+and modules are excluded from the SMT BOM and CPL and listed separately in
+`bom-non-smt.csv`. `bom-full.csv` lists the complete assembly.
 
 LCSC part numbers are not present. The BOM is suitable for an assembly house
 that sources by manufacturer/MPN; direct JLCPCB upload requires LCSC numbers.

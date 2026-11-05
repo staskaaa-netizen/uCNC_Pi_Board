@@ -5,8 +5,8 @@ Generated review documents:
 - [Combined board review](../manufacturing/board-review.pdf)
 - [Front artwork and assembly layer](../manufacturing/board-front.pdf)
 - [Mirrored rear artwork](../manufacturing/board-back.pdf)
-- [Current top 3D render](../manufacturing/board-3d-top-058f7cbe.png)
-- [Current bottom 3D render](../manufacturing/board-3d-bottom-058f7cbe.png)
+- [Current top 3D render](../manufacturing/board-3d-top-c9b26a24.png)
+- [Current bottom 3D render](../manufacturing/board-3d-bottom-c9b26a24.png)
 
 ## Board summary
 
@@ -165,16 +165,15 @@ abbreviations are in [Signal naming](naming.md).
 Current KiCad 10 checks:
 
 - Schematic: 281 components and 320 nets, with no connectivity failures.
-- PCB: 275 footprints, 2,276 routed track segments and 187 vias.
-- DRC: zero errors and zero unconnected items; six non-field silkscreen
+- PCB: 275 footprints, 2,193 routed track segments and 207 vias.
+- DRC: zero errors and zero unconnected items; four non-field silkscreen
   warnings remain.
 - The 108 reference/value-field warnings were cleared by moving 57
   DRC-confirmed fields to nearby clear silkscreen positions.
 - A further 130 references were promoted from `F.Fab`; all 275 component
   references are now visible without introducing new DRC warnings.
 - Remaining warnings are two small LVDS row legends below the configured text
-  height, two J54 outline segments clipped by the board edge and two J54
-  outline segments over GND pads.
+  height and two J54 outline segments over GND pads.
 - ERC: no electrical errors; 35 library-symbol cache warnings.
 
 The board is electrically complete. The remaining warnings concern the

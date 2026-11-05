@@ -4,9 +4,9 @@
 
 - `bom.csv`: complete grouped BOM for the current design, covering all
   270 physical sourced parts in 51 lines.
-- `bom-smt.csv`: SMT-only grouped BOM, covering 235 SMD footprints in 41
+- `bom-smt.csv`: SMT-only grouped BOM, covering 236 SMD footprints in 42
   lines. It includes the PCB side for each group.
-- `bom-smt-refs.csv`: the same 235 SMT parts in one-row-per-reference format.
+- `bom-smt-refs.csv`: the same 236 SMT parts in one-row-per-reference format.
 - `bom-jlcpcb.csv`: grouped SMT BOM using the columns `Comment`, `Designator`,
   `Footprint` and `JLCPCB Part #`.
 - `cpl.csv`: complete placement list using the assembly house's explicit
@@ -15,13 +15,19 @@
   `Mid Y`, `Layer` and `Rotation`.
 - `jlcpcb-report.json`: BOM/CPL cross-check result, coordinate origin and
   missing JLCPCB part-number count.
+- `bom-non-smt.csv`: grouped through-hole parts excluded from the SMT CPL.
+- `bom-non-smt-refs.csv`: the same non-SMT parts in one-row-per-reference
+  format.
+- `bom-non-smt-jlcpcb.csv`: grouped non-SMT BOM using the JLCPCB
+  column names.
+- `bom-all-jlcpcb.csv`: one combined BOM covering all 270 physical assembly
+  parts for a single SMT-plus-through-hole quotation.
 - `bom-report.json`: generation counts and the complete non-SMT exclusion list.
 
 The SMT BOM was generated from actual PCB pad types, not only footprint names.
-It includes every footprint whose pads are exclusively SMD and excludes:
-
-- 34 through-hole connectors/modules.
-- `J54`, whose microSD footprint contains mixed SMD and through-hole pads.
+It includes every footprint whose electrical pads are exclusively SMD and
+excludes 34 through-hole connectors/modules. J54 is included because its
+eleven electrical pads are SMD; its two unnumbered locating holes are NPTH.
 
 `JP5` is a solder-jumper PCB feature with no part to place and is intentionally
 omitted. Power-flag symbols are logical-only and have no physical footprint.
@@ -43,8 +49,8 @@ All 35 indicators use the green Lite-On `LTST-C150KGKT` 1206 LED.
 ## Ready-to-upload packages
 
 - `uCNC_Pi_Board_PCB_Fabrication.zip`: Gerbers and Excellon drill files only.
-- `uCNC_Pi_Board_SMT_Assembly.zip`: fabrication data, both SMT BOM formats,
-  the matching 235-reference `cpl.csv`, assembly PDFs and the full BOM.
+- `uCNC_Pi_Board_SMT_Assembly.zip`: fabrication data, SMT and non-SMT BOMs,
+  the matching 236-reference `cpl.csv`, assembly PDFs and the combined BOM.
 
 The SMT placement origin is the PCB lower-left corner. Coordinates are in
 millimetres with positive Y upward. Rebuild both archives after any PCB change:
