@@ -30,6 +30,9 @@ CUSTOM_FP = HARDWARE / "libraries" / "LeanCam.pretty"
 KICAD_FP = Path(
     r"C:\Users\s.zachazevski\AppData\Local\Programs\KiCad\10.0\share\kicad\footprints"
 )
+MANUAL_SMT_EXCLUSIONS = {
+    "F1": "manual fit; supplied PTC is not rated for the 24 V input",
+}
 
 BOARD_WIDTH_MM = 200.0
 BOARD_HEIGHT_MM = 150.0
@@ -1297,7 +1300,9 @@ def export_bom() -> None:
             for pad in pads
             if pad.GetAttribute() != pcbnew.PAD_ATTRIB_NPTH
         ]
-        if all(
+        if component.reference in MANUAL_SMT_EXCLUSIONS:
+            mount = "MANUAL"
+        elif all(
             pad.GetAttribute() == pcbnew.PAD_ATTRIB_SMD
             for pad in electrical_pads
         ):

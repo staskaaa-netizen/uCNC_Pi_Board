@@ -17,13 +17,13 @@ are generated from the current board and ready to send.
 - Seven STEP/DIR axes, A0-A6, with labels `EN3 STPn DIRn`.
 - Seven paired servo ZERO/ERROR inputs with individual 3-pin connectors.
 - All 35 indicator LEDs are green Lite-On `LTST-C150KGKT` 1206 parts.
-- Two TC74AC541F 5 V motion buffers.
+- Two onsemi MC74AC541DWR2G 5 V motion buffers.
 - Sixteen optically isolated general outputs, `D01-D16`, driven by two
   TBD62083AFG arrays.
 - Three 5 V encoder interfaces with a 3.3 V logic-side buffer.
 - Four 0-10 V analog inputs and four ground-referenced 0-10 V analog outputs.
 - MicroSD through J36 or the on-board SOFNG TF-15x15 socket J54.
-- Passive HSTX-to-LVDS interface on J22 using 4 x 330 ohm arrays.
+- Passive HSTX-to-LVDS interface on J22 using two 4 x 330 ohm, 4 x 0603 arrays.
 - Optional ESP-01 with a dedicated 3.3 V regulator.
 - Isolated 24 V to 12 V backlight supply.
 
@@ -89,8 +89,8 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
-- [Current top 3D render](manufacturing/board-3d-top-c9b26a24.png)
-- [Current bottom 3D render](manufacturing/board-3d-bottom-c9b26a24.png)
+- [Current top 3D render](manufacturing/board-3d-top-4a6d41f8.png)
+- [Current bottom 3D render](manufacturing/board-3d-bottom-4a6d41f8.png)
 - [Connector label orientation check](manufacturing/connector-label-check.png)
 - [Complete grouped BOM](manufacturing/bom.csv)
 - [SMT-only grouped BOM](manufacturing/bom-smt.csv)

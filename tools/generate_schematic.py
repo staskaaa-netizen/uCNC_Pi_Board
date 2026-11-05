@@ -66,7 +66,7 @@ FP = {
     "WEACT": "LeanCam:WeAct_RP2350B_Socket",
     "NETTIE": "NetTie:NetTie-2_SMD_Pad2.0mm",
     "L_SRR1260": "Inductor_SMD:L_Bourns_SRR1260",
-    "L_SRN6045": "Inductor_SMD:L_Bourns_SRN6045TA",
+    "L_SMNR5040": "LeanCam:L_SXN_SMNR5040",
     "DCDC_TMA0505": "Converter_DCDC:Converter_DCDC_TRACO_TMA-05xxS_12xxS_Single_THT",
     "DCDC_TBA2": "Converter_DCDC:Converter_DCDC_TRACO_TBA2-xxxx_Single_THT",
     "SJ2": "LeanCam:SolderJumper_2_Open_1206Gap",
@@ -137,7 +137,7 @@ MPN = {
     "HDR2X4": ("Wurth Elektronik", "61300821121"),
     "SJ2": ("PCB fabrication", "2-pad solder jumper"),
     "L_SRR1260": ("Bourns", "SRR1260 series"),
-    "L_SRN6045": ("Bourns", "SRN6045TA series"),
+    "L_SMNR5040": ("SXN (Shun Xiang Nuo Elec)", "SMNR5040 series"),
     "SJ3": ("PCB fabrication", "3-pad solder jumper"),
     "MICROSD_SOFNG_C111196": ("SOFNG", "TF-15x15"),
 }
@@ -369,6 +369,7 @@ class SheetBuilder:
             ("R_Array_4x0603", "1k"): "YC164-FR-071KL",
             ("R_Array_4x0603", "4.7k"): "YC164-FR-074K7L",
             ("R_Array_4x0603", "10k"): "YC164-FR-0710KL",
+            ("R_Array_4x0603", "330R"): "YC164-FR-07330RL",
             ("R_Array_4x1206", "100R"): "YC324-FR-07100RL",
             ("R_Array_4x1206", "330R"): "YC324-FR-07330RL",
             ("R_Array_4x1206", "0R"): "YC324-JK-070RL",
@@ -654,14 +655,16 @@ def add_power(builder: SheetBuilder) -> None:
         "VIN_PROT",
         "VIN_FUSED",
         (115, 65),
-        value="SS16",
+        value="S1M",
         footprint_key="D_SMA",
         reference="D2",
+        mpn="S1M",
+        manufacturer="Diodes Incorporated",
     )
     b.next_ref("D")  # retired D3 backlight-input diode
     b.next_ref("Q")  # retired Q1 reverse-polarity MOSFET
     b.next_ref("R")  # retired R1 gate pull-down
-    b.capacitor("VIN_PROT", "GND", "22uF 50V", (145, 65), footprint_key="C1210")
+    b.capacitor("VIN_PROT", "GND", "22uF 35V", (145, 65), footprint_key="C1210")
     b.capacitor("VIN_PROT", "GND", "100nF 100V", (157, 65), footprint_key="C1206_100V")
 
     # TI LMR36510 reference values for 5 V/1 A at 400 kHz:
@@ -686,8 +689,8 @@ def add_power(builder: SheetBuilder) -> None:
         mpn="LMR36510ADDAR",
         manufacturer="Texas Instruments",
     )
-    b.two_pin("L", "Device:L", "22uH 1.5A", "L_SRN6045", "BUCK5_SW", "+5V", (75, 100), mpn="SRN6045TA-220M", manufacturer="Bourns")
-    b.capacitor("VIN_PROT", "GND", "22uF 50V", (30, 120), footprint_key="C1210")
+    b.two_pin("L", "Device:L", "22uH 1.4A", "L_SMNR5040", "BUCK5_SW", "+5V", (75, 100), mpn="SMNR5040-220MT", manufacturer="SXN (Shun Xiang Nuo Elec)")
+    b.capacitor("VIN_PROT", "GND", "22uF 35V", (30, 120), footprint_key="C1210")
     b.capacitor("+5V", "GND", "22uF 10V", (115, 100), footprint_key="C1210")
     b.capacitor("+5V", "GND", "100nF", (127, 100))
     b.next_ref("C")  # retired C8: C6/C11 already provide 2x22uF output bulk
@@ -1067,7 +1070,7 @@ def add_field_outputs(builder: SheetBuilder) -> None:
         35,
     )
 
-    # TC74AC541F buffers provide the higher current needed by the motion
+    # SN74AC541DW buffers provide the higher current needed by the motion
     # interface. OUT0-OUT13 are seven STEP/DIR pairs; OUT14-OUT15 are the
     # shared enable lines for AX0-AX2 and AX3-AX6.
     motion_buffer_specs = (
@@ -1091,14 +1094,14 @@ def add_field_outputs(builder: SheetBuilder) -> None:
             nets[str(output_pin)] = buffer_output_net.get(bit)
         b.add(
             lib_id="LeanCam:OctalBuffer5V",
-            value="TC74AC541F",
+            value="MC74AC541DWR2G",
             footprint_key="SOIC20W",
             nets=nets,
             position=(50 + (reference == "U43") * 55, 80),
             prefix="U",
             reference=reference,
-            mpn="TC74AC541F",
-            manufacturer="Toshiba",
+            mpn="MC74AC541DWR2G",
+            manufacturer="onsemi",
         )
         b.capacitor(
             "+5V",
@@ -1132,7 +1135,7 @@ def add_field_outputs(builder: SheetBuilder) -> None:
         )
     # The former keyboard output arrays are removed. Preserve their references
     # so the remaining numbered hierarchy stays stable.
-    # The TC74AC541F outputs drive the motion connectors directly. The former
+    # The SN74AC541DW outputs drive the motion connectors directly. The former
     # RN16-RN19 100 ohm series arrays are removed.
     # Preserve the retired keyboard-array references. RN23/RN25 are reused
     # later by the 16-channel input expander pull-ups.
@@ -1576,7 +1579,7 @@ def add_display(builder: SheetBuilder) -> None:
     for pack in range(2):
         b.resistor_pack4(
             "330R",
-            "R_Array_4x1206",
+            "R_Array_4x0603",
             passive[pack * 4:(pack + 1) * 4],
             (90 + pack * 65, 85),
             reference=f"RN{26 + pack}",
@@ -1757,7 +1760,7 @@ def add_analog(builder: SheetBuilder) -> None:
     b.capacitor(
         "VIN_PROT",
         "GND",
-        "22uF 50V",
+        "22uF 35V",
         (315, 295),
         footprint_key="C1210",
         reference="C100",
@@ -1794,9 +1797,11 @@ def add_backlight_power(builder: SheetBuilder) -> None:
         "VIN_BL_PROT",
         "+24V_FIELD",
         (250, 270),
-        value="SS16",
+        value="S1M",
         footprint_key="D_SMA",
         reference="D3",
+        mpn="S1M",
+        manufacturer="Diodes Incorporated",
     )
     b.add(
         lib_id="Regulator_Switching:LMR36510ADDA",
@@ -1822,17 +1827,17 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     b.two_pin(
         "L",
         "Device:L",
-        "47uH 1.5A",
-        "L_SRN6045",
+        "47uH 0.9A",
+        "L_SMNR5040",
         "BUCK12_SW",
         "+12V_BL",
         (305, 310),
-        mpn="SRN6045TA-470M",
-        manufacturer="Bourns",
+        mpn="SMNR5040-470MT",
+        manufacturer="SXN (Shun Xiang Nuo Elec)",
         reference="L2",
     )
     b.capacitor(
-        "VIN_BL_PROT", "ISO_GND", "22uF 50V", (257, 305),
+        "VIN_BL_PROT", "ISO_GND", "22uF 35V", (257, 305),
         footprint_key="C1210", reference="C107",
     )
     b.capacitor(

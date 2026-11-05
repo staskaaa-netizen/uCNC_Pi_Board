@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\acc\rp2350\LeanCam-NCC-RP2350B\hardware\motherboard.kicad_sch</source>
-    <date>2026-11-05T10:29:17</date>
+    <date>2026-11-05T14:45:28</date>
     <tool>Eeschema 10.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -197,17 +197,17 @@
       </units>
     </comp>
     <comp ref="C3">
-      <value>22uF 50V</value>
+      <value>22uF 35V</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">CL32 series 1210 X7R 22uF 50V</field>
+        <field name="MPN">CL32 series 1210 X7R 22uF 35V</field>
         <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MPN" value="CL32 series 1210 X7R 22uF 50V"/>
+      <property name="MPN" value="CL32 series 1210 X7R 22uF 35V"/>
       <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -253,17 +253,17 @@
       </units>
     </comp>
     <comp ref="C5">
-      <value>22uF 50V</value>
+      <value>22uF 35V</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">CL32 series 1210 X7R 22uF 50V</field>
+        <field name="MPN">CL32 series 1210 X7R 22uF 35V</field>
         <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MPN" value="CL32 series 1210 X7R 22uF 50V"/>
+      <property name="MPN" value="CL32 series 1210 X7R 22uF 35V"/>
       <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -561,17 +561,17 @@
       </units>
     </comp>
     <comp ref="C107">
-      <value>22uF 50V</value>
+      <value>22uF 35V</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">CL32 series 1210 X7R 22uF 50V</field>
+        <field name="MPN">CL32 series 1210 X7R 22uF 35V</field>
         <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MPN" value="CL32 series 1210 X7R 22uF 50V"/>
+      <property name="MPN" value="CL32 series 1210 X7R 22uF 35V"/>
       <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -813,17 +813,17 @@
       </units>
     </comp>
     <comp ref="D2">
-      <value>SS16</value>
+      <value>S1M</value>
       <footprint>Diode_SMD:D_SMA</footprint>
       <fields>
-        <field name="MPN">SS16</field>
+        <field name="MPN">S1M</field>
         <field name="Manufacturer">Diodes Incorporated</field>
         <field name="Footprint">Diode_SMD:D_SMA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
-      <property name="MPN" value="SS16"/>
+      <property name="MPN" value="S1M"/>
       <property name="Manufacturer" value="Diodes Incorporated"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -841,17 +841,17 @@
       </units>
     </comp>
     <comp ref="D3">
-      <value>SS16</value>
+      <value>S1M</value>
       <footprint>Diode_SMD:D_SMA</footprint>
       <fields>
-        <field name="MPN">SS16</field>
+        <field name="MPN">S1M</field>
         <field name="Manufacturer">Diodes Incorporated</field>
         <field name="Footprint">Diode_SMD:D_SMA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
-      <property name="MPN" value="SS16"/>
+      <property name="MPN" value="S1M"/>
       <property name="Manufacturer" value="Diodes Incorporated"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1287,18 +1287,18 @@
       </units>
     </comp>
     <comp ref="L1">
-      <value>22uH 1.5A</value>
-      <footprint>Inductor_SMD:L_Bourns_SRN6045TA</footprint>
+      <value>22uH 1.4A</value>
+      <footprint>LeanCam:L_SXN_SMNR5040</footprint>
       <fields>
-        <field name="MPN">SRN6045TA-220M</field>
-        <field name="Manufacturer">Bourns</field>
-        <field name="Footprint">Inductor_SMD:L_Bourns_SRN6045TA</field>
+        <field name="MPN">SMNR5040-220MT</field>
+        <field name="Manufacturer">SXN (Shun Xiang Nuo Elec)</field>
+        <field name="Footprint">LeanCam:L_SXN_SMNR5040</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
-      <property name="MPN" value="SRN6045TA-220M"/>
-      <property name="Manufacturer" value="Bourns"/>
+      <property name="MPN" value="SMNR5040-220MT"/>
+      <property name="Manufacturer" value="SXN (Shun Xiang Nuo Elec)"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
@@ -1315,18 +1315,18 @@
       </units>
     </comp>
     <comp ref="L2">
-      <value>47uH 1.5A</value>
-      <footprint>Inductor_SMD:L_Bourns_SRN6045TA</footprint>
+      <value>47uH 0.9A</value>
+      <footprint>LeanCam:L_SXN_SMNR5040</footprint>
       <fields>
-        <field name="MPN">SRN6045TA-470M</field>
-        <field name="Manufacturer">Bourns</field>
-        <field name="Footprint">Inductor_SMD:L_Bourns_SRN6045TA</field>
+        <field name="MPN">SMNR5040-470MT</field>
+        <field name="Manufacturer">SXN (Shun Xiang Nuo Elec)</field>
+        <field name="Footprint">LeanCam:L_SXN_SMNR5040</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
-      <property name="MPN" value="SRN6045TA-470M"/>
-      <property name="Manufacturer" value="Bourns"/>
+      <property name="MPN" value="SMNR5040-470MT"/>
+      <property name="Manufacturer" value="SXN (Shun Xiang Nuo Elec)"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
@@ -6248,18 +6248,18 @@
       </units>
     </comp>
     <comp ref="U42">
-      <value>TC74AC541F</value>
+      <value>MC74AC541DWR2G</value>
       <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
       <fields>
-        <field name="MPN">TC74AC541F</field>
-        <field name="Manufacturer">Toshiba</field>
+        <field name="MPN">MC74AC541DWR2G</field>
+        <field name="Manufacturer">onsemi</field>
         <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="LeanCam" part="OctalBuffer5V" description="Octal non-inverting 3-state buffer, SN74AHCT541DW pinout"/>
-      <property name="MPN" value="TC74AC541F"/>
-      <property name="Manufacturer" value="Toshiba"/>
+      <property name="MPN" value="MC74AC541DWR2G"/>
+      <property name="Manufacturer" value="onsemi"/>
       <property name="Sheetname" value="PLC OUT"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-20W*"/>
@@ -6293,18 +6293,18 @@
       </units>
     </comp>
     <comp ref="U43">
-      <value>TC74AC541F</value>
+      <value>MC74AC541DWR2G</value>
       <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
       <fields>
-        <field name="MPN">TC74AC541F</field>
-        <field name="Manufacturer">Toshiba</field>
+        <field name="MPN">MC74AC541DWR2G</field>
+        <field name="Manufacturer">onsemi</field>
         <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="LeanCam" part="OctalBuffer5V" description="Octal non-inverting 3-state buffer, SN74AHCT541DW pinout"/>
-      <property name="MPN" value="TC74AC541F"/>
-      <property name="Manufacturer" value="Toshiba"/>
+      <property name="MPN" value="MC74AC541DWR2G"/>
+      <property name="Manufacturer" value="onsemi"/>
       <property name="Sheetname" value="PLC OUT"/>
       <property name="Sheetfile" value="field_outputs.kicad_sch"/>
       <property name="ki_fp_filters" value="SOIC-20W*"/>
@@ -6827,16 +6827,16 @@
     </comp>
     <comp ref="RN26">
       <value>4x330R</value>
-      <footprint>Resistor_SMD:R_Array_Convex_4x1206</footprint>
+      <footprint>Resistor_SMD:R_Array_Convex_4x0603</footprint>
       <fields>
-        <field name="MPN">YC324-FR-07330RL</field>
+        <field name="MPN">YC164-FR-07330RL</field>
         <field name="Manufacturer">Yageo</field>
-        <field name="Footprint">Resistor_SMD:R_Array_Convex_4x1206</field>
+        <field name="Footprint">Resistor_SMD:R_Array_Convex_4x0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="LeanCam" part="ResistorPack04" description="Four isolated resistors in one SMD array"/>
-      <property name="MPN" value="YC324-FR-07330RL"/>
+      <property name="MPN" value="YC164-FR-07330RL"/>
       <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="Display"/>
       <property name="Sheetfile" value="display.kicad_sch"/>
@@ -6860,16 +6860,16 @@
     </comp>
     <comp ref="RN27">
       <value>4x330R</value>
-      <footprint>Resistor_SMD:R_Array_Convex_4x1206</footprint>
+      <footprint>Resistor_SMD:R_Array_Convex_4x0603</footprint>
       <fields>
-        <field name="MPN">YC324-FR-07330RL</field>
+        <field name="MPN">YC164-FR-07330RL</field>
         <field name="Manufacturer">Yageo</field>
-        <field name="Footprint">Resistor_SMD:R_Array_Convex_4x1206</field>
+        <field name="Footprint">Resistor_SMD:R_Array_Convex_4x0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="LeanCam" part="ResistorPack04" description="Four isolated resistors in one SMD array"/>
-      <property name="MPN" value="YC324-FR-07330RL"/>
+      <property name="MPN" value="YC164-FR-07330RL"/>
       <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="Display"/>
       <property name="Sheetfile" value="display.kicad_sch"/>
@@ -7688,17 +7688,17 @@
       </units>
     </comp>
     <comp ref="C100">
-      <value>22uF 50V</value>
+      <value>22uF 35V</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
       <fields>
-        <field name="MPN">CL32 series 1210 X7R 22uF 50V</field>
+        <field name="MPN">CL32 series 1210 X7R 22uF 35V</field>
         <field name="Manufacturer">Samsung Electro-Mechanics</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MPN" value="CL32 series 1210 X7R 22uF 50V"/>
+      <property name="MPN" value="CL32 series 1210 X7R 22uF 35V"/>
       <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
       <property name="Sheetname" value="Analog I/O"/>
       <property name="Sheetfile" value="analog_io.kicad_sch"/>

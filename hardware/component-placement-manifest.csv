@@ -1,8 +1,8 @@
 reference,value,sheet,functional_block,channels,role,associated_ic_or_net,placement_rule,current_status,side,x_mm,y_mm,dnp,nets
 C2,100nF 100V,Power,Power,,input bypass capacitor,VIN_F input filter,place in functional block; keep GND return short,inside,F.Cu,115.062,16.51,False,GND; VIN_F
-C3,22uF 50V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,23.641,False,GND; VIN_P
+C3,22uF 35V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,23.641,False,GND; VIN_P
 C4,100nF 100V,Power,Power,,decoupling capacitor,U1 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,109.316,23.641,False,GND; VIN_P
-C5,22uF 50V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,23.641,False,GND; VIN_P
+C5,22uF 35V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,23.641,False,GND; VIN_P
 C6,22uF 10V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,29.352,False,5V; GND
 C7,100nF,Power,Power,,decoupling capacitor,U1 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,109.316,28.852,False,5V; GND
 C10,22uF 10V,Power,Power,,bulk input capacitor,U2 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,122.936,29.21,False,5V; GND
@@ -13,7 +13,7 @@ C76,100nF,Power,Power,,decoupling capacitor,U2 input,place immediately beside as
 C86,100nF,Power,Power,,bootstrap capacitor,U1 BOOT to SW,place directly between regulator BOOT and SW pins,inside,F.Cu,98.648,24.403,False,B5_BST; B5_SW
 C90,22uF 10V,Power,Power,,bulk output capacitor,U2 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,125.984,41.279,False,3V3; GND
 C91,1uF,Power,Power,,IC VCC bypass capacitor,U1 VCC,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,98.648,20.847,False,B5_VCC; GND
-C107,22uF 50V,Power,Power,,bulk input capacitor,U3 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,27.686,21.082,False,BL_VIN; PLC_0V
+C107,22uF 35V,Power,Power,,bulk input capacitor,U3 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,27.686,21.082,False,BL_VIN; PLC_0V
 C108,100nF 100V,Power,Power,,decoupling capacitor,U3 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,27.686,24.13,False,BL_VIN; PLC_0V
 C109,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,22.098,False,BL_12V; PLC_0V
 C110,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,18.542,False,BL_12V; PLC_0V
@@ -22,16 +22,16 @@ C112,100nF,Power,Power,,decoupling capacitor,U3 output,place immediately beside 
 C113,100nF,Power,Power,,bootstrap capacitor,U3 BOOT to SW,place directly between regulator BOOT and SW pins,inside,F.Cu,30.734,35.052,False,B12_BST; B12_SW
 C114,1uF,Power,Power,,IC VCC bypass capacitor,U3 VCC,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,26.924,35.052,False,B12_VCC; PLC_0V
 D1,SMBJ24CA,Power,Power,,diode,protection/clamp/rectification,place in functional block; keep GND return short,inside,F.Cu,114.3,8.89,False,GND; VIN_F
-D2,SS16,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,111.76,17.018,False,VIN_F; VIN_P
-D3,SS16,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,25.908,15.748,False,BL_VIN; PLC_24V
+D2,S1M,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,111.76,17.018,False,VIN_F; VIN_P
+D3,S1M,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,25.908,15.748,False,BL_VIN; PLC_24V
 D4,5V LED,Power,Power,,LED,indicator/protection,place in functional block; keep GND return short,inside,F.Cu,91.965,33.02,False,GND; P5V_LED
 D5,3V3 LED,Power,Power,,LED,indicator/protection,place in functional block; keep GND return short,inside,F.Cu,91.948,36.576,False,GND; P3V3_LED
 F1,2 A,Power,Power,,fuse,input/load protection,place with functional block; review after placement,inside,F.Cu,114.554,4.572,False,VIN; VIN_F
 FB1,600R@100MHz,Power,Power,,ferrite bead,rail filtering,place with functional block; review after placement,inside,F.Cu,99.568,39.624,False,3V3; ADC_3V3
 J1,24+ GND,Power,main power connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,106.38,6.215,False,GND; VIN
 J2,BL12+ PLC_0V,Power,backlight/CCFL connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,33.2,6.215,False,BL_12V; PLC_0V
-L1,22uH 1.5A,Power,Power,,inductor,switching power stage,place with functional block; review after placement,inside,F.Cu,104.14,29.352,False,5V; B5_SW
-L2,47uH 1.5A,Power,Power,,inductor,switching power stage,place with functional block; review after placement,inside,F.Cu,35.306,29.972,False,B12_SW; BL_12V
+L1,22uH 1.4A,Power,Power,,inductor,switching power stage,place with functional block; review after placement,inside,F.Cu,104.14,29.352,False,5V; B5_SW
+L2,47uH 0.9A,Power,Power,,inductor,switching power stage,place with functional block; review after placement,inside,F.Cu,35.306,29.972,False,B12_SW; BL_12V
 R4,1k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,97.79,33.02,False,5V; P5V_LED
 R5,1k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,97.663,36.576,False,3V3; P3V3_LED
 R70,33k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,104.806,16.256,False,5V; FB5_T
@@ -193,8 +193,8 @@ RN39,4x1k,PLC OUT,PLC OUT,output bit 24; output bit 25; output bit 26; output bi
 RN40,4x1k,PLC OUT,PLC OUT,output bit 28; output bit 29; output bit 30; output bit 31,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,80.264,56.642,False,OD13; OD14; OD15; OD16; OUT28; OUT29; OUT30; OUT31
 U26,TBD62083AFG,PLC OUT,PLC OUT,ULN output 0; ULN output 1; ULN output 2; ULN output 3; ULN output 4; ULN output 5; ULN output 6; ULN output 7,IC,active device,place with functional block; review after placement,inside,F.Cu,56.642,33.528,False,D01; D02; D03; D04; D05; D06; D07; D08; PLC_0V; PLC_24V; TD01; TD02; TD03; TD04; TD05; TD06; TD07; TD08
 U27,TBD62083AFG,PLC OUT,PLC OUT,ULN output 10; ULN output 11; ULN output 12; ULN output 13; ULN output 14; ULN output 15; ULN output 8; ULN output 9,IC,active device,place with functional block; review after placement,inside,F.Cu,78.994,33.528,False,D09; D10; D11; D12; D13; D14; D15; D16; PLC_0V; PLC_24V; TD09; TD10; TD11; TD12; TD13; TD14; TD15; TD16
-U42,TC74AC541F,PLC OUT,PLC OUT,motion axis 0; output bit 0; motion axis 1; output bit 1; motion axis 2; output bit 2; motion axis 3; output bit 3; output bit 4; output bit 5; output bit 6; output bit 7,IC,active device,place in functional block; keep GND return short,inside,F.Cu,27.94,48.514,False,5V; DIR0; DIR1; DIR2; DIR3; GND; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7; STP0; STP1; STP2; STP3
-U43,TC74AC541F,PLC OUT,PLC OUT,output bit 10; output bit 11; output bit 12; output bit 13; output bit 14; output bit 15; motion axis 4; motion axis 5; motion axis 6; output bit 8; output bit 9,IC,active device,place in functional block; keep GND return short,inside,F.Cu,42.418,48.514,False,5V; DIR4; DIR5; DIR6; EN3; EN4; GND; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9; STP4; STP5; STP6
+U42,MC74AC541DWR2G,PLC OUT,PLC OUT,motion axis 0; output bit 0; motion axis 1; output bit 1; motion axis 2; output bit 2; motion axis 3; output bit 3; output bit 4; output bit 5; output bit 6; output bit 7,IC,active device,place in functional block; keep GND return short,inside,F.Cu,27.94,48.514,False,5V; DIR0; DIR1; DIR2; DIR3; GND; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7; STP0; STP1; STP2; STP3
+U43,MC74AC541DWR2G,PLC OUT,PLC OUT,output bit 10; output bit 11; output bit 12; output bit 13; output bit 14; output bit 15; motion axis 4; motion axis 5; motion axis 6; output bit 8; output bit 9,IC,active device,place in functional block; keep GND return short,inside,F.Cu,42.418,48.514,False,5V; DIR4; DIR5; DIR6; EN3; EN4; GND; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9; STP4; STP5; STP6
 U61,TLP291-4,PLC OUT,PLC OUT,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,67.056,46.99,False,GND; OD01; OD02; OD03; OD04; PLC_24V; TD01; TD02; TD03; TD04
 U62,TLP291-4,PLC OUT,PLC OUT,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,56.134,46.99,False,GND; OD05; OD06; OD07; OD08; PLC_24V; TD05; TD06; TD07; TD08
 U63,TLP291-4,PLC OUT,PLC OUT,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,88.9,46.99,False,GND; OD09; OD10; OD11; OD12; PLC_24V; TD09; TD10; TD11; TD12
@@ -238,7 +238,7 @@ C96,1uF,Analog I/O,analog output 2,analog output 2,signal filter capacitor,signa
 C97,100nF,Analog I/O,analog output 2,analog output 2,signal filter capacitor,signal conditioning,place at protected node; keep branch short,inside,F.Cu,145.485,22.387,False,AO2_2; GND
 C98,1uF,Analog I/O,analog output 3,analog output 3,signal filter capacitor,signal conditioning,place at protected node; keep branch short,inside,F.Cu,136.834,19.593,False,AO3_1; GND
 C99,100nF,Analog I/O,analog output 3,analog output 3,signal filter capacitor,signal conditioning,place at protected node; keep branch short,inside,F.Cu,142.985,22.387,False,AO3_2; GND
-C100,22uF 50V,Analog I/O,analog output power,,decoupling capacitor,U37 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,147.574,13.709,False,GND; VIN_P
+C100,22uF 35V,Analog I/O,analog output power,,decoupling capacitor,U37 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,147.574,13.709,False,GND; VIN_P
 C101,22uF 25V,Analog I/O,analog output power,,bulk output capacitor,U37 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.574,18.034,False,AO_12V; GND
 C102,100nF,Analog I/O,analog output power,,decoupling capacitor,U38 AO_12V,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,138.176,30.48,False,AO_12V; GND
 C118,100nF,Analog I/O,analog input 3,analog input 3,ADC filter capacitor,ADC3 / MOD1 pin 21,place beside J24 with its channel divider; keep the high-impedance branch short,inside,F.Cu,142.748,43.942,False,ADC3; GND

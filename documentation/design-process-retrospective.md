@@ -88,7 +88,7 @@ scope was reduced and the redundant circuitry was removed.
 | PCB footprints | 305 | 275 | -30 |
 | Physical BOM items | 299 | 270 | -29 |
 | BOM purchasing groups | 101 | 49 | -52 |
-| SMT references | not separated in the first snapshot | 236 | current assembly metric |
+| SMT references | not separated in the first snapshot | 235 | current assembly metric |
 
 Component count alone does not describe the simplification. Many parts were
 replaced by functionally denser devices while other whole functions were
@@ -164,7 +164,9 @@ that is checked into Git and is ready to send:
 - `uCNC_Pi_Board_PCB_Fabrication.zip` for bare PCB fabrication
 - `uCNC_Pi_Board_SMT_Assembly.zip` for PCB fabrication plus SMT assembly
 - 270 physical BOM items in 51 purchasing groups
-- 236 matched SMT BOM and CPL references
+- 235 matched SMT BOM and CPL references
+- 269 automated JLC assembly references; F1 remains manual-fit pending a
+  correctly rated 24 V fuse
 - 275 visible PCB references
 - two copper layers and a nominal 160 x 120 mm outline
 - zero DRC errors and zero unconnected items
@@ -235,7 +237,7 @@ not autonomous design.
 - The final PCB is electrically connected with zero DRC errors and zero
   unconnected items.
 - All 275 component references are visible and use one silkscreen text size.
-- The manufacturing BOM and CPL are cross-checked at 236 SMT references.
+- The manufacturing BOM and CPL are cross-checked at 235 SMT references.
 - Rendered 3D images now use content-addressed filenames to avoid stale browser
   caches.
 

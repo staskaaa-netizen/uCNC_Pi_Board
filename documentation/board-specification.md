@@ -5,8 +5,8 @@ Generated review documents:
 - [Combined board review](../manufacturing/board-review.pdf)
 - [Front artwork and assembly layer](../manufacturing/board-front.pdf)
 - [Mirrored rear artwork](../manufacturing/board-back.pdf)
-- [Current top 3D render](../manufacturing/board-3d-top-c9b26a24.png)
-- [Current bottom 3D render](../manufacturing/board-3d-bottom-c9b26a24.png)
+- [Current top 3D render](../manufacturing/board-3d-top-4a6d41f8.png)
+- [Current bottom 3D render](../manufacturing/board-3d-bottom-4a6d41f8.png)
 
 ## Board summary
 
@@ -93,8 +93,9 @@ All 309 visible footprint reference/value fields use a uniform 0.8 mm text size
 and 0.12 mm stroke. Functional LED values such as `D01-D16` remain
 documentation-only on `F.Fab`.
 
-The 3.3 V 74AHCT595 outputs drive two TC74AC541F buffers powered from 5 V.
-The buffers provide the 5 V STEP, DIR and enable outputs.
+The 5 V SN74AHCT595 outputs drive two MC74AC541DWR2G wide-body SOIC-20 buffers
+in the 7.5 x 12.8 mm package. The buffers provide the 5 V STEP, DIR and enable
+outputs.
 
 J40, J41, J42, J43, J50, J49 and J48 are the paired inputs for A0-A6. Each is
 3-pin: `GND`, `ERR`, `Z`. J13-J15 are 5 V encoder connectors. U28 converts the 5 V A/B/Z
@@ -104,9 +105,9 @@ pull-ups.
 ## Display, storage and expansion
 
 J22 is a 2 x 10, 2.00 mm LCD interface on F.Cu. It carries four HSTX
-differential channels through RN26/RN27 4 x 330 ohm arrays. Pins 1-6 supply
-3.3 V and ground, pins 7-16 carry D0, D1, D2 and clock, and pins 17-20 are
-unconnected.
+differential channels through RN26/RN27 4 x 330 ohm, 4 x 0603 arrays. Pins 1-6
+supply 3.3 V and ground, pins 7-16 carry D0, D1, D2 and clock, and pins 17-20
+are unconnected.
 
 J2 carries isolated `BL_12V` and `PLC_0V` for the backlight. PWM switching,
 current limiting, any CCFL inverter and high-current LED drive remain off

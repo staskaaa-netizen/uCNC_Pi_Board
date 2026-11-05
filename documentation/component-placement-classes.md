@@ -73,7 +73,7 @@ Servo status channels use direct 3.3 V logic. U6/U7 data-pin assignments are in
 ## Digital output block
 
 U10-U13 are the cascaded 5 V SN74AHCT595 registers. Their local bypasses are
-C29-C26, respectively. OUT0-OUT15 feed the two TC74AC541F motion buffers;
+C29-C26, respectively. OUT0-OUT15 feed the two MC74AC541DWR2G motion buffers;
 U42 handles OUT0-OUT7 and U43 handles OUT8-OUT15.
 
 General outputs use this chain:
@@ -123,6 +123,6 @@ J36 and J54 share the same SPI signals. RN43 provides four 10 k pull-ups and
 RN44 provides four 22 ohm series resistors. FB2, C67 and C68 form the
 `SD_3V3` filter beside the storage interface. JP5 enables card detect.
 
-RN26/RN27 are the 4 x 330 ohm HSTX series arrays. They sit beside J22. Keep each
-differential pair short and preserve the P/N assignment documented in
-`documentation/display-population.md`.
+RN26/RN27 are the 4 x 330 ohm, 4 x 0603 HSTX series arrays. They sit beside
+J22. Keep each differential pair short and preserve the P/N assignment
+documented in `documentation/display-population.md`.

@@ -4,10 +4,14 @@
   "full_bom_groups": 51,
   "smt_bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-smt.csv",
   "smt_reference_bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-smt-refs.csv",
-  "smt_parts": 236,
-  "smt_bom_groups": 42,
-  "excluded_non_smd": 34,
+  "smt_parts": 235,
+  "smt_bom_groups": 41,
+  "excluded_non_smd": 35,
   "excluded_references": [
+    [
+      "F1",
+      "MANUAL"
+    ],
     [
       "J1",
       "PTH"

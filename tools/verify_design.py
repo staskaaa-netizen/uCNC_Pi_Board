@@ -68,8 +68,10 @@ def main() -> None:
         rule_text = RULES.read_text(encoding="utf-8")
         if "memberOfFootprint('J22')" not in rule_text:
             failures.append("Missing J22-specific LVDS footprint rule")
+        if "LVDS connector geometry" in rule_text:
+            failures.append("Obsolete 0.12 mm LVDS track-width rule remains")
         if "(min 0.12mm)" not in rule_text:
-            failures.append("J22 LVDS footprint rule is not 0.12 mm")
+            failures.append("J22 LVDS clearance rule is not 0.12 mm")
         if "A.NetName == 'LVDS_*'" not in rule_text:
             failures.append("LVDS rules are not independent of rewritten netclasses")
 
@@ -298,8 +300,8 @@ def main() -> None:
         if (reference, "16") not in nets.get("+3V3", set()):
             failures.append(f"{reference} input register is not powered from +3V3")
     for reference in ("U42", "U43"):
-        if component_values.get(reference) != "TC74AC541F":
-            failures.append(f"{reference} is not a TC74AC541F motion buffer")
+        if component_values.get(reference) != "MC74AC541DWR2G":
+            failures.append(f"{reference} is not an MC74AC541DWR2G motion buffer")
         component = components_by_ref.get(reference)
         if not component or not (component.findtext("footprint") or "").strip().startswith(
             "Package_SO:SOIC-20W"
@@ -748,7 +750,7 @@ def main() -> None:
     if ("D3", "2") not in nets.get("+24V_FIELD", set()):
         failures.append("D3 anode is not on +24V_FIELD")
     for reference, value in (
-        ("L2", "47uH 1.5A"), ("R126", "100k"),
+        ("L2", "47uH 0.9A"), ("R126", "100k"),
         ("R127", "10k"), ("R128", "100k"),
     ):
         if component_values.get(reference) != value:
@@ -1174,8 +1176,8 @@ def main() -> None:
             failures.append(f"WeAct 3V3 output pin {pin} must remain local to the module")
     if ("MOD1", "31") not in nets.get("+5V", set()):
         failures.append("WeAct 5 V input is not connected to the main 5 V rail")
-    if component_values.get("D2") != "SS16":
-        failures.append("D2 is not the intended 1 A input diode")
+    if component_values.get("D2") != "S1M":
+        failures.append("D2 is not the approved S1M input diode")
     if ("D2", "1") not in nets.get("VIN_PROT", set()):
         failures.append("D2 cathode is not on VIN_PROT")
     if ("D2", "2") not in nets.get("VIN_FUSED", set()):

@@ -1,8 +1,8 @@
 # LCD LVDS interface
 
 J22 is the only display connector. It is a 2 x 10, 2.00 mm header on F.Cu. The
-RP2350 HSTX pins drive four differential channels through two 4 x 330 ohm
-resistor arrays:
+RP2350 HSTX pins drive four differential channels through two 4 x 330 ohm,
+4 x 0603 resistor arrays:
 
 | RP2350 function | GPIO | J22 pins |
 |---|---:|---:|
@@ -54,7 +54,7 @@ target panel, cable length and PicoLVDS-compatible source configuration before
 release.
 
 The HSTX source pairs use the 0.20 mm `DigitalDiffPair` net class. The J22
-fan-out uses the 0.12 mm `LVDSConnector` class so the tracks clear the 2.00 mm
+fan-out uses the 0.20 mm `LVDSConnector` class so the tracks clear the 2.00 mm
 connector pads. A compact legend on B.Silkscreen identifies supply, ground,
 data, clock and no-connect pin groups.
 

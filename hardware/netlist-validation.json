@@ -14,5 +14,10 @@
     "FLG9",
     "FLG10"
   ],
-  "failures": []
+  "failures": [
+    "U42 is not an SN74AC541DW motion buffer",
+    "U43 is not an SN74AC541DW motion buffer",
+    "L2 is not 47uH 1.5A",
+    "D2 is not the intended 1 A input diode"
+  ]
 }

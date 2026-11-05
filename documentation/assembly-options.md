@@ -35,7 +35,8 @@ supervisor.
 - U6-U9 are 74HC165D input registers at `3V3`.
 - U10-U13 are SN74AHCT595DR output registers at `5V`.
 - U28 is an SN74AHCT541DW encoder receiver at `3V3`.
-- U42/U43 are TC74AC541F motion buffers at `5V`.
+- U42/U43 are onsemi MC74AC541DWR2G wide-body SOIC-20 motion buffers at `5V`,
+  using the `SOIC-20W_7.5x12.8mm_P1.27mm` footprint.
 - U26/U27 are TBD62083AFG low-side output arrays.
 - U18-U21 are TLP291-4 PLC input optocouplers.
 - U35 is the dedicated E-stop TLP291.
@@ -50,8 +51,9 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 - General 100 nF and 1 uF bypasses: 0805.
 - 10 uF capacitors: 1206, 25 V X7R.
 - 100 nF / 100 V input bypasses: 1206.
-- 22 uF bulk capacitors: 1210 X7R, 10 V on 5 V/3.3 V rails, 25 V on
-  12 V rails and 50 V on 24 V input rails.
+- 22 uF bulk capacitors: 1210, 10 V on 5 V/3.3 V rails, 25 V on 12 V rails
+  and an approved 35 V X5R substitution on the nominal 24 V input rails.
+- Switching inductors: L1/L2 are SXN SMNR5040 5 x 5 x 4 mm parts.
 - Analog divider resistors: 1206, 1%.
 - Analog signal and feedback resistors: 0805, 1%.
 - Field 2.2 k LED/input resistors: 1206.
@@ -61,7 +63,7 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 - All indicators: Lite-On `LTST-C150KGKT`, green 1206 LED.
 - SD pull-ups: RN43, 4 x 10 k.
 - SD series resistors: RN44, 4 x 22 ohm.
-- LVDS series resistors: RN26/RN27, 4 x 330 ohm, 4 x 1206.
+- LVDS series resistors: RN26/RN27, 4 x 330 ohm, 4 x 0603.
 
 The 5 V and 3.3 V 22 uF bulk capacitors use 10 V parts, the 12 V rails use
 25 V parts, and the 24 V-side input capacitors use 50 V or 100 V ratings as

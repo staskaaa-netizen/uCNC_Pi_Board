@@ -18,6 +18,11 @@ ROOT = Path(__file__).resolve().parents[1]
 MANUFACTURING = ROOT / "manufacturing"
 PACKAGES = MANUFACTURING / "packages"
 BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
+JLC_PART_SOURCE = MANUFACTURING / "RP23CNC_JLCPCB_BOM_upload.csv"
+JLC_PART_HOLDS: dict[str, str] = {}
+JLC_MANUAL_ONLY = {
+    "F1": "Manual fit; supplied PTC is rated for 12 V maximum, not the 24 V input.",
+}
 DEFAULT_KICAD_CLI = (
     r"C:\Users\s.zachazevski\AppData\Local\Programs\KiCad\10.0\bin\kicad-cli.exe"
 )
@@ -240,6 +245,7 @@ def write_jlcpcb_files(
     cpl_path: Path,
     bom_path: Path,
     output_dir: Path,
+    part_mapping: dict[str, str],
 ) -> dict:
     cpl_rows = list(
         csv.DictReader(cpl_path.open(newline="", encoding="utf-8"))
@@ -260,20 +266,20 @@ def write_jlcpcb_files(
     )
     jlc_bom_rows = []
     bom_references = []
+    blank_part_groups = 0
     for row in bom_rows:
-        references = [
-            reference
-            for reference in re.split(r"[\s,]+", row["References"].strip())
-            if reference
-        ]
+        references = split_references(row["References"])
         bom_references.extend(references)
         footprint = row["Footprint"].split(":", 1)[-1]
+        part_number = part_number_for_refs(references, part_mapping)
+        if not part_number:
+            blank_part_groups += 1
         jlc_bom_rows.append(
             {
                 "Comment": row["Design Values"],
                 "Designator": ",".join(references),
                 "Footprint": footprint,
-                "JLCPCB Part #": "",
+                "JLCPCB Part #": part_number,
             }
         )
 
@@ -322,7 +328,8 @@ def write_jlcpcb_files(
         "smt_references": len(cpl_references),
         "bom_groups": len(jlc_bom_rows),
         "references_match": True,
-        "jlcpartnumber_blank_groups": len(jlc_bom_rows),
+        "jlcpartnumber_blank_groups": blank_part_groups,
+        "jlcpartnumber_holds": JLC_PART_HOLDS,
         "units": "mm",
         "coordinate_origin": "board lower-left",
     }
@@ -429,17 +436,34 @@ def write_bom_variants(
 
     non_smt_jlc_path = output_dir / "bom-non-smt-jlcpcb.csv"
     write_jlc_bom(non_smt_groups, non_smt_jlc_path)
+    jlc_all_rows = []
+    jlc_all_references = []
+    for row in full_rows:
+        references = [
+            reference
+            for reference in split_references(row["References"])
+            if reference not in JLC_MANUAL_ONLY
+        ]
+        if not references:
+            continue
+        filtered = dict(row)
+        filtered["Quantity"] = str(len(references))
+        filtered["References"] = " ".join(references)
+        jlc_all_rows.append(filtered)
+        jlc_all_references.extend(references)
     all_jlc_path = output_dir / "bom-all-jlcpcb.csv"
-    write_jlc_bom(full_rows, all_jlc_path)
+    write_jlc_bom(jlc_all_rows, all_jlc_path)
 
-    if len(all_references) != len(set(all_references)):
+    if len(jlc_all_references) != len(set(jlc_all_references)):
         raise RuntimeError("Duplicate reference in full BOM")
     return {
         "non_smt_groups": len(non_smt_groups),
         "non_smt_references": len(non_smt_references),
-        "all_groups": len(full_rows),
-        "all_references": len(all_references),
+        "all_groups": len(jlc_all_rows),
+        "all_references": len(jlc_all_references),
         "smt_references": len(smt_references),
+        "manual_only_references": sorted(JLC_MANUAL_ONLY),
+        "manual_only_reasons": JLC_MANUAL_ONLY,
     }
 
 
@@ -456,16 +480,50 @@ def write_jlc_bom(rows: list[dict[str, str]], output_path: Path) -> None:
         )
         writer.writeheader()
         for row in rows:
+            references = split_references(row["References"])
             writer.writerow(
                 {
                     "Comment": row["Design Values"],
-                    "Designator": ",".join(
-                        split_references(row["References"])
-                    ),
+                    "Designator": ",".join(references),
                     "Footprint": row["Footprint"].split(":", 1)[-1],
-                    "JLCPCB Part #": "",
+                    "JLCPCB Part #": part_number_for_refs(
+                        references,
+                        load_jlc_part_mapping(),
+                    ),
                 }
             )
+
+
+def load_jlc_part_mapping() -> dict[str, str]:
+    if not JLC_PART_SOURCE.exists():
+        return {}
+    mapping = {}
+    with JLC_PART_SOURCE.open(newline="", encoding="utf-8-sig") as handle:
+        for row in csv.DictReader(handle):
+            part_number = row["JLCPCB Part #"].strip()
+            for reference in split_references(row["Designator"]):
+                if part_number:
+                    mapping[reference] = part_number
+    return mapping
+
+
+def part_number_for_refs(
+    references: list[str],
+    mapping: dict[str, str],
+) -> str:
+    if any(reference in JLC_PART_HOLDS for reference in references):
+        return ""
+    part_numbers = {
+        mapping[reference]
+        for reference in references
+        if reference in mapping
+    }
+    if len(part_numbers) > 1:
+        raise RuntimeError(
+            f"Conflicting JLCPCB part numbers for {references}: "
+            f"{sorted(part_numbers)}"
+        )
+    return next(iter(part_numbers), "")
 
 
 def format_rotation(value: str) -> str:
@@ -532,6 +590,7 @@ PCB fabrication only.
         MANUFACTURING / "cpl.csv",
         MANUFACTURING / "bom-smt.csv",
         MANUFACTURING,
+        load_jlc_part_mapping(),
     )
     bom_variant_report = write_bom_variants(
         MANUFACTURING / "bom.csv",
@@ -568,6 +627,14 @@ PCB fabrication only.
         (MANUFACTURING / "cpl.csv", assembly / "cpl.csv"),
         (MANUFACTURING / "cpl-jlcpcb.csv", assembly / "cpl-jlcpcb.csv"),
         (MANUFACTURING / "jlcpcb-report.json", assembly / "jlcpcb-report.json"),
+        (
+            MANUFACTURING / "RP23CNC_JLCPCB_BOM_upload.csv",
+            assembly / "RP23CNC_JLCPCB_BOM_upload.csv",
+        ),
+        (
+            MANUFACTURING / "RP23CNC_JLCPCB_BOM_for_Codex_with_part_numbers.csv",
+            assembly / "RP23CNC_JLCPCB_BOM_for_Codex_with_part_numbers.csv",
+        ),
         (MANUFACTURING / "board-front.pdf", assembly / "assembly-front.pdf"),
         (MANUFACTURING / "board-back.pdf", assembly / "assembly-back.pdf"),
         (
@@ -592,20 +659,22 @@ PCB fabrication plus SMT assembly data.
 Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.
 `bom-smt-refs.csv` provides a one-row-per-reference cross-check.
 `bom-jlcpcb.csv` and `cpl-jlcpcb.csv` use the column names commonly requested
-by JLCPCB. The JLCPCB part-number column is present but blank because this
-repository does not contain verified LCSC part numbers.
+by JLCPCB. F1 is excluded from automated assembly because the supplied 2 A PTC
+is rated for 12 V maximum and is not valid on the 24 V input.
 
-Use `bom-non-smt-jlcpcb.csv` for the through-hole and mixed-mount parts, or
-upload `bom-all-jlcpcb.csv` when requesting one combined SMT and through-hole
-assembly quotation.
+Use `bom-non-smt-jlcpcb.csv` for the through-hole and manual-fit parts, or
+upload `bom-all-jlcpcb.csv` when requesting one combined JLC assembly
+quotation. F1 is intentionally excluded from JLC assembly and listed in the
+manual/non-SMT BOM.
 
 J54 is included in the SMT BOM and CPL because all of its electrical pads are
 SMD; its two unnumbered locating holes are NPTH. All through-hole connectors
 and modules are excluded from the SMT BOM and CPL and listed separately in
 `bom-non-smt.csv`. `bom-full.csv` lists the complete assembly.
 
-LCSC part numbers are not present. The BOM is suitable for an assembly house
-that sources by manufacturer/MPN; direct JLCPCB upload requires LCSC numbers.
+The supplied JLC part numbers are included. F1 is excluded from automated
+assembly and listed in the separate non-SMT/manual BOM; select a correctly
+rated fuse for the 24 V input before hand-fitting it.
 """
     write_readme(
         assembly,

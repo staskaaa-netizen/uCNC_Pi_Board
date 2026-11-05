@@ -81,7 +81,7 @@
     },
     {
       "reference": "C3",
-      "value": "22uF 50V",
+      "value": "22uF 35V",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -113,7 +113,7 @@
     },
     {
       "reference": "C5",
-      "value": "22uF 50V",
+      "value": "22uF 35V",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -289,7 +289,7 @@
     },
     {
       "reference": "C107",
-      "value": "22uF 50V",
+      "value": "22uF 35V",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -433,7 +433,7 @@
     },
     {
       "reference": "D2",
-      "value": "SS16",
+      "value": "S1M",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -449,7 +449,7 @@
     },
     {
       "reference": "D3",
-      "value": "SS16",
+      "value": "S1M",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -561,7 +561,7 @@
     },
     {
       "reference": "L1",
-      "value": "22uH 1.5A",
+      "value": "22uH 1.4A",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -577,7 +577,7 @@
     },
     {
       "reference": "L2",
-      "value": "47uH 1.5A",
+      "value": "47uH 0.9A",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -3169,7 +3169,7 @@
     },
     {
       "reference": "U42",
-      "value": "TC74AC541F",
+      "value": "MC74AC541DWR2G",
       "sheet": "PLC OUT",
       "functional_block": "PLC OUT",
       "channels": "motion axis 0; output bit 0; motion axis 1; output bit 1; motion axis 2; output bit 2; motion axis 3; output bit 3; output bit 4; output bit 5; output bit 6; output bit 7",
@@ -3185,7 +3185,7 @@
     },
     {
       "reference": "U43",
-      "value": "TC74AC541F",
+      "value": "MC74AC541DWR2G",
       "sheet": "PLC OUT",
       "functional_block": "PLC OUT",
       "channels": "output bit 10; output bit 11; output bit 12; output bit 13; output bit 14; output bit 15; motion axis 4; motion axis 5; motion axis 6; output bit 8; output bit 9",
@@ -3889,7 +3889,7 @@
     },
     {
       "reference": "C100",
-      "value": "22uF 50V",
+      "value": "22uF 35V",
       "sheet": "Analog I/O",
       "functional_block": "analog output power",
       "channels": "",

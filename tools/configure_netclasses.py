@@ -14,12 +14,6 @@ MIN_TRACK_WIDTH_MM = 0.12
 
 RULE_TEXT = """(version 1)
 
-(rule "LVDS connector geometry"
-    (constraint track_width (min 0.12mm) (max 0.12mm) (opt 0.12mm))
-    (constraint diff_pair_gap (min 0.12mm) (opt 0.12mm))
-    (condition "A.NetName == 'LVDS_*'")
-)
-
 (rule "J22 LVDS connector clearance"
     (constraint clearance (min 0.12mm))
     (condition "(A.NetName == 'LVDS_*' && B.memberOfFootprint('J22')) || (B.NetName == 'LVDS_*' && A.memberOfFootprint('J22'))")
@@ -81,12 +75,12 @@ CLASSES = (
     make_class("DigitalDiffPair", 0.2, 0.2, 0.6, 0.3),
     make_class(
         "LVDSConnector",
-        0.12,
-        0.12,
+        0.2,
+        0.2,
         0.6,
         0.3,
-        diff_pair_width=0.12,
-        diff_pair_gap=0.12,
+        diff_pair_width=0.2,
+        diff_pair_gap=0.2,
     ),
     make_class("Analog", 0.25, 0.25, 0.6, 0.3),
 )

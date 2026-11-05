@@ -18,10 +18,10 @@ BOARD = HARDWARE / "motherboard.kicad_pcb"
 
 RATINGS = {
     # 24 V input and isolated field-input rails: retain 50 V parts.
-    "C3": "50V",
-    "C5": "50V",
-    "C100": "50V",
-    "C107": "50V",
+    "C3": "35V",
+    "C5": "35V",
+    "C100": "35V",
+    "C107": "35V",
     # 5 V and 3.3 V rails.
     "C6": "10V",
     "C10": "10V",
