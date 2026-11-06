@@ -87,6 +87,19 @@ def main() -> None:
         replacement.SetLayer(footprint.GetLayer())
         replacement.SetLocked(footprint.IsLocked())
         replacement.SetDNP(footprint.IsDNP())
+        for old_field in footprint.GetFields():
+            new_field = replacement.GetField(old_field.GetName())
+            if new_field is None:
+                continue
+            new_field.SetPosition(old_field.GetPosition())
+            new_field.SetTextAngleDegrees(old_field.GetTextAngleDegrees())
+            new_field.SetLayer(old_field.GetLayer())
+            new_field.SetVisible(old_field.IsVisible())
+            new_field.SetTextSize(old_field.GetTextSize())
+            new_field.SetTextThickness(old_field.GetTextThickness())
+            new_field.SetHorizJustify(old_field.GetHorizJustify())
+            new_field.SetVertJustify(old_field.GetVertJustify())
+            new_field.SetMirrored(old_field.IsMirrored())
         for pad in replacement.Pads():
             old_pad = footprint.FindPadByNumber(pad.GetNumber())
             if old_pad is not None and old_pad.GetNetCode():

@@ -61,7 +61,7 @@ the TLV2374 quiescent current plus the feedback dividers and connected
 high-impedance analog loads, typically only a few milliamps. At a 24 V input,
 3 mA total load dissipates approximately 36 mW in U37.
 
-- C100: 22 uF / 50 V at U37 input
+- C100: 22 uF / 35 V at U37 input
 - C101: 22 uF / 25 V at U37 output
 - C102: 100 nF directly at U38 supply/GND
 

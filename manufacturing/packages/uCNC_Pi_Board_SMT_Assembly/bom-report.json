@@ -1,17 +1,13 @@
 {
   "bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom.csv",
-  "full_physical_parts": 270,
-  "full_bom_groups": 51,
+  "full_physical_parts": 266,
+  "full_bom_groups": 44,
   "smt_bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-smt.csv",
   "smt_reference_bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-smt-refs.csv",
-  "smt_parts": 235,
-  "smt_bom_groups": 41,
-  "excluded_non_smd": 35,
+  "smt_parts": 230,
+  "smt_bom_groups": 33,
+  "excluded_non_smd": 36,
   "excluded_references": [
-    [
-      "F1",
-      "MANUAL"
-    ],
     [
       "J1",
       "PTH"
@@ -22,6 +18,10 @@
     ],
     [
       "J51",
+      "PTH"
+    ],
+    [
+      "J55",
       "PTH"
     ],
     [
@@ -111,6 +111,10 @@
     [
       "J50",
       "PTH"
+    ],
+    [
+      "D53",
+      "MANUAL"
     ],
     [
       "J13",

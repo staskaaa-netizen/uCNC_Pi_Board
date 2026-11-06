@@ -37,8 +37,9 @@ safety circuit.
 |---|---:|---|
 | Isolated PLC inputs | 16 | U18-U21 TLP291-4, RN32-RN35 pull-ups |
 | Dedicated E-stop | 1 | U35 TLP291 and R74 pull-up |
-| Servo ZERO inputs | 7 | Direct 3.3 V logic into U6/U7 |
-| Servo ERROR inputs | 7 | Direct 3.3 V logic into U6/U7 |
+| Servo ZERO inputs | 7 | Direct 3.3 V logic into U6/U7, 10 k pull-ups |
+| Servo ERROR inputs | 7 | Direct 3.3 V logic into U6/U7, 10 k pull-ups |
+| Spare register inputs | 2 | U7 D2/D3 on J55 with 10 k pull-ups |
 | General field outputs | 16 | U61-U64 optocouplers into U26/U27 TBD62083AFG arrays |
 | Motion outputs | 7 axes | A0-A6 STEP/DIR, with grouped `EN3` and `EN4` enables |
 | Encoder inputs | 3 | A/B/Z, 5 V to 3.3 V through U28 |
@@ -48,7 +49,10 @@ safety circuit.
 
 The input chain runs from U6 to U7 to U8 to U9 and returns on GPIO23. U8/U9
 carry PLC inputs 1-16, while U6/U7 carry the seven paired servo ZERO/ERROR
-signals. The output chain runs from GPIO20 through U13, U12, U11 and U10.
+signals. RN45-RN48 provide a 10 k pull-up on every U6/U7 data input. Two unused
+U7 data inputs are available on J55 with their pull-ups setting the default
+high state; U7 pin 15 remains tied low because it is `CLK INH`.
+The output chain runs from GPIO20 through U13, U12, U11 and U10.
 GPIO21 is the shared shift clock and GPIO22 is the 74AHCT595 latch.
 
 The exact register-bit assignments are in
@@ -123,8 +127,8 @@ an ESP-01 or ESP-01S on the separately regulated `WIFI_3V3` rail.
 
 ## Power
 
-The main logic path is protected by F1, D1 and D2. U1 converts the protected
-input to `5V`; the WeAct module is supplied from that rail and uses its onboard
+The main logic path is protected by D1 and D2. U1 converts the protected input
+to `5V`; the WeAct module is supplied from that rail and uses its onboard
 3.3 V regulator. U2 supplies the motherboard peripheral rail, and U34 supplies
 the optional ESP module independently.
 
@@ -165,10 +169,10 @@ abbreviations are in [Signal naming](naming.md).
 
 Current KiCad 10 checks:
 
-- Schematic: 281 components and 320 nets, with no connectivity failures.
-- PCB: 275 footprints, 2,193 routed track segments and 207 vias.
-- DRC: zero errors and zero unconnected items; four non-field silkscreen
-  warnings remain.
+- Schematic: 277 components and 321 nets, with no connectivity failures.
+- PCB: 271 footprints, 2,227 routed track segments and 225 vias.
+- DRC: zero unconnected items and two courtyard overlaps: the pre-existing
+  D1/J1 corner and C107/C108 after the requested C108 package enlargement.
 - The 108 reference/value-field warnings were cleared by moving 57
   DRC-confirmed fields to nearby clear silkscreen positions.
 - A further 130 references were promoted from `F.Fab`; all 275 component

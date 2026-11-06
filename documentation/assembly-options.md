@@ -21,9 +21,10 @@
 - U34 is a separate AMS1117-3.3 regulator for the optional ESP module.
 - U3 is the isolated LMR36510 24 V to 12 V backlight supply.
 - U37 is the L78L12 regulator for the four-channel analog-output amplifier.
-- D1 clamps the 12-24 V main input, F1 limits the main input branch and D2
-  provides reverse-polarity protection.
-- F2 limits the encoder 5 V branch. D53 clamps that branch.
+- D1 clamps the 12-24 V main input and D2 provides reverse-polarity
+  protection.
+- F2 limits the encoder 5 V branch. D53 clamps that branch and is hand-fitted
+  outside SMT assembly.
 - D3 protects the isolated backlight-converter input from the field rail.
 
 The WeAct module's onboard reset button, power-on reset, brownout detector and
@@ -34,10 +35,10 @@ supervisor.
 
 - U6-U9 are 74HC165D input registers at `3V3`.
 - U10-U13 are SN74AHCT595DR output registers at `5V`.
-- U28 is an SN74AHCT541DW encoder receiver at `3V3`.
+- U28 is an SN74AHCT541DWR encoder receiver at `3V3`.
 - U42/U43 are onsemi MC74AC541DWR2G wide-body SOIC-20 motion buffers at `5V`,
   using the `SOIC-20W_7.5x12.8mm_P1.27mm` footprint.
-- U26/U27 are TBD62083AFG low-side output arrays.
+- U26/U27 are TBD62083AFG(Z,EL) low-side output arrays.
 - U18-U21 are TLP291-4 PLC input optocouplers.
 - U35 is the dedicated E-stop TLP291.
 - U61-U64 are TLP291-4 general-output optocouplers.
@@ -49,25 +50,21 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 ## Passive standards
 
 - General 100 nF and 1 uF bypasses: 0805.
-- 10 uF capacitors: 1206, 25 V X7R.
-- 100 nF / 100 V input bypasses: 1206.
-- 22 uF bulk capacitors: 1210, 10 V on 5 V/3.3 V rails, 25 V on 12 V rails
-  and an approved 35 V X5R substitution on the nominal 24 V input rails.
+- 22 uF bulk capacitors: 1210, 25 V on all 5 V, 3.3 V and 12 V rails, with
+  approved 35 V parts on the nominal 24 V input rails.
 - Switching inductors: L1/L2 are SXN SMNR5040 5 x 5 x 4 mm parts.
-- Analog divider resistors: 1206, 1%.
-- Analog signal and feedback resistors: 0805, 1%.
-- Field 2.2 k LED/input resistors: 1206.
+- Discrete resistors: 0805, 1%, except the 2.2 k field LED/input resistors,
+  which remain 1206 for power margin.
 - PLC pull-ups: RN32-RN35, 4 x 10 k, 4 x 0603.
-- Output-register pull-downs: RN8-RN13, RN30 and RN31, 4 x 10 k.
-- Output-opto drive networks: RN37-RN40, 4 x 1 k, 4 x 1206.
-- All indicators: Lite-On `LTST-C150KGKT`, green 1206 LED.
+- Motion-buffer output pull-downs: RN8-RN11, 4 x 10 k.
+- Output-opto drive networks: RN37-RN40, 4 x 1 k, 4 x 0603.
+- All indicators: Hubei KENTO `KT-0805G`, green 0805 LED.
 - SD pull-ups: RN43, 4 x 10 k.
 - SD series resistors: RN44, 4 x 22 ohm.
 - LVDS series resistors: RN26/RN27, 4 x 330 ohm, 4 x 0603.
 
-The 5 V and 3.3 V 22 uF bulk capacitors use 10 V parts, the 12 V rails use
-25 V parts, and the 24 V-side input capacitors use 50 V or 100 V ratings as
-listed in the BOM.
+All low-voltage 22 uF bulk capacitors use 25 V parts. The 24 V-side 22 uF
+input capacitors use approved 35 V parts.
 
 ## SD-card population
 

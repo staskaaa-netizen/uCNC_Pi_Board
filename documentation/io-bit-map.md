@@ -46,12 +46,35 @@ the register and connector tables above, not visual pin order, in firmware.
 | U6 | 3, 4 | ERR6, Z6 |
 | U6 | 5, 6 | ERR5, Z5 |
 | U7 | 11, 12 | Z3, ERR3 |
-| U7 | 13, 14 | GND, GND |
+| U7 | 13, 14 | U7_IN13, U7_IN14 |
 | U7 | 3, 4 | Z1, ERR1 |
 | U7 | 5, 6 | Z2, ERR2 |
 
 The status chain uses A4 before A6 in the physical register order. Firmware
 must use this table rather than assume A0-A6 are consecutive.
+
+| Register pins | Pull-up network |
+|---|---|
+| U6 pins 11-14 | RN45 |
+| U6 pins 3-6 | RN46 |
+| U7 pins 11-14 | RN47 |
+| U7 pins 3-6 | RN48 |
+
+RN45-RN48 are 4 x 10 k arrays tied to `3V3`. They match the state definition
+used on the PLC input registers. Their signal pins are mirrored: array pin 1
+maps to the highest-numbered register data pin in each group, through array
+pin 4 for the lowest-numbered data pin.
+
+J55 exposes the two spare U7 inputs:
+
+| J55 pin | Signal | Default |
+|---:|---|---|
+| 1 | GND | Ground reference |
+| 2 | U7_IN13 | High through RN47 |
+| 3 | U7_IN14 | High through RN47 |
+
+Drive either J55 input low externally when required. U7 pin 15 is `CLK INH`,
+not a parallel data input, and remains tied to GND.
 
 | Axis | Output connector | Input connector |
 |---|---|---|

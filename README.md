@@ -8,18 +8,25 @@ storage, optional Wi-Fi and analog I/O on a 160 mm x 120 mm two-layer PCB.
 manufacturing archives are complete. The PCB fabrication and SMT assembly ZIPs
 are generated from the current board and ready to send.
 
+The current BOM has 266 physical parts in 44 purchasing groups. SMT assembly
+contains 230 references in 33 groups; D53 is hand-fit and excluded from the
+CPL. The combined JLC BOM contains 265 references in 43 groups.
+
 ## Board features
 
 - 16 isolated 24 V PLC inputs, `I01-I16`, with TLP291-4 optocouplers.
 - One dedicated isolated E-stop input on GPIO9, outside the shift-register
   chain.
 - Four cascaded 74HC165 inputs and four cascaded SN74AHCT595 outputs.
+- All 32 input-register channels have 10 k pull-ups, including the direct
+  servo ZERO/ERROR inputs.
 - Seven STEP/DIR axes, A0-A6, with labels `EN3 STPn DIRn`.
 - Seven paired servo ZERO/ERROR inputs with individual 3-pin connectors.
-- All 35 indicator LEDs are green Lite-On `LTST-C150KGKT` 1206 parts.
+- Two spare U7 register inputs exposed on J55 with 10 k pull-ups.
+- All 35 indicator LEDs are green Hubei KENTO `KT-0805G` 0805 parts.
 - Two onsemi MC74AC541DWR2G 5 V motion buffers.
 - Sixteen optically isolated general outputs, `D01-D16`, driven by two
-  TBD62083AFG arrays.
+  TBD62083AFG(Z,EL) arrays.
 - Three 5 V encoder interfaces with a 3.3 V logic-side buffer.
 - Four 0-10 V analog inputs and four ground-referenced 0-10 V analog outputs.
 - MicroSD through J36 or the on-board SOFNG TF-15x15 socket J54.
@@ -89,13 +96,14 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
-- [Current top 3D render](manufacturing/board-3d-top-4a6d41f8.png)
-- [Current bottom 3D render](manufacturing/board-3d-bottom-4a6d41f8.png)
+- [Current top 3D render](manufacturing/board-3d-top-bde5f9bf.png)
+- [Current bottom 3D render](manufacturing/board-3d-bottom-bde5f9bf.png)
 - [Connector label orientation check](manufacturing/connector-label-check.png)
 - [Complete grouped BOM](manufacturing/bom.csv)
 - [SMT-only grouped BOM](manufacturing/bom-smt.csv)
 - [SMT-only reference BOM](manufacturing/bom-smt-refs.csv)
 - [JLCPCB-format grouped BOM](manufacturing/bom-jlcpcb.csv)
+- [JLCPCB stock and Basic/Extended audit](manufacturing/jlcpcb-stock-audit.csv)
 - [Non-SMT grouped BOM](manufacturing/bom-non-smt.csv)
 - [Combined SMT and non-SMT BOM](manufacturing/bom-all-jlcpcb.csv)
 - [Pick-and-place CPL](manufacturing/cpl-jlcpcb.csv)
@@ -104,12 +112,11 @@ placement and routing. Do not run a full PCB regeneration over that file.
 
 ## Verification status
 
-The current netlist contains 281 schematic components in 320 nets. The PCB has
-275 footprints, 2,193 routed track segments and 207 vias. DRC reports zero
-unconnected items and zero error-severity findings. Four non-field silkscreen
-warnings remain: two microSD outline/pad conflicts and two dense LVDS legend
-text-height warnings. ERC has no electrical errors and 35 library-symbol cache
-warnings.
+The current netlist contains 277 schematic components in 321 nets. The PCB has
+271 footprints, 2,227 routed track segments and 225 vias. DRC reports zero
+unconnected items and two courtyard overlaps: the pre-existing D1/J1 corner
+and C107/C108 after C108 was enlarged to the requested 1210 package. ERC has
+no electrical errors and 35 library-symbol cache warnings.
 
 This is a routed prototype manufacturing package. It is not a safety-rated
 controller. Hazardous energy removal must remain an independent hard-wired

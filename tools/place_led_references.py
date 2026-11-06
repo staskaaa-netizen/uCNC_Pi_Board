@@ -11,7 +11,7 @@ import pcbnew
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
-LED_FOOTPRINT = "LED_1206_3216Metric"
+LED_FOOTPRINT = "LED_0805_2012Metric"
 TEXT_SIZE_MM = 0.8
 TEXT_THICKNESS_MM = 0.12
 CLEARANCE_MM = 0.18

@@ -309,7 +309,7 @@ def create_review_pdf(
     )
     cover.insert_text(
         (36, 72),
-        "200 x 150 mm | two-layer | 1.6 mm | socketed WeAct RP2350B",
+        "160 x 120 mm | two-layer | 1.6 mm | socketed WeAct RP2350B",
         fontsize=11,
         fontname="helv",
         color=(0.18, 0.29, 0.38),

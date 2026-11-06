@@ -31,7 +31,7 @@ KICAD_FP = Path(
     r"C:\Users\s.zachazevski\AppData\Local\Programs\KiCad\10.0\share\kicad\footprints"
 )
 MANUAL_SMT_EXCLUSIONS = {
-    "F1": "manual fit; supplied PTC is not rated for the 24 V input",
+    "D53": "manual fit; intentionally excluded from SMT placement",
 }
 
 BOARD_WIDTH_MM = 200.0

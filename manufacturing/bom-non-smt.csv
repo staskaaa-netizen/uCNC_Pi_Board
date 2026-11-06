@@ -1,11 +1,12 @@
 Quantity,Design Values,Footprint,Manufacturer,MPN,Assembly,References
 5,24+ GND | BL12+ PLC_0V | ESTOP PLC_0V | PLC24+ PLC_0V,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/2-G-3.5",FIT,J1 J2 J5 J33 J45
 14,EN3 STP0 DIR0 | EN3 STP1 DIR1 | EN3 STP2 DIR2 | EN4 STP3 DIR3 | EN4 STP4 DIR4 | EN4 STP5 DIR5 | EN4 STP6 DIR6 | GND ERR0 Z0 | GND ERR1 Z1 | GND ERR2 Z2 | GND ERR3 Z3 | GND ERR4 Z4 | GND ERR5 Z5 | GND ERR6 Z6,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/3-G-3.5",FIT,J10 J11 J28 J29 J30 J40 J41 J42 J43 J46 J47 J48 J49 J50
-6,+5V A0 B0 Z0 GND | +5V A1 B1 Z1 GND | +5V A2 B2 Z2 GND | GND AI0 AI1 AI2 AI3 | GND AO0 AO1 AO2 AO3 | SDA SCL 3V3 5V GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
+6,5V A0 B0 Z0 GND | 5V A1 B1 Z1 GND | 5V A2 B2 Z2 GND | GND AI0 AI1 AI2 AI3 | GND AO0 AO1 AO2 AO3 | SDA SCL 3V3 5V GND,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.5_1x05_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/5-G-3.5",FIT,J13 J14 J15 J18 J24 J25
 4,D01 D02 D03 D04 D05 D06 D07 D08 | D09 D10 D11 D12 D13 D14 D15 D16 | I01 I02 I03 I04 I05 I06 I07 I08 | I09 I10 I11 I12 I13 I14 I15 I16,"Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.5_1x08_P3.50mm_Vertical",Phoenix Contact,"Phoenix Contact MCV 1,5/8-G-3.5",FIT,J7 J8 J12 J32
 1,LVDS 2x10,Connector_PinHeader_2.00mm:PinHeader_2x10_P2.00mm_Vertical,generic,LVDS 2x10,FIT,J22
+1,"U7 spare inputs: GND, IN13, IN14",Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,generic,"U7 spare inputs: GND, IN13, IN14",FIT,J55
 1,microSD header,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,generic,microSD header,FIT,J36
 1,3V3 GND IO4 IO5 IO6 IO7 IO8,Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical,generic,3V3 GND IO4 IO5 IO6 IO7 IO8,FIT,J51
 1,ESP-01,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,Wurth Elektronik,61300821121,FIT,J20
+1,SMAJ5.0A,Diode_SMD:D_SMA,Bourns,SMAJ5.0A,FIT,D53
 1,WeAct RP2350B,LeanCam:WeAct_RP2350B_Socket,WeAct Studio,WeAct Studio RP2350B Core Board,FIT,MOD1
-1,2 A,Resistor_SMD:R_1206_3216Metric,Bel Fuse,0ZCG0200FF2E,FIT,F1

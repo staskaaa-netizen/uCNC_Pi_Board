@@ -21,7 +21,7 @@ BOARD = ROOT / "hardware" / "motherboard.kicad_pcb"
 JLC_PART_SOURCE = MANUFACTURING / "RP23CNC_JLCPCB_BOM_upload.csv"
 JLC_PART_HOLDS: dict[str, str] = {}
 JLC_MANUAL_ONLY = {
-    "F1": "Manual fit; supplied PTC is rated for 12 V maximum, not the 24 V input.",
+    "D53": "Manual fit; intentionally excluded from SMT placement.",
 }
 DEFAULT_KICAD_CLI = (
     r"C:\Users\s.zachazevski\AppData\Local\Programs\KiCad\10.0\bin\kicad-cli.exe"
@@ -635,6 +635,10 @@ PCB fabrication only.
             MANUFACTURING / "RP23CNC_JLCPCB_BOM_for_Codex_with_part_numbers.csv",
             assembly / "RP23CNC_JLCPCB_BOM_for_Codex_with_part_numbers.csv",
         ),
+        (
+            MANUFACTURING / "jlcpcb-stock-audit.csv",
+            assembly / "jlcpcb-stock-audit.csv",
+        ),
         (MANUFACTURING / "board-front.pdf", assembly / "assembly-front.pdf"),
         (MANUFACTURING / "board-back.pdf", assembly / "assembly-back.pdf"),
         (
@@ -659,12 +663,12 @@ PCB fabrication plus SMT assembly data.
 Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.
 `bom-smt-refs.csv` provides a one-row-per-reference cross-check.
 `bom-jlcpcb.csv` and `cpl-jlcpcb.csv` use the column names commonly requested
-by JLCPCB. F1 is excluded from automated assembly because the supplied 2 A PTC
-is rated for 12 V maximum and is not valid on the 24 V input.
+by JLCPCB. D53 is excluded from automated assembly and is listed in the
+manual/non-SMT BOM.
 
 Use `bom-non-smt-jlcpcb.csv` for the through-hole and manual-fit parts, or
 upload `bom-all-jlcpcb.csv` when requesting one combined JLC assembly
-quotation. F1 is intentionally excluded from JLC assembly and listed in the
+quotation. D53 is intentionally excluded from JLC assembly and listed in the
 manual/non-SMT BOM.
 
 J54 is included in the SMT BOM and CPL because all of its electrical pads are
@@ -672,9 +676,8 @@ SMD; its two unnumbered locating holes are NPTH. All through-hole connectors
 and modules are excluded from the SMT BOM and CPL and listed separately in
 `bom-non-smt.csv`. `bom-full.csv` lists the complete assembly.
 
-The supplied JLC part numbers are included. F1 is excluded from automated
-assembly and listed in the separate non-SMT/manual BOM; select a correctly
-rated fuse for the 24 V input before hand-fitting it.
+The supplied JLC part numbers are included. D53 is excluded from automated
+assembly and listed in the separate non-SMT/manual BOM for hand fitting.
 """
     write_readme(
         assembly,

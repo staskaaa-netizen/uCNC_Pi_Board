@@ -3,21 +3,21 @@
   "bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-smt.csv",
   "jlc_cpl": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\cpl-jlcpcb.csv",
   "jlc_bom": "C:\\acc\\rp2350\\LeanCam-NCC-RP2350B\\manufacturing\\bom-jlcpcb.csv",
-  "smt_references": 235,
-  "bom_groups": 41,
+  "smt_references": 230,
+  "bom_groups": 33,
   "references_match": true,
   "jlcpartnumber_blank_groups": 0,
   "jlcpartnumber_holds": {},
   "units": "mm",
   "coordinate_origin": "board lower-left",
-  "non_smt_groups": 10,
-  "non_smt_references": 35,
-  "all_groups": 50,
-  "all_references": 269,
+  "non_smt_groups": 11,
+  "non_smt_references": 36,
+  "all_groups": 43,
+  "all_references": 265,
   "manual_only_references": [
-    "F1"
+    "D53"
   ],
   "manual_only_reasons": {
-    "F1": "Manual fit; supplied PTC is rated for 12 V maximum, not the 24 V input."
+    "D53": "Manual fit; intentionally excluded from SMT placement."
   }
 }

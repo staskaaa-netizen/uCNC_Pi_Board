@@ -19,12 +19,13 @@ to the board edge have been rechecked.
 
 ## Main placement rules
 
-1. Keep U1, L1, C3-C7, C11, C86 and C91 in one compact 5 V converter loop.
-2. Keep U3, L2, D3, C107-C114 and R126-R128 in one isolated 12 V converter loop.
+1. Keep U1, L1, C3, C5, C6, C11, C86 and C91 in one compact 5 V converter loop.
+2. Keep U3, L2, C107-C111, C113, C114 and R126-R128 in one isolated 12 V converter loop.
 3. Keep U2 and U34 input/output capacitors local to each regulator.
 4. Keep every logic-supply bypass beside its IC supply and ground pins.
 5. Keep field input protection, LED and optocoupler parts at J5/J7/J8.
-6. Keep PLC pull-up arrays on the logic side of the optocouplers.
+6. Keep PLC and direct-logic input pull-up arrays beside their associated
+   74HC165 register.
 7. Keep general-output optocouplers and TBD62083 arrays between U12/U13 and
    J12/J32.
 8. Keep motion buffers close to the 74AHCT595 outputs and axis connectors.
@@ -37,15 +38,15 @@ to the board edge have been rechecked.
 
 | Block | Associated parts |
 |---|---|
-| Main input protection | F1, D1, D2, C2 |
-| 5 V converter | U1, L1, C3-C7, C11, C86, C91, R70-R72 |
-| Isolated backlight converter | U3, L2, D3, C107-C114, R126-R128 |
+| Main input protection | D1, D2 |
+| 5 V converter | U1, L1, C3, C5, C6, C11, C86, C91, R70-R72 |
+| Isolated backlight converter | U3, L2, C107-C111, C113, C114, R126-R128 |
 | Peripheral 3.3 V | U2, C10, C13, C76, C90 |
 | ESP 3.3 V | U34, C69, C70, C88, C89 |
 | Analog 12 V | U37, C100-C102 |
 
-C3-C5 form the U1 input loop. C6/C11 are output bulk and C7 is the switching
-node bypass. C86 bridges BOOT and SW; C91 bypasses the internal VCC. U1 and U3
+C3/C5 form the U1 input loop. C6/C11 are output bulk. C86 bridges BOOT and SW;
+C91 bypasses the internal VCC. U1 and U3
 each have six ground vias under the PowerPAD.
 
 U3 has no `PWR_GOOD` connection. Its input, output and feedback all use the
@@ -67,8 +68,11 @@ U18-U21 are placed with the PLC field chains and four isolated 4 x 10 k pull-up
 networks RN32-RN35. Each channel has an LED, 2.2 k field resistor, reverse diode
 and optocoupler input. U35 and its small field chain are at J5.
 
-Servo status channels use direct 3.3 V logic. U6/U7 data-pin assignments are in
-`documentation/io-bit-map.md`.
+Servo status channels use direct 3.3 V logic. Four 4 x 10 k networks RN45-RN48
+provide the same pull-up treatment as the PLC inputs, with two networks beside
+each of U6 and U7. U6/U7 data-pin assignments are in
+`documentation/io-bit-map.md`. J55 exposes U7 D2/D3 as two spare pulled-up
+inputs. U7 pin 15 is `CLK INH` and remains low.
 
 ## Digital output block
 
@@ -80,8 +84,9 @@ General outputs use this chain:
 
 `OUT16-OUT31 -> RN37-RN40 (1 k) -> U61-U64 (TLP291-4) -> U26/U27 TBD62083AFG`
 
-J12 and J32 expose the resulting low-side outputs D01-D16. RN8-RN13, RN30 and
-RN31 provide 10 k state-definition pull-downs at the register outputs.
+J12 and J32 expose the resulting low-side outputs D01-D16. RN8-RN11 provide
+10 k state-definition pull-downs on the motion-buffer register outputs.
+The optocoupler-driven general outputs do not use these pull-downs.
 
 ## Encoders
 

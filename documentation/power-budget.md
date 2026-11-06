@@ -2,15 +2,14 @@
 
 ## Input and regulators
 
-The main machine input is 12-24 V DC. F1 is a 2 A fuse, D1 is an SMBJ24CA
-clamp and D2 is an S1M reverse-polarity diode. C2 provides a local 100 nF
-bypass on the fused node.
+The main machine input is 12-24 V DC. D1 is an SMBJ24CA clamp and D2 is an S1M
+reverse-polarity diode.
 
 | Rail | Source | Input | Output | Intended load |
 |---|---|---|---|---|
-| `5V` | U1 LMR36510, 1 A | `VIN_P` | 22 uH/1.4 A, 2 x 22 uF/10 V plus 100 nF | MOD1, U2, U34, U28, encoders |
-| `3V3` | U2 AMS1117-3.3 | `5V` | 22 uF/10 V plus 100 nF each side | Input logic, 74AHCT595 control, SD, LCD |
-| `WIFI_3V3` | U34 AMS1117-3.3 | `5V` | 22 uF/10 V plus 100 nF each side | ESP-01/ESP-01S |
+| `5V` | U1 LMR36510, 1 A | `VIN_P` | 22 uH/1.4 A, 2 x 22 uF/25 V plus 100 nF | MOD1, U2, U34, U28, encoders |
+| `3V3` | U2 AMS1117-3.3 | `5V` | 22 uF/25 V plus 100 nF each side | Input logic, 74AHCT595 control, SD, LCD |
+| `WIFI_3V3` | U34 AMS1117-3.3 | `5V` | 22 uF/25 V plus 100 nF each side | ESP-01/ESP-01S |
 | `AO_12V` | U37 L78L12 | `VIN_P` | 22 uF/25 V plus 100 nF | U38 and 0-10 V outputs |
 | `BL_12V` | U3 isolated LMR36510, 1 A | isolated `PLC_24V` | 47 uH/0.9 A, 3 x 22 uF/25 V plus 100 nF | Backlight/CCFL input |
 
@@ -48,8 +47,9 @@ Do not operate the ESP at peak transmit while all other 3.3 V logic and a
 high-current backlight are simultaneously loaded without measuring the 5 V
 converter input current and temperature.
 
-F2 is a separate 500 mA encoder-branch fuse and D53 is an SMAJ5.0A clamp. This
-branch is not part of the main field-isolated domain.
+F2 is a separate 500 mA encoder-branch fuse and D53 is an SMAJ5.0A clamp. D53
+is hand-fitted and excluded from SMT placement. This branch is not part of the
+main field-isolated domain.
 
 ## Field power
 

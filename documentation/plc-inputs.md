@@ -33,7 +33,8 @@ Each input contains:
 `connector -> LED -> 2.2 k -> optocoupler LED -> reverse diode -> PLC -`
 
 U18-U21 provide the sixteen PLC channels. U35 provides the E-stop channel.
-RN32-RN35 provide logic-side 10 k pull-ups, and R74 pulls up the E-stop output.
+RN32-RN35 provide logic-side 10 k pull-ups, and the 10 k R74 pulls up the
+E-stop output.
 There are no input-node filter capacitors; debounce in firmware or at the
 contact/field wiring level.
 
