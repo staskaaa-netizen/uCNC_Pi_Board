@@ -93,6 +93,7 @@ placement and routing. Do not run a full PCB regeneration over that file.
 ## Manufacturing review files
 
 - [Combined board review](manufacturing/board-review.pdf)
+- [Ordered first-batch PCB review](manufacturing/board-ordered-first-batch.jpg)
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)

@@ -56,6 +56,7 @@ The stock audit from 2026-11-07 shows all 33 SMT groups in stock: 16 Basic and
 - `uCNC_Pi_Board_PCB_Fabrication.zip`: Gerbers and Excellon drill files only.
 - `uCNC_Pi_Board_SMT_Assembly.zip`: fabrication data, SMT and non-SMT BOMs,
   the matching 227-reference `cpl.csv`, assembly PDFs and the combined BOM.
+- `board-ordered-first-batch.jpg`: ordered first-batch PCB review image.
 
 The Gerbers, drill files and SMT placement files all use the shared drill/place
 origin at the PCB lower-left corner. Coordinates are in millimetres with
