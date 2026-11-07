@@ -45,7 +45,7 @@ capacitor between BOOT and SW.
 | Regulator | Conversion | Input capacitors | Output capacitors | Load |
 |---|---|---|---|---|
 | U2 AMS1117-3.3 | `5V` to `3V3` | C10 22 uF/25 V, C76 100 nF | C13 100 nF, C90 22 uF/25 V | Logic, encoders, SD and LCD logic |
-| U34 AMS1117-3.3 | `5V` to `WIFI_3V3` | C88 22 uF/25 V, C89 100 nF | C69 22 uF/25 V, C70 100 nF | ESP-01/ESP-01S only |
+| U34 AMS1117-3.3 | `5V` to `WIFI_3V3` | C88 22 uF/25 V | C69 22 uF/25 V | ESP-01/ESP-01S only |
 | U37 L78L12 | `VIN_P` to `AO_12V` | C100 22 uF/35 V | C101 22 uF/25 V | U38 and 0-10 V outputs |
 
 U34 has its own regulator because the ESP8266 transmit pulse is independent of
@@ -65,8 +65,7 @@ used for field loads.
 C92-C99 are signal-filter capacitors, not supply decoupling. C86 and C113 are
 bootstrap capacitors and intentionally do not connect to ground.
 
-The ESP socket uses RN36, a 4 x 10 k array referenced to `WIFI_3V3`, for GPIO2,
-GPIO0, EN and RST.
+The ESP socket does not use external logic pull-up networks on the motherboard.
 
 ## SD series and pull-up networks
 
@@ -80,7 +79,8 @@ DAT1 and DAT2 remain unconnected in SPI mode.
 |---|---:|---:|---|
 | Default | 0.20 mm | 0.20 mm | Logic and general signals |
 | Power | 0.80 mm | 0.30 mm | Main 5 V, 3.3 V and 12 V rails |
-| FieldPower | 0.50 mm | 0.50 mm | `PLC_24V`, isolated commons |
+| FieldPower | 0.50 mm | 0.50 mm | `PLC_24V`, isolated signal nets |
+| FieldReturn | 0.20 mm | 0.25 mm | `PLC_0V` isolated return |
 | AnalogPower | 0.30 mm | 0.20 mm | `AO_12V` |
 | EncoderPower | 0.30 mm | 0.20 mm | Encoder +5 V branch |
 | Ground | 0.50 mm | 0.30 mm | GND and ground-via stubs |

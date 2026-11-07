@@ -2,10 +2,11 @@ uCNC Pi Board - SMT Assembly Package
 
 PCB fabrication plus SMT assembly data.
 
-- SMT references: 230
+- SMT references: 227
 - SMT BOM groups: 33
-- Placement origin: board lower-left
+- Placement origin: shared drill/place origin at board lower-left
 - Units: millimetres, Y positive upward
+- JLCPCB footprint rotations include package-specific corrections
 - Gerbers include front/back copper, paste, mask, silkscreen and board edge
 
 Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.

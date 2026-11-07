@@ -4,13 +4,13 @@ KiCad 10 carrier for a socketed WeAct Studio RP2350B Core Board. The board
 provides isolated machine I/O, motion and encoder interfaces, LCD power,
 storage, optional Wi-Fi and analog I/O on a 160 mm x 120 mm two-layer PCB.
 
-**Status: MANUFACTURING PACKAGE READY.** The circuit, pin mapping, PCB and
-manufacturing archives are complete. The PCB fabrication and SMT assembly ZIPs
-are generated from the current board and ready to send.
+**Status: MANUFACTURING PACKAGE GENERATED; FINAL DRC REVIEW REQUIRED.** The
+circuit, pin mapping, PCB and manufacturing archives are complete. The PCB
+fabrication and SMT assembly ZIPs are generated from the current board.
 
-The current BOM has 266 physical parts in 44 purchasing groups. SMT assembly
-contains 230 references in 33 groups; D53 is hand-fit and excluded from the
-CPL. The combined JLC BOM contains 265 references in 43 groups.
+The current BOM has 263 physical parts in 44 purchasing groups. SMT assembly
+contains 227 references in 33 groups; D53 is hand-fit and excluded from the
+CPL. The combined JLC BOM contains 262 references in 43 groups.
 
 ## Board features
 
@@ -96,8 +96,8 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Board specification PDF](manufacturing/board-specification.pdf)
 - [Front artwork and assembly layer](manufacturing/board-front.pdf)
 - [Mirrored rear artwork](manufacturing/board-back.pdf)
-- [Current top 3D render](manufacturing/board-3d-top-bde5f9bf.png)
-- [Current bottom 3D render](manufacturing/board-3d-bottom-bde5f9bf.png)
+- [Current top 3D render](manufacturing/board-3d-top-da42d9de.png)
+- [Current bottom 3D render](manufacturing/board-3d-bottom-da42d9de.png)
 - [Connector label orientation check](manufacturing/connector-label-check.png)
 - [Complete grouped BOM](manufacturing/bom.csv)
 - [SMT-only grouped BOM](manufacturing/bom-smt.csv)
@@ -112,11 +112,10 @@ placement and routing. Do not run a full PCB regeneration over that file.
 
 ## Verification status
 
-The current netlist contains 277 schematic components in 321 nets. The PCB has
-271 footprints, 2,227 routed track segments and 225 vias. DRC reports zero
-unconnected items and two courtyard overlaps: the pre-existing D1/J1 corner
-and C107/C108 after C108 was enlarged to the requested 1210 package. ERC has
-no electrical errors and 35 library-symbol cache warnings.
+The current netlist contains 274 schematic components in 321 nets. The PCB has
+268 footprints, 2,221 routed track segments and 232 vias. DRC reports zero
+unconnected items, no copper-clearance errors and eight silkscreen warnings.
+ERC has no electrical errors and 35 library-symbol cache warnings.
 
 This is a routed prototype manufacturing package. It is not a safety-rated
 controller. Hazardous energy removal must remain an independent hard-wired

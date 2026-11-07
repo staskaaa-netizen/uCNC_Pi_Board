@@ -12,5 +12,5 @@
 
 (rule "PLC field clearance"
     (constraint clearance (min 0.5mm))
-    (condition "(A.NetName == 'PLC_*' || B.NetName == 'PLC_*') && !(A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
+    (condition "((A.NetName == 'PLC_*' && A.NetName != 'PLC_0V') || (B.NetName == 'PLC_*' && B.NetName != 'PLC_0V')) && !(A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
 )

@@ -30,7 +30,13 @@ output drives GPIO9 on MOD1 pin 53 and is outside the shift-register chain.
 
 Each input contains:
 
-`connector -> LED -> 2.2 k -> optocoupler LED -> reverse diode -> PLC -`
+`connector -> 2.2 k -> protected node -> LED -> optocoupler LED -> PLC -`
+
+The reverse diode is connected from `PLC -` to the protected node between the
+2.2 k resistor and the indicator LED. It is reverse-biased in normal operation.
+With reversed input polarity it conducts and places the 2.2 k resistor in the
+reverse-current path, so both the indicator LED and optocoupler input are
+protected and the clamp current is limited.
 
 U18-U21 provide the sixteen PLC channels. U35 provides the E-stop channel.
 RN32-RN35 provide logic-side 10 k pull-ups, and the 10 k R74 pulls up the

@@ -23,6 +23,21 @@ JLC_PART_HOLDS: dict[str, str] = {}
 JLC_MANUAL_ONLY = {
     "D53": "Manual fit; intentionally excluded from SMT placement.",
 }
+JLC_ROTATION_CORRECTIONS = (
+    (re.compile(r"^R_Array_Convex_"), 90.0),
+    (re.compile(r"^SOIC-"), 270.0),
+    (re.compile(r"^SOP-18_"), 270.0),
+    (re.compile(r"^SOT-223"), 180.0),
+    (re.compile(r"^SOT-89"), 180.0),
+    (re.compile(r"^SOT-23"), 270.0),
+    (re.compile(r"^SOT-363"), 180.0),
+    (re.compile(r"^TSSOP-"), 270.0),
+    (re.compile(r"^VSSOP-"), 270.0),
+    (re.compile(r"^USON-10"), 270.0),
+)
+JLC_REFERENCE_ROTATION_CORRECTIONS = {
+    "U35": 90.0,
+}
 DEFAULT_KICAD_CLI = (
     r"C:\Users\s.zachazevski\AppData\Local\Programs\KiCad\10.0\bin\kicad-cli.exe"
 )
@@ -70,6 +85,7 @@ def export_fabrication(kicad_cli: Path, output: Path) -> None:
             str(gerbers),
             "--layers",
             FAB_LAYERS,
+            "--use-drill-file-origin",
             str(BOARD),
         ]
     )
@@ -86,6 +102,8 @@ def export_fabrication(kicad_cli: Path, output: Path) -> None:
             "--excellon-units",
             "mm",
             "--excellon-separate-th",
+            "--drill-origin",
+            "plot",
             "--generate-map",
             "--map-format",
             "pdf",
@@ -112,6 +130,7 @@ def export_smt_layers(kicad_cli: Path, output: Path) -> Path:
             str(gerbers),
             "--layers",
             SMT_LAYERS,
+            "--use-drill-file-origin",
             str(BOARD),
         ]
     )
@@ -128,6 +147,8 @@ def export_smt_layers(kicad_cli: Path, output: Path) -> Path:
             "--excellon-units",
             "mm",
             "--excellon-separate-th",
+            "--drill-origin",
+            "plot",
             "--generate-map",
             "--map-format",
             "pdf",
@@ -154,6 +175,7 @@ def export_smt_layers(kicad_cli: Path, output: Path) -> Path:
             "mm",
             "--smd-only",
             "--exclude-dnp",
+            "--use-drill-file-origin",
             str(BOARD),
         ]
     )
@@ -178,9 +200,7 @@ def write_assembly_placement(output: Path, raw_position: Path) -> dict:
     extra = sorted(set(raw_rows) - bom_refs, key=natural_key)
 
     board = pcbnew.LoadBoard(str(BOARD))
-    bbox = board.GetBoardEdgesBoundingBox()
-    left = pcbnew.ToMM(bbox.GetLeft())
-    bottom = pcbnew.ToMM(bbox.GetBottom())
+    origin = board.GetDesignSettings().GetAuxOrigin()
     footprints = {
         footprint.GetReference(): footprint
         for footprint in board.GetFootprints()
@@ -199,8 +219,8 @@ def write_assembly_placement(output: Path, raw_position: Path) -> dict:
             row = {
                 "Val": footprint.GetValue(),
                 "Package": str(footprint.GetFPID().GetLibItemName()),
-                "PosX": str(pcbnew.ToMM(position.x)),
-                "PosY": str(pcbnew.ToMM(position.y) - bottom),
+                "PosX": str(pcbnew.ToMM(position.x - origin.x)),
+                "PosY": str(pcbnew.ToMM(origin.y - position.y)),
                 "Rot": f"{footprint.GetOrientationDegrees():.6f}",
                 "Side": side,
             }
@@ -209,8 +229,8 @@ def write_assembly_placement(output: Path, raw_position: Path) -> dict:
                 "Designator": reference,
                 "Val": row["Val"],
                 "Package": row["Package"],
-                "PosX": f"{float(row['PosX']) - left:.3f}",
-                "PosY": f"{bottom + float(row['PosY']):.3f}",
+                "PosX": f"{float(row['PosX']):.3f}",
+                "PosY": f"{float(row['PosY']):.3f}",
                 "Rot": row["Rot"],
                 "Side": row["Side"].title(),
             }
@@ -236,7 +256,7 @@ def write_assembly_placement(output: Path, raw_position: Path) -> dict:
     return {
         "placements": len(placements),
         "excluded_from_raw_position": extra,
-        "origin": "board lower-left",
+        "origin": "shared drill/place origin at board lower-left",
         "units": "mm",
     }
 
@@ -256,7 +276,12 @@ def write_jlcpcb_files(
             "Mid X": row["PosX"],
             "Mid Y": row["PosY"],
             "Layer": row["Side"],
-            "Rotation": format_rotation(row["Rot"]),
+            "Rotation": format_rotation(
+                row["Rot"],
+                row["Package"],
+                row["Side"],
+                row["Designator"],
+            ),
         }
         for row in cpl_rows
     ]
@@ -526,8 +551,25 @@ def part_number_for_refs(
     return next(iter(part_numbers), "")
 
 
-def format_rotation(value: str) -> str:
+def format_rotation(
+    value: str,
+    package: str,
+    side: str,
+    designator: str = "",
+) -> str:
     rotation = float(value) % 360.0
+    correction = JLC_REFERENCE_ROTATION_CORRECTIONS.get(designator)
+    if correction is None:
+        correction = 0.0
+        for pattern, candidate in JLC_ROTATION_CORRECTIONS:
+            if pattern.search(package):
+                correction = candidate
+                break
+    if side.strip().lower() == "bottom":
+        rotation = (rotation - correction) % 360.0
+        rotation = (-rotation + 180.0) % 360.0
+    else:
+        rotation = (rotation + correction) % 360.0
     if rotation.is_integer():
         return str(int(rotation))
     return f"{rotation:.6f}"
@@ -656,8 +698,9 @@ PCB fabrication plus SMT assembly data.
 
 - SMT references: {placement_report['placements']}
 - SMT BOM groups: {bom_report['smt_bom_groups']}
-- Placement origin: board lower-left
+- Placement origin: shared drill/place origin at board lower-left
 - Units: millimetres, Y positive upward
+- JLCPCB footprint rotations include package-specific corrections
 - Gerbers include front/back copper, paste, mask, silkscreen and board edge
 
 Use `bom-smt.csv` for purchasing/grouped review and `cpl.csv` for placement.

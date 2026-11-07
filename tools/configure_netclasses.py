@@ -26,7 +26,7 @@ RULE_TEXT = """(version 1)
 
 (rule "PLC field clearance"
     (constraint clearance (min 0.5mm))
-    (condition "(A.NetName == 'PLC_*' || B.NetName == 'PLC_*') && !(A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
+    (condition "((A.NetName == 'PLC_*' && A.NetName != 'PLC_0V') || (B.NetName == 'PLC_*' && B.NetName != 'PLC_0V')) && !(A.memberOfFootprint('U3') && B.memberOfFootprint('U3'))")
 )
 """
 
@@ -69,6 +69,7 @@ CLASSES = (
     make_class("Default", 0.2, 0.2, 0.6, 0.3, priority=2147483647),
     make_class("Power", 0.8, 0.3, 0.8, 0.4),
     make_class("FieldPower", 0.8, 0.5, 0.8, 0.4),
+    make_class("FieldReturn", 0.2, 0.25, 0.8, 0.4),
     make_class("AnalogPower", 0.3, 0.2, 0.6, 0.3),
     make_class("EncoderPower", 0.3, 0.2, 0.6, 0.3),
     make_class("Ground", 0.5, 0.3, 0.6, 0.3),
@@ -87,7 +88,7 @@ CLASSES = (
 
 PATTERNS = (
     # Field and isolated-domain power must win over the generic supply rules.
-    ("FieldPower", "PLC_0V"),
+    ("FieldReturn", "PLC_0V"),
     ("FieldPower", "PLC_24V"),
     ("AnalogPower", "AO_12V"),
     ("EncoderPower", "ENC_5V"),

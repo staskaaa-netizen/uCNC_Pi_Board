@@ -40,7 +40,7 @@ supervisor.
   using the `SOIC-20W_7.5x12.8mm_P1.27mm` footprint.
 - U26/U27 are TBD62083AFG(Z,EL) low-side output arrays.
 - U18-U21 are TLP291-4 PLC input optocouplers.
-- U35 is the dedicated E-stop TLP291.
+- U35 is the dedicated E-stop Lite-On LTV-217-B-G.
 - U61-U64 are TLP291-4 general-output optocouplers.
 - U38 is the TLV2374 quad analog-output amplifier.
 
@@ -50,7 +50,7 @@ their `~OE` and `~SRCLR` pins to their supply as implemented in the schematic.
 ## Passive standards
 
 - General 100 nF and 1 uF bypasses: 0805.
-- 22 uF bulk capacitors: 1210, 25 V on all 5 V, 3.3 V and 12 V rails, with
+- 22 uF bulk capacitors: 1206, 25 V on all 5 V, 3.3 V and 12 V rails, with
   approved 35 V parts on the nominal 24 V input rails.
 - Switching inductors: L1/L2 are SXN SMNR5040 5 x 5 x 4 mm parts.
 - Discrete resistors: 0805, 1%, except the 2.2 k field LED/input resistors,

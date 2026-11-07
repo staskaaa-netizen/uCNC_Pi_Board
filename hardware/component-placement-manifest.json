@@ -1,6 +1,6 @@
 {
   "summary": {
-    "components": 271,
+    "components": 264,
     "by_role": {
       "ADC filter capacitor": 4,
       "IC": 28,
@@ -11,43 +11,48 @@
       "bulk output capacitor": 8,
       "bulk rail capacitor": 1,
       "connector": 35,
-      "decoupling capacitor": 23,
+      "decoupling capacitor": 18,
       "diode": 21,
       "divider lower resistor": 4,
       "divider upper resistor": 4,
       "ferrite bead": 2,
       "fuse": 1,
       "inductor": 2,
-      "input bypass capacitor": 1,
       "module": 1,
       "pull-up resistor": 6,
       "resistor": 56,
-      "resistor network": 21,
+      "resistor network": 20,
       "signal filter capacitor": 8,
       "solder jumper": 1
     },
     "by_block": {
-      "16 PLC IN": 62,
-      "LCD LVDS display": 3,
+      "16 PLC IN": 61,
+      "LCD LVDS display": 2,
       "MCU / SHIFT": 23,
       "PLC OUT": 60,
-      "Power": 42,
-      "SD / Wi-Fi": 15,
+      "Power": 38,
+      "SD / Wi-Fi": 12,
       "ULN output connector": 1,
-      "analog input 0": 4,
+      "analog input 0": 3,
       "analog input 1": 3,
       "analog input 2": 3,
       "analog input 3": 3,
-      "analog output 0": 8,
+      "analog inputs connector": 1,
+      "analog output 0": 7,
       "analog output 1": 6,
       "analog output 2": 6,
       "analog output 3": 6,
       "analog output power": 4,
+      "analog outputs connector": 1,
       "backlight/CCFL connector": 1,
       "controller module": 1,
-      "encoder 0": 2,
-      "encoder 1": 1,
-      "encoder 2": 3,
+      "dedicated safety input connector": 1,
+      "display connector": 1,
+      "encoder 0": 1,
+      "encoder 0 connector": 1,
+      "encoder 1 connector": 1,
+      "encoder 2": 2,
+      "encoder 2 connector": 1,
       "encoder interface": 3,
       "isolated PLC input connectors": 2,
       "main power connector": 1,
@@ -57,22 +62,6 @@
     "parked": []
   },
   "components": [
-    {
-      "reference": "C2",
-      "value": "100nF 100V",
-      "sheet": "Power",
-      "functional_block": "Power",
-      "channels": "",
-      "role": "input bypass capacitor",
-      "associated_ic_or_net": "VIN_F input filter",
-      "placement_rule": "place in functional block; keep GND return short",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 115.062,
-      "y_mm": 16.51,
-      "dnp": false,
-      "nets": "GND; VIN"
-    },
     {
       "reference": "C3",
       "value": "22uF 35V",
@@ -84,24 +73,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 112.364,
-      "y_mm": 23.641,
-      "dnp": false,
-      "nets": "GND; VIN_P"
-    },
-    {
-      "reference": "C4",
-      "value": "100nF 100V",
-      "sheet": "Power",
-      "functional_block": "Power",
-      "channels": "",
-      "role": "decoupling capacitor",
-      "associated_ic_or_net": "U1 input",
-      "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 109.316,
-      "y_mm": 23.641,
+      "x_mm": 109.931,
+      "y_mm": 23.673,
       "dnp": false,
       "nets": "GND; VIN_P"
     },
@@ -116,8 +89,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 115.92,
-      "y_mm": 23.641,
+      "x_mm": 114.046,
+      "y_mm": 23.698,
       "dnp": false,
       "nets": "GND; VIN_P"
     },
@@ -132,24 +105,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 112.364,
-      "y_mm": 29.21,
-      "dnp": false,
-      "nets": "5V; GND"
-    },
-    {
-      "reference": "C7",
-      "value": "100nF",
-      "sheet": "Power",
-      "functional_block": "Power",
-      "channels": "",
-      "role": "decoupling capacitor",
-      "associated_ic_or_net": "U1 output",
-      "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 109.316,
-      "y_mm": 28.852,
+      "x_mm": 110.007,
+      "y_mm": 29.159,
       "dnp": false,
       "nets": "5V; GND"
     },
@@ -164,8 +121,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 122.936,
-      "y_mm": 29.21,
+      "x_mm": 122.072,
+      "y_mm": 29.058,
       "dnp": false,
       "nets": "5V; GND"
     },
@@ -180,8 +137,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 115.92,
-      "y_mm": 29.229,
+      "x_mm": 114.021,
+      "y_mm": 29.159,
       "dnp": false,
       "nets": "5V; GND"
     },
@@ -228,8 +185,8 @@
       "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 149.352,
-      "y_mm": 63.5,
+      "x_mm": 149.301,
+      "y_mm": 66.294,
       "dnp": false,
       "nets": "5V; GND"
     },
@@ -293,13 +250,13 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 27.686,
-      "y_mm": 21.082,
+      "y_mm": 19.558,
       "dnp": false,
       "nets": "BL_VIN; PLC_0V"
     },
     {
       "reference": "C108",
-      "value": "100nF 100V",
+      "value": "22uF 35V",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -309,7 +266,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 27.686,
-      "y_mm": 24.13,
+      "y_mm": 23.774,
       "dnp": false,
       "nets": "BL_VIN; PLC_0V"
     },
@@ -325,7 +282,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 35.052,
-      "y_mm": 22.098,
+      "y_mm": 24.384,
       "dnp": false,
       "nets": "BL_12V; PLC_0V"
     },
@@ -341,7 +298,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 35.052,
-      "y_mm": 18.542,
+      "y_mm": 20.066,
       "dnp": false,
       "nets": "BL_12V; PLC_0V"
     },
@@ -357,23 +314,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 35.052,
-      "y_mm": 14.732,
-      "dnp": false,
-      "nets": "BL_12V; PLC_0V"
-    },
-    {
-      "reference": "C112",
-      "value": "100nF",
-      "sheet": "Power",
-      "functional_block": "Power",
-      "channels": "",
-      "role": "decoupling capacitor",
-      "associated_ic_or_net": "U3 output",
-      "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 34.29,
-      "y_mm": 25.146,
+      "y_mm": 16.256,
       "dnp": false,
       "nets": "BL_12V; PLC_0V"
     },
@@ -420,14 +361,14 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 114.427,
-      "y_mm": 10.795,
+      "x_mm": 111.506,
+      "y_mm": 15.291,
       "dnp": false,
       "nets": "GND; VIN"
     },
     {
       "reference": "D2",
-      "value": "S1M",
+      "value": "US1M",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -436,14 +377,14 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 111.76,
-      "y_mm": 17.018,
+      "x_mm": 117.043,
+      "y_mm": 15.138,
       "dnp": false,
       "nets": "VIN; VIN_P"
     },
     {
       "reference": "D3",
-      "value": "S1M",
+      "value": "US1M",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -516,8 +457,8 @@
       "placement_rule": "mechanical anchor; do not move without approval",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 106.38,
-      "y_mm": 6.215,
+      "x_mm": 110.292,
+      "y_mm": 6.317,
       "dnp": false,
       "nets": "GND; VIN"
     },
@@ -571,7 +512,7 @@
     },
     {
       "reference": "R4",
-      "value": "1k",
+      "value": "2.2k",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -587,7 +528,7 @@
     },
     {
       "reference": "R5",
-      "value": "1k",
+      "value": "2.2k",
       "sheet": "Power",
       "functional_block": "Power",
       "channels": "",
@@ -597,7 +538,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 105.255,
-      "y_mm": 37.109,
+      "y_mm": 37.084,
       "dnp": false,
       "nets": "3V3; P3V3_LED"
     },
@@ -660,8 +601,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 125.476,
-      "y_mm": 35.814,
+      "x_mm": 123.393,
+      "y_mm": 35.916,
       "dnp": false,
       "nets": "3V3; PG_N"
     },
@@ -677,7 +618,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 22.098,
-      "y_mm": 25.146,
+      "y_mm": 26.924,
       "dnp": false,
       "nets": "BL_12V; FB12"
     },
@@ -890,6 +831,22 @@
       "nets": "5V; GND"
     },
     {
+      "reference": "J51",
+      "value": "3V3 GND IO4 IO5 IO6 IO7 IO8",
+      "sheet": "MCU / SHIFT",
+      "functional_block": "MCU / SHIFT",
+      "channels": "",
+      "role": "connector",
+      "associated_ic_or_net": "external or board-level connection",
+      "placement_rule": "mechanical anchor; do not move without approval",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 94.361,
+      "y_mm": 53.467,
+      "dnp": false,
+      "nets": "3V3; GND; IO4; IO5; IO6; IO7; IO8"
+    },
+    {
       "reference": "J55",
       "value": "U7 spare inputs: GND, IN13, IN14",
       "sheet": "MCU / SHIFT",
@@ -904,22 +861,6 @@
       "y_mm": 83.896,
       "dnp": false,
       "nets": "GND; U7_IN13; U7_IN14"
-    },
-    {
-      "reference": "J65",
-      "value": "3V3 GND IO4 IO5 IO6 IO7 IO8",
-      "sheet": "MCU / SHIFT",
-      "functional_block": "MCU / SHIFT",
-      "channels": "",
-      "role": "connector",
-      "associated_ic_or_net": "external or board-level connection",
-      "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
-      "dnp": false,
-      "nets": "3V3; GND; IO4; IO5; IO6; IO7; IO8"
     },
     {
       "reference": "MOD1",
@@ -1156,10 +1097,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 82.55,
-      "y_mm": 107.442,
+      "x_mm": 82.906,
+      "y_mm": 102.311,
       "dnp": false,
-      "nets": "ESTOP_IN; ESTOP_L"
+      "nets": "ESTOP_L; ESTOP_O"
     },
     {
       "reference": "D10",
@@ -1172,8 +1113,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 85.09,
-      "y_mm": 105.41,
+      "x_mm": 85.395,
+      "y_mm": 105.512,
       "dnp": false,
       "nets": "ESTOP_L; PLC_0V"
     },
@@ -1188,10 +1129,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 20.32,
-      "y_mm": 107.508,
+      "x_mm": 20.422,
+      "y_mm": 102.411,
       "dnp": false,
-      "nets": "I01; LI01"
+      "nets": "LI01; OI01"
     },
     {
       "reference": "D14",
@@ -1205,7 +1146,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 22.606,
-      "y_mm": 102.616,
+      "y_mm": 106.426,
       "dnp": false,
       "nets": "LI01; PLC_0V"
     },
@@ -1220,10 +1161,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 24.892,
-      "y_mm": 107.508,
+      "x_mm": 24.994,
+      "y_mm": 102.411,
       "dnp": false,
-      "nets": "I02; LI02"
+      "nets": "LI02; OI02"
     },
     {
       "reference": "D16",
@@ -1236,8 +1177,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 22.606,
-      "y_mm": 107.442,
+      "x_mm": 22.708,
+      "y_mm": 102.345,
       "dnp": false,
       "nets": "LI02; PLC_0V"
     },
@@ -1252,10 +1193,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 27.432,
-      "y_mm": 107.508,
+      "x_mm": 27.534,
+      "y_mm": 102.411,
       "dnp": false,
-      "nets": "I03; LI03"
+      "nets": "LI03; OI03"
     },
     {
       "reference": "D18",
@@ -1268,8 +1209,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 29.718,
-      "y_mm": 102.616,
+      "x_mm": 29.82,
+      "y_mm": 106.324,
       "dnp": false,
       "nets": "LI03; PLC_0V"
     },
@@ -1284,10 +1225,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 32.004,
-      "y_mm": 107.442,
+      "x_mm": 32.106,
+      "y_mm": 102.345,
       "dnp": false,
-      "nets": "I04; LI04"
+      "nets": "LI04; OI04"
     },
     {
       "reference": "D20",
@@ -1300,8 +1241,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 29.718,
-      "y_mm": 107.442,
+      "x_mm": 29.82,
+      "y_mm": 102.345,
       "dnp": false,
       "nets": "LI04; PLC_0V"
     },
@@ -1316,10 +1257,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 34.544,
-      "y_mm": 107.485,
+      "x_mm": 34.646,
+      "y_mm": 102.388,
       "dnp": false,
-      "nets": "I05; LI05"
+      "nets": "LI05; OI05"
     },
     {
       "reference": "D22",
@@ -1332,8 +1273,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 36.83,
-      "y_mm": 102.616,
+      "x_mm": 36.881,
+      "y_mm": 106.68,
       "dnp": false,
       "nets": "LI05; PLC_0V"
     },
@@ -1348,10 +1289,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 39.116,
-      "y_mm": 107.442,
+      "x_mm": 39.218,
+      "y_mm": 102.345,
       "dnp": false,
-      "nets": "I06; LI06"
+      "nets": "LI06; OI06"
     },
     {
       "reference": "D24",
@@ -1364,8 +1305,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 36.83,
-      "y_mm": 107.696,
+      "x_mm": 36.932,
+      "y_mm": 102.311,
       "dnp": false,
       "nets": "LI06; PLC_0V"
     },
@@ -1380,10 +1321,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 41.656,
-      "y_mm": 107.442,
+      "x_mm": 41.758,
+      "y_mm": 102.345,
       "dnp": false,
-      "nets": "I07; LI07"
+      "nets": "LI07; OI07"
     },
     {
       "reference": "D26",
@@ -1396,8 +1337,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 43.942,
-      "y_mm": 102.87,
+      "x_mm": 44.094,
+      "y_mm": 106.375,
       "dnp": false,
       "nets": "LI07; PLC_0V"
     },
@@ -1412,10 +1353,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 46.228,
-      "y_mm": 107.442,
+      "x_mm": 46.33,
+      "y_mm": 102.345,
       "dnp": false,
-      "nets": "I08; LI08"
+      "nets": "LI08; OI08"
     },
     {
       "reference": "D28",
@@ -1428,8 +1369,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 43.942,
-      "y_mm": 107.442,
+      "x_mm": 44.044,
+      "y_mm": 102.26,
       "dnp": false,
       "nets": "LI08; PLC_0V"
     },
@@ -1444,10 +1385,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 51.054,
-      "y_mm": 107.442,
+      "x_mm": 50.698,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I09; LI09"
+      "nets": "LI09; OI09"
     },
     {
       "reference": "D30",
@@ -1460,8 +1401,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 53.594,
-      "y_mm": 102.616,
+      "x_mm": 53.289,
+      "y_mm": 106.426,
       "dnp": false,
       "nets": "LI09; PLC_0V"
     },
@@ -1476,10 +1417,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 56.134,
-      "y_mm": 107.442,
+      "x_mm": 55.778,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I10; LI10"
+      "nets": "LI10; OI10"
     },
     {
       "reference": "D32",
@@ -1492,8 +1433,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 53.594,
-      "y_mm": 107.442,
+      "x_mm": 53.238,
+      "y_mm": 102.311,
       "dnp": false,
       "nets": "LI10; PLC_0V"
     },
@@ -1508,10 +1449,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 58.674,
-      "y_mm": 107.442,
+      "x_mm": 58.318,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I11; LI11"
+      "nets": "LI11; OI11"
     },
     {
       "reference": "D34",
@@ -1524,8 +1465,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 60.96,
-      "y_mm": 102.87,
+      "x_mm": 60.655,
+      "y_mm": 106.375,
       "dnp": false,
       "nets": "LI11; PLC_0V"
     },
@@ -1540,10 +1481,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 63.246,
-      "y_mm": 107.442,
+      "x_mm": 62.89,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I12; LI12"
+      "nets": "LI12; OI12"
     },
     {
       "reference": "D36",
@@ -1556,8 +1497,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 60.96,
-      "y_mm": 107.442,
+      "x_mm": 60.604,
+      "y_mm": 102.311,
       "dnp": false,
       "nets": "LI12; PLC_0V"
     },
@@ -1572,10 +1513,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 65.786,
-      "y_mm": 107.442,
+      "x_mm": 65.43,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I13; LI13"
+      "nets": "LI13; OI13"
     },
     {
       "reference": "D38",
@@ -1588,8 +1529,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 68.072,
-      "y_mm": 102.616,
+      "x_mm": 67.716,
+      "y_mm": 106.477,
       "dnp": false,
       "nets": "LI13; PLC_0V"
     },
@@ -1604,10 +1545,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 70.358,
-      "y_mm": 107.442,
+      "x_mm": 70.002,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I14; LI14"
+      "nets": "LI14; OI14"
     },
     {
       "reference": "D40",
@@ -1620,8 +1561,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 68.072,
-      "y_mm": 107.188,
+      "x_mm": 67.716,
+      "y_mm": 102.311,
       "dnp": false,
       "nets": "LI14; PLC_0V"
     },
@@ -1636,10 +1577,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 72.898,
-      "y_mm": 107.442,
+      "x_mm": 72.542,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I15; LI15"
+      "nets": "LI15; OI15"
     },
     {
       "reference": "D42",
@@ -1652,8 +1593,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 75.184,
-      "y_mm": 102.616,
+      "x_mm": 74.879,
+      "y_mm": 106.324,
       "dnp": false,
       "nets": "LI15; PLC_0V"
     },
@@ -1668,10 +1609,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 77.724,
-      "y_mm": 107.442,
+      "x_mm": 77.368,
+      "y_mm": 102.385,
       "dnp": false,
-      "nets": "I16; LI16"
+      "nets": "LI16; OI16"
     },
     {
       "reference": "D44",
@@ -1684,10 +1625,26 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 75.184,
-      "y_mm": 107.188,
+      "x_mm": 74.981,
+      "y_mm": 102.311,
       "dnp": false,
       "nets": "LI16; PLC_0V"
+    },
+    {
+      "reference": "J5",
+      "value": "ESTOP PLC_0V",
+      "sheet": "16 PLC IN",
+      "functional_block": "dedicated safety input connector",
+      "channels": "",
+      "role": "connector",
+      "associated_ic_or_net": "external or board-level connection",
+      "placement_rule": "mechanical anchor; do not move without approval",
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 82.85,
+      "y_mm": 114.942,
+      "dnp": false,
+      "nets": "ESTOP_IN; PLC_0V"
     },
     {
       "reference": "J7",
@@ -1722,22 +1679,6 @@
       "nets": "I09; I10; I11; I12; I13; I14; I15; I16"
     },
     {
-      "reference": "J56",
-      "value": "ESTOP PLC_0V",
-      "sheet": "16 PLC IN",
-      "functional_block": "16 PLC IN",
-      "channels": "",
-      "role": "connector",
-      "associated_ic_or_net": "external or board-level connection",
-      "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
-      "dnp": false,
-      "nets": "ESTOP_IN; PLC_0V"
-    },
-    {
       "reference": "R16",
       "value": "2.2k",
       "sheet": "16 PLC IN",
@@ -1748,10 +1689,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 82.55,
-      "y_mm": 102.616,
+      "x_mm": 82.906,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "ESTOP_L; ESTOP_O"
+      "nets": "ESTOP_IN; ESTOP_L"
     },
     {
       "reference": "R18",
@@ -1764,10 +1705,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 20.32,
-      "y_mm": 102.638,
+      "x_mm": 20.269,
+      "y_mm": 107.718,
       "dnp": false,
-      "nets": "LI01; OI01"
+      "nets": "I01; LI01"
     },
     {
       "reference": "R19",
@@ -1780,10 +1721,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 24.892,
-      "y_mm": 102.638,
+      "x_mm": 24.841,
+      "y_mm": 107.718,
       "dnp": false,
-      "nets": "LI02; OI02"
+      "nets": "I02; LI02"
     },
     {
       "reference": "R20",
@@ -1796,10 +1737,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 27.432,
-      "y_mm": 102.616,
+      "x_mm": 27.381,
+      "y_mm": 107.696,
       "dnp": false,
-      "nets": "LI03; OI03"
+      "nets": "I03; LI03"
     },
     {
       "reference": "R21",
@@ -1812,10 +1753,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 32.004,
-      "y_mm": 102.616,
+      "x_mm": 31.953,
+      "y_mm": 107.696,
       "dnp": false,
-      "nets": "LI04; OI04"
+      "nets": "I04; LI04"
     },
     {
       "reference": "R22",
@@ -1828,10 +1769,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 34.544,
-      "y_mm": 102.616,
+      "x_mm": 34.493,
+      "y_mm": 107.696,
       "dnp": false,
-      "nets": "LI05; OI05"
+      "nets": "I05; LI05"
     },
     {
       "reference": "R23",
@@ -1844,10 +1785,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 39.116,
-      "y_mm": 102.641,
+      "x_mm": 39.065,
+      "y_mm": 107.721,
       "dnp": false,
-      "nets": "LI06; OI06"
+      "nets": "I06; LI06"
     },
     {
       "reference": "R24",
@@ -1860,10 +1801,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 41.656,
-      "y_mm": 102.616,
+      "x_mm": 41.605,
+      "y_mm": 107.696,
       "dnp": false,
-      "nets": "LI07; OI07"
+      "nets": "I07; LI07"
     },
     {
       "reference": "R25",
@@ -1876,10 +1817,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 46.228,
-      "y_mm": 102.616,
+      "x_mm": 46.38,
+      "y_mm": 107.696,
       "dnp": false,
-      "nets": "LI08; OI08"
+      "nets": "I08; LI08"
     },
     {
       "reference": "R26",
@@ -1892,10 +1833,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 51.054,
-      "y_mm": 102.616,
+      "x_mm": 50.749,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI09; OI09"
+      "nets": "I09; LI09"
     },
     {
       "reference": "R27",
@@ -1908,10 +1849,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 56.134,
-      "y_mm": 102.616,
+      "x_mm": 55.829,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI10; OI10"
+      "nets": "I10; LI10"
     },
     {
       "reference": "R28",
@@ -1924,10 +1865,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 58.674,
-      "y_mm": 102.616,
+      "x_mm": 58.369,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI11; OI11"
+      "nets": "I11; LI11"
     },
     {
       "reference": "R29",
@@ -1940,10 +1881,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 63.276,
-      "y_mm": 102.616,
+      "x_mm": 62.971,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI12; OI12"
+      "nets": "I12; LI12"
     },
     {
       "reference": "R30",
@@ -1956,10 +1897,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 65.786,
-      "y_mm": 102.616,
+      "x_mm": 65.481,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI13; OI13"
+      "nets": "I13; LI13"
     },
     {
       "reference": "R31",
@@ -1972,10 +1913,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 70.358,
-      "y_mm": 102.616,
+      "x_mm": 70.053,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI14; OI14"
+      "nets": "I14; LI14"
     },
     {
       "reference": "R32",
@@ -1988,10 +1929,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 72.898,
-      "y_mm": 102.616,
+      "x_mm": 72.593,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI15; OI15"
+      "nets": "I15; LI15"
     },
     {
       "reference": "R33",
@@ -2004,10 +1945,10 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 77.724,
-      "y_mm": 102.616,
+      "x_mm": 77.419,
+      "y_mm": 107.747,
       "dnp": false,
-      "nets": "LI16; OI16"
+      "nets": "I16; LI16"
     },
     {
       "reference": "R74",
@@ -2020,8 +1961,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 89.916,
-      "y_mm": 85.598,
+      "x_mm": 87.3,
+      "y_mm": 87.478,
       "dnp": false,
       "nets": "3V3; ESTOP"
     },
@@ -2155,7 +2096,7 @@
     },
     {
       "reference": "U35",
-      "value": "TLP291",
+      "value": "LTV-217-B-G",
       "sheet": "16 PLC IN",
       "functional_block": "16 PLC IN",
       "channels": "",
@@ -2164,7 +2105,7 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 90.17,
+      "x_mm": 89.459,
       "y_mm": 93.218,
       "dnp": false,
       "nets": "ESTOP; ESTOP_O; GND; PLC_0V"
@@ -3012,8 +2953,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 22.098,
-      "y_mm": 64.262,
+      "x_mm": 21.692,
+      "y_mm": 63.551,
       "dnp": false,
       "nets": "GND; OUT4; OUT5; OUT6; OUT7"
     },
@@ -3028,8 +2969,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 36.068,
-      "y_mm": 64.008,
+      "x_mm": 36.119,
+      "y_mm": 63.449,
       "dnp": false,
       "nets": "GND; OUT0; OUT1; OUT2; OUT3"
     },
@@ -3044,8 +2985,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 53.34,
-      "y_mm": 64.516,
+      "x_mm": 53.696,
+      "y_mm": 63.805,
       "dnp": false,
       "nets": "GND; OUT10; OUT11; OUT8; OUT9"
     },
@@ -3060,8 +3001,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 39.37,
-      "y_mm": 64.008,
+      "x_mm": 39.319,
+      "y_mm": 63.449,
       "dnp": false,
       "nets": "GND; OUT12; OUT13; OUT14; OUT15"
     },
@@ -3076,8 +3017,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 66.04,
-      "y_mm": 56.642,
+      "x_mm": 65.532,
+      "y_mm": 57.658,
       "dnp": false,
       "nets": "OD01; OD02; OD03; OD04; OUT16; OUT17; OUT18; OUT19"
     },
@@ -3092,8 +3033,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 59.436,
-      "y_mm": 56.642,
+      "x_mm": 60.96,
+      "y_mm": 57.658,
       "dnp": false,
       "nets": "OD05; OD06; OD07; OD08; OUT20; OUT21; OUT22; OUT23"
     },
@@ -3108,8 +3049,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 86.328,
-      "y_mm": 56.642,
+      "x_mm": 83.82,
+      "y_mm": 57.658,
       "dnp": false,
       "nets": "OD09; OD10; OD11; OD12; OUT24; OUT25; OUT26; OUT27"
     },
@@ -3124,8 +3065,8 @@
       "placement_rule": "place with functional block; review after placement",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 80.264,
-      "y_mm": 56.642,
+      "x_mm": 79.248,
+      "y_mm": 57.658,
       "dnp": false,
       "nets": "OD13; OD14; OD15; OD16; OUT28; OUT29; OUT30; OUT31"
     },
@@ -3306,56 +3247,56 @@
       "nets": "5V; ENC_5V"
     },
     {
-      "reference": "J57",
+      "reference": "J13",
       "value": "5V A0 B0 Z0 GND",
       "sheet": "Encoders",
-      "functional_block": "encoder 0",
+      "functional_block": "encoder 0 connector",
       "channels": "encoder 0",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 92.71,
+      "y_mm": 114.942,
       "dnp": false,
       "nets": "E0_A5V; E0_B5V; E0_Z5V; ENC_5V; GND"
     },
     {
-      "reference": "J58",
+      "reference": "J14",
       "value": "5V A1 B1 Z1 GND",
       "sheet": "Encoders",
-      "functional_block": "encoder 1",
+      "functional_block": "encoder 1 connector",
       "channels": "encoder 1",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 113.03,
+      "y_mm": 115.062,
       "dnp": false,
       "nets": "E1_A5V; E1_B5V; E1_Z5V; ENC_5V; GND"
     },
     {
-      "reference": "J59",
+      "reference": "J15",
       "value": "5V A2 B2 Z2 GND",
       "sheet": "Encoders",
-      "functional_block": "encoder 2",
+      "functional_block": "encoder 2 connector",
       "channels": "encoder 2",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 133.533,
+      "y_mm": 115.062,
       "dnp": false,
       "nets": "E2_A5V; E2_B5V; E2_Z5V; ENC_5V; GND"
     },
     {
       "reference": "R110",
-      "value": "5.1k",
+      "value": "22k",
       "sheet": "Encoders",
       "functional_block": "encoder 2",
       "channels": "encoder 2",
@@ -3371,7 +3312,7 @@
     },
     {
       "reference": "R111",
-      "value": "10k",
+      "value": "33k",
       "sheet": "Encoders",
       "functional_block": "encoder 2",
       "channels": "encoder 2",
@@ -3402,18 +3343,18 @@
       "nets": "3V3; E0_A3V3; E0_A5V; E0_B3V3; E0_B5V; E0_Z3V3; E0_Z5V; E1_A3V3; E1_A5V; E1_B3V3; E1_B5V; E1_Z3V3; E1_Z5V; E2_A3V3; E2_A5V; E2_B3V3; E2_B5V; GND"
     },
     {
-      "reference": "J61",
+      "reference": "J22",
       "value": "LVDS 2x10",
       "sheet": "Display",
-      "functional_block": "LCD LVDS display",
+      "functional_block": "display connector",
       "channels": "",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 116.586,
+      "y_mm": 97.028,
       "dnp": false,
       "nets": "3V3; GND; LVDS_CLK_N; LVDS_CLK_P; LVDS_D0_N; LVDS_D0_P; LVDS_D1_N; LVDS_D1_P; LVDS_D2_N; LVDS_D2_P"
     },
@@ -3451,7 +3392,7 @@
     },
     {
       "reference": "C67",
-      "value": "10uF 25V",
+      "value": "22uF 25V",
       "sheet": "SD / Wi-Fi",
       "functional_block": "SD / Wi-Fi",
       "channels": "",
@@ -3492,24 +3433,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 121.92,
-      "y_mm": 21.609,
-      "dnp": false,
-      "nets": "GND; WIFI_3V3"
-    },
-    {
-      "reference": "C70",
-      "value": "100nF",
-      "sheet": "SD / Wi-Fi",
-      "functional_block": "SD / Wi-Fi",
-      "channels": "",
-      "role": "decoupling capacitor",
-      "associated_ic_or_net": "U34 output",
-      "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 123.19,
-      "y_mm": 16.51,
+      "x_mm": 123.444,
+      "y_mm": 14.427,
       "dnp": false,
       "nets": "GND; WIFI_3V3"
     },
@@ -3524,24 +3449,8 @@
       "placement_rule": "place at regulator/load entry; preserve short power loop",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 119.476,
-      "y_mm": 29.229,
-      "dnp": false,
-      "nets": "5V; GND"
-    },
-    {
-      "reference": "C89",
-      "value": "100nF",
-      "sheet": "SD / Wi-Fi",
-      "functional_block": "SD / Wi-Fi",
-      "channels": "",
-      "role": "decoupling capacitor",
-      "associated_ic_or_net": "U34 input",
-      "placement_rule": "place immediately beside associated IC supply and GND pins; minimize loop",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 127.762,
-      "y_mm": 27.94,
+      "x_mm": 118.237,
+      "y_mm": 29.058,
       "dnp": false,
       "nets": "5V; GND"
     },
@@ -3642,22 +3551,6 @@
       "nets": "CD; SD_CD"
     },
     {
-      "reference": "RN36",
-      "value": "4x10k",
-      "sheet": "SD / Wi-Fi",
-      "functional_block": "SD / Wi-Fi",
-      "channels": "",
-      "role": "resistor network",
-      "associated_ic_or_net": "isolated multi-channel passive network",
-      "placement_rule": "place with functional block; review after placement",
-      "current_status": "inside",
-      "side": "F.Cu",
-      "x_mm": 131.318,
-      "y_mm": 7.874,
-      "dnp": false,
-      "nets": "ESP_EN; ESP_IO0; ESP_IO2; ESP_RST; WIFI_3V3"
-    },
-    {
       "reference": "RN43",
       "value": "4x10k",
       "sheet": "SD / Wi-Fi",
@@ -3700,8 +3593,8 @@
       "placement_rule": "place in functional block; keep GND return short",
       "current_status": "inside",
       "side": "F.Cu",
-      "x_mm": 128.016,
-      "y_mm": 22.352,
+      "x_mm": 123.546,
+      "y_mm": 21.844,
       "dnp": false,
       "nets": "5V; GND; WIFI_3V3"
     },
@@ -3946,34 +3839,34 @@
       "nets": "ADC3; GND"
     },
     {
-      "reference": "J63",
+      "reference": "J24",
       "value": "GND AI0 AI1 AI2 AI3",
       "sheet": "Analog I/O",
-      "functional_block": "analog input 0",
+      "functional_block": "analog inputs connector",
       "channels": "analog input 0; analog input 1; analog input 2; analog input 3",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 155.202,
+      "y_mm": 57.49,
       "dnp": false,
       "nets": "AI0; AI1; AI2; AI3; GND"
     },
     {
-      "reference": "J64",
+      "reference": "J25",
       "value": "GND AO0 AO1 AO2 AO3",
       "sheet": "Analog I/O",
-      "functional_block": "analog output 0",
+      "functional_block": "analog outputs connector",
       "channels": "analog output 0; analog output 1; analog output 2; analog output 3",
       "role": "connector",
       "associated_ic_or_net": "external or board-level connection",
       "placement_rule": "mechanical anchor; do not move without approval",
-      "current_status": "missing",
-      "side": "",
-      "x_mm": null,
-      "y_mm": null,
+      "current_status": "inside",
+      "side": "F.Cu",
+      "x_mm": 155.202,
+      "y_mm": 36.83,
       "dnp": false,
       "nets": "AO0; AO1; AO2; AO3; GND"
     },
@@ -4245,7 +4138,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 147.023,
-      "y_mm": 25.434,
+      "y_mm": 25.298,
       "dnp": false,
       "nets": "AO2; AO2_FB"
     },
@@ -4261,7 +4154,7 @@
       "current_status": "inside",
       "side": "F.Cu",
       "x_mm": 141.181,
-      "y_mm": 25.434,
+      "y_mm": 25.248,
       "dnp": false,
       "nets": "AO3; AO3_FB"
     },

@@ -2,14 +2,14 @@
 
 ## Input and regulators
 
-The main machine input is 12-24 V DC. D1 is an SMBJ24CA clamp and D2 is an S1M
-reverse-polarity diode.
+The main machine input is 12-24 V DC. D1 is an SMBJ24CA clamp and D2/D3 are
+US1M reverse-polarity diodes.
 
 | Rail | Source | Input | Output | Intended load |
 |---|---|---|---|---|
 | `5V` | U1 LMR36510, 1 A | `VIN_P` | 22 uH/1.4 A, 2 x 22 uF/25 V plus 100 nF | MOD1, U2, U34, U28, encoders |
 | `3V3` | U2 AMS1117-3.3 | `5V` | 22 uF/25 V plus 100 nF each side | Input logic, 74AHCT595 control, SD, LCD |
-| `WIFI_3V3` | U34 AMS1117-3.3 | `5V` | 22 uF/25 V plus 100 nF each side | ESP-01/ESP-01S |
+| `WIFI_3V3` | U34 AMS1117-3.3 | `5V` | 22 uF/25 V each side | ESP-01/ESP-01S |
 | `AO_12V` | U37 L78L12 | `VIN_P` | 22 uF/25 V plus 100 nF | U38 and 0-10 V outputs |
 | `BL_12V` | U3 isolated LMR36510, 1 A | isolated `PLC_24V` | 47 uH/0.9 A, 3 x 22 uF/25 V plus 100 nF | Backlight/CCFL input |
 

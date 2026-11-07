@@ -1,43 +1,39 @@
 reference,value,sheet,functional_block,channels,role,associated_ic_or_net,placement_rule,current_status,side,x_mm,y_mm,dnp,nets
-C2,100nF 100V,Power,Power,,input bypass capacitor,VIN_F input filter,place in functional block; keep GND return short,inside,F.Cu,115.062,16.51,False,GND; VIN
-C3,22uF 35V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,23.641,False,GND; VIN_P
-C4,100nF 100V,Power,Power,,decoupling capacitor,U1 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,109.316,23.641,False,GND; VIN_P
-C5,22uF 35V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,23.641,False,GND; VIN_P
-C6,22uF 25V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,112.364,29.21,False,5V; GND
-C7,100nF,Power,Power,,decoupling capacitor,U1 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,109.316,28.852,False,5V; GND
-C10,22uF 25V,Power,Power,,bulk input capacitor,U2 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,122.936,29.21,False,5V; GND
-C11,22uF 25V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,115.92,29.229,False,5V; GND
+C3,22uF 35V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,109.931,23.673,False,GND; VIN_P
+C5,22uF 35V,Power,Power,,bulk input capacitor,U1 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,114.046,23.698,False,GND; VIN_P
+C6,22uF 25V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,110.007,29.159,False,5V; GND
+C10,22uF 25V,Power,Power,,bulk input capacitor,U2 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,122.072,29.058,False,5V; GND
+C11,22uF 25V,Power,Power,,bulk output capacitor,U1 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,114.021,29.159,False,5V; GND
 C13,100nF,Power,Power,,decoupling capacitor,U2 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,123.286,41.279,False,3V3; GND
 C15,100nF,Power,Power,,decoupling capacitor,ADC_3V3 filter,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,99.06,42.672,False,ADC_3V3; GND
-C76,100nF,Power,Power,,decoupling capacitor,U2 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,149.352,63.5,False,5V; GND
+C76,100nF,Power,Power,,decoupling capacitor,U2 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,149.301,66.294,False,5V; GND
 C86,100nF,Power,Power,,bootstrap capacitor,U1 BOOT to SW,place directly between regulator BOOT and SW pins,inside,F.Cu,98.648,24.403,False,B5_BST; B5_SW
 C90,22uF 25V,Power,Power,,bulk output capacitor,U2 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,125.984,41.279,False,3V3; GND
 C91,1uF,Power,Power,,IC VCC bypass capacitor,U1 VCC,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,98.648,20.847,False,B5_VCC; GND
-C107,22uF 35V,Power,Power,,bulk input capacitor,U3 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,27.686,21.082,False,BL_VIN; PLC_0V
-C108,100nF 100V,Power,Power,,decoupling capacitor,U3 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,27.686,24.13,False,BL_VIN; PLC_0V
-C109,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,22.098,False,BL_12V; PLC_0V
-C110,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,18.542,False,BL_12V; PLC_0V
-C111,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,14.732,False,BL_12V; PLC_0V
-C112,100nF,Power,Power,,decoupling capacitor,U3 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,34.29,25.146,False,BL_12V; PLC_0V
+C107,22uF 35V,Power,Power,,bulk input capacitor,U3 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,27.686,19.558,False,BL_VIN; PLC_0V
+C108,22uF 35V,Power,Power,,decoupling capacitor,U3 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,27.686,23.774,False,BL_VIN; PLC_0V
+C109,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,24.384,False,BL_12V; PLC_0V
+C110,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,20.066,False,BL_12V; PLC_0V
+C111,22uF 25V,Power,Power,,bulk output capacitor,U3 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,35.052,16.256,False,BL_12V; PLC_0V
 C113,100nF,Power,Power,,bootstrap capacitor,U3 BOOT to SW,place directly between regulator BOOT and SW pins,inside,F.Cu,30.734,35.052,False,B12_BST; B12_SW
 C114,1uF,Power,Power,,IC VCC bypass capacitor,U3 VCC,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,26.924,35.052,False,B12_VCC; PLC_0V
-D1,SMBJ24CA,Power,Power,,diode,protection/clamp/rectification,place in functional block; keep GND return short,inside,F.Cu,114.427,10.795,False,GND; VIN
-D2,S1M,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,111.76,17.018,False,VIN; VIN_P
-D3,S1M,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,25.908,15.748,False,BL_VIN; PLC_24V
+D1,SMBJ24CA,Power,Power,,diode,protection/clamp/rectification,place in functional block; keep GND return short,inside,F.Cu,111.506,15.291,False,GND; VIN
+D2,US1M,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,117.043,15.138,False,VIN; VIN_P
+D3,US1M,Power,Power,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,25.908,15.748,False,BL_VIN; PLC_24V
 D4,5V LED,Power,Power,,LED,indicator/protection,place in functional block; keep GND return short,inside,F.Cu,99.517,34.442,False,GND; P5V_LED
 D5,3V3 LED,Power,Power,,LED,indicator/protection,place in functional block; keep GND return short,inside,F.Cu,99.54,37.109,False,GND; P3V3_LED
 FB1,600R@100MHz,Power,Power,,ferrite bead,rail filtering,place with functional block; review after placement,inside,F.Cu,99.568,39.624,False,3V3; ADC_3V3
-J1,24+ GND,Power,main power connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,106.38,6.215,False,GND; VIN
+J1,24+ GND,Power,main power connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,110.292,6.317,False,GND; VIN
 J2,BL12+ PLC_0V,Power,backlight/CCFL connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,33.2,6.215,False,BL_12V; PLC_0V
 L1,22uH 1.4A,Power,Power,,inductor,switching power stage,place with functional block; review after placement,inside,F.Cu,104.14,29.352,False,5V; B5_SW
 L2,47uH 0.9A,Power,Power,,inductor,switching power stage,place with functional block; review after placement,inside,F.Cu,35.306,29.972,False,B12_SW; BL_12V
-R4,1k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,105.342,34.442,False,5V; P5V_LED
-R5,1k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,105.255,37.109,False,3V3; P3V3_LED
+R4,2.2k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,105.342,34.442,False,5V; P5V_LED
+R5,2.2k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,105.255,37.084,False,3V3; P3V3_LED
 R70,33k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,104.806,16.256,False,5V; FB5_T
 R71,100k,Power,Power,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,101.854,16.256,False,FB5; FB5_T
 R72,33k,Power,Power,,resistor,series/divider/limit passive,place in functional block; keep GND return short,inside,F.Cu,98.806,16.256,False,FB5; GND
-R73,100k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,125.476,35.814,False,3V3; PG_N
-R126,100k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,22.098,25.146,False,BL_12V; FB12
+R73,100k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,123.393,35.916,False,3V3; PG_N
+R126,100k,Power,Power,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,22.098,26.924,False,BL_12V; FB12
 R127,10k,Power,Power,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,22.098,29.718,False,FB12; PLC_0V
 R128,100k,Power,Power,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,22.16,32.766,False,FB12; PLC_0V
 U1,LMR36510ADDAR,Power,Power,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,104.14,22.352,False,B5_BST; B5_SW; B5_VCC; FB5; GND; PG_N; VIN_P
@@ -51,8 +47,8 @@ C26,100nF,MCU / SHIFT,MCU / SHIFT,,decoupling capacitor,U13,place immediately be
 C27,100nF,MCU / SHIFT,MCU / SHIFT,,decoupling capacitor,U12,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,70.866,68.58,False,5V; GND
 C28,100nF,MCU / SHIFT,MCU / SHIFT,,decoupling capacitor,U11,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,53.594,68.58,False,5V; GND
 C29,100nF,MCU / SHIFT,MCU / SHIFT,,decoupling capacitor,U10,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,36.068,68.834,False,5V; GND
+J51,3V3 GND IO4 IO5 IO6 IO7 IO8,MCU / SHIFT,MCU / SHIFT,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,94.361,53.467,False,3V3; GND; IO4; IO5; IO6; IO7; IO8
 J55,"U7 spare inputs: GND, IN13, IN14",MCU / SHIFT,MCU / SHIFT,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,35.636,83.896,False,GND; U7_IN13; U7_IN14
-J65,3V3 GND IO4 IO5 IO6 IO7 IO8,MCU / SHIFT,MCU / SHIFT,,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,3V3; GND; IO4; IO5; IO6; IO7; IO8
 MOD1,WeAct RP2350B,MCU / SHIFT,controller module,analog input 0; analog output 0; encoder 0; analog input 1; analog output 1; encoder 1; analog input 2; analog output 2; encoder 2; analog input 3; analog output 3,module,socketed controller module,mechanical anchor; do not move without approval,inside,F.Cu,116.586,65.786,False,5V; ADC0; ADC1; ADC2; ADC3; ADC_3V3; CD; E0_A3V3; E0_B3V3; E0_Z3V3; E1_A3V3; E1_B3V3; E1_Z3V3; E2_A3V3; E2_B3V3; E2_Z3V3; ESTOP; GND; HSTX_CLK_N; HSTX_CLK_P; HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; HSTX_D2_N; HSTX_D2_P; I2C_SCL; I2C_SDA; IO4; IO5; IO6; IO7; IO8; LAT; PG_N; PL; PWM0; PWM1; PWM2; PWM3; Q7; SCK; SER0; SPI_CK; SPI_CS; SPI_SI; SPI_SO; UART_RX; UART_TX
 R9,10k,MCU / SHIFT,MCU / SHIFT,,resistor,series/divider/limit passive,place in functional block; keep GND return short,inside,F.Cu,24.638,74.422,False,GND; IN0
 RN45,4x10k,MCU / SHIFT,MCU / SHIFT,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,21.195,77.095,False,3V3; ERR0; ERR4; Z0; Z4
@@ -67,61 +63,61 @@ U10,SN74AHCT595DR,MCU / SHIFT,MCU / SHIFT,output bit 0; output bit 1; output bit
 U11,SN74AHCT595DR,MCU / SHIFT,MCU / SHIFT,output bit 10; output bit 11; output bit 12; output bit 13; output bit 14; output bit 15; output bit 8; output bit 9,IC,active device,place in functional block; keep GND return short,inside,F.Cu,46.482,65.024,False,5V; GND; LAT; OUT10; OUT11; OUT12; OUT13; OUT14; OUT15; OUT8; OUT9; SCK; SER2; SER3
 U12,SN74AHCT595DR,MCU / SHIFT,MCU / SHIFT,output bit 16; output bit 17; output bit 18; output bit 19; output bit 20; output bit 21; output bit 22; output bit 23,IC,active device,place in functional block; keep GND return short,inside,F.Cu,63.5,65.024,False,5V; GND; LAT; OUT16; OUT17; OUT18; OUT19; OUT20; OUT21; OUT22; OUT23; SCK; SER1; SER2
 U13,SN74AHCT595DR,MCU / SHIFT,MCU / SHIFT,output bit 24; output bit 25; output bit 26; output bit 27; output bit 28; output bit 29; output bit 30; output bit 31,IC,active device,place in functional block; keep GND return short,inside,F.Cu,81.28,65.024,False,5V; GND; LAT; OUT24; OUT25; OUT26; OUT27; OUT28; OUT29; OUT30; OUT31; SCK; SER0; SER1
-D9,indicator,16 PLC IN,16 PLC IN,,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,82.55,107.442,False,ESTOP_IN; ESTOP_L
-D10,1N4148WS,16 PLC IN,16 PLC IN,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,85.09,105.41,False,ESTOP_L; PLC_0V
-D13,indicator,16 PLC IN,16 PLC IN,PLC input 1,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,20.32,107.508,False,I01; LI01
-D14,1N4148WS,16 PLC IN,16 PLC IN,PLC input 1,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,22.606,102.616,False,LI01; PLC_0V
-D15,indicator,16 PLC IN,16 PLC IN,PLC input 2,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,24.892,107.508,False,I02; LI02
-D16,1N4148WS,16 PLC IN,16 PLC IN,PLC input 2,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,22.606,107.442,False,LI02; PLC_0V
-D17,indicator,16 PLC IN,16 PLC IN,PLC input 3,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,27.432,107.508,False,I03; LI03
-D18,1N4148WS,16 PLC IN,16 PLC IN,PLC input 3,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,29.718,102.616,False,LI03; PLC_0V
-D19,indicator,16 PLC IN,16 PLC IN,PLC input 4,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,32.004,107.442,False,I04; LI04
-D20,1N4148WS,16 PLC IN,16 PLC IN,PLC input 4,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,29.718,107.442,False,LI04; PLC_0V
-D21,indicator,16 PLC IN,16 PLC IN,PLC input 5,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,34.544,107.485,False,I05; LI05
-D22,1N4148WS,16 PLC IN,16 PLC IN,PLC input 5,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,36.83,102.616,False,LI05; PLC_0V
-D23,indicator,16 PLC IN,16 PLC IN,PLC input 6,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,39.116,107.442,False,I06; LI06
-D24,1N4148WS,16 PLC IN,16 PLC IN,PLC input 6,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,36.83,107.696,False,LI06; PLC_0V
-D25,indicator,16 PLC IN,16 PLC IN,PLC input 7,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,41.656,107.442,False,I07; LI07
-D26,1N4148WS,16 PLC IN,16 PLC IN,PLC input 7,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,43.942,102.87,False,LI07; PLC_0V
-D27,indicator,16 PLC IN,16 PLC IN,PLC input 8,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,46.228,107.442,False,I08; LI08
-D28,1N4148WS,16 PLC IN,16 PLC IN,PLC input 8,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,43.942,107.442,False,LI08; PLC_0V
-D29,indicator,16 PLC IN,16 PLC IN,PLC input 9,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,51.054,107.442,False,I09; LI09
-D30,1N4148WS,16 PLC IN,16 PLC IN,PLC input 9,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,53.594,102.616,False,LI09; PLC_0V
-D31,indicator,16 PLC IN,16 PLC IN,PLC input 10,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,56.134,107.442,False,I10; LI10
-D32,1N4148WS,16 PLC IN,16 PLC IN,PLC input 10,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,53.594,107.442,False,LI10; PLC_0V
-D33,indicator,16 PLC IN,16 PLC IN,PLC input 11,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,58.674,107.442,False,I11; LI11
-D34,1N4148WS,16 PLC IN,16 PLC IN,PLC input 11,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,60.96,102.87,False,LI11; PLC_0V
-D35,indicator,16 PLC IN,16 PLC IN,PLC input 12,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,63.246,107.442,False,I12; LI12
-D36,1N4148WS,16 PLC IN,16 PLC IN,PLC input 12,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,60.96,107.442,False,LI12; PLC_0V
-D37,indicator,16 PLC IN,16 PLC IN,PLC input 13,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,65.786,107.442,False,I13; LI13
-D38,1N4148WS,16 PLC IN,16 PLC IN,PLC input 13,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,68.072,102.616,False,LI13; PLC_0V
-D39,indicator,16 PLC IN,16 PLC IN,PLC input 14,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,70.358,107.442,False,I14; LI14
-D40,1N4148WS,16 PLC IN,16 PLC IN,PLC input 14,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,68.072,107.188,False,LI14; PLC_0V
-D41,indicator,16 PLC IN,16 PLC IN,PLC input 15,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,72.898,107.442,False,I15; LI15
-D42,1N4148WS,16 PLC IN,16 PLC IN,PLC input 15,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,75.184,102.616,False,LI15; PLC_0V
-D43,indicator,16 PLC IN,16 PLC IN,PLC input 16,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,77.724,107.442,False,I16; LI16
-D44,1N4148WS,16 PLC IN,16 PLC IN,PLC input 16,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,75.184,107.188,False,LI16; PLC_0V
+D9,indicator,16 PLC IN,16 PLC IN,,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,82.906,102.311,False,ESTOP_L; ESTOP_O
+D10,1N4148WS,16 PLC IN,16 PLC IN,,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,85.395,105.512,False,ESTOP_L; PLC_0V
+D13,indicator,16 PLC IN,16 PLC IN,PLC input 1,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,20.422,102.411,False,LI01; OI01
+D14,1N4148WS,16 PLC IN,16 PLC IN,PLC input 1,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,22.606,106.426,False,LI01; PLC_0V
+D15,indicator,16 PLC IN,16 PLC IN,PLC input 2,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,24.994,102.411,False,LI02; OI02
+D16,1N4148WS,16 PLC IN,16 PLC IN,PLC input 2,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,22.708,102.345,False,LI02; PLC_0V
+D17,indicator,16 PLC IN,16 PLC IN,PLC input 3,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,27.534,102.411,False,LI03; OI03
+D18,1N4148WS,16 PLC IN,16 PLC IN,PLC input 3,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,29.82,106.324,False,LI03; PLC_0V
+D19,indicator,16 PLC IN,16 PLC IN,PLC input 4,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,32.106,102.345,False,LI04; OI04
+D20,1N4148WS,16 PLC IN,16 PLC IN,PLC input 4,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,29.82,102.345,False,LI04; PLC_0V
+D21,indicator,16 PLC IN,16 PLC IN,PLC input 5,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,34.646,102.388,False,LI05; OI05
+D22,1N4148WS,16 PLC IN,16 PLC IN,PLC input 5,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,36.881,106.68,False,LI05; PLC_0V
+D23,indicator,16 PLC IN,16 PLC IN,PLC input 6,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,39.218,102.345,False,LI06; OI06
+D24,1N4148WS,16 PLC IN,16 PLC IN,PLC input 6,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,36.932,102.311,False,LI06; PLC_0V
+D25,indicator,16 PLC IN,16 PLC IN,PLC input 7,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,41.758,102.345,False,LI07; OI07
+D26,1N4148WS,16 PLC IN,16 PLC IN,PLC input 7,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,44.094,106.375,False,LI07; PLC_0V
+D27,indicator,16 PLC IN,16 PLC IN,PLC input 8,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,46.33,102.345,False,LI08; OI08
+D28,1N4148WS,16 PLC IN,16 PLC IN,PLC input 8,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,44.044,102.26,False,LI08; PLC_0V
+D29,indicator,16 PLC IN,16 PLC IN,PLC input 9,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,50.698,102.385,False,LI09; OI09
+D30,1N4148WS,16 PLC IN,16 PLC IN,PLC input 9,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,53.289,106.426,False,LI09; PLC_0V
+D31,indicator,16 PLC IN,16 PLC IN,PLC input 10,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,55.778,102.385,False,LI10; OI10
+D32,1N4148WS,16 PLC IN,16 PLC IN,PLC input 10,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,53.238,102.311,False,LI10; PLC_0V
+D33,indicator,16 PLC IN,16 PLC IN,PLC input 11,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,58.318,102.385,False,LI11; OI11
+D34,1N4148WS,16 PLC IN,16 PLC IN,PLC input 11,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,60.655,106.375,False,LI11; PLC_0V
+D35,indicator,16 PLC IN,16 PLC IN,PLC input 12,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,62.89,102.385,False,LI12; OI12
+D36,1N4148WS,16 PLC IN,16 PLC IN,PLC input 12,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,60.604,102.311,False,LI12; PLC_0V
+D37,indicator,16 PLC IN,16 PLC IN,PLC input 13,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,65.43,102.385,False,LI13; OI13
+D38,1N4148WS,16 PLC IN,16 PLC IN,PLC input 13,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,67.716,106.477,False,LI13; PLC_0V
+D39,indicator,16 PLC IN,16 PLC IN,PLC input 14,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,70.002,102.385,False,LI14; OI14
+D40,1N4148WS,16 PLC IN,16 PLC IN,PLC input 14,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,67.716,102.311,False,LI14; PLC_0V
+D41,indicator,16 PLC IN,16 PLC IN,PLC input 15,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,72.542,102.385,False,LI15; OI15
+D42,1N4148WS,16 PLC IN,16 PLC IN,PLC input 15,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,74.879,106.324,False,LI15; PLC_0V
+D43,indicator,16 PLC IN,16 PLC IN,PLC input 16,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,77.368,102.385,False,LI16; OI16
+D44,1N4148WS,16 PLC IN,16 PLC IN,PLC input 16,diode,protection/clamp/rectification,place with functional block; review after placement,inside,F.Cu,74.981,102.311,False,LI16; PLC_0V
+J5,ESTOP PLC_0V,16 PLC IN,dedicated safety input connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,82.85,114.942,False,ESTOP_IN; PLC_0V
 J7,I01 I02 I03 I04 I05 I06 I07 I08,16 PLC IN,isolated PLC input connectors,PLC input 1; PLC input 2; PLC input 3; PLC input 4; PLC input 5; PLC input 6; PLC input 7; PLC input 8,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,21.041,114.942,False,I01; I02; I03; I04; I05; I06; I07; I08
 J8,I09 I10 I11 I12 I13 I14 I15 I16,16 PLC IN,isolated PLC input connectors,PLC input 10; PLC input 11; PLC input 12; PLC input 13; PLC input 14; PLC input 15; PLC input 16; PLC input 9,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,52.029,114.942,False,I09; I10; I11; I12; I13; I14; I15; I16
-J56,ESTOP PLC_0V,16 PLC IN,16 PLC IN,,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,ESTOP_IN; PLC_0V
-R16,2.2k,16 PLC IN,16 PLC IN,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,82.55,102.616,False,ESTOP_L; ESTOP_O
-R18,2.2k,16 PLC IN,16 PLC IN,PLC input 1,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,20.32,102.638,False,LI01; OI01
-R19,2.2k,16 PLC IN,16 PLC IN,PLC input 2,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,24.892,102.638,False,LI02; OI02
-R20,2.2k,16 PLC IN,16 PLC IN,PLC input 3,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,27.432,102.616,False,LI03; OI03
-R21,2.2k,16 PLC IN,16 PLC IN,PLC input 4,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,32.004,102.616,False,LI04; OI04
-R22,2.2k,16 PLC IN,16 PLC IN,PLC input 5,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,34.544,102.616,False,LI05; OI05
-R23,2.2k,16 PLC IN,16 PLC IN,PLC input 6,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,39.116,102.641,False,LI06; OI06
-R24,2.2k,16 PLC IN,16 PLC IN,PLC input 7,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,41.656,102.616,False,LI07; OI07
-R25,2.2k,16 PLC IN,16 PLC IN,PLC input 8,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,46.228,102.616,False,LI08; OI08
-R26,2.2k,16 PLC IN,16 PLC IN,PLC input 9,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,51.054,102.616,False,LI09; OI09
-R27,2.2k,16 PLC IN,16 PLC IN,PLC input 10,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,56.134,102.616,False,LI10; OI10
-R28,2.2k,16 PLC IN,16 PLC IN,PLC input 11,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,58.674,102.616,False,LI11; OI11
-R29,2.2k,16 PLC IN,16 PLC IN,PLC input 12,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,63.276,102.616,False,LI12; OI12
-R30,2.2k,16 PLC IN,16 PLC IN,PLC input 13,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,65.786,102.616,False,LI13; OI13
-R31,2.2k,16 PLC IN,16 PLC IN,PLC input 14,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,70.358,102.616,False,LI14; OI14
-R32,2.2k,16 PLC IN,16 PLC IN,PLC input 15,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,72.898,102.616,False,LI15; OI15
-R33,2.2k,16 PLC IN,16 PLC IN,PLC input 16,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,77.724,102.616,False,LI16; OI16
-R74,10k,16 PLC IN,16 PLC IN,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,89.916,85.598,False,3V3; ESTOP
+R16,2.2k,16 PLC IN,16 PLC IN,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,82.906,107.747,False,ESTOP_IN; ESTOP_L
+R18,2.2k,16 PLC IN,16 PLC IN,PLC input 1,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,20.269,107.718,False,I01; LI01
+R19,2.2k,16 PLC IN,16 PLC IN,PLC input 2,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,24.841,107.718,False,I02; LI02
+R20,2.2k,16 PLC IN,16 PLC IN,PLC input 3,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,27.381,107.696,False,I03; LI03
+R21,2.2k,16 PLC IN,16 PLC IN,PLC input 4,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,31.953,107.696,False,I04; LI04
+R22,2.2k,16 PLC IN,16 PLC IN,PLC input 5,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,34.493,107.696,False,I05; LI05
+R23,2.2k,16 PLC IN,16 PLC IN,PLC input 6,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,39.065,107.721,False,I06; LI06
+R24,2.2k,16 PLC IN,16 PLC IN,PLC input 7,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,41.605,107.696,False,I07; LI07
+R25,2.2k,16 PLC IN,16 PLC IN,PLC input 8,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,46.38,107.696,False,I08; LI08
+R26,2.2k,16 PLC IN,16 PLC IN,PLC input 9,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,50.749,107.747,False,I09; LI09
+R27,2.2k,16 PLC IN,16 PLC IN,PLC input 10,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,55.829,107.747,False,I10; LI10
+R28,2.2k,16 PLC IN,16 PLC IN,PLC input 11,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,58.369,107.747,False,I11; LI11
+R29,2.2k,16 PLC IN,16 PLC IN,PLC input 12,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,62.971,107.747,False,I12; LI12
+R30,2.2k,16 PLC IN,16 PLC IN,PLC input 13,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,65.481,107.747,False,I13; LI13
+R31,2.2k,16 PLC IN,16 PLC IN,PLC input 14,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,70.053,107.747,False,I14; LI14
+R32,2.2k,16 PLC IN,16 PLC IN,PLC input 15,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,72.593,107.747,False,I15; LI15
+R33,2.2k,16 PLC IN,16 PLC IN,PLC input 16,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,77.419,107.747,False,I16; LI16
+R74,10k,16 PLC IN,16 PLC IN,,pull-up resistor,digital state definition,place with functional block; review after placement,inside,F.Cu,87.3,87.478,False,3V3; ESTOP
 RN32,4x10k,16 PLC IN,16 PLC IN,PLC input 13; PLC input 14; PLC input 15; PLC input 16,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,85.09,93.218,False,3V3; I13_N; I14_N; I15_N; I16_N
 RN33,4x10k,16 PLC IN,16 PLC IN,PLC input 10; PLC input 11; PLC input 12; PLC input 9,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,69.596,93.472,False,3V3; I09_N; I10_N; I11_N; I12_N
 RN34,4x10k,16 PLC IN,16 PLC IN,PLC input 5; PLC input 6; PLC input 7; PLC input 8,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,54.102,93.472,False,3V3; I05_N; I06_N; I07_N; I08_N
@@ -130,7 +126,7 @@ U18,TLP291-4,16 PLC IN,16 PLC IN,PLC input 13; PLC input 14; PLC input 15; PLC i
 U19,TLP291-4,16 PLC IN,16 PLC IN,PLC input 10; PLC input 11; PLC input 12; PLC input 9,IC,active device,place in functional block; keep GND return short,inside,F.Cu,61.722,93.98,False,GND; I09_N; I10_N; I11_N; I12_N; OI09; OI10; OI11; OI12; PLC_0V
 U20,TLP291-4,16 PLC IN,16 PLC IN,PLC input 5; PLC input 6; PLC input 7; PLC input 8,IC,active device,place in functional block; keep GND return short,inside,F.Cu,46.228,93.98,False,GND; I05_N; I06_N; I07_N; I08_N; OI05; OI06; OI07; OI08; PLC_0V
 U21,TLP291-4,16 PLC IN,16 PLC IN,PLC input 1; PLC input 2; PLC input 3; PLC input 4,IC,active device,place in functional block; keep GND return short,inside,F.Cu,29.718,93.98,False,GND; I01_N; I02_N; I03_N; I04_N; OI01; OI02; OI03; OI04; PLC_0V
-U35,TLP291,16 PLC IN,16 PLC IN,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,90.17,93.218,False,ESTOP; ESTOP_O; GND; PLC_0V
+U35,LTV-217-B-G,16 PLC IN,16 PLC IN,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,89.459,93.218,False,ESTOP; ESTOP_O; GND; PLC_0V
 C115,100nF,PLC OUT,PLC OUT,,decoupling capacitor,power rail,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,36.957,44.704,False,5V; GND
 C116,100nF,PLC OUT,PLC OUT,,decoupling capacitor,power rail,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,21.971,44.704,False,5V; GND
 D45,D01,PLC OUT,PLC OUT,ULN output 0,LED,indicator/protection,place with functional block; review after placement,inside,F.Cu,62.992,15.748,False,D01; DL01
@@ -183,14 +179,14 @@ R122,2.2k,PLC OUT,PLC OUT,,resistor,series/divider/limit passive,place with func
 R123,2.2k,PLC OUT,PLC OUT,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,76.962,21.082,False,DL14; PLC_24V
 R124,2.2k,PLC OUT,PLC OUT,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,73.914,21.082,False,DL15; PLC_24V
 R125,2.2k,PLC OUT,PLC OUT,,resistor,series/divider/limit passive,place with functional block; review after placement,inside,F.Cu,70.866,21.082,False,DL16; PLC_24V
-RN8,4x10k,PLC OUT,PLC OUT,output bit 4; output bit 5; output bit 6; output bit 7,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,22.098,64.262,False,GND; OUT4; OUT5; OUT6; OUT7
-RN9,4x10k,PLC OUT,PLC OUT,output bit 0; output bit 1; output bit 2; output bit 3,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,36.068,64.008,False,GND; OUT0; OUT1; OUT2; OUT3
-RN10,4x10k,PLC OUT,PLC OUT,output bit 10; output bit 11; output bit 8; output bit 9,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,53.34,64.516,False,GND; OUT10; OUT11; OUT8; OUT9
-RN11,4x10k,PLC OUT,PLC OUT,output bit 12; output bit 13; output bit 14; output bit 15,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,39.37,64.008,False,GND; OUT12; OUT13; OUT14; OUT15
-RN37,4x1k,PLC OUT,PLC OUT,output bit 16; output bit 17; output bit 18; output bit 19,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,66.04,56.642,False,OD01; OD02; OD03; OD04; OUT16; OUT17; OUT18; OUT19
-RN38,4x1k,PLC OUT,PLC OUT,output bit 20; output bit 21; output bit 22; output bit 23,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,59.436,56.642,False,OD05; OD06; OD07; OD08; OUT20; OUT21; OUT22; OUT23
-RN39,4x1k,PLC OUT,PLC OUT,output bit 24; output bit 25; output bit 26; output bit 27,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,86.328,56.642,False,OD09; OD10; OD11; OD12; OUT24; OUT25; OUT26; OUT27
-RN40,4x1k,PLC OUT,PLC OUT,output bit 28; output bit 29; output bit 30; output bit 31,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,80.264,56.642,False,OD13; OD14; OD15; OD16; OUT28; OUT29; OUT30; OUT31
+RN8,4x10k,PLC OUT,PLC OUT,output bit 4; output bit 5; output bit 6; output bit 7,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,21.692,63.551,False,GND; OUT4; OUT5; OUT6; OUT7
+RN9,4x10k,PLC OUT,PLC OUT,output bit 0; output bit 1; output bit 2; output bit 3,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,36.119,63.449,False,GND; OUT0; OUT1; OUT2; OUT3
+RN10,4x10k,PLC OUT,PLC OUT,output bit 10; output bit 11; output bit 8; output bit 9,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,53.696,63.805,False,GND; OUT10; OUT11; OUT8; OUT9
+RN11,4x10k,PLC OUT,PLC OUT,output bit 12; output bit 13; output bit 14; output bit 15,resistor network,isolated multi-channel passive network,place in functional block; keep GND return short,inside,F.Cu,39.319,63.449,False,GND; OUT12; OUT13; OUT14; OUT15
+RN37,4x1k,PLC OUT,PLC OUT,output bit 16; output bit 17; output bit 18; output bit 19,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,65.532,57.658,False,OD01; OD02; OD03; OD04; OUT16; OUT17; OUT18; OUT19
+RN38,4x1k,PLC OUT,PLC OUT,output bit 20; output bit 21; output bit 22; output bit 23,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,60.96,57.658,False,OD05; OD06; OD07; OD08; OUT20; OUT21; OUT22; OUT23
+RN39,4x1k,PLC OUT,PLC OUT,output bit 24; output bit 25; output bit 26; output bit 27,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,83.82,57.658,False,OD09; OD10; OD11; OD12; OUT24; OUT25; OUT26; OUT27
+RN40,4x1k,PLC OUT,PLC OUT,output bit 28; output bit 29; output bit 30; output bit 31,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,79.248,57.658,False,OD13; OD14; OD15; OD16; OUT28; OUT29; OUT30; OUT31
 U26,"TBD62083AFG(Z,EL)",PLC OUT,PLC OUT,ULN output 0; ULN output 1; ULN output 2; ULN output 3; ULN output 4; ULN output 5; ULN output 6; ULN output 7,IC,active device,place with functional block; review after placement,inside,F.Cu,56.642,33.528,False,D01; D02; D03; D04; D05; D06; D07; D08; PLC_0V; PLC_24V; TD01; TD02; TD03; TD04; TD05; TD06; TD07; TD08
 U27,"TBD62083AFG(Z,EL)",PLC OUT,PLC OUT,ULN output 10; ULN output 11; ULN output 12; ULN output 13; ULN output 14; ULN output 15; ULN output 8; ULN output 9,IC,active device,place with functional block; review after placement,inside,F.Cu,78.994,33.528,False,D09; D10; D11; D12; D13; D14; D15; D16; PLC_0V; PLC_24V; TD09; TD10; TD11; TD12; TD13; TD14; TD15; TD16
 U42,MC74AC541DWR2G,PLC OUT,PLC OUT,motion axis 0; output bit 0; motion axis 1; output bit 1; motion axis 2; output bit 2; motion axis 3; output bit 3; output bit 4; output bit 5; output bit 6; output bit 7,IC,active device,place in functional block; keep GND return short,inside,F.Cu,27.813,51.816,False,5V; DIR0; DIR1; DIR2; DIR3; GND; OUT0; OUT1; OUT2; OUT3; OUT4; OUT5; OUT6; OUT7; STP0; STP1; STP2; STP3
@@ -202,31 +198,28 @@ U64,TLP291-4,PLC OUT,PLC OUT,,IC,active device,place in functional block; keep G
 C119,100nF,Encoders,encoder interface,,decoupling capacitor,power rail,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,118.11,91.694,False,3V3; GND
 D53,SMAJ5.0A,Encoders,encoder interface,,diode,protection/clamp/rectification,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,92.837,106.426,False,ENC_5V; GND
 F2,500mA,Encoders,encoder interface,,fuse,input/load protection,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,144.526,108.458,False,5V; ENC_5V
-J57,5V A0 B0 Z0 GND,Encoders,encoder 0,encoder 0,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,E0_A5V; E0_B5V; E0_Z5V; ENC_5V; GND
-J58,5V A1 B1 Z1 GND,Encoders,encoder 1,encoder 1,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,E1_A5V; E1_B5V; E1_Z5V; ENC_5V; GND
-J59,5V A2 B2 Z2 GND,Encoders,encoder 2,encoder 2,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,E2_A5V; E2_B5V; E2_Z5V; ENC_5V; GND
-R110,5.1k,Encoders,encoder 2,encoder 2,resistor,series/divider/limit passive,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,136.779,108.179,False,E2_Z3V3; E2_Z5V
-R111,10k,Encoders,encoder 2,encoder 2,resistor,series/divider/limit passive,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,136.652,105.41,False,E2_Z3V3; GND
+J13,5V A0 B0 Z0 GND,Encoders,encoder 0 connector,encoder 0,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,92.71,114.942,False,E0_A5V; E0_B5V; E0_Z5V; ENC_5V; GND
+J14,5V A1 B1 Z1 GND,Encoders,encoder 1 connector,encoder 1,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,113.03,115.062,False,E1_A5V; E1_B5V; E1_Z5V; ENC_5V; GND
+J15,5V A2 B2 Z2 GND,Encoders,encoder 2 connector,encoder 2,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,133.533,115.062,False,E2_A5V; E2_B5V; E2_Z5V; ENC_5V; GND
+R110,22k,Encoders,encoder 2,encoder 2,resistor,series/divider/limit passive,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,136.779,108.179,False,E2_Z3V3; E2_Z5V
+R111,33k,Encoders,encoder 2,encoder 2,resistor,series/divider/limit passive,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,136.652,105.41,False,E2_Z3V3; GND
 U28,SN74AHCT541DWR,Encoders,encoder 0,encoder 0; encoder 1; encoder 2,IC,active device,place between connector and buffer; keep A/B/Z channel grouping,inside,F.Cu,126.238,97.536,False,3V3; E0_A3V3; E0_A5V; E0_B3V3; E0_B5V; E0_Z3V3; E0_Z5V; E1_A3V3; E1_A5V; E1_B3V3; E1_B5V; E1_Z3V3; E1_Z5V; E2_A3V3; E2_A5V; E2_B3V3; E2_B5V; GND
-J61,LVDS 2x10,Display,LCD LVDS display,,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,3V3; GND; LVDS_CLK_N; LVDS_CLK_P; LVDS_D0_N; LVDS_D0_P; LVDS_D1_N; LVDS_D1_P; LVDS_D2_N; LVDS_D2_P
+J22,LVDS 2x10,Display,display connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,116.586,97.028,False,3V3; GND; LVDS_CLK_N; LVDS_CLK_P; LVDS_D0_N; LVDS_D0_P; LVDS_D1_N; LVDS_D1_P; LVDS_D2_N; LVDS_D2_P
 RN26,4x330R,Display,LCD LVDS display,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,112.014,91.44,False,HSTX_D0_N; HSTX_D0_P; HSTX_D1_N; HSTX_D1_P; LVDS_D0_N; LVDS_D0_P; LVDS_D1_N; LVDS_D1_P
 RN27,4x330R,Display,LCD LVDS display,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,104.902,91.44,False,HSTX_CLK_N; HSTX_CLK_P; HSTX_D2_N; HSTX_D2_P; LVDS_CLK_N; LVDS_CLK_P; LVDS_D2_N; LVDS_D2_P
-C67,10uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk rail capacitor,SD SD_3V3,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.955,79.629,False,GND; SD_3V3
+C67,22uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk rail capacitor,SD SD_3V3,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.955,79.629,False,GND; SD_3V3
 C68,100nF,SD / Wi-Fi,SD / Wi-Fi,,decoupling capacitor,SD SD_3V3,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,137.052,92.437,False,GND; SD_3V3
-C69,22uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk output capacitor,U34 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,121.92,21.609,False,GND; WIFI_3V3
-C70,100nF,SD / Wi-Fi,SD / Wi-Fi,,decoupling capacitor,U34 output,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,123.19,16.51,False,GND; WIFI_3V3
-C88,22uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk input capacitor,U34 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,119.476,29.229,False,5V; GND
-C89,100nF,SD / Wi-Fi,SD / Wi-Fi,,decoupling capacitor,U34 input,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,127.762,27.94,False,5V; GND
+C69,22uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk output capacitor,U34 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,123.444,14.427,False,GND; WIFI_3V3
+C88,22uF 25V,SD / Wi-Fi,SD / Wi-Fi,,bulk input capacitor,U34 input,place at regulator/load entry; preserve short power loop,inside,F.Cu,118.237,29.058,False,5V; GND
 FB2,600R@100MHz,SD / Wi-Fi,SD / Wi-Fi,,ferrite bead,rail filtering,place with functional block; review after placement,inside,F.Cu,148.59,72.644,False,3V3; SD_3V3
 J18,SDA SCL 3V3 5V GND,SD / Wi-Fi,SD / Wi-Fi,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,155.194,77.849,False,3V3; 5V; GND; I2C_SCL; I2C_SDA
 J20,ESP-01,SD / Wi-Fi,storage/wireless connector,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,127.508,11.43,False,ESP_EN; ESP_IO0; ESP_IO2; ESP_RST; GND; UART_RX; UART_TX; WIFI_3V3
 J36,microSD header,SD / Wi-Fi,SD / Wi-Fi,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,140.1,103.867,False,GND; SD_3V3; SD_CD; SD_CK; SD_CS; SD_DAT1; SD_DAT2; SD_SI; SD_SO
 J54,microSD TF15,SD / Wi-Fi,SD / Wi-Fi,,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,149.098,93.218,False,GND; SD_3V3; SD_CD; SD_CK; SD_CS; SD_DAT1; SD_DAT2; SD_SI; SD_SO
 JP5,SD_CD_EN,SD / Wi-Fi,SD / Wi-Fi,,solder jumper,configuration or isolation link,place with functional block; review after placement,inside,F.Cu,143.891,78.105,False,CD; SD_CD
-RN36,4x10k,SD / Wi-Fi,SD / Wi-Fi,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,131.318,7.874,False,ESP_EN; ESP_IO0; ESP_IO2; ESP_RST; WIFI_3V3
 RN43,4x10k,SD / Wi-Fi,SD / Wi-Fi,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,144.526,73.406,False,SD_3V3; SD_CD; SD_CS; SD_SI; SD_SO
 RN44,4x22R,SD / Wi-Fi,SD / Wi-Fi,,resistor network,isolated multi-channel passive network,place with functional block; review after placement,inside,F.Cu,140.462,73.406,False,SD_CK; SD_CS; SD_SI; SD_SO; SPI_CK; SPI_CS; SPI_SI; SPI_SO
-U34,AMS1117-3.3,SD / Wi-Fi,SD / Wi-Fi,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,128.016,22.352,False,5V; GND; WIFI_3V3
+U34,AMS1117-3.3,SD / Wi-Fi,SD / Wi-Fi,,IC,active device,place in functional block; keep GND return short,inside,F.Cu,123.546,21.844,False,5V; GND; WIFI_3V3
 C73,100nF,Analog I/O,analog input 0,analog input 0,ADC filter capacitor,ADC0 / MOD1 pin 8,place beside J24 with its channel divider; keep the high-impedance branch short,inside,F.Cu,142.624,58.554,False,ADC0; GND
 C74,100nF,Analog I/O,analog input 1,analog input 1,ADC filter capacitor,ADC1 / MOD1 pin 7,place beside J24 with its channel divider; keep the high-impedance branch short,inside,F.Cu,142.748,53.594,False,ADC1; GND
 C75,100nF,Analog I/O,analog input 2,analog input 2,ADC filter capacitor,ADC2 / MOD1 pin 22,place beside J24 with its channel divider; keep the high-impedance branch short,inside,F.Cu,142.748,48.768,False,ADC2; GND
@@ -242,8 +235,8 @@ C100,22uF 35V,Analog I/O,analog output power,,decoupling capacitor,U37 input,pla
 C101,22uF 25V,Analog I/O,analog output power,,bulk output capacitor,U37 output,place at regulator/load entry; preserve short power loop,inside,F.Cu,147.574,18.034,False,AO_12V; GND
 C102,100nF,Analog I/O,analog output power,,decoupling capacitor,U38 AO_12V,place immediately beside associated IC supply and GND pins; minimize loop,inside,F.Cu,138.176,30.48,False,AO_12V; GND
 C118,100nF,Analog I/O,analog input 3,analog input 3,ADC filter capacitor,ADC3 / MOD1 pin 21,place beside J24 with its channel divider; keep the high-impedance branch short,inside,F.Cu,142.748,43.942,False,ADC3; GND
-J63,GND AI0 AI1 AI2 AI3,Analog I/O,analog input 0,analog input 0; analog input 1; analog input 2; analog input 3,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,AI0; AI1; AI2; AI3; GND
-J64,GND AO0 AO1 AO2 AO3,Analog I/O,analog output 0,analog output 0; analog output 1; analog output 2; analog output 3,connector,external or board-level connection,mechanical anchor; do not move without approval,missing,,,,False,AO0; AO1; AO2; AO3; GND
+J24,GND AI0 AI1 AI2 AI3,Analog I/O,analog inputs connector,analog input 0; analog input 1; analog input 2; analog input 3,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,155.202,57.49,False,AI0; AI1; AI2; AI3; GND
+J25,GND AO0 AO1 AO2 AO3,Analog I/O,analog outputs connector,analog output 0; analog output 1; analog output 2; analog output 3,connector,external or board-level connection,mechanical anchor; do not move without approval,inside,F.Cu,155.202,36.83,False,AO0; AO1; AO2; AO3; GND
 R61,100k,Analog I/O,analog input 0,analog input 0,divider upper resistor,AI0 to ADC0,group divider/filter beside J24; keep the ADC branch compact and away from switching nodes,inside,F.Cu,148.844,58.42,False,ADC0; AI0
 R63,33k,Analog I/O,analog input 0,analog input 0,divider lower resistor,AI0 ADC to GND,group divider/filter beside J24; keep the ADC branch compact and away from switching nodes,inside,F.Cu,145.796,58.42,False,ADC0; GND
 R64,100k,Analog I/O,analog input 1,analog input 1,divider upper resistor,AI1 to ADC1,group divider/filter beside J24; keep the ADC branch compact and away from switching nodes,inside,F.Cu,148.844,53.594,False,ADC1; AI1
@@ -260,8 +253,8 @@ R98,10k,Analog I/O,analog output 2,analog output 2,resistor,series/divider/limit
 R99,10k,Analog I/O,analog output 3,analog output 3,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,137.879,22.64,False,AO3_1; AO3_2
 R100,22k,Analog I/O,analog output 0,analog output 0,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,140.927,35.849,False,AO0; AO0_FB
 R101,22k,Analog I/O,analog output 1,analog output 1,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,147.277,35.849,False,AO1; AO1_FB
-R102,22k,Analog I/O,analog output 2,analog output 2,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,147.023,25.434,False,AO2; AO2_FB
-R103,22k,Analog I/O,analog output 3,analog output 3,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,141.181,25.434,False,AO3; AO3_FB
+R102,22k,Analog I/O,analog output 2,analog output 2,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,147.023,25.298,False,AO2; AO2_FB
+R103,22k,Analog I/O,analog output 3,analog output 3,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,141.181,25.248,False,AO3; AO3_FB
 R104,10k,Analog I/O,analog output 0,analog output 0,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,139.972,39.251,False,AO0_FB; GND
 R105,10k,Analog I/O,analog output 1,analog output 1,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,147.972,39.151,False,AO1_FB; GND
 R106,10k,Analog I/O,analog output 2,analog output 2,resistor,series/divider/limit passive,keep each PWM filter and feedback group beside U38/J25; preserve channel order,inside,F.Cu,147.785,22.387,False,AO2_FB; GND

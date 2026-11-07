@@ -106,7 +106,7 @@ MPN = {
     "C1206_100V": ("Murata", "GRM31 series 1206 C0G/X7R"),
     "LED0805": ("Hubei KENTO Elec", "KT-0805G"),
     "D_SOD323": ("Diodes Incorporated", "1N4148WS"),
-    "D_SMA": ("Diodes Incorporated", "SS54"),
+    "D_SMA": ("MDD", "US1M"),
     "D_SMB": ("Bourns", "SMBJ24CA"),
     "SOT23": ("Texas Instruments", "generic SOT-23"),
     "SOT23_5": ("Texas Instruments", "generic SOT-23-5"),
@@ -445,6 +445,9 @@ class SheetBuilder:
         if footprint_key is None:
             footprint_key = "C0805" if value in {"100nF", "1uF"} else "C1206"
         manufacturer, mpn = MPN[footprint_key]
+        if (footprint_key, value) == ("C1206", "22uF 25V"):
+            manufacturer = "Samsung Electro-Mechanics"
+            mpn = "CL31A226KAHNNNE"
         return self.two_pin(
             "C",
             lib_id,
@@ -667,7 +670,7 @@ def add_power(builder: SheetBuilder) -> None:
         "VIN_PROT",
         "VIN_RAW",
         (115, 65),
-        value="S1M",
+        value="US1M",
         footprint_key="D_SMA",
         reference="D2",
     )
@@ -701,7 +704,7 @@ def add_power(builder: SheetBuilder) -> None:
     )
     b.two_pin("L", "Device:L", "22uH 1.4A", "L_SMNR5040", "BUCK5_SW", "+5V", (75, 100), mpn="SMNR5040-220MT", manufacturer="SXN (Shun Xiang Nuo Elec)")
     b.capacitor("VIN_PROT", "GND", "22uF 35V", (30, 120), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 25V", (115, 100), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 25V", (115, 100), footprint_key="C1206")
     b.next_ref("C")  # retired output bypass C7
     b.next_ref("C")  # retired C8: C6/C11 already provide 2x22uF output bulk
 
@@ -724,8 +727,8 @@ def add_power(builder: SheetBuilder) -> None:
     )
     b.next_ref("L")  # reserve L2 for the dedicated backlight buck
     b.next_ref("C")  # retired 3.3 V buck bootstrap C9
-    b.capacitor("+5V", "GND", "22uF 25V", (52, 155), footprint_key="C1210")
-    b.capacitor("+5V", "GND", "22uF 25V", (118, 145), footprint_key="C1210")
+    b.capacitor("+5V", "GND", "22uF 25V", (52, 155), footprint_key="C1206")
+    b.capacitor("+5V", "GND", "22uF 25V", (118, 145), footprint_key="C1206")
     b.next_ref("C")  # retired optional output capacitor C12
     b.capacitor("+3V3", "GND", "100nF", (142, 145))
     # Isolated 3.3 V analog rail.
@@ -733,12 +736,12 @@ def add_power(builder: SheetBuilder) -> None:
         "FB",
         "Device:FerriteBead",
         "600R@100MHz",
-        "R1206",
+        "R0805",
         "+3V3",
         "+3V3_A",
         (160, 145),
-        mpn="BLM18KG601SN1D",
-        manufacturer="Murata",
+        mpn="GZ2012D601TF",
+        manufacturer="Sunlord",
     )
     b.next_ref("C")  # retired C14: C15 provides the required reference bypass
     b.capacitor("+3V3_A", "GND", "100nF", (187, 145))
@@ -1022,8 +1025,8 @@ def add_field_inputs(builder: SheetBuilder) -> None:
         "16 isolated PLC field positions use software-remapped logical channels to minimize PCB crossings. "
         "The dedicated E-stop optochannel is separate from the shift-register bits. "
         "PLC and control channels "
-        "keep the indicator LED, 2.2 k series limit and reverse diode. The LED is "
-        "placed first so it can sit at the input connector. Every "
+        "keep a 2.2 k series limit before the indicator LED and optocoupler LED, "
+        "with a reverse diode at the protected node. Every "
         "four isolated inputs share one TLP291-4 SOP-16 optocoupler. Four 4x10 k "
         "isolated networks provide the PLC pull-ups and no input-node capacitor "
         "is fitted. U6/U7 carry seven paired servo status signals with two "
@@ -1058,8 +1061,8 @@ def add_field_inputs(builder: SheetBuilder) -> None:
         ("ESTOP_FIELD", "ESTOP_LED_A", "ESTOP_OPTO_A", "ESTOP_N"),
     ):
         x = 100
-        b.resistor(led_net, opto_net, "2.2k", (x + 7, 72))
-        b.led(led_net, field_net, (x, 87))
+        b.resistor(field_net, led_net, "2.2k", (x + 7, 72))
+        b.led(opto_net, led_net, (x, 87))
         b.diode(led_net, "ISO_GND", (x + 7, 72))
         b.next_ref("C")  # removed input filter C30/C31
     b.next_ref("R")  # retired HOLD series resistor R17
@@ -1078,12 +1081,16 @@ def add_field_inputs(builder: SheetBuilder) -> None:
 
             x = x0 + channel * 17
             b.resistor(
+                f"FIELD_IN{number}",
                 f"FLD_LED{number}_A",
-                f"FLD_OPTO{number}_A",
                 "2.2k",
                 (x + 7, y0),
             )
-            b.led(f"FLD_LED{number}_A", f"FIELD_IN{number}", (x, y0 + 15))
+            b.led(
+                f"FLD_OPTO{number}_A",
+                f"FLD_LED{number}_A",
+                (x, y0 + 15),
+            )
             b.diode(f"FLD_LED{number}_A", "ISO_GND", (x + 7, y0))
             b.next_ref("C")  # removed input filter capacitor
         opto_pins = {}
@@ -1371,18 +1378,7 @@ def add_input_pullups(
             reference=pullup_references[group],
         )
 
-    storage_builder.resistor_pack4(
-        "10k",
-        "R_Array_4x0603",
-        [
-            ("+3V3_WIFI", "WIFI_EN"),
-            ("+3V3_WIFI", "WIFI_RST"),
-            ("+3V3_WIFI", "WIFI_GPIO0"),
-            ("+3V3_WIFI", "WIFI_GPIO2"),
-        ],
-        (20, 220),
-        reference="RN36",
-    )
+    storage_builder.next_ref("RN")  # retired ESP pull-up array RN36
 
 
 def add_encoders(builder: SheetBuilder) -> None:
@@ -1548,13 +1544,13 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
         (220, 145),
         reference="RN44",
     )
-    b.two_pin("FB", "Device:FerriteBead", "600R@100MHz", "R1206", "+3V3", "+3V3_SD", (75, 170), mpn="BLM18KG601SN1D", manufacturer="Murata")
+    b.two_pin("FB", "Device:FerriteBead", "600R@100MHz", "R0805", "+3V3", "+3V3_SD", (75, 170), mpn="GZ2012D601TF", manufacturer="Sunlord")
     b.capacitor(
         "+3V3_SD",
         "GND",
         "22uF 25V",
         (90, 170),
-        footprint_key="C1210",
+        footprint_key="C1206",
         reference="C67",
     )
     b.capacitor("+3V3_SD", "GND", "100nF", (102, 170), reference="C68")
@@ -1573,8 +1569,8 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
 
     # ESP-01/ESP-01S socket and programming/test header.
     b.header(2, 4, {
-        "1": "GND", "2": "+3V3_WIFI", "3": "WIFI_GPIO2", "4": "WIFI_GPIO0",
-        "5": "WIFI_RX", "6": "WIFI_TX", "7": "WIFI_EN", "8": "WIFI_RST",
+        "1": "GND", "2": "WIFI_RX", "3": "WIFI_GPIO2", "4": "WIFI_EN",
+        "5": "WIFI_GPIO0", "6": "WIFI_RST", "7": "WIFI_TX", "8": "+3V3_WIFI",
     }, (40, 205), "ESP-01/ESP-01S socket", reference="J20")
     b.next_ref("J")  # retired J21 external UART header
     for _ in range(4):
@@ -1585,16 +1581,10 @@ def add_storage_wifi(builder: SheetBuilder) -> None:
         "GND",
         "22uF 25V",
         (105, 220),
-        footprint_key="C1210",
+        footprint_key="C1206",
         reference="C69",
     )
-    b.capacitor(
-        "+3V3_WIFI",
-        "GND",
-        "100nF",
-        (117, 220),
-        reference="C70",
-    )
+    b.next_ref("C")  # retired ESP output bypass C70
     b.next_ref("FB")  # retired local-LDO link FB3
 
 def add_display(builder: SheetBuilder) -> None:
@@ -1830,7 +1820,7 @@ def add_analog(builder: SheetBuilder) -> None:
         "GND",
         "22uF 25V",
         (385, 295),
-        footprint_key="C1210",
+        footprint_key="C1206",
         reference="C101",
     )
     b.capacitor(
@@ -1857,7 +1847,7 @@ def add_backlight_power(builder: SheetBuilder) -> None:
         "VIN_BL_PROT",
         "+24V_FIELD",
         (250, 270),
-        value="S1M",
+        value="US1M",
         footprint_key="D_SMA",
         reference="D3",
     )
@@ -1905,7 +1895,7 @@ def add_backlight_power(builder: SheetBuilder) -> None:
     for index, x in enumerate((325, 340, 355)):
         b.capacitor(
             "+12V_BL", "ISO_GND", "22uF 25V", (x, 310),
-            footprint_key="C1210", reference=f"C{109 + index}",
+            footprint_key="C1206", reference=f"C{109 + index}",
         )
     b.next_ref("C")  # retired output bypass C112
     b.capacitor(
@@ -2032,22 +2022,16 @@ def main() -> None:
         "GND",
         "22uF 25V",
         (342, 260),
-        footprint_key="C1210",
+        footprint_key="C1206",
         reference="C88",
     )
-    sheets["storage"].capacitor(
-        "+5V",
-        "GND",
-        "100nF",
-        (354, 260),
-        reference="C89",
-    )
+    sheets["storage"].next_ref("C")  # retired ESP input bypass C89
     sheets["power"].capacitor(
         "+3V3",
         "GND",
         "22uF 25V",
         (417, 240),
-        footprint_key="C1210",
+        footprint_key="C1206",
         reference="C90",
     )
     for net_a, net_b, value, position, reference in (

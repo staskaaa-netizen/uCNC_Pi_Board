@@ -84,13 +84,13 @@ the other side of each dry-contact loop.
 | Pin | Signal |
 |---:|---|
 | 1 | GND |
-| 2 | `WIFI_3V3` |
-| 3 | ESP GPIO2 with 10 k pull-up |
-| 4 | ESP GPIO0 with 10 k pull-up |
-| 5 | RP2350 GPIO11 `UART_RX` |
-| 6 | RP2350 GPIO10 `UART_TX` |
-| 7 | EN/CH_PD with 10 k pull-up |
-| 8 | RST with 10 k pull-up |
+| 2 | RP2350 GPIO11 `UART_RX` to ESP TX |
+| 3 | ESP GPIO2 |
+| 4 | EN/CH_PD |
+| 5 | ESP GPIO0 |
+| 6 | RST |
+| 7 | RP2350 GPIO10 `UART_TX` to ESP RX |
+| 8 | `WIFI_3V3` |
 
 ## J22 LCD LVDS
 

@@ -42,7 +42,7 @@ to the board edge have been rechecked.
 | 5 V converter | U1, L1, C3, C5, C6, C11, C86, C91, R70-R72 |
 | Isolated backlight converter | U3, L2, C107-C111, C113, C114, R126-R128 |
 | Peripheral 3.3 V | U2, C10, C13, C76, C90 |
-| ESP 3.3 V | U34, C69, C70, C88, C89 |
+| ESP 3.3 V | U34, C69, C88 |
 | Analog 12 V | U37, C100-C102 |
 
 C3/C5 form the U1 input loop. C6/C11 are output bulk. C86 bridges BOOT and SW;
@@ -65,8 +65,9 @@ servo ZERO/ERROR signals. Each register has a local `3V3` bypass:
 | U9 | C25 |
 
 U18-U21 are placed with the PLC field chains and four isolated 4 x 10 k pull-up
-networks RN32-RN35. Each channel has an LED, 2.2 k field resistor, reverse diode
-and optocoupler input. U35 and its small field chain are at J5.
+networks RN32-RN35. Each channel has a 2.2 k input resistor followed by the LED,
+reverse clamp diode and optocoupler input. U35 and its small field chain are at
+J5.
 
 Servo status channels use direct 3.3 V logic. Four 4 x 10 k networks RN45-RN48
 provide the same pull-up treatment as the PLC inputs, with two networks beside

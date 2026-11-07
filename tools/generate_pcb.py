@@ -704,6 +704,7 @@ def build_board() -> None:
     board.SetFileName(str(PCB_PATH))
     board.SetCopperLayerCount(2)
     board.GetDesignSettings().SetBoardThickness(pcbnew.FromMM(1.6))
+    board.GetDesignSettings().SetAuxOrigin(pcbnew.VECTOR2I_MM(0, BOARD_HEIGHT_MM))
     add_outline(board)
 
     nets = {
@@ -910,6 +911,8 @@ def build_board() -> None:
             net_name = component.nets.get(pad.GetNumber())
             if net_name:
                 pad.SetNet(net_map[net_name])
+                if net_name == "PLC_0V":
+                    pad.SetLocalClearance(pcbnew.FromMM(0.25))
                 assigned += 1
             elif pad.GetNumber():
                 missing_pads.append(f"{component.reference}.{pad.GetNumber()}")

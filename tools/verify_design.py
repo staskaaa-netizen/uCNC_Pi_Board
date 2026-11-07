@@ -1176,8 +1176,8 @@ def main() -> None:
             failures.append(f"WeAct 3V3 output pin {pin} must remain local to the module")
     if ("MOD1", "31") not in nets.get("+5V", set()):
         failures.append("WeAct 5 V input is not connected to the main 5 V rail")
-    if component_values.get("D2") != "S1M":
-        failures.append("D2 is not the approved S1M input diode")
+    if component_values.get("D2") != "US1M":
+        failures.append("D2 is not the approved US1M input diode")
     if ("D2", "1") not in nets.get("VIN_PROT", set()):
         failures.append("D2 cathode is not on VIN_PROT")
     if ("D2", "2") not in nets.get("VIN_FUSED", set()):
