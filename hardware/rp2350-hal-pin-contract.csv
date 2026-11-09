@@ -1,0 +1,65 @@
+resource,gpio,mod1_pin,board_net,direction,domain,uCNC_role,constraint
+GPIO0,0,33,-,reserved,3.3V,module_psram_cs,Do not assign outside the WeAct PSRAM option
+GPIO1,1,49,-,unconnected,3.3V,spare,No motherboard connection
+GPIO2,2,34,CD,input,3.3V,sd_card_detect,Active low; JP5 controls the connection
+GPIO3,3,50,PG_N,input,3.3V,power_good,Active low open drain; external pull-up fitted
+GPIO4,4,35,IO4,bidirectional,3.3V,expansion_io_0,J51 pin 3
+GPIO5,5,51,IO5,bidirectional,3.3V,expansion_io_1,J51 pin 4
+GPIO6,6,36,IO6,bidirectional,3.3V,expansion_io_2,J51 pin 5
+GPIO7,7,52,IO7,bidirectional,3.3V,expansion_io_3,J51 pin 6
+GPIO8,8,37,IO8,bidirectional,3.3V,expansion_io_4,J51 pin 7
+GPIO9,9,53,ESTOP,input,3.3V,estop,Active low; dedicated isolated input outside the shift chain
+GPIO10,10,38,UART_TX,output,3.3V,uart_tx,ESP-01 RX
+GPIO11,11,54,UART_RX,input,3.3V,uart_rx,ESP-01 TX
+GPIO12,12,39,HSTX_D0_P,output,HSTX differential,lcd_d0_p,HSTX group
+GPIO13,13,55,HSTX_D0_N,output,HSTX differential,lcd_d0_n,HSTX group
+GPIO14,14,40,HSTX_D1_P,output,HSTX differential,lcd_d1_p,HSTX group
+GPIO15,15,56,HSTX_D1_N,output,HSTX differential,lcd_d1_n,HSTX group
+GPIO16,16,41,HSTX_D2_P,output,HSTX differential,lcd_d2_p,HSTX group
+GPIO17,17,57,HSTX_D2_N,output,HSTX differential,lcd_d2_n,HSTX group
+GPIO18,18,42,HSTX_CLK_P,output,HSTX differential,lcd_clock_p,HSTX group
+GPIO19,19,58,HSTX_CLK_N,output,HSTX differential,lcd_clock_n,HSTX group
+GPIO20,20,43,SER0,output,5V driven from 3.3V logic,shift_data,74AHCT595 serial data; PIO DATA
+GPIO21,21,59,SCK,output,5V driven from 3.3V logic,shift_clock,Shared 74HC165/74AHCT595 clock; PIO CLK
+GPIO22,22,44,LAT,output,5V driven from 3.3V logic,shift_latch,74AHCT595 latch; PIO LATCH
+GPIO23,23,60,Q7,input,3.3V driven from 5V HC,shift_input,74HC165 return; remove WeAct R16 before use
+GPIO24,24,45,PL,output,5V driven from 3.3V logic,shift_load,74HC165 parallel load active low
+GPIO25,25,30,E2_Z3V3,input,3.3V,encoder2_index,U28 path; also drives the WeAct onboard LED
+GPIO26,26,15,E2_B3V3,input,3.3V,encoder2_b,U28 pin 11
+GPIO27,27,29,E2_A3V3,input,3.3V,encoder2_a,U28 pin 12
+GPIO28,28,14,E1_Z3V3,input,3.3V,encoder1_index,U28 pin 13
+GPIO29,29,28,E1_B3V3,input,3.3V,encoder1_b,U28 pin 14
+GPIO30,30,13,E1_A3V3,input,3.3V,encoder1_a,U28 pin 15
+GPIO31,31,27,E0_Z3V3,input,3.3V,encoder0_index,U28 pin 16
+GPIO32,32,12,E0_B3V3,input,3.3V,encoder0_b,U28 pin 17
+GPIO33,33,26,E0_A3V3,input,3.3V,encoder0_a,U28 pin 18
+GPIO34,34,11,SPI_CK,output,3.3V,sd_spi_clock,No board-side ENC/U28 use
+GPIO35,35,25,SPI_SI,output,3.3V,sd_spi_mosi,RN44 pin 2
+GPIO36,36,10,SPI_SO,input,3.3V,sd_spi_miso,RN44 pin 4
+GPIO37,37,24,SPI_CS,output,3.3V,sd_spi_cs,Active low; RN44 pin 1
+GPIO38,38,9,I2C_SDA,bidirectional,3.3V,i2c_data,External pull-up required
+GPIO39,39,23,I2C_SCL,bidirectional,3.3V,i2c_clock,External pull-up required
+GPIO40,40,8,ADC0,input,0-3.3V analog,analog_input_0,J24 pin 2; 100k/33k divider
+GPIO41,41,22,ADC2,input,0-3.3V analog,analog_input_2,J24 pin 4; 100k/33k divider
+GPIO42,42,7,ADC1,input,0-3.3V analog,analog_input_1,J24 pin 3; 100k/33k divider
+GPIO43,43,21,ADC3,input,0-3.3V analog,analog_input_3,J24 pin 5; 100k/33k divider
+GPIO44,44,6,PWM1,output,3.3V pwm,analog_output_1,U38 channel 1
+GPIO45,45,20,PWM2,output,3.3V pwm,analog_output_2,U38 channel 2
+GPIO46,46,5,PWM0,output,3.3V pwm,analog_output_0,U38 channel 0
+GPIO47,47,19,PWM3,output,3.3V pwm,analog_output_3,U38 channel 3
+MOD1_GND_A,,1,GND,power,ground,module_ground,Logic ground
+MOD1_GND_B,,2,GND,power,ground,module_ground,Logic ground
+MOD1_3V3_A,,3,-,power,module-local 3.3V,not_connected,Do not connect to motherboard 3V3
+MOD1_RUN,,4,-,input,module-local reset,not_connected,Use the WeAct reset hardware
+MOD1_GND_C,,16,GND,power,ground,module_ground,Logic ground
+MOD1_EN,,17,-,input,module-local regulator enable,not_connected,Do not duplicate module supervision
+MOD1_3V3_B,,18,-,power,module-local 3.3V,not_connected,Do not connect to motherboard 3V3
+MOD1_5V,,31,5V,power,5V,module_supply,Main 5V input
+MOD1_GND_D,,32,GND,power,ground,module_ground,Logic ground
+MOD1_VBUS,,46,-,power,USB VBUS,not_connected,No motherboard connection
+MOD1_GND_E,,47,GND,power,ground,module_ground,Logic ground
+MOD1_REF,,48,ADC_3V3,power/reference,3.3V analog reference,adc_reference,FB1/C15 filtered reference
+MOD1_DEBUG_1,,61,-,debug,module debug,not_connected,No motherboard connection
+MOD1_DEBUG_2,,62,-,debug,module debug,not_connected,No motherboard connection
+MOD1_DEBUG_3,,63,-,debug,module debug,not_connected,No motherboard connection
+MOD1_DEBUG_4,,64,-,debug,module debug,not_connected,No motherboard connection

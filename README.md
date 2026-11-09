@@ -72,6 +72,7 @@ placement and routing. Do not run a full PCB regeneration over that file.
 
 - [Board specification](documentation/board-specification.md)
 - [GPIO map](documentation/gpio-map.md)
+- [Normative HAL pin and function contract](documentation/hal-pinout-contract.md)
 - [WeAct RP2350B pin allocation](documentation/rp2350-pinout.md)
 - [Input and output bit map](documentation/io-bit-map.md)
 - [Signal naming](documentation/naming.md)
