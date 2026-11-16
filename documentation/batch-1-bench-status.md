@@ -14,7 +14,7 @@ Bench record for the assembled Batch 1 RP2350B carriers, 2026-11-16.
 | SD card | SPI card mounts as `/D` and directory listing works with the main PSU enabled. |
 | Three-axis motion path | A0-A2 interpolation and STEP/DIR/shared-enable signals observed through the shift-register output path. |
 | General outputs | D01-D16 static patterns and individual shift-register bits verified. |
-| Input shift chain | The 32-bit 74HC165 value is read and displayed on the NCC diagnostic row. |
+| Input shift chain | The upstream full-duplex PIO path is working on Batch 1: four 595 outputs and four 165 inputs transfer together, and the 32-bit input value is displayed on the NCC diagnostic row. |
 | Spindle analog path | AO0 spindle PWM tested: `M3 S450` produced 4.68 V on J25 with `$30=1000`. |
 | Defaults and settings reset | `$RST=*` restores defaults and is accepted by the controller. |
 | I2C | The board I2C path communicates. |
@@ -26,12 +26,19 @@ Bench record for the assembled Batch 1 RP2350B carriers, 2026-11-16.
 - PSRAM chip select: GPIO0, 8 MiB.
 - NC panel: `ncc`, portrait 600x800.
 - During motion testing, D01-D07 stood in for A0-A2 STEP, DIR and shared enable.
+- The committed follow-up moves GPIO20/21/22 plus input GPIO23 to the upstream
+  full-duplex PIO extender and keeps GPIO24 as the separate 165 load pulse.
+- PIO ownership is split: PIO0/SM0 plus fixed instruction offset 0 for the
+  spindle encoder; PIO1/SM0 and separately allocated instructions for the
+  595/165 extender. PIO2 remains unused.
 
 ## Still open
 
 - The physical-to-logical mapping of the general outputs and complete input
   chain is not final; the electrical paths work, but the reported labels and
   bit positions need to be reconciled.
+- The PIO path works, but its physical-to-logical input ordering and D01-D16
+  labeling still need to be reconciled with the carrier nets.
 - Real motor buffers and field connectors have not replaced the bench LED
   indicators for A0-A2.
 - A3-A6 are documented by the carrier but are not configured in the current

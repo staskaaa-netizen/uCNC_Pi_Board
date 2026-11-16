@@ -35,7 +35,8 @@ machine integration:
 - The combined four-register 74HC165/74AHCT595 scan path is configured and
   software-verified by a clean firmware build.
 - [x] Bench-test the four-register scan and three-axis motion timing on Batch 1.
-- Implement separate PIO input scanning for the four 74HC165 registers.
+- [x] Verify the upstream full-duplex 595/165 PIO path on GPIO20/21/22 and input
+  GPIO23 with the encoder isolated on PIO0.
 - Generalize the RP2350 PIO encoder backend if ENC1 and ENC2 are needed.
 - Active-low E-stop polarity on GPIO9 is configured.
 - The non-sequential A4/A6 motion-bit remap is implemented.
