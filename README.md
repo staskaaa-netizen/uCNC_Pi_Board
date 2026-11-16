@@ -4,9 +4,12 @@ KiCad 10 carrier for a socketed WeAct Studio RP2350B Core Board. The board
 provides isolated machine I/O, motion and encoder interfaces, LCD power,
 storage, optional Wi-Fi and analog I/O on a 160 mm x 120 mm two-layer PCB.
 
-**Status: MANUFACTURING PACKAGE GENERATED; FINAL DRC REVIEW REQUIRED.** The
-circuit, pin mapping, PCB and manufacturing archives are complete. The PCB
-fabrication and SMT assembly ZIPs are generated from the current board.
+**Status: BATCH 1 BOARDS ASSEMBLED AND BENCH-BROUGHT-UP; I/O MAPPING AND
+PRODUCTION VALIDATION PENDING.** The circuit, pin mapping, PCB and manufacturing
+archives are complete. The PCB fabrication and SMT assembly ZIPs are generated
+from the current board. See
+[Batch 1 bench status](documentation/batch-1-bench-status.md) for the verified
+functions and remaining machine checks.
 
 The current BOM has 263 physical parts in 44 purchasing groups. SMT assembly
 contains 227 references in 33 groups; D53 is hand-fit and excluded from the
@@ -85,6 +88,7 @@ placement and routing. Do not run a full PCB regeneration over that file.
 - [Wi-Fi module](documentation/wifi-module.md)
 - [Analog calibration](documentation/analog-calibration.md)
 - [Four-channel 0-10 V outputs](documentation/analog-outputs.md)
+- [Batch 1 bench status](documentation/batch-1-bench-status.md)
 - [uCNC RP2350 compatibility](documentation/ucnc-rp2350.md)
 - [Mechanical notes](documentation/mechanical.md)
 - [Assembly notes](documentation/assembly-options.md)

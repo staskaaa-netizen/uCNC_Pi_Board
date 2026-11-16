@@ -24,7 +24,7 @@ GPIO21,21,59,SCK,output,5V driven from 3.3V logic,shift_clock,Shared 74HC165/74A
 GPIO22,22,44,LAT,output,5V driven from 3.3V logic,shift_latch,74AHCT595 latch; PIO LATCH
 GPIO23,23,60,Q7,input,3.3V driven from 5V HC,shift_input,74HC165 return; remove WeAct R16 before use
 GPIO24,24,45,PL,output,5V driven from 3.3V logic,shift_load,74HC165 parallel load active low
-GPIO25,25,30,E2_Z3V3,input,3.3V,encoder2_index,U28 path; also drives the WeAct onboard LED
+GPIO25,25,30,E2_Z3V3,input/output,3.3V,encoder2_index/activity_led,Passive divider; WeAct active-high LED; ACTIVITY_LED DOUT31 uses GPIO25 when configured
 GPIO26,26,15,E2_B3V3,input,3.3V,encoder2_b,U28 pin 11
 GPIO27,27,29,E2_A3V3,input,3.3V,encoder2_a,U28 pin 12
 GPIO28,28,14,E1_Z3V3,input,3.3V,encoder1_index,U28 pin 13

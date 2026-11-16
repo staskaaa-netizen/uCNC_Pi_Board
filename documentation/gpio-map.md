@@ -45,7 +45,7 @@ The module's reset button, POR/BOR, watchdog and USB interface are used. MOD1
 | 22 | 44 | `LAT` | Output | 74AHCT595 latch | PIO LATCH |
 | 23 | 60 | `Q7` | Input | 74HC165 return | Remove module R16 before use |
 | 24 | 45 | `PL` | Output | 74HC165 parallel load | Active low |
-| 25 | 30 | `E2_Z3V3` | Input | Encoder 2 index | R110/R111 divider; module LED |
+| 25 | 30 | `E2_Z3V3` | Input/output | Encoder 2 index / activity LED | R110/R111 divider; active-high module LED |
 | 26 | 15 | `E2_B3V3` | Input | Encoder 2 B | U28 pin 11 |
 | 27 | 29 | `E2_A3V3` | Input | Encoder 2 A | U28 pin 12 |
 | 28 | 14 | `E1_Z3V3` | Input | Encoder 1 index | U28 pin 13 |
@@ -96,7 +96,9 @@ The module's reset button, POR/BOR, watchdog and USB interface are used. MOD1
 
 - Remove WeAct module resistor R16 to isolate GPIO23 from the onboard USER-key
   network. Do not use that key as a machine control.
-- GPIO25 also drives the module's onboard LED.
+- GPIO25 also drives the module's active-high onboard LED. The machine board
+  map assigns uCNC's `ACTIVITY_LED` (`DOUT31`) to GPIO25, so ENC2 index is not
+  available in that firmware build.
 - Open-collector encoders require external pull-ups.
 - Keep GPIO20/21/22 as DATA/CLK/LATCH if the uCNC output-only PIO driver is
   selected.

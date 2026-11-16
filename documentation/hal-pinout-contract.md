@@ -27,8 +27,9 @@ together.
 - GPIO0 is reserved for optional WeAct PSRAM and must never be reassigned.
 - GPIO23 requires removal of WeAct module resistor R16 to isolate the onboard
   USER key.
-- GPIO25 also drives the WeAct onboard LED. Do not rely on it being visually
-  dark while configured as encoder 2 Z.
+- GPIO25 also drives the WeAct active-high onboard LED. The machine board map
+  assigns uCNC's `ACTIVITY_LED` (`DOUT31`) to GPIO25 for the live heartbeat;
+  ENC2 index is therefore not available in that firmware build.
 
 ## Direct RP2350 pin map
 
@@ -59,7 +60,7 @@ together.
 | 22 | 44 | `LAT` | Output | 3.3 V in / 5 V chain | 595 latch | PIO LATCH |
 | 23 | 60 | `Q7` | Input | 3.3 V | 165 serial return | Remove WeAct R16 |
 | 24 | 45 | `PL` | Output | 3.3 V in / 5 V chain | 165 parallel load | Active low |
-| 25 | 30 | `E2_Z3V3` | Input | 3.3 V | ENC2 Z | U28 / divider path |
+| 25 | 30 | `E2_Z3V3` | Input/output | 3.3 V | ENC2 Z / activity LED | Passive divider; firmware drives LED |
 | 26 | 15 | `E2_B3V3` | Input | 3.3 V | ENC2 B | U28.11 |
 | 27 | 29 | `E2_A3V3` | Input | 3.3 V | ENC2 A | U28.12 |
 | 28 | 14 | `E1_Z3V3` | Input | 3.3 V | ENC1 Z | U28.13 |
@@ -102,7 +103,7 @@ Waveshare PiZero maps are not compatible.
 
 ```c
 #define MCU MCU_RP2350
-#define AXIS_COUNT 7
+#define AXIS_COUNT 3
 #define TOOL_COUNT 1
 #define BAUDRATE 115200
 
@@ -114,7 +115,7 @@ Waveshare PiZero maps are not compatible.
 #define IC74HC595_PIO_LATCH 22
 
 #define ESTOP_BIT 9
-#define ESTOP_ACTIVE_LOW
+#define INVERT_EMERGENCY_STOP
 
 #define SPI_CLK_BIT 34
 #define SPI_SDO_BIT 35

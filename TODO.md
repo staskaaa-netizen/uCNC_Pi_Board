@@ -28,15 +28,23 @@ machine integration:
 
 ## Firmware integration
 
-- Create the LeanCam-specific uCNC board map from
+- The LeanCam-specific uCNC board map is implemented from
   `documentation/gpio-map.md` and `documentation/io-bit-map.md`.
-- Keep GPIO20/21/22 contiguous for the optional four-register 74AHCT595 PIO
+- GPIO20/21/22 remain contiguous for the optional four-register 74AHCT595 PIO
   output path.
-- Implement or configure separate input scanning for the four 74HC165
-  registers.
+- The combined four-register 74HC165/74AHCT595 scan path is configured and
+  software-verified by a clean firmware build.
+- [x] Bench-test the four-register scan and three-axis motion timing on Batch 1.
+- Implement separate PIO input scanning for the four 74HC165 registers.
 - Generalize the RP2350 PIO encoder backend if ENC1 and ENC2 are needed.
-- Preserve active-low E-stop polarity on GPIO9.
-- Implement the non-sequential A4/A6 motion-bit remap.
+- Active-low E-stop polarity on GPIO9 is configured.
+- The non-sequential A4/A6 motion-bit remap is implemented.
+- The soldered WEACT 8 MiB PSRAM passed full-range data/address tests.
+- [x] Bring up LVDS video, NCC, SD mounting, dedicated E-stop and GPIO25
+  heartbeat on Batch 1.
+- [x] Verify D01-D16 shift-register static output control and the 32-bit input
+  chain read path.
+- [x] Rough-test AO0 through the spindle path (`S450` gives 4.68 V).
 - Calibrate all four 0-10 V outputs against J25 after assembly.
 - Remove WeAct module resistor R16 when GPIO23 is used as the shift-register
   input return.

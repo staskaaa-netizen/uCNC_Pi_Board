@@ -1,8 +1,9 @@
 # uCNC RP2350 compatibility
 
 This page records the firmware-facing constraints found in the local uCNC
-RP2350 source review. The motherboard needs a LeanCam-specific board map; the
-stock Pico 2 map does not match these pin assignments.
+RP2350 source review. The implemented board map is
+`src/hal/boards/rp2350/boardmap_leancam_ncc_rp2350b.h`; both LVDS machine
+environments select it.
 
 ## Encoders
 
@@ -17,8 +18,19 @@ The board provides three adjacent A/B pairs:
 | ENC2 | GPIO27 | GPIO26 | GPIO25 |
 
 The reviewed `rp2350_pio_encoder.c` implements one encoder only: one PIO block,
-one state machine and one index GPIO. ENC0 is compatible with that implementation.
-ENC1 and ENC2 require the backend to be generalized or instantiated three times.
+one state machine and one index GPIO. The machine map configures ENC0 on the
+ascending GPIO32/GPIO33 pair. GPIO32 is the carrier's B phase, so the backend
+sets `ENC0_RP2350_ENCODER_INVERT 1`; GPIO31 is the physical index. ENC1 and
+ENC2 still require the backend to be generalized or instantiated separately.
+
+The current machine build uses three axes (`AXIS_COUNT 3`, A0-A2). The carrier
+and shift-register map retain their seven-axis physical documentation, but the
+unused A3-A6 motion interfaces are not part of the firmware configuration.
+
+The machine map also assigns uCNC's existing `ACTIVITY_LED` heartbeat
+(`DOUT31`) directly to GPIO25, which is the WeAct module's active-high onboard
+LED. This uses the GPIO25 output for the live heartbeat, so ENC2 index cannot
+also be configured in the same firmware build.
 
 A practical three-channel implementation is one state machine per encoder in one
 PIO block, using GPIO32, GPIO29 and GPIO26 as the three A/B input bases. Keep
@@ -41,7 +53,9 @@ The hardware interface is:
 | 74HC165 parallel load | GPIO24 | 45 |
 
 The standard uCNC bit-banged `shift_register` driver supports both register
-types on arbitrary GPIOs and is the complete runtime path for this board.
+types on arbitrary GPIOs and is the complete runtime path for this board. The
+machine map enables four registers in each direction, including the A4/A6
+non-sequential motion bits and the two shared enable bits.
 
 The optional `IC74HC595_CUSTOM_SHIFT_IO` PIO path can use GPIO20/21/22 because
 they are contiguous and in the required DATA, CLK, LATCH order:
@@ -69,16 +83,17 @@ and program offsets deliberately.
 |---|---|---|---:|---|
 | `ESTOP` | `ESTOP` | GPIO9 | 53 | Active low |
 
-E-stop is a direct input outside the shift-register chain. Configure the
-LeanCam board map for active-low E-stop and keep the machine's hard-wired
-safety energy removal independent of firmware.
+E-stop is a direct input outside the shift-register chain. The board map uses
+uCNC's `INVERT_EMERGENCY_STOP` because U35 pulls GPIO9 low when the isolated
+loop is energized. Keep the machine's hard-wired safety energy removal
+independent of firmware.
 
 ## I/O remapping
 
 The physical chain assignments are in
-[Input and output bit map](io-bit-map.md). The LeanCam board map must preserve
-the U6-U9 input order, U10-U13 output order, paired motion outputs and the
-servo status connectors per axis.
+[Input and output bit map](io-bit-map.md). The LeanCam board map preserves the
+U6-U9 input order, U10-U13 output order, paired motion outputs and the servo
+status connectors per axis.
 
 Axis IDs follow the top-to-bottom connector order: A0-A3 use J10/J11/J28/J29,
 A4 uses J47/J50, A5 uses J46/J49 and A6 uses J30/J48. The STEP/DIR bits for A4
