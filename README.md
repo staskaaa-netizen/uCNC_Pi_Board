@@ -65,6 +65,14 @@ Open `hardware/motherboard.kicad_pro` in KiCad 10.0 or newer.
 - Manufacturing data: `manufacturing/` (see `manufacturing/README.md`)
 - Design notes: `documentation/`
 
+## Board firmware
+
+- [Validated first-board NCC UF2](firmware/uCNC-NCC-RP2350B-first-board-working-20261117.uf2)
+- [Flash and checksum notes](firmware/README.md)
+
+To install, hold `BOOTSEL` while reconnecting the board and copy the UF2 to the
+`RP2350` USB drive.
+
 The checked-in KiCad board is authoritative. It contains the approved manual
 placement and routing. Do not run a full PCB regeneration over that file.
 
